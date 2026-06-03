@@ -1,0 +1,405 @@
+\chapter{交换代数}
+
+定理：
+\textbf{理想是素的 iff. 商环是整环。
+理想是极大的 iff. 商环是域。}
+
+$$
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZAJgBoAGAXVJADcBDAGwFcYkQBBAHS6zB5wwAHjgBGAM2ABhAEp8A5gF8Qi0uky58hFGQCM1Ok1bseAW3o4AFuIBO9ANYACNI559XXQSOABlNDABjRQ9HDhU1EAxsPAIiABZSfRoGFjZETgB6MwtrOycXNzAPLzFJAEkAEWVVdWitInJEgxTjdI4AfWyrWwdnRwBeRwAKbi44GBxTPmY4D3NuvOcASgA9YABaXUUwmsiNGO0SUmJmozSQeyGu3N60JYHQzq55m-ys55ye-Mfrr76ebCmGAAR2KwhwwAAYnYgiEOO8Xn80CoDDAoPJ4ERQLYIKYkABmGg4CBIBIgHD0LCMdgUqnhbE2XFIRrkkmIQnkynU9KWCAQez0kA4vGIFnEpBkTl09K06m7YUSolssmy9i8-koxRAA
+\begin{tikzcd}
+                                                                 &  & A\in\textbf{CRing} \arrow[lld, hook] \arrow[rrd, tail]                                      &  &                                                 \\
+A_\mathfrak p = (A\setminus \mathfrak p)^{-1}A \arrow[rrd, tail] &  & \mathfrak p \in \text{Spec} \ A                                                             &  & A/\mathfrak p \in \textbf{ID} \arrow[lld, hook] \\
+                                                                 &  & k(\mathfrak p) = A_\mathfrak p/\mathfrak p A_\mathfrak p \simeq \text{Frac} \ A/\mathfrak p &  &                                                
+\end{tikzcd}
+$$
+
+
+$$
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZAJgBoAGAXVJADcBDAGwFcYkQBBAHS6zB5wwAHjgBGAM2ABhAEp8A5gF8Qi0uky58hFGQCM1Ok1bseAW3o4AFuIBO9ANYACU4559XXQSOABZekMUPRw4VNRAMbDwCIgAWUn0aBhY2RE4AejMLazsnFzcwDy8xSQAxRihlVXVIrSJyeIMk41SOAH1Mq1sHZ0cAXkcACm4uOBgcUz5mOA9zTpznAEoAPWAAWl1FEKrwjSjtElJiRqMUznauWezu0wyLrK7c4PPLh56ebFMYAEdg25f50wqAwwKDyeBEUC2CCAxAAZhoOAgSDiIBw9CwjHYaIxoUhNmhSHqqKRcIR6MxqUsEAg9lxIChMKJiKQZFR5Kx7O2DJZCJJKOxFJAVJpQMUQA
+\begin{tikzcd}
+                                                                 &  & A\in\textbf{CRing} \arrow[lld, hook] \arrow[rrd, tail]       &  &                                                  \\
+A_\mathfrak m = (A\setminus \mathfrak m)^{-1}A \arrow[rrd, tail] &  & \mathfrak m \in \text{Max} \ A                               &  & A/\mathfrak m \in \textbf{Fld} \arrow[lld, hook] \\
+                                                                 &  & A_\mathfrak m/\mathfrak m A_\mathfrak m \simeq A/\mathfrak m &  &                                                 
+\end{tikzcd}
+$$
+
+$A/\mathfrak p\in\textbf{ID}$是整环，
+可做分式域$\text{Frac} \ A/\mathfrak p$。
+$A\smallsetminus \mathfrak p$是乘法系统，
+从而有局部化$A_\mathfrak p$，
+及其不可逆元的全体构成的唯一的极大理想$\mathfrak pA_\mathfrak p$，
+进而有剩余域$k(\mathfrak p) = A_\mathfrak p/\mathfrak pA\mathfrak p$。
+有典范同构
+$k(\mathfrak p) = A_\mathfrak p/\mathfrak pA\mathfrak p
+\simeq
+\text{Frac} \ A/\mathfrak p$
+
+对于极大理想$\mathfrak m\in\text{Max} \ A$，
+$A/\mathfrak \in \textbf{Fld}$已经是域，
+$\text{Frac} \ A/\mathfrak m \simeq A/\mathfrak m$:
+有典范同构
+$k(\mathfrak m) = A_\mathfrak m/\mathfrak m A_\mathfrak m \simeq \text{Frac} \ A/\mathfrak m \simeq A/\mathfrak m$
+
+整数环：
+以$(3) = \text{Max} \ \mathbb Z$为例，
+局部环$\mathbb Z_{(3)} = \{a/s \mid a,s\in\mathbb Z,\ s \notin (3)\}$
+有唯一极大理想$(3)\mathbb Z_{(3)} = \{3a/s \mid a,s\in\mathbb Z,\ s \notin (3)\}$，
+包含所有不可逆元。
+剩余域$\mathbb Z_{(3)}/(3)\mathbb Z_{(3)} \simeq \mathbb Z/(3)$，
+正是Galois域$\mathbb F_3$。
+
+多项式环：
+以$((x^2 + 1)) = \text{Max} \ \mathbb R[x]$为例，
+局部环$\mathbb R[x]_{((x^2 + 1))} = \{p/q \mid p,q\in\mathbb R[x],\ q \notin ((x^2 + 1))\}$
+有唯一极大理想$((x^2 + 1))\mathbb R[x]_{((x^2 + 1))} = \{(x^2 + 1)a/s \mid p,q\in\mathbb R[x],\ s \notin ((x^2 + 1))\}$，
+包含所有不可逆元。
+剩余域$\mathbb R[x]_{((x^2 + 1))}/((x^2 + 1))\mathbb R[x]_{((x^2 + 1))} \simeq \mathbb R[x]/((x^2 + 1))$。
+对于域$k$和不可约多项式$p \in k[x]$，
+商环$k[x]/(p)$是$k$的扩域。
+在这里正是复域$R[x]/((x^2 + 1)) \simeq \mathbb C$。
+
+函数环：
+以$\mathfrak m_x = \{f\in C(X) \mid f(x) = 0\} \in \text{Max} \ C(X)$为例，
+这是在$x \in X$点退化的函数全体构成的极大理想。
+局部环$C(X)_{\mathfrak m_x} = \{f/g \mid f,g\in C(X),\ g(x) \neq 0 \}$，
+若$X$是仿紧Hausdorff空间则它同构于函数芽环$\mathcal O_x$。
+有唯一极大理想$\mathfrak m_x C(X)_{\mathfrak m_x} = \{f/g \mid f,g\in C(X),\ f(x) = 0,\ g(x) \neq 0 \}$，
+包含所有不可逆元，
+即所有在$x$退化的函数芽。
+剩余域$C(X)_{\mathfrak m_x}/\mathfrak m_x C(X)_{\mathfrak m_x} \simeq \mathbb R$。
+
+若$A\in\textbf{CC}^*$还是交换C*-代数，
+其所有素理想都是极大理想。
+作为集合
+$\text{Max} \ A = \text{Spec} \ A$。
+此时给$\text{Max} \ A$赋予的是Gelfand拓扑，
+从而有函子$\text{Max}: \textbf{CC}^* \to \textbf{Set}$。
+
+\section{交换环的理想}
+
+
+\begin{framed}
+\noindent
+$\forall a,b \in A \in \textbf{CRing}$，
+$(ab=0) \Rightarrow (a=0) \vee (b=0)$，
+则称 $A$ 为\textbf{整环}（Integral Domain）。
+\end{framed}
+
+整数环 $\mathbb{Z}$ 是整环；而商环 $\mathbb{Z}/(n)$ 不是。
+商环的元素记为$[a]_n = a + (n) \in \mathbb{Z}/(n)$，
+例如$n=6$时，
+$[2]_6 \times [3]_6 = [2 \times 3]_6 = 0 \in \mathbb{Z}/(6)$，
+它包含零因子。
+
+\begin{framed}
+\noindent\textbf{定义（素理想与极大理想）：}
+\textbf{素理想}（Prime Ideal） $\mathfrak{p}$ 要求：若 $ab \in \mathfrak{p}$，则必定有 $a \in \mathfrak{p}$ 或 $b \in \mathfrak{p}$。
+\textbf{极大理想}（Maximal Ideal） $\mathfrak{m}$ 则是真包含于 $A \in \textbf{CRing}$ 且不可被其他真理想真包含的理想。
+\end{framed}
+
+$A$的素理想的全体构成素谱$\text{Spec} \ A$，
+后面我们将了解它具有几何意义，
+可以视为拓扑空间$X = \text{Spec} \ A$，
+而素理想$\mathfrak p\in \text{Spec} \ A$视为这个空间的点。
+
+$A$的极大理想的全体构成Gelfand谱$\text{Max} \ A$，
+当$A$是含幺交换C*-代数时，
+它在Gelfand拓扑（弱*拓扑）下构成紧Hausdorff空间，
+这是算子代数重要的基础。
+
+\section{扩环}
+
+以有限集合$X = \{x_i\} \in\textbf{FinSet}$为基，
+以集合$A$为系数集，
+有函数集$h^A X = A^X = \textbf{Set}(X,A)$，
+给定其中的函数$f:X \to A$为每个$x_i$指定了系数$a_i = f(x_i)$，
+以及对应的$(a_i,x_i)$，
+从而产生形式和：
+$\sum_i a_i x_i = a_1 x_1 + a_2 + x_2 + \cdots = \simeq \{ (a_1,x_1),(a_2,x_2), \cdots \}_i$，
+这里$a_1 x_1 + a_2 + x_2 + \cdots$只是形式加法，
+并不意味着有可加性。
+形式和的全体记为：
+$A[X] = \{ \sum_i a_i x_i \} \simeq h^A X$。
+
+若生成集$X = \textbf 1 = \{1\}$为单点集，
+$\sum_i a_i x_i = a_1 1$，
+因此
+$A[\textbf{1}] = \{ a_1 1 \} \simeq \{ a_1 \} \simeq A \simeq h^A \textbf 1$，
+形式和的全体相当于系数集。
+$\mathbb Z$可以视为基$X=\{1\}$的整系数形式和的集合。
+
+当系数集$A \in \textbf{Ab}$是Abel群，
+借助$A$中的交换加法，
+定义形式和$A[X]$的含幺可逆交换加法：
+$\sum_i a_i x_i + \sum_i b_i x_i = \sum_i (a_i + b_i) x_i$，
+使得$A[X] \in \textbf{Ab}$构成Abel群。
+
+有限集合$X$生成的是有限形式和，
+若系数$A \in \textbf{CRing}$是交换环，
+借助$A$中的交换乘法，
+定义形式和$A[X]$的含幺交换乘法：
+$(\sum_i a_i x_i) \cdot (\sum_i b_i x_i)$，
+展开合并后就会出现生成元的有限次幂。
+为了让$A[X]$的乘法封闭，
+需要对幂进行处理。
+以下固定整数环系数$A = \mathbb Z$，
+且明确生成元$1 \in \mathbb Z$是整数，
+于是整数$1$作为生成元的任意幂还是它本身，
+这样解决了形式和$\mathbb Z[\{1\}]$的乘法封闭性问题，
+使得$\mathbb Z[\{1\}] \in\textbf{CRing}$构成交换环，
+它就是整数环。
+
+添加一个生成元$s$,
+对$X = \{1,s\}$做整系数形式和，
+$\sum_i a_i x_i = a_1 1 + a_2 s \simeq \{ (a_1,1),(a_2,s) \}_i$，
+形式和的全体为：
+$\mathbb Z[X] = \{ a_1 1 + a_2 s \}$。
+根据以上讨论让生成元$1$为整数，
+为了让形式和$\mathbb Z[X]$的乘法封闭，
+要求包含$s$的幂可以回到形式和$a_1 1 + a_2 s$中，
+简单方法是要求$s\cdot s = d \mathbb Z$，
+这样$(a_1 s) \cdot (a_2 s) = (a_1 a_2)d$，
+实现了形式和乘法的封闭性。
+记$s = \sqrt d$，
+形式和相应简记为：
+$a + b\sqrt{d} = a 1 + b \sqrt{d}$。
+
+注意这里还需要考虑根号运算本身的问题：
+$d = 24$具有平方因数$2^2$，
+导致$\sqrt{2^2 \times 6} = 2 \sqrt 6$，
+这样会引入新的生成元$\sqrt 6$，
+破坏了封闭性。
+我们要求$d$是一个无平方因数，
+即$d$的因数分解后没有平方以上的项。
+因此我们应当使用无平方因数的根式作为生成元$\sqrt d$。
+通过给$\mathbb Z$添加无平方因数的根$\sqrt d$，
+得到的环称为\textbf{二次扩环}（Quadratic Extension）
+$\mathbb{Z}[\sqrt{d}] = \{a + b\sqrt d\}$。
+当 $d=-1$ 时，
+形式化的记$ \text i = \sqrt{-1}$，
+得到虚二次扩环 $\mathbb{Z}[i] = \{a + b\text i\}$，
+即\textbf{Gauss整数环}。
+
+
+\section{分式}
+
+\begin{framed}
+\noindent
+交换环$A = (A,+,0,\cdot,1) \in \textbf{CRing}$中，
+包含乘法单位元且对乘法封闭的子集称为\textbf{乘法系统}（Multiplicative System）。
+\end{framed}
+
+乘法系统$S$的作用是构造分式中的分母。
+我们希望分式作为等价类，
+例如$2/6 \simeq 1/3$，
+基于$2 \times 3 = 1 \times 6$。
+
+\begin{framed}
+\noindent
+在$A \times S$上构造等价关系
+$(a_1,s_1) \sim (a_2,s_2) \Leftrightarrow \exists t \in S:\ t(a_1s_2 - a_2s_1) = 0$，
+等价类记为$a/s=[(a_1,s_1)]=[(a_2,s_2)]$，
+商环$S^{-1}A = (R \times S)/\sim$称为$A$对$S$的局部化分式环。
+\end{framed}
+
+有自然同态$A \to S^{-1}A :: a \mapsto a/1$。
+定义中的$t$因子是为了在非整环的情况下，
+让等价关系保持传递性，
+允许我们消去非整环中零因子带来的歧义。
+在整环的情况下可以取$t=1$，
+从而退化为简单的$a_1s_2 = a_2s_1$。
+
+局部化给环添加了分母，
+使作为分母的乘法系统$S$的元在局部化后称为可逆元。
+以下是一些常见的乘法系统及其局部化：
+
+对于 $f \in A$，其所有非负次幂构成的集合 $S = \{1, f, f^2, \dots\}$ 是乘法系统。
+例如 $\mathbb{Z}$ 中以 $2$ 的幂次构造的系统。
+进而有局部环$A_f = S^{-1}A$。
+
+取$A$的所有非零元$S = A \setminus \{0\}$，
+若$A$是整环则$S$是乘法系统：
+
+\begin{framed}
+\noindent
+整环 $A$ 对 $S = A \setminus \{0\}$ 进行局部化得到的环$\text{Frac} \ A = (A \setminus \{0\})^{-1} A $，
+称为\textbf{分式域}（Field of Fractions）。
+\end{framed}
+
+$\text{Frac} \ A$它是包含 $A$ 的最小的域。
+
+\begin{itemize}
+    \item 整数环 $\mathbb{Z}$ 的分式域是有理数域 $\mathbb{Q}$。
+    \item 代数整数环（如 $\mathbb{Z}[i]$）的分式域是对应的代数数域（如 $\mathbb{Q}(i)$）。
+    \item 多项式环 $k[x_1, \dots, x_n]$ 的分式域是全体有理函数构成的有理函数域 $k(x_1, \dots, x_n)$。
+\end{itemize}
+
+
+\begin{framed}
+\noindent
+若一个交换环包含唯一的极大理想，称其为\textbf{局部环}（Local Ring）。
+\end{framed}
+
+若 $\mathfrak p \in \text{Spec} \ A$ 是素理想，
+则 $S = A \setminus \mathfrak p$ 是乘法系统，
+$A_\mathfrak p = S^{-1}A = \{ a/s \mid a \in \mathbb Z,\ s \notin \mathfrak p \}$是局部环。
+它有唯一的极大理想$\mathfrak p A_\mathfrak p$。
+
+
+对于素数$p$，
+记$\mathfrak p = (p)$，
+$\mathbb{Z}_\mathfrak p$ 是局部环，
+它唯一的极大理想是$\mathfrak p \mathbb Z_\mathfrak p$。
+例如素数 $3$ 使得所有不能被 $3$ 整除的整数构成乘法系统
+$S = \mathbb{Z} \setminus (3)$，
+以及局部环 $\mathbb{Z}_{(3)} = \{ a/s \mid a \in \mathbb Z,\ 3 \nmid s \}$。
+在这个环中，所有不被 $3$ 整除的数都成为了可逆元。
+若$a/s \in \mathbb{Z}_{(3)}$可逆，
+则逆元$s/a$需要使得$3 \nmid a$。
+那么对于任何$r\in (3)$，
+$r/s$的逆元$s/r$无法满足$3 \nmid r$。
+于是 $(3)\mathbb{Z}_{(3)} = \{ r/s  \mid r \in (3),\ 3 \nmid s \}$ 作为不可逆元构成的集合，
+成为了该局部环的唯一极大理想。
+
+
+\section{素谱}
+
+现在把前面讨论过的素谱$\text{Spec} \ A$从集合提升为拓扑空间。
+令$I \subseteq A$为理想，
+素理想$\mathfrak p \in\text{Spec} \ A$，
+考虑当它被视为$A$的子集，
+包含理想$\mathfrak p \supset I$的情况。
+
+\begin{framed}
+\noindent
+理想 $I$ 的退化集为包含 $I$ 的所有素理想
+$ V(I) = \{ \mathfrak{p} \in \operatorname{Spec}(R) \mid I \subseteq \mathfrak{p} \} $。
+\end{framed}
+
+在整数环中，
+$I = (60)$，
+$\mathfrak p_1 = (2),\ \mathfrak p_2 = (3),\ \mathfrak p_3 = (5)$
+都满足这种包含关系。
+这里$V(I) = V((60)) = \{ \mathfrak p_1,\ \mathfrak p_2,\ \mathfrak p_3 \}$，
+它包含所有整除 $60$ 的素数生成的理想。
+
+退化集$V(I) \subseteq \text{Spec} \ A$以素理想为点，
+构成素谱的子集。
+
+\begin{enumerate}
+    \item \textbf{空集与全空间}：\(V(1) = \varnothing\)，因为不存在包含单位理想的素理想；\(V(0) = \operatorname{Spec} R\)，因为零理想包含于任何素理想。
+    \item \textbf{有限并封闭}：对任意理想 \(I, J\)，有 \(V(I) \cup V(J) = V(I \cap J)\)。事实上，\(V(I \cap J) \supseteq V(I) \cup V(J)\) 显然；反之，若 \(\mathfrak{p} \supseteq I \cap J\) 且 \(\mathfrak{p}\) 不含 \(I\) 也不含 \(J\)，则存在 \(x \in I \setminus \mathfrak{p}, y \in J \setminus \mathfrak{p}\)，则 \(xy \in I \cap J \subseteq \mathfrak{p}\)，由素理想性得 \(x \in \mathfrak{p}\) 或 \(y \in \mathfrak{p}\)，矛盾。故 \(V(I \cap J) \subseteq V(I) \cup V(J)\)。更常用的是 \(V(I) \cup V(J) = V(IJ)\)，因为 \(IJ \subseteq I \cap J\)，且 \(V(IJ) = V(I \cap J)\)。
+    \item \textbf{任意交封闭}：对任意一族理想 \(\{I_\alpha\}\)，有 \(\bigcap_\alpha V(I_\alpha) = V(\sum_\alpha I_\alpha)\)，因为 \(\mathfrak{p}\) 包含所有 \(I_\alpha\) 当且仅当它包含它们的和。
+\end{enumerate}
+
+以退化集为闭集，
+使得素谱$\text{Spec} A$成为拓扑空间，
+称为\textbf{Zariski 拓扑}。
+对于多项式环，
+它对应着零点闭集的Zariski拓扑。
+
+对于 $f \in A$，
+不包含它的素理想构成
+$V((f)) = \{ \mathfrak{p} \mid f \notin \mathfrak{p} \}$。
+
+定义 $D_f = \text{Spec} A \setminus V((f))$。
+这些 \(D(f)\) 构成 Zariski 拓扑的一族开基，称为\textbf{基本开集}。它们在代数几何中对应非零函数的非零点集。
+
+
+前述的扩环产生了自然的
+$\mathbb Z \to \mathbb Z[\sqrt d]$的嵌入，
+使$\mathbb Z$成为子环。
+扩环的过程改变了可约性，
+因此改变了素理想和素谱。
+Fermat在Diophantus著作上批注了命题：
+若有素数$p \equiv 1 \pmod{4}$ iff.
+$p$可以表示为整数平方和$p = x^2 + y^2$。
+用现代的观点看，
+在$\mathbb Z$中，
+模$4$求余得到$\mathbb Z/(4) \simeq {0,1,2,3}$，
+余数为偶数的均不是素数，
+只剩下余数为$1,3$的情况。
+当素数$p$的余数为$3$时，
+素数$p$在$\mathbb Z[\text i]$中仍然为素数，
+即不可分解的Gauss素数。
+最后一种情况即
+$p \equiv 1 \pmod{4}$ iff. $(p - 1) \in (4)$，
+在$\mathbb Z[\text i]$中，
+有不可约的分解：
+$p - 1 = x^2 + y^2 - 1 = (x + y\text i)(x - y\text i) - 1 \in (4)$，
+例如
+$5 - 1 = (2 + \text i)(2 - \text i) - 1$，
+$13 - 1 = (3 + 2\text i)(3 - 2\text i) - 1$，
+$17 - 1 = (4 + \text i)(4 - \text i) - 1$
+
+整数环 \(\mathbb{Z}\) 的素谱为
+$\text{Spec} \mathbb Z = \{ (0) \} \cup \{ (p) \mid p \text{ 是素数} \}$，
+其中 $(0)$ 是泛点（generic point），
+每个素数 $p$ 对应一个闭点 $(p)$。
+Zariski 拓扑下，
+闭集由有限多个素理想组成（以及整个空间）。
+一个理想 $I = (n)$ 的退化集 $V(I)$ 包含所有整除 $n$ 的素数生成的理想。
+
+\section{剩余域}
+  
+\begin{framed}
+\noindent
+交换环 $A$ 对其极大理想 $\mathfrak m$ 构造的商环 $A/\mathfrak m$ 是域，
+称为\textbf{剩余域}（Residue Field）。
+\end{framed}
+
+若整环$A$对其素理想$\mathfrak p\in\text{Spec} \ A$局部化得到 $A_\mathfrak p$ 和唯一的极大理想 $\mathfrak p A_\mathfrak p$，
+则可以对这个极大理想做剩余域
+$k(\mathfrak p) = A_\mathfrak p/\mathfrak p A_\mathfrak p$。
+此外商环$A/\mathfrak p$是整环，
+有分式域$\text{Frac} \ A/\mathfrak p = (A/\mathfrak p\setminus \{0\})^{-1}(A/\mathfrak p) $。
+有典范同构
+$k(\mathfrak p) \simeq \text{Frac} \ A/\mathfrak p$。
+
+\begin{equation}
+\mathfrak p 
+\mapsto (S = A \setminus \mathfrak p)
+\mapsto (A_\mathfrak p = S^{-1} A)
+\mapsto \mathfrak pA_\mathfrak p
+\mapsto \big( k(\mathfrak p) = A_\mathfrak p/\mathfrak p A_\mathfrak p \simeq \text{Frac} \ A/\mathfrak p \big)
+\end{equation}
+\label{eq:prime-ideal-local-ring}
+
+对于极大理想$\mathfrak m$，
+$A/\mathfrak m$已经是剩余域，
+$\text{Frac} \ A/\mathfrak m = A/\mathfrak m$。
+
+\begin{equation}
+\mathfrak m
+\mapsto \mathfrak m A_\mathfrak m
+\mapsto \big( k(\mathfrak m) = A_\mathfrak m/\mathfrak m A_\mathfrak m \simeq \text{Frac} \ A/\mathfrak m = A/\mathfrak m \big)
+\end{equation}
+\label{eq:max-ideal-local-ring}
+
+$3\mathbb{Z}_{(3)} = \{ 3a/s  \mid a \in \mathbb Z,\ 3 \nmid s \}$ 作为不可逆元构成的集合，
+成为了$\mathbb{Z}_{(3)}$的唯一极大理想，
+剩余域为
+$k((3)) = \mathbb{Z}_{(3)}/(3)\mathbb{Z}_{(3)}$，
+它同构于$\text{Frac} \mathbb Z/(3)$，
+即Galois域$\mathbb F_3$。
+
+
+\begin{itemize}
+    \item 对局部环 $\mathbb{Z}_{(p)}$ 模掉它的极大理想 $p\mathbb{Z}_{(p)}$，得到的剩余域同构于 Galois 域 $\mathbb{F}_p$（即 $\mathbb{Z}/p\mathbb{Z}$）。
+    \item 在实系数多项式环 $\mathbb{R}[x]$ 中，对极大理想 $(x^2+1)$ 进行商运算，其剩余域即为复数域 $\mathbb{C}$。
+\end{itemize}
+在微分几何与代数几何的统一视角中，剩余域不仅能被用来提取“点”的坐标值，还能通过极大理想的平方 $\mathfrak{m}^2$ 构造切空间。商空间 $\mathfrak{m}/\mathfrak{m}^2$ 模除了所有的二阶高阶小量，天然同构于该点处的余切空间。
+
+$(x - 1) \in \text{Spec} \ \mathbb R[x]$。
+$(x^2 + 1) \notin \text{Spec} \ \mathbb R[x]$，
+
+\begin{equation}
+\begin{aligned}
+0 \to (x - 1) \to \mathbb R[x] \to \mathbb R \to 0 \\
+0 \to (x^2 + 1) \to \mathbb R[x] \to \mathbb C \to 0 \\
+\end{aligned}
+\end{equation}
+\label{eq:short-exact-seq-num-field}
+
+即$\mathbb R[x]/(x - 1) \simeq \mathbb R$以及$\mathbb R[x]/(x^2 + 1) \simeq \mathbb R$。
+更多阐述见(\ref{eq:short-exact-seq-fun-real})

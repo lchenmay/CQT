@@ -1,0 +1,118 @@
+%!TEX program = lualatex
+\documentclass[10pt, openany]{book}
+
+\usepackage{comment}
+\usepackage{silence}
+\WarningFilter{latex}{Command \underbar has changed}
+\WarningFilter{latex}{Command \underline has changed}
+
+% ============== 考虑出血的版式 ===================================
+\usepackage[
+    paperwidth=6in,
+    paperheight=9in,
+    top=0.8in,
+    bottom=0.8in,
+    inner=0.75in,
+    outer=0.6in,
+    bindingoffset=0.25in,
+    footskip=0.4in
+]{geometry}
+
+% ============== 语言和字体 ===================================
+\usepackage[x-4]{pdfx} 
+\usepackage{fontspec}
+\usepackage[provide=*, chinese]{babel}
+\usepackage{sectsty}
+
+\babelfont{rm}[
+    Path = ./font/,
+    Renderer = HarfBuzz,
+    BoldFont = {GFSDidot-Regular.ttf},
+    BoldFeatures = {RawFeature={embolden=3.0}},
+    ItalicFont = {timesi.ttf}
+]{GFSDidot-Regular.ttf}
+
+\babelfont{sf}[Path = ./font/, Renderer = HarfBuzz]{GFSDidot-Regular.ttf}
+\babelfont{tt}[Path = ./font/, Renderer = HarfBuzz]{NotoSerifSC-Regular.ttf}
+
+\babelfont[chinese]{rm}[
+    Path = ./font/,
+    Renderer = HarfBuzz,
+    BoldFont = {NotoSerifSC-ExtraBold.ttf},
+    ItalicFont = {StKaiTi.ttf}
+]{NotoSerifSC-Regular.ttf}
+
+\allsectionsfont{\rmfamily\bfseries}
+
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{quoting}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{tikz}
+\usepackage{graphicx}
+\usetikzlibrary{calc, positioning, arrows.meta}
+\usepackage{fancyhdr}
+\usepackage{amsmath, amsthm}
+\usepackage{bm} 
+\usepackage{libertine} 
+\usepackage[libertine]{newtxmath} 
+\usepackage{tikz-cd} 
+\usepackage{nicematrix} 
+\usepackage{adjustbox} 
+\usepackage{framed} 
+\usepackage{scrextend}
+\changefontsizes{9.5pt} 
+
+\NiceMatrixOptions{
+  custom-line = {
+    letter = : ,
+    command = hdashline ,
+    tikz = { dashed }
+  }
+}
+
+\setlength{\parskip}{1em} 
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\textbf{类型与Topos}}
+\fancyhead[LO]{\textit{范畴论观点}}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+\frontmatter
+\title{\textbf{类型与Topos}\\ \large 范畴论观点}
+\author{Lao Chen}
+\date{\today}
+\maketitle
+\tableofcontents
+
+\mainmatter
+
+$\mathscr L$是一个\textbf{局部语言(local language)}，
+若包含如下\textbf{符号(symbol)}：
+\begin{itemize}
+  \item 
+  \textbf{单位类型符号(unit type symbol)} $\textbf{1}$
+  和\textbf{真值类型符号(truth value type symbol)} $\Omega$
+  \item 可以为空的一组
+  \textbf{基本类型符号(ground type symbol)} $\textbf{A},\textbf{B},\textbf{C},\cdots$
+  \item 可以为空的一组
+  \textbf{函数符号(function symbol)} $\textbf{f},\textbf{g},\textbf{h},\cdots$
+\end{itemize}
+
+$\mathscr L$的\textbf{类型符号(type symbol)}递归定义为：
+\begin{itemize}
+  \item 
+  $\textbf{1}$和$\Omega$是类型符号
+  \item
+  基本类型符号是类型符号
+  \item
+
+\end{itemize}
+
+\end{document}

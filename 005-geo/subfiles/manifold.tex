@@ -1,0 +1,485 @@
+\chapter{流形}
+
+\section{函数芽}
+
+局部化环$C(X)_{\mathfrak m_x} = \{ f/g \mid f,g \in C(X),\ g(x) \neq 0 \}$，
+茎环$\mathcal O_x = \varinjlim_{U \ni p \ni x} \mathcal O_U$。
+微分几何研究的光滑流形$X$是仿紧的Hausdorff空间，
+其拓扑性质保证了局部化环的同构：
+
+$$
+\mathcal O_x \simeq C(X)_{\mathfrak m_x}
+$$
+
+局部化环$A_\mathfrak p$的唯一极大理想是$\mathfrak p A_\mathfrak p$，
+这里同构的局部化环的唯一极大理想就是
+$\mathfrak m_x \mathcal O_x$。
+根据(\ref{eq:max-ideal-local-ring})和(\ref{eq:fun-ring-residue-field-real})有
+$\mathcal O_x/\mathfrak m_x \mathcal O_x \simeq C(X)/\mathfrak m_x \simeq \mathbb R$。
+这反映了在点 $x$ 附近函数的值由其芽唯一确定。
+
+
+实光滑流形的光滑函数环$C(X)$在点$x$上有极大理想
+$\mathfrak m_x = \{ f \in C(X) \mid f(x) = 0 \}$
+和局部环$\mathcal O_x \simeq C(X)_{\mathfrak m_x}$。
+用$\mathfrak m_x$的元素有限生成理想
+$\mathfrak m_x^2 = \{ \sum_i f_i g_i \mid f_i,g_i \in \mathfrak m_x \}$。
+其意义在于，
+$\mathfrak m_x$中的函数在$x$处退化（一阶零点），
+$\mathfrak m_x^2 \subset \mathfrak m_x$中的函数在$x$处退化，
+且其微分也退化（二阶零点）。
+余切空间在同构意义下等于
+$ T^*_x X \simeq \mathfrak m_x/\mathfrak m_x^2 $，
+其元素记为：
+
+$$
+\text d f = f + \mathfrak m_x^2 \in T^*_x X
+$$
+
+例如，
+$X = \mathbb R$，
+$x = 0$，
+而$f(x) = 3x \in C(X)$在$x$处只具有一阶零点，
+故有非零的等价类：
+$\text d f = f + \mathfrak m_x^2$。
+$f(x) = x^2 \in C(X)$在$x$处具有二阶零点，
+即$f \in \mathfrak m_x^2$，
+故等价类退化：
+$\text d f = 0$。
+
+二维情形$X = \mathbb R^2$，
+$(x,y) = (0,0)$，
+而$f(x) = 3x + 2y \in C(X)$在$(x,y)$处只具有一阶零点，
+故有非零的等价类：
+$\text d f = f + \mathfrak m_{(x,y)}^2$。
+$f(x) = 3x^2 + 2y^2 \in C(X)$在$(x,y)$处具有二阶零点，
+即$f \in \mathfrak m_{(x,y)}^2$，
+故等价类退化：
+$\text d f = 0$。
+
+
+
+\section{自然配对}
+
+作用在$k$-线性空间上，
+反变Hom函子相当于线性对偶函子
+$(-)^* = h^k = \textbf{Vct}_k(-,k) \in \textbf{Fct}(\textbf{Vct}_k^\text{op},\textbf{Vct}_k)$，
+得到$k$-线性泛函的集合，
+即$k$-线性对偶空间，
+记为$X^* = h^k X = \textbf{Vct}_k(X,k) \in \textbf{Vct}_k$。
+再次作用在对偶空间上得到双重对偶空间$X^{**}$。
+$x\in X$决定了对偶线性泛函：
+$(i_x \in X^{**}): X^* \to k :: \alpha \mapsto i_x(\alpha) = \alpha(x)$，
+这样构造了自然嵌入
+$X \to X^{**} :: x \to i_x$，
+它是$k$-线性单同态：
+
+$$
+\begin{aligned}
+X^* \times X &\to k \\
+(\alpha,x) &\mapsto \alpha x = \alpha(x)
+\end{aligned}
+\quad
+\begin{aligned}
+X^{**} \times X^* &\to k \\
+(\Phi,\alpha) &\mapsto \Phi \alpha = \Phi(\alpha)
+\end{aligned}
+\quad
+\begin{aligned}
+i:X \times X^{**} &\to k \\
+x &\mapsto i(x) = x
+\end{aligned}
+$$
+
+约定$X^* \times X$和$X^{**} \times X^*$二元组的顺序，
+以上的双线性形可以记为：
+记$\langle \alpha,x\rangle = \alpha(x)$
+以及$\langle \Phi,\alpha\rangle = \Phi(\alpha)$，
+这样二元组的元就区分为左元和右元。
+通常左元称为线性泛函(linear functional)或对偶向量(covector)，
+右元仍保留向量(vector)的称谓。
+
+
+对偶函子的反变性体现在
+$f^* = h^k f: Y^* \to X^* :: \beta \mapsto f^*(\beta) = (h^k f)(\beta) = \beta \circ f$，
+这样构成了$f\in\textbf{Vct}_k(X,Y)$
+的对偶算子$f^*\in\textbf{Vct}_k(Y^*,X^*)$，
+进而有双重对偶算子$f^{**}$：
+
+$$
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAA0QBfU9TXfIRRkATFVqMWbAJrdeIDNjwEiAFnLj6zVohABrOXyWC1pMdS1TdBnkYEqUIs5sk6Qhhf2VDkTyhdc2D0V7HwA2DQDtNk5bT2MHZAjzCWjdWTiQ7yIADkjUqw4APQAqYK8TFDyUyzdpUvKE8NIARhc090yKxLy2qMLG0KIWsn8Ct3Yi4BKSrkHslBHnfrqpmbmupuGyPvGgrnEYKABzeCJQADMAJwgAWyQyEBwIJBbqBjoAIxgGAAVuoQgK5YY4ACxwIBWbAuHmudwe1GeSCce10F1KAAIADpY744OgYgC8GIAFKCinoMRcAJQknF4ujUonY3EwfEsgDGWCuHKpLKwYAxkxKzPJFyFsJu90QbyeL0QAGYobp6WyCTiBRj6iLieTKbJ3l8fv8trpgWCIXE4dL1HKkABWd4CtxQCBMT4MVjUUEwOhQJBgJgMBiIuhYBhsSBgL2okDonUYvVUyEgD7fP4Atjm8GS+GIFFIxVO6NsV3uz0pn1+yMEGP48M1ktWqVICJ2xAAdmVcZTaeNmbNIJzzbzAE5EfK8rH472jRnTSABdhYLnpUt2y1ZQxnaW3R6Y1X-YhA8HQw3dFHWCO17LCy1bduS7oy-vK76jyeQ08wxGL7XV68Bbyi0SrTmsswAYgbaFjk15IFOd4iHBnYTkgo7IeOG4KgcXBAA
+\begin{tikzcd}
+X \arrow[dd, "f"'] \arrow[rrrr, "f^* \beta = (h^k f)(\beta) = \beta \circ f \in X^* = h^f X"] &  & {}                                        &  & k \arrow[dd, no head, Rightarrow] &  & X \arrow[dd, "f"'] \arrow[rr] &  & X^* \arrow[rr]                               &  & X^{**} \arrow[dd, "f^{**}"] \\
+                                                                                              &  &                                           &  &                                   &  & {} \arrow[rr, Rightarrow]     &  & {} \arrow[rr, Rightarrow]                    &  & {}                          \\
+Y \arrow[rrrr, "\beta \in Y^* = h^k Y"']                                                      &  & {} \arrow[uu, "f^* = h^k f"', Rightarrow] &  & k                                 &  & Y \arrow[rr]                  &  & Y^* \arrow[uu, "f^*" description] \arrow[rr] &  & Y^{**}                     
+\end{tikzcd}
+$$
+
+基于左右元的区分，
+一对对偶算子$f$作用在左元，
+$f^*$作用在右元。
+$\forall x$和$\forall \beta$是独立自由的变量。
+若这对对偶算子满足
+$ \langle x,f^* \beta \rangle = \langle f x, \beta \rangle $，
+则形成了颇为耦合的结构，
+称他们相互伴随，
+记$f \vdash f^*$。
+
+$$
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAA0QBfU9TXfIRRkATFVqMWbdgD0AVN14gM2PASIjy4+s1aIQATUV9VgjaTHUdU-QfnHl-NUJKkAjNsl6QAHR8M6MABzBhgAAgBaUgAzeUiwvwAnQJDWHhMBdRRNDysvNj8A4NCw6MjSCKSU0IcVTJcAFi083TYAD1qnMxQANmaJVv1ojvTHUyzkPssBm18fACMYHDpO8caLT0GQWLkEhaWV0brnIibcme9C6vC2mLi-ReW95OK0pWPuyfdN2avX0rCtz2jzoz2u3HEMCgQXgRFA0USEAAtkgyCAcBAkJoLmxog4EcikABmagYpBuFqzHb4xEoxBNdGYxDEUYEukMsmINys2lIACspKZIh5hMQAsZxJFdL6EsQAHZSXQsAw2Ei6Gg4GSpUgAByCpAATkVytV6s1mO1XLRnJlyxN+jVGq1SjZ5OtTKN6KVKodZud8N5XIpsoVXvtIEd5pporcwc5erDPojfotLsDbnd5ODDCwYG8UAgTHmNWoAAsYHQoGxIHmQMakzW0hQuEA
+\begin{tikzcd}
+X \arrow[rr, "f"]                             &  & Y                                          &  & x \arrow[rr, maps to]                                                                               &  & fx                                                                 \\
+{\langle -,f^* - \rangle} \arrow[u] \arrow[d] &  & {\langle f -,-\rangle} \arrow[u] \arrow[d] &  & {\langle x,f^* \beta \rangle} \arrow[u, maps to] \arrow[d, maps to] \arrow[rr, no head, Rightarrow] &  & {\langle f x, \beta \rangle} \arrow[u, maps to] \arrow[d, maps to] \\
+X^*                                           &  & Y^* \arrow[ll, "f^*"]                      &  & f^* \beta                                                                                           &  & \beta \arrow[ll, maps to]                                         
+\end{tikzcd}
+$$
+
+
+集合范畴中，
+$f\in\textbf{Set}(X,Y)$产生一对函数
+$f_*\in\textbf{Set}(\textbf 2^X,\textbf 2^Y):: A\mapsto f_*(A) = f(A) = \text{im} \ f (A)$，
+$f^*\in\textbf{Set}(\textbf 2^Y,\textbf 2^X):: B\mapsto f^*(B) = f^{-1}(B) = \text{preim} \ f (B)$。
+以幂集上自然的偏序结构为范畴，
+反单调Galois连接给出了伴随函子
+$f^* \vdash f_*$：
+
+$$
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAAUANEAX1PUy58hFACZyVWoxZte-EBmx4CRACwTq9Zq0QcAmnIFLhRAGwap2tgEFDCwcpHIAHBa0zdAMwD6AKgAU1gCUdopCKigAjKSRku46INx8RuFO4rGa0gmhDiYoAMwxcVlsBsn2xhEkpKLFVrpcOZVpNXUeIE2paq2Z9fqdjmY9lu2eAHoBAEIh5WGDKK61ve2TvJIwUADm8ESgngBOEAC2SGQgOBBI4iMJPr4g1Ax0AEYwDOy5ESAMMJ44dgdjqdqBckK4bmwADqQn4ARwe3xebw+zTY+ywmwAFv9yoCTohCudLoh1BCvH4EU9Xu9PiJvr8cfI8UhCaDEJFomSQNC4ZSkTTUbp0VjGXtDviAKwg4kAdmWtz51JRXV0WDA2FgAPFSHMRKQnPiSDATAYDEe-OV83pf0paoSUAgTGePy1QMQurZAE55UaTWbEUraWwfjbHna2A6nS7cdr2Wc2eDDV4JorkUHdCHRSBmXHpVcfboeTB4ebA4KQMLsa78ZFrmyOQXsynS2ny5nq-q68TSUnuTDi6mBSqKxiqzG3VK9YhiOPJXnEM5Z0g5VPREvECv6zOKDwgA
+\begin{tikzcd}
+PX \arrow[rrrr, "f_*"] \arrow[dd, "\leq"'] &                                                     & {}                                             &                         & PY                                         &  & A \arrow[rr, "f_*"] \arrow[dd, "\leq"'] &  & f_*(A)                                  \\
+                                           & X \arrow[rr, "f" description] \arrow[lu] \arrow[ld] & {} \arrow[u, Rightarrow] \arrow[d, Rightarrow] & Y \arrow[ru] \arrow[rd] &                                            &  &                                         &  &                                         \\
+PX                                         &                                                     & {}                                             &                         & PY \arrow[llll, "f^*"] \arrow[uu, "\leq"'] &  & f^*(B)                                  &  & B \arrow[ll, "f^*"] \arrow[uu, "\leq"']
+\end{tikzcd}
+$$
+
+考虑光滑函数$f\in \textbf{Mfd}^\infty(X,Y)$
+在$(x,y=f(x))$产生的切空间$(T_x X,T_yY)$
+和余切空间$(T^*_x X,T^*_yY)$。
+假设$f$诱导了一对$(f_*,f^*)$，
+用切向量和余切向量的自然配对来定义${\langle -, - \rangle}$，
+构成了推出(pushforward) $f_*$ 和拉回(pullback) $f^*$，
+得到类似前述的$f_* \vdash f^*$的伴随结构：
+
+$$
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRABUB9ADwA0QAvqXSZc+QigBM5KrUYs2XAJ4BNQcJAZseAkQAsM6vWatEtdSO3iiANkNyTbAGacAVAAIaFzaJ0Tk0gCMssYKZgA64Qx0YADmDDDuLh4AtKQp7pEATjHxrEKWYrooBsFG8qYgkdFxCe4A7qROAHqukRAAtjCxdJnhObX5GlpF-nZlDmFVUbl1yZ6k9X0Ded4jfkRkkiEViq08-AU+VsUBpNvljmbs+6prvtYl5ztXIC1t4Z3ddPcnY8+XKbtLo9X6jTakCahSrVWaJNLvdwZbJwwSyGBQWLwIigJxZTpIaQgHAQJAAZkBlWSIGo0QARjAGAAFB7FEAJJw4bx4gmIACs1BJhMpSDATAYDFpdAZzNZEhAWSwsQAFlzBXQsAw2B06Gg4EKjjyOkg7MTSYgKZNTGKJVKZSy-mxFSq1cSNVqzDq9QaNEakAKzUgAJwixA2yXs6WMh3gszO1U0t2a7W6-Wkw3442IQJkQOIENW5ytRP06NytgcrkZ3mmoXZ3PQ0XiiOl2WOuNKhPq5Oe1M+3GZpC5uuBUNvNzcweIAAcgvNAHYx+9J7zAqO88Rq1m13OkPOt0gDHnpwfEEeR6eA3XTQwsGBKlAIEw6QlE8qYHQoGxIPfEzh3d+BD5BQAhAA
+\begin{tikzcd}
+T_xX \arrow[rr, "f_*"]                        &  & T_yY                                          &  & v \arrow[rr, "f_*"]                                                                                 &  & f_* v                                                           \\
+{\langle -,f^* - \rangle} \arrow[u] \arrow[d] &  & {\langle f_* -,- \rangle} \arrow[d] \arrow[u] &  & {\langle w,f^*\omega \rangle} \arrow[u, maps to] \arrow[d, maps to] \arrow[rr, no head, Rightarrow] &  & {\langle f_* v,w \rangle} \arrow[u, maps to] \arrow[d, maps to] \\
+T^*_xX                                        &  & T^*_yY \arrow[ll, "f^*"]                      &  & f^*\omega                                                                                           &  & \omega \arrow[ll, "f^*"]                                       
+\end{tikzcd}
+$$
+
+
+
+\section{切空间，余切空间}
+
+平直空间$X = \mathbb R^n$视为仿射空间，
+点$x \in X$上所有平移构成线性空间$v \in T_x X$，
+函数$f\in C(X)$对方向向量$v\in T_x$的方向导数是：
+
+$$
+D_v f \mid_x = \lim_{t \to 0} \frac{f(x + t v) - f(x)}{t} = \text{grad} \ f \cdot v
+$$
+
+它是关于$\text{grad} \ f$和$v$的双线性函数，
+故$\text{grad} \ f$是$v$的对偶向量，
+记$\text{grad} \ f \in T^*_x X$，
+方向导数可以写为自然配对$\langle \text{grad} \ f,v \rangle = D_v f \mid_x$。
+
+我们希望把这种$T^*_x X \times T_x X \to \mathbb R$的自然配对结构推广到光滑流形，
+在光滑流形的点$x\in X\in\text{Mfd}^\infty$的局部研究微分问题。
+令有流形上的光滑函数$f \in C(X)$，
+令$\Gamma_x = \{ \gamma: \mathbb R \to X \mid \gamma(0) = x \}$为过$x$的参数曲线集合，
+借助参数曲线$\gamma \in \Gamma$，
+可以构造一元实可导函数$f\circ\gamma: \mathbb R \to \mathbb R$：
+
+$$
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZAJgBoAGAXVJADcBDAGwFcYkQAKADwAIBeHgB1BAc3oBbcfQ7kAlLKGCsYHgA0QAX1LpMufIRTlSxanSat2HHPx5zFyxVJwALAEaueAJU3aQGbHgERAAsxqYMLGyIIABm3ArCDsJObh7eGqYwUCLwRKAxAE4Q4kgAjDQ4EEhGZpHswmKS9CAV9FiM7FJocJU++UUliDW9iGS1FtExLSA4bR3RXT1VWv3FZRVVozQRE7GKAMZYBfuKjVLTjPSuMIwACrqBBiAFWCLOONOz7Z303b0ZGiAA
+\begin{tikzcd}
+                                                                                               &  & (x = \gamma(0)) \in X \arrow[rrdd, "f", maps to] &  &                    \\
+                                                                                               &  &                                                  &  &                    \\
+(t = 0) \in \mathbb R \arrow[rruu, "\gamma", maps to] \arrow[rrrr, "f \circ \gamma"', maps to] &  &                                                  &  & f(x) \in \mathbb R
+\end{tikzcd}
+$$
+
+参数曲线$\gamma$和光滑函数$f\in C(X)$在$x$点附近的局部行为，
+而光滑函数$f\in C(X)$在$x$上有茎$[f] \in \mathcal O_x$，
+两者在$x$附近的局部作用描述为双线性映射：
+
+$$
+\begin{aligned}
+  \mathcal O_x \times \Gamma_x &\to \mathbb R \\
+  ([f],\gamma) &\mapsto \langle [f],\gamma \rangle = \frac{\text d (f \circ \gamma)}{\text d t}
+\end{aligned}
+$$
+
+\section{微分形式}
+
+余切向量$\text d f$使用函数微分的记号是有意为之。
+前面讨论了$\text d f = \text{grad} \ f$相当于是流形上的梯度。
+梯度作为线性算子
+
+$$
+\begin{aligned}
+\text d: C(X) &\to T^*X \\
+f &\mapsto \text d f  
+\end{aligned}
+$$
+
+线性空间$V\in\textbf{Vct}$可以构造$i$-阶张量积$T^iV = V \otimes \cdots \otimes V$，
+以及\textbf{张量代数}(tensor algebra) $TV = \oplus_{i=0}^\infty T^i V$，
+向量以嵌入方成为张量代数的元$\iota: V \to TV$。
+
+为推广$\text d x \text d y = \text d y \text d x$所体现的对称性，
+考虑$TV$中如下生成的理想
+
+$$
+I = \langle \{ u \otimes v - v \otimes u \mid u,v \in V \} \rangle
+$$
+
+有到商代数的自然投射$\pi: TV \to SV = TV/I$，
+从而有复合同态$\varphi = \pi\circ\iota$：
+
+$$
+\begin{aligned}
+  \varphi: V &\to SV = TV/I \\
+  u &\mapsto \varphi(u) = u + I \\
+  v &\mapsto \varphi(v) v + I \\
+\end{aligned}
+$$
+
+计算$\varphi(u) \otimes \varphi(v) = u \otimes v + I,\ \varphi(v) \otimes \varphi(u) = v \otimes u + I$，
+注意到$u \otimes v - v \otimes u \in I$，
+求差$\varphi(u) \otimes \varphi(v) - \varphi(v) \otimes \varphi(u) = (u \otimes v - v \otimes u) + I = 0$，
+于是商代数$SV$具有对称性，
+成为$V$的\textbf{对称代数}(symmetric algebra)。
+
+为推广$\text dx \text dx = 0$所体现的“外”性质，
+考虑$TV$中如下生成的理想
+
+$$
+I = \langle \{ v \otimes v \mid v \in V \} \rangle
+$$
+
+有到商代数的自然投射$\pi: TV \to \wedge V = TV/I$。
+张量代数$(TV,\otimes)$上的张量积乘法，
+在自然投射下成为$(\wedge V = TV/I,\wedge)$上的外积：
+
+$$
+u \wedge v = u \otimes v + I
+$$
+
+计算$v \wedge v = v \otimes v + I$，
+注意到$v \otimes v \in I$，
+故$v \wedge v = 0$，
+于是商代数$\wedge V = TV/I$具有外性质，
+成为$V$的\textbf{外代数}(exterior algebra)。
+
+在光滑流形$X$上，
+微分形式代数$(\Omega^\bullet(X),\wedge,\text d)$就是这样的外代数。
+
+\section{Riemann流形}
+
+\begin{framed}
+\noindent
+$n$-维定向Riemann流形$(X,g)$上，
+在局部坐标系 $(x^1,\dots,x^n)$ 下，\textbf{黎曼体积形式} $\mathrm{vol}_g$ 定义为
+
+$$
+\mathrm{vol}_g = \sqrt{\det(g_{ij})} \; dx^1 \wedge \cdots \wedge dx^n,
+$$
+
+其中 $g_{ij} = g\left(\frac{\partial}{\partial x^i}, \frac{\partial}{\partial x^j}\right)$，$\det(g_{ij})$ 是度量矩阵的行列式。该形式与坐标系选取无关，整体定义在 $M$ 上。
+\end{framed}
+
+\section{Hodge * 算子}
+
+现在讨论三维空间向量\textbf{叉乘} $\mathbf{u} \times \mathbf{v}$的本质：
+
+$$
+\mathbf{u} \times \mathbf{v} =
+\begin{pmatrix}
+u_2 v_3 - u_3 v_2 \\
+u_3 v_1 - u_1 v_3 \\
+u_1 v_2 - u_2 v_1
+\end{pmatrix} =
+\begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+u_1 & u_2 & u_3 \\
+v_1 & v_2 & v_3
+\end{vmatrix} 
+$$
+
+其中 $\mathbf{i}, \mathbf{j}, \mathbf{k}$ 是标准正交基向量。
+
+叉乘是二元线性运算，
+暗示了外微分的性质：
+\begin{itemize}
+    \item $u \times v = -v \times u$
+    \item $u \times v = 0$
+\end{itemize}
+
+而叉乘只能在三维空间定义。
+实际上$u$和$v$并非是向量，
+而是$1$-形式，
+叉乘其实是外积$\wedge$，
+因而$u \wedge v$是三维空间中的$2$-形式。
+为何$u \times v$具有向量的形式，
+本质是因为
+
+\begin{framed}
+\noindent
+$n$-维定向Riemann流形$(X,g)$上，
+存在映射：
+
+$$
+\begin{aligned}
+  *: \Omega^k(X) &\to \Omega^{n-k}(X) \\
+  \omega &\mapsto *\omega
+\end{aligned}
+$$
+
+使得$\forall \alpha \in \Omega^k(X)$满足
+
+$$
+\alpha \wedge (*\beta) = \langle \alpha, \beta \rangle \, \text{vol}_g, \qquad 
+$$
+
+其中：
+\begin{itemize}
+    \item $\langle \alpha, \beta \rangle$ 是度量 $g$ 诱导的 $k$-形式上的内积，
+    \item $\text{vol}_g = \sqrt{\det g}\, dx^1 \wedge \cdots \wedge dx^n$ 是黎曼体积形式。
+\end{itemize}
+\end{framed}
+
+\subsection{三维空间中的对应关系}
+
+设 $\mathbb{R}^3$ 具有标准欧氏度量与定向。通过 Hodge 星算子 $*$，向量场与微分形式之间有以下对应：
+\[
+\begin{aligned}
+\text{向量} \quad &\longleftrightarrow \quad 1\text{-形式} \\
+\mathbf{v} = (v_1,v_2,v_3) \quad &\longleftrightarrow \quad v^\flat = v_1 dx + v_2 dy + v_3 dz,
+\end{aligned}
+\]
+其中 $\flat$ 表示由度量诱导的“降指标”映射（在标准欧氏度量下就是取相同的分量系数）。同样，$2$-形式可通过 $*$ 映射为 $1$-形式：
+\[
+*: \Omega^2(\mathbb{R}^3) \to \Omega^1(\mathbb{R}^3).
+\]
+
+\subsection{与向量分析的关系}
+
+\begin{itemize}
+    \item 叉乘的 Hodge 定义将向量积统一到外代数的框架中，无需依赖右手法则的显式公式。
+    \item 旋度 $\nabla\times\mathbf{F}$ 可视为 $*(d(\mathbf{F}^\flat))$：
+    \[
+    \nabla\times\mathbf{F} = \left( * d(\mathbf{F}^\flat) \right)^\sharp.
+    \]
+    \item 散度 $\nabla\cdot\mathbf{F}$ 对应 $* d( * (\mathbf{F}^\flat) )$。
+\end{itemize}
+
+\subsection{总结}
+
+Hodge 星算子与外积共同给出了叉乘的几何定义：
+\[
+\boxed{\mathbf{u}\times\mathbf{v} = \left( *(\mathbf{u}^\flat \wedge \mathbf{v}^\flat) \right)^\sharp }.
+\]
+该表述揭示了叉乘实质上是 $2$-形式到 $1$-形式的 Hodge 对偶，从而将三维向量的叉乘整合到外微分形式的一般理论中。
+
+
+
+\subsection{叉乘的 Hodge 定义}
+
+对向量 $\mathbf{u}, \mathbf{v} \in \mathbb{R}^3$，定义其叉乘 $\mathbf{u}\times\mathbf{v}$ 为唯一满足下式的向量：
+\[
+(\mathbf{u}\times\mathbf{v})^\flat = *(\mathbf{u}^\flat \wedge \mathbf{v}^\flat).
+\]
+即：先取对应的 $1$-形式 $\mathbf{u}^\flat$ 和 $\mathbf{v}^\flat$，作外积得 $2$-形式 $\mathbf{u}^\flat \wedge \mathbf{v}^\flat$，再用 Hodge 星算子将其转化为 $1$-形式，最后通过逆映射 $\sharp$ 变回向量。
+
+\subsection{具体计算验证}
+
+设 $\mathbf{u}=u_1dx+u_2dy+u_3dz$，$\mathbf{v}=v_1dx+v_2dy+v_3dz$（为简便记法，省略 $\flat$ 符号）。则
+\[
+\mathbf{u}\wedge\mathbf{v} = (u_1v_2-u_2v_1)\,dx\wedge dy + (u_2v_3-u_3v_2)\,dy\wedge dz + (u_3v_1-u_1v_3)\,dz\wedge dx.
+\]
+
+Hodge 星算子作用：
+\[
+\begin{aligned}
+*(dx\wedge dy) &= dz, \\
+*(dy\wedge dz) &= dx, \\
+*(dz\wedge dx) &= dy.
+\end{aligned}
+\]
+
+因此
+\[
+*(\mathbf{u}\wedge\mathbf{v}) = (u_2v_3-u_3v_2)\,dx + (u_3v_1-u_1v_3)\,dy + (u_1v_2-u_2v_1)\,dz,
+\]
+其分量恰为 $\mathbf{u}\times\mathbf{v}$ 的分量。再通过 $\sharp$ 映射得：
+\[
+\mathbf{u}\times\mathbf{v} = (u_2v_3-u_3v_2,\; u_3v_1-u_1v_3,\; u_1v_2-u_2v_1).
+\]
+
+
+\section{Stokes定理}
+
+\section{外微分 Stokes 定理的几种常见形式}
+
+\subsection{统一形式（外微分）}
+
+设 $M$ 为 $n$ 维带边光滑流形，$\omega$ 为 $(n-1)$-形式（紧支集），则
+\[
+\int_{\partial M} \omega = \int_M d\omega.
+\]
+以下各种定理均为其特例。
+
+\subsection{微积分基本定理（$n=1$）}
+
+取 $M=[a,b]\subset\mathbb{R}$，$\omega = f$（$0$-形式），则 $d\omega = f'(x)\,dx$，$\partial M = \{b\}-\{a\}$（定向相反）：
+\[
+\int_a^b f'(x)\,dx = f(b)-f(a).
+\]
+
+\subsection{格林定理（$n=2$，平面区域）}
+
+设 $M\subset\mathbb{R}^2$ 为平面区域，$\omega = P\,dx + Q\,dy$（$1$-形式），则
+\[
+d\omega = \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right) dx\wedge dy.
+\]
+Stokes 定理给出：
+\[
+\int_{\partial M} P\,dx + Q\,dy = \iint_M \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right) dx\,dy.
+\]
+
+\subsection{经典 Stokes 定理（$n=2$，三维空间中的曲面）}
+
+设 $M\subset\mathbb{R}^3$ 为二维定向曲面，$\mathbf{F}=(F_x,F_y,F_z)$ 为向量场，对应 $1$-形式 $\omega = F_x dx + F_y dy + F_z dz$。则 $d\omega$ 对应于旋度 $\nabla\times\mathbf{F}$ 的 $2$-形式：
+\[
+\int_{\partial M} \mathbf{F}\cdot d\mathbf{r} = \iint_M (\nabla\times\mathbf{F})\cdot d\mathbf{S}.
+\]
+
+\subsection{散度定理（$n=3$，三维区域）}
+
+设 $M\subset\mathbb{R}^3$ 为三维区域，定义 $2$-形式
+\[
+\omega = F_x\,dy\wedge dz + F_y\,dz\wedge dx + F_z\,dx\wedge dy.
+\]
+则 $d\omega = (\nabla\cdot\mathbf{F})\,dx\wedge dy\wedge dz$，Stokes 定理给出：
+\[
+\int_{\partial M} \mathbf{F}\cdot d\mathbf{S} = \iiint_M (\nabla\cdot\mathbf{F})\,dV.
+\]
+
+\subsection{总结对照表}
+
+\[
+\begin{array}{|c|c|c|c|c|}
+\hline
+\text{名称} & n & \omega & d\omega & \text{表达式} \\ \hline
+\text{微积分基本定理} & 1 & f & f'(x)dx & \int_a^b f'(x)dx = f(b)-f(a) \\ \hline
+\text{格林定理} & 2 & Pdx+Qdy & (Q_x-P_y)dx\wedge dy & \int_{\partial M} Pdx+Qdy = \iint (Q_x-P_y)dxdy \\ \hline
+\text{经典 Stokes} & 2 & \mathbf{F}\cdot d\mathbf{r} & (\nabla\times\mathbf{F})\cdot d\mathbf{S} & \int_{\partial M}\mathbf{F}\cdot d\mathbf{r} = \iint (\nabla\times\mathbf{F})\cdot d\mathbf{S} \\ \hline
+\text{散度定理} & 3 & \mathbf{F}\cdot d\mathbf{S} & (\nabla\cdot\mathbf{F})\,dV & \int_{\partial M}\mathbf{F}\cdot d\mathbf{S} = \iiint (\nabla\cdot\mathbf{F})\,dV \\ \hline
+\end{array}
+\]
+
+所有定理统一于外微分形式下的 Stokes 公式 $\int_{\partial M}\omega = \int_M d\omega$。

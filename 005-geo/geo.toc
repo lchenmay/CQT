@@ -1,0 +1,55 @@
+\babel@toc {chinese}{}\relax 
+\contentsline {chapter}{符号列表}{v}{chapter*.2}%
+\contentsline {chapter}{\numberline {1}点集拓扑}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}从集合构造幂集}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}拓扑公理}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.3}平凡拓扑、离散拓扑与拓扑结构的偏序包含}{2}{section.1.3}%
+\contentsline {section}{\numberline {1.4}无限并，从区间套极限得到单点，单点是闭集的意义}{2}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Zariski拓扑：用零点集构造}{2}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Hausdorff空间}{3}{section.1.6}%
+\contentsline {chapter}{\numberline {2}交换代数}{4}{chapter.2}%
+\contentsline {section}{\numberline {2.1}交换环的理想}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}扩环}{6}{section.2.2}%
+\contentsline {section}{\numberline {2.3}分式}{7}{section.2.3}%
+\contentsline {section}{\numberline {2.4}素谱}{8}{section.2.4}%
+\contentsline {section}{\numberline {2.5}剩余域}{10}{section.2.5}%
+\contentsline {chapter}{\numberline {3}层}{12}{chapter.3}%
+\contentsline {section}{\numberline {3.1}完备格}{12}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Heyting代数}{13}{section.3.2}%
+\contentsline {section}{\numberline {3.3}生成理想}{15}{section.3.3}%
+\contentsline {section}{\numberline {3.4}反单调Galois连接}{17}{section.3.4}%
+\contentsline {section}{\numberline {3.5}函数环}{18}{section.3.5}%
+\contentsline {section}{\numberline {3.6}函数层}{19}{section.3.6}%
+\contentsline {chapter}{\numberline {4}同调}{20}{chapter.4}%
+\contentsline {section}{\numberline {4.1}自由Abel群}{20}{section.4.1}%
+\contentsline {section}{\numberline {4.2}正合}{21}{section.4.2}%
+\contentsline {section}{\numberline {4.3}复形}{22}{section.4.3}%
+\contentsline {section}{\numberline {4.4}同调群}{22}{section.4.4}%
+\contentsline {chapter}{\numberline {5}流形}{23}{chapter.5}%
+\contentsline {section}{\numberline {5.1}函数芽}{23}{section.5.1}%
+\contentsline {section}{\numberline {5.2}自然配对}{24}{section.5.2}%
+\contentsline {section}{\numberline {5.3}切空间，余切空间}{26}{section.5.3}%
+\contentsline {section}{\numberline {5.4}微分形式}{27}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Riemann流形}{28}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Hodge * 算子}{28}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}三维空间中的对应关系}{29}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}与向量分析的关系}{30}{subsection.5.6.2}%
+\contentsline {subsection}{\numberline {5.6.3}总结}{30}{subsection.5.6.3}%
+\contentsline {subsection}{\numberline {5.6.4}叉乘的 Hodge 定义}{30}{subsection.5.6.4}%
+\contentsline {subsection}{\numberline {5.6.5}具体计算验证}{31}{subsection.5.6.5}%
+\contentsline {section}{\numberline {5.7}Stokes定理}{31}{section.5.7}%
+\contentsline {section}{\numberline {5.8}外微分 Stokes 定理的几种常见形式}{31}{section.5.8}%
+\contentsline {subsection}{\numberline {5.8.1}统一形式（外微分）}{31}{subsection.5.8.1}%
+\contentsline {subsection}{\numberline {5.8.2}微积分基本定理（$n=1$）}{32}{subsection.5.8.2}%
+\contentsline {subsection}{\numberline {5.8.3}格林定理（$n=2$，平面区域）}{32}{subsection.5.8.3}%
+\contentsline {subsection}{\numberline {5.8.4}经典 Stokes 定理（$n=2$，三维空间中的曲面）}{32}{subsection.5.8.4}%
+\contentsline {subsection}{\numberline {5.8.5}散度定理（$n=3$，三维区域）}{32}{subsection.5.8.5}%
+\contentsline {subsection}{\numberline {5.8.6}总结对照表}{33}{subsection.5.8.6}%
+\contentsline {chapter}{\numberline {6}de Rham上同调}{34}{chapter.6}%
+\contentsline {section}{\numberline {6.1}外微分算子}{34}{section.6.1}%
+\contentsline {chapter}{\numberline {7}概型}{35}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Zariski拓扑}{35}{section.7.1}%
+\contentsline {section}{\numberline {7.2}多项式环}{36}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Zariski拓扑：用理想构造}{36}{section.7.3}%
+\contentsline {section}{\numberline {7.4}概型}{37}{section.7.4}%
+\contentsline {section}{\numberline {7.5}有理函数域}{37}{section.7.5}%

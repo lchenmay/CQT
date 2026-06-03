@@ -1,0 +1,150 @@
+%!TEX program = lualatex
+\documentclass[10pt, openany]{book}
+
+\usepackage{comment}
+\usepackage{silence}
+\WarningFilter{latex}{Command \underbar has changed}
+\WarningFilter{latex}{Command \underline has changed}
+
+% ============== 考虑出血的版式 ===================================
+\usepackage[
+    paperwidth=6in,
+    paperheight=9in,
+    top=0.8in,
+    bottom=0.8in,
+    inner=0.75in,
+    outer=0.6in,
+    bindingoffset=0.25in,
+    footskip=0.4in
+]{geometry}
+
+% ============== 语言和字体 ===================================
+\usepackage[x-4]{pdfx} 
+\usepackage{fontspec}
+\usepackage[provide=*, chinese]{babel}
+\usepackage{sectsty}
+
+\babelfont{rm}[
+    Path = ./font/,
+    Renderer = HarfBuzz,
+    BoldFont = {GFSDidot-Regular.ttf},
+    BoldFeatures = {RawFeature={embolden=3.0}},
+    ItalicFont = {timesi.ttf}
+]{GFSDidot-Regular.ttf}
+
+\babelfont{sf}[Path = ./font/, Renderer = HarfBuzz]{GFSDidot-Regular.ttf}
+\babelfont{tt}[Path = ./font/, Renderer = HarfBuzz]{NotoSerifSC-Regular.ttf}
+
+\babelfont[chinese]{rm}[
+    Path = ./font/,
+    Renderer = HarfBuzz,
+    BoldFont = {NotoSerifSC-ExtraBold.ttf},
+    ItalicFont = {StKaiTi.ttf}
+]{NotoSerifSC-Regular.ttf}
+
+\allsectionsfont{\rmfamily\bfseries}
+
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{quoting}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{tikz}
+\usepackage{fancyhdr}
+\usepackage{amsmath, amsthm}
+\usepackage{bm} 
+\usepackage{libertine} 
+\usepackage[libertine]{newtxmath} 
+\usepackage{tikz-cd}
+\usepackage{amscd} 
+\usepackage{nicematrix} 
+\usepackage{adjustbox} 
+\usepackage{framed} 
+\usepackage{scrextend}
+\changefontsizes{9.5pt} 
+
+\NiceMatrixOptions{
+  custom-line = {
+    letter = : ,
+    command = hdashline ,
+    tikz = { dashed }
+  }
+}
+
+% ==========================================
+% 定理与例子环境设置 (依赖 amsthm 宏包)
+% ==========================================
+\theoremstyle{definition} % 设置样式：标题加粗，正文使用正常直立字体（不使用斜体）
+\newtheorem{example}{例}[section] % 自动创建 example 环境和计数器，并按 section 编号
+
+\setlength{\parskip}{1em} 
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\textbf{几何讲义}}
+\fancyhead[LO]{\textit{ }}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\usepackage{cite}
+\usepackage[style=index]{glossaries}   % 生成类似于索引的格式
+\makeglossaries
+
+\begin{document}
+
+\frontmatter
+\title{\textbf{几何讲义}\\  }
+\author{Lao Chen}
+\date{\today}
+\maketitle
+\tableofcontents
+
+\chapter*{符号列表}
+\addcontentsline{toc}{chapter}{符号列表}
+\glsaddall 
+\printglossaries
+
+\newglossaryentry{cat-set}{
+  name={\ensuremath{\textbf{Set}}},
+  description={集合范畴}}
+
+\newglossaryentry{cat-top}{
+  name={\ensuremath{\textbf{Top}}},
+  description={拓扑空间范畴}}
+
+\newglossaryentry{cat-cring}{
+  name={\ensuremath{\textbf{CRing}}},
+  description={交换环范畴}}
+
+\newglossaryentry{contra-variant-hom}{
+  name={\ensuremath{h^A = \text{Hom}(-,A)}},
+  description={反变Hom函子}}
+
+通常：
+
+大写字母$X,Y,Z$表示集合、拓扑空间、流形；
+$A,B,C$为交换环或交换代数。
+小写字母为其中的元素。
+
+$\mathbb Z,\mathbb Q,\mathbb R,\mathbb C$表示数环、数域，
+$k$表示交换域，
+$\mathbb Z[\sqrt{n}]$为二次扩环。
+
+$n\in\mathbb Z$表示整数，
+$p$表示非零素数。
+$(n)$表示理想，
+$\mathfrak{p}$表示素理想，
+$\mathfrak{m}$表示极大理想。
+
+\mainmatter
+
+\input{subfiles/top-set.tex}
+\input{subfiles/c-alg.tex}
+\input{subfiles/sheaf.tex}
+\input{subfiles/homology.tex}
+\input{subfiles/manifold.tex}
+\input{subfiles/cohomology-deRham.tex}
+\input{subfiles/scheme.tex}
+
+\end{document}

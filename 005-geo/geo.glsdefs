@@ -1,0 +1,112 @@
+\glsdefs@newdocentry{cat-set}%
+{%
+name={\ensuremath {\textbf {Set}}},%
+sort={\ensuremath {\textbf {Set}}},%
+type={main},%
+first={\protect \ensuremath  {\protect \textbf  {Set}}},%
+firstplural={\protect \ensuremath  {\protect \textbf  {Set}}s},%
+text={\protect \ensuremath  {\protect \textbf  {Set}}},%
+plural={\protect \ensuremath  {\protect \textbf  {Set}}s},%
+description={集合范畴},%
+descriptionplural={集合范畴},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{cat-top}%
+{%
+name={\ensuremath {\textbf {Top}}},%
+sort={\ensuremath {\textbf {Top}}},%
+type={main},%
+first={\protect \ensuremath  {\protect \textbf  {Top}}},%
+firstplural={\protect \ensuremath  {\protect \textbf  {Top}}s},%
+text={\protect \ensuremath  {\protect \textbf  {Top}}},%
+plural={\protect \ensuremath  {\protect \textbf  {Top}}s},%
+description={拓扑空间范畴},%
+descriptionplural={拓扑空间范畴},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{cat-cring}%
+{%
+name={\ensuremath {\textbf {CRing}}},%
+sort={\ensuremath {\textbf {CRing}}},%
+type={main},%
+first={\protect \ensuremath  {\protect \textbf  {CRing}}},%
+firstplural={\protect \ensuremath  {\protect \textbf  {CRing}}s},%
+text={\protect \ensuremath  {\protect \textbf  {CRing}}},%
+plural={\protect \ensuremath  {\protect \textbf  {CRing}}s},%
+description={交换环范畴},%
+descriptionplural={交换环范畴},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{contra-variant-hom}%
+{%
+name={\ensuremath {h^A = \text {Hom}(-,A)}},%
+sort={\ensuremath {h^A = \text {Hom}(-,A)}},%
+type={main},%
+first={\protect \ensuremath  {h^A = \protect \text  {Hom}(-,A)}},%
+firstplural={\protect \ensuremath  {h^A = \protect \text  {Hom}(-,A)}s},%
+text={\protect \ensuremath  {h^A = \protect \text  {Hom}(-,A)}},%
+plural={\protect \ensuremath  {h^A = \protect \text  {Hom}(-,A)}s},%
+description={反变Hom函子},%
+descriptionplural={反变Hom函子},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+

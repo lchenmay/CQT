@@ -1,0 +1,79 @@
+\chapter{概型}
+
+\section{Zariski拓扑}
+
+前面由子集生成理想的过程是：
+$\textbf 2^A \to I_A :: S \mapsto (S)$。
+现在限制在素谱$\text{Spec} \ A \subset I_A$上，
+$V: \textbf 2^A \to I_A :: S \mapsto V(S)$。
+
+
+给定交换环的子集$E \subset A \in\textbf{CRing}$，
+一个理想$I \subset E$去覆盖子集的意义。
+
+  上述的例子中，最终被素理想所覆盖，
+可见素理想的重要性。记
+$$
+V(E) = \left\{ \mathfrak p \in X \ | E \subset \mathfrak p \right\}
+$$
+为\textbf{退化集(vanishing set)}\index{vanishing set 退化集}。
+
+
+退化集$V(E)$由包含子集$E$的素理想构成。
+显然$E$生成的理想$(E)$满足
+$$
+V((E)) = V(E)
+$$
+并且易于证明：
+\begin{enumerate}
+\item $V(0) = X$，$V(1)=\varnothing$
+\item 对于任意子集族$\{E_i\in 2^A\}_{i\in I}$有$V(\cup_{i\in I} E_i) = \bigcap_{i\in I} V(E_i)$
+\item 对于$A$的任意理想$\mathfrak a$和$\mathfrak b$有$V(\mathfrak a \cap \mathfrak b) = V(\mathfrak a \mathfrak b) = V(\mathfrak a) \cup V(\mathfrak b)$
+\end{enumerate}
+以上条件使得退化集符合闭集的公理，
+于是退化集作为闭集赋予了$X=\text{Spec} \ A$拓扑空间的性质，
+称为\textbf{Zariski拓扑(Zariski topology)}\index{Zariski topology Zariski拓扑}。
+
+\begin{example}
+
+素数$p$生成素理想$(p) \in \text{Spec} \ \mathbb Z$，
+此外还有一个素理想$(0) \in \text{Spec} \ \mathbb Z$称为
+\textbf{泛点(generic point)}\index{generic point 泛点}。
+如下表示以示区分：
+$$
+\text{Spec} \ \mathbb Z = (0) \cup \{(p) \ | \ p > 1\}
+$$
+其中$p$为素数。
+\end{example}
+
+\begin{example}
+令$E=\{3,4,5,6\}$则$(E)=(60)$，
+$V(E)=V(60)$由包含$(60)$的素理想构成，
+小于$60$的素数所生成的理想都是$V(E)$中的点。
+\end{example}
+
+
+\section{多项式环}
+\begin{framed}
+\noindent\textbf{定义（多项式环）：}设 $k$ 为域，由 $n$ 个变量和系数域 $k$ 生成的环 $R = k[x_1, \dots, x_n]$ 称为\textbf{多项式环}。
+\end{framed}
+作为最具代表性的交换环，它是所有代数几何现象发生的基础舞台。
+
+\section{Zariski拓扑：用理想构造}
+不同于经典代数几何研究方程的具体坐标零点，格罗滕迪克将其代数化：将环 $R$ 的\textbf{所有素理想}构成的集合定义为仿射空间，记作 $\operatorname{Spec}(R)$。
+对于任意理想 $I \subseteq R$，定义闭集为包含 $I$ 的所有素理想：
+$$ V(I) = \{ \mathfrak{p} \in \operatorname{Spec}(R) \mid I \subseteq \mathfrak{p} \} $$
+由这些闭集生成的拓扑，即为定义在 $\operatorname{Spec}(R)$ 上的 Zariski 拓扑。
+
+\section{概型}
+\begin{framed}
+\noindent\textbf{定义（仿射概型与概型）：}将局部赋环空间的几何直觉与素理想谱 $\operatorname{Spec}(R)$ 的代数构造融合，得到具有结构层 $\mathcal{O}_{\operatorname{Spec}(R)}$ 的局部赋环空间，称为\textbf{仿射概型}。
+\textbf{概型}（Scheme）则是一个更为一般的局部赋环空间，它的每一点都存在一个开邻域，该邻域作为一个诱导的局部赋环空间同构于某个仿射概型。
+\end{framed}
+概型是现代代数几何探讨几何本质的最核心语言。
+
+\section{有理函数域}
+\begin{framed}
+\noindent\textbf{定义（泛点与有理函数域）：}对于一个由整环生成的积分概型，空间中存在一个特殊的“\textbf{泛点}”（Generic Point），它对应于环的零理想 $(0)$。结构层在这个泛点处的茎 $\mathcal{O}_{X, (0)}$ 恰好同构于整环的分式域，即该概型的\textbf{有理函数域} $k(X)$。
+\end{framed}
+在几何上，这代表了整个空间上所有“除了在某些低维闭子集之外，几乎处处有定义”的函数之全体。

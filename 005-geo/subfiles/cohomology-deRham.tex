@@ -1,0 +1,31 @@
+\chapter{de Rham上同调}
+
+\section{外微分算子}
+
+在光滑流形$X$上，
+微分形式代数$(\Omega^\bullet(X),\wedge,\text d)$就是这样的外代数，
+其中的外微分算子
+
+$$
+\text d^i: \Omega^i(X) \to \Omega^{i+1}(X)
+$$
+
+提升了外微分的阶数，
+特别是最初的$f \mapsto \text d f$。
+我们熟知
+
+$$
+\text d \circ \text d = 0
+$$
+
+这意味着在态射序列中：
+
+$$
+\Omega^0(X) \stackrel{\text d^0}{\longrightarrow} 
+\Omega^1(X) \stackrel{\text d^1}{\longrightarrow} 
+\Omega^2(X) \stackrel{\text d^2}{\longrightarrow} \cdots
+$$
+
+所有阶数在$\Omega^{i+1}(X)$上都满足$\text{Im} \ \text d^i \subseteq \text{Ker} \ \text d^{i+1}$。
+这样便可以用正合序列的方法来研究外微分形式代数$\Omega^\bullet(X)$。
+

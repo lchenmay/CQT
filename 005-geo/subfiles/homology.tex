@@ -1,0 +1,125 @@
+\chapter{同调}
+
+\section{自由Abel群}
+
+Abel群$A$中的元素$x$有逆元$-x$，
+整数$n \in \mathbb Z$给出了
+
+$$
+nx = \begin{cases}
+  \underbrace{x + \cdots + x}_n & (n > 0) \\
+  0 & (n = 0) \\
+  \underbrace{(-x) + \cdots + (-x)}_{|n|} & (n > 0) \\
+\end{cases}
+$$
+
+进而取子集$\{x_i\} \subseteq A$构造和：
+
+$$
+\sum_i n_i x_i
+$$
+
+这样形式的全体构成了$\{x_i\}$生成的子群。
+若生成集合有限则称有限生成群，
+若$\sum_i n_i x_i = 0$的条件是所有$n_i = 0$退化，
+称生成集$\{x_i\}$线性无关。
+由$r$个线性无关元有限生成的群称为秩$r$自由Abel群。
+$\mathbb Z$是$1$或$-1$生成的自由Abel群。
+
+
+\section{正合}
+
+环$\Lambda \in \textbf{Ring}$上的左模范畴记$\Lambda-\textbf{Mod}$，
+考虑模同态$f \in \Lambda-\textbf{Mod}(X,Y)$，
+产生了同态的像与核：
+
+$$
+\text{Im} \ f = \{ y \in Y \mid \exists x \in X,\ f(x) = y\},\ 
+\quad
+\text{Ker} \ f = \{x\in X \mid f(x) < 0\}
+$$
+
+它们都是子模，
+从而可以用商模定义：
+
+$$
+\text{Coim} \ f = X/\text{Ker} \ f,\ 
+\quad
+\text{Coker} \ f = Y/\text{Im} \ f
+$$
+
+由$f$有同态：
+
+$$
+\begin{aligned}
+  f^\prime : \text{Coim} \ f = X/\text{Ker} \ f &\to Y \\
+  x + \text{Ker} \ f &\mapsto f^\prime(x + \text{Ker} \ f) = f(x)
+\end{aligned}
+$$
+
+显然$\text{Im} \ f^\prime = \text{Im} \ f$，
+$f^\prime$是满同态。
+$f^\prime(x + \text{Ker} \ f) = f(x) = 0$时，
+$x \in \text{Ker} \ f$，
+即$x + \text{Ker} \ f = 0$，
+有$\text{Ker} \ f^\prime = 0$，
+$f^\prime$是单同态。
+$\text{Coim} \ f$描述的就是同构$ = X/\text{Ker} \ f \simeq \text{Im} \ f$。
+当$\text{Ker} \ f = 0$时称为单同态，
+$\text{Im} \ f = Y$时称为满同态，
+单满同态为同构，
+此时
+
+$$
+\text{Coim} \ f = X/\text{Ker} \ f \simeq X \simeq \text{Im} \ f = Y
+$$
+
+像和核都是子模，
+若将二者放在一个模中比较，
+即两个首尾相接的同态中，
+$\text{Im} \ f$和$\text{Ker} \ g$都是$Y$的子模：
+
+$$
+X \stackrel{f}{\longrightarrow} Y \stackrel{g}{\longrightarrow} Z
+$$
+
+若复合映射$X \stackrel{g \circ f}{\longrightarrow} Z$
+退化为$g \circ f = 0$，
+此时$\text{Im} \ f \subseteq \text{Ker} \ g$。
+当$\text{Im} \ f = \text{Ker} \ g$时称为正合。
+正合可以用于描述单/满同态：
+
+$$
+0 \stackrel{i}{\longrightarrow} X \stackrel{f}{\longrightarrow} Y,\
+\quad
+Y \stackrel{g}{\longrightarrow} Z \stackrel{p}{\longrightarrow} 0
+$$
+
+以上两个正合意味着$\text{Im} \ i = \text{Ker} \ f = 0$，
+它说明$f$是单同态；
+以及$\text{Im} \ g = \text{Ker} \ p = Z$，
+它说明$g$是满同态。
+将二者合并得到短正合序列，
+描述了单同态$f$和满同态$g$在$Y$处正合：
+
+$$
+0 \longrightarrow X \stackrel{f}{\longrightarrow} Y \stackrel{g}{\longrightarrow} Z \longrightarrow 0
+$$
+
+单同态$f$把$X$以同构的意义嵌入$Y$作为子模，
+在自然投射$\pi: Y \to Y/X$中，
+子模$X \simeq \text{Ker} \ \pi$，
+于是：
+
+$$
+0 \longrightarrow X \stackrel{f}{\longrightarrow} Y \stackrel{\pi}{\longrightarrow} Y/X \longrightarrow 0
+$$
+
+
+\section{复形}
+
+
+\section{同调群}
+
+
+

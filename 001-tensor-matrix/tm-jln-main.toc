@@ -1,0 +1,53 @@
+\babel@toc {chinese}{}\relax 
+\contentsline {chapter}{\numberline {1}约定}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}集合}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}集合范畴}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}势}{4}{section.2.2}%
+\contentsline {section}{\numberline {2.3}幂集}{5}{section.2.3}%
+\contentsline {section}{\numberline {2.4}集合的加法}{5}{section.2.4}%
+\contentsline {section}{\numberline {2.5}集合的乘法}{7}{section.2.5}%
+\contentsline {section}{\numberline {2.6}集合的指数}{8}{section.2.6}%
+\contentsline {section}{\numberline {2.7}集合的算术运算与势的保持}{8}{section.2.7}%
+\contentsline {chapter}{\numberline {3}二元关系}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}函数}{9}{section.3.1}%
+\contentsline {section}{\numberline {3.2}函数的直和与张量积}{10}{section.3.2}%
+\contentsline {section}{\numberline {3.3}矩阵的张量积}{11}{section.3.3}%
+\contentsline {section}{\numberline {3.4}复合函数}{12}{section.3.4}%
+\contentsline {chapter}{\numberline {4}谱}{13}{chapter.4}%
+\contentsline {section}{\numberline {4.1}正规算子}{13}{section.4.1}%
+\contentsline {section}{\numberline {4.2}伴随函子}{14}{section.4.2}%
+\contentsline {section}{\numberline {4.3}直和分解}{15}{section.4.3}%
+\contentsline {section}{\numberline {4.4}谱测度}{16}{section.4.4}%
+\contentsline {section}{\numberline {4.5}函子}{16}{section.4.5}%
+\contentsline {chapter}{\numberline {5}图的张量积}{17}{chapter.5}%
+\contentsline {section}{\numberline {5.1}图的几种描述}{18}{section.5.1}%
+\contentsline {section}{\numberline {5.2}图的张量积}{19}{section.5.2}%
+\contentsline {section}{\numberline {5.3}邻接矩阵的张量积}{21}{section.5.3}%
+\contentsline {section}{\numberline {5.4}邻接矩阵的复合}{23}{section.5.4}%
+\contentsline {section}{\numberline {5.5}邻接矩阵的乘法}{28}{section.5.5}%
+\contentsline {chapter}{\numberline {6}概率}{29}{chapter.6}%
+\contentsline {section}{\numberline {6.1}量子概率}{29}{section.6.1}%
+\contentsline {chapter}{\numberline {7}Topos: 逻辑与关系的范畴化}{30}{chapter.7}%
+\contentsline {section}{\numberline {7.1}态射集 (Hom-sets)}{30}{section.7.1}%
+\contentsline {section}{\numberline {7.2}高阶函数 (Higher-order Functions)}{30}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Curry 化与伴随}{31}{section.7.3}%
+\contentsline {section}{\numberline {7.4}矩阵作为态射的表达}{31}{section.7.4}%
+\contentsline {section}{\numberline {7.5}笛卡尔封闭范畴 (CCC)}{31}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Topos: 逻辑的几何}{31}{section.7.6}%
+\contentsline {section}{\numberline {7.7}关系范畴 (Rel)}{32}{section.7.7}%
+\contentsline {section}{\numberline {7.8}二元关系与逻辑矩阵}{32}{section.7.8}%
+\contentsline {section}{\numberline {7.9}关系的张量积}{32}{section.7.9}%
+\contentsline {chapter}{\numberline {8}自由群}{33}{chapter.8}%
+\contentsline {section}{\numberline {8.1}自由群：字符串视角 vs 形式和视角}{33}{section.8.1}%
+\contentsline {section}{\numberline {8.2}字符串}{34}{section.8.2}%
+\contentsline {section}{\numberline {8.3}邻接矩阵}{34}{section.8.3}%
+\contentsline {section}{\numberline {8.4}张量积}{34}{section.8.4}%
+\contentsline {chapter}{\numberline {9}自由Abel群}{35}{chapter.9}%
+\contentsline {section}{\numberline {9.1}形式和}{35}{section.9.1}%
+\contentsline {section}{\numberline {9.2}自由函子}{38}{section.9.2}%
+\contentsline {section}{\numberline {9.3}商}{40}{section.9.3}%
+\contentsline {section}{\numberline {9.4}自由群}{41}{section.9.4}%
+\contentsline {section}{\numberline {9.5}整数}{41}{section.9.5}%
+\contentsline {chapter}{\numberline {10}张量函子与伴随}{43}{chapter.10}%
+\contentsline {section}{\numberline {10.1}张量-同态伴随 (Tensor-Hom Adjunction)}{43}{section.10.1}%
+\contentsline {section}{\numberline {10.2}普遍性质}{43}{section.10.2}%

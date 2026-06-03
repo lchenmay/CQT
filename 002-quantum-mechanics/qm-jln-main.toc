@@ -1,0 +1,27 @@
+\babel@toc {chinese}{}\relax 
+\contentsline {chapter}{\numberline {1}Hamilton力学}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}量子力学公理}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}公理1：量子Hilbert空间}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}公理2：自伴算子}{3}{section.2.2}%
+\contentsline {section}{\numberline {2.3}公理3：测量}{3}{section.2.3}%
+\contentsline {chapter}{\numberline {3}有限概率分布}{4}{chapter.3}%
+\contentsline {chapter}{\numberline {4}实数化的概率}{5}{chapter.4}%
+\contentsline {chapter}{\numberline {5}复数化的概率}{6}{chapter.5}%
+\contentsline {section}{\numberline {5.1}作为实线性算子的复数}{6}{section.5.1}%
+\contentsline {section}{\numberline {5.2}共轭}{8}{section.5.2}%
+\contentsline {section}{\numberline {5.3}实数概率}{8}{section.5.3}%
+\contentsline {section}{\numberline {5.4}复数化的概率}{9}{section.5.4}%
+\contentsline {chapter}{\numberline {6}泛函分析}{11}{chapter.6}%
+\contentsline {section}{\numberline {6.1}交换代数}{11}{section.6.1}%
+\contentsline {section}{\numberline {6.2}算子代数}{11}{section.6.2}%
+\contentsline {section}{\numberline {6.3}连续函数代数}{12}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Gelfand拓扑}{12}{section.6.4}%
+\contentsline {chapter}{\numberline {7}复线性算子}{14}{chapter.7}%
+\contentsline {section}{\numberline {7.1}概率的保持}{14}{section.7.1}%
+\contentsline {section}{\numberline {7.2}自伴算子}{14}{section.7.2}%
+\contentsline {section}{\numberline {7.3}酉算子}{14}{section.7.3}%
+\contentsline {chapter}{\numberline {8}算子代数}{15}{chapter.8}%
+\contentsline {chapter}{\numberline {9}谱理论}{17}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Gelfand理论}{19}{chapter.10}%
+\contentsline {section}{\numberline {10.1}交换代数}{19}{section.10.1}%
+\contentsline {chapter}{\numberline {11}Topos理论}{20}{chapter.11}%
