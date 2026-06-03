@@ -1,3 +1,6 @@
 *.log
 *.aux
 *.gz
+*.glsdefs
+*.glo
+*.ist
