@@ -3,7 +3,7 @@
 \section{函数芽}
 
 局部化环$C(X)_{\mathfrak m_x} = \{ f/g \mid f,g \in C(X),\ g(x) \neq 0 \}$，
-茎环$\mathcal O_x = \varinjlim_{U \ni p \ni x} \mathcal O_U$。
+茎环$\mathcal O_x = \varinjlim_{U \ni p \ni x} \mathcal O_U$．
 微分几何研究的光滑流形$X$是仿紧的Hausdorff空间，
 其拓扑性质保证了局部化环的同构：
 
@@ -13,21 +13,21 @@ $$
 
 局部化环$A_\mathfrak p$的唯一极大理想是$\mathfrak p A_\mathfrak p$，
 这里同构的局部化环的唯一极大理想就是
-$\mathfrak m_x \mathcal O_x$。
+$\mathfrak m_x \mathcal O_x$．
 根据(\ref{eq:max-ideal-local-ring})和(\ref{eq:fun-ring-residue-field-real})有
-$\mathcal O_x/\mathfrak m_x \mathcal O_x \simeq C(X)/\mathfrak m_x \simeq \mathbb R$。
-这反映了在点 $x$ 附近函数的值由其芽唯一确定。
+$\mathcal O_x/\mathfrak m_x \mathcal O_x \simeq C(X)/\mathfrak m_x \simeq \mathbb R$．
+这反映了在点 $x$ 附近函数的值由其芽唯一确定．
 
 
 实光滑流形的光滑函数环$C(X)$在点$x$上有极大理想
 $\mathfrak m_x = \{ f \in C(X) \mid f(x) = 0 \}$
-和局部环$\mathcal O_x \simeq C(X)_{\mathfrak m_x}$。
+和局部环$\mathcal O_x \simeq C(X)_{\mathfrak m_x}$．
 用$\mathfrak m_x$的元素有限生成理想
-$\mathfrak m_x^2 = \{ \sum_i f_i g_i \mid f_i,g_i \in \mathfrak m_x \}$。
+$\mathfrak m_x^2 = \{ \sum_i f_i g_i \mid f_i,g_i \in \mathfrak m_x \}$．
 其意义在于，
 $\mathfrak m_x$中的函数在$x$处退化（一阶零点），
 $\mathfrak m_x^2 \subset \mathfrak m_x$中的函数在$x$处退化，
-且其微分也退化（二阶零点）。
+且其微分也退化（二阶零点）．
 余切空间在同构意义下等于
 $ T^*_x X \simeq \mathfrak m_x/\mathfrak m_x^2 $，
 其元素记为：
@@ -41,22 +41,106 @@ $X = \mathbb R$，
 $x = 0$，
 而$f(x) = 3x \in C(X)$在$x$处只具有一阶零点，
 故有非零的等价类：
-$\text d f = f + \mathfrak m_x^2$。
+$\text d f = f + \mathfrak m_x^2$．
 $f(x) = x^2 \in C(X)$在$x$处具有二阶零点，
 即$f \in \mathfrak m_x^2$，
 故等价类退化：
-$\text d f = 0$。
+$\text d f = 0$．
 
 二维情形$X = \mathbb R^2$，
 $(x,y) = (0,0)$，
 而$f(x) = 3x + 2y \in C(X)$在$(x,y)$处只具有一阶零点，
 故有非零的等价类：
-$\text d f = f + \mathfrak m_{(x,y)}^2$。
+$\text d f = f + \mathfrak m_{(x,y)}^2$．
 $f(x) = 3x^2 + 2y^2 \in C(X)$在$(x,y)$处具有二阶零点，
 即$f \in \mathfrak m_{(x,y)}^2$，
 故等价类退化：
-$\text d f = 0$。
+$\text d f = 0$．
 
+
+\section{对偶空间}
+
+            目前教育界在线性代数的教学上缺少一些重要的概念——对偶空间．对偶是现代数学最核心的数学思想之一．最简单的对偶是体现在线性代数中线性向量和线性函数之间的相互对偶关系之中的．\par
+            本文是在一般线性代数的基础上，介绍高级一些的线性代数知识，以便将来在学习微分几何和泛函分析时，对对偶、逆变、协变这些概念有基本的理解．内容概要：\par
+            介绍线性空间的线性映射、对偶空间，行向量和列向量的对偶表示，双线性映射，Einstein求和约定．\par
+            接着介绍基的变换，以及在这种变换下，对偶空间上的向量和对偶向量的变换规则，即逆变和协变规则．\par
+            继续以平面旋转群SO(2)为例子，研究在基进行平面旋转的情况下，向量的变换规律．\par
+            介绍对偶基的概念．一对对偶的向量是通过内积的结构成为双线性映射的．略微介绍Riesz引理，了解到对偶的向量之间如何一一对应，从而让内积可以直接在逆变向量之间实现．\par
+            前面几讲中用了许多 $\mathbb{R}^2$ 中的技术来讨论复平面的问题，体现出线性代数基础的重要性．这一讲要谈线性代数最核心的对偶性问题，在对偶性上展开讨论一些重要的基础概念．我们在线性代数上有了这些基础之后，反过来又可以了解复结构是如何应用于对偶性空间的．\par
+            线性代数学习中，我们的讨论多专注在 $\mathbb{R}^n$ 上．若能理解概念，在一般的线性空间（有限/无限维）上扩展概念并非难事，参考一般的线性代数/泛函分析教材即可．\par
+            在另一讲中用到一个非常好的例子阐述对偶的基本原理，请务必参考：\par
+
+            线性空间到域 $V \to \mathbb{F}$ 的函数的集合 $V^*$ ，若满足：\par
+            $\forall \phi,\psi \in V^*: (\phi + \psi)(x) = \phi(x) + \psi(x)$\par
+            $\forall \phi \in V^*, \forall \alpha \in \mathbb{F}: (\alpha\phi)(x) = \alpha \phi(x)$\par
+            构成一个线性空间，称为 $V$ 的\textbf{对偶空间}\index{对偶空间}．对偶空间中的元素是\textbf{线性函数}\index{线性函数}．\par
+            > 有限维的情况下，线性空间及其对偶空间维度相等\par
+            $\mathbb{R}^n$ 可以视作$n$ 维\textbf{列向量}\index{列向量}表示的实数数组的集合，于是可以用相同维的\textbf{行向量}\index{行向量}表示对偶空间中的\textbf{线性函数}\index{线性函数}．\par
+            看一个简单的例子，在域 $\mathbb{F}$ 上，一对2维对偶向量 $x\in V,f\in V^*$ 的共同作用为：\par
+            $\ll f,x \gg = f(x) = fx=\begin{bmatrix} f_1 & f_2 \end{bmatrix}\begin{bmatrix} x_1 \\ x_2 \end{bmatrix} =\sum_{i=1}^{2} f^ix_i = f^ix_i$\par
+            二元映射 $\ll , \gg$ 是\textbf{双线性映射}\index{双线性映射}（也就是对两个变元都是线性的，易于验证）：\par
+            $V^* \times V \to \mathbb{F}$\par
+            $f \in V^*$ 作为对偶向量，通过函数的方式作用于 $x \in V$ ．由于是线性函数，总可以写为矩阵乘法的形式．连等式的最后一个表达式去掉了求和符号，这是默认采用了\textbf{Einstein求和规则}\index{Einstein求和规则}，即对上下同时出现的指标项目求和．\par
+            注意到，矩阵乘法的形式提示我们，对偶关系是相对的，即 $V^*$ 也是 $V$ 的对偶空间，实际上 $(V^*)^* \sim V$ ，证明略．\par
+
+            我们有了对偶空间和对偶向量的概念后，形象上容易通过列向量和行向量来区分一对对偶向量．而区分它们更重要的因素是向量的坐标如何随着基的变化而变化，也就是\textbf{逆变性}\index{逆变性}和\textbf{协变性}\index{协变性}．\par
+            简单起见先来点小学数学．将位移的\textbf{量纲}\index{量纲}记为 $\left[ L \right]$ ．通常我们可以用一个符号 $l$ 指代某个位移，这个位移具有明确的值，它与测量的\textbf{单位}\index{单位}无关，例如：\par
+            $l = \left\{ 10 \right\}_{m} = \left\{ 1000 \right\}_{cm}$\par
+            基于显然的单位换算：\par
+            $1 \text{m} = 100 \text{cm}$\par
+            位移的取值与测量单位具有以下的关系：\par
+            $l = \left\{ 10 \right\}_{100cm} = \left\{ 1000 \right\}_{1cm}$\par
+            稍微啰嗦地展开为：\par
+            $l = \left\{ 10 \right\}_{100cm} = 10 \cdot 100cm$\par
+            $l = \left\{ 1000 \right\}_{1cm} = 1000 \cdot 1cm$\par
+            学过线性代数，我们可以更加名词党地理解为 $1\text{m}$ 和 $1\text{cm}$ 是 $1$ 维位移\textbf{线性空间}\index{线性空间}的两个不同的\textbf{基}\index{基}，而括号里作为测量读数的\textbf{坐标}\index{坐标}是\textbf{逆变}\index{逆变}的．逆变的概念推广到2维：\par
+            $\begin{bmatrix} \left\{ 20 \right\}_{100cm} \\ \left\{ 3000 \right\}_{1cm}\end{bmatrix} =\begin{bmatrix} \left\{ 1000 \right\}_{2cm} \\ \left\{ 6 \right\}_{500cm}\end{bmatrix} $\par
+            这里提示有两组基，类似前面的也展开：\par
+            $\begin{bmatrix} \left\{ 20 \right\}_{100cm} \\ \left\{ 3000 \right\}_{1cm}\end{bmatrix} =\begin{bmatrix} 20 \cdot 100cm \\ 3000 \cdot 1cm \end{bmatrix} =\begin{bmatrix} 100cm & 0 \\ 0 & 1cm \end{bmatrix} \begin{bmatrix} 20 \\ 3000 \end{bmatrix} $\par
+            $\begin{bmatrix} \left\{ 1000 \right\}_{2cm} \\ \left\{ 6 \right\}_{500cm}\end{bmatrix} =\begin{bmatrix} 1000 \cdot 2cm \\ 6 \cdot 500cm \end{bmatrix} =\begin{bmatrix} 2cm & 0 \\ 0 & 500cm \end{bmatrix} \begin{bmatrix} 1000 \\ 6 \end{bmatrix} $\par
+            类似于前面，当基矩阵变换后，坐标随之变换，变换的方向是相反的．进一步，在 $\mathbb{R}^n$ 中，有基矩阵 $A \to B$ 的变换，满足变换规律：\par
+            $B=AT$\par
+            那么，坐标向量 $\alpha \to \beta$ 的变换则满足：\par
+            $A\alpha = B\beta = AT \beta$\par
+            于是\par
+            $\alpha = T \beta$\par
+            $\beta = T^{-1}\alpha$\par
+            这里出现的逆矩阵，就是逆变的含义．\par
+
+            我们又以熟悉的平面旋转为例子．实平面 $\mathbb{R}^2$ 上给定一组基：\par
+            $\begin{bmatrix} e_{11} \\ e_{21} \end{bmatrix}, \begin{bmatrix} e_{12} \\ e_{22} \end{bmatrix}$\par
+            合写为向量组：\par
+            $E=\begin{bmatrix} e_{11} & e_{12} \\ e_{21} & e_{22} \end{bmatrix}$\par
+            在 $E$ 下，向量 $v$ 的坐标表示为：\par
+            $v=Ex =\begin{bmatrix} e_{11} & e_{12} \\ e_{21} & e_{22} \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \end{bmatrix}$\par
+            取\par
+            $\rho(\theta)=\begin{bmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta \end{bmatrix} \in SO(2)$\par
+            作用于基向量组，得到一组新的基：\par
+            $E \cdot \rho(\theta) =\begin{bmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta \end{bmatrix} \begin{bmatrix} e_{11} & e_{12} \\ e_{21} & e_{22} \end{bmatrix}$\par
+            则向量 $v$ 的坐标表示为：\par
+            $v=E \cdot \rho(\theta) \cdot x^\prime =\begin{bmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta \end{bmatrix} \begin{bmatrix} e_{11} & e_{12} \\ e_{21} & e_{22} \end{bmatrix} \begin{bmatrix} x_1^\prime \\ x_2^\prime \end{bmatrix}$\par
+            基变换前后，向量 $v$ 在自然基下的表达不变：\par
+            $Ex = E \cdot \rho(\theta) \cdot x^\prime $\par
+            于是\par
+            $x^\prime = \rho(\theta)^{-1} \cdot x$\par
+            符合逆变的要求．即当基在 $\rho(\theta) \in SO(2)$ 作用下旋转角度 $\theta$ 时，坐标相应反向旋转，符合直观的认知．\par
+
+            回到对偶空间中，一对2维对偶向量 $x\in V,f\in V^*$ 通过双线性映射共同作用：\par
+            $\ll f,x \gg = f^ix_i$\par
+            给定 $V$ 的一组基 $E = \{e_i\}$ ，则 $V$ 中任意向量可以表为 $v=Ex$ ．这组基 $E$ 可以通过\textbf{Kronecker记号}\index{Kronecker记号}唯一地决定对偶空间 $V^*$ 中的一组基 $E^*=\{e^j\}$ ，满足：\par
+            $e^j(e_i)=\delta_{ij}$\par
+            其中\par
+            $i=j \Rightarrow \delta_{ij}=1$\par
+            $i \ne j \Rightarrow \delta_{ij}=0$\par
+            这样得到的对偶空间中的基称为\textbf{对偶基}\index{对偶基}．\par
+            我们不难验证，由于Kronecker记号的约束，当基以 $T:E \to E^\prime$ 变化时，对偶基相对于基的变化规律是逆变的．对偶向量在对偶空间的自然基（自然基的对偶基）中的表示是不变的，类似于前面讨论的，对偶向量的坐标相对于对偶基也是逆变的．这样，两次逆变的合成，使得对偶向量的坐标相对于 $T$ 的变化是\textbf{协变}\index{协变}的，称为\textbf{协变向量}\index{协变向量}．\par
+
+            对偶空间中，一对对偶向量 $x\in V,f\in V^*$ 通过双线性映射共同作用：\par
+            $\ll f,x \gg$\par
+            它对两个变元都是线性的．对偶空间可以是\textbf{自对偶}\index{自对偶}的，泛函分析的\textbf{Riesz引理}\index{Riesz引理}给出了构建自对偶空间的方法．自对偶空间的双线性映射是\textbf{正定}\index{正定}且\textbf{共轭对称}\index{共轭对称}的，则称为\textbf{内积}\index{内积}．完备的内积空间称为\textbf{Hilbert空间}\index{Hilbert空间}．在实分析和泛函分析中常见的一个例子是 $L^p$ 空间，即：\par
+            设 $\mu$ 是 $\Omega$ 上的测度， $(\Omega,\mathscr{B},\mu)$ 是测度空间，函数 $u(x)$ 满足在 $\Omega$ 上 $\vert u(x) \vert^p$ 可积 $(1\leq p\leq +\infty)$ ，则这类函数的全体称为$(\Omega,\mathscr{B},\mu)$上的 $p$ 次可积函数空间，记作 $L^p(\Omega,\mu)$ ．定义内积：\par
+            $\langle u,v \rangle = \int_\Omega u(x) \overline{v(x)} dx$\par
+            量子力学中常用的为平方可积的 $L^2$ 空间．\par
 
 
 \section{自然配对}
@@ -66,8 +150,8 @@ $\text d f = 0$。
 $(-)^* = h^k = \textbf{Vct}_k(-,k) \in \textbf{Fct}(\textbf{Vct}_k^\text{op},\textbf{Vct}_k)$，
 得到$k$-线性泛函的集合，
 即$k$-线性对偶空间，
-记为$X^* = h^k X = \textbf{Vct}_k(X,k) \in \textbf{Vct}_k$。
-再次作用在对偶空间上得到双重对偶空间$X^{**}$。
+记为$X^* = h^k X = \textbf{Vct}_k(X,k) \in \textbf{Vct}_k$．
+再次作用在对偶空间上得到双重对偶空间$X^{**}$．
 $x\in X$决定了对偶线性泛函：
 $(i_x \in X^{**}): X^* \to k :: \alpha \mapsto i_x(\alpha) = \alpha(x)$，
 这样构造了自然嵌入
@@ -95,9 +179,9 @@ $$
 以上的双线性形可以记为：
 记$\langle \alpha,x\rangle = \alpha(x)$
 以及$\langle \Phi,\alpha\rangle = \Phi(\alpha)$，
-这样二元组的元就区分为左元和右元。
+这样二元组的元就区分为左元和右元．
 通常左元称为线性泛函(linear functional)或对偶向量(covector)，
-右元仍保留向量(vector)的称谓。
+右元仍保留向量(vector)的称谓．
 
 
 对偶函子的反变性体现在
@@ -117,13 +201,13 @@ $$
 
 基于左右元的区分，
 一对对偶算子$f$作用在左元，
-$f^*$作用在右元。
-$\forall x$和$\forall \beta$是独立自由的变量。
+$f^*$作用在右元．
+$\forall x$和$\forall \beta$是独立自由的变量．
 若这对对偶算子满足
 $ \langle x,f^* \beta \rangle = \langle f x, \beta \rangle $，
 则形成了颇为耦合的结构，
 称他们相互伴随，
-记$f \vdash f^*$。
+记$f \vdash f^*$．
 
 $$
 % https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAA0QBfU9TXfIRRkATFVqMWbdgD0AVN14gM2PASIjy4+s1aIQATUV9VgjaTHUdU-QfnHl-NUJKkAjNsl6QAHR8M6MABzBhgAAgBaUgAzeUiwvwAnQJDWHhMBdRRNDysvNj8A4NCw6MjSCKSU0IcVTJcAFi083TYAD1qnMxQANmaJVv1ojvTHUyzkPssBm18fACMYHDpO8caLT0GQWLkEhaWV0brnIibcme9C6vC2mLi-ReW95OK0pWPuyfdN2avX0rCtz2jzoz2u3HEMCgQXgRFA0USEAAtkgyCAcBAkJoLmxog4EcikABmagYpBuFqzHb4xEoxBNdGYxDEUYEukMsmINys2lIACspKZIh5hMQAsZxJFdL6EsQAHZSXQsAw2Ei6Gg4GSpUgAByCpAATkVytV6s1mO1XLRnJlyxN+jVGq1SjZ5OtTKN6KVKodZud8N5XIpsoVXvtIEd5pporcwc5erDPojfotLsDbnd5ODDCwYG8UAgTHmNWoAAsYHQoGxIHmQMakzW0hQuEA
@@ -138,7 +222,7 @@ $$
 集合范畴中，
 $f\in\textbf{Set}(X,Y)$产生一对函数
 $f_*\in\textbf{Set}(\textbf 2^X,\textbf 2^Y):: A\mapsto f_*(A) = f(A) = \text{im} \ f (A)$，
-$f^*\in\textbf{Set}(\textbf 2^Y,\textbf 2^X):: B\mapsto f^*(B) = f^{-1}(B) = \text{preim} \ f (B)$。
+$f^*\in\textbf{Set}(\textbf 2^Y,\textbf 2^X):: B\mapsto f^*(B) = f^{-1}(B) = \text{preim} \ f (B)$．
 以幂集上自然的偏序结构为范畴，
 反单调Galois连接给出了伴随函子
 $f^* \vdash f_*$：
@@ -154,7 +238,7 @@ $$
 
 考虑光滑函数$f\in \textbf{Mfd}^\infty(X,Y)$
 在$(x,y=f(x))$产生的切空间$(T_x X,T_yY)$
-和余切空间$(T^*_x X,T^*_yY)$。
+和余切空间$(T^*_x X,T^*_yY)$．
 假设$f$诱导了一对$(f_*,f^*)$，
 用切向量和余切向量的自然配对来定义${\langle -, - \rangle}$，
 构成了推出(pushforward) $f_*$ 和拉回(pullback) $f^*$，
@@ -184,10 +268,10 @@ $$
 它是关于$\text{grad} \ f$和$v$的双线性函数，
 故$\text{grad} \ f$是$v$的对偶向量，
 记$\text{grad} \ f \in T^*_x X$，
-方向导数可以写为自然配对$\langle \text{grad} \ f,v \rangle = D_v f \mid_x$。
+方向导数可以写为自然配对$\langle \text{grad} \ f,v \rangle = D_v f \mid_x$．
 
 我们希望把这种$T^*_x X \times T_x X \to \mathbb R$的自然配对结构推广到光滑流形，
-在光滑流形的点$x\in X\in\text{Mfd}^\infty$的局部研究微分问题。
+在光滑流形的点$x\in X\in\text{Mfd}^\infty$的局部研究微分问题．
 令有流形上的光滑函数$f \in C(X)$，
 令$\Gamma_x = \{ \gamma: \mathbb R \to X \mid \gamma(0) = x \}$为过$x$的参数曲线集合，
 借助参数曲线$\gamma \in \Gamma$，
@@ -213,10 +297,99 @@ $$
 \end{aligned}
 $$
 
+
+\section{局部线性化}
+            本讲回顾了高等数学/数学分析中经典的Taylor展开技术．我们关注的是Taylor展开的线性部分，这部分的线性系数就是函数的导数．在多元函数中，这部分的一组线性系数构成了某种线性组合．\par
+            站在线性代数的角度看待Taylor展开的线性部分，我们考虑两个问题：\par
+            坐标的微分能否构成某种线性空间的向量？\par
+            坐标的微分能否构成这个线性空间的基？\par
+            我们研究了坐标分量函数，这类函数的微分就是坐标的微分，几何上它们构成了一组正交的超平面系．借助这类函数，我们发展出了微分形式的概念，确认了以上两个问题，即坐标的微分就是对偶空间的向量，坐标的微分正是这个线性对偶空间的基．\par
+            之后我们研究了这类微分形式的几何意义，通过它们线性组合，可以构成具有任意梯度的微分形式．\par
+            上一讲中，我们在考虑如何把 $\mathbb{R}^n$ 上的向量场推广到一般的光滑流形 $M$ 时，遇到了一些问题．这些问题反映出流形和平直空间内在的不同．这些问题的解决需要等到完全理解\textbf{切空间/余切空间}\index{切空间/余切空间}的概念．在展开讲解之前，在这一讲中我们先谈谈局部线性化的思想，同时储备一些技术工具．\par
+            回顾微分流形 $M$ 的定义，其中提到\par
+            > $\forall p \in M$ 都 $\exists U$ ： $p\in U \subset M$ 使得开邻域 $U$ 和 $\mathbb{R}^n$ 中的开集同胚．\par
+            这使我们注意到：\par
+            1. 这里是\textbf{逐点定义}\index{逐点定义}的，且只考虑每一点的某个\textbf{邻域}\index{邻域}的存在性．这提示我们采用了\textbf{局部}\index{局部}的方法．\par
+            2. 局部（开邻域）和 $\mathbb{R}^n$ 中的开集同胚，意味着在局部试图接近 $\mathbb{R}^n$ 这样的平直空间，所谓平直，就是\textbf{线性}\index{线性}，实际上 $\mathbb{R}^n$ 中嵌入的平直空间（直线、平面、超平面）就称为\textbf{线性流形}\index{线性流形}．\par
+            这些思路，我们总结为\textbf{局部线性化}\index{局部线性化}．局部线性化的思想贯穿于微分几何的研究中，这也是我们一直强调同学们学好线性代数的原因（另一个思想是借助拓扑学的整体微分几何）．这一讲中，我们详细谈一下如何借助古老的Taylor展开技术，把局部线性化的方法发展为微分形式．\par
+
+            微积分中我们熟知\textbf{Taylor展开}\index{Taylor展开}，在一维的情况，函数 $f(x)$ 在点 $x_0 \in \mathbb{R}$ 附近可以写为幂级数和的形式：\par
+            $f(x) = \sum_{k=0}^\infty { \frac{f^{(k)}(x_0)}{k!}(x-x_0)^k } $\par
+            $= f(x_0) + \frac{f^\prime(x_0)}{1!}(x-x_0) + \frac{f^{\prime\prime}(x_0)}{2!}(x-x_0)^2 + \dots$\par
+            注意到 $k=0$ 次项 $f(x_0)$ 是常数项，而当 $x \to x_0$ 求极限时：\par
+            $\frac{df}{dx}(x) \Bigg\vert_{x=x_0}   =\lim_{x \rightarrow x_0} { \frac{f(x)-f(x_0)}{x-x_0} }$\par
+            $=\lim_{x \rightarrow x_0} \frac{1}{x-x_0} \Bigg\{  \frac{f^\prime(x_0)}{1!}(x-x_0) + \frac{f^{\prime\prime}(x_0)}{2!}(x-x_0)^2 + \dots \Bigg\}$\par
+            在 $x_0$ 处求导将消去 $1$ 次以上高阶无穷小量，只剩下 $1$ 次的线性项，得到我们熟知的关系：\par
+            $\frac{df}{dx}(x) \Bigg\vert_{x=x_0} = f^\prime(x_0)$\par
+            站在我们现在的角度看，Taylor展开就是一种函数逼近技术，当考察固定点 $x_0 \in \mathbb{R}$ 附近的局部（邻域）时，成为了一种\textbf{线性化}\index{线性化}的，只保留一次导数 $f^\prime(x_0)$ 的逼近．\par
+            注意到Taylor展开的局部线性化也可以表示成：\par
+            $df=f^\prime dx$\par
+            这一方面反映了导数的局部线性的性质，另一方面，导数 $f^\prime$ 在固定点上是常数，它本身可以视为\textbf{线性系数}\index{线性系数}．在 $n$ 维看得更加清楚．$n$ 维函数 $f(x)$ 在点 $x_0 \in \mathbb{R}^n$ 附近的Taylor展开，进行局部线性化后得到：\par
+            $df=\sum_{k=1}^n \frac{\partial f}{\partial x_i} dx^i =\frac{\partial f}{\partial x_i} dx^i =(\partial_i f) dx^i$\par
+            这里用了Einstein求和约定．显然，偏导数 $\{ \partial_i f \}$ 起到了\textbf{线性系数}\index{线性系数}的作用．现在我们得到了某种类似\textbf{线性组合}\index{线性组合}的关系．然而，若要放心地用线性代数的方法来处理，我们首先需要明确两个问题：\par
+            1. $df$ 和 $\{dx^i\}$ 是否是某个向量空间中的向量？\par
+            2. 如果是， $\{dx^i\}$ 能否构成基？\par
+            如果我们能够解决这两个问题，过去我们所理解的所谓\textbf{无穷小量}\index{无穷小量}的\textbf{微分}\index{微分}将被赋予线性空间的新的内涵，它是将来要讨论的\textbf{余切向量}\index{余切向量}的原形．\par
+
+            在 $\mathbb{R}^n$ 中，记自然基为 $\{x_i\}$ ．考虑一组特殊的函数\textbf{分量函数}\index{分量函数} $C=\{x^i(x)=x_i\}$ ，其中每一个表现为：\par
+            $x^i:\mathbb{R}^n \to \mathbb{R}$\par
+            $x \mapsto x^i(x) = x_i$\par
+            即把点 $\forall x\in\mathbb{R}^n$ 的第 $i$ 个分量 $x_i$ 输出为函数值．\par
+            > 注意：指标 $i$ 在上面表示它是\textbf{函数}\index{函数}： $x^i=x^i(x)$  指标在下面表示它是坐标\textbf{分量}\index{分量}： $x_i \in \mathbb{R}$\par
+            分量函数 $x^i=x^i(x)$ 对分量 $x_j$ 求偏导数：\par
+            $\frac{dx^i(x)}{dx_j}=\delta_{ij}$\par
+            这里用了Kronecker记号．于是仅在指标 $i=j$ 时有意义：\par
+            $\frac{dx^i(x)}{dx_i}=\delta_{ii} = 1$\par
+            即\par
+            $dx^i=dx^i(x)=dx_i$\par
+            上式中，左边的指标 $i$ 在上面表示函数的微分，右边的指标在下面表示自变量的微分．我们理解为，\textbf{函数微分}\index{函数微分}和\textbf{自变量微分}\index{自变量微分}可以等同看待．\par
+            由分量函数的函数微分和自变量微分的等同关系可见，分量函数 $C=\{x^i(x)=x_i\}$ 的几何意义是，每一个函数 $x^i(x)=x_i$ 都是线性函数，它构成一个\textbf{超平面（线性流形）}\index{超平面（线性流形）}，这组超平面相互\textbf{正交}\index{正交}．\par
+
+            将 $n$ 维实线性函数所构成的空间记为 $L(\mathbb{R}^n)$ ．这个线性函数空间蕴含了自然的线性运算，即 $\forall \alpha,\beta \in \mathbb{R}, \forall f, g \in L(\mathbb{R}^n)$ ：\par
+            $f, g: \mathbb{R}^n \to \mathbb{R}$\par
+            $(\alpha f + \beta g)(x) = \alpha f(x) + \beta f(x), \forall x \in \mathbb{R}^n$\par
+            我们注意到上面讨论的分量函数\par
+            $C=\{x^i(x)=x_i\}$\par
+            中的每个函数都是 $n$ 维实线性函数．前面谈到它们构成了正交的超平面，代数上意味着 $C$ 是函数空间 $L(\mathbb{R}^n)$ 中的\textbf{线性无关}\index{线性无关}子集．\par
+            现在考虑某一点 $x_0 \in \mathbb{R}^n$ 附近的线性函数空间 $L_{x_0}(\mathbb{R}^n)$ ．如前面的讨论，任意函数 $f(x)$ 在点 $x_0$ 附近若可微，则可以通过Taylor展开，在 $x_0$ 附近消去高阶无穷小量后，局部视为一个线性函数 $f \in L_{x_0}(\mathbb{R}^n)$ ：\par
+            $f: \mathbb{R}^n \to \mathbb{R}$\par
+            $x \mapsto f(x)=f(x_0) + \lambda_i x^i$\par
+            更重要的，可以把这个线性函数 $f$ 表达为点 $x_0$ 附近分量函数\par
+            $C=\{x^i(x)=x_i\} \subset L_{x_0}(\mathbb{R}^n)$\par
+            的线性组合：\par
+            $f(x)=f(x_0) + \lambda_i x^i =f(x_0) + \lambda_i x^i(x) $\par
+            对它求全微分：\par
+            $df=\sum_{k=1}^n \frac{\partial f}{\partial x_i} dx^i =\frac{\partial f}{\partial x_i} dx^i =(\partial_i f) dx^i = \lambda_i dx^i$\par
+            这里的 $\lambda_i  = \partial_i f$ 是线性系数．这里出现的 $dx^i$ 既可以视为变量 $x^i$ 的微分，也可以视为函数 $x^i(x)=x_i$ 的微分．\textbf{非常重要！}\index{非常重要！}回到前面我们提出的问题：\par
+            1. $df$ 和 $\{dx^i\}$ 是否是某个向量空间中的向量？\par
+            2. 如果是， $\{dx^i\}$ 能否构成基？\par
+            现在，在某一点 $x_0 \in \mathbb{R}^n$ 附近，由于 $f=f(x)$ 被局部线性化， $f$ 和 $\{x^i(x)=x_i\}$ 的成员都是 $L_{x_0}(\mathbb{R}^n)$ 中的元素．我们把微分算子 $d$ 视为从\textbf{线性函数空间}\index{线性函数空间}到\textbf{函数微分集合}\index{函数微分集合}的映射：\par
+            $d:L_{x_0}(\mathbb{R}^n) \to D_{x_0}(\mathbb{R}^n)$\par
+            $f \mapsto df$\par
+            $x^i = x^i(x) \mapsto dx^i$\par
+            由于微分的\textbf{线性性}\index{线性性}，自然可以在函数微分集合 $D_{x_0}(\mathbb{R}^n)$ 中构建线性运算，构成线性的\textbf{函数微分空间}\index{函数微分空间}．于是，$df$ 和 $\{dx^i\}$ 是函数微分线性空间 $D_{x_0}(\mathbb{R}^n)$ 中的向量．\par
+            其次，由于 $C=\{x^i(x)=x_i\} \subset L_{x_0}(\mathbb{R}^n)$ 是一个线性无关的集合，可以证明微分算子 $d$ 将它映射成函数微分线性空间 $D_{x_0}(\mathbb{R}^n)$ 中的基$\{dx^i\}$．\par
+            最后，根据全微分公式：\par
+            $df=(\partial_i f) dx^i = \lambda_i dx^i$\par
+            即：任意函数 $f(x)$ 在点 $x_0 \in \mathbb{R}^n$ 附近若可微，则可以通过Taylor展开在 $x_0$ 附近进行局部线性化，得到函数微分 $df=(\partial_i f) dx^i$ ，它是基$\{dx^i\}$ 的线性组合．\par
+            这个函数微分线性空间 $D_{x_0}(\mathbb{R}^n)$ 中的元素称为\textbf{1-微分形式(differential form)}\index{differential form}，简称\textbf{1-形式}\index{1-形式}．本质上，1-形式相当于局部（在相差一个常数的意义下等价，后面详述）线性函数．\par
+
+            函数 $C=\{x^i(x)=x_i\}$ 的几何意义是，在点 $x_0 \in \mathbb{R}^n$ 附近，每一个函数 $x^i(x)=x_i$ 都是 $L_{x_0}(\mathbb{R}^n)$ 中的线性函数，它构成一个\textbf{超平面（线性流形）}\index{超平面（线性流形）}，这组超平面相互\textbf{正交}\index{正交}．\par
+            微分算子 $d$ 将这组线性函数映射成函数微分，即：\par
+            $d:L_{x_0}(\mathbb{R}^n) \to D_{x_0}(\mathbb{R}^n)$\par
+            $x^i = x^i(x) \mapsto dx^i$\par
+            注意这种映射不是单射，若有任意实数 $c\in \mathbb{R}$ 则：\par
+            $x^i(x) \mapsto dx^i$\par
+            $x^i(x) + c \mapsto d(x^i + c) = dx^i$\par
+            即，相差为常数的线性函数具有相同的函数微分，相同的函数微分对应着等价类．由于任意线性函数也是 $C=\{x^i(x)=x_i\}$ 的线性组合，这种等价关系对于任意函数微分$df \in D_{x_0}(\mathbb{R}^n)$ 都成立．于是满足微分为 $df$ 的线性函数是一个集合，这个集合中的线性函数两两之间相差一个常数．几何上看， $df$ 决定了一组平行的（相差常数）超平面（线性函数）．\par
+            作为1-形式， $df=(\partial_i f) dx^i$ 体现了基$\{dx^i\}$ 的线性组合，几何上看，每一个基向量（1-微分形式）都代表一组平行超平面，基向量之间相互正交，通过系数（偏导数 $\{\partial_i f\}$ ）组合，构成了具有任意\textbf{梯度}\index{梯度}的一组平行超平面．\par
+            \par
+
+
 \section{微分形式}
 
-余切向量$\text d f$使用函数微分的记号是有意为之。
-前面讨论了$\text d f = \text{grad} \ f$相当于是流形上的梯度。
+余切向量$\text d f$使用函数微分的记号是有意为之．
+前面讨论了$\text d f = \text{grad} \ f$相当于是流形上的梯度．
 梯度作为线性算子
 
 $$
@@ -228,7 +401,7 @@ $$
 
 线性空间$V\in\textbf{Vct}$可以构造$i$-阶张量积$T^iV = V \otimes \cdots \otimes V$，
 以及\textbf{张量代数}(tensor algebra) $TV = \oplus_{i=0}^\infty T^i V$，
-向量以嵌入方成为张量代数的元$\iota: V \to TV$。
+向量以嵌入方成为张量代数的元$\iota: V \to TV$．
 
 为推广$\text d x \text d y = \text d y \text d x$所体现的对称性，
 考虑$TV$中如下生成的理想
@@ -252,7 +425,7 @@ $$
 注意到$u \otimes v - v \otimes u \in I$，
 求差$\varphi(u) \otimes \varphi(v) - \varphi(v) \otimes \varphi(u) = (u \otimes v - v \otimes u) + I = 0$，
 于是商代数$SV$具有对称性，
-成为$V$的\textbf{对称代数}(symmetric algebra)。
+成为$V$的\textbf{对称代数}(symmetric algebra)．
 
 为推广$\text dx \text dx = 0$所体现的“外”性质，
 考虑$TV$中如下生成的理想
@@ -261,7 +434,7 @@ $$
 I = \langle \{ v \otimes v \mid v \in V \} \rangle
 $$
 
-有到商代数的自然投射$\pi: TV \to \wedge V = TV/I$。
+有到商代数的自然投射$\pi: TV \to \wedge V = TV/I$．
 张量代数$(TV,\otimes)$上的张量积乘法，
 在自然投射下成为$(\wedge V = TV/I,\wedge)$上的外积：
 
@@ -273,26 +446,215 @@ $$
 注意到$v \otimes v \in I$，
 故$v \wedge v = 0$，
 于是商代数$\wedge V = TV/I$具有外性质，
-成为$V$的\textbf{外代数}(exterior algebra)。
+成为$V$的\textbf{外代数}(exterior algebra)．
 
 在光滑流形$X$上，
-微分形式代数$(\Omega^\bullet(X),\wedge,\text d)$就是这样的外代数。
+微分形式代数$(\Omega^\bullet(X),\wedge,\text d)$就是这样的外代数．
+
 
 \section{Riemann流形}
 
-\begin{framed}
-\noindent
-$n$-维定向Riemann流形$(X,g)$上，
-在局部坐标系 $(x^1,\dots,x^n)$ 下，\textbf{黎曼体积形式} $\mathrm{vol}_g$ 定义为
+            现在我们要开始接着过去的系列\par
+            - 几何与物理I：流形上的分析力学\par
+            - 几何与物理II：电动力学\par
+            继续同步学习几何和物理．在过去两个系列中我们掌握了大量微分流形、拓扑和张量方面的知识，这些知识是继续本系列 \textbf{几何与物理III：Riemann几何与广义相对论}\index{几何与物理III：Riemann几何与广义相对论} 的基础．众所周知科学史上对广义相对论的研究伴随着Riemann几何中宝藏的挖掘，而Riemann几何的数学结构是附加在光滑流形上的．我们在这一系列中将简要地给出Riemann几何相关的重要概念，并试图让读者对广义相对论有一定的物理直观．这一系列完成后，我们在将来讨论相对论量子力学、量子场论等有关统一理论的主题时，读者将不至于缺乏最基本的概念．\par
+            我们在过去分析力学系列、电动力学系列中都看到了相当程度的几何化．MP系列的特点就是尽可能多用先进的几何知识描述老的物理问题．在量子力学的系列，我们学到的是完全不一样的数学工具——主要是泛函分析和其中的算子理论．然而，注意到在量子力学中我们讨论的是Hilbert空间上的算子，而Hilbert空间建立的基础是内积．内积就是抽象空间中的几何化工具，有了内积才能讨论投影、正交、直和、分解等概念．所以，即使是在量子力学系列中，我们仍然隐含着几何化物理问题的主脉．\par
+            现在，我们来到了\textbf{广义相对论(general relativity)}\index{general relativity}它是相当几何化的一个物理分支．在广义相对论中，因为质量（引力、动量等）弯曲的时空流形被赋予度量/度规，有了度规就可以确定长度．我们将特别关注切丛、联络——在弯曲时空流形上的平行移动．在切丛上有一种叫做Levi-Civita的联络，可以保持度规且是无挠的．实际上任何的度规都可以确定这样的联络，它成为Riemann流形的切丛上最合适的联络，而这个联络的曲率就是Riemann曲率张量．\par
+            对Riemann曲率张量进行处理后，可以得到Ricci张量、广义相对论的Lagrange量，以及最终的Einstein张量，这是Einstein广义相对论方程的一半．Einstein方程描述的是时空受到物质（或者任何有能量或动量的事物）而弯曲的程度．类似于过去我们用外微分描述Maxwell方程的方式，我们要用Bianchi恒等式和能动张量(stress-energy tensor)来构造Einstein的广义相对论方程，这个方程最基本的解就是球对称静态真空的Schwarzschild解．\par
+            本讲先介绍Riemann几何最基本的要素——Riemann度量，或者叫做度量张量，在物理上叫做度规张量．\par
 
-$$
-\mathrm{vol}_g = \sqrt{\det(g_{ij})} \; dx^1 \wedge \cdots \wedge dx^n,
-$$
+            过去讲到Minkowski空间的时候，介绍过Riemann度量\par
+            [MP35：张量专题(4)：Riemann度量、Minkowski空间、Lorentz张量](https://zhuanlan.zhihu.com/p/46700297)\par
+            微分流形 $M$ 上的 $(0,2)$ 型张量 $g$ 若在 $\forall p \in M$ 上，对于切向量 $\forall u, v \in T_pM$ 都满足：\par
+            $g_p(u,v) = g_p(v,u)$\par
+            $g_p(u, u) \geq 0$\par
+            $g_p(u, u) = 0 \Leftrightarrow u=0$\par
+            则它是个对称正定双线性型，称为\textbf{Riemann度量(Riemannian metric)}\index{Riemannian metric}，又叫\textbf{度量张量(metric tensor)}\index{metric tensor}，物理上叫\textbf{度规张量}\index{度规张量}．\par
+            这种 $(0,2)$ 型张量容易让我们联想到内积，内积是一对对偶空间上的双线性映射\par
+            $\langle \cdot, \cdot \rangle: T_p^*M \times T_pM \to \mathbb R$\par
+            而通过Riesz引理可以过渡到自对偶空间上的双线性映射\par
+            $\langle \cdot, \cdot \rangle: T_pM \times T_pM \to \mathbb R$\par
+            而 $(0,2)$ 型张量(场) $g$ 本质上可以写成如下的逐点映射：\par
+            $g_p: T_pM \otimes T_pM \to \mathbb R$\par
+            选定一个局部坐标系 $\{x^k\}$ 后，Riemann度量可以用对偶基的张量积来表示\par
+            $g_p = g_\mu^\nu(p) dx^\mu \otimes dx^\nu$\par
+            微分流形 $M$ 上的张量场可以写为\par
+            $g_\mu^\nu(p) = g(\partial_\mu,\partial_\nu)$\par
+            它可以用矩阵表示为\par
+            $[g_\mu^\nu] \in \mathbb R^{n \times n}, \ \ n =\text{dim}(M)$\par
+            对于无穷小的位移有\par
+            $ds^2 = g(dx^\mu\partial_\mu, dx^\nu\partial_\nu) = dx^\mu dx^\nu g(\partial_\mu, \partial_\nu) = g_\mu^\nu dx^\mu dx^\nu$\par
+            这种正定二次形也相当于是度量．\par
 
-其中 $g_{ij} = g\left(\frac{\partial}{\partial x^i}, \frac{\partial}{\partial x^j}\right)$，$\det(g_{ij})$ 是度量矩阵的行列式。该形式与坐标系选取无关，整体定义在 $M$ 上。
-\end{framed}
+            我们也可以从古典微分几何来理解Riemann度量．最简单最平凡的情况还是欧式空间的自然坐标，它可以通过简单的Cartesian积构造：\par
+            $\mathbb{R}^n = \mathbb{R} \times \mathbb{R} \times \dots \times \mathbb{R}$\par
+            所以自然坐标系是我们永远要特别关注的坐标系．以三维空间 $\mathbb{R}^3$ 为例，有自然坐标系$(x^1,x^2,x^3)$，常常为了方便引入另外一个\textbf{曲线坐标系}\index{曲线坐标系}，譬如球坐标系 $(r,\theta,\varphi)$ ，用曲线坐标系 $(u^1,u^2,u^3)$ 表示：\par
+            $\begin{cases} u^1 = r \\ u^2 = \theta \\ u^3 = \varphi \end{cases}$\par
+            其Jacobi行列式不为零\par
+            $\text{det}\Big[\frac{\partial u^i}{\partial x_i}\Big] \neq 0 $\par
+            故两个坐标系的点以可微的方式对应．\par
+            点作为向量可以表示为\par
+            $\textbf{r} = \textbf{r}(x^1,x^2,x^3) = \textbf{r}(u^1,u^2,u^3)$\par
+            在自然坐标下，我们常常考虑\textbf{偏导数}\index{偏导数}，对应地在曲线坐标下我们考虑\par
+            $\textbf{r}_i = \frac{\partial\textbf{r}}{\partial u^i}$\par
+            这是坐标曲线在点上的\textbf{切向量}\index{切向量}，这组切向量构成曲线坐标的\textbf{自然标架}\index{自然标架}．\par
 
-\section{Hodge * 算子}
+            自然基中的点 $(x^1,x^2,x^3)$ 视为对于原点具有长度 $r$ ，于是在自然标架上的投影分量为：\par
+            $\begin{cases} r_1 = \sin\theta\cos\varphi\textbf{i} + \sin\theta\sin\varphi\textbf{j} + \cos\theta\textbf{k} \\ r_2 = r\cos\theta\cos\varphi\textbf{i} + r\cos\theta\sin\varphi\textbf{j} - r\sin\theta\textbf{k} \\ r_3 = -r\sin\theta\sin\varphi\textbf{i} + r\sin\theta\cos\varphi\textbf{j} \end{cases}$\par
+            现在考虑一个球坐标下的变化量微分\par
+            $(dr,d\theta,d\varphi)$\par
+            它的长度需要用自然坐标系计算，且满足\par
+            $ds^2 = dr_1^2 + dr_2^2 + dr_3^2$\par
+            根据上式可以得到\par
+            $ds^2 = dr^2 + r^2d\theta^2 + r^2\sin^2\theta d\varphi^2$\par
+            如果读者拥有良好的数学感觉，可以发现两个坐标系下都具有正定二次型的形式．既然我们是来研究张量的，那必然要用线性代数的方式来思维，于是给出标准的表示方法：\par
+            $ds^2 =  \begin{bmatrix} dr_1 & dr_2 & dr_3 \end{bmatrix} \begin{bmatrix} 1 & & \\ & 1 & \\ & & 1 \end{bmatrix} \begin{bmatrix} dr_1 \\ dr_2 \\ dr_3 \end{bmatrix}$\par
+            $=  \begin{bmatrix} dr & d\theta & d\varphi \end{bmatrix} \begin{bmatrix} 1 & & \\ & r^2 & \\ & & \sin^2\theta \end{bmatrix} \begin{bmatrix} dr \\ d\theta \\ d\varphi \end{bmatrix}$\par
+            这个变换矩阵\par
+            $[g_i^j] = \begin{bmatrix} 1 & & \\ & r^2 & \\ & & \sin^2\theta \end{bmatrix}$\par
+            就是曲线坐标下的度量．\par
+
+            现在我们探讨一下在非自然坐标系下对向量的微分．自然基展开的向量 $\textbf{v} = v^k\textbf{r}_k$ 进行微分，按照Leibniz法则：\par
+            $d\textbf{v} = d(v^k\textbf{r}_k) = (dv^k)\textbf{r}_k + v^kd\textbf{r}_k$\par
+            RHS的第一项 $(dv^k)\textbf{r}_k$ 是自然坐标的微分，第二项 $v^kd\textbf{r}_k$ 是一个补偿项，它补偿了自然标架本身的变化．\par
+            $v^kd\textbf{r}_k = v^k\big( (\partial_j\textbf{r}_k) du^j \big)$\par
+            上讲提到用自然坐标展开有：\par
+            $\partial_j\textbf{r}_k = \Big\{\begin{matrix} i \\ jk \end{matrix}\Big\} \textbf{r}_i$\par
+            于是\par
+            $v^kd\textbf{r}_k = v^k\big( \Big\{\begin{matrix} i \\ jk \end{matrix}\Big\} \textbf{r}_i du^j \big) = \Big(\Big\{\begin{matrix} i \\ jk \end{matrix}\Big\} v^k du^j \Big) \textbf{r}_i$\par
+            那么整个微分可以写为自然坐标的展开：\par
+            $d\textbf{v} = (dv^i)\textbf{r}_i + v^kd\textbf{r}_k  = (dv^i)\textbf{r}_i + \big( \Big\{\begin{matrix} i \\ jk \end{matrix}\Big\} v^k du^j \big) \textbf{r}_i$\par
+            $= \Bigg( dv^i + \Big\{\begin{matrix} i \\ jk \end{matrix}\Big\} v^k du^j \Bigg) \textbf{r}_i $\par
+            其中的系数项就是普通的微分和协变的补偿项．我们进一步还可以考虑普通微分的系数对坐标的展开：\par
+            $dv^i + \Big\{\begin{matrix} i \\ jk \end{matrix}\Big\} v^k du^j  = \partial_j v^i du^j + \Big\{\begin{matrix} i \\ jk \end{matrix}\Big\} v^k du^j $\par
+            $= \Big( \partial_j v^i + \Big\{\begin{matrix} i \\ jk \end{matrix}\Big\} v^k \Big) du^j $\par
+            这样就变成：\par
+            $d\textbf{v} = \Bigg( dv^i + \Big\{\begin{matrix} i \\ jk \end{matrix}\Big\} v^k du^j \Bigg) \textbf{r}_i $\par
+            $= \Bigg( \Big( \partial_j v^i + \Big\{\begin{matrix} i \\ jk \end{matrix}\Big\} v^k \Big) du^j \Bigg) \textbf{r}_i $\par
+            从而可以构造一个微商也就是导数：\par
+            $D_j v^i = \partial_j v^i + \Big\{\begin{matrix} i \\ jk \end{matrix}\Big\} v^k$\par
+            称为\textbf{协变导数(covariant derivative)}\index{covariant derivative}．\par
+            上讲谈到，在自然坐标系中，度量$g_i^j$是常数不变的，故Christoffel记号为零，于是有以下的对易性：\par
+            $D_iD_j - D_jD_i = 0$\par
+            这使我们联想到量子力学中的对易子，对易子就是通过交换顺序后求差来衡量不对易程度的，和这里如出一辙．\par
+
+            很久以来我们都强调一个观点，就是向量生而是为函数求方向导数的：\par
+            [MP9：重新认识向量场：方向导数、偏导数、梯度](https://zhuanlan.zhihu.com/p/44115400)\par
+            因此，在微分流形 $M$ 上的向量场 $X$ 若是和光滑函数 $f \in C^\infty(M)$ 写在一起，需要把向量场理解为方向导数算子——它是一个我们在泛函分析和量子力学中长期研究的线性算子：\par
+            $X: C^\infty(M) \to C^\infty(M)$\par
+            $f \mapsto Xf = X(f) = D_X f$\par
+            现在考虑Riemann流形上的向量场．两个向量场 $U,V$ 通过Riemann度量张量 $g$ 的作用，产生一个标量场：\par
+            $g: TM \times TM \to C^\infty(M)$\par
+            $(U,V) \mapsto g(U,V)$\par
+            而第三个向量场作为方向导数算子的作用：\par
+            $W: C^\infty(M) \to C^\infty(M)$\par
+            $g(U,V) \mapsto Wg(U,V) = D_W g(U,V)$\par
+            相当于\par
+            $TM \times (TM \times TM) \to C^\infty(M)$\par
+            $\big(W, (U,V)\big) \mapsto W g(U,V) = D_W g(U,V)$\par
+            用大白话理解：两个向量场$U,V$ 在Riemann度量张量作用下产生的标量场是一个逐点定义的函数，这个函数被向量场 $W$ 逐点作用．\par
+            我们记得前面说过Levi-Civita是由Riemann度量 $g$ 确定的，在切丛 $TM$ 上唯一一个保持度量且无挠的联络．令 $\nabla$ 为Riemann流形上的Levi-Civita联络，它可以把向量场$U,V$ 按照向量场 $W$ 的方向得到向量场 $\nabla_W U, \nabla_W V$ ，而且能保持向量的度量，即：\par
+            $Wg(U,V) = g(\nabla_W U, V) + g(U, \nabla_W V)$\par
+            量子力学有算符的对易子，微分几何中也有向量场的Lie括号．微分流形 $M$ 上的向量场 $U,V$ 可以对光滑函数 $f \in C^\infty(M)$ 求复合方向导数，相当于是一种复合对易的算子，通过\textbf{Lie括号(Lie bracket)}\index{Lie bracket}给出：\par
+            $[U,V$](f) = [UV - VU](f) = U(V(f)) - V(U(f))\par
+            $= D_U(D_Vf) - D_V(D_Uf) = (D_UD_V - D_VD_U)f$\par
+            它就是对易子．Levi-Civita联络还可以确保在平行移动过程中的\textbf{无挠(torsion free)}\index{torsion free}，即：\par
+            $[U,V] = \nabla_U V - \nabla_V U$\par
+
+            现在开始真正的广义相对论．在狭义相对论中，我们了解了相对惯性（匀速）运动的参考系之间的Lorentz变换和描述它的Minkowski空间．现在，我们要考虑更进一步推广的Riemann流形和其上的Levi-Civita联络．\par
+            [MP60：平行移动与Levi-Civita联络](https://zhuanlan.zhihu.com/p/46700218)\par
+            [MP61：Riemann流形上的向量场](https://zhuanlan.zhihu.com/p/46720067)\par
+            前面已经讨论了许多Levi-Civita联络的性质，我们知道在Levi-Civita联络上进行的向量场的平行移动是保持度量且无挠的．进一步，我们把Levi-Civita联络上的曲率定义为\textbf{Riemann曲率张量(Riemann curvature tensor)}\index{Riemann curvature tensor}．\par
+            本文首先给出Lie括号/对易子在平直空间的向量场上的作用，了解到Lie括号计算的是复合方向导数的不对易（不交换）程度．在平直空间中的偏导数之间是对易的，而对于任意的向量场，这一点不是显然的．\par
+            进一步，我们在弯曲的空间上考虑联络的曲率，特别是Riemnn流形上的Levi-Civita联络上的曲率．我们注意到，曲率的前两项相当于是某种形式的对易子，而第三项是一种修正．\par
+            Riemann曲率张量是(1,3)型张量，其缩并成为(0,2)型Ricci张量，进一步可以构造出Einstein张量，它是广义相对论的Einstein场方程的重要构成部分．\par
+
+             微分流形 $M$ 上的向量场 $U,V$可以对光滑函数 $f \in C^\infty(M)$ 求复合方向导数，通过\textbf{Lie括号(Lie bracket)}\index{Lie bracket}给出：\par
+            $[U,V$](f) = [UV - VU](f) = U(V(f)) - V(U(f))\par
+            $= D_U(D_Vf) - D_V(D_Uf) = (D_UD_V - D_VD_U)f$\par
+            作为方向导数算符的运算，它就是对易子：\par
+            $[U,V$] = UV - VU\par
+            Lie括号计算的是复合方向导数的不对易（不交换）程度．在平直空间中的偏导数之间是对易的，即：\par
+            $[\partial_i, \partial_j$] = 0\par
+            这是我们在量子力学中所熟知的．Lie括号展开后可以理解为两次复合导数，所谓对易即是\par
+            $\partial_i\partial_j = \partial_j\partial_i$\par
+            按照两个不同偏导数的方向，最后可以在右上角相交，成为交换的\par
+            这在多元微积分中是显然的，所以我们在学习多元微积分的时候从未考虑过复合偏导数的顺序问题．然而，对于任意的向量场，这一点不是显然的：\par
+            不对易，右上角没有相交，而是产生了一个偏差\par
+            上图的右上角所产生的偏差就是Lie括号．\par
+
+            弯曲的空间具有曲率，而曲率是一种内在的属性，不必借助包含它的空间来观察．简单地说，如果让向量从一点出发，按照平行移动的方式经过一个路径后回到这一点，如果空间是弯曲的，那么向量回到这一点后可能发生旋转．\par
+            沿着A-N-B-A进行平行移动，回到起点后产生了夹角(wiki)\par
+            在流形 $M$ 的闭环路 $\gamma$ 上进行平行移动，回到起点 $p \in M$ ，相当于一个变换：\par
+            $H(\gamma, D): TpM \to TpM$\par
+            其中 $H(\gamma, D)$ 是由路径 $\gamma$ 和联络 $D$ 决定的，称为\textbf{和乐(holonomy)}\index{holonomy}．用代数的方法研究和乐，通过类似于基本群的方式构造路径的自由群，形成\textbf{和乐群(holonomy group)}\index{holonomy group}．\par
+
+            Riemann流形上有向量场 $U,V,W \in TM$ ，在Levi-Civita联络 $\nabla$ 的作用下，可以产生\par
+            $\nabla: TM \times TM \to TM$\par
+            $(U,V) \mapsto \nabla_U V$\par
+            $(V,U) \mapsto \nabla_V U$\par
+            或者是\par
+            $\nabla_U: V \mapsto  \nabla_U V$\par
+            $\nabla_V: U \mapsto  \nabla_V U$\par
+            由于Levi-Civita联络还可以确保在平行移动过程中的无挠(torsion free)，那么还有具有对易性的Lie括号诱导出的（方向导数）算子：\par
+            $TM \times TM \to TM$\par
+            $(U,V) \mapsto [U,V] = \nabla_U V - \nabla_V U$\par
+            定义Riemann曲率张量 $R(U,V)$ 对向量场 $W$ 的作用为：\par
+            $R(U,V)W = (\nabla_U\nabla_V - \nabla_V\nabla_U - \nabla_{[U,V]})W$\par
+            微分几何是涉及到大量指标计算的领域，这里先不展开，仅仅对上式简单说明．所谓联络的\textbf{曲率(curvature)}\index{curvature}，它实际上给出了协变导数不对易的程度．我们只看上式中的RHS的算子部分：\par
+            $\nabla_U\nabla_V - \nabla_V\nabla_U - \nabla_{[U,V]} = (\nabla_U\nabla_V - \nabla_V\nabla_U) - \nabla_{[U,V]}$\par
+            前两项相当于是某种形式的对易子，可以理解为：\par
+            $[\nabla_U, \nabla_V = \nabla_U\nabla_V - \nabla_V\nabla_U$\par
+            另外一项 $ - \nabla_{[U,V]}$ 则是对这个对易子的修正．\par
+
+            实际上上面定义的Riemann曲率张量是一个 $(1,3)$ 型张量，（请回忆流形上张量场的定义 [MP23：张量积、张量、张量丛](https://zhuanlan.zhihu.com/p/45703308)）三个逆变元就是这里的 $U,V,W \in TM$ ，此外还有一个协变元 $\mu \in T^*M$ ，张量对 $(1,3)$ 型输入的作用为：\par
+            $\mu \big( R(U,V)W \big)$\par
+            我们用一个坐标系来具体讨论，令切向量的基为 $\{\partial_k\}$ ，注基本身也是切向量，于是\par
+            $R(\partial_i,\partial_j)\partial_k = (\nabla_i\nabla_j - \nabla_j\nabla_i)\partial_k$\par
+            $= \nabla_i\nabla_j\partial_k - \nabla_j\nabla_i\partial_k$\par
+            根据前面的讨论，最终可以用Christoffel记号把这个 $(1,3)$ 型张量展开为多重线性形：\par
+            $R_{ijk}^l = \partial_i\Gamma_{jk}^l - \partial_j\Gamma_{ik}^l + \Gamma_{jk}^m\Gamma_{im}^l - \Gamma_{ik}^m\Gamma_{jm}^l$\par
+            细节——密密麻麻的指标运算，就不给了．\par
+            Riemann曲率张量是个 $(1,3)$ 型张量，它的缩并为：\par
+            $R_{ij} = R_{ikj}^k$\par
+            这个 $(0,2)$ 型张量称为\textbf{Ricci张量(Ricci tensor)}\index{Ricci tensor}，进一步有：\par
+            $R = R_i^i$\par
+            称为Ricci标量或者\textbf{标量曲率(scalar curvature)}\index{scalar curvature}．这样我们可以构建重要的\textbf{Einstein张量(Einstein tensor)}\index{Einstein tensor}：\par
+            $G_{ij} = R_{ij} - \frac{1}{2}Rg_i^j$\par
+            它是对空间弯曲情况的描述．\par
+
+    \section{Hodge星算子}
+            令$V\in\textbf{Vct}_\mathbb R$为$n$-维实线性空间．$\wedge^pV$上有基$\{\sigma^I=\sigma^{i_1} \wedge \cdots \wedge \sigma^{i_p}\}$．\textbf{体积形式(volume form)}\index{volume form}为：\par
+            \[
+                \omega = \sigma^1\wedge\cdots\wedge\sigma^n \in \wedge^n V \\
+            \]
+            $\alpha \in \wedge^pV$如果可以写为\par
+            \[
+                \alpha = \alpha^1\wedge\cdots\wedge\alpha^p,\quad \alpha^i\in V \\
+            \]
+            的形式，则称$\alpha$为\textbf{可分解的(decomposable)}\index{decomposable}．\par
+            给定$\lambda \in \wedge^p V$，对于任意$\theta \in \wedge^{n-p}V$，$\lambda \wedge \theta \in \wedge^n V$．由于$n$-维线性空间的$n$-形式都是体积形式$\omega \in \wedge^n V$的倍数，可以定义函数：\par
+            \begin{align}
+                f_\lambda: \wedge^{n-p}V &\to \mathbb R \nonumber \\
+                \theta &\mapsto f_\lambda(\theta) \nonumber \\
+            \end{align}
+            使得\par
+            \[
+                f_\lambda(\theta)\omega = \lambda \wedge \theta \\
+            \]
+            如此定义的函数$f_\lambda$是一个线性函数，根据Riesz定理，在内积$g$下它唯一对应了$\varphi \in \wedge^{n-p}V$使得\par
+            \[
+                f_\lambda(\theta) = g(\theta,\varphi) \\
+            \]
+            于是定义\textbf{Hodge星算子(Hodge star opertor)}\index{Hodge star opertor}为\par
+            \begin{align}
+                *: \wedge^pV &\to \wedge^{n-p}V \nonumber \\
+                \lambda &\mapsto *\lambda=(-1)^s\varphi \nonumber \\
+            \end{align}
+            即\par
+            \[
+                \lambda \wedge \theta = (-1)^sg(\theta,*\lambda)\omega \\
+            \]
 
 现在讨论三维空间向量\textbf{叉乘} $\mathbf{u} \times \mathbf{v}$的本质：
 
@@ -310,7 +672,7 @@ v_1 & v_2 & v_3
 \end{vmatrix} 
 $$
 
-其中 $\mathbf{i}, \mathbf{j}, \mathbf{k}$ 是标准正交基向量。
+其中 $\mathbf{i}, \mathbf{j}, \mathbf{k}$ 是标准正交基向量．
 
 叉乘是二元线性运算，
 暗示了外微分的性质：
@@ -319,11 +681,11 @@ $$
     \item $u \times v = 0$
 \end{itemize}
 
-而叉乘只能在三维空间定义。
+而叉乘只能在三维空间定义．
 实际上$u$和$v$并非是向量，
 而是$1$-形式，
 叉乘其实是外积$\wedge$，
-因而$u \wedge v$是三维空间中的$2$-形式。
+因而$u \wedge v$是三维空间中的$2$-形式．
 为何$u \times v$具有向量的形式，
 本质是因为
 
@@ -348,20 +710,20 @@ $$
 其中：
 \begin{itemize}
     \item $\langle \alpha, \beta \rangle$ 是度量 $g$ 诱导的 $k$-形式上的内积，
-    \item $\text{vol}_g = \sqrt{\det g}\, dx^1 \wedge \cdots \wedge dx^n$ 是黎曼体积形式。
+    \item $\text{vol}_g = \sqrt{\det g}\, dx^1 \wedge \cdots \wedge dx^n$ 是黎曼体积形式．
 \end{itemize}
 \end{framed}
 
 \subsection{三维空间中的对应关系}
 
-设 $\mathbb{R}^3$ 具有标准欧氏度量与定向。通过 Hodge 星算子 $*$，向量场与微分形式之间有以下对应：
+设 $\mathbb{R}^3$ 具有标准欧氏度量与定向．通过 Hodge 星算子 $*$，向量场与微分形式之间有以下对应：
 \[
 \begin{aligned}
 \text{向量} \quad &\longleftrightarrow \quad 1\text{-形式} \\
 \mathbf{v} = (v_1,v_2,v_3) \quad &\longleftrightarrow \quad v^\flat = v_1 dx + v_2 dy + v_3 dz,
 \end{aligned}
 \]
-其中 $\flat$ 表示由度量诱导的“降指标”映射（在标准欧氏度量下就是取相同的分量系数）。同样，$2$-形式可通过 $*$ 映射为 $1$-形式：
+其中 $\flat$ 表示由度量诱导的“降指标”映射（在标准欧氏度量下就是取相同的分量系数）．同样，$2$-形式可通过 $*$ 映射为 $1$-形式：
 \[
 *: \Omega^2(\mathbb{R}^3) \to \Omega^1(\mathbb{R}^3).
 \]
@@ -369,12 +731,12 @@ $$
 \subsection{与向量分析的关系}
 
 \begin{itemize}
-    \item 叉乘的 Hodge 定义将向量积统一到外代数的框架中，无需依赖右手法则的显式公式。
+    \item 叉乘的 Hodge 定义将向量积统一到外代数的框架中，无需依赖右手法则的显式公式．
     \item 旋度 $\nabla\times\mathbf{F}$ 可视为 $*(d(\mathbf{F}^\flat))$：
     \[
     \nabla\times\mathbf{F} = \left( * d(\mathbf{F}^\flat) \right)^\sharp.
     \]
-    \item 散度 $\nabla\cdot\mathbf{F}$ 对应 $* d( * (\mathbf{F}^\flat) )$。
+    \item 散度 $\nabla\cdot\mathbf{F}$ 对应 $* d( * (\mathbf{F}^\flat) )$．
 \end{itemize}
 
 \subsection{总结}
@@ -383,7 +745,7 @@ Hodge 星算子与外积共同给出了叉乘的几何定义：
 \[
 \boxed{\mathbf{u}\times\mathbf{v} = \left( *(\mathbf{u}^\flat \wedge \mathbf{v}^\flat) \right)^\sharp }.
 \]
-该表述揭示了叉乘实质上是 $2$-形式到 $1$-形式的 Hodge 对偶，从而将三维向量的叉乘整合到外微分形式的一般理论中。
+该表述揭示了叉乘实质上是 $2$-形式到 $1$-形式的 Hodge 对偶，从而将三维向量的叉乘整合到外微分形式的一般理论中．
 
 
 
@@ -393,11 +755,11 @@ Hodge 星算子与外积共同给出了叉乘的几何定义：
 \[
 (\mathbf{u}\times\mathbf{v})^\flat = *(\mathbf{u}^\flat \wedge \mathbf{v}^\flat).
 \]
-即：先取对应的 $1$-形式 $\mathbf{u}^\flat$ 和 $\mathbf{v}^\flat$，作外积得 $2$-形式 $\mathbf{u}^\flat \wedge \mathbf{v}^\flat$，再用 Hodge 星算子将其转化为 $1$-形式，最后通过逆映射 $\sharp$ 变回向量。
+即：先取对应的 $1$-形式 $\mathbf{u}^\flat$ 和 $\mathbf{v}^\flat$，作外积得 $2$-形式 $\mathbf{u}^\flat \wedge \mathbf{v}^\flat$，再用 Hodge 星算子将其转化为 $1$-形式，最后通过逆映射 $\sharp$ 变回向量．
 
 \subsection{具体计算验证}
 
-设 $\mathbf{u}=u_1dx+u_2dy+u_3dz$，$\mathbf{v}=v_1dx+v_2dy+v_3dz$（为简便记法，省略 $\flat$ 符号）。则
+设 $\mathbf{u}=u_1dx+u_2dy+u_3dz$，$\mathbf{v}=v_1dx+v_2dy+v_3dz$（为简便记法，省略 $\flat$ 符号）．则
 \[
 \mathbf{u}\wedge\mathbf{v} = (u_1v_2-u_2v_1)\,dx\wedge dy + (u_2v_3-u_3v_2)\,dy\wedge dz + (u_3v_1-u_1v_3)\,dz\wedge dx.
 \]
@@ -415,13 +777,122 @@ Hodge 星算子作用：
 \[
 *(\mathbf{u}\wedge\mathbf{v}) = (u_2v_3-u_3v_2)\,dx + (u_3v_1-u_1v_3)\,dy + (u_1v_2-u_2v_1)\,dz,
 \]
-其分量恰为 $\mathbf{u}\times\mathbf{v}$ 的分量。再通过 $\sharp$ 映射得：
+其分量恰为 $\mathbf{u}\times\mathbf{v}$ 的分量．再通过 $\sharp$ 映射得：
 \[
 \mathbf{u}\times\mathbf{v} = (u_2v_3-u_3v_2,\; u_3v_1-u_1v_3,\; u_1v_2-u_2v_1).
 \]
 
 
+
 \section{Stokes定理}
+
+            现在，我们要把拓扑和微分形式放在一起，学习\textbf{流形上的Stokes定理}\index{流形上的Stokes定理}，也为进一步学习\textbf{上同调}\index{上同调}作准备．\par
+
+            微积分基本定理是Newton-Leibniz定理：\par
+            $\int_{x_1}^{x_2} f^\prime(x) dx = f(x_2) - f(x_1)$\par
+            从初学微积分的角度看：N-L定理联系了导数和定积分的关系．\par
+            如今我们学了很多的拓扑和微分几何，从现在的角度看：N-L定理联系了局部变化 $f^\prime dx$ 和全局变化 $f(x_2) - f(x_1)$ 的关系．\par
+            N-L定理可以有非常直观的理解．假设有一根水管，其位置坐标为 $x\in[x_1,x_2$] ，水管处处漏水而有稳定的流速，于是水管在不同位置坐标上的流速构成函数 $f(x)$ ．\par
+            在水管的两端可以测得流速分别为 $f(x_1)$ 和 $f(x_2)$ ，那么在整个区间 $[x_1,x_2$] 上的总漏水速率为：\par
+            $f(x_2) - f(x_1)$\par
+            这种测量方法只考虑边界两个端点上的取值，是全局的．另一种计算总漏水速率的方式是在每一个位置 $x$ 上测漏水速率，也就是流速的变化量 $ f^\prime(x)$ ，然后在区间上进行积分，得到\par
+            $\int_{x_1}^{x_2} f^\prime(x) dx$\par
+            这种测量方法是要对整个集合进行逐点操作的，是局部的．\par
+            N-L定理揭示了一个事实：\par
+            > \textbf{变化在区间上的积分等于边界上呈现的总体变化}\index{变化在区间上的积分等于边界上呈现的总体变化}\par
+
+            电磁学的一个基本定律是\textbf{Gauss静电场定律}\index{Gauss静电场定律}：令 $F=F^xi+F^yj+F^zk$ ，那么在空间闭区域 $\Omega$ 上进行积分，对区域进行如下体积分等于对闭曲面边界 $\partial\Omega$ 进行相应的面积分：\par
+            $\iiint_\Omega (\nabla \cdot F)dxdydz = \iint_{\partial \Omega} F^xdydz + F^ydzdx + F^zdxdy$\par
+            这个公式的物理意义非常明确．如果 $F$ 为电场，那么左边的被积函数为散度 $\nabla \cdot F$ ，按照面积元 $dxdydz$ 对整个区域积分，得到区域 $\Sigma$ 中总的电荷源．右边的被积表达式表示穿过边界 $\partial\Sigma$的电场，它和区域内的电源是相等的．\par
+            更直观地说，对于区域 $\Sigma$ 内部的一个点电荷，其电场是从这一点向外\textbf{发散}\index{发散}的，这个发散的程度就叫做\textbf{散度}\index{散度}；区域 $\Sigma$ 内所有点上都可以有一个散度，它们线性地叠加起来，成为在整个区域中电场（切确地说是 $3$ -微分形式）的变化量．和N-L定律中的区间积分类似，这种计算方法是逐点局部处理的，在中学和普通物理中，我们经常听到所谓的微元法，取一个体积元计算电场散度，这个体积元就是$3$ -微分形式 $dxdydz = dx \wedge dy \wedge dz$ ．\par
+            对于区域 $\Sigma$ 内部的一个点电荷，无论用什么曲面去包围它，只要曲面把它包围起来，曲面是闭的，曲面同胚与球面，那么这个点电荷所\textbf{散发}\index{散发}的电场就都会穿过曲面，产生相同的电\textbf{通量}\index{通量}．我们注意到对于曲面而言这是一个拓扑性质，这就是为什么我们前面要学那么多的拓扑打基础．点电荷\textbf{散发}\index{散发}的电场，以\textbf{散度}\index{散度}的方式对应着体积元，而这个点电荷贡献出来的电场，会反映到曲面的电通量上，而\textbf{通量}\index{通量}二字反映的是通过边界曲面的量．和N-L定律中的边界求差相似，通量在边界曲面上的积分也是全局求差的过程，求得的是边界内外之间的差．\par
+            Stokes定理将推广这个事实．下面先从拓扑开始，建立最简单的标准单形上的Stokes定理，然后进一步将它推广到微分流形．\par
+
+            前面是以单形为基础建立同调群的，这是\textbf{单纯同调(simplicial homology)}\index{simplicial homology}的处理范围．这种结构极为规整，易于建立积分的概念．\par
+            $\mathbb{R}^n$ 中的$n$ \textbf{-标准单形(standard simplex)}\index{standard simplex} $\sigma$ 是坐标原点 $p_0=(0, \dots, 0)$ 和各坐标轴上的单位向量点 $p_k$ 顺序成的，其中\par
+            $p_k=(x_0, \dots, x_i, \dots, x_n), \ x_i = \delta_i^k$\par
+            例如三维空间的标准 $3$ -单形 $[p_0p_1p_2p_3$] 的点列为：\par
+            $p_0=(0,0,0)$\par
+            $p_1=(1,0,0)$\par
+            $p_2=(0,1,0)$\par
+            $p_3=(0,0,1)$\par
+            $\mathbb{R}^n$ 中的 $n$ -微分形式是\textbf{体积元(volume form)}\index{volume form}，可以表示为：\par
+            $\omega = W(x) dx^1 \wedge dx^2 \wedge \dots \wedge dx^n$\par
+            在标准单形 $\sigma$ 这样规整的结构上，借助重积分定义\par
+            $\int_\sigma \omega = \int \dots \int_\sigma W(x)dx^1dx^2\dots dx^n$\par
+            我们第一次严格地建立起了微分形式的积分．\par
+
+            $\mathbb{R}^n$ 上的 $(n-1)$ 形式\par
+            $\psi = \Psi(x)dx^1 \wedge \dots \wedge dx^{n-1}$\par
+            在 $n$ 标准单形 $\sigma$ 上有\textbf{Stokes定理}\index{Stokes定理}：\par
+            $\int_{\partial\sigma} \psi = \int_\sigma d\psi$\par
+            详细的证明篇幅较大，请参考\cite{Nakahara2003}．大约的证明思想如下：\par
+            对$(n-1)$ 形式\par
+            $\psi = \Psi(x)dx^1 \wedge \dots \wedge dx^{n-1}$\par
+            进行外微分的结果是一个 $n$ 形式\par
+            $d\psi = \text{psi}(x)dx^1 \wedge \dots \wedge dx^n$\par
+            它是一个体积元，于是根据前述定义其微分形式的积分是一个 $n$ 重积分：\par
+            $\int_\sigma d\psi = \int \dots \int_\sigma \text{psi}(x)dx^1\dots dx^n$\par
+            再考虑边界 $\partial\sigma$ 上的积分． $n$ 单形 $\sigma$ 的边界是 $(n-1)$ 单形，于是\par
+            $\int_{\partial\sigma} \psi = \int \dots \int_{\partial\sigma} \Psi(x)dx^1\dots dx^{n-1}$\par
+            也成为$(n-1)$ 单形 $\partial \sigma$ 上的$(n-1)$ 形式 $\psi$ 的积分，它是 $(n-1)$ 重积分．\par
+            经过两边的计算，两个重积分是相等的，于是得证．\par
+            在标准单形中代入Newton-Leibniz公式或者Gauss电场公式，都可以验证标准单形的Stokes定理．下篇将把这个定理推广到微分流形上．\par
+
+            为了把Stokes定理拓展到微分流形，我们需要先微分形式的积分从标准单形推广到微分流形上．我们现在要建立几何上更加灵活的\textbf{奇异同调(singular homology)}\index{singular homology}，它保持了单纯同调的拓扑特性，但不再被限制于单纯同调中的三角剖分．奇异同调建立的基础是由标准单形\textbf{光滑同胚(diffeomorphism)}\index{diffeomorphism}映射而成的奇异单形：\par
+            $f:\sigma \to s$\par
+            由于是光滑同胚，显然保持了拓扑性质．（注：实际上只需要光滑的条件就可以解决后继问题，我们这里加强为同胚的条件是为了保持单形的拓扑性质，便于直观理解）光滑映射 $f$ 的灵活性确保了从标准单形 $\sigma$ 出发可以得到任意所需的（具有相同拓扑性质的）光滑流形 $s$ ，相对于 $n$ -标准单形 $\sigma$ ，称 $s$ 为 $n$ -\textbf{奇异单形(singular simplex)}\index{singular simplex}．\par
+            以奇异单形为基础，通过类似于 [MP22：同调群](https://zhuanlan.zhihu.com/p/44776557) 的构造方式，可以得到\textbf{奇异同调群(singular homological group)}\index{singular homological group}：\par
+            $ H_k(C) = Z_k/B_k = \text{Ker}(\partial_k)/ \text{Im}(\partial_{k+1})$\par
+            由于我们加强了光滑同胚的条件，这样得到的单纯同调群和奇异同调群并无拓扑性质的区别，我们在符号和阐述上也不区分二者．建立奇异同调群的意义在于，我们用单纯同调的方法就可以得到任意微分流形的拓扑性质，于是我们在前面大量阐述的拓扑知识，现在可以不加区分地用于微分流形：\par
+
+            为了把微分形式的积分从标准单形推广到微分流形，我们首先要建立奇异单形上的积分．光滑同胚映射\par
+            $f:\sigma \to s$\par
+            的作用相当于把积木一样的标准单形捏成了任意形状，倘若我们直接定义奇异单形上的积分：\par
+            $\int_s \omega = \int_\sigma \omega = \int \dots \int_\sigma w(x)dx^1dx^2\dots dx^n$\par
+            是一定有问题的，它没有反映出映射 $f$ 的效果，若要在微分形式上反映出映射的效果，需要用到拉回映射．微分流形间的光滑映射\par
+            $f:M \to N$\par
+            $p \mapsto f(p)$\par
+            可以诱导出两个点的余切空间之间的\textbf{拉回映射(pullback)}\index{pullback}：\par
+            $f^*: T_{f(p)}^*N \to T_p^*M$\par
+            注意拉回映射 $f^*$ 的方向与 $f$ 相反，以此得名．也就是当$f$把 $p$ 映射为 $f(p)$ 时，拉回映射 $f^*$ 也同时把 $f(p)$ 上的余切向量映射回 $p$ 上的余切向量．由于切空间和余切空间对偶， $\forall v \in T_pM, \ \omega \in T_{f(p)}^*N$ 规定以上两个映射的条件是：\par
+            $\langle f^*\omega, v \rangle_M = \langle \omega, f_*v \rangle_N$\par
+            从而使拉回映射具有以下性质：\par
+            $d(f^*\omega) = f^*(d\omega)$\par
+            现在，针对标准单形到奇异单形的映射\par
+            $f:\sigma \to s$\par
+            其拉回为：\par
+            $f^*: T_{f(p)}^*s \to T_p^*\sigma$\par
+            我们定义\textbf{奇异单形上微分形式的积分}\index{奇异单形上微分形式的积分}为：\par
+            $\int_s \omega = \int_\sigma f^*\omega$\par
+
+            经过前面建立的奇异同调群和奇异单形上微分形式的积分，通过类似 [MP22：同调群](https://zhuanlan.zhihu.com/p/44776557) 中的形式和，不难定义奇异链 $c = \sum_k z_ks_k \in C_r(M)$ 上的积分\par
+            $\int_c \omega = \sum_k z_k \int_{s_k} \omega$\par
+            令微分形式 $w \in \Omega^{n-1}(M)$ ，奇异链 $c \in C_r(M)$ ，则有\textbf{Stokes定理}\index{Stokes定理}：\par
+            $\int_{\partial c} \omega = \int_c d\omega$\par
+            \textbf{证明}\index{证明}：\par
+            考虑 $n$ -奇异单形 $s$ ．根据奇异单形上微分形式的积分定义，以及拉回映射的性质：\par
+            $\int_c d\omega = \int_\sigma d(f^*\omega) = \int_\sigma f^*(d\omega)$\par
+            以及\par
+            $\int_{\partial c} \omega = \int_{\partial\sigma} f^*\omega$\par
+            前面讲到， $\mathbb{R}^n$ 上的 $(n-1)$ 形式 $\psi$ ，在 $n$ 标准单形 $\sigma$ 上有Stokes定理：\par
+            $\int_{\partial\sigma} \psi = \int_\sigma d\psi$\par
+            于是\par
+            $\int_{\partial\sigma} f^*\omega = \int_\sigma d(f^*\omega)$\par
+            证明了\textbf{奇异链上的Stokes定理}\index{奇异链上的Stokes定理}：\par
+            $\int_{\partial c} \omega = \int_c d\omega$\par
+            奇异链上的Stokes定理的特例是\textbf{（定向）流形上的Stokes定理}\index{（定向）流形上的Stokes定理}：令 $D$ 是定向微分流形 $M$ 的开子流形． $M$ 诱导出 $D$ 和 $\partial D$ 的定向．令 $\omega$ 是 $M$ 上的 $(n-1)$ 次光滑形式：\par
+            $\int_D d\omega = \int_{\partial D} \omega$\par
+            Newton-Leibniz、Green、Gauss、Stokes定理，在微分几何中都可以归纳到这个形式中．\par
+            它概括了刚才在N-L定理和Gauss静电场定律中揭示的事实：\par
+            > \textbf{变化在区间上的积分等于边界上呈现的总体变化}\index{变化在区间上的积分等于边界上呈现的总体变化}\par
+            引入类似内积的符号：\par
+            $\int_D d\omega = \langle D, d\omega \rangle$\par
+            $\int_{\partial D} \omega = \langle \partial D, \omega \rangle$\par
+            于是\par
+            $\langle D, d\omega \rangle = \langle \partial D, \omega \rangle$\par
+            这里暗示了整体算子 $\partial$ 和局部算子 $d$ 之间的对偶关系．我们现在已经完成了对偶性的一面，即在\textbf{同调(homology)}\index{homology}和边界算子 $\partial$ 方面的研究．下一步是对偶性的另一面，\textbf{上同调(cohomology)}\index{cohomology}和外微分算子 $d$ 的研究．\par
+
 
 \section{外微分 Stokes 定理的几种常见形式}
 
@@ -431,7 +902,7 @@ Hodge 星算子作用：
 \[
 \int_{\partial M} \omega = \int_M d\omega.
 \]
-以下各种定理均为其特例。
+以下各种定理均为其特例．
 
 \subsection{微积分基本定理（$n=1$）}
 
@@ -453,7 +924,7 @@ Stokes 定理给出：
 
 \subsection{经典 Stokes 定理（$n=2$，三维空间中的曲面）}
 
-设 $M\subset\mathbb{R}^3$ 为二维定向曲面，$\mathbf{F}=(F_x,F_y,F_z)$ 为向量场，对应 $1$-形式 $\omega = F_x dx + F_y dy + F_z dz$。则 $d\omega$ 对应于旋度 $\nabla\times\mathbf{F}$ 的 $2$-形式：
+设 $M\subset\mathbb{R}^3$ 为二维定向曲面，$\mathbf{F}=(F_x,F_y,F_z)$ 为向量场，对应 $1$-形式 $\omega = F_x dx + F_y dy + F_z dz$．则 $d\omega$ 对应于旋度 $\nabla\times\mathbf{F}$ 的 $2$-形式：
 \[
 \int_{\partial M} \mathbf{F}\cdot d\mathbf{r} = \iint_M (\nabla\times\mathbf{F})\cdot d\mathbf{S}.
 \]
@@ -482,4 +953,4 @@ Stokes 定理给出：
 \end{array}
 \]
 
-所有定理统一于外微分形式下的 Stokes 公式 $\int_{\partial M}\omega = \int_M d\omega$。
+所有定理统一于外微分形式下的 Stokes 公式 $\int_{\partial M}\omega = \int_M d\omega$．

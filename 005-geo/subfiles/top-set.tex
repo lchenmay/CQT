@@ -2,43 +2,43 @@
 
 \section{从集合构造幂集}
 \begin{framed}
-\noindent\textbf{定义（幂集）：}给定集合 $X$，其所有的子集构成的集合称为\textbf{幂集}（Power Set），记作 $\mathcal{P}(X)$ 或 $2^X$。
+\noindent\textbf{定义（幂集）：}给定集合 $X$，其所有的子集构成的集合称为\textbf{幂集}（Power Set），记作 $\mathcal{P}(X)$ 或 $2^X$．
 \end{framed}
-在拓扑学中，空间的拓扑结构 $\tau$ 本质上就是幂集 $\mathcal{P}(X)$ 的一个特定子集。
+在拓扑学中，空间的拓扑结构 $\tau$ 本质上就是幂集 $\mathcal{P}(X)$ 的一个特定子集．
 
 \section{拓扑公理}
 \begin{framed}
 \noindent\textbf{定义（拓扑空间与开集）：}一个集合 $X$ 上的拓扑 $\tau \subseteq \mathcal{P}(X)$ 是一族称为“\textbf{开集}”的集合，必须满足以下三个公理：
 \begin{enumerate}
-    \item \textbf{平凡性}：空集 $\emptyset$ 和全集 $X$ 都属于 $\tau$。
-    \item \textbf{有限交封闭}：任意有限个开集的交集仍属于 $\tau$。
-    \item \textbf{任意并封闭}：任意多个开集的并集仍属于 $\tau$。
+    \item \textbf{平凡性}：空集 $\emptyset$ 和全集 $X$ 都属于 $\tau$．
+    \item \textbf{有限交封闭}：任意有限个开集的交集仍属于 $\tau$．
+    \item \textbf{任意并封闭}：任意多个开集的并集仍属于 $\tau$．
 \end{enumerate}
-满足这些公理的二元组 $(X, \tau)$ 称为\textbf{拓扑空间}。
+满足这些公理的二元组 $(X, \tau)$ 称为\textbf{拓扑空间}．
 \end{framed}
 
 \section{平凡拓扑、离散拓扑与拓扑结构的偏序包含}
 \begin{framed}
-\noindent\textbf{定义（平凡拓扑与离散拓扑）：}在同一个集合 $X$ 上可以赋予极其不同的拓扑结构。包含开集最少的拓扑 $\tau = \{\emptyset, X\}$ 称为\textbf{平凡拓扑}（Trivial Topology）；所有子集都是开集的拓扑 $\tau = \mathcal{P}(X)$ 称为\textbf{离散拓扑}（Discrete Topology）。
+\noindent\textbf{定义（平凡拓扑与离散拓扑）：}在同一个集合 $X$ 上可以赋予极其不同的拓扑结构．包含开集最少的拓扑 $\tau = \{\emptyset, X\}$ 称为\textbf{平凡拓扑}（Trivial Topology）；所有子集都是开集的拓扑 $\tau = \mathcal{P}(X)$ 称为\textbf{离散拓扑}（Discrete Topology）．
 \end{framed}
-如果集合 $X$ 上有两个拓扑 $\tau_1$ 和 $\tau_2$，且 $\tau_1 \subseteq \tau_2$，我们称 $\tau_2$ 比 $\tau_1$ \textbf{更细}（finer），或称 $\tau_1$ 比 $\tau_2$ \textbf{更粗}（coarser）。所有可能的拓扑结构通过包含关系构成了一个偏序集。
+如果集合 $X$ 上有两个拓扑 $\tau_1$ 和 $\tau_2$，且 $\tau_1 \subseteq \tau_2$，我们称 $\tau_2$ 比 $\tau_1$ \textbf{更细}（finer），或称 $\tau_1$ 比 $\tau_2$ \textbf{更粗}（coarser）．所有可能的拓扑结构通过包含关系构成了一个偏序集．
 
 \section{无限并，从区间套极限得到单点，单点是闭集的意义}
 \begin{framed}
-\noindent\textbf{定义（闭集）：}在拓扑空间中，作为开集补集的子集称为\textbf{闭集}。
+\noindent\textbf{定义（闭集）：}在拓扑空间中，作为开集补集的子集称为\textbf{闭集}．
 \end{framed}
-拓扑公理保证了开集对“无限并”是封闭的，但对“无限交”不一定封闭。相对地，闭集对任意交都是封闭的。利用闭集的无限交特性，我们可以通过“区间套极限”的方式将空间逼近到一个单点。在 $T_1$ 空间中，每一个单点集 $\{x\}$ 都是闭集。如果一个拓扑空间中所有的单点集不仅是闭集，同时也是开集，那么这个空间的拓扑结构必定退化为\textbf{离散拓扑}。
+拓扑公理保证了开集对“无限并”是封闭的，但对“无限交”不一定封闭．相对地，闭集对任意交都是封闭的．利用闭集的无限交特性，我们可以通过“区间套极限”的方式将空间逼近到一个单点．在 $T_1$ 空间中，每一个单点集 $\{x\}$ 都是闭集．如果一个拓扑空间中所有的单点集不仅是闭集，同时也是开集，那么这个空间的拓扑结构必定退化为\textbf{离散拓扑}．
 
 \section{Zariski拓扑：用零点集构造}
 \begin{framed}
 \noindent\textbf{定义（Zariski 拓扑）：}设 $k$ 为域，对于多项式环 $k[x_1, \dots, x_n]$ 中的子集 $S$，定义其公共零点集为：
 $$ V(S) = \{ \mathbf{a} \in k^n \mid f(\mathbf{a}) = 0, \forall f \in S \} $$
-规定所有的 $V(S)$ 为空间中的\textbf{闭集}，其补集即为开集。这种由此定义的拓扑结构称为 \textbf{Zariski 拓扑}。
+规定所有的 $V(S)$ 为空间中的\textbf{闭集}，其补集即为开集．这种由此定义的拓扑结构称为 \textbf{Zariski 拓扑}．
 \end{framed}
-在代数几何中，空间形体的构造由代数方程主导。Zariski 拓扑是一种极其“粗糙”的拓扑，在不可约代数簇上，任意两个非空开集必定相交。
+在代数几何中，空间形体的构造由代数方程主导．Zariski 拓扑是一种极其“粗糙”的拓扑，在不可约代数簇上，任意两个非空开集必定相交．
 
 \section{Hausdorff空间}
 \begin{framed}
-\noindent\textbf{定义（Hausdorff 空间）：}拓扑空间 $(X, \tau)$ 称为 \textbf{Hausdorff 空间}（或 $T_2$ 空间），如果对于空间中任意两个不同的点 $x, y \in X, x \neq y$，都存在两个不相交的开邻域 $U$ 和 $V$，使得 $x \in U, y \in V$ 且 $U \cap V = \emptyset$。
+\noindent\textbf{定义（Hausdorff 空间）：}拓扑空间 $(X, \tau)$ 称为 \textbf{Hausdorff 空间}（或 $T_2$ 空间），如果对于空间中任意两个不同的点 $x, y \in X, x \neq y$，都存在两个不相交的开邻域 $U$ 和 $V$，使得 $x \in U, y \in V$ 且 $U \cap V = \emptyset$．
 \end{framed}
-这一分离性质是保证极限唯一的基石，也是分析学得以展开的前提。
+这一分离性质是保证极限唯一的基石，也是分析学得以展开的前提．

@@ -62,6 +62,7 @@
 \usepackage{adjustbox} 
 \usepackage{framed} 
 \usepackage{scrextend}
+\usepackage[toc,page]{appendix}
 \changefontsizes{9.5pt} 
 
 
@@ -157,14 +158,14 @@
 
 \chapter{前言}
 
-1930年代的数学家已经善于通过函数代数$C(X)$来研究底空间$X$。
+1930年代的数学家已经善于通过函数代数$C(X)$来研究底空间$X$．
 用现代的语言说，
 以复数域$\mathbb C$这个具有代数封闭性的，交换的，自带共轭\textbf{对合(involution)}的数学结构作为靶对象，
-它同时拥有拓扑空间、交换C*代数的精细结构。
+它同时拥有拓扑空间、交换C*代数的精细结构．
 借助反变Hom函子$h^\mathbb C = \text{Hom}(-,\mathbb C)$，
-可以把对底空间$X$的研究转换为对空间上函数集合$h^A X = \textbf{Set}(X,\mathbb C)$的研究。
+可以把对底空间$X$的研究转换为对空间上函数集合$h^A X = \textbf{Set}(X,\mathbb C)$的研究．
 以拓扑空间为基本范畴，
-构造出拓扑空间$X$上的连续函数代数$C(X) = h^\mathbb C X = \textbf{Top}(X,\mathbb C)$。
+构造出拓扑空间$X$上的连续函数代数$C(X) = h^\mathbb C X = \textbf{Top}(X,\mathbb C)$．
 
 在函数代数$A = C(X)$中，
 每个点$x \in X$都对应着一个线性泛函，
@@ -179,17 +180,17 @@ $$
 \end{aligned}
 $$
 
-它满足$\phi_x(ab) = \phi_x(a)\phi_x(b)$。
+它满足$\phi_x(ab) = \phi_x(a)\phi_x(b)$．
 在一般性的抽象代数$A$中，
 满足这一条件的非退化的线性泛函称为\textbf{特征标(character)}，
-特征标的全体构成的集合记为$\Delta(A)$。
+特征标的全体构成的集合记为$\Delta(A)$．
 以上线性泛函的核为：
 
 $$
 \mathfrak m_x = \text{Ker} \ \phi_x = \{ f \in A = C(X) \ | \ f(x) = 0 \}
 $$
 
-它是$C(X)$中的极大理想。
+它是$C(X)$中的极大理想．
 得到\textbf{剩余域(residue field)}
 
 $$
@@ -199,15 +200,15 @@ $$
 这样，
 拓扑空间中的点$x\in X$，
 对应到了线性泛函$\phi_x \in \Delta(C(X))$，
-以及极大理想$\mathfrak m_x \in \Delta(C(X)) = \text{MaxSpec} \ C(X)$。
-实际上他们是一回事。
+以及极大理想$\mathfrak m_x \in \Delta(C(X)) = \text{MaxSpec} \ C(X)$．
+实际上他们是一回事．
 
 对于一般性的交换C*代数$A$，
-在$\Delta(A) = \text{MaxSpec} A$上可以构Gelfand拓扑。
+在$\Delta(A) = \text{MaxSpec} A$上可以构Gelfand拓扑．
 具体地，
 对于$\forall a \in A$和开集$U \in \mathcal O_\mathbb C$，
 集合$\{ \phi \in \Delta(A) \ | \ \phi(a) \in U \} \in \mathcal O_{\Delta(A)}$是开集，
-这是$\Delta(A)$作为$A$的对偶空间子集的弱*拓扑。
+这是$\Delta(A)$作为$A$的对偶空间子集的弱*拓扑．
 于是又可以回到拓扑空间范畴讨论连续函数代数$C(\Delta(C(X)))$，
 特征标和函数得到复数：
 
@@ -227,11 +228,11 @@ $$
 \end{aligned}
 $$
 
-从而构造了连续函数代数$C(\Delta(C(X)))$。
+从而构造了连续函数代数$C(\Delta(C(X)))$．
 特别的，
 当$X$是紧Hausdorff空间时，
 $X \to \Delta(C(X)) :: x \mapsto \phi_x$是同胚，
-Gelfand拓扑完全恢复了$X$的拓扑（Gelfand-Naimark定理）。
+Gelfand拓扑完全恢复了$X$的拓扑（Gelfand-Naimark定理）．
 
 $$
 % https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAB12cYAPHAIwBmwAMIAJOkzgBfENNLpMufIRRkAjFVqMWbABoACALwHOAERgMcdABQibegJSO5CkBmx4CRACylN1PTMrIgg9k6uip4qRGQATFpBuqHmltY2AIIu8lHK3ih+CYE6ISAZxgbh2W4eearIfpTFwWyc3HxCoiLSAHqccNYATpHuSl716uSJJWwjteNEAMxTzckgclowUADm8ESggoMQALZIkyA4EEhxq6UAFn3sx3Q4d-z8lSDUDHT8lgAKYxioQYMEEOBGhxOSD8FyuiGW2haKXYFisdAqbV4OGAAFk6DwAMpoGAAY1k31+AKB+RAoPBkKOpwR1EuZxyIChzJucJhHK5SAAbKz4QB2W6tdjYY4wACOG2kQA
@@ -242,10 +243,10 @@ X = \Delta(C(X)) \arrow[rrrr, "h^\mathbb C"] &                         &  &    &
 \end{tikzcd}
 $$
 
-于是抽象代数$A$可以被视为紧Hausdorff谱$\Delta(A)$上的连续函数代数来研究。
+于是抽象代数$A$可以被视为紧Hausdorff谱$\Delta(A)$上的连续函数代数来研究．
 对于非交换代数，
 无法找到经典拓扑空间作为其谱，
-非交换几何就可以把非交换代数视为非交换空间上的函数代数。
+非交换几何就可以把非交换代数视为非交换空间上的函数代数．
 
 
 \section{Grothendieck topos}
@@ -254,7 +255,7 @@ $$
   \item 
   标题：A globalisation of the Gelfand duality theorem（Gelfand对偶定理的全局化）
   \item 
-  核心成就：在任何Grothendieck topos $\mathbb E$ 中，证明交换 $C^\star$-代数范畴与紧完全正则 locale 范畴之间的对偶等价。
+  核心成就：在任何Grothendieck topos $\mathbb E$ 中，证明交换 $C^\star$-代数范畴与紧完全正则 locale 范畴之间的对偶等价．
   \item 
   作者：Banaschewski \& Mulvey（两人是20世纪末至21世纪初将 Gelfand 理论完全构造化/Topos化的核心人物）
   \item 
@@ -272,199 +273,199 @@ C(M) \arrow[u]                                           &  &  &  & M = \text{Ma
 \end{tikzcd}
 $$
 
-1940年代的经典Gelfand理论建立了$\textbf{CC}^\star \stackrel{\text{MaxSpec}}{\longrightarrow} \textbf{CHaus}$的对偶。
+1940年代的经典Gelfand理论建立了$\textbf{CC}^\star \stackrel{\text{MaxSpec}}{\longrightarrow} \textbf{CHaus}$的对偶．
 所有的构造都依赖点和ZFC，
-排中律和选择公理都成立。
+排中律和选择公理都成立．
 
 Banaschewski和Mulvey的工作，
-在Grothendieck topos不需要排中律和选择公理。
+在Grothendieck topos不需要排中律和选择公理．
 基于紧完全正则locale让拓扑摆脱了对点的依赖，
-用开集的frame代替了点集。
+用开集的frame代替了点集．
 使得Gelfand对偶不仅在点集宇宙成立，
 也在任何topos宇宙，
 如层范畴、
-群作用范畴内部成立。
+群作用范畴内部成立．
 
 
-现代数学和理论物理的核心：如何将“空间”的概念代数化，并将其与逻辑和物理演化统一起来。
+现代数学和理论物理的核心：如何将“空间”的概念代数化，并将其与逻辑和物理演化统一起来．
 
-这几个领域的关系可以概括为：通过“范畴论”作为骨架，将逻辑（类型论/语言）、几何（拓扑空间/Topos）与观测物理（Gelfand/量子理论）统一在“非交换几何”和“层论”的框架下。
+这几个领域的关系可以概括为：通过“范畴论”作为骨架，将逻辑（类型论/语言）、几何（拓扑空间/Topos）与观测物理（Gelfand/量子理论）统一在“非交换几何”和“层论”的框架下．
 1. Gelfand Theory 与 量子理论：几何的代数化
 
-Gelfand 对偶是理解这种关系的基础。
+Gelfand 对偶是理解这种关系的基础．
 
-    经典与交换： Gelfand 对偶告诉我们，一个交换 C∗-代数等价于一个拓扑空间（经典物理的相空间）。
+    经典与交换： Gelfand 对偶告诉我们，一个交换 C∗-代数等价于一个拓扑空间（经典物理的相空间）．
 
-    量子与非交换： 量子力学的本质是可观测量的算子代数通常是非交换的。因此，量子力学可以被看作是“非交换拓扑”或“非交换几何”。
+    量子与非交换： 量子力学的本质是可观测量的算子代数通常是非交换的．因此，量子力学可以被看作是“非交换拓扑”或“非交换几何”．
 
-    联系： 在量子理论中，我们不再问“点在哪里”，而是通过算子代数（Gelfand Theory 的推广）来定义系统的状态。
+    联系： 在量子理论中，我们不再问“点在哪里”，而是通过算子代数（Gelfand Theory 的推广）来定义系统的状态．
 
 2. Topos 与 语言/类型论：逻辑的几何化
 
 Topos 理论是连接逻辑与几何的桥梁（通过 Curry-Howard-Lambek 同构）：
 
-    Topos 作为空间： Topos 是拓扑空间的推广（层的范畴）。
+    Topos 作为空间： Topos 是拓扑空间的推广（层的范畴）．
 
-    Topos 作为逻辑： 每一个 Topos 都有其内部语言（一种类型论）。在 Topos 中，逻辑不再是排中律必然成立的经典逻辑，而是直觉主义逻辑。
+    Topos 作为逻辑： 每一个 Topos 都有其内部语言（一种类型论）．在 Topos 中，逻辑不再是排中律必然成立的经典逻辑，而是直觉主义逻辑．
 
-    语言： 类型论（Type Theory）是这种逻辑的符号化表达。
+    语言： 类型论（Type Theory）是这种逻辑的符号化表达．
 
 3. Topos 量子理论（The Topos Approach to Quantum Theory）
 
 这是近年来由 Chris Isham 和 Andreas Döring 等人提出的前沿框架，直接将上述概念串联：
 
-    核心思想： 既然量子力学因为非交换性而没有“经典点空间”，我们可以寻找一个特定的 Topos，使得在这个 Topos 的内部逻辑下，量子力学看起来像“经典力学”。
+    核心思想： 既然量子力学因为非交换性而没有“经典点空间”，我们可以寻找一个特定的 Topos，使得在这个 Topos 的内部逻辑下，量子力学看起来像“经典力学”．
 
-    Gelfand 的角色： 通过对非交换代数的“交换子代数”进行层化（Bohr 观点），构建一个谱 Topos。
+    Gelfand 的角色： 通过对非交换代数的“交换子代数”进行层化（Bohr 观点），构建一个谱 Topos．
 
-    联系： * 量子理论被放置在 Topos 中。
+    联系： * 量子理论被放置在 Topos 中．
 
-        量子状态对应于 类型论 中的项。
+        量子状态对应于 类型论 中的项．
 
-        Gelfand 谱 被推广为 Topos 中的对象。
+        Gelfand 谱 被推广为 Topos 中的对象．
 
-{\bfseries 对偶性}——几何空间与其上的函数环之间的反变等价——是贯穿二十世纪数学与理论物理的一条隐秘主线。
+{\bfseries 对偶性}——几何空间与其上的函数环之间的反变等价——是贯穿二十世纪数学与理论物理的一条隐秘主线．
 
-从 Gelfand 对偶（交换 C*-代数 ↔ 紧 Hausdorff 空间）到 Grothendieck 的概形理论（交换环 ↔ 仿射概形），再到非交换几何与 Topos 量子理论，对偶性始终扮演着“统一者”的角色。
+从 Gelfand 对偶（交换 C*-代数 ↔ 紧 Hausdorff 空间）到 Grothendieck 的概形理论（交换环 ↔ 仿射概形），再到非交换几何与 Topos 量子理论，对偶性始终扮演着“统一者”的角色．
 
-在物理学中，这一思想尤为深刻：经典物理的相空间完全由其上的函数代数刻画；量子物理则通过非交换代数编码了更丰富的结构，而 Topos 理论试图在一个更大的数学宇宙中重新建立“经典”的描述。
+在物理学中，这一思想尤为深刻：经典物理的相空间完全由其上的函数代数刻画；量子物理则通过非交换代数编码了更丰富的结构，而 Topos 理论试图在一个更大的数学宇宙中重新建立“经典”的描述．
 
-本书将从 Gelfand 理论的起源讲起，逐步深入到当代 Topos 量子理论的前沿。
+本书将从 Gelfand 理论的起源讲起，逐步深入到当代 Topos 量子理论的前沿．
 
 \section{Gelfand 对偶}
 
-Gelfand 理论的出发点是一个深刻的观察：一个紧 Hausdorff 空间 \(X\) 完全由定义在其上的连续复值函数代数 \(C(X)\) 决定。
+Gelfand 理论的出发点是一个深刻的观察：一个紧 Hausdorff 空间 \(X\) 完全由定义在其上的连续复值函数代数 \(C(X)\) 决定．
 在Gelfand 对 Banach 代数理论的早期研究中，
-引入了极大理想空间和谱半径公式等核心概念\cite{Gelfand1941}。
+引入了极大理想空间和谱半径公式等核心概念\cite{Gelfand1941}．
 
-1943 年，Gelfand 与 Naimark 发表了划时代的论文 \cite{GelfandNaimark1943}，标志着 Gelfand-Naimark 定理的诞生。
-该定理指出，每个交换含幺 C*-代数 \(A\) 都等距 *-同构于某个紧 Hausdorff 空间 \(\Delta(A)\)——即 \(A\) 的极大理想空间上的连续函数代数 \(C(\Delta(A))\)。
-这是对偶性的第一个精确数学表述。
+1943 年，Gelfand 与 Naimark 发表了划时代的论文 \cite{GelfandNaimark1943}，标志着 Gelfand-Naimark 定理的诞生．
+该定理指出，每个交换含幺 C*-代数 \(A\) 都等距 *-同构于某个紧 Hausdorff 空间 \(\Delta(A)\)——即 \(A\) 的极大理想空间上的连续函数代数 \(C(\Delta(A))\)．
+这是对偶性的第一个精确数学表述．
 这篇论文是交换 C*-代数理论的奠基之作：
 \begin{enumerate}
   \item 给出了抽象 C*-代数的公理化定义，特别引入关键等式 \(\|a^*a\| = \|a\|^2\)；
   \item 证明了每个交换含幺 C*-代数都等距 *-同构于某个紧 Hausdorff 空间上的连续函数代数；
-  \item 建立了“空间 → 函数环”的反变对应，为后来非交换几何提供了经典对偶模板。
-  该定理是理解本书后续所有内容的基础，也是 Gelfand 理论八十年发展的起点。
+  \item 建立了“空间 → 函数环”的反变对应，为后来非交换几何提供了经典对偶模板．
+  该定理是理解本书后续所有内容的基础，也是 Gelfand 理论八十年发展的起点．
 \end{enumerate}
 
 与Gelfand的工作平行，
-\cite{vonNeumann1936}标志着 von Neumann 代数的诞生。
+\cite{vonNeumann1936}标志着 von Neumann 代数的诞生．
  von Neumann 从群表示论和量子力学出发，
 研究了 Hilbert 空间上有界算子构成的代数，
-证明了双交换子定理。
+证明了双交换子定理．
 
 von Neumann 的理论在当代的构造性推广见 \cite{BanaschewskiMulvey2006}，
 在 Topos 量子理论中的应用见 \cite{HeunenLandsmanSpitters2009}，
-以及 Döring 和 Isham 的谱预层方案（\cite{DoeringIsham2008a,DoeringIsham2008b,DoeringIsham2010}）。
+以及 Döring 和 Isham 的谱预层方案（\cite{DoeringIsham2008a,DoeringIsham2008b,DoeringIsham2010}）．
 
-Gelfand-Naimark 定理揭示了交换 C*-代数与紧 Hausdorff 空间之间的范畴等价。
-这一结果在 Naimark 的经典专著 \cite{Naimark1956} 中得到了系统阐述，并通过 Kadison 与 Ringrose 的权威教材 \cite{KadisonRingrose1983,KadisonRingrose1986} 传递给后世研究者。
+Gelfand-Naimark 定理揭示了交换 C*-代数与紧 Hausdorff 空间之间的范畴等价．
+这一结果在 Naimark 的经典专著 \cite{Naimark1956} 中得到了系统阐述，并通过 Kadison 与 Ringrose 的权威教材 \cite{KadisonRingrose1983,KadisonRingrose1986} 传递给后世研究者．
 
-交换 C*-代数的谱理论在 Dixmier 的著作 \cite{Dixmier1957} 中得到了深入讨论。
-Takesaki 的教材 \cite{Takesaki1979} 和 Sakai 的著作 \cite{Sakai1971} 则进一步将讨论延伸到von Neumann代数。
+交换 C*-代数的谱理论在 Dixmier 的著作 \cite{Dixmier1957} 中得到了深入讨论．
+Takesaki 的教材 \cite{Takesaki1979} 和 Sakai 的著作 \cite{Sakai1971} 则进一步将讨论延伸到von Neumann代数．
 
-Gelfand-Mazur 定理是 Gelfand 理论的核心技术工具，它断言：复赋范可除代数必同构于复数域 \(\mathbb{C}\)。这一定理的证明依赖于谱理论，详见 \cite{GelfandMazur1938}。
+Gelfand-Mazur 定理是 Gelfand 理论的核心技术工具，它断言：复赋范可除代数必同构于复数域 \(\mathbb{C}\)．这一定理的证明依赖于谱理论，详见 \cite{GelfandMazur1938}．
 
-Kaplansky 在 \cite{Kaplansky1951} 中引入了“C*-代数”这一术语，并研究了投影元的结构。
-Glimm 在 \cite{Glimm1960} 中对 C*-代数的表示论做出了重要贡献，而 Effros 的工作 \cite{Effros1965} 则将 C*-代数与拓扑动力系统联系起来。
+Kaplansky 在 \cite{Kaplansky1951} 中引入了“C*-代数”这一术语，并研究了投影元的结构．
+Glimm 在 \cite{Glimm1960} 中对 C*-代数的表示论做出了重要贡献，而 Effros 的工作 \cite{Effros1965} 则将 C*-代数与拓扑动力系统联系起来．
 
-Gelfand 对偶的范畴论本质在 Mac Lane 的经典著作 \cite{MacLane1971} 中得到了系统阐述。
-Blackadar 的专著 \cite{Blackadar1986} 则将 K-理论引入算子代数领域。
+Gelfand 对偶的范畴论本质在 Mac Lane 的经典著作 \cite{MacLane1971} 中得到了系统阐述．
+Blackadar 的专著 \cite{Blackadar1986} 则将 K-理论引入算子代数领域．
 
-Connes 在 \cite{Connes1973} 中对 Ⅲ 型因子进行了突破性分类，并在其著作 \cite{Connes1994} 中系统建立了非交换几何。
-Bishop 和 Phelps 的定理 \cite{BishopPhelps1962} 则为 Banach 空间的几何理论提供了重要工具。
+Connes 在 \cite{Connes1973} 中对 Ⅲ 型因子进行了突破性分类，并在其著作 \cite{Connes1994} 中系统建立了非交换几何．
+Bishop 和 Phelps 的定理 \cite{BishopPhelps1962} 则为 Banach 空间的几何理论提供了重要工具．
 
 \section{量子力学与量子逻辑}
 
 1936 年，Birkhoff 与 von Neumann 发表量子逻辑的开创性论文 \cite{BirkhoffvonNeumann1936}，
-首次将代数与逻辑引入量子力学。
+首次将代数与逻辑引入量子力学．
 作者观察到量子命题对应于希尔伯特空间的闭子空间，
-其逻辑不是Bool代数而是正交模格，分配律不成立。
+其逻辑不是Bool代数而是正交模格，分配律不成立．
 这一工作与 Gelfand 对偶在思想上平行：
-两者都试图用代数结构刻画物理系统的逻辑/空间结构。
+两者都试图用代数结构刻画物理系统的逻辑/空间结构．
 这一工作为量子逻辑奠定了基础，
 直接影响了后来的 Topos 量子理论，
-直接启发了 Döring 和 Isham 的谱预层方案。
+直接启发了 Döring 和 Isham 的谱预层方案．
 
 Kochen 和 Specker 在 1967 年证明了著名的 Kochen-Specker 定理 \cite{KochenSpecker1967}，
-表明在维数 \(\ge 3\) 的 Hilbert 空间中，不存在非语境的隐变量赋值。
+表明在维数 \(\ge 3\) 的 Hilbert 空间中，不存在非语境的隐变量赋值．
 这是量子基础中的核心结论，
-与 Bell 不等式 \cite{Bell1964} 并列为最重要的非经典性证明。
-Bell 不等式及其对局部隐变量理论的排除，是量子非局域性的第一次严格证明。
-Kochen-Specker 定理是 Topos 量子理论的关键动机。
+与 Bell 不等式 \cite{Bell1964} 并列为最重要的非经典性证明．
+Bell 不等式及其对局部隐变量理论的排除，是量子非局域性的第一次严格证明．
+Kochen-Specker 定理是 Topos 量子理论的关键动机．
 在本书后续章节中，我们将看到：
 在 Döring-Isham 方案中，该定理等价于谱预层没有全局截面（\cite{DoeringIsham2008a}）；
-在 Bohrification 方案中，内部谱 \(\underline{\Sigma}\) 没有全局点也对应于此定理（\cite{HeunenLandsmanSpitters2009}）。
+在 Bohrification 方案中，内部谱 \(\underline{\Sigma}\) 没有全局点也对应于此定理（\cite{HeunenLandsmanSpitters2009}）．
 
 Gleason 定理 \cite{Gleason1957} 则从测度论角度刻画了量子概率：
-任何投影格上的概率测度都唯一对应一个密度算子。
-Gleason 定理是量子概率论的基础，为 Born 规则提供了严格的数学依据。
+任何投影格上的概率测度都唯一对应一个密度算子．
+Gleason 定理是量子概率论的基础，为 Born 规则提供了严格的数学依据．
 
-Jauch 和 Piron 在 \cite{JauchPiron1969} 中将量子命题系统公理化，证明正交模格加上适当条件可以导出一个 Hilbert 空间表示。
-Piron 的专著 \cite{Piron1976} 系统阐述了量子逻辑的几何观点，为 Bohrification 的几何侧面提供了早期启示。
+Jauch 和 Piron 在 \cite{JauchPiron1969} 中将量子命题系统公理化，证明正交模格加上适当条件可以导出一个 Hilbert 空间表示．
+Piron 的专著 \cite{Piron1976} 系统阐述了量子逻辑的几何观点，为 Bohrification 的几何侧面提供了早期启示．
 
-在物理直观方面，Dirac 的经典著作 \cite{Dirac1930} ，虽然不追求数学严格性，但其物理直觉深刻影响了 von Neumann 的数学化工作。
-Landau-Lifshitz 的教材 \cite{LandauLifshitz1958} 为理解量子力学的物理内容提供了丰富的直觉。
+在物理直观方面，Dirac 的经典著作 \cite{Dirac1930} ，虽然不追求数学严格性，但其物理直觉深刻影响了 von Neumann 的数学化工作．
+Landau-Lifshitz 的教材 \cite{LandauLifshitz1958} 为理解量子力学的物理内容提供了丰富的直觉．
 
 
 \section{范畴论与层论的统一语言}
 
-层论是连接几何与逻辑的桥梁。Mac Lane 和 Moerdijk 的著作 \cite{MacLaneMoerdijk1994} 是层论与拓扑斯理论的经典导引，强调“几何中的层”与“逻辑中的拓扑斯”的统一。Johnstone 的巨著 \cite{Johnstone2002a,Johnstone2002b} 则是拓扑斯理论的百科全书。
+层论是连接几何与逻辑的桥梁．Mac Lane 和 Moerdijk 的著作 \cite{MacLaneMoerdijk1994} 是层论与拓扑斯理论的经典导引，强调“几何中的层”与“逻辑中的拓扑斯”的统一．Johnstone 的巨著 \cite{Johnstone2002a,Johnstone2002b} 则是拓扑斯理论的百科全书．
 
 Banaschewski 和 Mulvey 在 \cite{BanaschewskiMulvey2006} 中证明了 Gelfand 对偶在任何 Grothendieck 拓扑斯中成立，
-这是构造性 Gelfand 对偶的终极版本，也是 Bohrification 方案的数学基础。
-构造性 Gelfand 对偶的终极版本，证明了在任何 Grothendieck 拓扑斯中，交换 C*-代数范畴与紧正则 locale 范畴之间存在反变等价。
-该定理完全工作于直觉主义逻辑下，不依赖排中律和选择公理。
-在 Bohrification 方案中，它为内部交换 C*-代数 \(\underline{A}\) 的 Gelfand 谱提供了存在性保证。
+这是构造性 Gelfand 对偶的终极版本，也是 Bohrification 方案的数学基础．
+构造性 Gelfand 对偶的终极版本，证明了在任何 Grothendieck 拓扑斯中，交换 C*-代数范畴与紧正则 locale 范畴之间存在反变等价．
+该定理完全工作于直觉主义逻辑下，不依赖排中律和选择公理．
+在 Bohrification 方案中，它为内部交换 C*-代数 \(\underline{A}\) 的 Gelfand 谱提供了存在性保证．
 
 \section{直觉主义逻辑与拓扑斯的内部语言}
 
-Brouwer（1908）提出了直觉主义数学纲领 \cite{Brouwer1908}，否认排中律的普遍有效性。
-Heyting 在 \cite{Heyting1930} 中给出了直觉主义命题逻辑的形式化公理系统，即 Heyting 代数。
-Heyting 代数成为后来拓扑斯内部逻辑的代数模型。
+Brouwer（1908）提出了直觉主义数学纲领 \cite{Brouwer1908}，否认排中律的普遍有效性．
+Heyting 在 \cite{Heyting1930} 中给出了直觉主义命题逻辑的形式化公理系统，即 Heyting 代数．
+Heyting 代数成为后来拓扑斯内部逻辑的代数模型．
 
-拓扑斯的内部语言是 intuitionistic 高阶逻辑。
-Lambek 和 Scott 的著作 \cite{LambekScott1986} 系统阐述了范畴论与类型论的关系（Curry-Howard-Lambek 对应）。
-Jacobs 的著作 \cite{Jacobs1999} 则将类型论与范畴逻辑统一在一个框架下。
+拓扑斯的内部语言是 intuitionistic 高阶逻辑．
+Lambek 和 Scott 的著作 \cite{LambekScott1986} 系统阐述了范畴论与类型论的关系（Curry-Howard-Lambek 对应）．
+Jacobs 的著作 \cite{Jacobs1999} 则将类型论与范畴逻辑统一在一个框架下．
 
 \section{Bohrification 与 Topos 量子理论}
 
 Heunen、Landsman 和 Spitters 在 \cite{HeunenLandsmanSpitters2009} 中提出了 Bohrification 方案，
-这是 Topos 量子理论的奠基性论文。
+这是 Topos 量子理论的奠基性论文．
 主要贡献包括：
 (1) 构造了拓扑斯 \(\mathbf{Set}^{\mathcal{C}(A)^{\mathrm{op}}}\)；
 (2) 在此拓扑斯内部构造了交换 C*-代数 \(\underline{A}\) 及其 Gelfand 谱 \(\underline{\Sigma}\)；
-(3) 证明 Kochen-Specker 定理等价于 \(\underline{\Sigma}\) 没有全局点。
-这是 Gelfand 理论八十年发展的当代高潮，实现了Bohr互补性原理的数学化。
+(3) 证明 Kochen-Specker 定理等价于 \(\underline{\Sigma}\) 没有全局点．
+这是 Gelfand 理论八十年发展的当代高潮，实现了Bohr互补性原理的数学化．
 他们从非交换 C*-代数 \(A\) 出发，构造了topos \(\mathbf{Set}^{\mathcal{C}(A)^{\mathrm{op}}}\)，
 并在此topos内部构造了一个交换 C*-代数 \(\underline{A}\)，
-其 Gelfand 谱 \(\underline{\Sigma}\) 被解释为量子系统的内部相空间。
+其 Gelfand 谱 \(\underline{\Sigma}\) 被解释为量子系统的内部相空间．
 
-Döring 和 Isham 在 \cite{DoeringIsham2008a,DoeringIsham2008b,DoeringIsham2010} 中提出了谱预层方案。
+Döring 和 Isham 在 \cite{DoeringIsham2008a,DoeringIsham2008b,DoeringIsham2010} 中提出了谱预层方案．
 与 Bohrification 的协变方向不同，他们的方案是反变的：
 从von Neumann代数 \(A\) 而非 C*-代数出发，
-并强调命题的 Heyting 代数真值。
+并强调命题的 Heyting 代数真值．
 定义谱预层 \(\underline{\Sigma}:\mathcal{V}(A)^{\mathrm{op}}\to\mathbf{Set}\)，
-并证明 Kochen-Specker 定理等价于谱预层没有全局截面。
+并证明 Kochen-Specker 定理等价于谱预层没有全局截面．
 
-Wolters 在 \cite{Wolters2013} 中对这两种方案进行了系统比较。
-证明两者在核心结论上等价，但在范畴方向和代数设定上存在差异。
-对理解 Topos 量子理论的统一图景至关重要。
+Wolters 在 \cite{Wolters2013} 中对这两种方案进行了系统比较．
+证明两者在核心结论上等价，但在范畴方向和代数设定上存在差异．
+对理解 Topos 量子理论的统一图景至关重要．
 
 \section{代数量子场论与展望}
 
 Nuiten 在 \cite{Nuiten2013} 中将 Bohrification 推广到代数量子场论（AQFT），
 是 Topos 方法在 QFT 中的首次严格应用，
 对每个局部区域 \(\mathcal{O}\) 考虑von Neumann代数 \(\mathcal{A}(\mathcal{O})\)，
-然后整体构造一个拓扑斯，使得 Einstein 因果性等价于下降条件。
-为量子引力的拓扑斯描述开辟了道路。
+然后整体构造一个拓扑斯，使得 Einstein 因果性等价于下降条件．
+为量子引力的拓扑斯描述开辟了道路．
 
 \section{算子代数和代数几何中的对偶性}
 
 \begin{quote}
-\emph{几何空间与函数集的代数结构互为对偶。
-代数可以重构其谱空间的几何信息，反之亦然。}
+\emph{几何空间与函数集的代数结构互为对偶．
+代数可以重构其谱空间的几何信息，反之亦然．}
 \end{quote}
 
 \begin{table}[h!]
@@ -492,14 +493,14 @@ Nuiten 在 \cite{Nuiten2013} 中将 Bohrification 推广到代数量子场论（
 
 \subsection*{1. 核心对象}
 \begin{itemize}
-    \item \textbf{Gelfand理论：} 紧Hausdorff空间 \(X\)，如闭区间 \([0,1]\) 或单位圆 \(S^1\)。
-    \item \textbf{代数几何：} 仿射概形 \(\operatorname{Spec}(R)\)，如仿射直线 \(\mathbb{A}^1_{\mathbb{C}} = \operatorname{Spec}(\mathbb{C}[x])\)。
+    \item \textbf{Gelfand理论：} 紧Hausdorff空间 \(X\)，如闭区间 \([0,1]\) 或单位圆 \(S^1\)．
+    \item \textbf{代数几何：} 仿射概形 \(\operatorname{Spec}(R)\)，如仿射直线 \(\mathbb{A}^1_{\mathbb{C}} = \operatorname{Spec}(\mathbb{C}[x])\)．
 \end{itemize}
 
 \subsection*{2. 函数环}
 \begin{itemize}
-    \item \textbf{Gelfand理论：} \(C(X) = \{ f : X \to \mathbb{C} \mid f \text{ 连续} \}\)。
-    \item \textbf{代数几何：} 将交换环 \(R\) 整体看作“某个空间上的多项式/正则函数环”，例如 \(R = \mathbb{C}[x]\)。
+    \item \textbf{Gelfand理论：} \(C(X) = \{ f : X \to \mathbb{C} \mid f \text{ 连续} \}\)．
+    \item \textbf{代数几何：} 将交换环 \(R\) 整体看作“某个空间上的多项式/正则函数环”，例如 \(R = \mathbb{C}[x]\)．
 \end{itemize}
 
 \subsection*{3. 点的重建方法}
@@ -508,25 +509,25 @@ Nuiten 在 \cite{Nuiten2013} 中将 Bohrification 推广到代数量子场论（
     \[
     x \in X \;\longleftrightarrow\; \mathfrak{m}_x = \{ f \in C(X) \mid f(x)=0 \}
     \]
-    且 \(C(X)/\mathfrak{m}_x \cong \mathbb{C}\)（域 → 极大理想）。
+    且 \(C(X)/\mathfrak{m}_x \cong \mathbb{C}\)（域 → 极大理想）．
     
     \item \textbf{代数几何：} 
     \[
     \mathfrak{p} \in \operatorname{Spec}(R) \;\longleftrightarrow\; \text{素理想} \mathfrak{p} \subset R
     \]
-    其中 \(R/\mathfrak{p}\) 是整环。\textbf{闭点}对应极大理想，\textbf{一般点}对应非极大的素理想。
+    其中 \(R/\mathfrak{p}\) 是整环．\textbf{闭点}对应极大理想，\textbf{一般点}对应非极大的素理想．
 \end{itemize}
 
 \subsection*{4. 函数在一点的值}
 \begin{itemize}
-    \item \textbf{Gelfand理论：} \(f(x) \in \mathbb{C}\)；等价于 \(f \mapsto f + \mathfrak{m}_x \in C(X)/\mathfrak{m}_x \cong \mathbb{C}\)。
-    \item \textbf{代数几何：} 值落在剩余域 \(\kappa(\mathfrak{p}) = R_{\mathfrak{p}} / \mathfrak{p}R_{\mathfrak{p}}\) 中；若 \(\mathfrak{p}\) 是极大理想，则剩余域是域（类似 Gelfand 情形）。
+    \item \textbf{Gelfand理论：} \(f(x) \in \mathbb{C}\)；等价于 \(f \mapsto f + \mathfrak{m}_x \in C(X)/\mathfrak{m}_x \cong \mathbb{C}\)．
+    \item \textbf{代数几何：} 值落在剩余域 \(\kappa(\mathfrak{p}) = R_{\mathfrak{p}} / \mathfrak{p}R_{\mathfrak{p}}\) 中；若 \(\mathfrak{p}\) 是极大理想，则剩余域是域（类似 Gelfand 情形）．
 \end{itemize}
 
 \subsection*{5. 谱映射}
 \begin{itemize}
-    \item \textbf{Gelfand理论：} 每个 \(a \in C(X)\) 诱导函数 \(\hat{a} : \operatorname{Max}(C(X)) \to \mathbb{C}\)。
-    \item \textbf{代数几何：} 每个 \(r \in R\) 诱导函数 \(\tilde{r} : \operatorname{Spec}(R) \to \kappa(\mathfrak{p})\)。
+    \item \textbf{Gelfand理论：} 每个 \(a \in C(X)\) 诱导函数 \(\hat{a} : \operatorname{Max}(C(X)) \to \mathbb{C}\)．
+    \item \textbf{代数几何：} 每个 \(r \in R\) 诱导函数 \(\tilde{r} : \operatorname{Spec}(R) \to \kappa(\mathfrak{p})\)．
 \end{itemize}
 
 \[
@@ -542,9 +543,9 @@ Nuiten 在 \cite{Nuiten2013} 中将 Bohrification 推广到代数量子场论（
 \]
 
 \begin{itemize}
-    \item 两个理论都基于 \textbf{“反变函子”}：空间 \(\mapsto\) 函数环。
-    \item 两个理论都通过 \textbf{谱（极大理想 / 素理想）} 从代数重建几何。
-    \item 两个理论都建立了 \textbf{范畴等价}：几何范畴的反范畴与代数范畴等价。
+    \item 两个理论都基于 \textbf{“反变函子”}：空间 \(\mapsto\) 函数环．
+    \item 两个理论都通过 \textbf{谱（极大理想 / 素理想）} 从代数重建几何．
+    \item 两个理论都建立了 \textbf{范畴等价}：几何范畴的反范畴与代数范畴等价．
 \end{itemize}
 
 你之前关注的 \textbf{拓扑斯中的 Gelfand 理论}，正是试图将这个类比推广到：
@@ -553,7 +554,7 @@ Nuiten 在 \cite{Nuiten2013} 中将 Bohrification 推广到代数量子场论（
     \item 逻辑更弱的环境（直觉主义逻辑）
     \item 进而统一 \textbf{几何、代数、逻辑} 三个维度
 \end{itemize}
-因此，这个类比不仅是形式上的相似，更是一种 \textbf{可移植的数学思维方法}。
+因此，这个类比不仅是形式上的相似，更是一种 \textbf{可移植的数学思维方法}．
 
 \begin{table}[h!]
 \centering
@@ -583,7 +584,7 @@ Nuiten 在 \cite{Nuiten2013} 中将 Bohrification 推广到代数量子场论（
 \end{table}
 
 \vspace{1cm}
-\noindent\textit{注：以上内容整合了 Gelfand 对偶与代数几何中仿射概形理论的平行结构，可作为学习笔记或教学材料使用。}
+\noindent\textit{注：以上内容整合了 Gelfand 对偶与代数几何中仿射概形理论的平行结构，可作为学习笔记或教学材料使用．}
 
 
 
@@ -592,7 +593,7 @@ Nuiten 在 \cite{Nuiten2013} 中将 Bohrification 推广到代数量子场论（
 \section{C*-代数}
 
 $k$-线性空间$V\in\textbf{Vct}_k$上考虑线性算子的全体
-$\textbf{End} \ V = \textbf{Vct}_k(V,V)$。
+$\textbf{End} \ V = \textbf{Vct}_k(V,V)$．
 若限制在有限维复线性空间$V \in \textbf{FdVct}_\mathbb C$，
 则线性算子在给定基上有唯一的矩阵表示$A\in\textbf{End} \ V$，
 定义矩阵范数：
@@ -602,15 +603,15 @@ $$
 \psi \in V
 $$
 
-若范数$\| A \|$有限称$A$为有界算子。
+若范数$\| A \|$有限称$A$为有界算子．
 显然在有限维情况，
 矩阵范数都是有限的，
-矩阵都是有界算子。
+矩阵都是有界算子．
 记$\mathcal B(V) \subseteq \textbf{End} \ V$是有界算子的集合，
-在矩阵的情况$\mathcal B(V) = \textbf{End} \ V$。
+在矩阵的情况$\mathcal B(V) = \textbf{End} \ V$．
 对于$1$维以上的空间，
 $\mathcal B(V)$在矩阵乘法和单位矩阵下，
-构成含幺非交换代数。
+构成含幺非交换代数．
 
 对于可分复Hilbert空间$H$，
 $\mathcal B(H)$满足：
@@ -619,31 +620,31 @@ $$
 \| A B \| \leq \| A \| \| A \|
 $$
 
-这使得$\mathcal B(H)$构成Banach代数。
-矩阵代数是Banach代数。
+这使得$\mathcal B(H)$构成Banach代数．
+矩阵代数是Banach代数．
 
-$n \times n$维复矩阵全体构成一个矩阵代数$M_n$。
-它是一个$(n \times n)$-维复线性空间。
+$n \times n$维复矩阵全体构成一个矩阵代数$M_n$．
+它是一个$(n \times n)$-维复线性空间．
 在矩阵乘法下，
-它构成含幺结合代数。
+它构成含幺结合代数．
 按照算子范数，
-它构成Banach代数。
+它构成Banach代数．
 按照复共轭转置，
-它构成C*-代数。
+它构成C*-代数．
 矩阵代数$M_n$的每个元素都是$n$-维复线性映射，
 它可以理解为$n$-维复空间上的有界算子代数
-$M_n = \mathcal B(\mathbb C^n)$。
+$M_n = \mathcal B(\mathbb C^n)$．
 其无穷维的概念，
 即量子Hilbert空间$\mathscr H$上的有界算子代数：
 $\mathcal B(\mathscr H)$，
-它是典型的非交换C*代数。
+它是典型的非交换C*代数．
 
 至于交换C*代数，
-最基本的例子就是Gelfand关注的复值连续函数代数$C(X)$。
-我们希望通过$X$上的某种函数集$\mathcal C(X,A)$来研究作为空间的$X$本身。
+最基本的例子就是Gelfand关注的复值连续函数代数$C(X)$．
+我们希望通过$X$上的某种函数集$\mathcal C(X,A)$来研究作为空间的$X$本身．
 $X$不止是集合，
 而是一种几何意义上的空间，
-最基本的情况是拓扑空间。
+最基本的情况是拓扑空间．
 把讨论上升到拓扑空间范畴\gls{cat-top}，
 这样约束了$X$和$A$是拓扑空间，
 态射集$\textbf{Top}(X,A)$是连续函数集：
@@ -656,15 +657,15 @@ $$
 $$
 
 若要用连续函数集合$\textbf{Top}(X,A)$来研究拓扑空间$X$，
-需要在$\textbf{Top}(X,A)$中引入代数结构。
+需要在$\textbf{Top}(X,A)$中引入代数结构．
 如果借助$A$的运算，
 用逐点定义的方式定义函数的运算，
-那么$A$的代数结构便可以搬到$\textbf{Top}(X,A)$中。
+那么$A$的代数结构便可以搬到$\textbf{Top}(X,A)$中．
 我们选定$A = \mathbb C$，
 复数域的拓扑和域运算，
 以及复共轭作为对合的运算，
 都赋予了$\textbf{Top}(X,A)$，
-使其构成一个交换C*代数。
+使其构成一个交换C*代数．
 用紧Hausdorff空间保证幺元：
 
 $$
@@ -676,19 +677,19 @@ $$
 
 关于含幺的问题，
 在\textbf{局部紧拓扑空间(locally compact topological space)}范畴，
-令$X\in\textbf{LCT}$。
-连续函数的全体$\mathbb C^X = \textbf{LCT}(X,\mathbb C)$构成交换C*-代数。
-其幺元$\textbf 1$就是在$X$上取值恒为$1$的唯一的函数。
+令$X\in\textbf{LCT}$．
+连续函数的全体$\mathbb C^X = \textbf{LCT}(X,\mathbb C)$构成交换C*-代数．
+其幺元$\textbf 1$就是在$X$上取值恒为$1$的唯一的函数．
 令$C_\infty(X) \subseteq \mathbb C^X = \textbf{LCT}(X,\mathbb C)$
-为在无穷远处消失的连续函数全体。
-$C_\infty(X)$是交换C*-代数。
+为在无穷远处消失的连续函数全体．
+$C_\infty(X)$是交换C*-代数．
 只有当$X\in\textbf{CTop}$为紧拓扑空间时，
 $\textbf 1 \in C_\infty(X)$，
-于是代数的含幺性和拓扑的紧性有了对应。
+于是代数的含幺性和拓扑的紧性有了对应．
 
 选择$A = \mathbb C$有诸多的考虑，
 首先$\mathbb C$有拓扑，
-可以定义连续。
+可以定义连续．
 其次复数有自然的对合以便得到C*-代数，
 这种对合的本质是伴随，
 用实矩阵表示就更容易理解：
@@ -732,9 +733,9 @@ f^\prime_y = \dfrac{\partial f}{\partial y} = \text i \dfrac{\partial v}{\partia
 $$
 
 正如实分析的基础是实微分的实线性，
-复分析的基础类似要求让复微分具有复线性。
+复分析的基础类似要求让复微分具有复线性．
 在实分析中，
-变量 $x$ 和 $y$ 是彼此独立的。
+变量 $x$ 和 $y$ 是彼此独立的．
 从这里开始，
 复分析比二元实分析多了一个非常强的结构，
 $\text d x$ 和 $\text d y$ 必须耦合在一起，
@@ -773,135 +774,483 @@ $$
 
 \section{Liouville定理}
 
-实分析中可以轻易找到有界且处处可微但不是常数的函数。
+实分析中可以轻易找到有界且处处可微但不是常数的函数．
 但在复分析中，全纯意味着函数在每个点、每个方向都满足Cauchy-Riemann方程，
 全纯性是很强的条件，
 它拿走了实际分析中 $x$ 和 $y$ 的独立性，
 要求实部和虚部必须以一种相互补偿的方式演化，
-$u$ 在 $x$ 方向的增长必须由 $v$ 在 $y$ 方向的增长来平衡。
+$u$ 在 $x$ 方向的增长必须由 $v$ 在 $y$ 方向的增长来平衡．
 
-这种极强的结构约束使得函数无法在保持平滑的同时又被限制在一个范围内波动。
+这种极强的结构约束使得函数无法在保持平滑的同时又被限制在一个范围内波动．
 Liouville定理：
 
-$\mathbb C$上的处处全纯有界函数是常数。
+$\mathbb C$上的处处全纯有界函数是常数．
 
 有界性约束了函数在全局不能逃逸，
 从而在局部也失去了波动的自由，
-最终只能退化为常数。
+最终只能退化为常数．
 
+\section{正规算子}
 
-\section{Gelfand理论}
+复Hilbert空间$H = (H,\langle \cdot, \cdot \rangle)$
+上的有界线性算子集合构成Banach代数$\mathcal B(H)$．
+根据 Riesz 表示定理，
+$\forall T\in\mathcal B(H)$，
+$\exists! T^*\in\mathcal B(H)$
+s.t.
+$\forall x, y \in H$，
+$\langle T x, y \rangle = \langle x, T^* y \rangle$，
+称 $T^*$ 为 $T$ 的 \textbf{伴随算子}．
+且满足：
+\begin{itemize}
+    \item $(T^*)^* = T$，
+    \item $(S T)^* = T^* S^*$，
+    \item $\|T^*\| = \|T\|$且$\|T^*T\| = \|T\|^2$．
+\end{itemize}
 
-$C(X)$是$X$上的复函数代数，
-点$x\in X$对应极大理想
-$\mathfrak m_x = \{ f \in C(X) \mid f(x) = 0 \}$
-和剩余域$C(X)/\mathfrak m_x$。
-代数元$f \in C(X)$的谱集为：
+矩阵代数都是Banach代数．
+实矩阵代数的伴随算子是转置$T^* = T^T$，
+复矩阵代数的伴随算子是共轭转置$T^* = \overline{T}^T$．
+有时直接用dagger表示伴随$T^* = T^\dagger$．
+
+称$T$为正规算子，若
+$T T^* = T^* T$．
+矩阵代数中，
+正规算子既是正规矩阵，
+它在某个标准正交基下可以酉对角化为：
+$T = U\Lambda U^{-1}$，
+其中$U$为酉矩阵，
+$\Lambda$为对角矩阵，
+对角元是特征值．
+最重要的正规算子是自伴算子和酉算子．
+
+$T = T^*$是自伴算子，
+满足 $TT^* = T^2 = T^*T$．
+实矩阵代数的自伴算子是对称矩阵，
+复矩阵代数的自伴算子是共轭对称矩阵即Hermite矩阵．
+自伴算子对角化的特征值是实数$\lambda_i \in \mathbb R$．
+自伴算子与内积的对称性相容，
+几何上体现了缩放而不旋转．
+
+$T^* = T^{-1}$是酉算子，
+满足 $TT^* = I = T^*T$．
+实矩阵代数的酉算子是正交矩阵，
+复矩阵代数的酉算子是酉矩阵．
+酉算子对角化的特征值$\lambda_i = \text e^{\theta_i\text i}$在单位圆．
+酉算子保持内积即等距正交，
+几何上体现了旋转而不缩放．
+
+线性映射可以分解为缩放和旋转，
+自伴算子和酉算子分别描述了这两种几何变换，
+它们作为正规算子所描述的这种有几何意义的对称性，
+通过对角化完全解耦为一维乘法，
+体现了谱的意义．
+
+正规矩阵$A$借助酉矩阵$U$的对角化$A = U\Lambda U^{-1}$，
+产生了对角矩阵$\Lambda = \text{diag}(\lambda_i)$．
+几何上，
+自伴算子的实值$\lambda_i$缩放不旋转，
+酉算子的单位复数$\lambda_i = \text e^{\theta_i\text i}$旋转不缩放．
+
+\section{谱}
+
+为了讨论一个复代数元$a \in A$在何种条件下相当于乘法，
+即有复数$\lambda$使得$\lambda 1_A = a$在某种条件下成立，
+需要讨论
+
+\begin{equation}
+\lambda 1_A - a
+\end{equation}
+\label{eq:diff-lambda-multiplicative}
+
+含幺代$A = (A,1_A)$上可以定义逆，
+其可逆元的全体构成一个群$A^\times$．
+复含幺代数$A$中，
+针对点$a\in A$的谱定义为
 
 $$
-\sigma(f) = \{ \lambda \in \mathbb C \ | \ \lambda f - 1 = 0 \}
+\sigma(a) = \{ \lambda \in \mathbb C \mid \lambda 1_A - a \notin A^\times \} 
 $$
 
-这意味着$f$需要是常值函数才能让谱集非空。
+其补集$\rho(a) = \mathbb C \setminus \sigma(a)$称为预解集．
+若$A$是Banach代数则$\sigma(a)$是非空紧集．
 
-\section{乘法线性泛函}
+矩阵代数$A$是典型的非交换代数，
+谱集$\sigma(a)$就是矩阵$a$的特征值集合．
+$A^\times = \{ a \in A \mid \det(a) \neq 0 \}$．
+这里的行列式定义了$a$的特征多项式，
+在代数封闭域$\mathbb C$中可分解为：
 
-复代数上非退化的线性泛函$\varphi \in \mathbb C^A$满足
-$\varphi(\alpha a + \beta b) = \alpha \varphi(a) + \beta \varphi(b)$。
-若它能保持代数的除法使得
-$\varphi(ab) = \varphi(a)\varphi(b)$，
-称为\textbf{乘法线性泛函(multiplicative linear functional)}
-或者\textbf{特征(character)}。
+$$
+p_a(\lambda) = \det(\lambda I - a) = \prod_i (\lambda - \lambda_i)
+$$
 
-考虑自然投射
+矩阵$a$有谱
 
 $$
 \begin{aligned}
-  A &\to A/\mathfrak m \\
-  a &\mapsto a + \mathfrak m
+\sigma(a) 
+&= \{ \lambda \in \mathbb C \mid \lambda 1_A - a \notin A^\times \} \\
+&= \{ \lambda \in \mathbb C \mid p_a(\lambda) = \det(\lambda 1_A - a) = 0 \}
 \end{aligned}
 $$
 
+复连续函数代数$A = C(X)$是典型的交换代数，
+记$Z(f) = \{ x\in X \mid f(x) = 0\}$为$f \in C(X)$的零点集/解集，
+$A^\times = \{ f \in C(X) \mid Z(f) = \varnothing \}$．
+函数$f\in C(X)$有谱
+
+$$
+\begin{aligned}
+\sigma(f) 
+&= \{ \lambda \in \mathbb C \mid \lambda 1_A - f \notin A^\times \} \\
+&= \{ \lambda \in \mathbb C \mid Z(\lambda 1_A - f) \neq \varnothing \}
+\end{aligned}
+$$
+
+非空的零点集意味着
+$\exists \lambda\in\sigma(f),x\in X$，
+使得函数$f$在$x$点上相当于幺元按照$\lambda$倍数的缩放．
+在函数的值域中
+$\forall \lambda \in f(X)$，
+$\exists x \in X$
+s.t.
+$\lambda 1_A(x) = f(x)$，
+即
+$\lambda 1_A - f \notin A^\times$，
+于是$f(X) \subseteq \sigma(f)$．
+$\forall \lambda \in \sigma(f)$，
+$\exists x \in X$
+s.t.
+$(\lambda 1_A - f)(x) = 0$，
+即 
+$\lambda 1_A(x) = \lambda = f(x)$
+于是$\sigma(f) \subseteq f(X)$，
+得到用零点集描述的谱集：
+
+$$
+\sigma(f) = f(X)
+$$
 
 
-它将抽象的代数元素具象化为可以处理的复数。
-只要$A$是Banach代数，
-$\varphi$就是连续的，
-且$\| \varphi \| = 1$。
+\section{乘性线性泛函}
+
+复代数上非退化的线性泛函$\varphi \in \mathbb C^A$满足
+$\varphi(\alpha a + \beta b) = \alpha \varphi(a) + \beta \varphi(b)$．
+若它能保持代数的除法使得
+$\varphi(ab) = \varphi(a)\varphi(b)$，
+称为\textbf{乘性线性泛函(multiplicative linear functional)}
+或者\textbf{特征(character)}．
+对于含幺Banach代数$A$，
+线性泛函$\varphi$，
+令$\varphi(1_A)=1$，
+作为泛函，
+$\varphi$作用于$\forall a\in A$
+得到$\lambda_a = \varphi(a) \in\mathbb C$．
+
+\begin{framed}
+\noindent
+
+考虑$a$在何种条件下相当于$\lambda_a$的乘法，
+考虑$\varphi$对(\ref{eq:diff-lambda-multiplicative})的作用：
+
+$$
+\varphi(\lambda_a 1_A - a)
+= \lambda_a\varphi(1_A) - \varphi(a)
+= 0
+$$
+
+反证法，
+若$\lambda_a 1_A - a$ 可逆：
+
+$$
+\varphi\big( (\lambda_a 1_A - a)(\lambda_a 1_A - a)^{-1} \big)
+= \varphi(\lambda_a 1_A - a)\varphi\big((\lambda_a 1_A - a)^{-1}\big)
+= 0
+$$
+
+然而
+
+$$
+\varphi\big( (\lambda_a 1_A - a)(\lambda_a 1_A - a)^{-1} \big)
+= \varphi(1_A) = 1
+$$
+
+故矛盾．
+不可逆的$\lambda_a 1_A - a \in A^\times$使得：
+
+$$
+\lambda_a = \varphi(a) \in \sigma(a)
+$$
+
+\end{framed}
+
+有\textbf{Gleason-Kahane-Zelazko定理}给出以下等价条件：
+\begin{itemize}
+  \item $\varphi$非零且是乘性的
+  \item 
+  $\varphi(1) = 1$，
+  且$\forall a \in A^\times:\ \varphi(a) \neq 0$
+  \item
+  $\forall a \in A:\ \varphi(a) \in \sigma(a)$
+\end{itemize}
+
+乘性线性泛函的值在相应元素的谱中．
+反之，若线性泛函 $\varphi$ 满足 $\varphi(\mathbf{1})=1$ 且 $\varphi(a) \in \sigma(a)$ 对所有 $a$ 成立，
+则可推出 $\varphi$ 是乘性泛函．
+
+含幺Banach代数$A$上的乘性线性泛函$\varphi$是连续的，
+且$\| \varphi \| = 1$．
 对于$\forall a \in A$，
-乘法线性泛函总能将其映射为谱点：
+乘法线性泛函总能将其映射为谱点，
+将抽象的代数元转为可以处理的复数：
 
 $$
 \varphi(a) \in \sigma(a)
 $$
 
-有趣的是：
+它还对应着极大理想：
 
 $$
-\ker \varphi \in \text{MaxSpec} \ A
+\mathfrak m_\varphi = \text{Ker} \ \varphi \in \text{Max} \ A
 $$
+
+\section{$C(X)$的极大理想}
+
+拓扑空间上的连续函数代数$A = C(X)$是含幺交换Banach代数，
+取点$x\in X$，
+用点上的求值来定义泛函：
+
+$$
+\begin{aligned}
+  \varphi_x: C(X) &\to \mathbb C \\
+  f &\mapsto \varphi_x(f) = f(x)
+\end{aligned}
+$$
+
+线性性：
+$\varphi_x(af+bg) = (af+bg)(x) = a\varphi_x(f) + b\varphi_x(g)$，
+乘性：
+$\varphi_x(fg) = (fg)(x) = f(x)g(x) = \varphi_x(f)\varphi_x(g)$，
+保幺性：
+$\varphi_x(1_A) = 1_A(x) = 1$，
+故$\varphi_x$是保幺的乘性线性泛函．
+
+$$
+\mathfrak m_x = \text{Ker} \ \varphi_x = \{ f \in C(X) \mid \varphi_x(f) = f(x) = 0 \}
+$$
+
+它是$C(X)$上的极大理想，
+这样让$X$上的每个点都对应到了$C(X)$上的一个极大理想，
+$x \mapsto \mathfrak m_x$是单射，
+使得在同构的意义下有嵌入：
+
+$$
+X \hookrightarrow \text{Max} \ C(X)
+$$
+
+反过来，
+$\forall \mathfrak m \in \text{Max} \ C(X)$，
+是否能单地映射到$X$上的点，
+取决于拓扑空间$X$的拓扑性质．
+定义极大理想的零点集
+
+$$
+\begin{aligned}
+  Z: \text{Max} \ C(X) &\to PX \\
+  \mathfrak m &\mapsto Z(\mathfrak m) = \{ x \in X \mid \forall f \in \mathfrak m:\ f(x) = 0 \}
+\end{aligned}
+$$
+
+以抽象指标$i$标记$X = \{x_i\}$．
+若零点集为空，
+则$\forall x_i$，
+$\exists f_i \in \mathfrak m$
+s.t.
+$f_i(x_i) \neq 0$．
+由于连续性，
+存在$x_i$的开领域$U_i$使得$f_i$在其上处处非零．
+这样的开邻域构成$X$的开覆盖
+$
+\mathcal U = \{U_i\}, \qquad
+X = \cup_i U_i
+$．
+若希望在开覆盖的某个子覆盖上构造$X$上的函数：
+
+$$
+r(x) = \sum_i | f_i(x) |^2 = \sum_i f_i(x) \overline{f_i(x)} \in \mathfrak m
+$$
+
+此时需要求和是有限的，
+只有当$X$是紧拓扑空间时，
+才存在有限子覆盖，
+能够逐点用有限求和来定义$r(x) \in C(X)$．
+由于以上$\forall x_i$，
+$\exists f_i \in \mathfrak m$
+s.t.
+$f_i(x_i) \neq 0$．
+这样的二次求和使得在任何点上$r(x) > 0$，
+使得$r$是可逆函数，
+于是$r$不属于某个极大理想．
+因此，当$X$是紧拓扑空间时，$Z(\mathfrak m) \neq \varnothing$．
+
+零点集中零点$x_0,x_1$的分离性，
+和拓扑空间$X$的分离性相关，
+对于分离的零点$x_0 \neq x_1$，
+若有函数$f\in C(X)$使得$f(x_0) = f(x_1)$，
+那么若有极大理想的零点集$Z(\mathfrak m)$包含$x_0$，
+则它也包含$x_1$，
+导致$Z: \text{Max} \ C(X) \to PX$的映射得到多于一个零点．
+
+若$X$是Hausdorff空间，
+根据Urysohn引理，
+存在$f\in C(X)$满足$f(x_0) = 0,\ f(x_1) = 1$，
+$\mathfrak m$中在$X_0$处退化的函数构成极大理想
+$\mathfrak m_0 \subseteq \mathfrak m$，
+且
+$h \in \mathfrak m_0$，
+又因为极大理想不能真包含，
+于是
+$\mathfrak m = \mathfrak m_0$．
+根据假设条件
+$x_1 \in Z(\mathfrak m) = Z(\mathfrak m_0)$，
+即$f(x_1) = 0$．
+这与$f(x_1) = 1$矛盾，
+Hausdorff空间的分离性使得$Z(\mathfrak m)$不能存在一个以上的零点，
+此时记$Z(\mathfrak m) = \{ x \}$，
+那么$\mathfrak m$就是$x$上的退化函数极大理想．
+
+综合以上，
+当$X$是紧Hausdorff空间时，
+$Z: \text{Max} \ C(X) \to PX$的映射得到单点集，
+即存在$\text{Max} \ C(X) \to PX$的单射嵌入，
+使得在同构的意义下有嵌入：
+
+$$
+\text{Max} \ C(X) \hookrightarrow X
+$$
+
+于是我们建立了同构：
+
+$$
+X \simeq \text{Max} \ C(X)
+$$
+
+这使得$\text{Max} \ C(X)$构成紧Hausdorff空间．
+
+\section{$C(X)$的拓扑}
 
 在交换Banach代数中，
-每个极大理想都唯一确定一个乘法线性泛函，
 这意味着乘法线性泛函和极大理想是等价概念，
-将乘法线性泛函的集合记为：
-
-$$
-\Delta(A) = \text{MaxSpec} \ A \in \textbf{LCHaus}
-$$
-
+并且构成拓扑空间$\text{Max} \ A$，
 这就是Gelfand谱，
 其上可以赋予Gelfand 拓扑，
-使其成为局部紧Hausdorff空间。
-若$A$含幺则为紧空间。
+使其成为局部紧Hausdorff空间．
+若$A$含幺则为紧Hausdorff空间．
 
-\section{Gelfand拓扑}
+连续函数代数$C(X)$中有三种拓扑，
+它们本质上是同一个拓扑在不同对象上的表现．
+设 $X$ 是紧 Hausdorff 空间，
+$A = C(X)$ 是 $X$ 上复值连续函数构成的含幺交换 $C^*$-代数，
+赋一致范数 $\|f\|_\infty = \sup_{x\in X}|f(x)|$．
+记 $\Sigma(A) = \text{Max} \ A$ 为 $A$ 的极大理想空间（即 Gelfand 谱），其上的 Gelfand 拓扑定义为弱 $^*$ 拓扑（视 $\varphi \in \Sigma(A)$ 为 $A$ 上的乘法线性泛函）．
 
-含幺交换Banach代数 $A$ 的极大理想谱记 
-$\text{Max} \ A$，
-等价为全体非零乘法线性泛函，
-称为Gelfand谱，
-其上可以通过Gelfand拓扑建立紧Hausdorff拓扑。
+\begin{itemize}
+  \item $X$的拓扑：
+  $X$ 作为紧 Hausdorff 空间给定的拓扑．
+  \item $C(X)$的拓扑：
+  由范数 $\|f\|_\infty$ 诱导的拓扑（一致收敛拓扑）．
+  \item $\text{Max} \ C(X)$的拓扑：
+  在 $\text{Max} \ C(X)$ 上，
+  由点态收敛 $\varphi_n \to \varphi \iff \forall f\in C(X),\ \varphi_n(f)\to\varphi(f)$ 定义的拓扑．
+\end{itemize}
+
+
+\subsection{Gelfand 表示与同胚}
+
+Gelfand 表示定理给出等距同构
+\[
+\Gamma: C(X) \xrightarrow{\cong} C(\Sigma(C(X))),\qquad f \mapsto \hat f,\quad \hat f(\varphi) = \varphi(f).
+\]
+同时，映射
+\[
+\Phi: X \to \Sigma(C(X)),\qquad x \mapsto \varphi_x,\quad \varphi_x(f)=f(x)
+\]
+是 \textbf{同胚}．因此：
+\[
+X \ \text{的原始拓扑} \ \cong \ \Sigma(C(X)) \ \text{上的 Gelfand 拓扑}.
+\]
+
+\subsection{三种拓扑的相容性}
+
+\begin{enumerate}
+    \item \textbf{点的收敛}：在 $X$ 中 $x_n \to x$ 当且仅当对每个 $f\in C(X)$，$f(x_n) \to f(x)$，即 $\varphi_{x_n} \to \varphi_x$ 在 Gelfand 拓扑下．
+    \item \textbf{Gelfand 拓扑与弱$^*$拓扑}：$\text{Max} \ C(X)$ 作为 $C(X)^*$ 的子集，Gelfand 拓扑正是弱$^*$拓扑，满足 $\varphi_n \to \varphi \iff \forall f,\ \varphi_n(f)\to\varphi(f)$．
+    \item \textbf{范数拓扑与 Gelfand 拓扑}：$C(X)$ 的范数拓扑（一致收敛）强于点态收敛，但通过 Gelfand 表示，$C(X)$ 等距同构于 $C(\Sigma(C(X)))$，后者上的范数拓扑由 $\Sigma(C(X))$ 的紧 Hausdorff 拓扑通过最大值范数给出，与 Gelfand 拓扑相容：
+    \[
+    \|f\|_\infty = \sup_{\varphi\in\Sigma(C(X))} |\hat f(\varphi)|.
+    \]
+\end{enumerate}
+
+\subsection{总结}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{对象} & \textbf{拓扑} & \textbf{关系} \\
+\hline
+$X$ & 原始拓扑 & 同胚于 $\text{Max} \ C(X)$ 的 Gelfand 拓扑 \\
+\hline
+$\text{Max} \ C(X)$ & Gelfand 拓扑 & 弱$^*$拓扑，与 $X$ 同胚 \\
+\hline
+$C(X)$ & 范数拓扑 & 通过 Gelfand 变换等距同构于 $C(\text{Max} \ C(X))$ \\
+\hline
+\end{tabular}
+\end{center}
+
+在紧 Hausdorff 空间 $X$ 上，
+$X$ 的原始拓扑、$\text{Max} \  C(X)$ 的 Gelfand 拓扑以及 $C(X)$ 的范数拓扑通过 Gelfand 对偶达到完美统一：
+空间的几何（$X$）、代数（$C(X)$）和谱（$\text{Max} \ C(X)$）三者结构相容，互相决定．
 
 
 \subsection{构造步骤}
 
 \begin{enumerate}
-    \item \textbf{视为函数空间}：对每个 $\varphi \in \Delta(A)$，视 $\varphi: A \to \mathbb{C}$ 为乘法线性泛函（同构于极大理想 $A / \ker \varphi$）。
+    \item \textbf{视为函数空间}：对每个 $\varphi \in \Delta(A)$，视 $\varphi: A \to \mathbb{C}$ 为乘法线性泛函（同构于极大理想 $A / \ker \varphi$）．
     
     \item \textbf{初始拓扑}：赋予 $\Delta(A)$ 拓扑 $T$，使得对每个 $a \in A$，求值映射
     \[
     \hat{a}: \Delta(A) \to \mathbb{C}, \quad \hat{a}(\varphi) = \varphi(a)
     \]
-    连续。这是 $\Delta(A)$ 上使得所有 $\hat{a}$ 连续的最弱拓扑。
+    连续．这是 $\Delta(A)$ 上使得所有 $\hat{a}$ 连续的最弱拓扑．
     
-    \item \textbf{等价描述}：$T$ 是 $\Delta(A)$ 作为 $A$ 的谱空间（赋值于 $\mathbb{C}$ 的乘法线性泛函子集）在 $\mathbb{C}^A$（所有复值函数）中受**逐点收敛**诱导的**相对拓扑**。
+    \item \textbf{等价描述}：$T$ 是 $\Delta(A)$ 作为 $A$ 的谱空间（赋值于 $\mathbb{C}$ 的乘法线性泛函子集）在 $\mathbb{C}^A$（所有复值函数）中受**逐点收敛**诱导的**相对拓扑**．
     
     \item \textbf{显式基}：对任意有限集 $\{a_1,\dots,a_n\} \subseteq A$ 和 $\varepsilon > 0$，定义
     \[
     U(\varphi_0; a_1,\dots,a_n; \varepsilon) = \left\{ \varphi \in \Delta(A) \;\middle|\; |\varphi(a_i) - \varphi_0(a_i)| < \varepsilon,\ i=1,\dots,n \right\}.
     \]
-    所有这些集合构成 $T$ 的一组邻域基。
+    所有这些集合构成 $T$ 的一组邻域基．
     
-    \item \textbf{紧致性}：可以证明 $\Delta(A)$ 在该拓扑下是紧 Hausdorff 空间。证明概要：
+    \item \textbf{紧致性}：可以证明 $\Delta(A)$ 在该拓扑下是紧 Hausdorff 空间．证明概要：
     \begin{itemize}
-        \item $\Delta(A)$ 包含于 $\prod_{a\in A} \overline{B}_{\|a\|}(0)$（由 Banach-Alaoglu 定理，它是紧的）。
-        \item 在乘性线性泛函的子集中 $\Delta(A)$ 是闭的（由线性与乘法条件的极限封闭性）。
-        \item 故 $\Delta(A)$ 是紧空间的闭子集，从而紧。
+        \item $\Delta(A)$ 包含于 $\prod_{a\in A} \overline{B}_{\|a\|}(0)$（由 Banach-Alaoglu 定理，它是紧的）．
+        \item 在乘性线性泛函的子集中 $\Delta(A)$ 是闭的（由线性与乘法条件的极限封闭性）．
+        \item 故 $\Delta(A)$ 是紧空间的闭子集，从而紧．
     \end{itemize}
     
-    \item \textbf{Gelfand 表示}：映射 $\Gamma: A \to C(\Delta(A))$，$a \mapsto \hat{a}$ 是 Banach 代数同态，称为 \textbf{Gelfand 变换}。当 $A$ 是交换 $C^*$-代数时，$\Gamma$ 是等距同构。
+    \item \textbf{Gelfand 表示}：映射 $\Gamma: A \to C(\Delta(A))$，$a \mapsto \hat{a}$ 是 Banach 代数同态，称为 \textbf{Gelfand 变换}．当 $A$ 是交换 $C^*$-代数时，$\Gamma$ 是等距同构．
 \end{enumerate}
 
 \subsection{总结}
 
-Gelfand 拓扑是 $\Delta(A)$ 上使所有 Gelfand 变换 $\hat{a}$ 连续的最弱拓扑。它由 $\mathbb{C}^A$ 的逐点收敛拓扑（即乘积拓扑）限制在 $\Delta(A)$ 上得到，且使 $\Delta(A)$ 成为紧 Hausdorff 空间。该构造建立了交换 $C^*$-代数与紧 Hausdorff 空间之间的对偶。
+Gelfand 拓扑是 $\Delta(A)$ 上使所有 Gelfand 变换 $\hat{a}$ 连续的最弱拓扑．它由 $\mathbb{C}^A$ 的逐点收敛拓扑（即乘积拓扑）限制在 $\Delta(A)$ 上得到，且使 $\Delta(A)$ 成为紧 Hausdorff 空间．该构造建立了交换 $C^*$-代数与紧 Hausdorff 空间之间的对偶．
 
 \section{Gelfand-Mazur定理}
 
 设$A = (A,e,0)$是复赋范含幺可除代数，
 $e$为单位元，
-$0$为零元。
+$0$为零元．
 给定$a \in A$，
 定义\textbf{预解(resolvent)}函数：
 
@@ -923,7 +1272,7 @@ $$
 \sigma(a) = \{ \lambda \in \mathbb C \ | \ \lambda a - e = 0 \}
 $$
 
-谱集是非空紧集。
+谱集是非空紧集．
 每个$a \in A$都对应唯一一个复数$\lambda_a$ s.t. $a = \lambda_a e$，
 于是：
 
@@ -932,7 +1281,7 @@ $$
 $$
 
 代数 $A$ 中的每个元都只是单位元$e$的复数倍，
-这样建立了 $A \simeq \mathbb C$ 的同构。
+这样建立了 $A \simeq \mathbb C$ 的同构．
 
 \section{Gelfand表示}
 
@@ -949,7 +1298,7 @@ $$
 $a \in A$作为代表元，
 代表了商代数中的元，
 根据上式它可以直接视为复数
-$a + \mathfrak m \in \mathbb C$。
+$a + \mathfrak m \in \mathbb C$．
 换句话说我们得到一个二元复值函数：
 
 $$
@@ -983,15 +1332,15 @@ $$
 
 (\ref{eq:algebra-ele-as-fun-over-maxspec})中，
 我们不再关注极大理想$\mathfrak m$的内部结构而是将其视为点h，
-而代数元素$a$则视为极大理想谱上的复值函数。
+而代数元素$a$则视为极大理想谱上的复值函数．
 为了给这种函数赋予连续性，
-需要构造拓扑结构。
+需要构造拓扑结构．
 
 令$X\in\textbf{CHaus}$为紧Hausdorff空间，
 其上的连续函数代数$C(X)$定义了极大值范数，
-这个范数确保$C(X)$是Banach代数。
+这个范数确保$C(X)$是Banach代数．
 在Banach代数中，
-极大理想是闭的且唯一对应一个特征。
+极大理想是闭的且唯一对应一个特征．
 那么有同胚关系：
 (张恭庆下p19)
 
@@ -1001,7 +1350,7 @@ $$
 
 这是Gelfand对偶性的体现，
 对于紧Hausdorff空间，
-其几何信息完全被蕴涵在其连续函数代数中。
+其几何信息完全被蕴涵在其连续函数代数中．
 
 
 \chapter{Topos}
@@ -1009,9 +1358,9 @@ $$
 \section{拓扑}
 
 集合$X \in \textbf{Set}$给出了幂集$PX$，
-$PX$的子集为$X$的子集族。
+$PX$的子集为$X$的子集族．
 $\{\varnothing,X\}$和$PX$都是子集族，
-构成平凡拓扑和离散拓扑。
+构成平凡拓扑和离散拓扑．
 其它的拓扑空间$\mathcal O_X$介于这二者之间：
 
 $$
@@ -1023,7 +1372,7 @@ $$
 开集的空间就会被挤压坍塌为单点，
 如果单点都是开集，
 那么拓扑就成为离散拓扑，
-失去了拓扑的信息。
+失去了拓扑的信息．
 
 \section{Locale}
 
@@ -1037,9 +1386,9 @@ $$
 
 满足这种有限交和任意并封闭，
 以及无限分配律的格，
-称为frame。
+称为frame．
 Frame的范畴$\textbf{Frm}$中，
-态射为保持有限交任意并的偏序集映射。
+态射为保持有限交任意并的偏序集映射．
 
 $$
 % https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZAJgBoAGAXVJADcBDAGwFcYkQBlEAX1PU1z5CKAGwVqdJq3YAVHnxAZseAkTLEJDFm0QgAOnoC29HAAsAxkwAEAeQD6XXv2VCiYjTS3TdB42cuMtnZyTooCKsLI5OKeUjr6ejgwAB44AEYAZsAyEGjc8s6CqijRHpLa7AZJqZnAAGIATob53BIwUADm8ESgGQ0QhkjRIDgQSACMsRW6GQUgfQNIAMw0o0hk5d7zAHrAALTjLZTcQA
@@ -1052,13 +1401,13 @@ $$
 
 \section{预层}
 
-范畴$\mathcal C$上的预层$\textbf{Set}^{\mathcal C^\text{op}}$是取值在集合范畴上的反变函子范畴。
+范畴$\mathcal C$上的预层$\textbf{Set}^{\mathcal C^\text{op}}$是取值在集合范畴上的反变函子范畴．
 从最基本的拓扑空间范畴$\textbf{Top}$构造几何结构，
 以拓扑空间$X\in\textbf{Top}$中的开集为对象，
 以开集的包含关系$U \stackrel{\subseteq}{\longrightarrow} V$为态射，
 构成范畴$\mathcal C = \mathcal O_X$，
 称为开集范畴，
-其预层范畴为$\textbf{PSh}_\textbf{Set}(\mathcal C) = \textbf{Set}^{\mathcal O_X^\text{op}}$。
+其预层范畴为$\textbf{PSh}_\textbf{Set}(\mathcal C) = \textbf{Set}^{\mathcal O_X^\text{op}}$．
 预层作为反变函子的作用：
 
 $$
@@ -1072,10 +1421,10 @@ V \arrow[rrrr]                           &                           &  &    & F
 $$
 
 其中$FU,FV$是\textbf{截面(section)}，
-$\text{res}: FV \to FU$是\textbf{限制(restriction)}。
+$\text{res}: FV \to FU$是\textbf{限制(restriction)}．
 
 用$\textbf{cat}$表示由小范畴和函子构成的范畴，
-在小范畴中态射集都是集合。
+在小范畴中态射集都是集合．
 从拓扑空间获取开集范畴的构造如下：
 
 $$
@@ -1094,23 +1443,23 @@ $$
 要求其$f$的原像是$X$中的开集，
 本质上这就是反变函子的要求，
 函子对连续函数$f \ in \textbf{Top}(X,Y)$的作用得到的是拉回
-$\mathcal O_f = \text{preim} \ f = f^{-1}$。
+$\mathcal O_f = \text{preim} \ f = f^{-1}$．
 
 借助反变Hom函子，
 约定一个靶对象$A$，
-可以把对底空间$X$的研究转换为对空间上函数集合$h^A X = \textbf{Set}(X,A)$的研究。
+可以把对底空间$X$的研究转换为对空间上函数集合$h^A X = \textbf{Set}(X,A)$的研究．
 通常希望靶对象$A$具有某种代数结构，
 如作为Bool代数的$\textbf{2} = \{0,1\}$，
 作为Abel群或交换环的$\mathbb Z$，
 或者更强大的，
 作为封闭交换域的$\mathbb C$，
-这样可以方便地引入代数几何和算子代数的成果。
+这样可以方便地引入代数几何和算子代数的成果．
 
 我们的底空间是拓扑空间$X$，
 自然希望限定在连续函数中讨论，
-故我们专注于拓扑空间$X$上的复值连续函数代数$C(X) = h^\mathbb C X = \textbf{Top}(X,\mathcal C)$。
+故我们专注于拓扑空间$X$上的复值连续函数代数$C(X) = h^\mathbb C X = \textbf{Top}(X,\mathcal C)$．
 在几何上关注拓扑空间范畴$\textbf{Top}^\text{op}$以及特定拓扑空间$X$的开集范畴$\mathcal O_X$，
-在代数上关注复交换结合代数$\textbf{CAlg}$和对应的层范畴$\textbf{Sh(CAlg)}$。
+在代数上关注复交换结合代数$\textbf{CAlg}$和对应的层范畴$\textbf{Sh(CAlg)}$．
 
 从反变Hom函子角度看，
 连续函数$f$得到交换代数同态$h^\mathbb C f$：
@@ -1125,26 +1474,26 @@ Y \arrow[rrrr]                                     &                           &
 \end{tikzcd}
 $$
 
-$C(X) = h^\mathbb C X$包含的是全局信息。
+$C(X) = h^\mathbb C X$包含的是全局信息．
 若要研究函数集在开集$U \in \mathcal O_X$上的性质，
-定义$\mathcal O_U = \mathcal O_X(U) = h^\mathbb C U = \textbf{Top}(U,\mathbb C)$。
+定义$\mathcal O_U = \mathcal O_X(U) = h^\mathbb C U = \textbf{Top}(U,\mathbb C)$．
 包含关系$U \stackrel{\subseteq}{\longrightarrow} V$给出的限制$\mathcal O_V \stackrel{\text{res}}{\longrightarrow} \mathcal O_U$，
 使其构成预层，
-它满足粘合公理从而构成层。
+它满足粘合公理从而构成层．
 
 \section{理想}
 
 代数$A\in\textbf{Alg}_k$的一个理想$\mathfrak a \subseteq A$具有吸收性，
 它作为子代数，
-$\forall x \in A$有$x \mathfrak a \subseteq A,\ \mathfrak a x \subseteq A$。
+$\forall x \in A$有$x \mathfrak a \subseteq A,\ \mathfrak a x \subseteq A$．
 若理想$\mathfrak m$不真包含于另一个$A$以外的理想中，
 称为极大理想，
-全体极大理想构成极大谱$\text{MaxSpec} \ A$。
+全体极大理想构成极大谱$\text{MaxSpec} \ A$．
 
 以实函数环$C(X) = h^\mathbb R X = \textbf{Set}(X,\mathbb R)$为例，
-数域$\mathbb R$赋予了函数集交换monoid的结构。
+数域$\mathbb R$赋予了函数集交换monoid的结构．
 由于零点的存在，
-乘法逆元不能保证。
+乘法逆元不能保证．
 将解集包含给定点$x\in X$的函数子集记为：
 
 $$
@@ -1152,7 +1501,7 @@ I_x = \{ f \in \textbf{Set}(X,\mathbb R) \ | \ f(x) = 0 \}
 $$
 
 它是函数环$C(X)$的理想，
-零点通过函数的乘法吸收了环$C(X)$中的成员。
+零点通过函数的乘法吸收了环$C(X)$中的成员．
 从商环$C(X)/I_x$看，
 函数在零点$x$处的相等意味着：
 
@@ -1161,7 +1510,7 @@ $$
 $$
 
 多项式环中这种构造就是坐标环，
-它把函数限定在一个集合上的相等归纳为等价。
+它把函数限定在一个集合上的相等归纳为等价．
 类似考虑零点集$A \subseteq X$，
 同样可以定义理想：
 
@@ -1169,29 +1518,29 @@ $$
 I_A = \{ f \in \textbf{Set}(X,\mathbb R) \ | \ f|_A(x) = 0 \}
 $$
 
-单点构成的理想$I_x$是素理想。
+单点构成的理想$I_x$是素理想．
 譬如把$A$分解为不相交的两个非空子集$A_1$和$A_2$，
 若有函数$f,g\in C(X)$，
 $f|_A(x) = g|_B(x) = 0$
 且$f|_B(x) \neq 0$，$g|_A(x) \neq 0$，
 则$f,g \notin I_A$，
-但是$fg \in I_A$。
-故这里的$I_A$则不是素理想。
+但是$fg \in I_A$．
+故这里的$I_A$则不是素理想．
 
 对于有多个零点的函数$f\in \mathcal O_X$，
 通过限制在开集的方式，
 可以使其只有一个零点，
-构成素理想。
+构成素理想．
 在点$x$退化的函数芽的集合记为$\mathfrak m_x$,
 它是一个理想，
-且是极大理想。
+且是极大理想．
 只有一个极大理想的环叫做$\textbf{局部环(local ring)}$，
-于是$\mathcal O_x$是局部环。
+于是$\mathcal O_x$是局部环．
 
 以上将函数芽局部化，
 对于可微函数而言就是线性化，
-从而可以做微分。
-函数芽$f \in \mathcal O_x$的可逆对应着$f(x) \neq 0$。
+从而可以做微分．
+函数芽$f \in \mathcal O_x$的可逆对应着$f(x) \neq 0$．
 有短正合序列
 
 $$
@@ -1207,14 +1556,14 @@ $$
 \mathcal O_x/\mathfrak m_x \simeq \mathbb R
 $$
 
-自然投射$\mathcal O_x \to \mathbb R$把具有相同余切向量的函数芽放到一个等价类中。
+自然投射$\mathcal O_x \to \mathbb R$把具有相同余切向量的函数芽放到一个等价类中．
 我们可以把函数在固定点 $x$ 的取值理解为环对极大理想 $\mathfrak m_x$ 的模，
-这是流形和概形共同的代数基础——\textbf{局部赋环空间(locally ringed space)}。
+这是流形和概形共同的代数基础——\textbf{局部赋环空间(locally ringed space)}．
 
 
 \section{光滑函数层}
 
-第一个应用是微分几何。
+第一个应用是微分几何．
 拓扑空间$X$赋予无穷阶微分结构构成光滑流形，
 相应的我们把连续函数集$C(X)$加强为实值光滑函数集$C^\infty(X,\mathbb R)$，
 从而得到微分几何讨论的\textbf{结构层(structure sheaf)}：
@@ -1229,23 +1578,23 @@ V \arrow[rrrr]                           &                           &  &    & F
 \end{tikzcd}
 $$
 
-在光滑流形的点$x\in X$上做微分是一种局部操作。
+在光滑流形的点$x\in X$上做微分是一种局部操作．
 不同的全局函数$f,g \in C(X)$可以在$x \in X$的局部相等从而具有相同的微分，
 表述为存在$x$的开邻域$U_p \in \mathcal O_X$，
 限制在其上$f|_{U_p} = g|_{U_p}$，
-构成一个等价关系$f \sim_x g$。
-商集$C(X)/\sim_x$为$x$点上的\textbf{函数芽(germ)}。
+构成一个等价关系$f \sim_x g$．
+商集$C(X)/\sim_x$为$x$点上的\textbf{函数芽(germ)}．
 
 从层的角度看，
 光滑流形$X$得到光滑函数层$\mathcal O_X$，
 开集的包含关系转为函数截面的限制关系，
 一直限制是一个极限的过程，
 直到两个函数在截面上完全相等，
-从而具有相同的微分。
+从而具有相同的微分．
 点$x\in X$上的\textbf{茎(stalk)}记为$\mathcal O_x = \mathcal O_{X,x} = \lim_{U \ni x} \mathcal O_U$，
 它是一个余极限，
 得到的$\mathcal O_x$是一个局部化的环，
-其中的元素就是函数芽。
+其中的元素就是函数芽．
 作为局部环，
 它有唯一的极大理想，
 即由$x$处退化的函数芽构成：
@@ -1267,11 +1616,11 @@ T_x X \simeq \left( \mathfrak m_p / \mathfrak m_p^2 \right)^* = \text{Vct}(\math
 $$
 
 这里切向量是极大理想$\mathfrak m_x$上的导子，
-$\mathfrak m_p / \mathfrak m_p^2$是余切空间。
-余切向量$\text d_x f \in \mathfrak m_p / \mathfrak m_p^2$由$f - f(x)$的等价类给出。
+$\mathfrak m_p / \mathfrak m_p^2$是余切空间．
+余切向量$\text d_x f \in \mathfrak m_p / \mathfrak m_p^2$由$f - f(x)$的等价类给出．
 
 
-需要视$\mathcal O_X$为\textbf{结构层(structure sheaf)}。
+需要视$\mathcal O_X$为\textbf{结构层(structure sheaf)}．
 
 
 $$
@@ -1289,22 +1638,22 @@ $$
 以拓扑空间$X$中的开集为对象，
 以开集的包含关系为态射，
 构成范畴$\mathcal C = \mathcal O_X$，
-其预层为$\textbf{Set}^{\mathcal O_X^\text{op}}$。
+其预层为$\textbf{Set}^{\mathcal O_X^\text{op}}$．
 
 令$X$为拓扑空间，
 也常用\textbf{结构层(structure sheaf)}的记号来表示拓扑结构$\mathcal O_X$，
-视其为$X$上满足拓扑公理的开基族。
+视其为$X$上满足拓扑公理的开基族．
 
 考虑在交换域特别是$\mathbb C$上取值的函数全体$h_\mathbb C X = \textbf{Top}(X,\mathbb C)$，
-它构成了交换环。
+它构成了交换环．
 在几何上限制在拓扑空间范畴及连续函数，
 在代数上限制在交换环范畴，
 预层给出$\mathcal O_X^\text{op} \to \textbf{CRing} :: U \mapsto \mathcal O_U$，
-这里的$\mathcal O_U$为预层在开集上的\textbf{截面(section)}。
+这里的$\mathcal O_U$为预层在开集上的\textbf{截面(section)}．
 作为反变函子，
-开集的包含嵌入$V \stackrel{\subseteq}{\longrightarrow} U$对应了截面的限制$\mathcal O_U \to \mathcal O_V$。
+开集的包含嵌入$V \stackrel{\subseteq}{\longrightarrow} U$对应了截面的限制$\mathcal O_U \to \mathcal O_V$．
 
-预层描述了开集的包含关系，进一步要考虑拓扑空间的覆盖和粘合，在预层上发展出层的概念。
+预层描述了开集的包含关系，进一步要考虑拓扑空间的覆盖和粘合，在预层上发展出层的概念．
 这里有一个均衡子正合序列的条件，
 对于开集$\forall U\in \mathcal O_X$上的开覆盖$\mathcal U = \{U_i\}$，
 一方面若限制对于$\forall U_i \in \mathcal U$有$f|_U = 0$则$f|_U=0$，
@@ -1312,29 +1661,20 @@ $$
 令一方面若在非空交集$U_i \cap U_j \neq \varnothing$上相等$f_i|_{U_i \cap U_j} = f_j|_{U_i \cap U_j}$，
 则$\exists ! f\in \mathcal O_U$ s.t. $f|_{U_i} = f_i$，
 这种方式要求交集上两边函数相等，
-产生了粘合的效果。
+产生了粘合的效果．
 
 在预层中，开集的包含关系对应到代数结构的态射关系，
-开邻域缩小的极限过程对应了代数结构的局部化过程。
+开邻域缩小的极限过程对应了代数结构的局部化过程．
 在层中，开集交集上代数结构的相容，
-确保了整个层可以视为开集上的结构粘合的结果。
+确保了整个层可以视为开集上的结构粘合的结果．
 
 可微流形中的\textbf{坐标卡(chart)}和\textbf{图集(atlas)}，
-就是拓扑空间中带有局部坐标系的开覆盖。
-坐标卡的相容性体现在层中。
-
-
-https://zhuanlan.zhihu.com/p/47077723
+就是拓扑空间中带有局部坐标系的开覆盖．
+坐标卡的相容性体现在层中．
 
 \section{语言}
 
-采用直观的ZFC集合论，
-并引入Grothendieck宇宙公理，
-集合是特定宇宙中的元素，
-所有集合都是类。
-通过元素性质$P(x)$定义的$\{x:P(x)\}$是类。
-
-\section{类型}
+量子topos理论将物理系统看作逻辑结构。
 
 $\mathscr L$是一个\textbf{局部语言(local language)}，
 若包含如下\textbf{符号(symbol)}：
@@ -1354,13 +1694,19 @@ $\mathscr L$的\textbf{类型符号(type symbol)}递归定义为：
   $\textbf{1}$和$\Omega$是类型符号
   \item
   基本类型符号是类型符号
+  \item
+
 \end{itemize}
-  
-\section{语言}
+
+采用直观的ZFC集合论，
+并引入Grothendieck宇宙公理，
+集合是特定宇宙中的元素，
+所有集合都是类．
+通过元素性质$P(x)$定义的$\{x:P(x)\}$是类．
 
 Topos中，
 任何对象$X$的子对象集合$\text{Sub} \ X$都构成Heyting代数
-\textbf{命题语言(propositional language)}描述子对象格。
+\textbf{命题语言(propositional language)}描述子对象格．
 语法成分：
 \begin{itemize}
   \item 原子命题：$\text{Sub} \ X$中的子对象
@@ -1370,14 +1716,14 @@ Topos中，
 PL的逻辑运算直接映射为范畴内的构造，
 但它不具备量化能力，
 缺少$\forall$和$\exists$，
-无法直接描述对象内部的元素关系。
+无法直接描述对象内部的元素关系．
 
 \textbf{高阶语言(higher-order language)}（Mitchell-Bénabou语言）
-可以像处理集合论一样处理范畴内的对象。
+可以像处理集合论一样处理范畴内的对象．
 L是类型语言：
 \begin{itemize}
   \item \textbf{类型(type)}：Topos中的每个对象都是一种类型
-  \item \textbf{项(term)}：对应范畴中的态射。类型$X$的项$\tau$代表了$X$的广义元素
+  \item \textbf{项(term)}：对应范畴中的态射．类型$X$的项$\tau$代表了$X$的广义元素
   \item \textbf{公式(formula)}：其值位于子对象分类器$\Omega$中
 \end{itemize}
 相比PL，
@@ -1393,17 +1739,17 @@ L引入了高阶逻辑的特性：
 \chapter{量子理论}
 
 基本框架：
-构造物理理论相当于在topos中找到关联物理系统$S$的\textbf{形式语言(formal language)}的表示。
+构造物理理论相当于在topos中找到关联物理系统$S$的\textbf{形式语言(formal language)}的表示．
 令$\tau_\phi$为Topos，
-其中有两个特殊的状态对象$\Sigma_\phi$和物理量取值对象$\mathcal R_\phi$。
+其中有两个特殊的状态对象$\Sigma_\phi$和物理量取值对象$\mathcal R_\phi$．
 我们的目标是在$\tau_\phi$中，
-用箭头$\breve A_\phi : \Sigma_\phi \to \mathcal R_\phi$表示物理量$A$。
+用箭头$\breve A_\phi : \Sigma_\phi \to \mathcal R_\phi$表示物理量$A$．
 有两种直觉逻辑语言：
-命题语言$\mathcal{PL}(S)$和高阶语言$\mathcal{L}(S)$（Mitchell-Bénabou 语言）。
+命题语言$\mathcal{PL}(S)$和高阶语言$\mathcal{L}(S)$（Mitchell-Bénabou 语言）．
 
-在经典物理中，topos是集合范畴$\textbf{Set}$。
-状态对象$\Sigma_\phi$是相空间。
-量子物理中相应的状态对象是\textbf{谱预层(spectral presheaf)} $\underline{\Sigma}$。
+在经典物理中，topos是集合范畴$\textbf{Set}$．
+状态对象$\Sigma_\phi$是相空间．
+量子物理中相应的状态对象是\textbf{谱预层(spectral presheaf)} $\underline{\Sigma}$．
 
 
 \section{可观测量}
@@ -1412,12 +1758,12 @@ $x \in X$是相空间$X$中的态，
 \textbf{物理量(quantity)} $A$ 是由\textbf{可观测量(observable)} 
 $\breve A: X \to \mathbb R :: x \mapsto \breve A(x)$来表示的，
 系统处于态$x$时，
-物理量$A$的值是实数$\breve A(x)$。
+物理量$A$的值是实数$\breve A(x)$．
 
 为了使用Topos理论，
-我们用真值集符号$\Omega = \{0,1\}$来描述幂集$\Omega^X \simeq PX$。
-特征函数$\chi_U \in \Omega^X$对应子集$U \subseteq X$。
-所有态子集构成Bool代数$\text{Sub} \ X = \Omega^X$。
+我们用真值集符号$\Omega = \{0,1\}$来描述幂集$\Omega^X \simeq PX$．
+特征函数$\chi_U \in \Omega^X$对应子集$U \subseteq X$．
+所有态子集构成Bool代数$\text{Sub} \ X = \Omega^X$．
 
 可观测量诱导出拉回，
 描述$\breve A$位于实值$\Delta \in \Omega^\mathbb R$的范围：
@@ -1431,10 +1777,10 @@ $$
 
 把实数集$\Delta$映射到态集$\breve A_*(\Delta)$，
 论$A \in \Delta$即是说$\breve A(x) \in \Delta$，
-或者$x \in \breve A_*(\Delta)$。
+或者$x \in \breve A_*(\Delta)$．
 
-从单点集出发可以用箭头描述态$x: \textbf 1 \to X$。
-另一方面态子集$\breve A_*(\Delta)$对应的特征函数$\chi_{\breve A_*(\Delta)}: X \to \Omega$也是箭头。
+从单点集出发可以用箭头描述态$x: \textbf 1 \to X$．
+另一方面态子集$\breve A_*(\Delta)$对应的特征函数$\chi_{\breve A_*(\Delta)}: X \to \Omega$也是箭头．
 复合得到：
 
 $$
@@ -1448,9 +1794,9 @@ $$
 将讨论置于$(X,\mathcal O_X),(\mathbb R,\mathcal O_\mathbb R) \in \textbf{Top}$，
 令$a \in \textbf{Top}(X,\mathbb R)$为连续函数，
 令$\Delta \in \mathcal O_\mathbb R$为开集，
-则$a_*(\Delta) \in \mathcal O_X$为开集。
+则$a_*(\Delta) \in \mathcal O_X$为开集．
 
-从单点集出发可以用箭头描述态子集$a_*(\Delta): \textbf 1 \to \mathcal O_X$。
+从单点集出发可以用箭头描述态子集$a_*(\Delta): \textbf 1 \to \mathcal O_X$．
 令有相空间的开邻域$V$使得$x \in V \in \mathcal O_X$，
 用Dirac测度$\delta_x$给出：
 
@@ -1471,11 +1817,11 @@ $$
 \section{Topos}
 
 量子Hilbert空间$H$上的有界线性算子全体构成一个非交换的C*-代数
-$\mathcal B(H) \in \textbf{C*}$。
+$\mathcal B(H) \in \textbf{C*}$．
 其中有交换von Neumann子代数，
 以这些子代数为对象，
 以包含为态射，
-构成范畴$\mathcal V(H) \in \textbf{CC*}$。
+构成范畴$\mathcal V(H) \in \textbf{CC*}$．
 这个范畴的预层构成我们要讨论的Topos：
 
 $$
@@ -1494,10 +1840,123 @@ $$
 $V\in\mathcal V(H)$是von Neumann含幺交换子代数，
 $\underline{\Sigma}_V$定义为$V$的Gelfand谱，
 也就是$V$的所有特征的集合，
-即$\lambda \in \mathbb C^V$有$\lambda(\hat 1)=1$。
+即$\lambda \in \mathbb C^V$有$\lambda(\hat 1)=1$．
 (Flori 2nd p.4)
 
 \backmatter
+
+\appendix
+
+\chapter{附录A：Banaschewskia}
+
+Bernhard Banaschewskia, and Christopher J. Mulvey.
+A globalisation of the Gelfand duality theorem.
+Annals of Pure and Applied Logic 137 (2006) 62–103.
+
+这篇论文的主要贡献是讨论了Grothendieck topos中，
+Gelfand对偶定理的构造性版本：
+
+$$
+\textbf{CC}^* \simeq \textbf{CCRLoc}^{op}
+$$
+
+即交换C*-代数和紧完全正则locale的反变范畴同构。
+
+
+$$
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAB12cYAPHAIwBmwAMIiAvgD1OcHHQBOIcaXSZc+QigAs5KrUYs2nbnyGiRAJQAy4pSpAZseAkTIBGPfWatEIAIIABAC8ASIAFMa8OMAAsnQ8AMpoMADG4gGcAX4AlHaqThpEOh7UXoa+kXyx8Ump6Zl+eQ5qzpokpABMngY+IOExucr56i7and3ebDHBGVxR1YnJabOhYQNKejBQAObwRKCC8hAAtkgd1DgQSADMpT1Gc1Vxi3Ug1Ax0-DAMAAothb4GDBBDgmocTkgAKwXK6IHT6Sa+AAW0nYxzoOCR-H4oTeIA+X1+-1G+OBoKGIHBpzhMLOFKpN1piEh4go4iAA
+\begin{tikzcd}
+\textbf{CC}^\star                                        &  &  &  & \textbf{CCRL}                                         \\
+A = C(\text{MaxSpec} \ A) \arrow[rrrr, "\text{MaxSpec}"] &  &  &  & \text{MaxSpec} \ A \arrow[d]                          \\
+C(M) \arrow[u]                                           &  &  &  & M = \text{MaxSpec} \ C(M) \arrow[llll, "h^\mathbb C"]
+\end{tikzcd}
+$$
+
+
+\section{Grothendieck topos}
+
+\begin{itemize}
+  \item 
+  标题：A globalisation of the Gelfand duality theorem（Gelfand对偶定理的全局化）
+  \item 
+  核心成就：在任何Grothendieck topos $\mathbb E$ 中，证明交换 $C^\star$-代数范畴与紧完全正则 locale 范畴之间的对偶等价．
+  \item 
+  作者：Banaschewski \& Mulvey（两人是20世纪末至21世纪初将 Gelfand 理论完全构造化/Topos化的核心人物）
+  \item 
+发表年份：2006年（但工作始于1980年，历时26年）
+\end{itemize}
+
+等价范畴$\textbf{CC}^\star \simeq \textbf{CCRL}$：
+
+$$
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAB12cYAPHAIwBmwAMIiAvgD1OcHHQBOIcaXSZc+QigAs5KrUYs2nbnyGiRAJQAy4pSpAZseAkTIBGPfWatEIAIIABAC8ASIAFMa8OMAAsnQ8AMpoMADG4gGcAX4AlHaqThpEOh7UXoa+kXyx8Ump6Zl+eQ5qzpokpABMngY+IOExucr56i7and3ebDHBGVxR1YnJabOhYQNKejBQAObwRKCC8hAAtkgd1DgQSADMpT1Gc1Vxi3Ug1Ax0-DAMAAothb4GDBBDgmocTkgAKwXK6IHT6Sa+AAW0nYxzoOCR-H4oTeIA+X1+-1G+OBoKGIHBpzhMLOFKpN1piEh4go4iAA
+\begin{tikzcd}
+\textbf{CC}^\star                                        &  &  &  & \textbf{CCRL}                                         \\
+A = C(\text{MaxSpec} \ A) \arrow[rrrr, "\text{MaxSpec}"] &  &  &  & \text{MaxSpec} \ A \arrow[d]                          \\
+C(M) \arrow[u]                                           &  &  &  & M = \text{MaxSpec} \ C(M) \arrow[llll, "h^\mathbb C"]
+\end{tikzcd}
+$$
+
+1940年代的经典Gelfand理论建立了$\textbf{CC}^\star \stackrel{\text{MaxSpec}}{\longrightarrow} \textbf{CHaus}$的对偶．
+所有的构造都依赖点和ZFC，
+排中律和选择公理都成立．
+
+Banaschewski和Mulvey的工作，
+在Grothendieck topos不需要排中律和选择公理．
+基于紧完全正则locale让拓扑摆脱了对点的依赖，
+用开集的frame代替了点集．
+使得Gelfand对偶不仅在点集宇宙成立，
+也在任何topos宇宙，
+如层范畴、
+群作用范畴内部成立．
+
+
+现代数学和理论物理的核心：如何将“空间”的概念代数化，并将其与逻辑和物理演化统一起来．
+
+这几个领域的关系可以概括为：通过“范畴论”作为骨架，将逻辑（类型论/语言）、几何（拓扑空间/Topos）与观测物理（Gelfand/量子理论）统一在“非交换几何”和“层论”的框架下．
+1. Gelfand Theory 与 量子理论：几何的代数化
+
+Gelfand 对偶是理解这种关系的基础．
+
+    经典与交换： Gelfand 对偶告诉我们，一个交换 C∗-代数等价于一个拓扑空间（经典物理的相空间）．
+
+    量子与非交换： 量子力学的本质是可观测量的算子代数通常是非交换的．因此，量子力学可以被看作是“非交换拓扑”或“非交换几何”．
+
+    联系： 在量子理论中，我们不再问“点在哪里”，而是通过算子代数（Gelfand Theory 的推广）来定义系统的状态．
+
+2. Topos 与 语言/类型论：逻辑的几何化
+
+Topos 理论是连接逻辑与几何的桥梁（通过 Curry-Howard-Lambek 同构）：
+
+    Topos 作为空间： Topos 是拓扑空间的推广（层的范畴）．
+
+    Topos 作为逻辑： 每一个 Topos 都有其内部语言（一种类型论）．在 Topos 中，逻辑不再是排中律必然成立的经典逻辑，而是直觉主义逻辑．
+
+    语言： 类型论（Type Theory）是这种逻辑的符号化表达．
+
+3. Topos 量子理论（The Topos Approach to Quantum Theory）
+
+这是近年来由 Chris Isham 和 Andreas Döring 等人提出的前沿框架，直接将上述概念串联：
+
+    核心思想： 既然量子力学因为非交换性而没有“经典点空间”，我们可以寻找一个特定的 Topos，使得在这个 Topos 的内部逻辑下，量子力学看起来像“经典力学”．
+
+    Gelfand 的角色： 通过对非交换代数的“交换子代数”进行层化（Bohr 观点），构建一个谱 Topos．
+
+    联系： * 量子理论被放置在 Topos 中．
+
+        量子状态对应于 类型论 中的项．
+
+        Gelfand 谱 被推广为 Topos 中的对象．
+
+{\bfseries 对偶性}——几何空间与其上的函数环之间的反变等价——是贯穿二十世纪数学与理论物理的一条隐秘主线．
+
+从 Gelfand 对偶（交换 C*-代数 ↔ 紧 Hausdorff 空间）到 Grothendieck 的概形理论（交换环 ↔ 仿射概形），再到非交换几何与 Topos 量子理论，对偶性始终扮演着“统一者”的角色．
+
+在物理学中，这一思想尤为深刻：经典物理的相空间完全由其上的函数代数刻画；量子物理则通过非交换代数编码了更丰富的结构，而 Topos 理论试图在一个更大的数学宇宙中重新建立“经典”的描述．
+
+本书将从 Gelfand 理论的起源讲起，逐步深入到当代 Topos 量子理论的前沿．
+
+
 
 % 参考文献
 \bibliographystyle{apalike}

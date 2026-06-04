@@ -6,27 +6,27 @@ $\exists! \mathfrak m_x$，
 构成局部赋环空间$(X,\mathcal O_X)$
 
 实拓扑流形$X$上构造实连续函数层$\mathcal O_X$，
-剩余域为实域。
+剩余域为实域．
 实光滑流形$X$上构造实光滑函数层$\mathcal O_X$，
-剩余域为实域。
+剩余域为实域．
 复流形$X$上构造全纯函数层$\mathcal O_X$，
-剩余域为复域。
-概形$X$上构造正则函数层$\mathcal O_X$。
+剩余域为复域．
+概形$X$上构造正则函数层$\mathcal O_X$．
 
 层范畴$\textbf{Sh}(X)$是Grothendieck topos，
-$\mathcal O_X$视为其中的环对象。
+$\mathcal O_X$视为其中的环对象．
 
 
 \section{完备格}
 
 \begin{framed}
 
-$(L,\leq) \in\textbf{Poset}$是偏序集。
+$(L,\leq) \in\textbf{Poset}$是偏序集．
 若对于$\forall a,b \in L$，
 二元上确界(并join)$a\vee b$
 和下确界(交meet)$a\wedge b$都存在，
 即$\vee,\wedge$运算封闭，
-称$L$为格。
+称$L$为格．
 
 若存在$0,1 \in L$ s.t.
 $\forall x \in L$有$0 \leq x \leq 1$，
@@ -34,13 +34,13 @@ $\forall x \in L$有$0 \leq x \leq 1$，
 或者等价的$x \vee 1 = 1,\ x \wedge 0 = 0$，
 称$L$为有界格，
 $0$为下确界，
-$1$为上确界。
+$1$为上确界．
 
 若任意子集$S \subseteq L$都有上确界
 $\text{sup} \ S = \bigvee S$
 和下确界
 $\text{inf} \ S = \bigwedge S$，
-称$L$为完备格。
+称$L$为完备格．
 
 \end{framed}
 
@@ -49,16 +49,16 @@ $\text{inf} \ S = \bigwedge S$，
 幂集$PX$按照包含关系构成有界格和完备格，
 格的交和并运算对应集合的交和并运算，
 格有下确界$\varnothing$，
-上确界$X$。
+上确界$X$．
 
 \end{example}
 
 \begin{example}{$[0,1]$}
 
 闭区间$[0,1]$按照自然序构成有界格和完备格，
-格的交和并运算对应数的下确界和上确界运算。
+格的交和并运算对应数的下确界和上确界运算．
 格有下确界$0$，
-上确界$1$。
+上确界$1$．
 
 \end{example}
 
@@ -66,37 +66,37 @@ $\text{inf} \ S = \bigwedge S$，
 
 $\mathbb Z$按照整除性$a \mid b$构成格，
 $a \vee b = \text{lcm}(a,b)$，
-$a \wedge b = \text{gcd}(a,b)$。
+$a \wedge b = \text{gcd}(a,b)$．
 整数的无限子集，
 例如素数的全体，
 没有最小公倍数，
 故$\mathbb Z$不是有界格，
-更不是完备格。
+更不是完备格．
 
 若在理想上而非集合上考虑，
-令$\mathcal I_\mathbb Z$为$\mathbb Z$的理想的全体。
+令$\mathcal I_\mathbb Z$为$\mathbb Z$的理想的全体．
 有$a \mid b$ iff. $(b) \subseteq (a)$，
 即便全体素数构成的无限子集$\{p_i\}$没有最小公倍数，
 其理想$(p_i)$的交为$(0) \in \mathcal I_\mathbb Z$，
-故下确界始终存在。
-故$\mathcal I_\mathbb Z$是完备格。
+故下确界始终存在．
+故$\mathcal I_\mathbb Z$是完备格．
 
 \end{example}
 
 交换环$A\in\textbf{CRing}$的理想全体
-$\mathcal I_A$是有界格也是完备格。
+$\mathcal I_A$是有界格也是完备格．
 以上例子告诉我们，
 有时候在理想构成的完备格上，
-相比环子集构成的格具有更好的性质。
+相比环子集构成的格具有更好的性质．
 
 \begin{framed}
 格$(L,\vee,\wedge)$若满足以下相互等价的等式：
 左分配律$a\wedge(b\vee c) = (a\wedge b) \vee (a\wedge c)$，
 右分配律$a\vee(b\wedge c) = (a\vee b) \wedge (a\vee c)$，
-则具有分配律。
+则具有分配律．
 \end{framed}
 
-最常见的例子即是子集运算的分配律。
+最常见的例子即是子集运算的分配律．
 
 \section{Heyting代数}
 
@@ -114,7 +114,7 @@ c \leq (a \Rightarrow b)
 (a \wedge c) \leq b
 $$
 
-称$(H,\vee,\wedge,\Rightarrow,0,1)$为Heyting代数。
+称$(H,\vee,\wedge,\Rightarrow,0,1)$为Heyting代数．
 
 定义补运算为：
 
@@ -137,11 +137,11 @@ $$
 \end{tikzcd}
 $$
 
-以上的蕴涵运算$a \Rightarrow b$常令人疑惑。
+以上的蕴涵运算$a \Rightarrow b$常令人疑惑．
 在经典逻辑中，
 蕴涵写为$A \to B$，
 直觉上理解为：
-“若A真，则B真”。
+“若A真，则B真”．
 这个陈述为假则意味着：
 “A真而B假”即$A \wedge \neg B$，
 除此之外都应该视为真：
@@ -152,7 +152,7 @@ $$
 
 这里的$\rightarrow$和$\neg$都符合Heyting代数的定义，
 为防止二者的循环引用，
-可以直接用真值表来定义蕴涵。
+可以直接用真值表来定义蕴涵．
 
 \begin{example}{$PX$}
 
@@ -163,14 +163,14 @@ $(A \Rightarrow -) = A^c \cup -$，
 有
 $C \subseteq A^C \cup B 
 \Longleftrightarrow 
-A \cap C \subseteq B$。
+A \cap C \subseteq B$．
 
 \end{example}
 
 \begin{example}{$\text{Open} \ X$}
 
 拓扑空间$X$上的开集范畴$\text{Open} \ X$
-是$X$的子集族。
+是$X$的子集族．
 和$PX$对补的定义不同，
 开集的补集不一定是开集，
 为保持补运算的封闭性，
@@ -180,13 +180,13 @@ $(A \Rightarrow -) = A^c \cup -$，
 
 $C \subseteq A^C \cup B 
 \Longleftrightarrow 
-A \cap C \subseteq B$。
+A \cap C \subseteq B$．
 
 \end{example}
 
 Heyting代数上自带的伴随函子，
-使得它构成CCC。
-蕴涵$\Rightarrow$可以构造指数对象。
+使得它构成CCC．
+蕴涵$\Rightarrow$可以构造指数对象．
 
 
 \section{生成理想}
@@ -194,14 +194,14 @@ Heyting代数上自带的伴随函子，
 理想作为子集可以覆盖给定的子集$S$，
 而理想又可以被素理想所覆盖，
 这样就引入了子集$S$所生成的理想，
-以及相应的素理想问题。
+以及相应的素理想问题．
 
 \begin{example}{$\mathbb Z$}
 
 子集$S=\{ -60, 120, 720 \}$，
 覆盖它的理想集合为$\{(1),(2),(3),(5),(6),(15),(60)\} \in I_\mathbb Z$，
 最大公约数$\text{gcd} \ S = 60$，
-理想$(\text{gcd}) = (60) = (1)\cap(2)\cap(3)\cap(5)\cap(6)\cap(15)\cap(60)$。
+理想$(\text{gcd}) = (60) = (1)\cap(2)\cap(3)\cap(5)\cap(6)\cap(15)\cap(60)$．
 
 $$
 \begin{tikzcd}
@@ -224,7 +224,7 @@ $$
 
 取整系数$\lambda_i\in \mathbb Z$做有限形式和
 $\lambda_1 \cdot (-60) + \lambda_2 \cdot 120 + \lambda_3 \cdot 720$，
-其全体构成理想$(S) = \{ \lambda_1 \cdot (-60) + \lambda_2 \cdot 120 + \lambda_3 \cdot 720 \}$。
+其全体构成理想$(S) = \{ \lambda_1 \cdot (-60) + \lambda_2 \cdot 120 + \lambda_3 \cdot 720 \}$．
 
 \end{example}
 
@@ -233,7 +233,7 @@ $\lambda_1 \cdot (-60) + \lambda_2 \cdot 120 + \lambda_3 \cdot 720$，
 $X = \mathbb R$，
 多项式环$\mathbb R[X]$的子集
 $S=\{ f_1(x) = x - a, f_2(x) = x - b, f_3(x) = x-3 \}$，
-有零点$Z(S) = \{ a, b, c\}$。
+有零点$Z(S) = \{ a, b, c\}$．
 $S$的任何子集$S_i$的零点集
 $Z(S_i)$都覆盖了$S$，
 这些零点集的交为：
@@ -253,7 +253,7 @@ $$
 取环系数$\forall \lambda_i \in A$
 做有限和$\sum_i \lambda_i f_i \in A$，
 其全体构成理想
-$(S) = \{ \sum_i \lambda_i f_i \in A \}$。
+$(S) = \{ \sum_i \lambda_i f_i \in A \}$．
 
 \end{example}
 
@@ -273,41 +273,41 @@ $(S) = \left\{ \sum_{i=1}^n a_is_i \mid n \in \mathbb N,\ (a_i,s_i) \in A \times
 
 \begin{framed}
 \noindent
-由单个元素 $a \in A \in \textbf{CRing}$ 生成的理想 $(a) = \{ra \mid r \in A\}$ 称为\textbf{主理想}（Principal Ideal）。
-若整环的所有理想都是主理想，则称其为\textbf{主理想整环}（PID）。
+由单个元素 $a \in A \in \textbf{CRing}$ 生成的理想 $(a) = \{ra \mid r \in A\}$ 称为\textbf{主理想}（Principal Ideal）．
+若整环的所有理想都是主理想，则称其为\textbf{主理想整环}（PID）．
 \end{framed}
 
-$\mathbb{Z}$ 是 PID 的典型例子；而多项式环 $\mathbb{Z}[x]$ 并非 PID（例如理想 $(2, x)$ 不能由单元素生成）。
+$\mathbb{Z}$ 是 PID 的典型例子；而多项式环 $\mathbb{Z}[x]$ 并非 PID（例如理想 $(2, x)$ 不能由单元素生成）．
 
 \begin{framed}
 \noindent
-由单个元素 $a \in A \in \textbf{CRing}$ 生成的理想 $(a) = \{ra \mid r \in A\}$ 称为\textbf{主理想}（Principal Ideal）。
-若整环的所有理想都是主理想，则称其为\textbf{主理想整环}（PID）。
+由单个元素 $a \in A \in \textbf{CRing}$ 生成的理想 $(a) = \{ra \mid r \in A\}$ 称为\textbf{主理想}（Principal Ideal）．
+若整环的所有理想都是主理想，则称其为\textbf{主理想整环}（PID）．
 \end{framed}
 
 \section{反单调Galois连接}
 
 $A$的幂集有自然的偏序结构$(\textbf 2^A,\leq)$，
-把子集$S \in \textbf 2^A$置于这个偏序结构考虑。
+把子集$S \in \textbf 2^A$置于这个偏序结构考虑．
 对函数环$A = C(X)$的子集$S$求零点集，
 视为幂集上的函数：
-$Z: \textbf 2^A \to \textbf 2^X:: S \mapsto Z(S)$。
+$Z: \textbf 2^A \to \textbf 2^X:: S \mapsto Z(S)$．
 反过来，
 子集$E \in X$确定了理想
 $I(E) = \{f \in A \mid \forall x \in E:\ f(x) = 0\}$，
 视为幂集上的函数：
-$I: \textbf 2^X \to \textbf 2^A :: E \mapsto I(E)$。
+$I: \textbf 2^X \to \textbf 2^A :: E \mapsto I(E)$．
 
 前面讨论过，
 $\textbf 2^X,\textbf 2^A$是偏序集和完备格，
 但我们需要讨论的是$A$中理想之间的结构，
 而非$A$的子集之间的结构，
-需要转换到$I_A$这个完备格上讨论。
+需要转换到$I_A$这个完备格上讨论．
 将子集$S\in\textbf 2^A$用$(S)\in \text{Ideal} \ A$来替换，
 得到
 $Z: I_A \to \textbf 2^X:: (S) \mapsto Z((S)) = Z(S)$，
 以及
-$I: \textbf 2^X \to I_A :: E \mapsto I(E)$。
+$I: \textbf 2^X \to I_A :: E \mapsto I(E)$．
 
 \begin{framed}
 \noindent
@@ -340,14 +340,14 @@ $$
 
 \section{函数环}
 
-实微分几何的基本研究对象是实光滑流形$X$上的实光滑函数环$C(X)$。
+实微分几何的基本研究对象是实光滑流形$X$上的实光滑函数环$C(X)$．
 在$X$上选定子集$S$得到零点集 
-$Z: \textbf 2^X \to \textbf 2^{C(X)} :: S \mapsto Z(S) = \{ f \in C(X) \mid \forall x \in S,\ f(x) = 0 \}$。
-这构造了幂集之间的反单调偏序Galois连接。
-除非$X$是单点，否则$C(X)$不是整环。
+$Z: \textbf 2^X \to \textbf 2^{C(X)} :: S \mapsto Z(S) = \{ f \in C(X) \mid \forall x \in S,\ f(x) = 0 \}$．
+这构造了幂集之间的反单调偏序Galois连接．
+除非$X$是单点，否则$C(X)$不是整环．
     
 每个点$x \in X$都可以构造退化函数集合作为极大理想
-$X \to \text{Max} \ C(X) : x \mapsto \mathfrak m_x = Z(\{ x \}) = \{ f \in C(X) \mid f(x) = 0 \}$。
+$X \to \text{Max} \ C(X) : x \mapsto \mathfrak m_x = Z(\{ x \}) = \{ f \in C(X) \mid f(x) = 0 \}$．
 构造$x$点上的赋值同态：
 
 $$
@@ -358,7 +358,7 @@ f + \mathfrak m_x &\mapsto \varphi(f + \mathfrak m_x) = f(x) \\
 $$
 
 常值函数可以取值任意实数，
-故$\varphi$是满的。
+故$\varphi$是满的．
 同态的核$\text{Ker} \ \varphi = \{ 0 \}$，
 故$\varphi$是单的，
 故$\varphi$是同构即
@@ -372,11 +372,11 @@ C(X)/\mathfrak m_x \simeq \mathbb R
 局部化：
 $\mathcal O_x = C(X)_{\mathfrak{m}_x}$，
 其元素为分式 $f/g$，
-其中 $(f,g \in C(X),\ g(x) \neq 0$。
-$f/g = f'/g'$ iff. $\exists h \neq 0$ s.t. $h(f g' - f' g) = 0$。
-即在点 $x$ 的某个邻域上 $f/g = f'/g'$。
+其中 $(f,g \in C(X),\ g(x) \neq 0$．
+$f/g = f'/g'$ iff. $\exists h \neq 0$ s.t. $h(f g' - f' g) = 0$．
+即在点 $x$ 的某个邻域上 $f/g = f'/g'$．
 因此 $\mathcal O_x$ 恰好同构于 $x$ 点的光滑函数芽环，
-即所有在 $x$ 的某个邻域上有定义的光滑函数在“局部相等”关系下的等价类构成的环。
+即所有在 $x$ 的某个邻域上有定义的光滑函数在“局部相等”关系下的等价类构成的环．
 根据(\ref{eq:fun-ring-residue-field-real})，
 类似(\ref{eq:short-exact-seq-num-field})：
 
@@ -401,12 +401,12 @@ V \arrow[rr]                                                        &  & \mathca
 \end{tikzcd}
 $$
 
-限制映射$\text{res}: \mathcal O_V \to \mathcal O_U :: f \mapsto f\mid_U$。
-函子$\mathcal O_X$是$X$上的 \textbf{结构层} (structure sheaf)。
-这样的函子的全体构成函数层范畴$\textbf{Sh}(\textbf{CRing})$。
+限制映射$\text{res}: \mathcal O_V \to \mathcal O_U :: f \mapsto f\mid_U$．
+函子$\mathcal O_X$是$X$上的 \textbf{结构层} (structure sheaf)．
+这样的函子的全体构成函数层范畴$\textbf{Sh}(\textbf{CRing})$．
 
 为了考虑$X$上的局部性质，
-需要让局部以外的性质被忽略等价商掉。
+需要让局部以外的性质被忽略等价商掉．
 比较函数$f,g\in\mathcal O_X = C(X)$，
 其差异$f-g$的全局性质，
 随着限制的极限过程而消去：
@@ -417,18 +417,18 @@ $(f-g)\mid_{U_1} \stackrel{\text{res}}{\longrightarrow}(f-g)\mid_{U_2} \stackrel
 构成等价关系$f \sim_x g$，
 等价类称为函数芽$[f]_x = [g]_x$，
 芽构成的环称为\textbf{茎}(stalk)：
-$\mathcal O_x = \varinjlim_{U \ni p} \mathcal O_U$。
+$\mathcal O_x = \varinjlim_{U \ni p} \mathcal O_U$．
 
 在$x$处退化的函数芽构成极大理想
-$\mathfrak m_x = \{ [f] \in \mathcal{O}_x \mid f(x) = 0 \}$。
+$\mathfrak m_x = \{ [f] \in \mathcal{O}_x \mid f(x) = 0 \}$．
 由于茎的构造基于拓扑空间$X\in\textbf{Top}$，
 函数的连续性是基本要求，
-若不加说明函数环都是连续函数环。
+若不加说明函数环都是连续函数环．
 在极大理想之外的芽$f \notin \mathfrak m_x$是非退化的，
-由于函数的连续性保证了$f$的可逆性。
+由于函数的连续性保证了$f$的可逆性．
 
 这是唯一的极大理想，
 使得茎$\mathcal O_x$是局部环，
-以及 $(X, \mathcal O_X)$ 构成一个\textbf{局部赋环空间}（locally ringed space）。
+以及 $(X, \mathcal O_X)$ 构成一个\textbf{局部赋环空间}（locally ringed space）．
 
 

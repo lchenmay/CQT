@@ -19,12 +19,12 @@ $$
 \sum_i n_i x_i
 $$
 
-这样形式的全体构成了$\{x_i\}$生成的子群。
+这样形式的全体构成了$\{x_i\}$生成的子群．
 若生成集合有限则称有限生成群，
 若$\sum_i n_i x_i = 0$的条件是所有$n_i = 0$退化，
-称生成集$\{x_i\}$线性无关。
-由$r$个线性无关元有限生成的群称为秩$r$自由Abel群。
-$\mathbb Z$是$1$或$-1$生成的自由Abel群。
+称生成集$\{x_i\}$线性无关．
+由$r$个线性无关元有限生成的群称为秩$r$自由Abel群．
+$\mathbb Z$是$1$或$-1$生成的自由Abel群．
 
 
 \section{正合}
@@ -58,13 +58,13 @@ $$
 $$
 
 显然$\text{Im} \ f^\prime = \text{Im} \ f$，
-$f^\prime$是满同态。
+$f^\prime$是满同态．
 $f^\prime(x + \text{Ker} \ f) = f(x) = 0$时，
 $x \in \text{Ker} \ f$，
 即$x + \text{Ker} \ f = 0$，
 有$\text{Ker} \ f^\prime = 0$，
-$f^\prime$是单同态。
-$\text{Coim} \ f$描述的就是同构$ = X/\text{Ker} \ f \simeq \text{Im} \ f$。
+$f^\prime$是单同态．
+$\text{Coim} \ f$描述的就是同构$ = X/\text{Ker} \ f \simeq \text{Im} \ f$．
 当$\text{Ker} \ f = 0$时称为单同态，
 $\text{Im} \ f = Y$时称为满同态，
 单满同态为同构，
@@ -85,8 +85,8 @@ $$
 
 若复合映射$X \stackrel{g \circ f}{\longrightarrow} Z$
 退化为$g \circ f = 0$，
-此时$\text{Im} \ f \subseteq \text{Ker} \ g$。
-当$\text{Im} \ f = \text{Ker} \ g$时称为正合。
+此时$\text{Im} \ f \subseteq \text{Ker} \ g$．
+当$\text{Im} \ f = \text{Ker} \ g$时称为正合．
 正合可以用于描述单/满同态：
 
 $$
@@ -98,7 +98,7 @@ $$
 以上两个正合意味着$\text{Im} \ i = \text{Ker} \ f = 0$，
 它说明$f$是单同态；
 以及$\text{Im} \ g = \text{Ker} \ p = Z$，
-它说明$g$是满同态。
+它说明$g$是满同态．
 将二者合并得到短正合序列，
 描述了单同态$f$和满同态$g$在$Y$处正合：
 
@@ -118,8 +118,224 @@ $$
 
 \section{复形}
 
+\paragraph{指标集}
+
+数学中常用指标集$I$来标记范畴$\mathcal C$中的一族对象：
+
+\begin{equation}\label{eq:abstract index set}
+\begin{split}
+I &\to \mathcal C \\
+i &\to X_i \\
+\end{split}
+\end{equation}
+
+\begin{itemize}
+    \item 如果$I$是有限集，则称为有限指标集，$n$-元指标集常用$\{1,2,\cdots,n\}$．
+    \item 如果$I$带有偏序$\leq$，则$I=(I,\leq)$称为\textbf{偏序指标集(partially ordered index set)}\index{partially ordered index set 偏序指标集}．
+    \item 如果$I=(I,\leq)$是全序集，则$I=(I,\leq)$称为\textbf{全序指标集(totally ordered index set)}\index{totally ordered index set 全序指标集}．
+    \item 如果对指标集不要求有限、可数等条件，只用来标记则称为\textbf{抽象指标集(abstract index set)}\index{abstract index set 抽象指标集}．
+\end{itemize}
+
+\begin{example}
+    常用$n$-元全序指标集$[n] = \{1,2,\cdots,n\}$作为$n$-元全序指标集，它的排列构成全序．
+    常用$\mathbb Z$或者$\mathbb N$作为可数全序指标集．
+\end{example}
+
+\paragraph{集族}
+
+指标集$I$标记集合范畴$\textbf{Set}$中的对象得到集族：
+$$
+\{X_i\}_{i\in I}
+$$
+
+令$X\in\textbf{Set}$为集合，则集族
+$$
+\{X_i \ | \ X_i \subset X \}_{i\in I}
+$$
+为$X$的子集族．    
+
+有限子集族上可以构造几何对象，称为
+\textbf{抽象单纯复形(abstract simplicial complex)}\index{abstract simplicial complex 抽象单纯复形}，
+见(\ref{p:abstract simplicial complex})节．
+因此常用抽象单纯复形中的符号来表示$X$的非空有限子集族：
+
+$$
+\Delta = \Delta(X)
+$$
+
+\begin{example}
+
+有限集$X=\{a,b,c,d\}$的各阶子集族为：
+\begin{itemize}
+\item $0$-阶：空集$\varnothing$
+\item $1$-阶：$\{a\},\{b\},\{c\},\{d\}$，对应图中的顶点
+\item $2$-阶：$\{a,b\},\{b,c\},\{c,d\},\{d,a\}$，对应图中的边
+\item $3$-阶：$\{a,b,c\},\{b,c,d\},\{c,d,a\},\{c,d,b\}$，对应图中的面
+\item $4$-阶：全集$X=\{a,b,c,d\}$，对应图中的四面体
+\end{itemize}
+
+$$
+\begin{tikzcd}
+                                                                                       & \{d\} \arrow[lddd, "{\{a,d\}}"', no head] \arrow[rdddd, "{\{b,d\}}"', no head] &                                             &  &  &  &                                              \\
+                                                                                       &                                                                                &                                             &  &  &  &                                              \\
+                                                                                       &                                                                                &                                             &  &  &  & \{c\} \arrow[llllluu, "{\{c,d\}}"', no head] \\
+\{a\} \arrow[rrd, "{\{a,b\}}"', no head] \arrow[rrrrrru, "{\{a,c\}}", no head, dashed] &                                                                                &                                             &  &  &  &                                              \\
+                                                                                       &                                                                                & \{b\} \arrow[rrrruu, "{\{b,c\}}"', no head] &  &  &  &                                             
+\end{tikzcd}
+$$
+
+\end{example}
+
+
+    \section{单纯复形}
+            本讲介绍一种处理拓扑空间的方法，即三角剖分．网格是对造型的任意精度的逼近．抛开精度，我们如果只需要保持拓扑性质，那么网格可以大大简化．在拓扑中用的网格是通过类似三角形的简单几何体构造出来的．单形的几何直观很好理解，它用最少的点表达了维度信息．构成单形的点是仿射无关的，可以在仿射空间上构造变换群．\par
+
+        \paragraph{单形}
+            在拓扑中用的网格是通过类似三角形的简单几何体构造出来的．\par
+            单形\par
+            - $0$ -单形就是点\par
+            - $1$ -单形就是线段\par
+            - $2$ -单形就是三角形\par
+            - $3$ -单形就是四面体\par
+            单形的几何直观很好理解，它用最少的点表达了维度信息．用数学的黑话来定义的话，构成\textbf{单形(simplex)}\index{simplex}的点是\textbf{仿射无关的}\index{仿射无关的}．所谓\textbf{仿射空间(affine space)}\index{affine space}，暂且理解为没有原点的空间，没有原点就不再有群的结构，也不可以做加法，但可以做两点之间的减法（图中的有向线段），也可以在仿射空间上构造变换群．\par
+            如果 $\mathbb{R}^n$ 中一组 $(q+1),q\leq n$ 个顶点 $\{a_0, \dots, a_q\}$ 互相做减法（线段）产生的向量组构成了\textbf{线性无关向量组}\index{线性无关向量组}（有向线段组），它们\textbf{张成}\index{张成}了一个线性子空间，对应为这些点在 $\mathbb{R}^n$ 中的一个\textbf{线性流形}\index{线性流形}，这个线性流形上的每一点都可以通过顶点的坐标线性组合而成．如果限定为\textbf{非负归一化权重}\index{非负归一化权重} $\lambda_i$ ，得到线性流形上的子集，它是由顶点围起来的\textbf{凸集}\index{凸集}，称为 $q$ 维单形：\par
+            $$
+                \sigma^q = \{ x = \sum_i \lambda_ia_i \mid \lambda^i\geq 0, \sum_i \lambda_i = 1 \} \label{eq:homology-simplex}
+            $$
+            构成单形的顶点有初始给定的排列顺序，这给出了一个\textbf{定向(orientation)}\index{orientation}．定向从代数上看是和顶点的\textbf{置换群(permutation group)}\index{permutation group}有关的，即顶点排列的奇偶置换确定了定向的方向．于是，也可以引入定向的单位元操作和求逆操作，这样便让顶点排列本身具备了Abel群的结构．\par
+
+        \paragraph{复形}
+            用单形为积木，可以构建复形，也就是对物理中研究的几何体做\textbf{拓扑}\index{拓扑}上的建模，完全不考虑度量的精度——论一架飞机表面的磁通密度如何等效为四面体．\par
+            我们现在是来研究拓扑规律的，在用单形搭建复形的时候，我们希望单形是坚硬的实心几何体，也不会随意滑动．也就是说，两个单形要么分开，要么有重合的公共面（边界），这种情况称为两个单形是\textbf{规则相处}\index{规则相处}的．\par
+            $\mathbb{R}^n$ 中有限个单形的集合 $K$ 如果满足：\par
+            1. $\forall \sigma^q \in K$ ， $\sigma^q$ 的任意一个\textbf{面}\index{面}也属于 $K$ ；\par
+            2. $K$ 中任意两个单形\textbf{规则相处}\index{规则相处}；\par
+            则 $K$ 为\textbf{单纯复合形(simplicial complex)}\index{simplicial complex}或\textbf{复形}\index{复形}． $K$ 的维数就是其中维数最大的单形的维数．复形 $K$ 是单形的集合．如果把每个单形都看作 $\mathbb{R}^n$ 的子集，那么这些单形的并$\vert K \vert$也是 $\mathbb{R}^n$ 的子集，称为\textbf{多面体(polyhedron)}\index{polyhedron}，而 $K$ 为这个多面体的\textbf{单纯剖分}\index{单纯剖分}．\par
+            $$
+                \text{dim}(K) = \text{dim}\vert K \vert \\
+            $$
+            对于拓扑空间 $X$ 和复形 $\vert K \vert$ ，如果存在同胚\par
+            $$
+                \varphi:\vert K \vert \to X \\
+            $$
+            就构造了 $K$ 对 $X$ 的剖分．于是，我们所讨论的这一套网格系统，成为研究拓扑的工具．更重要的是，比起拓扑空间中无从下手的橡皮几何体，这套网格系统中的单形、复形等结构都可以很方便地讨论代数性质．\par
+
+    \section{链群}
+
+        \paragraph{单形的边界}
+            既然 $q$ 维单形是由仿射无关的顶点组构成的，那么任意减去其中一个定点，得到的顶点组依旧是仿射无关的，并且可以因此构成一个 $q-1$ 维单形：\par
+            - $0$ -单形是点，没有边界\par
+            - $1$ -单形是线段，去掉一点得到 $0$ -单形点\par
+            - $2$ -单形是三角形，去掉一点得到 $1$ -单形棱\par
+            - $3$ -单形是四面体，去掉一点得到 $2$ -单形三角形\par
+            这种通过去掉一点得到低一维单形的方式，归纳为单形的\textbf{边界算子}\index{边界算子}：\par
+            $$
+                \partial \sigma^q \mapsto \sum_i (-1)^i a^0 \dots \overline{a}^i \dots a^q \label{eq:homology-boundary-simplex}
+            $$
+            其中 $(-1)^i$ 决定了定向（奇偶性）， $\overline{a}^i$ 表示去掉 $a^i$ 这一点．\par
+            上图上部分， $2$ -单形点列 $[v_0,v_1,v_2$] 给出一个定向，边界算子作用为：\par
+            $$
+                \partial [v_0,v_1,v_2] = [v_1,v_2] - [v_0,v_2] + [v_0,v_1] =  [v_0,v_1] + [v_1,v_2] + [v_2,v_0]
+            $$
+            下部分， $3$ -单形点列 $[v_0,v_1,v_2,v_3]$ 给出一个定向，边界算子作用为：\par
+            $$
+                \partial [v_0,v_1,v_2,v_3] = [v_1,v_2,v_3] - [v_0,v_2,v_3] + [v_0,v_1,v_3] - [v_0,v_1,v_2] \\
+            $$
+
+        \paragraph{复形的边界}
+            两条线段，连接一点后得到一根线段，即单形 $[v_0,v_1$] 和 $[v_1,v_2$] 连接后得到\par
+            $$
+                [v_0,v_1]+[v_1,v_2] \\
+            $$
+            对它形式化地求 $1$ -边界\par
+            $$
+            \begin{aligned}
+                \partial_1([v_0,v_1]+[v_1,v_2]) &=\partial_1[v_0,v_1]+\partial_1[v_1,v_2] \nonumber \\
+                &=(v_1-v_0)+(v_2-v_1) =v_2-v_0 \nonumber \\
+            \end{aligned}
+            $$
+            这相当于直接求\par
+            $$
+                \partial_1[v_0,v_2] = v_2 - v_0 \\
+            $$
+            显然，边界是拓扑性质，并不依赖于折线的中间构造．\par
+
+        \paragraph{链群}
+            将复形 $K$ 上所有 $q$ 维（定向）单形的集合记为 $T_q(K)$ ，现在用整数加群 $\mathbb{Z}(+,0)$ 来构造整系数的形式和\par
+            $$
+                \sigma = \sum_k z_k\sigma_k = z_1\sigma_1 + z_2\sigma_2 + \dots + z_k\sigma_k \label{eq:homology-chain}
+            $$
+            其中 $\{z_k\}$ 是整系数， $\{ \sigma_i \}$ 是 $T_q(K)$ 中的单形．两个这样的形式和之间可以定义加法：\par
+            $$
+                \sum_k x_k\sigma_k + \sum_k y_k\sigma_k = \sum_k (x_k + y_k)\sigma_k \\
+            $$
+            显然有从加群得到的单位元和逆元，于是这样的形式和构成一个Abel群，称为 $q$ -\textbf{链群(chain group)}\index{chain group}，其中的元素称为$q$-\textbf{链(chain)}\index{chain}．\par
+            边界算子 $\partial$ 总是把 $q$ 维单形映射到 $(q-1)$ 维单形．由于链群是同维的单形自由生成的，于是边界算子也把 $q$ 维链群映射到 $(q-1)$ 维链群：\par
+            $$
+                \partial_k: C_k(K) \to C_{k-1}(K) \\
+            $$
+
 
 \section{同调群}
 
+        \paragraph{几何直观}
+            \textbf{同调群(homological group)}\index{homological group}泛泛而言，是用一些Abel群来研究拓扑空间，特别是拓扑空间中的洞．我们在讲过的单形都是没有洞的，平凡的(trivial）．在数学界，说人家的工作trivial相当于骂人，言下之意，你这么trivial的东西，不值得去费力研究．那么在同调群的语境下，没有洞的东西还有什么好研究的，要研究就研究有洞的，洞代表着不一样的拓扑性质．\par
+            在人类可以理解的低维空间，洞还有几何直观，但高维的洞就需要形式化的描述了．过去谈到，同伦反应出拓扑空间中的洞的信息．同伦是用圆周（一维球面 $S^1$ ）在绕着洞，这是一维同伦情形．高维同伦则是用高维的球面绕着高维的洞．同调群也是研究洞，不过同调群的研究方式不是用球面去绕洞，而是研究构成洞的边界．我们曾经提到过：边界没有边界．\par
+            同调群就是抓住了边界的这一性质去描述洞的，同调群认为边界是trivial的，那么什么不trivial呢？注意：虽然边界没有边界，但没有边界的东西并不一定都是边界哦，所以我们特别关注：自己没有边界，自己也不是人家的边界．\par
+            这就是同调群要研究的对象．这句话的两个部分，涉及到边界映射的核与像问题，也涉及到映射的闭和恰当问题．\par
+
+        \paragraph{链群及其边界}
+            对于一串链复形的同态\par
+            $$
+                \cdots \longrightarrow  C_{k+1} \stackrel{\partial_{k+1}}{\longrightarrow} C_k \stackrel{\partial_k}{\longrightarrow} C_{k-1} \stackrel{\partial_{k-1}}{\longrightarrow} \cdots \\
+            $$
+            还满足\par
+            $$
+                \partial_k \circ \partial_{k+1}=0 \\
+            $$
+            则称：\par
+            - $C_k$ 为\textbf{链群(chain group)}\index{chain group}\par
+            - $Z_k = \text{Ker}(\partial_k)$ 为\textbf{闭链群(cycle group)}\index{cycle group}\par
+            - $B_k = \text{Im}(\partial_{k+1})$ 为\textbf{边缘链群(boundary group)}\index{boundary group}\par
+            由于二次边界算子为零：\par
+            $$
+                B_k \subseteq Z_k \subseteq C_k \\
+            $$
+            根据第一群同态定理：\par
+            Abel群同态 $f:G \to G^\prime$ 满足： $G/\text{Ker}(f) \simeq \text{Im}(f)$\par
+            那么就链群的同态序列而言， $(k+1)$ -边缘链群 $B_k = \text{Im}(\partial_{k+1})$是$k$ -闭链群 $Z_k = \text{Ker}(\partial_k)$ 的子群，作为Abel群的子群一定是正规子群，可以直接运用第一群同态定理：\par
+            $$
+                Z_k/B_k = \text{Ker}(\partial_k)/ \text{Im}(\partial_{k+1}) \simeq \text{Im}(\partial_k) \\
+            $$
+            \textbf{同调群(homological group)}\index{homological group}就是上式左边出现的同调类构成的商群\par
+            $$
+                H_k(C) = Z_k/B_k = \text{Ker}(\partial_k)/ \text{Im}(\partial_{k+1}) \\
+            $$
+            同调群作为\textbf{商群}\index{商群}，\textbf{消去了}\index{消去了}我们没有兴趣的\textbf{边界因素}\index{边界因素} $B_k = \text{Im}(\partial_{k+1})$ ，留下的是non-trivial的、有价值的拓扑信息．\par
+
+        \paragraph{同调群的实例：回到几何直观}
+            我们先理解 $n$ 维同调群表示空间中 $n$ 维洞的数目，看几个具体的例子．例子中 $\{0\}$ 表示只有一个单位元的平凡群．\par
+
+            \textbf{一维球面}\index{一维球面} $S^1$ 就是圆周，其同调群为：\par
+            $$
+                H_k(S^1)={\begin{cases}\mathbb{Z} & k=0,1\\ \{0\} &{\text{otherwise}}\end{cases}} \\
+            $$
+            $1$ 连通、 $1$ 个 $1$ 维洞、没有更高维洞． $H_1(S^1) = \mathbb{Z}$ 的意义在于，$k=1$ 时圆周包围了一个 $1$ 维洞，它是Abel群的生成元，其作用相当于用一个整数在群作用下可以生成整个 $\mathbb{Z}$ ．\par
+            \textbf{二维球面}\index{二维球面} $S^2$ 的同调群为：\par
+            $$
+                H_k(S^2)={\begin{cases}\mathbb{Z} & k=0,2\\ \{0\} &{\text{otherwise}}\end{cases}} \\
+            $$
+            $1$ 连通、 $0$ 个 $1$ 维洞、$1$ 个 $2$ 维洞、没有更高维洞．\par
+            $n$\textbf{维球体}\index{维球体}$B^n$的同调群为：\par
+            $$
+                H_k(B^n)={\begin{cases}\mathbb{Z} & k=0\\ \{0\} &{\text{otherwise}}\end{cases}} \\
+            $$
+            $n$ 维球体 $B^n$ 是实心的，单连通，没有任何维度的洞．它唯一不平凡的地方是 $H_0(B^n) = \mathbb{Z}$ ，我们可以回忆以下同伦中相应的基本群来联想一下．\par
+            \textbf{二维环面}\index{二维环面} $T=S^1 \times S^1$ 的同调群为：\par
+            $$
+                H_{k}(T)={\begin{cases}\mathbb {Z} &k=0,2\\\mathbb {Z} \times \mathbb {Z} &k=1\\\{0\}&{\text{otherwise}}\end{cases}} \\
+            $$
+            $1$ 连通、 $2$ 个独立的 $1$ 维洞、$1$ 个 $2$ 维洞、没有更高维洞．我们特别注意到：$H_1(T) \simeq \mathbb{Z} \oplus \mathbb{Z}$ 表示$2$ 个独立的 $1$ 维洞，图中有红蓝两个圆圈，表示由它们生成环面，这种生成方式是相互独立的，所以用了直和和直积符号．\par
+            目前我们的学习主线是微分几何和电动力学，限于篇幅，这里我们不谈同调群的计算，有兴趣请参考北大尤承业中同调群计算的例子．\par
 
 

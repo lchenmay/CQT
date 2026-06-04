@@ -24,32 +24,46 @@
 \contentsline {section}{\numberline {4.1}自由Abel群}{20}{section.4.1}%
 \contentsline {section}{\numberline {4.2}正合}{21}{section.4.2}%
 \contentsline {section}{\numberline {4.3}复形}{22}{section.4.3}%
-\contentsline {section}{\numberline {4.4}同调群}{22}{section.4.4}%
-\contentsline {chapter}{\numberline {5}流形}{23}{chapter.5}%
-\contentsline {section}{\numberline {5.1}函数芽}{23}{section.5.1}%
-\contentsline {section}{\numberline {5.2}自然配对}{24}{section.5.2}%
-\contentsline {section}{\numberline {5.3}切空间，余切空间}{26}{section.5.3}%
-\contentsline {section}{\numberline {5.4}微分形式}{27}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Riemann流形}{28}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Hodge * 算子}{28}{section.5.6}%
-\contentsline {subsection}{\numberline {5.6.1}三维空间中的对应关系}{29}{subsection.5.6.1}%
-\contentsline {subsection}{\numberline {5.6.2}与向量分析的关系}{30}{subsection.5.6.2}%
-\contentsline {subsection}{\numberline {5.6.3}总结}{30}{subsection.5.6.3}%
-\contentsline {subsection}{\numberline {5.6.4}叉乘的 Hodge 定义}{30}{subsection.5.6.4}%
-\contentsline {subsection}{\numberline {5.6.5}具体计算验证}{31}{subsection.5.6.5}%
-\contentsline {section}{\numberline {5.7}Stokes定理}{31}{section.5.7}%
-\contentsline {section}{\numberline {5.8}外微分 Stokes 定理的几种常见形式}{31}{section.5.8}%
-\contentsline {subsection}{\numberline {5.8.1}统一形式（外微分）}{31}{subsection.5.8.1}%
-\contentsline {subsection}{\numberline {5.8.2}微积分基本定理（$n=1$）}{32}{subsection.5.8.2}%
-\contentsline {subsection}{\numberline {5.8.3}格林定理（$n=2$，平面区域）}{32}{subsection.5.8.3}%
-\contentsline {subsection}{\numberline {5.8.4}经典 Stokes 定理（$n=2$，三维空间中的曲面）}{32}{subsection.5.8.4}%
-\contentsline {subsection}{\numberline {5.8.5}散度定理（$n=3$，三维区域）}{32}{subsection.5.8.5}%
-\contentsline {subsection}{\numberline {5.8.6}总结对照表}{33}{subsection.5.8.6}%
-\contentsline {chapter}{\numberline {6}de Rham上同调}{34}{chapter.6}%
-\contentsline {section}{\numberline {6.1}外微分算子}{34}{section.6.1}%
-\contentsline {chapter}{\numberline {7}概型}{35}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Zariski拓扑}{35}{section.7.1}%
-\contentsline {section}{\numberline {7.2}多项式环}{36}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Zariski拓扑：用理想构造}{36}{section.7.3}%
-\contentsline {section}{\numberline {7.4}概型}{37}{section.7.4}%
-\contentsline {section}{\numberline {7.5}有理函数域}{37}{section.7.5}%
+\contentsline {paragraph}{指标集}{22}{section.4.3}%
+\contentsline {paragraph}{集族}{23}{example.4.3.1}%
+\contentsline {section}{\numberline {4.4}单纯复形}{24}{section.4.4}%
+\contentsline {paragraph}{单形}{24}{section.4.4}%
+\contentsline {paragraph}{复形}{25}{section.4.4}%
+\contentsline {section}{\numberline {4.5}链群}{25}{section.4.5}%
+\contentsline {paragraph}{单形的边界}{25}{section.4.5}%
+\contentsline {paragraph}{复形的边界}{26}{section.4.5}%
+\contentsline {paragraph}{链群}{27}{section.4.5}%
+\contentsline {section}{\numberline {4.6}同调群}{27}{section.4.6}%
+\contentsline {paragraph}{几何直观}{27}{section.4.6}%
+\contentsline {paragraph}{链群及其边界}{28}{section.4.6}%
+\contentsline {paragraph}{同调群的实例：回到几何直观}{29}{section.4.6}%
+\contentsline {chapter}{\numberline {5}流形}{31}{chapter.5}%
+\contentsline {section}{\numberline {5.1}函数芽}{31}{section.5.1}%
+\contentsline {section}{\numberline {5.2}对偶空间}{32}{section.5.2}%
+\contentsline {section}{\numberline {5.3}自然配对}{37}{section.5.3}%
+\contentsline {section}{\numberline {5.4}切空间，余切空间}{39}{section.5.4}%
+\contentsline {section}{\numberline {5.5}局部线性化}{39}{section.5.5}%
+\contentsline {section}{\numberline {5.6}微分形式}{45}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Riemann流形}{46}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Hodge星算子}{56}{section.5.8}%
+\contentsline {subsection}{\numberline {5.8.1}三维空间中的对应关系}{58}{subsection.5.8.1}%
+\contentsline {subsection}{\numberline {5.8.2}与向量分析的关系}{58}{subsection.5.8.2}%
+\contentsline {subsection}{\numberline {5.8.3}总结}{59}{subsection.5.8.3}%
+\contentsline {subsection}{\numberline {5.8.4}叉乘的 Hodge 定义}{59}{subsection.5.8.4}%
+\contentsline {subsection}{\numberline {5.8.5}具体计算验证}{59}{subsection.5.8.5}%
+\contentsline {section}{\numberline {5.9}Stokes定理}{60}{section.5.9}%
+\contentsline {section}{\numberline {5.10}外微分 Stokes 定理的几种常见形式}{66}{section.5.10}%
+\contentsline {subsection}{\numberline {5.10.1}统一形式（外微分）}{66}{subsection.5.10.1}%
+\contentsline {subsection}{\numberline {5.10.2}微积分基本定理（$n=1$）}{66}{subsection.5.10.2}%
+\contentsline {subsection}{\numberline {5.10.3}格林定理（$n=2$，平面区域）}{66}{subsection.5.10.3}%
+\contentsline {subsection}{\numberline {5.10.4}经典 Stokes 定理（$n=2$，三维空间中的曲面）}{67}{subsection.5.10.4}%
+\contentsline {subsection}{\numberline {5.10.5}散度定理（$n=3$，三维区域）}{67}{subsection.5.10.5}%
+\contentsline {subsection}{\numberline {5.10.6}总结对照表}{67}{subsection.5.10.6}%
+\contentsline {chapter}{\numberline {6}de Rham上同调}{68}{chapter.6}%
+\contentsline {section}{\numberline {6.1}外微分算子}{68}{section.6.1}%
+\contentsline {chapter}{\numberline {7}概型}{69}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Zariski拓扑}{69}{section.7.1}%
+\contentsline {section}{\numberline {7.2}多项式环}{70}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Zariski拓扑：用理想构造}{70}{section.7.3}%
+\contentsline {section}{\numberline {7.4}概型}{71}{section.7.4}%
+\contentsline {section}{\numberline {7.5}有理函数域}{71}{section.7.5}%
