@@ -1752,6 +1752,29 @@ $$
 就是拓扑空间中带有局部坐标系的开覆盖．
 坐标卡的相容性体现在层中．
 
+\section{全局对象}
+
+Topos的定义要求有限极限，
+这保证了终对象的存在。
+子对象分类器$\Omega$是一个配备了从终对象$\textbf{1}$发出箭头的对象
+
+$$
+\text{true}: \textbf{1} \to \Omega
+$$
+
+在topos中，
+点的概念是通过箭头 
+
+$$
+\textbf{1} \to X
+$$
+
+来定义的，
+箭头称为$X$的全局元素。
+在topos中很多对象是没有全局元素的。
+
+
+
 \section{语言}
 
 量子topos理论将物理系统看作逻辑结构。
@@ -1930,7 +1953,8 @@ $\forall A,B \in V:\ [A,B] = 0$，
 $P\succeq Q$表示$P$投影到更大的子空间$Q$，
 这是一种嵌入偏序，
 产生偏序范畴$(\mathcal V(H),\succeq)$。
-这一反变函子过程视为预层$\underline\Sigma \in \textbf{Set}^{\mathcal V(H)^\text{op}}$，
+这一反变函子过程视为预层
+$\underline\Sigma \in \textbf{Set}^{\mathcal V(H)^\text{op}}$，
 称为谱预层。
 产生Gelfand谱中的限制映射：
 
@@ -2040,6 +2064,23 @@ $$
 \]
 
 \textbf{物理意义}：谱预层 $\underline{\Sigma}$ 无全局截面是 Kochen-Specker 定理在拓扑斯框架中的几何表述。它揭示了量子理论无法具有经典意义的“微观态”（全局赋值），而只能在每个语境 $V$ 中局部地赋值。这正是 D\"oring-Isham 框架引入\textbf{具身化}（daseinisation）和\textbf{拟态}（pseudo-state）来替代传统微观态的根本原因。
+
+\section{Mitchell–Bénabou 语言}
+
+预层函子$\textbf{Set}^{\mathcal V(H)^\text{op}}$是一个topos，
+在Mitchell–Bénabou 语言中，
+每个预层$F \in \textbf{Set}^{\mathcal V(H)^\text{op}}$
+对应一个类型，
+类型$\Gamma$对应谱预层$\underline{\Sigma}$，
+类型$O$对应外预层$\mathcal O$，
+类型$R$对应量值预层$\underline R^\leftrightarrow$，
+类型$\Omega$对应子对象分类器。
+
+Kochen-Specker定理说明谱预层$\Sigma$
+没有全局元素，
+不存在$\gamma \in \Gamma \underline{\Sigma}$，
+即不存在$\gamma: \textbf{1} \to \Sigma$。
+但M-B语言允许广义元素$x: U \to X$。
 
 \backmatter
 

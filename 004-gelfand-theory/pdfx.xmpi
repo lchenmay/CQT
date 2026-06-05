@@ -130,9 +130,9 @@
       xmlns:pdfx="http://ns.adobe.com/pdfx/1.3/" 
       xmlns:pdfxid="http://www.npes.org/pdfx/ns/id/"> 
    <xmp:CreatorTool>LaTeX with hyperref</xmp:CreatorTool> 
-   <xmp:ModifyDate>2026-06-05T03:11:57-04:00</xmp:ModifyDate> 
-   <xmp:CreateDate>2026-06-05T03:11:57-04:00</xmp:CreateDate> 
-   <xmp:MetadataDate>2026-06-05T03:11:57-04:00</xmp:MetadataDate> 
+   <xmp:ModifyDate>2026-06-05T08:59:48-04:00</xmp:ModifyDate> 
+   <xmp:CreateDate>2026-06-05T08:59:48-04:00</xmp:CreateDate> 
+   <xmp:MetadataDate>2026-06-05T08:59:48-04:00</xmp:MetadataDate> 
    <pdf:Producer>LuaTeX</pdf:Producer> 
     <pdf:Trapped>False</pdf:Trapped> 
   <pdfxid:GTS_PDFXVersion>PDF/X-4</pdfxid:GTS_PDFXVersion>
@@ -142,7 +142,7 @@
   </rdf:Description> 
   <rdf:Description rdf:about="" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"> 
    <xmpMM:DocumentID>uuid:685021F2-779D-D813-D536-0902F63152D6</xmpMM:DocumentID> 
-   <xmpMM:InstanceID>uuid:051AFB96-7108-8D1F-B3C8-5B82CFCDB6B4</xmpMM:InstanceID> 
+   <xmpMM:InstanceID>uuid:318B912F-BDB3-322E-3C95-1531C0A04ECA</xmpMM:InstanceID> 
   <xmpMM:RenditionClass>default</xmpMM:RenditionClass>
   <xmpMM:VersionID>1</xmpMM:VersionID>
   </rdf:Description> 

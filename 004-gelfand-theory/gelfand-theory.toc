@@ -34,7 +34,8 @@
 \contentsline {section}{\numberline {4.3}预层}{29}{section.4.3}%
 \contentsline {section}{\numberline {4.4}理想}{31}{section.4.4}%
 \contentsline {section}{\numberline {4.5}光滑函数层}{32}{section.4.5}%
-\contentsline {section}{\numberline {4.6}语言}{34}{section.4.6}%
+\contentsline {section}{\numberline {4.6}全局对象}{34}{section.4.6}%
+\contentsline {section}{\numberline {4.7}语言}{35}{section.4.7}%
 \contentsline {chapter}{\numberline {5}概率}{37}{chapter.5}%
 \contentsline {chapter}{\numberline {6}量子理论}{38}{chapter.6}%
 \contentsline {section}{\numberline {6.1}可观测量}{38}{section.6.1}%
@@ -42,6 +43,7 @@
 \contentsline {section}{\numberline {6.3}Kochen‑Specker定理}{40}{section.6.3}%
 \contentsline {subsection}{\numberline {6.3.1}Kochen-Specker 赋值 $\Rightarrow $ 全局截面}{41}{subsection.6.3.1}%
 \contentsline {subsection}{\numberline {6.3.2}结论}{42}{subsection.6.3.2}%
+\contentsline {section}{\numberline {6.4}Mitchell–Bénabou 语言}{42}{section.6.4}%
 \contentsline {chapter}{附录：Banaschewskia2006}{43}{appendix*.3}%
 \contentsline {chapter}{附录：DoeringIsham2011}{45}{appendix*.4}%
 \contentsline {section}{\numberline {.1}核心统一机制}{45}{section.Alph0.1}%
