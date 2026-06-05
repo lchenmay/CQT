@@ -586,6 +586,229 @@ Nuiten 在 \cite{Nuiten2013} 中将 Bohrification 推广到代数量子场论（
 \vspace{1cm}
 \noindent\textit{注：以上内容整合了 Gelfand 对偶与代数几何中仿射概形理论的平行结构，可作为学习笔记或教学材料使用．}
 
+\chapter{线性空间}
+
+物理空间$X$上的复平方可积函数构成量子Hilbert空间
+$H = L^2(X) = \{ \psi: X \to \mathbb C \mid \int_X |\psi(x)|^2 \text d x < \infty \}$，
+$\mathcal L(H) = \text{End} \ H$表示$H$上的全体线性算子，
+$\mathcal B(H)$表示$H$上的全体有界线性算子，
+它是含幺C*-代数。
+自伴算子的全体分别记为$\mathcal L(H)^\dagger$和$\mathcal B(H)^\dagger$，
+构成实线性空间。
+可观测量对应$\mathcal B(H)^\dagger$中的自伴算子。
+
+
+\section{正规算子}
+
+复Hilbert空间$H = (H,\langle \cdot, \cdot \rangle)$
+上的有界线性算子集合构成Banach代数$\mathcal B(H)$．
+根据 Riesz 表示定理，
+$\forall T\in\mathcal B(H)$，
+$\exists! T^*\in\mathcal B(H)$
+s.t.
+$\forall x, y \in H$，
+$\langle T x, y \rangle = \langle x, T^* y \rangle$，
+称 $T^*$ 为 $T$ 的 \textbf{伴随算子}．
+且满足：
+\begin{itemize}
+    \item $(T^*)^* = T$，
+    \item $(S T)^* = T^* S^*$，
+    \item $\|T^*\| = \|T\|$且$\|T^*T\| = \|T\|^2$．
+\end{itemize}
+
+矩阵代数都是Banach代数．
+实矩阵代数的伴随算子是转置$T^* = T^T$，
+复矩阵代数的伴随算子是共轭转置$T^* = \overline{T}^T$．
+有时直接用dagger表示伴随$T^* = T^\dagger$．
+
+称$T$为正规算子，若
+$T T^* = T^* T$．
+矩阵代数中，
+正规算子既是正规矩阵，
+它在某个标准正交基下可以酉对角化为：
+$T = U\Lambda U^{-1}$，
+其中$U$为酉矩阵，
+$\Lambda$为对角矩阵，
+对角元是特征值．
+最重要的正规算子是自伴算子和酉算子．
+
+$T = T^*$是自伴算子，
+满足 $TT^* = T^2 = T^*T$．
+实矩阵代数的自伴算子是对称矩阵，
+复矩阵代数的自伴算子是共轭对称矩阵即Hermite矩阵．
+自伴算子对角化的特征值是实数$\lambda_i \in \mathbb R$．
+自伴算子与内积的对称性相容，
+几何上体现了缩放而不旋转．
+
+$T^* = T^{-1}$是酉算子，
+满足 $TT^* = I = T^*T$．
+实矩阵代数的酉算子是正交矩阵，
+复矩阵代数的酉算子是酉矩阵．
+酉算子对角化的特征值$\lambda_i = \text e^{\theta_i\text i}$在单位圆．
+酉算子保持内积即等距正交，
+几何上体现了旋转而不缩放．
+
+线性映射可以分解为缩放和旋转，
+自伴算子和酉算子分别描述了这两种几何变换，
+它们作为正规算子所描述的这种有几何意义的对称性，
+通过对角化完全解耦为一维乘法，
+体现了谱的意义．
+
+正规矩阵$A$借助酉矩阵$U$的对角化$A = U\Lambda U^{-1}$，
+产生了对角矩阵$\Lambda = \text{diag}(\lambda_i)$．
+几何上，
+自伴算子的实值$\lambda_i$缩放不旋转，
+酉算子的单位复数$\lambda_i = \text e^{\theta_i\text i}$旋转不缩放．
+
+\section{谱}
+
+为了讨论一个复代数元$a \in A$在何种条件下相当于乘法，
+即有复数$\lambda$使得$\lambda 1_A = a$在某种条件下成立，
+需要讨论
+
+\begin{equation}
+\lambda 1_A - a
+\end{equation}
+\label{eq:diff-lambda-multiplicative}
+
+含幺代$A = (A,1_A)$上可以定义逆，
+其可逆元的全体构成一个群$A^\times$．
+复含幺代数$A$中，
+针对点$a\in A$的谱定义为
+
+$$
+\sigma(a) = \{ \lambda \in \mathbb C \mid \lambda 1_A - a \notin A^\times \} 
+$$
+
+其补集$\rho(a) = \mathbb C \setminus \sigma(a)$称为预解集．
+若$A$是Banach代数则$\sigma(a)$是非空紧集．
+
+矩阵代数$A$是典型的非交换代数，
+谱集$\sigma(a)$就是矩阵$a$的特征值集合．
+$A^\times = \{ a \in A \mid \det(a) \neq 0 \}$．
+这里的行列式定义了$a$的特征多项式，
+在代数封闭域$\mathbb C$中可分解为：
+
+$$
+p_a(\lambda) = \det(\lambda I - a) = \prod_i (\lambda - \lambda_i)
+$$
+
+矩阵$a$有谱
+
+$$
+\begin{aligned}
+\sigma(a) 
+&= \{ \lambda \in \mathbb C \mid \lambda 1_A - a \notin A^\times \} \\
+&= \{ \lambda \in \mathbb C \mid p_a(\lambda) = \det(\lambda 1_A - a) = 0 \}
+\end{aligned}
+$$
+
+复连续函数代数$A = C(X)$是典型的交换代数，
+记$Z(f) = \{ x\in X \mid f(x) = 0\}$为$f \in C(X)$的零点集/解集，
+$A^\times = \{ f \in C(X) \mid Z(f) = \varnothing \}$．
+函数$f\in C(X)$有谱
+
+$$
+\begin{aligned}
+\sigma(f) 
+&= \{ \lambda \in \mathbb C \mid \lambda 1_A - f \notin A^\times \} \\
+&= \{ \lambda \in \mathbb C \mid Z(\lambda 1_A - f) \neq \varnothing \}
+\end{aligned}
+$$
+
+非空的零点集意味着
+$\exists \lambda\in\sigma(f),x\in X$，
+使得函数$f$在$x$点上相当于幺元按照$\lambda$倍数的缩放．
+在函数的值域中
+$\forall \lambda \in f(X)$，
+$\exists x \in X$
+s.t.
+$\lambda 1_A(x) = f(x)$，
+即
+$\lambda 1_A - f \notin A^\times$，
+于是$f(X) \subseteq \sigma(f)$．
+$\forall \lambda \in \sigma(f)$，
+$\exists x \in X$
+s.t.
+$(\lambda 1_A - f)(x) = 0$，
+即 
+$\lambda 1_A(x) = \lambda = f(x)$
+于是$\sigma(f) \subseteq f(X)$，
+得到用零点集描述的谱集：
+
+$$
+\sigma(f) = f(X)
+$$
+
+
+\section{谱分解}
+
+算子$V\in \mathcal L(H)^\dagger$若满足：
+$P^2 = P$称为正交投影算子，
+简称投影算子，
+非正交的投影算子不是自伴算子，
+不在讨论范围。
+投影算子的全体记$P(H) \subseteq \mathcal L(H)^\dagger$。
+投影算子$P,Q\in P(H)$可等价地定义偏序$\preceq$：
+
+$$
+P \preceq Q 
+\quad \Longleftrightarrow \quad 
+\text{Im} \ P \subseteq \text{Im} \ Q 
+\quad \Longleftrightarrow \quad 
+PQ = P = QP
+$$
+ 
+有偏序范畴$(P(H),\preceq)$，
+它是完备格，
+最大元$1_H$对应全空间$H$，
+最小元$0_H$对应平凡空间$\{0\}$。
+投影算子$P\in P(H)$作用于$H$，
+使得像闭子空间$PH$产生了包含偏序。
+$H$的闭子空间全体构成格$(\text{Sub} \ H,\subseteq)$：
+
+$$
+\begin{aligned}
+  (P(H),\preceq) &\to (\text{Sub} \ H,\subseteq) \\
+  1_H &\mapsto 1_H H = H \\
+  0_H &\mapsto 0_H H = \{0\} \\
+  (P \preceq Q ) &\mapsto (PH \subseteq QH)
+\end{aligned}
+$$
+
+实际上在正交模格范畴中
+$(P(H),\preceq,1_H,0_H) \simeq (\text{Sub} \ H,\subseteq,H,\{0\})$。
+它们不是分配格，
+从而不是Bool代数。
+$\mathcal B(H)$中的交换von Neumann子代数全体记为$\mathcal V(H)$。
+对于$V\in\mathcal V(H)$，
+其交换性决定了$P(V) = P(H) \cap V$是$P(H)$的Bool子格。
+在context $V$内部逻辑是经典的。
+
+Hermite矩阵$A \in \mathbb C_n^n$相当于矩阵代数中的自伴算子，
+有对角化
+
+$$
+A = U \Lambda U^\dagger = \text{diag}(\{\lambda_i\})
+= \sum_i \lambda_i P_i
+$$
+
+其中$U$是酉矩阵，
+$\lambda_i \in \mathbb R$是实特征值。
+$E_i^i$是第$i$个对角元为$1$的矩阵，
+$P_i = U E_i^i U^\dagger \in P(\mathbb C_n^n)$是投影算子，
+投影到第$i$个特征向量。
+有谱分解：
+
+$$
+A = \sum_i \lambda_i P_i
+$$
+
+在一般的Hilbert空间中则为谱族：
+
+$$
+A = \int_X \lambda \text d P_\lambda
+$$
 
 
 \chapter{复值连续函数代数}
@@ -789,149 +1012,6 @@ $\mathbb C$上的处处全纯有界函数是常数．
 有界性约束了函数在全局不能逃逸，
 从而在局部也失去了波动的自由，
 最终只能退化为常数．
-
-\section{正规算子}
-
-复Hilbert空间$H = (H,\langle \cdot, \cdot \rangle)$
-上的有界线性算子集合构成Banach代数$\mathcal B(H)$．
-根据 Riesz 表示定理，
-$\forall T\in\mathcal B(H)$，
-$\exists! T^*\in\mathcal B(H)$
-s.t.
-$\forall x, y \in H$，
-$\langle T x, y \rangle = \langle x, T^* y \rangle$，
-称 $T^*$ 为 $T$ 的 \textbf{伴随算子}．
-且满足：
-\begin{itemize}
-    \item $(T^*)^* = T$，
-    \item $(S T)^* = T^* S^*$，
-    \item $\|T^*\| = \|T\|$且$\|T^*T\| = \|T\|^2$．
-\end{itemize}
-
-矩阵代数都是Banach代数．
-实矩阵代数的伴随算子是转置$T^* = T^T$，
-复矩阵代数的伴随算子是共轭转置$T^* = \overline{T}^T$．
-有时直接用dagger表示伴随$T^* = T^\dagger$．
-
-称$T$为正规算子，若
-$T T^* = T^* T$．
-矩阵代数中，
-正规算子既是正规矩阵，
-它在某个标准正交基下可以酉对角化为：
-$T = U\Lambda U^{-1}$，
-其中$U$为酉矩阵，
-$\Lambda$为对角矩阵，
-对角元是特征值．
-最重要的正规算子是自伴算子和酉算子．
-
-$T = T^*$是自伴算子，
-满足 $TT^* = T^2 = T^*T$．
-实矩阵代数的自伴算子是对称矩阵，
-复矩阵代数的自伴算子是共轭对称矩阵即Hermite矩阵．
-自伴算子对角化的特征值是实数$\lambda_i \in \mathbb R$．
-自伴算子与内积的对称性相容，
-几何上体现了缩放而不旋转．
-
-$T^* = T^{-1}$是酉算子，
-满足 $TT^* = I = T^*T$．
-实矩阵代数的酉算子是正交矩阵，
-复矩阵代数的酉算子是酉矩阵．
-酉算子对角化的特征值$\lambda_i = \text e^{\theta_i\text i}$在单位圆．
-酉算子保持内积即等距正交，
-几何上体现了旋转而不缩放．
-
-线性映射可以分解为缩放和旋转，
-自伴算子和酉算子分别描述了这两种几何变换，
-它们作为正规算子所描述的这种有几何意义的对称性，
-通过对角化完全解耦为一维乘法，
-体现了谱的意义．
-
-正规矩阵$A$借助酉矩阵$U$的对角化$A = U\Lambda U^{-1}$，
-产生了对角矩阵$\Lambda = \text{diag}(\lambda_i)$．
-几何上，
-自伴算子的实值$\lambda_i$缩放不旋转，
-酉算子的单位复数$\lambda_i = \text e^{\theta_i\text i}$旋转不缩放．
-
-\section{谱}
-
-为了讨论一个复代数元$a \in A$在何种条件下相当于乘法，
-即有复数$\lambda$使得$\lambda 1_A = a$在某种条件下成立，
-需要讨论
-
-\begin{equation}
-\lambda 1_A - a
-\end{equation}
-\label{eq:diff-lambda-multiplicative}
-
-含幺代$A = (A,1_A)$上可以定义逆，
-其可逆元的全体构成一个群$A^\times$．
-复含幺代数$A$中，
-针对点$a\in A$的谱定义为
-
-$$
-\sigma(a) = \{ \lambda \in \mathbb C \mid \lambda 1_A - a \notin A^\times \} 
-$$
-
-其补集$\rho(a) = \mathbb C \setminus \sigma(a)$称为预解集．
-若$A$是Banach代数则$\sigma(a)$是非空紧集．
-
-矩阵代数$A$是典型的非交换代数，
-谱集$\sigma(a)$就是矩阵$a$的特征值集合．
-$A^\times = \{ a \in A \mid \det(a) \neq 0 \}$．
-这里的行列式定义了$a$的特征多项式，
-在代数封闭域$\mathbb C$中可分解为：
-
-$$
-p_a(\lambda) = \det(\lambda I - a) = \prod_i (\lambda - \lambda_i)
-$$
-
-矩阵$a$有谱
-
-$$
-\begin{aligned}
-\sigma(a) 
-&= \{ \lambda \in \mathbb C \mid \lambda 1_A - a \notin A^\times \} \\
-&= \{ \lambda \in \mathbb C \mid p_a(\lambda) = \det(\lambda 1_A - a) = 0 \}
-\end{aligned}
-$$
-
-复连续函数代数$A = C(X)$是典型的交换代数，
-记$Z(f) = \{ x\in X \mid f(x) = 0\}$为$f \in C(X)$的零点集/解集，
-$A^\times = \{ f \in C(X) \mid Z(f) = \varnothing \}$．
-函数$f\in C(X)$有谱
-
-$$
-\begin{aligned}
-\sigma(f) 
-&= \{ \lambda \in \mathbb C \mid \lambda 1_A - f \notin A^\times \} \\
-&= \{ \lambda \in \mathbb C \mid Z(\lambda 1_A - f) \neq \varnothing \}
-\end{aligned}
-$$
-
-非空的零点集意味着
-$\exists \lambda\in\sigma(f),x\in X$，
-使得函数$f$在$x$点上相当于幺元按照$\lambda$倍数的缩放．
-在函数的值域中
-$\forall \lambda \in f(X)$，
-$\exists x \in X$
-s.t.
-$\lambda 1_A(x) = f(x)$，
-即
-$\lambda 1_A - f \notin A^\times$，
-于是$f(X) \subseteq \sigma(f)$．
-$\forall \lambda \in \sigma(f)$，
-$\exists x \in X$
-s.t.
-$(\lambda 1_A - f)(x) = 0$，
-即 
-$\lambda 1_A(x) = \lambda = f(x)$
-于是$\sigma(f) \subseteq f(X)$，
-得到用零点集描述的谱集：
-
-$$
-\sigma(f) = f(X)
-$$
-
 
 \section{乘性线性泛函}
 
@@ -1734,6 +1814,23 @@ L引入了高阶逻辑的特性：
   \item 隶属：可以描述 $x \in A$，其中$A$是幂对象$PX$的一个项
 \end{itemize}
 
+Mitchell–Bénabou 语言也称为内语言或类型论语言，
+是topos范畴中的一种内部语言，
+它允许我们像在集合论中处理集合和元素一样，
+在topos中谈论对象和态射。
+它是连接范畴论、类型论和逻辑的桥梁。
+
+Topos中的对象不一定有全局元素，
+即从终对象出发的态射不一定能区分所有对象。
+为了在topos内部推理，
+需要一种不依赖全局点的语言。
+MB语言提供了一种类型论式的语法，
+可以像在集合论中语言使用变量、项和公式，
+但语义解释在topos中进行，
+使用广义元素即任意对象到目标对象的态射，
+代替全局点。
+
+
 \chapter{概率}
 
 \chapter{量子理论}
@@ -1816,42 +1913,144 @@ $$
 
 \section{Topos}
 
-量子Hilbert空间$H$上的有界线性算子全体构成一个非交换的C*-代数
-$\mathcal B(H) \in \textbf{C*}$．
-其中有交换von Neumann子代数，
-以这些子代数为对象，
-以包含为态射，
-构成范畴$\mathcal V(H) \in \textbf{CC*}$．
-这个范畴的预层构成我们要讨论的Topos：
+物理空间$X$上的复平方可积函数构成量子Hilbert空间$H = L^2(X)$，
+可观测量对应$\mathcal B(H)^\dagger$中的自伴算子。
+以含幺交换von Neumann子代数$V \subseteq \mathcal B(H)$为对象，
+$\forall A,B \in V:\ [A,B] = 0$，
+以嵌入为态射，
+构成偏序范畴$(\mathcal V(H),\leq)$。
+这里的对象$V\in\mathcal V(H)$是一组可以同时被赋予确定值的相容可观测量构成的context。
+在范畴上构造预层范畴$\textbf{Set}^{\mathcal V(H)^\text{op}}$。
 
-$$
-\textbf{Set}^{\mathcal V(H)}
-$$
+含幺交换von Neumann子代数$V$上，
+讨论其含幺乘性线性泛函的集合，
+即Gelfand谱$\Delta(V)$，
+它具有拓扑结构，
+是紧Hausdorff空间。
+$P\succeq Q$表示$P$投影到更大的子空间$Q$，
+这是一种嵌入偏序，
+产生偏序范畴$(\mathcal V(H),\succeq)$。
+这一反变函子过程视为预层$\underline\Sigma \in \textbf{Set}^{\mathcal V(H)^\text{op}}$，
+称为谱预层。
+产生Gelfand谱中的限制映射：
 
-谱预层作为反变函子：
-
-$$
+\begin{equation}
 \begin{aligned}
-\underline{\Sigma}: \mathcal V(H)^\text{op} &\to \textbf{Set} \\
-V &\mapsto \underline{\Sigma}(V) = \underline{\Sigma}_V 
+  \underline\Sigma: \mathcal V(H)^\text{op} &\to \textbf{Set} \\
+  V &\mapsto \underline\Sigma(V) = \Delta(V)
 \end{aligned}
+\end{equation}
+\label{eq:spectral-presheaf}
+
+投影算子$P\in P(H)$不一定属于某个由含幺交换von Neumann子代数$V\in\mathcal V(H)$。
+需要用$V$中最接近$P$的投影算子来近似$P$。
+正交模格范畴
+$(P(H),\preceq,1_H,0_H) \simeq (\text{Sub} \ H,\subseteq,H,\{0\})$。
+不是分配格，
+从而不是Bool代数。
+作者引用了Daseinisation的概念，
+源自海德格尔的 Dasein（此在/存在），
+后缀 "-isation" 表示“使……成为存在/带入存在”的过程。
+外Daseinisation从上方逼近，
+找$V$中大于等于$P$的最小投影；
+内Daseinisation从下方逼近，
+找$V$中小于等于$P$的最大投影。
+
+一个投影算子$P\in P(H)$代表一个命题，
+而$P$不一定属于某个由含幺交换von Neumann子代数代表的具体context $V\in\mathcal V(H)$。
+我们关注从context $V$的视角看$P$，
+则需要用$V$中最接近$P$的投影算子来近似$P$。
+
+含幺交换von Neumann子代数$V$中所有的投影算子是集合$\mathcal O(V) = P(V)$，
+按照格的结构，
+分别构造内dasein和外dasein
+预层$\mathcal O,\mathcal I \in \textbf{Set}^{\mathcal V(H)^\text{op}}$，
+
+
+\section{Kochen‑Specker定理}
+
+Kochen-Specker 定理\cite{KochenSpecker1967}
+说明谱预层 $\underline{\Sigma} \in \textbf{PSh}$ 
+(\ref{eq:spectral-presheaf})
+无全局元素：
+
+$$
+\Gamma \Sigma = \varnothing
 $$
 
-$V\in\mathcal V(H)$是von Neumann含幺交换子代数，
-$\underline{\Sigma}_V$定义为$V$的Gelfand谱，
-也就是$V$的所有特征的集合，
-即$\lambda \in \mathbb C^V$有$\lambda(\hat 1)=1$．
-(Flori 2nd p.4)
+其中 $\Gamma: \textbf{PSh} \to \textbf{Set}$ 为全局截面函子。
+
+
+设 $\gamma \in \Gamma\underline{\Sigma}$，定义赋值 $v: B(H)_{\text{sa}} \to \mathbb{R}$ 如下：
+
+\begin{enumerate}
+    \item 对任意自伴算子 $\hat{A}$，选取包含 $\hat{A}$ 的交换子代数 $V$（如 $\hat{A}$ 生成的 $C^*$-代数）
+    \item 定义 $v(\hat{A}) := \gamma_V(\hat{A})$
+\end{enumerate}
+
+\textbf{良定义性}：若 $\hat{A} \in V_1 \cap V_2$，取 $V_3 \supseteq V_1 \cup V_2$，则
+\[
+\gamma_{V_1}(\hat{A}) = \gamma_{V_3}|_{V_1}(\hat{A}) = \gamma_{V_3}(\hat{A}) = \gamma_{V_3}|_{V_2}(\hat{A}) = \gamma_{V_2}(\hat{A})
+\]
+
+\textbf{验证 Kochen-Specker 条件}：
+\begin{itemize}
+    \item \textbf{值规则}：$\gamma_V(\hat{A}) \in \sigma(\hat{A})$（Gel'fand 谱的性质）
+    \item \textbf{函数条件}：若 $\hat{B} = f(\hat{A})$，取 $V$ 同时包含 $\hat{A},\hat{B}$，则
+    \[
+    v(\hat{B}) = \gamma_V(f(\hat{A})) = f(\gamma_V(\hat{A})) = f(v(\hat{A}))
+    \]
+\end{itemize}
+
+因此，每个全局截面给出一个 Kochen-Specker 赋值。
+
+\subsection{Kochen-Specker 赋值 $\Rightarrow$ 全局截面}
+
+设 $v$ 是 Kochen-Specker 赋值，对每个 $V \in \mathcal{V}(H)$ 定义：
+\[
+\gamma_V(\hat{A}) := v(\hat{A}), \quad \forall \hat{A} \in V
+\]
+
+\textbf{验证 $\gamma_V$ 是乘法泛函}：
+\begin{itemize}
+    \item 线性：由 FUNC 可导出 $v$ 在交换子代数上线性
+    \item 乘法：$\gamma_V(\hat{A}\hat{B}) = v(\hat{A}\hat{B}) = v(\hat{A})v(\hat{B}) = \gamma_V(\hat{A})\gamma_V(\hat{B})$
+    \item 单位元：$\gamma_V(\hat{1}) = v(\hat{1}) = 1$
+\end{itemize}
+
+\textbf{一致性}：对 $V' \subseteq V$，$\hat{A} \in V'$，
+\[
+\gamma_{V'}(\hat{A}) = v(\hat{A}) = \gamma_V(\hat{A}) = \gamma_V|_{V'}(\hat{A})
+\]
+
+因此，每个 Kochen-Specker 赋值给出一个全局截面。
+
+\subsection{结论}
+
+上述双向构造建立了 Kochen-Specker 赋值与谱预层全局截面之间的一一对应。因此：
+
+\[
+\boxed{\text{存在 Kochen-Specker 赋值} \;\Longleftrightarrow\; \Gamma\underline{\Sigma} \neq \varnothing}
+\]
+
+取其逆否命题，Kochen-Specker 定理（$\dim H \ge 3$ 时不存在赋值）等价于：
+
+\[
+\boxed{\Gamma\underline{\Sigma} = \varnothing \quad \text{当 } \dim H \ge 3}
+\]
+
+\textbf{物理意义}：谱预层 $\underline{\Sigma}$ 无全局截面是 Kochen-Specker 定理在拓扑斯框架中的几何表述。它揭示了量子理论无法具有经典意义的“微观态”（全局赋值），而只能在每个语境 $V$ 中局部地赋值。这正是 D\"oring-Isham 框架引入\textbf{具身化}（daseinisation）和\textbf{拟态}（pseudo-state）来替代传统微观态的根本原因。
 
 \backmatter
 
 \appendix
 
-\chapter{附录A：Banaschewskia}
+\chapter{附录：Banaschewskia2006}
 
 Bernhard Banaschewskia, and Christopher J. Mulvey.
 A globalisation of the Gelfand duality theorem.
 Annals of Pure and Applied Logic 137 (2006) 62–103.
+\cite{BanaschewskiMulvey2006}
 
 这篇论文的主要贡献是讨论了Grothendieck topos中，
 Gelfand对偶定理的构造性版本：
@@ -1872,89 +2071,179 @@ C(M) \arrow[u]                                           &  &  &  & M = \text{Ma
 \end{tikzcd}
 $$
 
-
-\section{Grothendieck topos}
-
-\begin{itemize}
-  \item 
-  标题：A globalisation of the Gelfand duality theorem（Gelfand对偶定理的全局化）
-  \item 
-  核心成就：在任何Grothendieck topos $\mathbb E$ 中，证明交换 $C^\star$-代数范畴与紧完全正则 locale 范畴之间的对偶等价．
-  \item 
-  作者：Banaschewski \& Mulvey（两人是20世纪末至21世纪初将 Gelfand 理论完全构造化/Topos化的核心人物）
-  \item 
-发表年份：2006年（但工作始于1980年，历时26年）
-\end{itemize}
-
-等价范畴$\textbf{CC}^\star \simeq \textbf{CCRL}$：
-
-$$
-% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAB12cYAPHAIwBmwAMIiAvgD1OcHHQBOIcaXSZc+QigAs5KrUYs2nbnyGiRAJQAy4pSpAZseAkTIBGPfWatEIAIIABAC8ASIAFMa8OMAAsnQ8AMpoMADG4gGcAX4AlHaqThpEOh7UXoa+kXyx8Ump6Zl+eQ5qzpokpABMngY+IOExucr56i7and3ebDHBGVxR1YnJabOhYQNKejBQAObwRKCC8hAAtkgd1DgQSADMpT1Gc1Vxi3Ug1Ax0-DAMAAothb4GDBBDgmocTkgAKwXK6IHT6Sa+AAW0nYxzoOCR-H4oTeIA+X1+-1G+OBoKGIHBpzhMLOFKpN1piEh4go4iAA
-\begin{tikzcd}
-\textbf{CC}^\star                                        &  &  &  & \textbf{CCRL}                                         \\
-A = C(\text{MaxSpec} \ A) \arrow[rrrr, "\text{MaxSpec}"] &  &  &  & \text{MaxSpec} \ A \arrow[d]                          \\
-C(M) \arrow[u]                                           &  &  &  & M = \text{MaxSpec} \ C(M) \arrow[llll, "h^\mathbb C"]
-\end{tikzcd}
-$$
-
-1940年代的经典Gelfand理论建立了$\textbf{CC}^\star \stackrel{\text{MaxSpec}}{\longrightarrow} \textbf{CHaus}$的对偶．
+1940年代的经典Gelfand理论建立了交换C*-代数和紧Hausdorff空间的对偶．
 所有的构造都依赖点和ZFC，
 排中律和选择公理都成立．
-
 Banaschewski和Mulvey的工作，
 在Grothendieck topos不需要排中律和选择公理．
-基于紧完全正则locale让拓扑摆脱了对点的依赖，
+基于紧完全正则locale范畴$\textbf{CCRLoc}$让拓扑摆脱了对点的依赖，
 用开集的frame代替了点集．
 使得Gelfand对偶不仅在点集宇宙成立，
 也在任何topos宇宙，
 如层范畴、
 群作用范畴内部成立．
 
+Gelfand 对偶告诉我们，交换 C*-代数等价于拓扑空间（经典物理的相空间）．
+量子力学的本质是可观测量的算子代数通常是非交换的．
+量子力学可以被看作是非交换拓扑或非交换几何．
+在量子理论中，我们不再问点在哪里，
+而是通过算子代数来定义系统的状态．
 
-现代数学和理论物理的核心：如何将“空间”的概念代数化，并将其与逻辑和物理演化统一起来．
+Topos 理论是连接逻辑与几何的桥梁
+（通过 Curry-Howard-Lambek 同构）：
+Topos 是拓扑空间的推广（层的范畴），
+每个 Topos 都有其内部语言（一种类型论）．
+在 Topos 中，逻辑不再是排中律必然成立的经典逻辑，而是直觉主义逻辑．
+类型论（Type Theory）是这种逻辑的符号化表达．
 
-这几个领域的关系可以概括为：通过“范畴论”作为骨架，将逻辑（类型论/语言）、几何（拓扑空间/Topos）与观测物理（Gelfand/量子理论）统一在“非交换几何”和“层论”的框架下．
-1. Gelfand Theory 与 量子理论：几何的代数化
+Topos 量子理论是近年来由 Chris Isham 和 Andreas Döring 等人提出的前沿框架．
+既然量子力学因为非交换性而没有经典点空间，
+我们可以寻找一个特定的 Topos，
+使得在这个 Topos 的内部逻辑下，
+量子力学看起来像经典力学．
 
-Gelfand 对偶是理解这种关系的基础．
+通过对非交换代数的交换子代数进行层化（Bohr 观点），
+Gelfand 谱被推广为 Topos 中的对象．
+从而在一个Grothendieck topos中，
+用量子态作为类型论中的逻辑项(term)．
+量子状态被解释为 Mitchell–Bénabou 语言（一种高阶类型论语言）中的封闭项。
 
-    经典与交换： Gelfand 对偶告诉我们，一个交换 C∗-代数等价于一个拓扑空间（经典物理的相空间）．
 
-    量子与非交换： 量子力学的本质是可观测量的算子代数通常是非交换的．因此，量子力学可以被看作是“非交换拓扑”或“非交换几何”．
+\chapter{附录：DoeringIsham2011}
 
-    联系： 在量子理论中，我们不再问“点在哪里”，而是通过算子代数（Gelfand Theory 的推广）来定义系统的状态．
+Andreas Döring and Chris J. Isham.
+``What is a Thing?'': 
+Topos Theory in the Foundations of Physics.
+In New Structures for Physics.
+Bob Coecke.
+Lecture Notes in Physics,
+Vol. 813.
+pp. 753-937.
+Springer 2011.
+\cite{DoeringIsham2011}
 
-2. Topos 与 语言/类型论：逻辑的几何化
+\section{核心统一机制}
 
-Topos 理论是连接逻辑与几何的桥梁（通过 Curry-Howard-Lambek 同构）：
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{概念} & \textbf{经典物理} & \textbf{量子物理（拓扑斯表示）} \\
+\hline
+拓扑斯 $\tau$ & $\mathbf{Sets}$ & $\mathbf{Sets}^{\mathcal{V}(H)^{\mathrm{op}}}$ \\
+\hline
+类型符号 $\Sigma$ 的表示（状态对象） & 辛流形 $S$ & 谱预层 $\underline{\Sigma}$ \\
+\hline
+类型符号 $R$ 的表示（量值对象） & 实数 $\mathbb{R}$ & 预层 $\underline{R}^{\leftrightarrow}$ 或 $\underline{R}^{\succeq}$ \\
+\hline
+函数符号 $A: \Sigma\to R$ 的表示 & 函数 $A_\sigma: S\to\mathbb{R}$ & 自然变换 $\check{\delta}(\hat{A}):\underline{\Sigma}\to\underline{R}^{\leftrightarrow}$ \\
+\hline
+命题表示 & $S$ 的子集 & $\underline{\Sigma}$ 的子对象 \\
+\hline
+逻辑 & 布尔代数 & 海廷代数（直觉主义逻辑） \\
+\hline
+\textit{真值} & $\{0,1\}$ & $\Gamma\Omega_{\tau}$ 中的全局元素（筛） \\
+\hline
+\end{tabular}
+\end{center}
 
-    Topos 作为空间： Topos 是拓扑空间的推广（层的范畴）．
+\section{三大支柱的统一}
 
-    Topos 作为逻辑： 每一个 Topos 都有其内部语言（一种类型论）．在 Topos 中，逻辑不再是排中律必然成立的经典逻辑，而是直觉主义逻辑．
+\subsection{类型理论：形式语言 $L(S)$}
 
-    语言： 类型论（Type Theory）是这种逻辑的符号化表达．
+语言 $L(S)$ 包含以下基本类型符号：
+\begin{itemize}
+    \item $\Sigma$：状态对象的前语言符号
+    \item $R$：量值对象的前语言符号  
+    \item $\Omega$：子对象分类器的前语言符号
+    \item $1$：终对象符号
+    \item $PT$：类型 $T$ 的幂类型
+\end{itemize}
 
-3. Topos 量子理论（The Topos Approach to Quantum Theory）
+每个物理量对应一个函数符号 $A:\Sigma\to R$。该语言采用\textbf{直觉主义逻辑}的相继式演算作为演绎系统。
 
-这是近年来由 Chris Isham 和 Andreas Döring 等人提出的前沿框架，直接将上述概念串联：
+\subsection{逻辑：海廷代数与直觉主义推理}
 
-    核心思想： 既然量子力学因为非交换性而没有“经典点空间”，我们可以寻找一个特定的 Topos，使得在这个 Topos 的内部逻辑下，量子力学看起来像“经典力学”．
+在拓扑斯 $\tau$ 中：
+\begin{itemize}
+    \item 子对象分类器 $\Omega_\tau$ 给出真值对象
+    \item 任一对象 $X$ 的子对象集合 $\mathrm{Sub}(X)$ 构成\textbf{海廷代数}
+    \item 命题表示为 $\underline{\Sigma}$ 的子对象 $J\hookrightarrow\underline{\Sigma}$
+    \item 给定真值对象 $T$，命题的\textit{真值}为 $\nu(J\in T)\in\Gamma\Omega_\tau$
+\end{itemize}
 
-    Gelfand 的角色： 通过对非交换代数的“交换子代数”进行层化（Bohr 观点），构建一个谱 Topos．
+与经典布尔逻辑的关键区别：排中律不一定成立，即 $J\vee\neg J \neq \underline{\Sigma}$ 一般情况下。
 
-    联系： * 量子理论被放置在 Topos 中．
+\subsection{量子理论：在 $\mathbf{Sets}^{\mathcal{V}(H)^{\mathrm{op}}}$ 中的实现}
 
-        量子状态对应于 类型论 中的项．
+\subsubsection{语境范畴 $\mathcal{V}(H)$}
+\begin{itemize}
+    \item 对象：$B(H)$ 中的交换冯·诺依曼子代数
+    \item 态射：包含关系 $V'\subseteq V$
+    \item 每个对象代表一个“语境”或“经典快照”
+\end{itemize}
 
-        Gelfand 谱 被推广为 Topos 中的对象．
+\subsubsection{谱预层}
+\[\underline{\Sigma}(V) = \text{Gel'fand 谱}(\text{乘法线性泛函}\lambda: V\to\mathbb{C})\]
+Kochen-Specker定理 $\iff$ $\underline{\Sigma}$ 无全局元素（无微观态）
 
-{\bfseries 对偶性}——几何空间与其上的函数环之间的反变等价——是贯穿二十世纪数学与理论物理的一条隐秘主线．
+\subsubsection{具身化（Daseinisation）——类型到对象的映射}
 
-从 Gelfand 对偶（交换 C*-代数 ↔ 紧 Hausdorff 空间）到 Grothendieck 的概形理论（交换环 ↔ 仿射概形），再到非交换几何与 Topos 量子理论，对偶性始终扮演着“统一者”的角色．
+\textbf{外具身化}（从上近似）：
+\[\delta_o(\hat{P})_V := \bigwedge\{\hat{\alpha}\in P(V) \mid \hat{\alpha}\succeq \hat{P}\}\]
 
-在物理学中，这一思想尤为深刻：经典物理的相空间完全由其上的函数代数刻画；量子物理则通过非交换代数编码了更丰富的结构，而 Topos 理论试图在一个更大的数学宇宙中重新建立“经典”的描述．
+\textbf{内具身化}（从下近似）：
+\[\delta_i(\hat{P})_V := \bigvee\{\hat{\beta}\in P(V) \mid \hat{\beta}\preceq \hat{P}\}\]
 
-本书将从 Gelfand 理论的起源讲起，逐步深入到当代 Topos 量子理论的前沿．
+将命题“$A\in\Delta$”映射为 $\underline{\Sigma}$ 的子对象 $\delta_o(\hat{E}[A\in\Delta])$。
+
+\subsubsection{非交换谱定理}
+
+每个自伴算子 $\hat{A}$ 对应自然变换：
+\[\check{\delta}(\hat{A})_V(\lambda)(V') := \langle \lambda,\delta(\hat{A})_{V'}\rangle\]
+该映射 $\hat{A}\mapsto\check{\delta}(\hat{A})$ 是单射。
+
+\subsubsection{真值对象与拟态}
+
+\textbf{真值对象} $T_{|\psi\rangle}$（$\mathcal{O}$ 的子对象）：
+\[T_{|\psi\rangle_V} := \{\hat{\alpha}\in\mathcal{O}_V \mid \langle\psi|\hat{\alpha}|\psi\rangle = 1\}\]
+
+\textbf{拟态} $w_{|\psi\rangle}$（$\underline{\Sigma}$ 的子对象）：
+\[w_{|\psi\rangle_V} := \bigwedge\{\hat{\alpha}\in\mathcal{O}_V \mid |\psi\rangle\langle\psi| \preceq \hat{\alpha}\} = \delta_o(|\psi\rangle\langle\psi|)_V\]
+
+关键等价关系：
+\[\text{``}\delta(\hat{P})\in T_{|\psi\rangle}\text{''} \quad\Longleftrightarrow\quad \text{``}w_{|\psi\rangle}\subseteq\delta(\hat{P})\text{''}\]
+
+\section{统一的核心洞察}
+
+\begin{enumerate}
+    \item \textbf{语境性作为结构性特征}：交换子代数范畴 $\mathcal{V}(H)$ 编码了所有可能的“经典视角”，量子命题的真值在这些视角上变化，形成筛（sieve）。
+
+    \item \textbf{逻辑从外延变为内涵}：经典物理中命题真值由微观态 $s\in S$ 决定；量子物理中真值由真值对象 $T_{|\psi\rangle}$ 和拟态 $w_{|\psi\rangle}$ 决定——真值不在 $\{0,1\}$ 中，而在海廷代数 $\Gamma\Omega$ 中。
+
+    \item \textbf{类型作为范畴中的对象}：形式语言 $L(S)$ 的类型符号（$\Sigma,R,\Omega,1,PT$）在拓扑斯中被解释为对象；函数符号 $A:\Sigma\to R$ 被解释为态射。这使得物理量的“类型”与范畴结构内在统一。
+
+    \item \textbf{量子理论“看起来像”经典理论}：在拓扑斯 $\mathbf{Sets}^{\mathcal{V}(H)^{\mathrm{op}}}$ 内部，量子理论呈现出与经典物理在 $\mathbf{Sets}$ 中完全相同的结构——物理量是态射，命题是子对象，真值由（广义的）态给出。差异仅在于底层的拓扑斯不同。
+\end{enumerate}
+
+\section{结论}
+
+D\"oring和Isham通过以下对应建立了三者的统一：
+
+\[
+\boxed{\text{类型理论（语言 }L(S)\text{）} \xrightarrow{\text{表示}} \text{拓扑斯 }\tau_\varphi(S) \xrightarrow{\text{提供}} \text{逻辑（海廷代数）}}
+\]
+
+量子理论在拓扑斯 $\mathbf{Sets}^{\mathcal{V}(H)^{\mathrm{op}}}$ 中的实现表明：
+\begin{itemize}
+    \item 非交换性被编码为语境范畴的结构
+    \item Kochen-Specker定理等价于谱预层无全局元素
+    \item 直觉主义逻辑自然出现，排中律不成立
+    \item “具身化”（Daseinisation）将量子命题“带入存在”
+    \item 真值对象和拟态替代了经典微观态的角色
+\end{itemize}
+
+这一框架为量子引力等更深层理论提供了全新的数学工具，同时回应了海德格尔的追问：“什么是物？”——物是在多重语境中“部分存在”的东西。
+
 
 
 
