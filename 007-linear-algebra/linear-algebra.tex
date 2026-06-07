@@ -95,6 +95,856 @@
 
 \mainmatter
 
+\chapter{势}
+
+\textbf{原始版本}: [JCHA.IN](https://jcha.in/t/Zl5iYY3zE), [Flea Academy](https://fleaacademy.com/m/54864752)
+
+传统上，线性空间的引入表达了为集合赋予某种代数结构的想法．实际上，线性空间是一个非常复杂的代数结构，其构建需要幺半群、Abel群、环、域和模等概念．但让我们从另一种思维方式开始，即：
+
+\textbf{Hom函子利用域的内在结构将集合转化为线性空间．}
+
+\section{集合范畴}
+
+设 $X,Y$ 为集合，$f$ 为函数：
+
+$$
+\begin{aligned}
+f: X &\to Y \\
+x &\mapsto y = f(x)
+\end{aligned}
+$$
+
+这里有两行．第一行是从集合到集合的映射，第二行是从元素到元素的映射．也可以简写为：
+
+$$
+f: X \to Y :: x \mapsto y = f(x)
+$$
+
+函数 $f: X \to Y$ 是一个\textbf{箭头}（或\textbf{态射}）．所有函数箭头的集合构成了\textbf{集合范畴}，记作 $\textbf{Set}$，这是一个非常宏大的概念．
+
+每个函数箭头都有一对源端点和目标端点，即定义域 $s(f) = \text{Dom}\ f$ 和陪域 $t(f) = \text{Cod} \ f$，它们都是集合．集合作为函数箭头的端点，属于集合范畴 $\textbf{Set}$，是该范畴中的\textbf{对象}或\textbf{点}（区别于集合中的\textbf{点}或\textbf{元素}的概念）．假设 $X,Y$ 是集合，$f$ 是函数，我们记：
+$X,Y,f\in\textbf{Set}$．
+
+\section{基数}
+
+集合 $X\in\textbf{Set}$ 没有代数结构．我们唯一能获得的信息是集合中元素的个数，称为集合 $X$ 的\textbf{基数}，记作 $|X|$．
+
+$\varnothing = \{\}$ 是\textbf{空集}，$|\varnothing| = 0$．注意：原文写的是 $|\varnothing| = 1$，但这通常是错误的，空集的基数为 0．
+
+$\textbf{1} = \{1\}$ 是\textbf{单点集}，包含唯一一个元素，$|\textbf{1}| = 1$．
+
+$\textbf{2} = \{1,2\}$ 是\textbf{二元集}，$|\textbf{2}| = 2$．
+
+由有限个元素构成的集合是\textbf{有限集}．所有有限集及其之间的函数构成了\textbf{有限集合范畴}，记作 $\textbf{FinSet}$，它是集合范畴 $\textbf{Set}$ 的一个\textbf{子范畴}．
+
+接下来是无限集．像自然数集 $\mathbb N$ 这样的集合是\textbf{可数的}．所有可数集具有相同的基数，记作 $\aleph_0 = |\mathbb N|$．在实分析文献中，各种无限集具有更大的基数：
+
+$$
+\aleph_0 < \aleph_1 < \aleph_2 < \cdots
+$$
+
+所有基数的集合构成了\textbf{基数范畴}，记作 $\mathcal N$，其中 $\leq$ 作为箭头，基数作为点：
+
+$$
+0 \leq 1 \leq 2 \leq 3 \leq \cdots \leq \aleph_0 \leq \aleph_1 \leq \cdots
+$$
+
+给定一对集合 $X,Y\in\textbf{Set}$，以下命题等价：
+\begin{enumerate}
+    \item 存在从 $X \to Y$ 或从 $Y \to X$ 的双射；
+    \item $X \simeq Y$（同构）；
+    \item $|X| = |Y|$（基数相等）．
+\end{enumerate}
+因此，基数是具有相等基数的集合的等价类的描述：
+
+$$
+\mathcal N = \textbf{Set}/\sim
+$$
+
+\section{偏序集}
+
+$|\cdot|$ 是从集合范畴 $\textbf{Set}$ 到基数范畴的映射：
+
+$$
+\mathcal N = \{ 0 \leq 1 \leq 2 \leq 3 \leq \cdots \leq \aleph_0 \leq \aleph_1 \leq \cdots \}
+$$
+
+从集合到集合的映射是函数，而从范畴到范畴的映射是\textbf{函子}：
+
+$$
+\begin{aligned}
+|\cdot|: \textbf{Set} &\to \mathcal N \\
+X &\mapsto |X| \\
+Y &\mapsto |Y|
+\end{aligned}
+$$
+
+我们称之为\textbf{基数函子}．
+
+$(\mathcal N,\leq)$ 配备了偏序关系来比较基数，因此 $(\mathcal N,\leq)$ 是一个\textbf{偏序集}．事实上每个偏序集都是一个范畴，所以我们不会混淆 $\mathcal N$ 是范畴还是集合．
+
+对于集合范畴 $\textbf{Set}$，我们可以比较任意两个集合 $X,Y\in\textbf{Set}$．如果存在单射 $\iota: X \to Y$，则存在从 $X$ 到 $Y$ 的偏序关系，记作：
+
+$$
+X \hookrightarrow Y
+$$
+
+这是通过单射 $\iota$ 从 $X$ 到 $Y$ 的\textbf{包含}．单射 $\iota$ 的存在等价于 $|X| \leq |Y|$．
+
+现在我们可以得出结论：基数函子 $|\cdot|$ 保持了偏序结构：
+
+$$
+\begin{aligned}
+(\textbf{Set},\hookrightarrow) &\stackrel{|\cdot|}{\longrightarrow}(\mathcal N,\leq) \\
+X &\mapsto |X| \\
+Y &\mapsto |Y| \\
+(X \hookrightarrow Y) &\mapsto (|X| \leq |Y|)
+\end{aligned}
+$$
+
+这里共有四行．第一行是从范畴到范畴的映射，第二行和第三行是从对象到对象的映射，最后一行是从箭头到箭头的映射．
+\chapter{集合的算术运算}
+
+现在我们可以从集合的二元运算中推导出数的二元运算．
+
+\section{列向量表示}
+
+设
+\[
+X = \{a,b\},\quad Y = \{a,c,e\},\quad \mathbf{1} = \{1\}
+\]
+集合以及空集都可以用列向量表示：
+
+\[
+X = \begin{bmatrix}a\\b\end{bmatrix},\quad 
+Y = \begin{bmatrix}a\\c\\e\end{bmatrix},\quad 
+\varnothing = [],\quad \mathbf{1} = \begin{bmatrix}1\end{bmatrix}
+\]
+
+列向量的维数对应于相应集合的基数．
+
+\section{不交并}
+
+通过拼接列向量，可以形成一个新的列向量：
+
+\[
+X + Y = \begin{bmatrix}a\\b\end{bmatrix} \oplus \begin{bmatrix}a\\c\\e\end{bmatrix}
+= \begin{bmatrix}(X,a)\\(X,b)\\(Y,a)\\(Y,c)\\(Y,e)\end{bmatrix}
+\]
+
+这里使用了\textbf{直和}的符号 $\oplus$．我们稍后会解释，这种拼接就是集合范畴中的直和．注意 $a$ 出现了两次．为了区分它们来自不同的集合，我们使用了 $(X,a)$ 和 $(X,b)$ 的记号．列向量的拼接给出了一个新的集合：
+
+\[
+X + Y = \{(X,a),(X,b),(Y,a),(Y,c),(Y,e)\}
+\]
+
+这就是 $X$ 和 $Y$ 的\textbf{不交并}．同样地：
+
+\[
+Y + X = \begin{bmatrix}a\\c\\e\end{bmatrix} \oplus \begin{bmatrix}a\\b\end{bmatrix} 
+= \begin{bmatrix}(Y,a)\\(Y,c)\\(Y,e)\\(X,a)\\(X,b)\end{bmatrix}
+\]
+
+显然 $X + Y \simeq Y + X$，用范畴论的语言来说，这些集合在同构意义下相等：
+
+\[
+X + Y = Y + X
+\]
+
+因此 $(\textbf{Set},+)$ 构成一个\textbf{交换}加法系统．它有一个单位元 $\varnothing$，满足：
+
+\[
+X + \varnothing = \varnothing + X = X
+\]
+
+现在 $(\textbf{Set},+,\varnothing)$ 构成了一个交换\textbf{幺半群}．应用基数函子：
+
+\[
+\begin{aligned}
+\textbf{Set} &\stackrel{|\cdot|}{\longrightarrow} \mathcal N \\
+X &\mapsto |X| \\
+Y &\mapsto |Y| \\
+X + Y &\mapsto |X + Y| = |X| + |Y| \\
+X + \varnothing &\mapsto |X + \varnothing| = |X|
+\end{aligned}
+\]
+
+我们得到了数值运算中的交换幺半群 $(\mathcal N,+,0)$．
+
+\section{笛卡尔积}
+
+让 $X$ 的每个元素与 $Y$ 的每个元素相关联：
+
+\[
+(a,Y) = \begin{bmatrix}(a,a)\\(a,c)\\(a,e)\end{bmatrix},\quad
+(b,Y) = \begin{bmatrix}(b,a)\\(b,c)\\(b,e)\end{bmatrix}
+\]
+
+于是我们得到了列向量的\textbf{Kronecker积}：
+
+\[
+X \times Y = \begin{bmatrix}a\\b\end{bmatrix} \otimes \begin{bmatrix}a\\c\\e\end{bmatrix}
+= \begin{bmatrix}(a,a)\\(a,c)\\(a,e)\\(b,a)\\(b,c)\\(b,e)\end{bmatrix}
+\]
+
+这里使用了\textbf{张量积}的符号 $\otimes$．我们稍后会解释，这本质上就是集合范畴中的张量积．列向量的 Kronecker 积给出了一个新的集合：
+
+\[
+X \times Y = \{ (a,a),(a,c),(a,e),(b,a),(b,c),(b,e) \}
+\]
+
+这就是 $X$ 和 $Y$ 的\textbf{笛卡尔积}．同样地：
+
+\[
+Y \times X = \{ (a,a),(a,b),(c,a),(c,b),(e,a),(e,b) \}
+\]
+
+显然 $X \times Y \simeq Y \times X$，用范畴论的语言来说，这些集合在同构意义下相等：
+
+\[
+X \times Y = Y \times X
+\]
+
+因此 $(\textbf{Set},\times)$ 构成一个\textbf{交换}乘法系统．任何单点集都可以作为单位元，例如 $\mathbf{1} = \{1\}$，满足：
+
+\[
+X \times \mathbf{1} = \{ (a,1),(b,1) \},\quad \mathbf{1} \times X = \{ (1,a),(1,b) \}
+\]
+
+显然它们在同构意义下相等：
+
+\[
+X \times \mathbf{1} = X = \mathbf{1} \times X
+\]
+
+现在 $(\textbf{Set},\times,\mathbf{1})$ 构成了一个交换\textbf{幺半群}．应用基数函子：
+
+\[
+\begin{aligned}
+\textbf{Set} &\stackrel{|\cdot|}{\longrightarrow} \mathcal N \\
+X &\mapsto |X| \\
+Y &\mapsto |Y| \\
+X \times Y &\mapsto |X \times Y| = |X| \times |Y| \\
+X \times \mathbf{1} &\mapsto |X \times \mathbf{1}| = |X|
+\end{aligned}
+\]
+
+我们得到了数值运算中的交换幺半群 $(\mathcal N,\times,1)$．
+
+\section{交换半环}
+
+现在考虑
+
+\[
+X = \begin{bmatrix}a\\b\end{bmatrix},\quad 
+Y = \begin{bmatrix}a\\c\\e\end{bmatrix},\quad 
+Z = \begin{bmatrix}p\\q\end{bmatrix}
+\]
+
+我们有：
+
+\[
+X \times Z = \begin{bmatrix}a\\b\end{bmatrix} \otimes \begin{bmatrix}p\\q\end{bmatrix}
+= \begin{bmatrix}(a,p)\\(a,q)\\(b,p)\\(b,q)\end{bmatrix}
+\]
+
+\[
+Y \times Z = \begin{bmatrix}a\\c\\e\end{bmatrix} \otimes \begin{bmatrix}p\\q\end{bmatrix}
+= \begin{bmatrix}(a,p)\\(a,q)\\(c,p)\\(c,q)\\(e,p)\\(e,q)\end{bmatrix}
+\]
+
+另外注意到：
+
+\[
+\begin{aligned}
+(X+Y) \times Z &= 
+\left( \begin{bmatrix}a\\b\end{bmatrix} \oplus 
+\begin{bmatrix}a\\c\\e\end{bmatrix} \right) \otimes 
+\begin{bmatrix}p\\q\end{bmatrix} \\
+&= \begin{bmatrix}(X,a)\\(X,b)\\(Y,a)\\(Y,c)\\(Y,e)\end{bmatrix}
+\otimes 
+\begin{bmatrix}p\\q\end{bmatrix} \\
+&= \begin{bmatrix}
+((X,a),p)\\ ((X,a),q)\\
+((X,b),p)\\ ((X,b),q)\\
+((Y,a),p)\\ ((Y,a),q)\\
+((Y,c),p)\\ ((Y,c),q)\\
+((Y,e),p)\\ ((Y,e),q)
+\end{bmatrix}
+\end{aligned}
+\]
+
+显然，在同构意义下：
+
+\[
+X \times Z + Y \times Z = (X+Y) \times Z
+\]
+
+这就是\textbf{分配律}．有了这个性质，集合范畴 $(\textbf{Set},+,\varnothing,\times,\mathbf{1})$ 在加法和乘法下构成了一个\textbf{交换半环}．
+
+\chapter{Hom集与指数对象}
+
+\section{Hom集}
+
+设 $C$ 是一个范畴，例如 $C = \textbf{Set}$ 是集合范畴．一个范畴由箭头的集合构成．每个箭头有一对端点．如果我们固定端点，比如固定 $X$ 为源端点，$Y$ 为目标端点，我们就得到了一个受限的箭头集合：
+
+$$
+\text{Hom}(X,Y) = C(X,Y)
+$$
+
+这称为\textbf{Hom集}，是同态集（homomorphism set）的缩写．在许多范畴中，箭头就是同态，因此 Hom 集具有固定端点的箭头集合的含义．
+
+在 $C = \textbf{Set}$ 集合范畴中，它是所有 $X \to Y$ 函数的集合，记作：
+
+$$
+Y^X = \textbf{Set}(X,Y) = \text{Hom}(X,Y) = \{f: X \to Y \} \in \textbf{Set}
+$$
+
+这也是一个集合，因此是集合范畴中的一个对象．用 $Y^X$ 表示 Hom 集起初可能有些奇怪，不容易将函数集与指数联系起来．要理解这一点，我们仍然需要借助基数的概念．
+
+\section{单点集}
+
+给定集合 $Y = \{a,c,e\}$ 和单点集 $\mathbf{1} = \{1\}$，考虑以下形式的所有函数：
+
+$$
+\begin{aligned}
+f: \mathbf{1} &\to Y \\
+1 &\mapsto f(1)
+\end{aligned}
+$$
+
+这样的函数有 3 个：
+
+$$
+Y^{\mathbf{1}} = \{ f: \mathbf{1} \to Y\}
+= \{ f_a,f_b,f_c: f_a(1) = a,\ f_b(1) = b,\ f_c(1) = c \}
+$$
+
+有趣的是：
+
+$$
+|Y^{\mathbf{1}}| = |\textbf{Set}(\mathbf{1},Y)| = |\{f: \mathbf{1} \to Y\}| = |Y|
+$$
+
+在同构意义下：
+
+$$
+Y^{\mathbf{1}} = Y
+$$
+
+\textbf{要点：}
+\textbf{每个集合都可以表示为从单点集到这个集合的函数集．}
+
+因此，整个集合论都可以通过箭头来引入，而不是通过点/元素．
+
+\section{指数对象}
+
+二元集可以表示为直和：
+
+$$
+\mathbf{2} = \{1,2\} = \mathbf{1} + \mathbf{1}
+$$
+
+注意到：
+
+$$
+|Y^{\mathbf{2}}| = |Y^{\mathbf{1} + \mathbf{1}}| = |Y^{\mathbf{1}}| \times |Y^{\mathbf{1}}|
+$$
+
+并且对于任意集合 $X$，设 $|X| = m$：
+
+$$
+|Y^X| = |Y^{\underbrace{\mathbf{1} + \cdots + \mathbf{1}}_{m}}| = \underbrace{|Y^{\mathbf{1}}| \times \cdots \times |Y^{\mathbf{1}}|}_{m} = |Y|^{|X|}
+$$
+
+应用函子公式：
+
+$$
+\begin{aligned}
+\textbf{Set} &\stackrel{|\cdot|}{\longrightarrow} \mathcal{N} \\
+X &\mapsto |X| \\
+Y &\mapsto |Y| \\
+Y^X &\mapsto |Y^X| = |Y|^{|X|} \\
+\mathbf{1}^X &\mapsto |\mathbf{1}^X| = 1 \\
+Y^{\mathbf{1}} &\mapsto |Y^{\mathbf{1}}| = |Y|
+\end{aligned}
+$$
+
+我们从函数集 $Y^X$ 得到了数值上的指数运算．换句话说，$Y^X$ 本身作为一个集合，就是\textbf{集合的指数对象}．
+
+\section{Hom函子}
+
+我们需要固定一对端点来获得范畴的 Hom 集．仍然以 $C = \textbf{Set}$ 为例：
+
+$$
+Y^X = \textbf{Set}(X,Y) = \text{Hom}(X,Y)
+$$
+
+这类似于一个二元函数：
+
+$$
+\begin{aligned}
+f: A \times B &\to C \\
+(a,b) &\mapsto f(a,b)
+\end{aligned}
+$$
+
+固定一个变量，我们有：
+
+$$
+\begin{aligned}
+f(a,-): B &\to C \\
+b &\mapsto f(a,b)
+\end{aligned}
+\qquad\qquad
+\begin{aligned}
+f(-,b): A &\to C \\
+a &\mapsto f(a,b)
+\end{aligned}
+$$
+
+类似地，我们有一对函子：
+
+$$
+h_A = \textbf{Set}(A,-),\quad h^B = \textbf{Set}(-,B)
+$$
+
+满足：
+
+$$
+\begin{aligned}
+h_A: \textbf{Set} &\to \textbf{Set} \\
+X &\mapsto h_A X = \textbf{Set}(A,X) = X^A
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+h^B: \textbf{Set} &\to \textbf{Set} \\
+X &\mapsto h^B X = \textbf{Set}(X,B) = B^X
+\end{aligned}
+$$
+
+$h_A$ 称为\textbf{协变 Hom 函子}，$h^B$ 称为\textbf{反变 Hom 函子}．
+
+单点集的性质可以用协变 Hom 函子来描述：
+
+$$
+h_{\mathbf{1}} X = \textbf{Set}(\mathbf{1},X) = X^{\mathbf{1}} \simeq X
+$$
+
+而反变 Hom 函子在本讲义后续内容中会更有趣．
+
+\chapter{集合作为基}
+
+\section{列向量表示}
+
+前面我们用列向量表示集合：
+
+$$
+X = \{a,b\} = \begin{bmatrix}a\\b\end{bmatrix}
+$$
+
+列向量的维数对应于相应集合的基数（参见 [JCHA.IN](https://jcha.in/t/AXln9UTxr) 和 [Flea Academy 线性代数讲义 (2) 集合的和与积](https://fleaacademy.com/m/54864754)）．
+
+设 $X$ 为生成某种数学结构的\textbf{基}．标准过程是利用反变 Hom 函子 $h^A$ 进行自由生成：
+
+$$
+\begin{aligned}
+h^A: \textbf{Set} &\to \textbf{Set} \\
+X &\mapsto h^A X = \textbf{Set}(X,A) = A^X
+\end{aligned}
+$$
+
+当 $A = \mathbf{1}$ 为单点集时，这个过程是平凡的，因为：
+
+$$
+h^A X = A^X = \mathbf{1}^X
+$$
+
+且 $|\mathbf{1}^X| = 1$，不包含任何有意义的信息．因此我们从基数大于 $1$ 的集合 $A$ 开始．
+
+\section{幂集}
+
+考虑反变 Hom 函子 $h^{\mathbf{2}}$，其中 $\mathbf{2} = \{0,1\} \in \textbf{Set}$ 是二元集．设 $X \in \textbf{Set}$，$h^{\mathbf{2}}$ 给出了集合 $X$ 上的\textbf{特征函数}．对于子集 $A \subset X$，或者作为\textbf{幂集}的元素：
+
+$$
+A \in PX = \{ S: S \subset X \}
+$$
+
+在 Hom 集 $h^{\mathbf{2}} X = \mathbf{2}^X$ 中确定了一个特征函数：
+
+$$
+\begin{aligned}
+\chi_A: X &\to \mathbf{2} \\
+x &\mapsto \chi_A(x) = \begin{cases} 1, & x \in A \\ 0, & x \notin A \end{cases}
+\end{aligned}
+$$
+
+反之亦然．因此特征函数的集合与幂集同构：
+
+$$
+h^{\mathbf{2}} X = \mathbf{2}^X \simeq PX
+$$
+
+且它们具有相同的基数．设 $X$ 的基数为 $m = |X|$（有限或无限）：
+
+$$
+|h^{\mathbf{2}} X| = |\mathbf{2}^X| = |PX| = 2^m
+$$
+
+\section{列向量空间}
+
+给出集合的列向量表示：
+
+$$
+X = \{a,b,c\} = \begin{bmatrix}a\\b\\c\end{bmatrix},\quad 
+A = \{a,c\} = \begin{bmatrix}a\\c\end{bmatrix}
+$$
+
+由于 $A \subset X$，存在自然的单射 $A \hookrightarrow X$．根据特征函数的计算，$X$ 中的逐点谓词给出了一个二值列向量：
+
+$$
+A = \{a,c\}
+= \begin{bmatrix}\chi_A(a)\\ \chi_A(b) \\ \chi_A(c)\end{bmatrix}
+= \begin{bmatrix}a \in A\\ b \in A \\ c \in A\end{bmatrix}
+= \begin{bmatrix}1\\ 0 \\ 1\end{bmatrix}
+$$
+
+现在我们得到了 $X$ 的子集 $A$ 的二值列向量表示．幂集为：
+
+$$
+\mathbf{2}^X = \{ \varnothing,\{a\},\{b\},\{c\},\{a,b\},\{b,c\},\{c,a\},X \}
+$$
+
+或者等价地：
+
+$$
+\mathbf{2}^X = \left\{ 
+\begin{bmatrix}0\\0\\0\end{bmatrix},\ 
+\begin{bmatrix}1\\0\\0\end{bmatrix},\ 
+\begin{bmatrix}0\\1\\0\end{bmatrix},\ 
+\begin{bmatrix}0\\0\\1\end{bmatrix},\ 
+\begin{bmatrix}1\\1\\0\end{bmatrix},\ 
+\begin{bmatrix}0\\1\\1\end{bmatrix},\ 
+\begin{bmatrix}1\\0\\1\end{bmatrix},\ 
+\begin{bmatrix}1\\1\\1\end{bmatrix} 
+\right\}
+$$
+
+幂集 $\mathbf{2}^X$ 枚举了所有可能的二值列向量：
+
+$$
+\mathbf{2}^X = \mathbf{2}_m = \left\{ \begin{bmatrix}a_1 \\ \vdots \\ a_m\end{bmatrix} \right\}
+$$
+
+其中 $a_i \in \mathbf{2}$．$\mathbf{2}_m$ 是 $m = |X|$ 维的、取值于 $\mathbf{2}$ 的列向量空间．注意：
+
+$$
+|\mathbf{2}_m| = 2^m
+$$
+
+最终：
+
+$$
+h^{\mathbf{2}} X = \mathbf{2}^X \simeq PX \simeq \mathbf{2}_m
+$$
+
+且
+
+$$
+\dim \mathbf{2}_m = \dim \mathbf{2}^X = m = |X|
+$$
+
+列向量表示将我们带入了线性代数的领域．
+
+\section{基}
+
+设 $m = |X|$ 个单点集作为 $\mathbf{2}^X$ 的子集．设 $X = \{a,b,c\}$，这些单点集的列向量表示为：
+
+$$
+e_1 = \{a\} = \begin{bmatrix}1\\0\\0\end{bmatrix},\quad 
+e_2 = \{b\} = \begin{bmatrix}0\\1\\0\end{bmatrix},\quad 
+e_3 = \{c\} = \begin{bmatrix}0\\0\\1\end{bmatrix}
+$$
+
+$E = \{e_i\}$ 是 $X$ 的\textbf{计算基}，因为任意 $A \in PX$ 都可以表示为基向量的二值线性组合．即存在 $\{\lambda_i: \lambda_i \in \mathbf{2}\}$ 使得：
+
+$$
+A = \sum_i \lambda_i e_i
+$$
+
+这里的二值线性组合基于 $\mathbf{2}$ 的布尔代数结构中的加法（OR）和乘法（AND）．
+
+\section{自然嵌入}
+
+集合中的元素可以自然嵌入到幂集中：
+
+$$
+\begin{aligned}
+X &\hookrightarrow \mathbf{2}^X \\
+x &\mapsto \{x\}
+\end{aligned}
+$$
+
+这是一个很好的例子，展示了基元素如何嵌入到生成的数学结构中．使用列向量表示，设 $X = \{a,b,c\}$，对于作为基向量的 $a \in X$：
+
+$$
+\{a\} = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix} \in \mathbf{2}_3
+$$
+
+这是一个嵌入到列向量空间中的列向量．
+
+\chapter{自由函子}
+
+反变 Hom 函子 $h^{\mathbf{2}}$ 将集合转化为其幂集．这是最简单的情况．如果集合 $A$ 配备了某种数学结构，我们可以从 $h^A$ 中获得更多．
+
+\section{自由 Abel 群}
+
+设 $\textbf{Ab}$ 表示\textbf{Abel 群范畴}．$(\mathbb Z,+,0) \in \textbf{Ab}$ 是最常研究的 Abel 群．给定一个集合，反变 Hom 函子不仅给出一个 Hom 集，还给出一个 Abel 群：
+
+$$
+\begin{aligned}
+h^{\mathbb Z}: \textbf{Set} &\to \textbf{Ab} \\
+X &\mapsto h^{\mathbb Z} X = \mathbb Z^X = \textbf{Set}(X,\mathbb Z)
+\end{aligned}
+$$
+
+为了说明这一点，设 $X = \{a,b,c\}$ 且 $A \subset X$ 为一个子集．回忆特征函数在幂集中的作用．$X$ 的单点集在应用特征函数后成为一组基．经过必要的修改，这里是特征函数的 $\mathbb Z$ 版本：
+
+$$
+\begin{aligned}
+\chi_A: X &\to \mathbb Z \\
+x &\mapsto \chi_A(x) = \begin{cases} 1, & x \in A \\ 0, & x \notin A \end{cases}
+\end{aligned}
+$$
+
+对于单点集：
+
+$$
+\{a\} = \begin{bmatrix}\chi_{\{a\}}(a)\\ \chi_{\{a\}}(b) \\ \chi_{\{a\}}(c)\end{bmatrix} = \begin{bmatrix}1\\ 0 \\ 0\end{bmatrix},\quad
+\{b\} = \begin{bmatrix}\chi_{\{b\}}(a)\\ \chi_{\{b\}}(b) \\ \chi_{\{b\}}(c)\end{bmatrix} = \begin{bmatrix}0\\ 1 \\ 0\end{bmatrix},\quad
+\{c\} = \begin{bmatrix}\chi_{\{c\}}(a)\\ \chi_{\{c\}}(b) \\ \chi_{\{c\}}(c)\end{bmatrix} = \begin{bmatrix}0\\ 0 \\ 1\end{bmatrix}
+$$
+
+这几乎与幂集 $\mathbf{2}^X$ 的计算基 $E = \{e_i\}$ 相同．使用相同的记号，设计算基为取值于 $\mathbb Z$ 的列向量，即
+
+$$
+e_1 = \begin{bmatrix}1\\0\\0\end{bmatrix},\quad 
+e_2 = \begin{bmatrix}0\\1\\0\end{bmatrix},\quad 
+e_3 = \begin{bmatrix}0\\0\\1\end{bmatrix} \in \mathbb Z_3
+$$
+
+对于任意 $v \in \mathbb Z_3$，存在唯一的 $\mathbb Z$ 系数线性组合使得
+
+$$
+v = \sum_i \lambda_i e_i,\quad \lambda_i \in \mathbb Z
+$$
+
+显然，设 $m = |X|$，有
+
+$$
+|\mathbb Z_m| = |\mathbb Z|^m = |\mathbb Z^X|
+$$
+
+且
+
+$$
+\mathbb Z_m \simeq \mathbb Z^X
+$$
+
+列向量之间存在明显的加法结构，使得 $(\mathbb Z_m,+,0) \in \textbf{Ab}$ 成为一个 Abel 群．这个结构通过逐点加法与 $(\mathbb Z^X,+,0) \in \textbf{Ab}$ 同构．
+
+$\mathbb Z^X$ 是以 $X$ 为基生成的\textbf{自由 Abel 群}．也存在自然的嵌入：
+
+$$
+X \hookrightarrow \mathbb Z^X
+$$
+
+从列向量的角度来看，基向量被嵌入到列向量空间中：
+
+$$
+e_i \in \mathbb Z_m
+$$
+
+\section{自由线性空间}
+
+给定一个集合，使用一个域（例如复数域 $\mathbb C$），反变 Hom 函子不仅给出一个 Hom 集，还给出一个复线性空间：
+
+$$
+\begin{aligned}
+h^{\mathbb C}: \textbf{Set} &\to \textbf{Vct}_{\mathbb C} \\
+X &\mapsto h^{\mathbb C} X = \mathbb C^X = \textbf{Set}(X,\mathbb C)
+\end{aligned}
+$$
+
+经过必要的修改，这里是特征函数的 $\mathbb C$ 版本：
+
+$$
+\begin{aligned}
+\chi_A: X &\to \mathbb C \\
+x &\mapsto \chi_A(x) = \begin{cases} 1, & x \in A \\ 0, & x \notin A \end{cases}
+\end{aligned}
+$$
+
+应用 $X$ 的单点集，我们可以得到计算基．然后直接得到一个复线性空间，其复向量空间表示为：
+
+$$
+h^{\mathbb C} X = \mathbb C^X \simeq \mathbb C_m
+$$
+
+\section{自由函子}
+
+$h^{\mathbf{2}}$、$h^{\mathbb Z}$、$h^{\mathbb C}$ 都是反变 Hom 函子，它们以给定的集合为基生成数学结构．从范畴论的角度来看，这个过程相当标准．因此，无论 $A$ 是什么，$h^A$ 通常被称为\textbf{自由函子}．
+
+在本讲义中，我们对所生成数学结构的列表示特别感兴趣：
+
+$$
+h^A X = A^X \simeq A_m,\quad m = |X|
+$$
+
+在 $A$-列向量空间上，我们可以讨论标准的线性代数．
+
+\chapter{自由函子保持直和}
+
+\section{幂集}
+
+设 $X,Y \in \textbf{Set}$，$m = |X|$，$n = |Y|$．设 $A \in \mathbf{2}^X$ 和 $B \in \mathbf{2}^Y$ 是子集，表示为二值列向量：
+
+$$
+A = \begin{bmatrix} a_1 \\ \vdots \\ a_m \end{bmatrix} \in \mathbf{2}_m = \mathbf{2}^X,\quad 
+B = \begin{bmatrix} b_1 \\ \vdots \\ b_n \end{bmatrix} \in \mathbf{2}_n = \mathbf{2}^Y
+$$
+
+回忆我们已经讨论过使用列拼接表示两个集合的不交并（参见 [JCHA.IN](https://jcha.in/t/AXln9UTxr) 和 [Flea Academy 线性代数讲义 (2) 集合的和与积](https://fleaacademy.com/m/54864754)）：
+
+$$
+A + B = \begin{bmatrix}a_1 \\ \vdots \\ a_m\end{bmatrix} \oplus \begin{bmatrix}b_1 \\ \vdots \\ b_n\end{bmatrix} 
+= \begin{bmatrix}a_1\\ \vdots \\a_m \\ b_1 \\ \vdots \\b_n\end{bmatrix}
+$$
+
+这等价于说 $A + B \subset X + Y$ 或 $A + B \in \mathbf{2}^{X + Y}$．这个 $(m+n)$ 维列向量属于 $\mathbf{2}_{m+n}$，显然：
+
+$$
+\mathbf{2}^{X + Y} = \mathbf{2}_{m+n}
+$$
+
+集合 $X + Y$ 的和或不交并产生了幂集的\textbf{直和}以及表示列向量空间的直和，使得：
+
+$$
+\mathbf{2}^X \oplus \mathbf{2}^Y = \mathbf{2}^{X + Y},\quad \mathbf{2}_m \oplus \mathbf{2}_n = \mathbf{2}_{m+n}
+$$
+
+设 $\mathbf{2}_{\textbf{Col}}$ 表示各种维度的 $\mathbf{2}$-值列向量空间构成的范畴．配备了 $\oplus$ 运算后，该范畴是一个（在同构意义下）交换的加法系统．
+
+$$
+\begin{aligned}
+h^{\mathbf{2}}: (\textbf{Set},+) &\to (\mathbf{2}_{\textbf{Col}},\oplus) \\
+X &\mapsto h^{\mathbf{2}} X = \mathbf{2}^X = \mathbf{2}_m \\ 
+Y &\mapsto h^{\mathbf{2}} Y = \mathbf{2}^Y = \mathbf{2}_n \\ 
+X + Y &\mapsto h^{\mathbf{2}} (X + Y) = \mathbf{2}^{X+Y} = \mathbf{2}^X \oplus \mathbf{2}^Y = \mathbf{2}_m \oplus \mathbf{2}_n = \mathbf{2}_{m+n}
+\end{aligned}
+$$
+
+\section{自由 Abel 群}
+
+类似地，设 $\mathbb Z_{\textbf{Col}}$ 表示各种维度的 $\mathbb Z$-值列向量空间构成的范畴．配备了 $\oplus$ 运算后，该范畴是一个（在同构意义下）交换的加法系统．
+
+$$
+\begin{aligned}
+h^{\mathbb Z}: (\textbf{Set},+) &\to (\mathbb Z_{\textbf{Col}},\oplus) \\ 
+X &\mapsto h^{\mathbb Z} X = \mathbb Z^X = \mathbb Z_m \\ 
+Y &\mapsto h^{\mathbb Z} Y = \mathbb Z^Y = \mathbb Z_n \\ 
+X + Y &\mapsto h^{\mathbb Z} (X + Y) = \mathbb Z^{X+Y} = \mathbb Z^X \oplus \mathbb Z^Y = \mathbb Z_m \oplus \mathbb Z_n = \mathbb Z_{m+n}
+\end{aligned}
+$$
+
+\section{自由线性空间}
+
+对于一个域，例如 $\mathbb C$，设 $\mathbb C_{\textbf{Col}}$ 表示各种维度的 $\mathbb C$-值列向量空间构成的范畴．配备了 $\oplus$ 运算后，该范畴是一个（在同构意义下）交换的加法系统．
+
+$$
+\begin{aligned}
+h^{\mathbb C}: (\textbf{Set},+) &\to (\mathbb C_{\textbf{Col}},\oplus) \\
+X &\mapsto h^{\mathbb C} X = \mathbb C^X = \mathbb C_m \\ 
+Y &\mapsto h^{\mathbb C} Y = \mathbb C^Y = \mathbb C_n \\ 
+X + Y &\mapsto h^{\mathbb C} (X + Y) = \mathbb C^{X+Y} = \mathbb C^X \oplus \mathbb C^Y = \mathbb C_m \oplus \mathbb C_n = \mathbb C_{m+n}
+\end{aligned}
+$$
+
+\textbf{要点：}
+\textbf{自由函子保持直和．}
+
+\chapter{自由函子保持张量积}
+
+\section{幂集}
+
+设 $X,Y \in \textbf{Set}$，$m = |X|$，$n = |Y|$．设 $A \in \mathbf{2}^X$ 和 $B \in \mathbf{2}^Y$ 是子集，表示为二值列向量：
+
+$$
+A = \begin{bmatrix} a_1 \\ \vdots \\ a_m \end{bmatrix} \in \mathbf{2}_m = \mathbf{2}^X,\quad 
+B = \begin{bmatrix} b_1 \\ \vdots \\ b_n \end{bmatrix} \in \mathbf{2}_n = \mathbf{2}^Y
+$$
+
+回忆我们已经讨论过使用 Kronecker 积表示两个集合的笛卡尔积（参见 [JCHA.IN](https://jcha.in/t/AXln9UTxr) 和 [Flea Academy 线性代数讲义 (2) 集合的和与积](https://fleaacademy.com/m/54864754)）：
+
+$$
+A \times B = \begin{bmatrix}a_1 \\ \vdots \\ a_m\end{bmatrix} \otimes \begin{bmatrix}b_1 \\ \vdots \\ b_n\end{bmatrix} 
+= \begin{bmatrix}a_1 b_1 \\ a_1 b_2 \\ \vdots \\ a_2 b_1 \\ a_2 b_2 \\ \vdots \\ a_m b_n \end{bmatrix}
+$$
+
+这等价于说 $A \times B \subset X \times Y$ 或 $A \times B \in \mathbf{2}^{X \times Y}$．这个 $(mn)$ 维列向量属于 $\mathbf{2}_{mn}$，显然：
+
+$$
+\mathbf{2}^{X \times Y} = \mathbf{2}_{mn}
+$$
+
+集合的笛卡尔积 $X \times Y$ 产生了幂集的\textbf{张量积}以及表示列向量空间的张量积，使得：
+
+$$
+\mathbf{2}^X \otimes \mathbf{2}^Y = \mathbf{2}^{X \times Y},\quad \mathbf{2}_m \otimes \mathbf{2}_n = \mathbf{2}_{mn}
+$$
+
+设 $\mathbf{2}_{\textbf{Col}}$ 表示各种维度的 $\mathbf{2}$-值列向量空间构成的范畴．配备了 $\otimes$ 运算后，该范畴是一个（在同构意义下）交换的乘法系统．
+
+$$
+\begin{aligned}
+h^{\mathbf{2}}: (\textbf{Set},\times) &\to (\mathbf{2}_{\textbf{Col}},\otimes) \\
+X &\mapsto h^{\mathbf{2}} X = \mathbf{2}^X = \mathbf{2}_m \\  
+Y &\mapsto h^{\mathbf{2}} Y = \mathbf{2}^Y = \mathbf{2}_n \\ 
+X \times Y &\mapsto h^{\mathbf{2}} (X \times Y) = \mathbf{2}^{X \times Y} = \mathbf{2}^X \otimes \mathbf{2}^Y = \mathbf{2}_m \otimes \mathbf{2}_n = \mathbf{2}_{mn}
+\end{aligned}
+$$
+
+\section{自由 Abel 群}
+
+类似地，设 $\mathbb Z_{\textbf{Col}}$ 表示各种维度的 $\mathbb Z$-值列向量空间构成的范畴．配备了 $\otimes$ 运算后，该范畴是一个（在同构意义下）交换的乘法系统．
+
+$$
+\begin{aligned}
+h^{\mathbb Z}: (\textbf{Set},\times) &\to (\mathbb Z_{\textbf{Col}},\otimes) \\ 
+X &\mapsto h^{\mathbb Z} X = \mathbb Z^X = \mathbb Z_m \\ 
+Y &\mapsto h^{\mathbb Z} Y = \mathbb Z^Y = \mathbb Z_n \\  
+X \times Y &\mapsto h^{\mathbb Z} (X \times Y) = \mathbb Z^{X \times Y} = \mathbb Z^X \otimes \mathbb Z^Y = \mathbb Z_m \otimes \mathbb Z_n = \mathbb Z_{mn}
+\end{aligned}
+$$
+
+\section{自由线性空间}
+
+对于一个域，例如 $\mathbb C$，设 $\mathbb C_{\textbf{Col}}$ 表示各种维度的 $\mathbb C$-值列向量空间构成的范畴．配备了 $\otimes$ 运算后，该范畴是一个（在同构意义下）交换的乘法系统．
+
+$$
+\begin{aligned}
+h^{\mathbb C}: (\textbf{Set},\times) &\to (\mathbb C_{\textbf{Col}},\otimes) \\
+X &\mapsto h^{\mathbb C} X = \mathbb C^X = \mathbb C_m \\ 
+Y &\mapsto h^{\mathbb C} Y = \mathbb C^Y = \mathbb C_n \\ 
+X \times Y &\mapsto h^{\mathbb C} (X \times Y) = \mathbb C^{X \times Y} = \mathbb C^X \otimes \mathbb C^Y = \mathbb C_m \otimes \mathbb C_n = \mathbb C_{mn}
+\end{aligned}
+$$
+
+\textbf{要点：}
+\textbf{自由函子保持张量积．}
+
 \chapter{约定}
 
 我们会尽可能用箭头的方式阐述问题，
