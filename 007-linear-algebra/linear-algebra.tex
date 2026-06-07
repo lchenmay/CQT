@@ -1,0 +1,2364 @@
+%!TEX program = lualatex
+\documentclass[10pt, openany]{book}
+
+\usepackage{comment}
+\usepackage{silence}
+\WarningFilter{latex}{Command \underbar has changed}
+\WarningFilter{latex}{Command \underline has changed}
+
+% ============== 考虑出血的版式 ===================================
+\usepackage[
+    paperwidth=6in,
+    paperheight=9in,
+    top=0.8in,
+    bottom=0.8in,
+    inner=0.75in,
+    outer=0.6in,
+    bindingoffset=0.25in,
+    footskip=0.4in
+]{geometry}
+
+% ============== 语言和字体 ===================================
+\usepackage[x-4]{pdfx} 
+\usepackage{fontspec}
+\usepackage[provide=*, chinese]{babel}
+\usepackage{sectsty}
+
+
+\babelfont{rm}[
+    Path = ./font/,
+    Renderer = HarfBuzz,
+    BoldFont = {GFSDidot-Regular.ttf},
+    BoldFeatures = {RawFeature={embolden=3.0}},
+    ItalicFont = {timesi.ttf}
+]{GFSDidot-Regular.ttf}
+
+\babelfont{sf}[Path = ./font/, Renderer = HarfBuzz]{GFSDidot-Regular.ttf}
+\babelfont{tt}[Path = ./font/, Renderer = HarfBuzz]{NotoSerifSC-Regular.ttf}
+
+\babelfont[chinese]{rm}[
+    Path = ./font/,
+    Renderer = HarfBuzz,
+    BoldFont = {NotoSerifSC-ExtraBold.ttf},
+    ItalicFont = {StKaiTi.ttf}
+]{NotoSerifSC-Regular.ttf}
+
+\allsectionsfont{\rmfamily\bfseries}
+
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{quoting}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{tikz}
+\usepackage{graphicx}
+\usetikzlibrary{calc, positioning, arrows.meta}
+\usepackage{fancyhdr}
+\usepackage{mathtools,amsthm}
+\usepackage{bm} 
+\usepackage{libertine} 
+\usepackage[libertine]{newtxmath} 
+\usepackage{extarrows}
+\usepackage{tikz-cd} 
+\usepackage{nicematrix} 
+\usepackage{adjustbox} 
+\usepackage{framed} 
+\usepackage{scrextend}
+\changefontsizes{9.5pt} 
+
+\NiceMatrixOptions{
+  custom-line = {
+    letter = : ,
+    command = hdashline ,
+    tikz = { dashed }
+  }
+}
+
+\setlength{\parskip}{1em} 
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\textbf{线性代数讲义}}
+\fancyhead[LO]{\textit{范畴论观点}}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+\frontmatter
+\title{\textbf{线性代数讲义}\\ \large 范畴论观点}
+\author{Lao Chen}
+\date{\today}
+\maketitle
+\tableofcontents
+
+\mainmatter
+
+\chapter{约定}
+
+我们会尽可能用箭头的方式阐述问题，
+培养范畴论的思维方式．
+先从直观的图论入手，
+\textbf{图(graph)}定义为二元组$G=(V,E)$，
+其中$V$为\textbf{顶点(vertex)}集，
+$E$为\textbf{边(edge)}集．
+
+\begin{tikzpicture}[
+    >={Stealth[length=2.5mm,width=1.5mm]},
+    thick,
+    vNode/.style={circle, draw, minimum size=0.8cm, font=\small},
+    labelNode/.style={font=\large\bfseries}
+]
+
+    % 定义顶点
+    \node[vNode] (A1) at (0, 0) {1};
+    \node[vNode] (A2) at (2.5, 0) {2};
+    \node[vNode] (A3) at (0, -2.5) {3};
+
+    % 态射箭头
+    \draw[->] (A1) -- node[above] {$a$} (A2);
+    \draw[->] (A1) to[bend right=25] node[left] {$b$} (A3);
+    \draw[->] (A3) to[bend right=25] node[right] {$c$} (A1);
+    
+    % 自环
+    \path[->] (A1) edge[loop above, looseness=5] node[above] {$d$} (A1);
+    \path[->] (A2) edge[loop below, looseness=5] node[below] {$e$} (A2);
+
+\end{tikzpicture}
+
+这里$V=\{1,2,3\}$，
+$E=\{a,b,c,d,e\}$．
+边是一种箭头，
+给定一个箭头则蕴涵了起止端点的信息
+$1\stackrel{a}{\longrightarrow}2 \quad 
+1\stackrel{b}{\longrightarrow}3 \quad 
+3\stackrel{c}{\longrightarrow}1 \quad 
+1\stackrel{d}{\longrightarrow}1 \quad 
+2\stackrel{e}{\longrightarrow}2$，
+也可以写为
+$a: 1\to 2 \quad 
+b: 1\to 3 \quad 
+c: 3\to 1 \quad 
+d: 1\to 1 \quad 
+e: 2\to 2$．
+范畴论关注首尾相接的箭头的复合，
+下图中借助顶点$1$构造了复合箭头
+$3\stackrel{a \circ c}{\longrightarrow}2$：
+
+$$
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRACYQBfU9TXfIRTtyVWoxZsAjN14gM2PASIAWUdXrNWiEAGZuYmFADm8IqABmAJwgBbJCJA4ISKRonaQAY1mWb9xDcnF0QycS02Ol8QazsHamckMIAjGDAoJABaXTDNSR06AAIAHWKvLCsvQp9qBjpUhgAFfiUhECssYwALHAMuIA
+\begin{tikzcd}
+2 &  & 1 \arrow[ll, "a"] &  & 3 \arrow[ll, "c"] \arrow[llll, "a \circ c"', bend right]
+\end{tikzcd}
+$$
+
+这里在图中我们用反直觉的从右往左的箭头方向，
+这样是刻意为之的，
+在$2\stackrel{a}{\longleftarrow}1$和$1\stackrel{c}{\longleftarrow}3$复合时，
+$a \circ c$的左右顺序正好和箭头的左右顺序符合．
+
+这种顺序可以直接应用于更多类似的复合结构，
+如函数的复合．
+通常用如下方式描述函数的映射关系：
+
+$$
+\begin{aligned}
+f: X &\to Y \\
+x &\mapsto f(x) \\
+\end{aligned}
+$$
+
+或者写为$f: X \to Y :: x \mapsto f(x)$．
+当考虑函数的复合时，
+从右往左就更合适：
+
+% 去掉外层的 \resizebox
+\begin{center}
+\begin{tikzcd}[
+    column sep=1.8em,          % 调整列间距（替代 resizebox 的缩放功能）
+    nodes={scale=0.85},        % 整体缩放节点大小
+    ampersand replacement=\&
+]
+Z \&  \& Y \arrow[ll, "g"] \&  \& X \arrow[ll, "f"] \arrow[llll, "g \circ f"', bend right] \&  \& g(f(x)) = (g \circ f)(x) \&  \& f(x) \arrow[ll, "g"] \&  \& x \arrow[ll, "f", maps to] \arrow[llll, "g \circ f"', maps to, bend right]
+\end{tikzcd}
+\end{center}
+
+类似的在线性代数中，
+矩阵的乘法体现了线性映射的复合：
+
+\begin{center}
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZAJgBoAGAXVJADcBDAGwFcYkQAdDgW3pwAsARoIAEAJQD6xEAF9S6TLnyEUAFgrU6TVuy68Bw8RIDMs+SAzY8BIuQ00GLNok48+Q0ZOlyFV5UQA2ey0ndgAhAAoAQQAPAEoAXgiwqLiYs18lGxQADmDHHRdYjItFaxVkAEY7KgdtZxB0mU0YKABzeCJQADMAJwhuJEqaHAgkOxDCkCiSvoHxkbHEMkmGsNn+wcQAVkWkdRAceixGdl40OFGQOtCijfnEA6vEYxup9Z8QOa3hw6WVwQwMBQJAAWmMEwKaxEXAAxlherCRDMaIx6IDGAAFMr+Fy9LBtfg4e5bXZ-JCvECA4FgiFvaFwhFIlEgNEY7F+bIgfGE4nNGRAA
+\begin{tikzcd}[
+    column sep=1.8em,          % 调整列间距（替代 resizebox 的缩放功能）
+    nodes={scale=0.85},        % 整体缩放节点大小
+    ampersand replacement=\&
+]
+\mathbb R_2 \&  \& \mathbb R_2 \arrow[ll, "B"] \&  \& \mathbb R_3 \arrow[ll, "A"] \arrow[llll, "B \circ A"', bend right] \&  \& B(Ax)=(B \circ A)x \&  \& Ax \arrow[ll, "B"] \&  \& x \arrow[ll, "A", maps to] \arrow[llll, "B \circ A"', bend right]
+\end{tikzcd}
+\end{center}
+
+矩阵$A: \mathbb R_3 \to \mathbb R_2$把$3$维实列向量空间$\mathbb R_3$映射到$2$维空间$\mathbb R_2$，
+故其维度必然为$3$-行$2$-列，
+类似矩阵$B$的维度必然为$2$-行$2$-列，
+通过矩阵乘法将矩阵复合起来，
+构成$3$-行$2$-列的矩阵$B \circ A$．
+
+
+\chapter{集合}
+
+\section{集合范畴}
+
+为了不要一开始就用抽象语言吓坏读者，
+先只是审慎地引入集合范畴作为熟悉的例子，
+等到读者熟悉之后再回头讨论范畴论．
+我们用以下方式描述函数映射：
+
+$$
+\begin{aligned}
+f: X &\to Y \\
+x &\mapsto f(x) \\
+\end{aligned}
+$$
+
+上式第一行，
+函数$f$视为箭头，
+它的起点是集合$X$，
+终点是集合$Y$．
+给出了箭头则已然获得了起止点的信息．
+第二行则给出了元素级的具体映射．
+
+若要讨论所有的函数，
+势必涉及所有的集合．
+集合本身可以很大，
+而所有作为箭头的函数和作为对象的集合则构成一个抽象上巨大的概念，
+就是\textbf{集合范畴(category of sets)}，
+记为$\mathbf{Set}$．
+
+若说$f\in\mathbf{Set}$，
+即是说$f$是集合范畴中的箭头，
+也就是一个函数．
+若说$X,Y\in\mathbf{Set}$，
+即是说$X,Y$是集合范畴中的对象，
+也就是集合．
+
+常用的另一个范畴是有限集合范畴$\mathbf{FinSet}$，
+它是在集合范畴$\mathbf{Set}$中限定有限集合及其之间的函数得到的一个范畴．
+
+\section{势}
+
+若有有限集合$X,Y\in\mathbf{FinSet}$，
+具体的$X = \{a,b,c\}$，$Y=\{a,e\}$，
+若给出一个指标排序，则有列向量表示：
+
+$$
+X=\begin{pmatrix}x_1 \\ x_2 \\ x_3\end{pmatrix}=\begin{pmatrix}a \\ b \\ c\end{pmatrix},\ 
+Y=\begin{pmatrix}y_1 \\ y_2\end{pmatrix}=\begin{pmatrix}a \\ e\end{pmatrix}
+$$
+
+这里使用的指标集是
+$I_X = \overline 3 = [1,2,3]$
+和$I_Y = \overline 2 = [1,2]$．
+记$i\in I_X$即$1 \leq i \leq 3$，
+记$j\in I_Y$即$1 \leq j \leq 2$．
+于是列向量表示有时候简化为：
+
+$$
+X=\begin{pmatrix}x_i\end{pmatrix}_{i \in I_X},\ 
+Y=\begin{pmatrix}y_j\end{pmatrix}_{j \in I_Y}
+$$
+
+这是有限集合的情况，
+甚至对于无限可列集合乃至不可列集，
+也可以有抽象的列的概念．
+为防止混淆，
+用圆括号表示集合，
+用方括号表示普通意义的向量．
+
+用列向量并置，
+对集合的势有一个直观的对比，
+注意到$|X| = |I_X|$，
+两个集合势相等，
+则列向量表示的元素个数也相等，
+无论有限无限、可列不可列．
+以下命题等价：
+
+$$
+|X| = |Y| \ \Longleftrightarrow \  X \simeq Y
+$$
+
+从列向量表示的观点看，
+$|X| = |Y|$
+相当于两个列向量在每一个指标上都有一一对应．
+任意给定的指标集对都满足
+$|I_X| = |I_Y|$，
+而指标集只是对集合本身排序的描述,
+通过变换指标集，
+可以实现$X$和$Y$之间任何一一对应或者单满映射，
+使得$X \sim Y$．
+
+更进一步，
+集合范畴$\mathbf{Set}$中的所有集合，
+按照等势构成等价关系$\simeq$，
+构成商集：
+
+$$
+C = \mathbf{Set}/\sim
+$$
+
+它本质上就是势的全体．
+换句话说，
+是人类对等价集合的抽象，
+产生了数的概念．
+势的取值囊括了正整数到各种无穷大，
+$(C,+,0)$和$(C,\times,1)$
+自然有含幺交换的封闭加法和乘法结构，
+构成性质良好的代数系统．
+我们接下来看到，
+这种代数结构本质上是集合范畴中的运算赋予的．
+
+\section{幂集}
+
+集合上有一种结构，
+即把集合$X\in\textbf{Set}$构造幂集：
+
+$$
+PX = \{ A: \ A \subseteq X \}
+\simeq \textbf{2}^X = \{ \chi_A: \ X \to \textbf{2} \}
+$$
+
+幂集可以写成列向量空间的形式：
+
+$$
+\textbf{2}^X = \left\{
+\begin{bmatrix}
+x_1 \\ \vdots \\ x_n    
+\end{bmatrix}
+:\ x_i \in \textbf{2}
+\right\}
+$$
+
+这样子集就可以表示为二值列向量．
+例如$X=\{a,b,c\}$及$A=\{b,c\}$，
+若要表示子集关系$A \subseteq X$可以写为：
+
+$$
+A = \begin{pmatrix}
+b \\ c
+\end{pmatrix}
+\subseteq
+\begin{pmatrix}
+a \\ b \\ c
+\end{pmatrix}
+= X, \quad
+A = \begin{bmatrix}
+0 \\ 1 \\ 1
+\end{bmatrix}
+\subseteq
+\begin{bmatrix}
+1 \\ 1 \\ 1
+\end{bmatrix}
+= X, \quad
+A = \begin{bmatrix}
+0 \\ b \\ c
+\end{bmatrix}
+\subseteq
+\begin{bmatrix}
+a \\ b \\ c
+\end{bmatrix}
+= X
+$$
+
+在不混淆的情况下今后不再说明．
+
+\section{集合的加法}
+
+设 $X = \{a, b, c\}$，$Y = \{a,e\}$．
+注意到$X \cap Y = \{a\}$不是空集．
+往往我们需要区分作为$a\in X$和作为$a\in Y$的情况，
+为了对于元素重叠的出现保持代数独立性，
+需要给元素打上来源标记，
+用列向量表示如下：
+
+\begin{equation}
+X \sqcup Y 
+= \{ (X,a), (X,b), (X,c), (Y,a), (Y,e) \}
+= \begin{pNiceMatrix}
+    (X,a) \\ (X,b) \\ (X,c) \\ \hdashline
+    (Y,a) \\ (Y,e) 
+\end{pNiceMatrix}
+\end{equation}
+
+称为\textbf{不交并(Disjoint Union)}．
+简化记号后，
+在集合范畴$\mathbf{Set}$中，
+用不交并定义集合的加法，
+用直和记号表示：
+
+\begin{equation}
+X \oplus Y 
+=\begin{pmatrix} a \\ b \\ c \end{pmatrix}
+\oplus \begin{pmatrix} a \\ e \end{pmatrix}
+= \begin{pNiceMatrix}
+    a \\ b \\ c \\ \hdashline
+    a \\ e 
+\end{pNiceMatrix}
+\end{equation}
+
+显然$|X \oplus Y| = |X| + |Y|$，
+$X \oplus Y \simeq Y \oplus X$．
+空集$\varnothing$的特比之处是$|\varnothing| = 0$，
+有$X \oplus \varnothing \simeq X$．
+按照范畴论的惯例，
+常常对数学结构放宽相等的条件，
+使得抽象的理论有更大的适应性．
+最常见的方式就是用$\simeq$替换$=$，
+即所谓的“在同构的意义下相等”．
+于是可以直接写为：
+
+$$X \oplus Y = Y \oplus X, \quad 
+X \oplus \varnothing = X$$
+
+这意味着集合范畴$\mathbf{Set}$这个巨大的数学概念，
+在加法和空集下构成了交换含幺封闭的加法系统
+$(\mathbf{Set},\oplus,\varnothing)$，
+且势保持了这个代数结构，
+构成了数字的加法系统：
+
+$$
+\begin{aligned}
+|\cdot|: \mathbf{Set} \times \mathbf{Set} &\to \mathbf{Set} \\
+X \oplus Y &\mapsto |X \oplus Y| = |X| + |Y| \\
+X \oplus \varnothing &\mapsto |X \oplus \varnothing| = |X| + |\varnothing| = |X| \\
+\end{aligned}
+$$
+
+\section{集合的乘法}
+
+设 $X = \{a, b, c\}$，$Y = \{a,e\}$．
+按顺序从$X$和$Y$中各取出一个元素，
+构成\textbf{卡积(Cartesian product)}中的二元组
+$(x,y) \in X \times Y$．
+
+考虑某种称为\textbf{张量积(tensor product)}的二元（不一定交换的）运算$\otimes$，
+从二元组生成一个新元素$x \otimes y\in Z$，
+它属于某个目前尚不确定的集合$Z$．
+最简单的例子就是对二元组不做任何处理：
+
+$$
+\begin{aligned}
+\otimes: X \times Y &\to Z = X \times Y \\
+(x,y) &\mapsto x \otimes y = (x,y) \\
+\end{aligned}
+$$
+
+这样方式定义的$x \otimes y = (x,y)$的全体构成集合的张量积
+$X \otimes Y = X \times Y$．
+它保留了$X$和$Y$元素配对的所有信息，
+而不施加任何额外的代数缩并，
+而张量的乐趣在于在比集合更复杂的数学结构中，
+可以定义各种有趣的代数缩并．
+保持列向量$X$和$Y$的排序来考察$X \otimes Y$的列向量表示：
+
+\begin{equation}
+\begin{aligned}
+X \otimes Y 
+&=\begin{pmatrix}x_1 \\ x_2 \\ x_3\end{pmatrix} \otimes \begin{pmatrix}y_1 \\ y_2\end{pmatrix}
+=\begin{pmatrix}a \\ b \\ c\end{pmatrix} \otimes \begin{pmatrix}a \\ e\end{pmatrix} \\
+&=\begin{pmatrix}x_1 \\ x_2 \\ x_3\end{pmatrix} \otimes Y
+=\begin{pmatrix}a \\ b \\ c\end{pmatrix} \otimes Y \\
+&=\begin{pmatrix}x_1 \otimes Y \\ x_2 \otimes Y \\ x_3 \otimes Y\end{pmatrix}
+=\begin{pmatrix}a \otimes Y \\ b \otimes Y \\ c \otimes Y\end{pmatrix} \\
+&=\begin{pmatrix}x_1 \otimes y_1 \\x_1 \otimes y_2 \\
+    x_2 \otimes y_1 \\x_2 \otimes y_2 \\
+    x_3 \otimes y_1 \\x_3 \otimes y_2 \\\end{pmatrix}
+=\begin{pmatrix}a \otimes a \\ a \otimes e \\
+    b \otimes a \\ b \otimes e \\
+    c \otimes a \\ c \otimes e \\\end{pmatrix} 
+=\begin{pmatrix}(a,a) \\ (a,e) \\
+    (b,a) \\ (b,e) \\
+    (c,a) \\ (c,e) \\\end{pmatrix} \\
+&= \{ (x_i,y_j) \ | \ 1 \leq i \leq 3,\ 1 \leq j \leq 2 \} \\
+\end{aligned}
+\end{equation}\label{eq:set-tensor}
+
+
+显然$|X \otimes Y| = |X| \times |Y|$，
+$X \otimes Y \simeq Y \otimes X$．
+这里特别重要的是单点集，
+即只包含一个元素的集合．
+由于所有单点集都同构，
+故常用$\mathbf{1} = \{1\}$来代表任何单点集．
+$|\mathbf{1}| = 1$．
+有$X \otimes \mathbf{1} \otimes X$．
+类似集合加法，
+用$\simeq$替换$=$，
+即所谓的“在同构的意义下相等”．
+于是可以直接写为：
+
+$$X \otimes Y = Y \otimes X, \quad 
+X \otimes \mathbf{1} = X$$
+
+集合范畴$\mathbf{Set}$在乘法和单点集下构成了交换含幺封闭的乘法系统
+$(\mathbf{Set},\otimes,\mathbb{1})$，
+且势保持了这个代数结构，
+构成了数字的乘法系统：
+
+$$
+\begin{aligned}
+|\cdot|: \mathbf{Set} \times \mathbf{Set} &\to \mathbf{Set} \\
+X \otimes Y &\mapsto |X \oplus Y| = |X| + |Y| \\
+X \otimes \textbf{1} &\mapsto |X \otimes \mathbb{1}| = |X| \times |\mathbb{1}| = |X| \\
+\end{aligned}
+$$
+
+
+\section{集合的指数}
+
+\textbf{指数（函数对象）}：$|A^B| = |A|^{|B|}$，表示所有 $B \to A$ 的映射．
+
+\section{集合的算术运算与势的保持}
+集合范畴中的构造完美地预演了代数运算．对于集合 $A, B$：
+\begin{itemize}
+    \item \textbf{加法（共积 $A \sqcup B$）}：对应集合的不交并．其势满足 $|A \sqcup B| = |A| + |B|$．这对应了线性空间中的直和（Direct Sum）．
+    \item \textbf{乘法（积 $A \times B$）}：对应笛卡尔积．其势满足 $|A \times B| = |A| \times |B|$．这是张量积维度公式的源头．
+    \item \textbf{指数（函数对象 $A^B$）}：所有从 $B$ 到 $A$ 的映射集合．其势满足 $|A^B| = |A|^{|B|}$．
+\end{itemize}
+这些运算满足分配律 $A \times (B \sqcup C) \cong (A \times B) \sqcup (A \times C)$，这构成了线性代数中 $V \otimes (W_1 \oplus W_2) \cong (V \otimes W_1) \oplus (V \otimes W_2)$ 的范畴论原型．
+
+\chapter{二元关系}
+
+
+\section{函数}
+
+我们约定函数是一种特殊的映射，
+而映射相当于箭头，
+有很多种，
+例如二元关系就不一定是函数．
+而函数专指从集合到集合的函数．
+$f:X \to Y$的映射方式：
+
+$$
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZAJgBoAGAXVJADcBDAGwFcYkR6QBfU9TXfIRRkAjNTpNW7AEbdeIDNjwEiZYuIYs2iEAGM5fJYKLkKGydo4GF-ZUOSn1NTVJ1sehgSuGkAzOa12AA1rRS97U39nC3YATW5xGCgAc3giUAAzACcIAFskAFYaHAgkADZowJ0M62y8pFMQEqQAFmL6LEZ2XPo0OGaPEDr8xBFi0sRfds7u3v7SweGkMiaJqaaOrp0evoHKLiA
+\begin{tikzcd}
+a &  & a \arrow[lldd, maps to] \\
+  &  & b \arrow[llu, maps to]  \\
+e &  & c \arrow[lluu, maps to] \\
+Y &  & X \arrow[ll, "f"]      
+\end{tikzcd}
+$$
+
+相当于用列向量方式表示集合：
+
+$$
+Y = \begin{bmatrix}
+a \\ e    
+\end{bmatrix}， \quad
+X = \begin{bmatrix}
+a \\ b \\ c    
+\end{bmatrix}
+$$
+
+将其置于二元关系$r: X \to Y$中讨论：
+
+$$
+r \in \textbf 2^{X \otimes Y}
+$$
+
+函数是$X \to Y$的一种二元关系，
+只需要描述起止点的配对即可确定函数的实现．
+在集合范畴中，
+这种描述就是作为集合的张量积$Y \otimes X$中的子集：
+
+$$
+f = \begin{pmatrix}
+a \otimes b \\ a \otimes c \\ e \otimes a
+\end{pmatrix}
+\subseteq Y \otimes X
+$$
+
+二元关系允许$Y \otimes X$中的任意组合，
+而函数则要求$X$中每个起点都存在唯一的箭头指向$Y$中唯一的终点．
+我们放大到二元关系中更方便讨论：
+
+$$
+f = \begin{bmatrix}
+0 \\ a \otimes b \\ a \otimes c \\ 
+e \otimes a \\ 0 \\ 0
+\end{bmatrix}
+\subseteq \begin{bmatrix}
+a \otimes a \\ a \otimes b \\ a \otimes c \\
+e \otimes a \\ e \otimes b \\ e \otimes c
+\end{bmatrix}
+= Y \otimes X
+$$
+
+为了体现输入输出的方向，
+张量积可以改写为矩阵：
+
+$$
+f = \begin{bmatrix}
+0 & e \otimes a \\ 
+a \otimes b & 0 \\ 
+a \otimes c & 0
+\end{bmatrix}
+\subseteq \begin{bmatrix}
+a \otimes a & e \otimes a \\ 
+a \otimes b & e \otimes b \\ 
+a \otimes c & e \otimes c
+\end{bmatrix}
+= Y \otimes X
+$$
+
+这样我们初步建立了概念：
+矩阵是带有方向的张量积．
+
+\section{函数的直和与张量积}
+
+函数的起止端点是集合，
+自然可以关注函数的直和与张量积．
+集合的直和是不交并，
+若$X = \{x_i\}$且$Y = \{y_j\}$，
+为了避免存在$v\in X \cap Y \neq \varnothing$的情况，
+通过给每个元素标记所在集合，
+可以构造互不相交的$\{ (X,x_i)\} \cap \{ (Y,y_j) \} = \varnothing$．
+则$X \oplus Y = X \sqcup Y = \{ (X,x_i)\} \cup \{ (Y,y_j)\}$，
+将其元素记为$x \oplus y \in X \oplus Y$，
+它要么属于$(X,x_i)\}$，
+要么属于$(Y,y_j)\}$，
+于是
+
+$$
+\begin{aligned}
+f \oplus g : X \oplus Y &\to Z \oplus W \\
+x \oplus y &\mapsto f(x) \oplus g(y)
+\begin{cases} 
+f(x) & \text{if } x \oplus y \in (X,x_i) \\
+g(y) & \text{if } x \oplus y \in (Y,y_j) 
+\end{cases}
+\end{aligned}
+$$
+
+函数的直和体现了分支映射:
+
+$$
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZAJgBoAGAXVJADcBDAGwFcYkQANEAX1PU1z5CKchWp0mrdgC0efEBmx4CRMgEZxDFm0QgAmnP5KhRURppapugOqGFA5cJKlimyTs4ACADreIaFjhPA14jQRURFzdtGR8-AOYg21D7YwjkABYxC3d2ADMACgAPAEo7RXCnADZsiRjdIvKHExQa8zqrEABPJrSnLPbLDwBzAq6ylIrHIhrXHPqQIrj-QM8eyeb0rLmOj0LS5YSg0fGecRgoYfgiUDyAJwgAWyRREBwIJDV5zry7e6ekGQ3h9EABmb4jP4PZ6ILLApAAVgh+UOq2GUIBiAA7DR3kgam96FhGOxHvQ0HA8cjdL8Uv8YQAOXEggCc1JA6NxRJJujJFLxdOhn1eeMQai+hOJpPJlI+7LyqMSnnR3Eo3CAA
+\begin{tikzcd}
+Z          &  & X \arrow[ll, "f"]                   &  & f(x)             &  & x \arrow[ll, "f", maps to]                   \\
+W          &  & Y \arrow[ll, "g"]                   &  & g(y)             &  & y \arrow[ll, "g", maps to]                   \\
+Z \oplus W &  & X \oplus Y \arrow[ll, "f \oplus g"] &  & f(x) \oplus g(y) &  & x \oplus y \arrow[ll, "f \oplus g", maps to]
+\end{tikzcd}
+$$
+
+
+函数的张量积则体现了并行的，
+互不干扰的同时完成$f$和$g$两个函数的映射：
+
+$$
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZAJgBoAGAXVJADcBDAGwFcYkQANEAX1PU1z5CKchWp0mrdgC0efEBmx4CRMgEZxDFm0QgAmnP5KhRURppapugOqGFA5cJKlimyTs4ACADreIeAFt4TwNeI0EVERc3bRkfP0Dg2zD7Y0jkABYxC3d2ADMACgAPAEo7RQinADZsiVjdIvKHExQa8zqrEABPJrSnLPbLDwBzAq6ylIrHIhrXHPqQIvj-LCC4Ty7PAF5PYtJx3sqiLLmOj0LS5cT10fHt3YuS0k9bkonxGChh+CJQPIAnCABJCiEA4CBINTzTp5OwAoFIMhgiGIADM0JGcMBwMQWWRSAArBj8ldVsFhliEYgAOw0cFIGpg+hYRjsAL0NBwenE3SwlLwnEADjpKIAnDyQBS6czWbp2Zz6fzsZDQfTEGooUyWWyOVyIRK8qS1i8eJRuEA
+\begin{tikzcd}
+Z           &  & X \arrow[ll, "f"]                     &  & f(x)                               &  & x \arrow[ll, "f", maps to]                               \\
+W           &  & Y \arrow[ll, "g"]                     &  & g(y)                               &  & y \arrow[ll, "g", maps to]                               \\
+Z \otimes W &  & X \otimes Y \arrow[ll, "f \otimes g"] &  & {f(x) \otimes g(y) = (f(x), g(y))} &  & {x \otimes y = (x,y)} \arrow[ll, "f \otimes g", maps to]
+\end{tikzcd}
+$$
+
+\section{矩阵的张量积}
+
+现在我们用矩阵的方式讨论两个函数的张量积，
+假设：
+
+$$
+\begin{aligned}
+f &= \begin{bmatrix}
+0 & e \otimes a \\ 
+a \otimes b & 0 \\ 
+a \otimes c & 0
+\end{bmatrix}
+\subseteq \begin{bmatrix}
+a \otimes a & e \otimes a \\ 
+a \otimes b & e \otimes b \\ 
+a \otimes c & e \otimes c
+\end{bmatrix}
+= Z \otimes X \\
+g &= \begin{bmatrix}
+0 & n \otimes s \\ 
+m \otimes r & 0
+\end{bmatrix}
+\subseteq \begin{bmatrix}
+m \otimes r & n \otimes s \\ 
+m \otimes r & n \otimes s
+\end{bmatrix}
+= W \otimes Y
+\end{aligned}
+$$
+
+函数的张量积具有
+$Z \otimes W \stackrel{f \otimes g}{\longleftarrow} X \otimes Y$
+的形式，
+函数是$(Z \otimes W) \otimes (X \otimes Y)$中的二元关系．
+这样的张量展开是一个很大的列向量．
+用Kronecker积写成：
+
+\[
+\begin{aligned}
+f \otimes g
+&= \begin{bmatrix}
+0 & e \otimes a \\ 
+a \otimes b & 0 \\ 
+a \otimes c & 0
+\end{bmatrix}
+\otimes 
+\begin{bmatrix}
+0 & n \otimes s \\ 
+m \otimes r & 0
+\end{bmatrix} \\
+&= \begin{bmatrix}
+0 \otimes g & (e \otimes a) \otimes g \\ 
+(a \otimes b) \otimes g & 0 \otimes g \\ 
+(a \otimes c) \otimes g & 0 \otimes g
+\end{bmatrix} \\ 
+&= \left[
+\begin{array}{cc|cc}
+0 & 0 & 0 & (e \otimes a) \otimes (n \otimes s) \\
+0 & 0 & (e \otimes a) \otimes (m \otimes r) & 0 \\
+\hline
+0 & (a \otimes b) \otimes (n \otimes s) & 0 & 0 \\
+(a \otimes b) \otimes (m \otimes r) & 0 & 0 & 0 \\
+\hline
+0 & (a \otimes c) \otimes (n \otimes s) & 0 & 0 \\
+(a \otimes c) \otimes (m \otimes r) & 0 & 0 & 0
+\end{array}
+\right]
+\end{aligned}
+\]
+
+前面说矩阵是带有方向的张量积，
+那么矩阵的张量积则是两个带有方向的行为的并行处理．
+
+\section{复合函数}
+
+
+\chapter{谱}
+
+\section{正规算子}
+
+若定义了$\dagger$，
+例如实线性映射$N$的转置$N^T$，
+或者复线性映射$N$的共轭转置$N^*$，
+则可以用$NN^* = N^*N$定义正规算子，
+它隐含了$N$是自映射的条件：
+
+$$
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZAJgBoAGAXVJADcBDAGwFcYkQANEAX1PU1z5CKchWp0mrdl179seAkQBsYmgxZtEnHuJhQA5vCKgAZgCcIAWySiQOCEgCMNAEYwwUJAFoAzLfVSWgByIDSM9G6MAAoCCsIgZlj6ABY4PHwg5lZONPY2ru6eiL7+kpogQQB6ADrVUPT6hmahIOGRMfJC7IkpabKZFtaItnnDYRAQaEQAnKImTHAw4m0w0bFdWj2pLQHlVbX1jTBmAAQh-VlDznYOiNeME1MoxADscwtLYRGrHYKKm0ltmoyuwgvs6g0mulTIMkGQbnDxpMZu9GItlt81p1-glAWlgRpQTUIUdTucMpdEQjEPCHsiRKR5mjPq1Mb84t08TsQcFiYcoRdYTTcrdaY8iI4AByo9FfdrrHFbfESQnBaEDbLC6li+kkN6Mj4Y+XY+JK7mqirg-nHHTcIA
+\begin{tikzcd}
+X \arrow[rr, "N^\dagger"', bend right] \arrow["NN^\dagger"', loop, distance=2em, in=215, out=145] &  & X \arrow[ll, "N"', bend right] \arrow["N^\dagger N"', loop, distance=2em, in=35, out=325] &  &  &  & X \arrow["N^\dagger N"', loop, distance=2em, in=35, out=325] \arrow["N^\dagger"', loop, distance=2em, in=305, out=235] \arrow["N"', loop, distance=2em, in=125, out=55] \arrow["NN^\dagger"', loop, distance=2em, in=215, out=145]
+\end{tikzcd}
+$$
+
+正规算子中最重要的两类算子，
+酉算子$U$和自拌算子$H$的联系：
+
+$$
+UU^\dagger = U^\dagger U = I,\quad 
+H^\dagger = H,\quad
+U = \text e^{\text i H}
+$$
+
+在谱上：
+
+$$
+\sigma(H) \subset \mathbb R,\quad 
+\sigma(U) \subset S
+$$
+
+且$| \text{tr} \ U | = 1$．
+例子：
+
+$$
+H = \text{diag}(h_1,h_2)
+= \begin{bmatrix}
+    h_1 & 0 \\
+    0 & h_2
+\end{bmatrix},\quad
+U = \text e^{\text i H}
+= \text{diag}(\text e^{\text i h_1},\text e^{\text i h_2})
+= \begin{bmatrix}
+    \text e^{\text i h_1} & 0 \\
+    0 & \text e^{\text i h_1}
+\end{bmatrix}
+$$
+
+\section{伴随函子}
+
+酉算子其实就是单位和余单位全都是等式的特殊伴随关系．
+酉算子 $U^\dagger U = U U^\dagger = I$ 反映的是一种完美的回路，
+伴随函子中不再是恒等变换，
+而是通过自然变换$\eta$和$\epsilon$建立的桥梁．
+
+$$
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZAdgBoBGAXVJADcBDAGwFcYkQAdDgW3pwAsAxkwAEAERABfUuky58hFAFYK1Ok1bsuvAcMYiAwlJkgM2PASIqADGoYs2iTjz5DRR6bPMKiANlU09ppOXABGEDjGXvKWKGQATHYajs46bvoSnqZyForIABwB6g7sUdnesQWkiYHJpVlmMXkALKS2tSVOZY25RK1UHcEg3Tk+KPFtSZ0gACoAvADiAGIjFXkTNcVDMwB68SJzIgsAFEsLAJQrDaOV1pODKeQA+tqueoarTUTkRUEpXDgYAAPHChABmwAAomAoJIXi5dO4pGoYFAAObwIigMEAJwg3CQPxAOAgSDuIFCMBhSAAzOS-uwVjRGPRKYwAAo3RQgRgwMGRGhwfhYflkrK4-Fkmgkwk0SnUxB0h7sBYgZmsmAcrnsXmi8V4gmIckyo3MiAQNBEACcdzBTDgMDULLZnLW7BxWDR-AFWxSZzKEsNRJNRMY5st42ItvtjvVLu1Tg9Xp9DKcywDBqQrWJpMQ2bDFut0cYDqdGq1bsTnu9at97Ger0RGQzksQKhzSH8PKwYBSUAgzFCvNr-Bg9CgSDAzEYjGl9CwjHYkF7tdTzhgaGwYcI+tbEw7iH3BYjyHiUdIdpLsZ55ddXyrydXdScDYR6Q+u8NZAPhW7K6c-aDsONCjuOk7TrOxLzouTjLmwyohBwMA4PQLZBsGuZWgh64oWhhLGph2HaMwBxHCIXAbluBAiEyN7xpWIBJjWkiUJIQA
+\begin{tikzcd}
+1_\mathcal C \arrow[rr, "\eta"] &                         & T=GF                                           &  & {} \arrow[d, "\eta", Rightarrow] & \mathcal C \arrow["1_\mathcal C"', loop, distance=2em, in=215, out=145]                  &      &                                                                                         &                                      \\
+                                & \textbf{End}_\mathcal C &                                                &  & {}                               & \mathcal C \arrow[rr, "F", bend left] \arrow["GF"', loop, distance=2em, in=215, out=145] & \bot & \mathcal D \arrow[ll, "G", bend left] \arrow["FG"', loop, distance=2em, in=35, out=325] & {} \arrow[d, "\epsilon", Rightarrow] \\
+                                &                         & T^2 = G(FG)F \arrow[uu, "\mu = G \epsilon F"'] &  &                                  &                                                                                          &      & \mathcal D \arrow["1_\mathcal D"', loop, distance=2em, in=35, out=325]                  & {}                                  
+\end{tikzcd}
+$$
+
+在自函子范畴$\textbf{End}_\mathcal C$中，
+借助范畴$\mathcal D$的函子往复定义了$T = GF$，
+再借助自然变换单位$\eta: 1_\mathcal C \to T$建立了弱的酉关系．
+自然变换余单位$\epsilon: FG \to 1_\mathcal D$给出了：
+
+$$
+\begin{aligned}
+\textbf{End}_\mathcal D &\stackrel{\mu = G \epsilon F}{\xlongrightarrow{\hspace{2cm}}} \textbf{End}_\mathcal D \\
+T^2 = G(FG)F &\xmapsto{\hspace{1cm}} \mu(G(FG)F) = G \epsilon(FG) F = GF = T
+\end{aligned}
+$$
+
+这样得到了单子$T = (T,\eta,\mu)$．
+
+\section{直和分解}
+
+有限维线性空间$V\in\textbf{FdVct}$
+可以按特征值特征空间对$\{(\lambda_i,E_i)\}$分解为：
+
+$$
+V = \bigoplus_i E_i
+$$
+
+令$P_i$是向$E_i$的正交投影算子：
+\begin{itemize}
+    \item 完备性：$\sum_i P_i = I$
+    \item 正交性：$P_iP_j = \delta_i^j$
+    \item 算子表示：$H = \sum \lambda_i P_i$
+\end{itemize}
+
+集合$X$的子集族是幂集$\textbf{2}^\mathbb R$的子集，
+要求子集族对补集封闭，
+对可数并/交封闭，
+构成$sigma$-代数．
+最小的是$\{\varnothing,X\}$，
+最大的是$\textbf{2}^\mathbb R$，
+其余介于二者之间．
+
+令$B$为实数的Borel子集，
+如下构造投影算子：
+
+$$
+E(B) = \sum_{\lambda_i \in B} P_i
+$$
+
+有性质：
+\begin{itemize}
+    \item $E(\varnothing) = 0$
+    \item $E(\mathbb R) = I$
+    \item $E(B_1 \cap B_2) = E(B_1)E(B_2)$
+\end{itemize}
+
+于是算子可以写成:
+
+$$
+H = \int_{\sigma(H)} \lambda \text d E(\lambda)
+$$
+
+\section{谱测度}
+
+无限维Hilbert空间$\mathcal H$的谱$\sigma(H)$不再是孤立点，
+而可能包含连续谱．
+令$\Sigma$为实Borel代数，
+谱测度是映射$E: \Sigma \to \mathcal B(\mathcal H)$，
+使得：
+\begin{itemize}
+    \item 投影性：$E(B)$是正交投影算子
+    \item 规范性：$E(\mathbb R) = 1$
+    \item 强可列可加性：
+    对于两两不相交集合序列$\{B_i\}$，
+    对于$\forall \psi \in \mathcal H$有：
+    $$
+    E\left( \bigcup_i B_i \right) \psi = \sum_i E(B_i) \psi
+    $$
+\end{itemize}
+
+\section{函子}
+
+令$\Sigma$为实Borel可测空间和可测函数构成的范畴．
+令$\mathcal H \in \textbf{Hil}$为Hilbert空间．
+其上正交投影算子的集合为$\textbf{Proj} \ \mathcal H$，
+自伴算子的集合$\textbf{H}(\mathcal H)$．
+
+$$
+\begin{aligned}
+\mathcal E: \Sigma &\to \textbf{Proj} \ \mathcal H \\
+B &\mapsto \mathcal E(B) = P_B
+\end{aligned}
+$$
+
+这个函子是格同态．
+
+考虑函子范畴$\textbf{Fct}(\textbf{Borel},\textbf{Proj} \ \mathcal H)$．
+
+
+\chapter{图的张量积}
+
+前面讨论了集合的张量积，
+现在我们从图论的邻接矩阵入手，
+讨论矩阵的张量积．
+图论很好的反映了从静态的顶点到动态的边的思维过程．
+从范畴论的态射角度看，
+图的邻接矩阵和线性代数的矩阵、泛函分析的算子是非常相似的概念．
+
+图$G=(V,E)$由顶点集和边集所定义，
+定义中蕴含着$G=(V,E,s,t)$，
+其中起点函数$s:E \to V$给边指定其起点，
+终点函数$t:E \to V$给边指定其终点．
+给定边$e \in E$则可以写为：
+
+\begin{equation}
+t(e) \stackrel{e}{\longleftarrow} s(e)
+\end{equation}
+\label{eq:edge-st}
+
+给出两个图$G_A=(V_A,E_A,s_A,t_A)$和$G_B=(V_B,E_B,s_B,t_B)$，
+我们自然会问是否可以按照如下方式定义出图的张量积：
+
+\begin{equation}
+G_A \otimes G_B = (V_A \otimes V_B,E_A \otimes E_B,s_A \otimes s_B,t_A \otimes t_B)
+\end{equation}
+\label{eq:graph-tensor}
+
+这里涉及到顶点集、边集的集合张量积，
+以及起点函数、终点函数的函数张量积．
+探讨这一话题有助于我们理解张量的性质．
+
+\section{图的几种描述}
+
+给出两个图$G_A=(V_A,E_A)$和$G_B=(V_B,E_B)$，
+有几种不同的方式描述．
+可以把图画出来：
+
+\begin{center}
+\begin{tikzpicture}[
+    >={Stealth[length=2.5mm,width=1.5mm]},
+    thick,
+    vNode/.style={circle, draw, minimum size=0.8cm, font=\small},
+    labelNode/.style={font=\large\bfseries}
+]
+
+    % --- 设置全局对齐基准 ---
+    \def\baseY{0}
+    \def\labelY{-4.0} 
+
+    % =========================================================
+    % 1. 图 A 部分
+    % =========================================================
+    \begin{scope}
+        \node[vNode] (A1) at (0, \baseY) {1};
+        \node[vNode] (A2) at (2.5, \baseY) {2};
+        \node[vNode] (A3) at (0, \baseY-2.5) {3};
+
+        % 态射箭头
+        \draw[->] (A1) -- node[above] {$a$} (A2);
+        \draw[->] (A1) to[bend right=25] node[left] {$b$} (A3);
+        \draw[->] (A3) to[bend right=25] node[right] {$c$} (A1);
+        
+        % 自环
+        \path[->] (A1) edge[loop above, looseness=5] node[above] {$d$} (A1);
+        \path[->] (A2) edge[loop below, looseness=5] node[below] {$e$} (A2);
+        
+        % 标签 A
+        \node[labelNode] at (1.25, \labelY) {$G_A$};
+    \end{scope}
+
+    % =========================================================
+    % 2. 图 B 部分 (已移除顶点 3 及关联边 f, h)
+    % =========================================================
+    \begin{scope}[xshift=6cm]
+        \node[vNode] (B1) at (0, \baseY) {1};
+        \node[vNode] (B2) at (2.5, \baseY) {2};
+        % B3 已移除
+
+        % 态射箭头 (仅保留 g)
+        \draw[->] (B2) -- node[above] {$g$} (B1);
+        
+        % 自环 (仅保留 i)
+        \path[->] (B2) edge[loop right, looseness=5] node[right] {$i$} (B2);
+
+        % 标签 B
+        \node[labelNode] at (1.25, \labelY) {$G_B$};
+    \end{scope}
+
+\end{tikzpicture}
+\end{center}
+
+或者根据我们过去讨论的，
+用从右往左的箭头图，
+这样看上去更有右边输入/左边输出的映射感觉
+$(\text{Out} \longleftarrow \text{In})$，
+甚至在符合某些条件的时候还可以构造从右到左的复合映射：
+
+\begin{center}
+    % --- 子图 A ---
+    \begin{minipage}{0.45\linewidth}
+        \centering
+        \begin{tikzpicture}[
+            >={Stealth[length=2.5mm,width=1.5mm]},
+            thick,
+            vNode/.style={circle, draw, minimum size=0.8cm, font=\small}
+        ]
+            % 参数
+            \def\colGap{2.5}
+            \def\rowGap{1.8}
+            
+            % 顶点
+            \foreach \i in {1,2,3} {
+                \node[vNode] (L\i) at (0, -{(\i-1)*\rowGap}) {\i};
+                \node[vNode] (R\i) at (\colGap, -{(\i-1)*\rowGap}) {\i};
+            }
+
+            % 态射箭头
+            \draw[->] (R1) -- node[fill=white, inner sep=1.5pt, font=\small] {$d$} (L1);
+            \draw[->] (R1) -- node[fill=white, inner sep=1.5pt, font=\small, pos=0.7] {$a$} (L2);
+            \draw[->] (R1) to[bend left=25] node[fill=white, inner sep=1.5pt, font=\small, pos=0.4] {$b$} (L3);
+            \draw[->] (R2) -- node[fill=white, inner sep=1.5pt, font=\small] {$e$} (L2);
+            \draw[->] (R3) to[bend left=25] node[fill=white, inner sep=1.5pt, font=\small, pos=0.4] {$c$} (L1);
+
+            % 标签 A
+            \node[font=\large\bfseries] at (\colGap/2, -5.0) {$G_A$};
+        \end{tikzpicture}
+    \end{minipage}
+    \hfill % 拉开左右间距
+    % --- 子图 B (已移除顶点 3 及其关联边 f, h) ---
+    \begin{minipage}{0.45\linewidth}
+        \centering
+        \begin{tikzpicture}[
+            >={Stealth[length=2.5mm,width=1.5mm]},
+            thick,
+            vNode/.style={circle, draw, minimum size=0.8cm, font=\small}
+        ]
+            % 参数
+            \def\colGap{2.5}
+            \def\rowGap{1.8}
+
+            % 顶点 (仅保留 1 和 2)
+            \foreach \i in {1,2} {
+                \node[vNode] (L\i) at (0, -{(\i-1)*\rowGap}) {\i};
+                \node[vNode] (R\i) at (\colGap, -{(\i-1)*\rowGap}) {\i};
+            }
+
+            % 态射箭头 (仅保留 g 和 i)
+            \draw[->] (R2) -- node[fill=white, inner sep=1.5pt, font=\small, pos=0.7] {$g$} (L1);
+            \draw[->] (R2) -- node[fill=white, inner sep=1.5pt, font=\small] {$i$} (L2);
+
+            % 标签 B
+            \node[font=\large\bfseries] at (\colGap/2, -5.0) {$G_B$};
+        \end{tikzpicture}
+    \end{minipage}
+\end{center}
+
+但凡画成$(\text{Out} \longleftarrow \text{In})$的一组箭头，
+便可以转化为矩阵描述，
+即让矩阵的右边接受列向量输入，
+矩阵从下边输出行向量，
+即是邻接矩阵：
+
+$$
+A = \begin{array}{r @{\quad} l @{\quad} l}
+ \left[ \begin{array}{ccc}
+  d & a & b \\
+  0 & e & 0 \\
+  c & 0 & 0
+ \end{array} \right] &
+ \begin{array}{l} \leftarrow 1 \\ \leftarrow 2 \\ \leftarrow 3 \end{array} &
+ \text{In} \\
+ \begin{array}{ccc} \downarrow & \downarrow & \downarrow \\ 1 & 2 & 3 \end{array} & & \\
+ \text{Out} & & 
+\end{array} \quad \quad \quad
+B = \begin{array}{r @{\quad} l @{\quad} l}
+ \left[ \begin{array}{cc}
+  0 & 0 \\
+  g & i
+ \end{array} \right] &
+ \begin{array}{l} \leftarrow 1 \\ \leftarrow 2 \end{array} &
+ \text{In} \\
+ \begin{array}{cc} \downarrow & \downarrow \\ 1 & 2 \end{array} & & \\
+ \text{Out} & & 
+\end{array}
+$$
+
+即
+
+$$
+A = \begin{bmatrix}
+ d & a & b \\
+ 0 & e & 0 \\
+ c & 0 & 0
+\end{bmatrix}, \quad
+B = \begin{bmatrix}
+ 0 & 0 \\
+ g & i
+\end{bmatrix}
+$$
+
+还可以用边到顶点的函数来描述图．
+图$G=(V,E,s,t)$中的起点函数$s:E \to V$给边指定其起点，
+终点函数$t:E \to V$给边指定其终点：
+
+% 图 GA 的映射关系
+\begin{minipage}{0.45\textwidth}
+\[
+\begin{aligned}
+s_A: E_A &\to V_A \\
+a &\mapsto 1 \\
+b &\mapsto 1 \\
+c &\mapsto 3 \\
+d &\mapsto 1 \\
+e &\mapsto 2
+\end{aligned}
+\]
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\[
+\begin{aligned}
+t_A: E_A &\to V_A \\
+a &\mapsto 2 \\
+b &\mapsto 3 \\
+c &\mapsto 1 \\
+d &\mapsto 1 \\
+e &\mapsto 2
+\end{aligned}
+\]
+\end{minipage}
+
+% 图 GB 的映射关系
+\vspace{1em}
+\begin{minipage}{0.45\textwidth}
+\[
+\begin{aligned}
+s_B: E_B &\to V_B \\
+g &\mapsto 2 \\
+i &\mapsto 2
+\end{aligned}
+\]
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\[
+\begin{aligned}
+t_B: E_B &\to V_B \\
+g &\mapsto 1 \\
+i &\mapsto 2
+\end{aligned}
+\]
+\end{minipage}
+
+
+\section{图的张量积}
+
+图$G_A$和图$G_B$相当于两个独立的子系统，
+我们希望构造图的张量积，
+用并行系统的角度整体看待两图．
+根据(\ref{eq:graph-tensor})，
+$G_A \otimes G_B$的顶点集为：
+
+$$
+V_A \otimes V_B = 
+\begin{pmatrix}
+1 \\ 2 \\ 3
+\end{pmatrix}
+\otimes
+\begin{pmatrix}
+1 \\ 2
+\end{pmatrix}
+=\begin{pmatrix}
+1 \otimes 1 \\
+1 \otimes 2 \\
+2 \otimes 1 \\
+2 \otimes 2 \\
+3 \otimes 1 \\
+3 \otimes 2 
+\end{pmatrix}
+$$
+
+边集的张量积：
+
+\begin{equation}
+E_A \otimes E_B
+= \begin{pmatrix}
+a \\ b \\ c \\ d \\ e
+\end{pmatrix}
+\otimes
+\begin{pmatrix}
+g \\ i
+\end{pmatrix}
+=\begin{pmatrix}
+a \otimes g \\
+a \otimes i \\
+b \otimes g \\
+b \otimes i \\
+c \otimes g \\
+c \otimes i \\
+d \otimes g \\
+d \otimes i \\
+e \otimes g \\
+e \otimes i
+\end{pmatrix}
+\end{equation}
+\label{eq:edge-set-tensor}
+
+起点函数$s$和终点函数$t$的张量积：
+
+% 复合边集的起点映射
+\begin{minipage}{0.48\textwidth}
+\[
+\begin{aligned}
+s_{A \otimes B}: E_A \otimes E_B &\to V_A \otimes V_B \\
+d \otimes g &\mapsto 1 \otimes 2 \\
+a \otimes g &\mapsto 1 \otimes 2 \\
+b \otimes g &\mapsto 1 \otimes 2 \\
+d \otimes i &\mapsto 1 \otimes 2 \\
+a \otimes i &\mapsto 1 \otimes 2 \\
+b \otimes i &\mapsto 1 \otimes 2 \\
+e \otimes g &\mapsto 2 \otimes 2 \\
+e \otimes i &\mapsto 2 \otimes 2 \\
+c \otimes g &\mapsto 3 \otimes 2 \\
+c \otimes i &\mapsto 3 \otimes 2
+\end{aligned}
+\]
+\end{minipage}
+\begin{minipage}{0.48\textwidth}
+\[
+\begin{aligned}
+t_{A \otimes B}: E_A \otimes E_B &\to V_A \otimes V_B \\
+d \otimes g &\mapsto 1 \otimes 1 \\
+a \otimes g &\mapsto 2 \otimes 1 \\
+b \otimes g &\mapsto 3 \otimes 1 \\
+d \otimes i &\mapsto 1 \otimes 2 \\
+a \otimes i &\mapsto 2 \otimes 2 \\
+b \otimes i &\mapsto 3 \otimes 2 \\
+e \otimes g &\mapsto 2 \otimes 1 \\
+e \otimes i &\mapsto 2 \otimes 2 \\
+c \otimes g &\mapsto 1 \otimes 1 \\
+c \otimes i &\mapsto 1 \otimes 2
+\end{aligned}
+\]
+\end{minipage}
+
+现在我们从形式上构造了图的张量积(\ref{eq:graph-tensor})，
+从以上展开过程看，
+$s_A \otimes s_B$和$t_A \otimes t_B$
+都可以正确地完成$E_A \otimes E_B \to V_A \otimes V_B$的映射，
+构造过程没有违反对图的定义，
+即满足(\ref{eq:edge-st})给出的形式：
+
+$$
+t(p \otimes q) \stackrel{p \otimes q}{\longleftarrow} s(p \otimes q)
+$$
+
+接下来用邻接矩阵来解释$G_A \otimes G_B$的意义．
+
+\section{邻接矩阵的张量积}
+
+图的张量积$G_A \otimes G_B$，
+顶点集$V_A \otimes V_B$，
+其邻接矩阵是$|V_A| \times |V_B|$维度的方矩阵．
+这正是邻接矩阵$A$和$B$的张量积的维度．
+具体而言：
+
+\begin{equation}
+\begin{aligned}
+A \otimes B &=
+\begin{bmatrix}
+d & a & b \\
+0 & e & 0 \\
+c & 0 & 0
+\end{bmatrix}
+\otimes
+\begin{bmatrix}
+0 & 0 \\
+g & i
+\end{bmatrix}    \\
+&=\left[ \begin{array}{cc|cc|cc}
+0 & 0 & 0 & 0 & 0 & 0 \\
+d \otimes g & d \otimes i & a \otimes g & a \otimes i & b \otimes g & b \otimes i \\
+\hline
+0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & e \otimes g & e \otimes i & 0 & 0 \\
+\hline
+0 & 0 & 0 & 0 & 0 & 0 \\
+c \otimes g & c \otimes i & 0 & 0 & 0 & 0
+\end{array} \right] \\
+\end{aligned}
+\end{equation}
+
+注意到其中的非零元写成列向量表示的集合正是(\ref{eq:edge-set-tensor})．
+$A \otimes B$正是张量积$G_A \otimes G_B$的邻接矩阵．
+其边具有张量积$p\otimes q$的形式．
+
+\begin{tikzpicture}[
+    >={Stealth[length=3mm,width=2mm]},
+    thick,
+    vertex/.style={circle, draw, minimum size=1.2cm, font=\small},
+    every loop/.style={->, looseness=6},
+    % 样式定义
+    edgeUnderline/.style={black, thick},   % 构成复合路径的项
+    edgePlain/.style={black, thin, dashed}  % 普通张量积项
+]
+
+    % 1. 绘制顶点网格 (3 行 x 2 列)
+    \foreach \u in {1,2,3} {
+        \foreach \v in {1,2} {
+            \node[vertex] (n\u\v) at ({(\v-1)*3.5}, {(1-\u)*3.5}) {$\u \otimes \v$};
+        }
+    }
+
+    % ---------------------------------------------------------
+    % 2. 实线部分：路径复合项 (根据你的邻接矩阵 A 和 B)
+    % ---------------------------------------------------------
+
+    % A(1->1):d 与 B(2->1):g 复合 => (1,2) -> (1,1)
+    \path[->, edgeUnderline] (n12) edge[bend right=20] node[above] {$d \otimes g$} (n11); 
+
+    % A(1->2):a 与 B(2->1):g 复合 => (1,2) -> (2,1)
+    \draw[->, edgeUnderline] (n12) -- node[pos=0.7, left] {$a \otimes g$} (n21); 
+
+    % A(1->3):b 与 B(2->1):g 复合 => (1,2) -> (3,1)
+    \draw[->, edgeUnderline] (n12) to[bend left=20] node[pos=0.4, right] {$b \otimes g$} (n31);
+
+    % A(2->2):e 与 B(2->2):i 复合 => (2,2) -> (2,2)
+    \path[->, edgeUnderline] (n22) edge[loop right] node[right] {$e \otimes i$} (n22); 
+
+    % ---------------------------------------------------------
+    % 3. 虚线部分：普通张量积项 (不满足路径复合条件)
+    % ---------------------------------------------------------
+
+    % A(1->1):d 与 B(2->2):i => (1,2) -> (1,2)
+    \path[->, edgePlain] (n12) edge[loop above] node[above] {$d \otimes i$} (n12); 
+
+    % A(2->2):e 与 B(2->1):g => (2,2) -> (2,1)
+    \path[->, edgePlain] (n22) edge[bend left=20] node[below] {$e \otimes g$} (n21); 
+
+    % A(1->2):a 与 B(2->2):i => (1,2) -> (2,2)
+    \draw[->, edgePlain] (n12) -- node[midway, left] {$a \otimes i$} (n22); 
+
+    % A(1->3):b 与 B(2->2):i => (1,2) -> (3,2)
+    \draw[->, edgePlain] (n12) to[bend right=20] node[pos=0.8, left] {$b \otimes i$} (n32); 
+
+    % A(3->1):c 与 B(2->1):g => (3,2) -> (1,1)
+    \draw[->, edgePlain] (n32) to[bend left=40] node[pos=0.3, left] {$c \otimes g$} (n11); 
+
+    % A(3->1):c 与 B(2->2):i => (3,2) -> (1,2)
+    \draw[->, edgePlain] (n32) to[bend right=20] node[midway, right] {$c \otimes i$} (n12); 
+
+\end{tikzpicture}
+
+张量积相当于
+
+\begin{tikzpicture}[
+    >={Stealth[length=2mm,width=1.5mm]},
+    thick,
+    % 节点样式
+    vNode/.style={rectangle, draw, rounded corners=2pt, minimum size=0.8cm, font=\scriptsize, inner sep=2pt},
+    % 线型样式
+    edgePath/.style={black, thick},        % 满足复合条件的路径
+    edgePlain/.style={black, thin, dashed}  % 普通张量积耦合
+]
+
+    % --- 参数设置 ---
+    \def\gap{8.0}    
+    \def\rowGap{1.1} 
+    \def\blockGap{1.0} 
+
+    % =========================================================
+    % 1. 绘制左侧和右侧的顶点 (3x2 网格)
+    % 移除了所有 \v = 3 的节点
+    % =========================================================
+    \foreach \u in {1,2,3} {
+        \foreach \v in {1,2} {
+            % 重新计算 yPos，保持分块间距
+            \pgfmathsetmacro{\yPos}{ -(\u-1)*2*\rowGap - (\u-1)*\blockGap - (\v-1)*\rowGap }
+            \node[vNode] (L\u\v) at (0, \yPos) {$\u \otimes \v$};
+            \node[vNode] (R\u\v) at (\gap, \yPos) {$\u \otimes \v$};
+        }
+    }
+
+    % =========================================================
+    % 2. 绘制映射箭头与态射标注
+    % =========================================================
+
+    % --- BLOCK 1: 来自 A 起点 1 (对应矩阵 A 的第一行 d, a, b) ---
+    % 从 R12 (1 \otimes 2) 出发
+    \draw[->, edgePath] (R12) -- node[above, pos=0.5, font=\tiny] {$d \otimes g$} (L11);
+    \draw[->, edgePath] (R12) -- node[above, pos=0.7, font=\tiny] {$a \otimes g$} (L21);
+    \draw[->, edgePath] (R12) to[bend left=10] node[below, pos=0.6, font=\tiny] {$b \otimes g$} (L31);
+    
+    % 虚线项 (仅保留去向为 \otimes 1 或 \otimes 2 的项)
+    \draw[->, edgePlain] (R12) to[bend right=8] node[above, pos=0.8, font=\tiny] {$d \otimes i$} (L12); 
+    \draw[->, edgePlain] (R12) to[bend left=5] node[above, pos=0.8, font=\tiny] {$a \otimes i$} (L22);
+    \draw[->, edgePlain] (R12) to[bend left=15] node[below, pos=0.8, font=\tiny] {$b \otimes i$} (L32);
+
+    % --- BLOCK 2: 来自 A 起点 2 (对应矩阵 A 的第二行 e) ---
+    % 从 R22 (2 \otimes 2) 出发
+    \draw[->, edgePath] (R22) -- node[above, pos=0.5, font=\tiny] {$e \otimes i$} (L22);
+    \draw[->, edgePlain] (R22) to[bend right=15] node[below, pos=0.7, font=\tiny] {$e \otimes g$} (L21);
+
+    % --- BLOCK 3: 来自 A 起点 3 (对应矩阵 A 的第三行 c) ---
+    % 从 R32 (3 \otimes 2) 出发
+    \draw[->, edgePlain] (R32) to[bend right=20] node[above, pos=0.6, font=\tiny] {$c \otimes g$} (L11);
+    \draw[->, edgePlain] (R32) to[bend right=15] node[above, pos=0.8, font=\tiny] {$c \otimes i$} (L12);
+
+\end{tikzpicture}
+
+\section{邻接矩阵的复合}
+
+前面讨论的是$V_A \neq V_B$的一般情况，
+张量积$G_A \otimes G_B$作为并行系统，
+如同在同时关注两边处于互不相干的$p \otimes q$状态．
+从输入/输出的箭头观点看，
+边是顶点集到其自身的箭头$p:V_A \to V_A$和$q:V_B \to V_B$．
+在两个图上并行的箭头：
+
+$$
+V_A \otimes V_B \stackrel{p \otimes q}{\xrightarrow{\hspace{2cm}}} V_A \otimes V_B
+$$
+
+若$V_A = V_B = V$，
+就构成了相同顶点集上的两个不同的图，
+上式变成：
+
+$$
+V \otimes V \stackrel{p \otimes q}{\xrightarrow{\hspace{2cm}}} V \otimes V
+$$
+
+我们可以讨论何种情况下，
+$p \otimes q$可以变成一种复合箭头:
+
+$$
+V \stackrel{p \circ q}{\xrightarrow{\hspace{2cm}}} V
+$$
+
+换句话说，
+在以$V$为顶点集的某种图中，
+$p \circ q$构成了边．
+
+下面给出一个例子．
+在同一个顶点集$V = \{1,2,3\}$上构造不同的图$G_A=(V,E_A)$和$G_B(V,E_B)$，
+边集的几种描述方式：
+
+\begin{center}
+\begin{tikzpicture}[
+    >={Stealth[length=2.5mm,width=1.5mm]},
+    thick,
+    vNode/.style={circle, draw, minimum size=0.8cm, font=\small},
+    labelNode/.style={font=\large\bfseries}
+]
+
+    % --- 设置全局对齐基准 ---
+    % 定义垂直跨度，确保 A 和 B 标签的参考点一致
+    \def\baseY{0}
+    \def\labelY{-4.0} % 强制标签在 y = -4 的位置水平排开
+
+    % =========================================================
+    % 1. 图 A 部分
+    % =========================================================
+    \begin{scope}
+        \node[vNode] (A1) at (0, \baseY) {1};
+        \node[vNode] (A2) at (2.5, \baseY) {2};
+        \node[vNode] (A3) at (0, \baseY-2.5) {3};
+
+        % 态射箭头
+        \draw[->] (A1) -- node[above] {$a$} (A2);
+        \draw[->] (A1) to[bend right=25] node[left] {$b$} (A3);
+        \draw[->] (A3) to[bend right=25] node[right] {$c$} (A1);
+        
+        % 自环
+        \path[->] (A1) edge[loop above, looseness=5] node[above] {$d$} (A1);
+        \path[->] (A2) edge[loop below, looseness=5] node[below] {$e$} (A2);
+        
+        % 标签 A：固定坐标对齐
+        \node[labelNode] at (1.25, \labelY) {$G_A$};
+    \end{scope}
+
+    % =========================================================
+    % 2. 图 B 部分 (x 偏移 6cm)
+    % =========================================================
+    \begin{scope}[xshift=6cm]
+        \node[vNode] (B1) at (0, \baseY) {1};
+        \node[vNode] (B2) at (2.5, \baseY) {2};
+        \node[vNode] (B3) at (0, \baseY-2.5) {3};
+
+        % 态射箭头
+        \draw[->] (B2) -- node[above] {$g$} (B1);
+        % 修复 f 标记：白色背景遮挡，pos 调优
+        \draw[->] (B2) -- node[fill=white, inner sep=1.5pt, font=\small, pos=0.6] {$f$} (B3);
+        
+        % 自环
+        \path[->] (B2) edge[loop right, looseness=5] node[right] {$i$} (B2);
+        \path[->] (B3) edge[loop below, looseness=5] node[below] {$h$} (B3);
+
+        % 标签 B：固定坐标对齐（相对于当前 scope 的 x=1.25）
+        \node[labelNode] at (1.25, \labelY) {$G_B$};
+    \end{scope}
+
+\end{tikzpicture}
+\end{center}
+
+或者用从右往左的箭头图：
+
+\begin{center}
+    % --- 子图 A ---
+    \begin{minipage}{0.45\linewidth}
+        \centering
+        \begin{tikzpicture}[
+            >={Stealth[length=2.5mm,width=1.5mm]},
+            thick,
+            vNode/.style={circle, draw, minimum size=0.8cm, font=\small}
+        ]
+            % 参数
+            \def\colGap{2.5}
+            \def\rowGap{1.8}
+            
+            % 顶点
+            \foreach \i in {1,2,3} {
+                \node[vNode] (L\i) at (0, -{(\i-1)*\rowGap}) {\i};
+                \node[vNode] (R\i) at (\colGap, -{(\i-1)*\rowGap}) {\i};
+            }
+
+            % 态射箭头
+            \draw[->] (R1) -- node[fill=white, inner sep=1.5pt, font=\small] {$d$} (L1);
+            \draw[->] (R1) -- node[fill=white, inner sep=1.5pt, font=\small, pos=0.7] {$a$} (L2);
+            \draw[->] (R1) to[bend left=25] node[fill=white, inner sep=1.5pt, font=\small, pos=0.4] {$b$} (L3);
+            \draw[->] (R2) -- node[fill=white, inner sep=1.5pt, font=\small] {$e$} (L2);
+            \draw[->] (R3) to[bend left=25] node[fill=white, inner sep=1.5pt, font=\small, pos=0.4] {$c$} (L1);
+
+            % 强制统一高度的标签 A
+            \node[font=\large\bfseries] at (\colGap/2, -5.0) {$G_A$};
+        \end{tikzpicture}
+    \end{minipage}
+    \hfill % 拉开左右间距
+    % --- 子图 B ---
+    \begin{minipage}{0.45\linewidth}
+        \centering
+        \begin{tikzpicture}[
+            >={Stealth[length=2.5mm,width=1.5mm]},
+            thick,
+            vNode/.style={circle, draw, minimum size=0.8cm, font=\small}
+        ]
+            % 参数
+            \def\colGap{2.5}
+            \def\rowGap{1.8}
+
+            % 顶点
+            \foreach \i in {1,2,3} {
+                \node[vNode] (L\i) at (0, -{(\i-1)*\rowGap}) {\i};
+                \node[vNode] (R\i) at (\colGap, -{(\i-1)*\rowGap}) {\i};
+            }
+
+            % 态射箭头
+            \draw[->] (R2) -- node[fill=white, inner sep=1.5pt, font=\small, pos=0.7] {$g$} (L1);
+            \draw[->] (R2) -- node[fill=white, inner sep=1.5pt, font=\small] {$i$} (L2);
+            % 修复 f：增加 inner sep 以便在斜线上看清
+            \draw[->] (R2) -- node[fill=white, inner sep=2.5pt, font=\small, pos=0.7] {$f$} (L3);
+            \draw[->] (R3) -- node[fill=white, inner sep=1.5pt, font=\small] {$h$} (L3);
+
+            % 强制统一高度的标签 B
+            \node[font=\large\bfseries] at (\colGap/2, -5.0) {$G_B$};
+        \end{tikzpicture}
+    \end{minipage}
+\end{center}
+
+它对应了邻接矩阵：
+
+$$
+A = \begin{bmatrix}
+d & a & b \\
+0 & e & 0 \\
+c & 0 & 0
+\end{bmatrix},\quad
+B = \begin{bmatrix}
+0 & 0 & 0 \\
+g & i & f \\
+0 & 0 & h
+\end{bmatrix}
+$$
+
+边集的列向量表示：
+
+\begin{equation}
+E_A = \begin{pmatrix}
+a \\ b \\ c \\ d \\ e
+\end{pmatrix},\quad
+E_B = \begin{pmatrix}
+f \\ g \\ h \\ i
+\end{pmatrix}
+\end{equation}
+
+边集的张量积：
+
+\begin{equation}
+E_A \otimes E_B
+= \begin{pmatrix}
+a \\ b \\ c \\ d \\ e
+\end{pmatrix}
+\otimes
+\begin{pmatrix}
+f \\ g \\ h \\ i
+\end{pmatrix}
+=\begin{pmatrix}
+a \otimes f \\
+a \otimes g \\
+a \otimes h \\
+a \otimes i \\
+b \otimes f \\
+b \otimes g \\
+b \otimes h \\
+b \otimes i \\
+c \otimes f \\
+c \otimes g \\
+c \otimes h \\
+c \otimes i \\
+d \otimes f \\
+d \otimes g \\
+d \otimes h \\
+d \otimes i \\
+e \otimes f \\
+e \otimes g \\
+e \otimes h \\
+e \otimes i
+\end{pmatrix}
+\end{equation}
+
+由于两图共用一个边集$V$，
+若$p$和$q$首尾相接，
+则$p \otimes q$构成复合箭头或者连通路径，
+在邻接矩阵的张量积中：
+
+\begin{equation}
+A \otimes B = 
+\left[ \begin{array}{ccc|ccc|ccc}
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+\underline{d \otimes g} & d \otimes i & d \otimes f & \underline{a \otimes g} & a \otimes i & a \otimes f & \underline{b \otimes g} & b \otimes i & b \otimes f \\
+0 & 0 & d \otimes h & 0 & 0 & a \otimes h & 0 & 0 & b \otimes h \\ \hline
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & e \otimes g & \underline{e \otimes i} & e \otimes f & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & e \otimes h & 0 & 0 & 0 \\ \hline
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+c \otimes g & c \otimes i & \underline{c \otimes f} & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & \underline{c \otimes h} & 0 & 0 & 0 & 0 & 0 & 0 
+\end{array} \right]
+\end{equation}
+
+采用下划线标注所有满足箭头首尾相接的复合．
+
+\begin{tikzpicture}[
+    >={Stealth[length=3mm,width=2mm]},
+    thick,
+    vertex/.style={circle, draw, minimum size=1.2cm, font=\small},
+    every loop/.style={->, looseness=6},
+    % 样式定义
+    edgeUnderline/.style={black, thick},   % 构成复合路径的项（实线）
+    edgePlain/.style={black, thin, dashed}  % 普通张量积项（虚线）
+]
+
+    % 1. 绘制 3x3 顶点网格
+    \foreach \u in {1,2,3} {
+        \foreach \v in {1,2,3} {
+            \node[vertex] (n\u\v) at ({(\v-1)*3.5}, {(1-\u)*3.5}) {$\u \otimes \v$};
+        }
+    }
+
+    % ---------------------------------------------------------
+    % 2. 实线部分：对应矩阵中下划线的路径项 (dom(p) = codom(q))
+    % ---------------------------------------------------------
+
+    % --- 与 B 的边 g (终点 1) 复合的项 (来自 A 起点 1) ---
+    \path[->, edgeUnderline] (n12) edge[bend right=20] node[above] {$d \otimes g$} (n11); 
+    \draw[->, edgeUnderline] (n12) -- node[pos=0.7, left] {$a \otimes g$} (n21);           
+
+    % --- 与 B 的边 i (终点 2) 复合的项 (来自 A 起点 2) ---
+    \path[->, edgeUnderline] (n22) edge[loop above] node[above] {$e \otimes i$} (n22);    
+
+    % --- 与 B 的边 f, h (终点 3) 复合的项 (来自 A 起点 3) ---
+    \draw[->, edgeUnderline] (n32) to[bend left=40] node[near end, left] {$c \otimes f$} (n13); 
+    \path[->, edgeUnderline] (n33) edge[loop above] node[above] {$c \otimes h$} (n13);    
+
+    % ---------------------------------------------------------
+    % 3. 虚线部分：普通非路径耦合项
+    % ---------------------------------------------------------
+
+    % A 起点 1 与 B 终点非 1 的边
+    \path[->, edgePlain] (n12) edge[bend left=20] node[above] {$d \otimes f$} (n13); 
+    \path[->, edgePlain] (n12) edge[loop above] node[above] {$d \otimes i$} (n12);     
+    \path[->, edgePlain] (n13) edge[loop above] node[above] {$d \otimes h$} (n13);     
+
+    % A 起点 2 与 B 终点非 2 的边
+    \path[->, edgePlain] (n22) edge[bend right=20] node[above] {$e \otimes g$} (n21); 
+    \path[->, edgePlain] (n22) edge[bend left=20] node[above] {$e \otimes f$} (n23);  
+    \path[->, edgePlain] (n23) edge[loop above] node[above] {$e \otimes h$} (n23);     
+
+    % 其他层间耦合 (不满足 dom(p) = codom(q))
+    \draw[->, edgePlain] (n12) -- node[midway, left] {$a \otimes i$} (n22);           
+    \draw[->, edgePlain] (n13) -- node[midway, right] {$a \otimes h$} (n23);          
+    \draw[->, edgePlain] (n12) -- node[pos=0.7, right] {$a \otimes f$} (n23);         
+    \draw[->, edgePlain] (n12) to[bend right=15] node[pos=0.8, left] {$b \otimes i$} (n32); 
+    \draw[->, edgePlain] (n13) to[bend right=15] node[pos=0.8, right] {$b \otimes h$} (n33); 
+
+    \draw[->, edgePlain] (n32) to[bend left=30] node[near end, left] {$c \otimes i$} (n12); 
+    \draw[->, edgePlain] (n32) to[bend right=20] node[pos=0.3, left] {$c \otimes g$} (n11); 
+
+\end{tikzpicture}
+
+
+张量积相当于
+
+\begin{tikzpicture}[
+    >={Stealth[length=2mm,width=1.5mm]},
+    thick,
+    % 节点样式
+    vNode/.style={rectangle, draw, rounded corners=2pt, minimum size=0.8cm, font=\scriptsize, inner sep=2pt},
+    % 线型样式
+    edgePath/.style={black, thick},        % 满足复合条件的路径 (对应矩阵下划线)
+    edgePlain/.style={black, thin, dashed}  % 普通张量积耦合
+]
+
+    % --- 参数设置 ---
+    \def\gap{8.0}    
+    \def\rowGap{1.1} 
+    \def\blockGap{1.0} 
+
+    % =========================================================
+    % 1. 绘制左侧和右侧的 9 个顶点
+    % =========================================================
+    \foreach \u in {1,2,3} {
+        \foreach \v in {1,2,3} {
+            \pgfmathsetmacro{\yPos}{ -(\u-1)*3*\rowGap - (\u-1)*\blockGap - (\v-1)*\rowGap }
+            \node[vNode] (L\u\v) at (0, \yPos) {$\u \otimes \v$};
+            \node[vNode] (R\u\v) at (\gap, \yPos) {$\u \otimes \v$};
+        }
+    }
+
+    % =========================================================
+    % 2. 绘制映射箭头与态射标注
+    % =========================================================
+
+    % --- BLOCK 1: 来自 A 起点 1 ---
+    % 从 R12 (1 \otimes 2) 出发
+    \draw[->, edgePath] (R12) -- node[above, pos=0.5, font=\tiny] {$d \otimes g$} (L11);
+    \draw[->, edgePath] (R12) -- node[above, pos=0.7, font=\tiny] {$a \otimes g$} (L21);
+    \draw[->, edgePath] (R12) to[bend left=10] node[below, pos=0.6, font=\tiny] {$b \otimes g$} (L31);
+    
+    % 虚线项
+    \draw[->, edgePlain] (R12) to[bend right=8] (L12); 
+    \draw[->, edgePlain] (R12) to[bend right=12] (L13);
+    \draw[->, edgePlain] (R12) to[bend left=5] (L22);
+    \draw[->, edgePlain] (R12) to[bend left=8] (L23);
+    \draw[->, edgePlain] (R12) to[bend left=15] (L32);
+    \draw[->, edgePlain] (R12) to[bend left=20] (L33);
+
+    % 从 R13 (1 \otimes 3) 出发
+    \draw[->, edgePlain] (R13) to[bend right=10] (L13);
+    \draw[->, edgePlain] (R13) to[bend left=5] (L23);
+    \draw[->, edgePlain] (R13) to[bend left=15] (L33);
+
+    % --- BLOCK 2: 来自 A 起点 2 ---
+    \draw[->, edgePath] (R22) -- node[above, pos=0.5, font=\tiny] {$e \otimes i$} (L22);
+    \draw[->, edgePlain] (R22) to[bend right=15] (L21);
+    \draw[->, edgePlain] (R22) to[bend left=15] (L23);
+    \draw[->, edgePlain] (R23) to[bend left=5] (L23);
+
+    % --- BLOCK 3: 来自 A 起点 3 ---
+    % 从 R32 (3 \otimes 2) 出发
+    \draw[->, edgePath] (R32) -- node[above, pos=0.8, font=\tiny] {$c \otimes f$} (L13);
+    \draw[->, edgePlain] (R32) to[bend right=20] (L11);
+    \draw[->, edgePlain] (R32) to[bend right=15] (L12);
+
+    % 从 R33 (3 \otimes 3) 出发
+    \draw[->, edgePath] (R33) to[bend right=10] node[below, pos=0.4, font=\tiny] {$c \otimes h$} (L13);
+
+\end{tikzpicture}
+
+\section{邻接矩阵的乘法}
+
+\begin{equation}
+\begin{aligned}
+A \circ B &= 
+\begin{bmatrix}
+0 & 0 & 0 \\
+d & a & b \\
+0 & 0 & c
+\end{bmatrix} 
+\circ
+\begin{bmatrix}
+0 & 0 & 0 \\
+g & i & f \\
+0 & 0 & h
+\end{bmatrix} \\
+&= \begin{bmatrix}
+0 & 0 & 0 \\
+d \otimes 0 + a \otimes g + b \otimes 0 & d \otimes 0 + a \otimes i + b \otimes 0 & d \otimes 0 + a \otimes f + b \otimes h \\
+0 \otimes 0 + c \otimes g + 0 \otimes 0 & 0 \otimes 0 + c \otimes i + 0 \otimes 0 & 0 \otimes 0 + c \otimes f + c \otimes h
+\end{bmatrix} \\
+&= \begin{bmatrix}
+0 & 0 & 0 \\
+a \otimes g & a \otimes i & a \otimes f + b \otimes h \\
+c \otimes g & c \otimes i & c \otimes f + c \otimes h
+\end{bmatrix}
+\end{aligned}
+\end{equation}
+
+它构成了一个邻接矩阵
+
+\begin{tikzpicture}[
+    >={Stealth[length=3mm,width=2mm]},
+    thick,
+    vertex/.style={circle, draw, minimum size=1.2cm, font=\small},
+    every loop/.style={->, looseness=8},
+    % 样式定义
+    edgeSingle/.style={black, thick},   
+    edgeDouble/.style={black, thick, double, double distance=2pt} 
+]
+
+    % --- 参数设置 (修复 Undefined control sequence \gap) ---
+    \def\gap{6.0}  % 左右顶点组的水平间距
+    \def\dV{2.5}   % 垂直间距
+
+    % =========================================================
+    % 1. 绘制左侧 (Target) 和 右侧 (Source) 的 3 个顶点
+    % =========================================================
+    \foreach \u in {1,2,3} {
+        \pgfmathsetmacro{\yPos}{ (2-\u)*\dV }
+        
+        % 左侧顶点
+        \node[vertex] (L\u) at (0, \yPos) {$\u \otimes \dots$};
+        % 右侧顶点
+        \node[vertex] (R\u) at (\gap, \yPos) {$\u \otimes \dots$};
+    }
+
+    % =========================================================
+    % 2. 绘制从右向左的映射箭头
+    % =========================================================
+
+    % 从 R2 (Source 2) 出发
+    \draw[->, edgeSingle] (R2) -- node[above, pos=0.5, font=\tiny] {$a \otimes g$} (L1);
+    \draw[->, edgeSingle] (R2) -- node[above, pos=0.5, font=\tiny] {$a \otimes i$} (L2);
+    \draw[->, edgeDouble] (R2) -- node[below, pos=0.5, font=\tiny, sloped] {$a \otimes f + b \otimes h$} (L3);
+
+    % 从 R3 (Source 3) 出发
+    \draw[->, edgeSingle] (R3) -- node[below, pos=0.5, font=\tiny, sloped] {$c \otimes g$} (L1);
+    \draw[->, edgeSingle] (R3) -- node[below, pos=0.5, font=\tiny, sloped] {$c \otimes i$} (L2);
+    \draw[->, edgeDouble] (R3) -- node[above, pos=0.5, font=\tiny] {$c \otimes f + c \otimes h$} (L3);
+
+\end{tikzpicture}
+
+\chapter{概率}
+
+在$X \times Y$上给出联合分布矩阵：
+
+$$
+M = \begin{bmatrix}
+\sqrt{1/3} & \sqrt{1/3} & 0 \\
+0 & 0 & \sqrt{1/3} 
+\end{bmatrix}
+$$
+
+$$
+MM^T = \begin{bmatrix}
+\frac{2}{3} & 0 \\
+0 & \frac{1}{3}
+\end{bmatrix},\quad 
+M^T M = \begin{bmatrix}
+\frac{1}{3} & \frac{1}{3} & 0 \\
+\frac{1}{3} & \frac{1}{3} & 0 \\
+0 & 0 & \frac{1}{3}
+\end{bmatrix}
+$$
+0000
+注意到
+
+$$
+\text{trace} \ MM^T = \text{trace} \ M^T M = 1
+$$
+
+反映出分别是$X$和$Y$上的概率分布．
+
+\section{量子概率}
+
+有限集上的联合概率分布定义了秩$1$的$\mathbb C^X \otimes \mathbb C^Y$上的线性算子，
+称为\textbf{密度算子(density operator)}或者\textbf{纯量子态(pure quantum state)}．
+
+
+\chapter{Topos: 逻辑与关系的范畴化}
+
+在这一章中，我们将视角从“线性空间”拓宽到“构造性逻辑”．当我们将集合间的映射视为一种“资源”或“逻辑蕴含”时，矩阵就演变成了处理关系的逻辑算子．
+
+\section{态射集 (Hom-sets)}
+在范畴 $\mathcal{C}$ 中，任意两个对象 $A, B$ 之间的全体态射构成一个集合 $\mathrm{Hom}(A, B)$．在线性代数中，这对应了矩阵空间；而在逻辑中，这对应了从前提 $A$ 推导出结论 $B$ 的所有证明路径．
+
+\section{高阶函数 (Higher-order Functions)}
+若一个范畴不仅有对象间的态射，还能将态射集本身视为范畴内的对象，我们称之为“指数对象” (Exponential Object) $B^A$．这意味着“函数”本身可以作为另一个函数的输入或输出．
+
+\section{Curry 化与伴随}
+Curry 化是函数式编程的核心，但在范畴论中它表现为一种深刻的伴随关系：
+\begin{equation}
+\mathrm{Hom}(A \times B, C) \cong \mathrm{Hom}(A, C^B)
+\end{equation}
+这说明：处理两个变量的函数，等价于处理一个变量并返回另一个函数的函数．这种从“二元交互”到“嵌套映射”的转化，正是张量伴随算子的逻辑原型．
+
+\section{矩阵作为态射的表达}
+在有限维线性空间范畴中，$\mathrm{Hom}(V, W)$ 的元素由矩阵唯一确定．但在 Topos 的语境下，矩阵的元素可以不仅仅是实数，还可以是真值（Boolean）或更复杂的格（Lattice）元素．
+
+\section{笛卡尔封闭范畴 (CCC)}
+一个拥有有限积、终对象且支持指数对象的范畴称为 \textbf{笛卡尔封闭范畴 (Cartesian Closed Category)}．它是 Lambda 演算的范畴论模型．在 CCC 中，逻辑推理与程序执行是同构的．
+
+\section{Topos: 逻辑的几何}
+Topos 是一种特殊的 CCC，它拥有一个“子对象分类器” $\Omega$．这使得 Topos 能够模拟集合论的所有操作．每一个 Topos 都自带一套内在逻辑（通常是直觉主义逻辑），我们可以像在集合论中那样在其中“做数学”．
+
+\section{关系范畴 (Rel)}
+在集合范畴 $\mathbf{Set}$ 中，态射是函数；而在关系范畴 $\mathbf{Rel}$ 中，态射是二元关系 $R \subseteq A \times B$．
+\begin{itemize}
+    \item \textbf{对称性}：$\mathbf{Rel}$ 中的态射可以轻易转置，这预演了线性代数中的伴随矩阵．
+    \item \textbf{合成}：关系的合成对应于布尔矩阵的乘法．
+\end{itemize}
+
+\section{二元关系与逻辑矩阵}
+对于有限集上的关系 $R \subseteq X \times Y$，我们可以定义一个 \textbf{逻辑矩阵} $M$：
+\begin{equation}
+M_{xy} = \begin{cases} 1 & \text{if } (x, y) \in R \\ 0 & \text{if } (x, y) \notin R \end{cases}
+\end{equation}
+此时，关系的复合 $R \circ S$ 完美对应于布尔代数上的矩阵乘法 $(M_R \cdot M_S)_{xz} = \bigvee_y (M_{xy} \wedge M_{yz})$．
+
+\section{关系的张量积}
+在 $\mathbf{Rel}$ 中，对象的张量积就是其笛卡尔积．对于关系 $R_1: A \to B$ 和 $R_2: C \to D$，它们的张量积 $R_1 \otimes R_2$ 代表了独立系统间的并行逻辑：
+\begin{equation}
+((a, c), (b, d)) \in R_1 \otimes R_2 \iff (a, b) \in R_1 \text{ 且 } (c, d) \in R_2
+\end{equation}
+这在矩阵层面上对应了逻辑矩阵的克罗内克积（Kronecker Product）．
+
+\chapter{自由群}
+
+\section{自由群：字符串视角 vs 形式和视角}
+生成自由群有两种截然不同的直观构造方式：
+\begin{enumerate}
+    \item \textbf{字符串构造（非交换）}：将 $X$ 视为字母表，元素是约简字（Reduced Words）．运算是字符串拼接．这与拓扑中的道路（Path）和基本群息息相关，强调的是“过程”和“顺序”．
+    \item \textbf{形式和构造（交换）}：将 $X$ 视为基底，元素是形式线性组合 $\sum n_i x_i$．这对应了阿贝尔化后的结构 $\mathbb{Z}[X]$，强调的是“状态”和“净位移”．
+\end{enumerate}
+在本书讨论张量与矩阵时，我们主要采用后者，因为矩阵的加法天生具有交换性．
+
+\section{字符串}
+
+\section{邻接矩阵}
+
+\section{张量积}
+
+\chapter{自由Abel群}
+
+\section{形式和}
+
+变量$x$的正整数次幂的集合为$X = \{1,x,x^2,\cdots\}$，
+实域$\mathbb R$上的一元多项式是$X$按照$\mathbb R$系数的有限形式和，
+例如：
+
+$$
+p(x) = 3x^3 - 2x + 5
+$$
+
+换个角度看，
+$p$给$X$中的每个元素指定了一个$\mathbb R$系数：
+
+$$
+\begin{aligned}
+p: X &\to \mathbb R \\
+x^i &\mapsto a_i
+\end{aligned}
+$$
+
+使得$p(x) = a_0 + a_1 x + a_2 x^2 + \cdots$，
+且$a_i \neq 0$的系数是有限的．
+从另一个角度，
+可以认为$X = \{1,x,x^2,\cdots\}$是基，
+通过$\mathbb R$系数生成了更大的数学结构，
+按照前面讨论的集合列向量表示，
+可以清晰看出这种$\mathbb R$线性组合的生成方式：
+
+\begin{equation}
+\underbrace{X=\begin{pmatrix}1 \\ x \\ x^2 \\ x^3 \\ \vdots \end{pmatrix}}_{\text{基}}
+\quad \xrightarrow{\text{赋予系数}} \quad
+\underbrace{p(x)=\text{sum}\begin{pmatrix}5 \\ -2 x \\ 0 \\ 3 x^3 \\ \vdots\end{pmatrix}}_{\text{形式项}}
+\quad \xrightarrow{\text{提取坐标}} \quad
+\underbrace{p=\begin{pmatrix}5 \\ -2 \\ 0 \\ 3 \\ \vdots\end{pmatrix}}_{\text{系数}}
+\end{equation}\label{eq:polynomial-vector}
+
+这样多项式$p$完全由一个系数列向量表示．
+当这个列向量中只有有限非零元时，
+对应了有限形式和．
+在范畴论中，
+集合$X$上取值为$\mathbb R$的函数，
+即$\mathbb R$值函数全体所构成的函数集合，
+常记为：
+
+$$
+\mathbb R^X = \{p: X \to \mathbb R \} 
+$$
+
+它是集合范畴中的\textbf{指数对象(exponential object)}，
+读者可以自行验证无论有限无限都有$|\mathbb R^X| = |\mathbb R| ^ {|X|}$．
+此外，
+它还可以用列向量空间表示，
+这里我们用方括号矩阵，
+体现它就是我们在线性代数中讨论的那种矩阵：
+
+$$
+\mathbb R^X = \left\{ \begin{bmatrix} a_1 \\ a_2 \\ \vdots \end{bmatrix}, \quad a_i \in \mathbb R \right\}
+$$
+
+多项式集合$\mathbb R[X]$描述的是函数集合$\mathbb R^X$中，
+其中满足有限非零系数的那一部分．
+在这里我们看到了如何从$X = \{1,x,x^2,\cdots\}$的各次幂作为生成元，
+通过不同的系数来构造多项式．
+生成元按某种系数的构造，
+具有列向量的表示形式，
+是我们接下来要讨论的．
+
+有了多项式这个例子的铺垫，
+我们可以开始对任何集合$X\in\textbf{Set}$赋予类似的代数结构．
+正如多项式需要用次数来区分生成元，
+这里先给出有限或无限的指标集合$I\in\textbf{Set}$，
+满足$|I| = |X|$，
+使得指标$i\in I$能单满映射到集合元素$x_i\in X$．
+给集合的每个元素赋予一个整数：
+
+$$
+\begin{aligned}
+p: X &\to \mathbb Z \\
+x_i &\mapsto p(x_i) = n_i \\
+\end{aligned}
+$$
+
+宏观地看，
+所有这样的赋予方式构成函数集，
+用范畴论的记号记为：
+
+$$
+\mathbb Z^X = \{p: X \to \mathbb Z\} = \textbf{Set}(X,\mathbb Z) = \text{Hom}(X,\mathbb Z) 
+$$
+
+类似前面在多项式集合的讨论，
+这里指数形式暗示它是一个\textbf{指数对象(exponential object)}，
+$\textbf{Set}(-,-)$或$\text{Hom}(-,-)$则给出了一个集合范畴中的\textbf{态射集(hom-set)}也就是箭头集．
+而以上的指定方式是这个态射集中的成员函数$p\in \mathbb Z^X$，
+这样对应到集合$X$按照整系数的\textbf{形式和(formal sum)}：
+
+$$
+\sum_{i\in I} n_i x_i
+$$
+
+本质上其中的项是$p$构造的输入输出的二元组$(x_i,n_i)$，
+从而构成集合：
+
+$$
+p_X = \{ (x_i,n_i) \}_{i\in I}
+$$
+
+从另一个角度，
+可以认为$X$是基，
+通过$\mathbb Z$系数生成了更大的数学结构，
+类似(\ref{eq:polynomial-vector})：
+
+\begin{equation}
+\underbrace{X=\begin{pmatrix}x_1 \\ x_2 \\ x_3\end{pmatrix}}_{\text{基}}
+\quad \xrightarrow{\text{赋予系数}} \quad
+\underbrace{p_X=\text{sum}\begin{pmatrix}n_1 x_1 \\ n_2 x_2 \\ n_3 x_3\end{pmatrix}}_{\text{形式项}}
+\quad \xrightarrow{\text{提取坐标}} \quad
+\underbrace{p=\begin{pmatrix}n_1 \\ n_2 \\ n_3\end{pmatrix}}_{\text{系数}}
+\end{equation}\label{eq:formal-sum-vector}
+
+同样可以讨论用方括号矩阵表示的列向量空间：
+
+$$
+\mathbb Z^X = \left\{ \begin{bmatrix} n_1 \\ n_2 \\ \vdots \end{bmatrix}, \quad n_i \in \mathbb Z \right\}
+$$
+
+注意到向量空间的维度和集合势的关系：
+
+\begin{equation}
+\dim \mathbb Z^X = |X|
+\end{equation}\label{eq:dim-card-Z}
+
+类似多项式的处理，
+通常当$n_i=0$时，
+$n_i x_i$这一项要消掉，
+从形式求和公式中排除．
+当我们讨论\textbf{有限形式和(finite formal sum)}时，
+要求上式子中$n_i \neq 0$的情况为有限个，
+排除了零系数项后，
+得到有限个非零系数的形式和．
+相应的，
+类似多项式集合的记号，
+有限形式和用指数对象的方式记为$\mathbb Z[X]$，
+它是函数集$\mathbb Z^X$中有限非零系数的那部分，
+是它的子空间，
+因为它对加法运算封闭，
+用列向量表示：
+
+$$
+\begin{aligned}
+\mathbb Z[X] \times \mathbb Z[X] &\to \mathbb Z[X] \\    
+\left(
+    \begin{bmatrix} m_1 \\ m_2 \\ \vdots \end{bmatrix},
+    \begin{bmatrix} n_1 \\ n_2 \\ \vdots \end{bmatrix}
+\right) 
+&\mapsto
+    \begin{bmatrix} m_1 \\ m_2 \\ \vdots \end{bmatrix} +
+    \begin{bmatrix} n_1 \\ n_2 \\ \vdots \end{bmatrix}
+    = \begin{bmatrix} m_1 + n_1 \\ m_2 + n_2 \\ \vdots \end{bmatrix}
+\end{aligned}
+$$
+
+有限非零个$m_i$和$n_j$的相加，
+得到有限非零个$m_i + n_j$．
+这使得我们完全可以用线性代数的角度讨论它．
+
+\section{自由函子}
+
+前面讨论了集合$X$的整系数有限形式和全体$\mathbb Z[X]$，
+显然可以定义其它的系数，
+如环或者域，
+关键是这个系数集合$\Lambda$中要有$0$的概念，
+才能消去形式项，
+满足有限性的要求，
+形成$\Lambda$系数的有限形式和全体$\Lambda[X]$．
+这里的$0$的概念暗示了Abel群的单位元，
+和相应的具有交换律的加性代数结构．
+
+以$\mathbb Z[X]$为例，
+$\mathbb Z = (\mathbb Z,+,0)\in\textbf{Ab}$是Abel群，
+$\textbf{Ab}$是Abel群范畴，
+$\mathbb Z$的Abel群结构诱导出$\mathbb Z[X]$上的Abel群的结构．
+用函子描述：
+
+$$
+\begin{aligned}
+F: \textbf{Set} &\to \textbf{Ab} \\
+X &\mapsto FX = \mathbb Z[X] \\
+Y &\mapsto FY = \mathbb Z[Y] \\
+\end{aligned}
+$$
+
+注意到我们只讨论过一种二元集合运算，
+就是集合的张量积$X \otimes Y = X \times Y$，
+我们自然关注$F(X \otimes Y) = \mathbb Z[X \otimes Y]$能得到什么，
+它和$FX = \mathbb Z[X]$以及$FY = \mathbb Z[Y]$有什么关系．
+根据(\ref{eq:dim-card-Z})有：
+
+\begin{equation}
+\dim \mathbb Z^{X \otimes Y} = \dim \mathbb Z[X \otimes Y] = |X \otimes Y| = |X| \times |Y|
+= \dim \mathbb Z^X \times \dim \mathbb Z^Y
+\end{equation}\label{eq:dim-card}
+
+再考虑到势：
+
+$$
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAA0ACAHW4jwC28TgE1OAXk5deg4SJABfUuky58hFABZyVWoxZteAujgAWAI3OcAWsml9ZcURUXKQGbHgJFtm3fWZWRBBeKCwBHm5jM0sbO0j+cLkKCU4AH3tEoScRNNSMvJkkpzTcxV0YKABzeCJQADMAJwgBJDIQHAgkAEZqAINggDFXBubWxF6OrsQAJj79IJDuMNalUZa26k6kOb1AtjTeAGMofjSQagY6cxgGAAVVLw0QRqwq0xxyhSA
+\begin{tikzcd}
+X \otimes Y = X \times Y \arrow[rrrr, "F"] \arrow[rrrrdddd, "|\cdot|"'] &  &  &  & {\mathbb Z[X \otimes Y]} \arrow[dddd, "\dim"]                  \\
+                                                                        &  &  &  &                                                                \\
+                                                                        &  &  &  &                                                                \\
+                                                                        &  &  &  &                                                                \\
+                                                                        &  &  &  & {\dim \mathbb Z[X \otimes Y] = |X \otimes Y| = |X| \times |Y|}
+\end{tikzcd}
+$$
+
+根据(\ref{eq:set-tensor})：
+
+$$
+F(X \otimes Y)
+=F\begin{pmatrix}a \otimes a \\ a \otimes e \\ b \otimes a \\ b \otimes e \\ c \otimes a \\ c \otimes e\end{pmatrix}
+$$
+
+类似(\ref{eq:formal-sum-vector})：
+
+\begin{equation}
+\underbrace{X \otimes Y=\begin{pmatrix}a \otimes a \\ a \otimes e \\ b \otimes a \\ b \otimes e \\ c \otimes a \\ c \otimes e\end{pmatrix}}_{\text{基}}
+\quad \xrightarrow{\text{赋予系数}} \quad
+\underbrace{p_{X \otimes Y}=\text{sum}\begin{pmatrix}n_{a \otimes a}(a \otimes a) \\ n_{a \otimes e}(a \otimes e) \\ n_{b \otimes a}(b \otimes a) \\ n_{b \otimes e}(b \otimes e) \\ n_{c \otimes a}(c \otimes a) \\ n_{c \otimes e}(c \otimes e)\end{pmatrix}}_{\text{形式项}}
+\quad \xrightarrow{\text{提取坐标}} \quad
+\underbrace{p=\begin{pmatrix}n_{a \otimes a} \\ n_{a \otimes e} \\ n_{b \otimes a} \\ n_{b \otimes e} \\ n_{c \otimes a} \\ n_{c \otimes e}\end{pmatrix}}_{\text{系数}}
+\end{equation}
+
+系数$p$的全体构成了维度为$|X| \times |Y|$的向量空间(\ref{eq:dim-card})，
+即张量空间．
+注意到函子对张量积的保持：
+
+$$
+\begin{aligned}
+F: \textbf{Set} &\to \textbf{Ab} \\
+X &\mapsto FX = \mathbb Z[X] \\
+Y &\mapsto FY = \mathbb Z[Y] \\
+X \otimes Y &\mapsto F(X \otimes Y) = \mathbb Z[X] \otimes \mathbb Z[Y] \\
+\end{aligned}
+$$
+
+\section{商}
+
+前面讨论过一个变元的多项式，
+现在考虑$\mathbb R[x]$和$\mathbb R[y]$中的两对多项式：
+
+$$
+\begin{cases}
+p_1(x) = 3x + 1 \\
+q_1(y) = - 2y
+\end{cases} \quad
+\begin{cases}
+p_2(x) = -6x - 2 \\
+q_2(y) = y
+\end{cases}
+$$
+
+从集合的张量积角度看，
+$(p_1,q_1) = p_1 \otimes q_1 \in \mathbb R[x] \otimes \mathbb R[y]$，
+$(p_2,q_2) = p_1 \otimes q_1 \in \mathbb R[x] \otimes \mathbb R[y]$，
+且$(p_1,q_1) \neq (p_2,q_2)$．
+然而在二元多项式集$\mathbb R[x,y]$中：
+
+$$
+p_1(x) \cdot q_1(y) = p_2(x) \cdot q_2(y) = - 6xy - 2y 
+$$
+
+这意味着$(p_1,q_1)$和$(p_2,q_2)$借助多项式的乘法运算建立了某种联系，
+而这种联系体现了某种冗余信息．
+从代数结构精细化的角度看，
+我们要的不止是集合范畴的张量积$\mathbb R[x] \otimes_\textbf{Set} \mathbb R[y]$，
+而是需要某种更精细的范畴中的张量积，
+例如Abel群范畴中的张量积$\mathbb R[x] \otimes_\textbf{Ab} \mathbb R[y]$．
+我们需要某种类似于上述$p_1(x) \cdot q_1(y) = p_2(x) \cdot q_2(y) $的性质来构造等价关系
+$(p_1,q_1) \sim (p_2,q_2)$，
+产生我们需要的张量积：
+
+$$
+\mathbb R[x] \otimes_\textbf{Ab} \mathbb R[y]
+= \mathbb R[x] \otimes \mathbb R[y]/\sim
+$$
+
+具体而言：
+
+$$
+(p_1,q_1) \sim (p_2,q_2) \ \Longleftrightarrow \ 
+p_1 \cdot q_1 = p_2 \cdot q_2 \ \Longleftrightarrow \ 
+p_1 \cdot q_1 - p_2 \cdot q_2 = 0
+$$
+
+
+\section{自由群}
+
+集合$X=\{a,b,c\}$作为字母表可以生成字符串，
+所有由$X$生成的字符串构成的集合记$W$．
+$W$上用字符串拼接可以定义封闭的加法$[aab] + [cb] = [aabcb]$，
+加法有唯一的单位元即空串$[]$，
+这样使得$(W,+,[])$构成非交换的含幺加法系统．
+
+为了得到具有对称性的群结构，
+将$X$的所有元素都赋予一个形式化的逆元，
+字母表扩展为$\{a,a^{-1},b,b^{-1},c,c^{-1}\}$，
+在此基础上得到扩展的加法系统$(FX,+,[])$．
+约定$[xx^{-1}] = [x^{-1}x] = []$，
+使得字符串中相邻互逆的字母被约化，
+且所有的约化字符串都有唯一的逆，
+这样使得$(FX,+,[])$构成群，
+称为$X$生成的\textbf{自由群(free group)}．
+
+
+
+
+\section{整数}
+
+整数集$\mathbb Z$具有Abel群和交换环的结构．
+给定整数$n \in \mathbb Z$有正规子群$n\mathbb Z = \{nk \ | \ k\in \mathbb Z\}$，
+若将其记为$(n)$则强调它还是整数环中的理想．
+同余关系的等价形式有 $a - b \in n\mathbb Z \Leftrightarrow a \sim_n b \Leftrightarrow a \equiv b \pmod n$，
+得到商群：
+$\mathbb Z_n = \mathbb Z/n\mathbb Z = \mathbb Z/\sim_n = \{ i + n\mathbb Z\} = \{[0]_n,[1]_n,\cdots,[n-1]_n\}$，
+为简洁也可以直接记作$\mathbb Z_n = \{0,1,\cdots,n-1\}$，
+这是有限集$|\mathbb Z_n| = n$．
+若将其记为$\mathbb Z_n = \mathbb Z/(n)$则强调它还是整数环中的商环，
+有对应的乘法$[a] \cdot [b] = [a \cdot b]$．
+用前面的列向量有序表示，
+构造集合的张量积：
+
+$$
+\begin{aligned}
+\mathbb Z_m \otimes \mathbb Z_n 
+&=\begin{pmatrix}[i]_m\end{pmatrix}
+\otimes \begin{pmatrix}[j]_n\end{pmatrix} \\
+&=\begin{pmatrix}[i]_m \otimes [j]_n\end{pmatrix}
+=\begin{pmatrix}(i + m\mathbb Z) \otimes (j + n\mathbb Z)\end{pmatrix}
+\end{aligned}
+$$
+
+在集合范畴中，张量积就是二元组$x \otimes y = (x,y)$．
+现在在Abel群范畴，
+我们希望张量积$(i + m\mathbb Z) \otimes (j + n\mathbb Z)$保持一些代数结构，
+而不仅仅是二元组$(i + m\mathbb Z,j + n\mathbb Z)$的罗列．
+自然的想法是，
+既然$\mathbb Z_m$和$\mathbb Z_n$都是同余类构成的商群，
+我们希望张量积空间$\mathbb Z_m \otimes \mathbb Z_n$也具有类似的形式，
+这样可以在代数上封闭，
+即存在$o\in\mathbb Z^+$使得
+$\mathbb Z_m \otimes \mathbb Z_n \simeq \mathbb Z_o$，
+于是有$(i + m\mathbb Z) \otimes (j + n\mathbb Z)$和$k + o\mathbb Z$的对应．
+
+先考虑$n=1$时$\mathbb Z_1 = \mathbb Z/1\mathbb Z = \{0\}$是平凡群，
+于是
+
+$$
+\mathbb Z_m \otimes \mathbb Z_1 = \mathbb Z_m \otimes \{0\}
+= \begin{pmatrix}(i + m\mathbb Z) \otimes 0 \end{pmatrix}
+\simeq \begin{pmatrix}i + m\mathbb Z\end{pmatrix}
+= \mathbb Z_m
+$$
+
+进而考虑
+
+$$
+\mathbb Z_m \otimes \mathbb Z_{mn}
+= \begin{pmatrix}(i + m\mathbb Z) \otimes (i + mn\mathbb Z) \end{pmatrix}
+\simeq \begin{pmatrix}i + m\mathbb Z\end{pmatrix}
+= \mathbb Z_m
+$$
+
+
+不难理解：
+
+$$
+\mathbb Z_m \otimes \mathbb Z_n \simeq \mathbb Z_{\text{gcd}(m,n)}​
+$$
+
+\begin{center}
+\begin{tikzcd}[column sep=large]
+(A \oplus B) \times C \arrow[r, "\phi"] \arrow[d, "f"] & (A \oplus B) \otimes C \arrow[dl, "\exists ! \bar{f}", dashed] \\
+(A \otimes C) \oplus (B \otimes C) & 
+\end{tikzcd}
+\end{center}
+
+\chapter{张量函子与伴随}
+
+\section{张量-同态伴随 (Tensor-Hom Adjunction)}
+张量积的核心逻辑在于它与内合同态的伴随关系：
+\begin{equation}
+(V \otimes -) \dashv \mathrm{Hom}(V, -)
+\end{equation}
+这意味着存在自然同构：$\mathrm{Hom}(V \otimes W, U) \cong \mathrm{Hom}(V, \mathrm{Hom}(W, U))$．
+
+\section{普遍性质}
+张量积将多线性映射 $B: V \times W \to U$ 唯一地线性化为 $\tilde{B}: V \otimes W \to U$：
+\begin{center}
+\begin{tikzcd}[column sep=large, row sep=large]
+V \times W \arrow[r, "\otimes"] \arrow[rd, "B"'] & V \otimes W \arrow[d, "\exists! \tilde{B}", dashed] \\
+& U
+\end{tikzcd}
+\end{center}
+
+% 参考文献
+\bibliographystyle{apalike}
+\bibliography{../ref}
+
+\end{document}

@@ -24,6 +24,7 @@
 \usepackage[provide=*, chinese]{babel}
 \usepackage{sectsty}
 
+
 \babelfont{rm}[
     Path = ./font/,
     Renderer = HarfBuzz,
@@ -383,7 +384,7 @@ $$
 X \sqcup Y 
 = \{ (X,a), (X,b), (X,c), (Y,a), (Y,e) \}
 = \begin{pNiceMatrix}
-    (X,a) \\ (X,b) \\ (X,c) \\ \Hline[:]
+    (X,a) \\ (X,b) \\ (X,c) \\ \hdashline
     (Y,a) \\ (Y,e) 
 \end{pNiceMatrix}
 \end{equation}
@@ -399,7 +400,7 @@ X \oplus Y
 =\begin{pmatrix} a \\ b \\ c \end{pmatrix}
 \oplus \begin{pmatrix} a \\ e \end{pmatrix}
 = \begin{pNiceMatrix}
-    a \\ b \\ c \\ \Hline[:]
+    a \\ b \\ c \\ \hdashline
     a \\ e 
 \end{pNiceMatrix}
 \end{equation}
