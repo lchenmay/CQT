@@ -1,0 +1,446 @@
+%!TEX program = lualatex
+\documentclass[10pt, openany]{book}
+
+\usepackage{comment}
+\usepackage{silence}
+\WarningFilter{latex}{Command \underbar has changed}
+\WarningFilter{latex}{Command \underline has changed}
+
+% ============== 考虑出血的版式 ===================================
+\usepackage[
+    paperwidth=6in,
+    paperheight=9in,
+    top=0.8in,
+    bottom=0.8in,
+    inner=0.75in,
+    outer=0.6in,
+    bindingoffset=0.25in,
+    footskip=0.4in
+]{geometry}
+
+% ============== 语言和字体 ===================================
+\usepackage[x-4]{pdfx} 
+\usepackage{fontspec}
+\usepackage[provide=*, chinese]{babel}
+\usepackage{sectsty}
+
+\babelfont{rm}[
+    Path = ./font/,
+    Renderer = HarfBuzz,
+    BoldFont = {GFSDidot-Regular.ttf},
+    BoldFeatures = {RawFeature={embolden=3.0}},
+    ItalicFont = {timesi.ttf}
+]{GFSDidot-Regular.ttf}
+
+\babelfont{sf}[Path = ./font/, Renderer = HarfBuzz]{GFSDidot-Regular.ttf}
+\babelfont{tt}[Path = ./font/, Renderer = HarfBuzz]{NotoSerifSC-Regular.ttf}
+
+\babelfont[chinese]{rm}[
+    Path = ./font/,
+    Renderer = HarfBuzz,
+    BoldFont = {NotoSerifSC-ExtraBold.ttf},
+    ItalicFont = {StKaiTi.ttf}
+]{NotoSerifSC-Regular.ttf}
+
+\allsectionsfont{\rmfamily\bfseries}
+
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{quoting}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{tikz}
+\usepackage{fancyhdr}
+\usepackage{amsmath, amsthm}
+\usepackage{bm} 
+\usepackage{libertine} 
+\usepackage[libertine]{newtxmath} 
+\usepackage{tikz-cd}
+\usepackage{amscd} 
+\usepackage{nicematrix} 
+\usepackage{adjustbox} 
+\usepackage{framed} 
+\usepackage{scrextend}
+\usepackage[toc,page]{appendix}
+\changefontsizes{9.5pt} 
+
+
+\NiceMatrixOptions{
+  custom-line = {
+    letter = : ,
+    command = hdashline ,
+    tikz = { dashed }
+  }
+}
+
+\setlength{\parskip}{1em} 
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\textbf{量子语言}}
+\fancyhead[LO]{\textit{量子、topos、语言、AI}}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\usepackage{cite}
+\usepackage[style=index]{glossaries}   % 生成类似于索引的格式
+\makeglossaries
+
+\begin{document}
+
+\frontmatter
+\title{\textbf{量子语言}\\ \large 量子、topos、语言、AI}
+\author{Lao Chen}
+\date{\today}
+\maketitle
+\tableofcontents
+
+\chapter*{符号列表}
+\addcontentsline{toc}{chapter}{符号列表}
+\glsaddall 
+\printglossaries
+
+\newglossaryentry{cat-set}{
+  name={\ensuremath{\textbf{Set}}},
+  description={集合范畴}
+}
+
+\newglossaryentry{cat-CCstar}{
+  name={\ensuremath{\textbf{CC*}}},
+  description={交换C*-代数范畴}
+}
+
+\newglossaryentry{contra-variant-hom}{
+  name={\ensuremath{h^A = \text{Hom}(-,A)}},
+  description={反变Hom函子}
+}
+
+\newglossaryentry{cat-top}{
+  name={\ensuremath{\textbf{Top}}},
+  description={拓扑空间范畴}
+}
+
+\newglossaryentry{sheaf}{
+  name={\ensuremath{\mathcal{O}_X}},
+  description={结构层（开集范畴或光滑函数层）}
+}
+
+\newglossaryentry{maxspec}{
+  name={\ensuremath{\text{MaxSpec}(A)}},
+  description={交换环 $A$ 的极大理想谱}
+}
+
+
+
+\mainmatter
+
+
+
+\chapter{Operad}
+
+\section{Operad 的意义}
+
+Operad（操作子）是二十世纪七十年代由代数拓扑学家引入的一类数学结构，旨在系统化地描述“具有多个输入和一个输出的操作”如何相互复合。其名称源于 \textit{operation} 与 \textit{monad} 的合成。以下从几个层面阐述 operad 的核心意义。
+
+\begin{tikzpicture}[
+    level distance=1.2cm,
+    level 1/.style={sibling distance=3cm},
+    level 2/.style={sibling distance=1.5cm},
+    leaf/.style={draw, circle, fill=black, inner sep=1.5pt},
+    root/.style={draw, rectangle, fill=gray!20, inner sep=2pt, minimum width=8pt, minimum height=8pt}
+]
+
+% 图1: 一个三元操作 (n=3)
+\node[root] (op) {}
+    child {node[leaf] {} edge from parent node[left] {}}
+    child {node[leaf] {} edge from parent node[left] {}}
+    child {node[leaf] {} edge from parent node[right] {}};
+\node at (op) [above=0.15cm] {\small 操作};
+
+% 图2: 复合 p ∘ (q¹, q²)
+\begin{scope}[xshift=4.5cm]
+\node[root] (p) {}
+    child {node[root] (q1) {}
+        child {node[leaf] {}}
+        child {node[leaf] {}}
+        edge from parent node[left] {$p_1$}
+    }
+    child {node[root] (q2) {}
+        child {node[leaf] {}}
+        child {node[leaf] {}}
+        edge from parent node[right] {$p_2$}
+    };
+\node at (p) [above=0.15cm] {\small $p \circ (q^1, q^2)$};
+\end{scope}
+
+% 图3: 更一般的复合，标注概率
+\begin{scope}[yshift=-3.5cm]
+\node[root] (P) {}
+    child {node[root] (Q1) {}
+        child {node[leaf] {} edge from parent node[left] {$q^1_1$}}
+        child {node[leaf] {} edge from parent node[right] {$q^1_2$}}
+        edge from parent node[left] {$p_1$}
+    }
+    child {node[root] (Q2) {}
+        child {node[leaf] {} edge from parent node[left] {$q^2_1$}}
+        child {node[leaf] {} edge from parent node[right] {$q^2_2$}}
+        edge from parent node[right] {$p_2$}
+    };
+\node at (P) [above=0.15cm] {\small 带概率标签的树复合};
+\end{scope}
+
+\end{tikzpicture}
+
+\subsection{直观定义}
+
+一个 operad \(\mathcal{O}\) 包含：
+\begin{itemize}
+    \item 对于每个自然数 \(n \geq 1\)，一个集合 \(\mathcal{O}(n)\)，其元素称为“\(n\) 元操作”；
+    \item 一个复合映射：
+    \[
+    \circ_i : \mathcal{O}(n) \times \mathcal{O}(m) \longrightarrow \mathcal{O}(n+m-1),
+    \]
+    表示将第 \(i\) 个输入位置替换为一个 \(m\) 元操作；
+    \item 一个单位元操作 \(1 \in \mathcal{O}(1)\)，满足单位律；
+    \item 复合运算满足结合律（不同替换顺序结果一致）。
+\end{itemize}
+
+\subsection{核心思想：抽象操作的复合}
+
+Operad 的本质在于：
+\begin{quote}
+    \textit{它把“如何将多个输入组合成一个输出”这一模式从具体对象中抽象出来，只保留复合的结构规律。}
+\end{quote}
+
+\subsection{Operad 的意义分层}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{3cm}|p{10cm}|}
+\hline
+\textbf{层面} & \textbf{意义} \\
+\hline
+统一性 & 同一 operad 可“表示”为不同数学对象：拓扑空间、代数、范畴等，揭示不同领域的共同结构。 \\
+\hline
+模块化 & 复杂结构可由基本操作通过复合构建，类似“乐高积木”，便于分类与计算。 \\
+\hline
+跨领域桥接 & 为代数、拓扑、物理（弦论、量子场论）、组合学、信息论提供统一语言。 \\
+\hline
+新不变量 & 许多重要不变量（如(co)homology 理论）可表示为 operad 的表示或导子。 \\
+\hline
+\end{tabular}
+\caption{Operad 的多层意义}
+\end{table}
+
+\subsection{具体实例：概率分布构成的 operad}
+
+Bradley (2022) 文章中的核心例子：
+
+\[
+\Delta_n = \left\{ (p_1,\dots,p_n) \;\middle|\; p_i \geq 0,\; \sum_{i=1}^n p_i = 1 \right\}
+\]
+
+定义复合：
+\[
+p \circ (q^1,\dots,q^n) = \left( p_1 q^1_1, \dots, p_1 q^1_{k_1},\; p_2 q^2_1, \dots \right)
+\]
+（树嫁接操作）
+
+则 \(\{\Delta_n\}_{n\geq 1}\) 形成一个 operad，其意义在于：
+\begin{itemize}
+    \item 将概率论的“随机过程分解”转化为纯代数复合；
+    \item 使香农熵的链式法则
+    \[
+    H(p\circ(q^1,\dots,q^n)) = H(p) + \sum_{i=1}^n p_i H(q^i)
+    \]
+    获得 operad 层面的解释；
+    \item 最终揭示：熵是该 operad 的一个\textbf{导子}（满足莱布尼茨法则的映射）。
+\end{itemize}
+
+\subsection{哲学意义}
+
+\begin{quote}
+    Operad 让我们看到：\textbf{复合结构本身} 可以脱离具体对象而被研究。正如群论研究对称性，operad 研究“多入一出”的复合模式。
+\end{quote}
+
+在信息论-代数-拓扑的交叉中，operad 成为连接三个领域的自然桥梁——这正是 Bradley 文章“新视角”的根本数学基础。
+
+
+
+\backmatter
+
+\appendix
+
+\chapter{附录：A New Perspective of Entropy}
+
+\cite{Bradley2022EntropyVideo}
+
+本文由数学家Tai-Danae Bradley撰写，旨在向读者展示信息论中的香农熵与高等数学中的抽象代数、拓扑学及operad理论之间的深层联系。文章以通俗易懂的语言，结合丰富的图示与类比，逐步引导读者从“熵是一个数”这一直觉出发，最终抵达“熵是拓扑单形operad的导子”这一高度抽象的数学结论。
+
+\section{文章结构清晰，层次分明}
+
+文章从Dyson的“鸟与蛙”比喻入手，明确了作者试图兼顾宏观视野与细节深度的写作策略。随后，作者依次介绍了信息论中的熵、抽象代数、拓扑学、概率分布的树状表示、operad的基本思想，以及链式法则在熵中的表现形式。每一部分都有明确的动机和过渡，读者即便不具备高等数学背景，也能逐步跟上思路。
+
+\section{数学内容准确且富有启发性}
+
+文章的核心贡献在于揭示了熵满足的链式法则：
+\[
+H(p \circ (q^1, \dots, q^n)) = H(p) + \sum_{i=1}^n p_i H(q^i)
+\]
+与数学中导子的莱布尼茨法则之间的结构相似性。Bradley进一步指出，熵并非一个简单的函数，而是一族连续函数 \(\{H: \Delta_n \to \mathbb{R}\}\)，并且这些函数构成了拓扑单形operad的一个导子。这一发现不仅统一了信息论与高等数学中的两个重要概念，也为未来的研究（如operad的其他导子、非零点的解释等）开辟了新的方向。
+
+\section{比喻与图示极具教学价值}
+
+文章大量使用了树状图来表示概率分布的复合过程，并将operad的抽象定义与具体的“树嫁接”操作联系起来。这种视觉化的表达方式极大地降低了理解门槛。此外，作者用“鸟”与“蛙”的比喻反复提醒读者：在理解高深数学时，既要有宏观的视野，也要有细节的耐心。
+
+\section{潜在挑战与局限}
+
+尽管文章在普及性方面做得非常出色，但部分内容仍对读者有一定要求。例如，operad的定义、bimodule的结构、导子的正式形式等，虽然作者进行了简化，但仍需读者具备一定的抽象代数或拓扑学基础才能完全理解。此外，文章在最后部分提出的开放问题（如导子在非零点处的意义）虽具启发性，但未给出进一步的研究方向或具体猜想，略显仓促。
+
+\section{总体评价}
+
+Bradley的这篇文章是一次成功的跨学科数学普及尝试。它不仅为信息论的研究者提供了新的数学视角，也为抽象代数和拓扑学的研究者展示了熵这一概念的深刻内涵。文章语言优美，结构严谨，图示精美，既有鸟瞰式的视野，也有青蛙般的细节，真正做到了“让数学之美被看见”。
+
+对于希望了解熵与高等数学之间深层联系的学生、教师和研究人员，本文是一篇不可多得的入门与启发之作。
+
+
+\chapter{附录：At the interface of algebra and statistics}
+
+\cite{Bradley2020interface}
+
+\section{论文核心贡献概述}
+
+\noindent
+\textbf{问题}：如何在保持“组合性”（algebraic compositionality）的同时，又能捕捉到数据中固有的统计规律（statistics）？Bradley 博士论文的核心洞察是：\textbf{量子概率论中的纯态与约化密度算子天然地统一了代数与统计两个侧面}。
+
+\section{主要技术路线}
+
+\subsection{从经典概率到量子概率的“通道”}
+
+论文构建了一个关键构造：给定有限集 $X, Y$ 和联合分布 $\pi: X \times Y \to \mathbb{R}$，定义
+
+\[
+|\psi\rangle = \sum_{(x,y) \in X \times Y} \sqrt{\pi(x,y)} \, |x\rangle \otimes |y\rangle \quad \in \quad \mathbb{C}^X \otimes \mathbb{C}^Y.
+\]
+
+对应的纯态密度算子为 $\rho = |\psi\rangle\langle\psi|$。对该算子取偏迹，得到约化密度算子：
+
+\[
+\rho_X = \operatorname{tr}_Y \rho \quad (\text{作用在 } \mathbb{C}^X), \qquad 
+\rho_Y = \operatorname{tr}_X \rho \quad (\text{作用在 } \mathbb{C}^Y).
+\]
+
+\subsection{关键性质}
+
+\begin{enumerate}
+    \item $\operatorname{diag}(\rho_X) = \pi_X$（边际分布），$\operatorname{diag}(\rho_Y) = \pi_Y$。
+    \item $(\rho_X)_{ij} = \sum_y \sqrt{\pi(x_i,y)\pi(x_j,y)}$，其非对角元编码了 $x_i, x_j$ 共享后缀的统计信息。
+    \item 当 $\pi$ 为经验分布时，$\rho_X$ 和 $\rho_Y$ 的矩阵元具有直接的图论解释：
+        \[
+        (\rho_X)_{ij} = \frac{|\{y \in Y \mid (x_i,y), (x_j,y) \in T\}|}{|T|}.
+        \]
+    \item $\rho_X$ 与 $\rho_Y$ 有相同的特征值谱，且特征向量之间存在一一对应（通过 $M$ 的奇异值分解）。
+\end{enumerate}
+
+
+\subsection{应用：生成式建模}
+
+论文第4章展示了一个具体的应用场景：从少量偶数奇偶性比特串样本出发，通过逐步构建矩阵乘积态（MPS）来学习均匀分布。算法核心是：在每个步骤 $k$ 上，构造相应的约化密度算子 $\rho_k$，取其主导特征向量作为 MPS 的张量，从而重建整个量子态。
+
+实验结果表明（图4.5、4.6）：仅用 $2.5\%$ 的训练样本就能使 Bhattacharyya 距离接近理论最优值，且理论与实验曲线高度吻合。这表明“约化密度算子的特征向量确实编码了子系统之间的交互信息，并能通过张量网络重构全系统”。
+
+\subsection{语言中的蕴含建模}
+
+论文第3.4节提出一个新颖的框架：将自然语言中的词或短语表示为约化密度算子。例如，对于词“orange”，可定义为
+
+\[
+\rho_{\text{orange}} := \frac{1}{\pi_C(\text{orange})} \sum_{i \in X(\text{orange})} \hat{\rho}_{x_i},
+\]
+
+其中 $X(\text{orange})$ 是所有包含 “orange” 的短语。该构造满足：
+
+\[
+\rho_{\text{orange}} \ge \pi(\text{small ripe orange} \mid \text{orange}) \cdot \rho_{\text{small ripe orange}},
+\]
+
+即蕴含强度由条件概率自然度量，且 Loewner 偏序给出了概念层次结构。
+
+\section{范畴论视角的统一}
+
+论文第5章以范畴论为工具，统一了三个看似独立的构造：
+
+\[
+\begin{array}{c|c|c}
+\text{线性代数} & \text{范畴论 (Set)} & \text{序理论 (2)} \\
+\hline
+\mathbb{C}^X & \mathrm{Set}^{\mathbb{C}^{\mathrm{op}}} & 2^X \\
+\text{矩阵 } M: X\times Y \to \mathbb{C} & \text{profunctor } M: \mathbb{C}^{\mathrm{op}}\times \mathbb{D} \to \mathrm{Set} & \text{关系 } R: X\times Y \to 2 \\
+M: \mathbb{C}^X \to \mathbb{C}^Y & M^*: \mathrm{Set}^{\mathbb{C}^{\mathrm{op}}} \to \mathrm{Set}^{\mathbb{D}} & f: 2^X \to 2^Y \\
+M^\dagger: \mathbb{C}^Y \to \mathbb{C}^X & M_*: \mathrm{Set}^{\mathbb{D}} \to \mathrm{Set}^{\mathbb{C}} & g: 2^Y \to 2^X \\
+\text{特征向量} & \text{nucleus / Isbell completion} & \text{形式概念}
+\end{array}
+\]
+
+\noindent
+这一“元蓝图”表明：固定一个“特殊对象” $E$（$\mathbb{C}$, $\mathrm{Set}$, 或 $2$），自由-忘却伴随对 $U: \mathcal{C} \rightleftharpoons \mathcal{D}: F$ 满足 $UFX \cong E^X$，则任何 $M: X\times Y \to UE$ 都会诱导出两个方向相反的态射 $FX \to FY$ 和 $FY \to FX$，而它们的“不动点”正是该构造的核心。
+
+\section{评述与理论地位}
+
+\subsection{优势与创新}
+
+\begin{enumerate}
+    \item \textbf{跨学科桥梁}：论文成功地将量子信息论（密度算子、偏迹、纠缠）、机器学习（生成式建模、MPS）和范畴论（adjunction、Isbell completion）统一在一个框架下。
+    \item \textbf{直观与严格并重}：每个概念都配有具体例子（如水果-颜色数据集），同时保持数学严谨性。
+    \item \textbf{可预测性与实验验证}：算法性能可由训练样本比例 $f$ 理论预测，与实验高度一致。
+    \item \textbf{形式概念分析的量子推广}：将经典的形式概念（$R: X\times Y \to 2$）推广到概率情形（$\pi: X\times Y \to \mathbb{R}$），特征向量和特征值自然地提供了概率权重和概念层次。
+    \item \textbf{语言建模新视角}：用 Loewner 偏序和条件概率来刻画蕴含关系，为分布语义学提供了新的数学基础。
+\end{enumerate}
+
+\subsection{潜在局限}
+
+\begin{enumerate}
+    \item \textbf{规模可扩展性}：论文实验限于 $N=16$ 的比特串，MPS 的纠缠熵假设对更复杂的数据集是否仍然成立？
+    \item \textbf{基底依赖性}：构造 $\rho_X$ 和 $\rho_Y$ 依赖于固定计算基底 $\{|x\rangle\}, \{|y\rangle\}$。对于自然语言，选择不同的词嵌入是否会显著改变结果？
+    \item \textbf{理论-实验差距}：绿色理论曲线基于“完美总结器”假设（$\theta_k = \phi_k = \pi/4$），但真实数据往往偏离理想情况，误差累积效应有待进一步分析。
+    \item \textbf{范畴论部分的独立性}：第5章虽然揭示了深刻的平行结构，但并未直接用于推导前四章的结果，更像是事后解释而非驱动发现。
+\end{enumerate}
+
+\subsection{与相关工作的比较}
+
+\begin{itemize}
+    \item \textbf{形式概念分析（FCA）}：论文的线性代数版本可视为 FCA 的概率化推广。经典 FCA 中概念由 $f(A)=B, g(B)=A$ 定义；此处由特征向量对 $(|e_i\rangle, |f_i\rangle)$ 和特征值 $\lambda_i$ 给出。
+    \item \textbf{量子自然语言处理（DisCoCat 模型）}：DisCoCat 使用范畴论组合语法和向量空间语义；本文使用密度算子和 Loewner 偏序，侧重于统计蕴含而非语法组合。
+    \item \textbf{张量网络与 DMRG}：论文中的 MPS 重构算法直接借鉴了物理学中的密度矩阵重整化群方法，但目标从寻找哈密顿量基态变为重构概率分布。
+\end{itemize}
+
+\subsection{未来研究方向}
+
+\begin{enumerate}
+    \item \textbf{特征值的意义}：目前 $\lambda_i$ 仅用于概率权重，是否还能解释为某种“概念的典型性”或“信息量”？
+    \item \textbf{其他代数结构}：若将 $\mathbb{C}$ 替换为其他半环（如 $\mathbb{R}_{\ge 0}$、$\mathbb{R}_{\max}$），能否得到新的可解释模型（如最优传输、热带几何）？
+    \item \textbf{高阶张量网络}：对于非序列数据（如图像、图结构），是否可以推广为更一般的张量网络（如 PEPS、MERA）？
+    \item \textbf{范畴论的前向应用}：能否利用第5章的“元蓝图”主动设计新的统计算法，而非事后解释？
+\end{enumerate}
+
+\section{结论}
+
+Tai-Danae Bradley 的博士论文《At the Interface of Algebra and Statistics》是一部极具特色的跨学科著作。它将线性代数、量子概率、机器学习和范畴论编织成一个连贯的整体，展示了“纯态 $\to$ 约化密度 $\to$ 特征分解”这一简单机械如何从数据中自动提取出类似于形式概念的结构，并成功应用于生成式建模和自然语言理解。
+
+论文最令人印象深刻之处在于：它发现了一个可以同时在集合论（$2$）、线性代数（$\mathbb{C}$）和范畴论（$\mathrm{Set}$）三个层次上重复出现的“元模式”。这一观察不仅统一了形式概念分析、特征值分解和 Isbell completion，还暗示了一个更深刻的数学事实：**任何“自由-忘却”结构，只要伴随一个合适的“特殊对象”，都会产生一个自然的“对偶”与“不动点”理论。**
+
+因此，这篇论文不仅是量子机器学习的一次成功实践，也为范畴论与统计算法的深度融合提供了重要的范例。
+
+\begin{quote}
+    \textit{“When you see the same beautiful idea pop up everywhere, you begin to think that it is pointing to some deeper truth you haven't yet grasped.”}
+    
+    \hfill --- Francis Su (题记，论文第5章)
+\end{quote}
+
+
+
+% 参考文献
+\bibliographystyle{apalike}
+\bibliography{../ref}
+
+\end{document}
