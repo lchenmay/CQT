@@ -28,6 +28,7 @@
 \contentsline {section}{\numberline {3.7}Gelfand-Mazur定理}{25}{section.3.7}%
 \contentsline {section}{\numberline {3.8}Gelfand表示}{26}{section.3.8}%
 \contentsline {section}{\numberline {3.9}Gelfand拓扑}{27}{section.3.9}%
+\contentsline {section}{\numberline {3.10}von Neumann代数}{27}{section.3.10}%
 \contentsline {chapter}{\numberline {4}Topos}{28}{chapter.4}%
 \contentsline {section}{\numberline {4.1}拓扑}{28}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Locale}{28}{section.4.2}%
