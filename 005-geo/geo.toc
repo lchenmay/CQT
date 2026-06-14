@@ -1,5 +1,5 @@
 \babel@toc {chinese}{}\relax 
-\contentsline {chapter}{符号列表}{v}{chapter*.2}%
+\contentsline {chapter}{符号列表}{vi}{chapter*.2}%
 \contentsline {chapter}{\numberline {1}点集拓扑}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}从集合构造幂集}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}拓扑公理}{1}{section.1.2}%
@@ -25,7 +25,7 @@
 \contentsline {section}{\numberline {4.2}正合}{21}{section.4.2}%
 \contentsline {section}{\numberline {4.3}复形}{22}{section.4.3}%
 \contentsline {paragraph}{指标集}{22}{section.4.3}%
-\contentsline {paragraph}{集族}{23}{example.4.3.1}%
+\contentsline {paragraph}{集族}{23}{example.4.1}%
 \contentsline {section}{\numberline {4.4}单纯复形}{24}{section.4.4}%
 \contentsline {paragraph}{单形}{24}{section.4.4}%
 \contentsline {paragraph}{复形}{25}{section.4.4}%
@@ -67,3 +67,7 @@
 \contentsline {section}{\numberline {7.3}Zariski拓扑：用理想构造}{70}{section.7.3}%
 \contentsline {section}{\numberline {7.4}概型}{71}{section.7.4}%
 \contentsline {section}{\numberline {7.5}有理函数域}{71}{section.7.5}%
+\contentsline {chapter}{\numberline {8}辛几何}{72}{chapter.8}%
+\contentsline {section}{\numberline {8.1}近复结构}{72}{section.8.1}%
+\contentsline {section}{\numberline {8.2}辛结构}{74}{section.8.2}%
+\contentsline {chapter}{\numberline {9}力学}{76}{chapter.9}%

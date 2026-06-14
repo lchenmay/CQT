@@ -12,3 +12,7 @@
 *.pdf
 *.toc
 *.pdf
+*.bcf
+*.ist
+*.blg
+*.glo

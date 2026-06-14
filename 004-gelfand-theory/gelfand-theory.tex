@@ -1,91 +1,11 @@
 %!TEX program = lualatex
 \documentclass[10pt, openany]{book}
 
-\usepackage{comment}
-\usepackage{silence}
-\WarningFilter{latex}{Command \underbar has changed}
-\WarningFilter{latex}{Command \underline has changed}
+\usepackage{../preamble}
 
-% ============== 考虑出血的版式 ===================================
-\usepackage[
-    paperwidth=6in,
-    paperheight=9in,
-    top=0.8in,
-    bottom=0.8in,
-    inner=0.75in,
-    outer=0.6in,
-    bindingoffset=0.25in,
-    footskip=0.4in
-]{geometry}
-
-% ============== 语言和字体 ===================================
-\usepackage[x-4]{pdfx} 
-\usepackage{fontspec}
-\usepackage[provide=*, chinese]{babel}
-\usepackage{sectsty}
-
-\babelfont{rm}[
-    Path = ./font/,
-    Renderer = HarfBuzz,
-    BoldFont = {GFSDidot-Regular.ttf},
-    BoldFeatures = {RawFeature={embolden=3.0}},
-    ItalicFont = {timesi.ttf}
-]{GFSDidot-Regular.ttf}
-
-\babelfont{sf}[Path = ./font/, Renderer = HarfBuzz]{GFSDidot-Regular.ttf}
-\babelfont{tt}[Path = ./font/, Renderer = HarfBuzz]{NotoSerifSC-Regular.ttf}
-
-\babelfont[chinese]{rm}[
-    Path = ./font/,
-    Renderer = HarfBuzz,
-    BoldFont = {NotoSerifSC-ExtraBold.ttf},
-    ItalicFont = {StKaiTi.ttf}
-]{NotoSerifSC-Regular.ttf}
-
-\allsectionsfont{\rmfamily\bfseries}
-
-\usepackage{amssymb}
-\usepackage{enumitem}
-\usepackage{titlesec}
-\usepackage{quoting}
-\usepackage{setspace}
-\onehalfspacing
-\usepackage{tikz}
-\usepackage{fancyhdr}
-\usepackage{amsmath, amsthm}
-\usepackage{bm} 
-\usepackage{libertine} 
-\usepackage[libertine]{newtxmath} 
-\usepackage{tikz-cd}
-\usepackage{amscd} 
-\usepackage{nicematrix} 
-\usepackage{adjustbox} 
-\usepackage{framed} 
-\usepackage{scrextend}
-\usepackage[toc,page]{appendix}
-\changefontsizes{9.5pt} 
-
-
-\NiceMatrixOptions{
-  custom-line = {
-    letter = : ,
-    command = hdashline ,
-    tikz = { dashed }
-  }
-}
-
-\setlength{\parskip}{1em} 
-
-\pagestyle{fancy}
-\fancyhf{}
 \fancyhead[LE,RO]{\thepage}
 \fancyhead[RE]{\textbf{Gelfand理论}}
 \fancyhead[LO]{\textit{空间、逻辑、量子物理}}
-\renewcommand{\headrulewidth}{0.4pt}
-
-\usepackage{cite}
-\usepackage[style=index]{glossaries}   % 生成类似于索引的格式
-\makeglossaries
 
 \begin{document}
 
@@ -1862,6 +1782,83 @@ MB语言提供了一种类型论式的语法，
 使用广义元素即任意对象到目标对象的态射，
 代替全局点．
 
+\section{量子逻辑}
+
+\cite{BirkhoffvonNeumann1936}
+Garrett Birkhoff 和 John von Neumann
+它试图通过量子逻辑回答：
+量子世界的命题（如“电子的自旋是向上的”）遵循什么样的逻辑规则？
+
+人们希望用直觉主义逻辑来解释量子逻辑，
+这需要把Hilbert空间$H \in \textbf{Hilb}$上有闭子空间的集合$\text{Sub} \ H$，
+转到某种topos的结构内的子对象分类器．
+
+
+
+\section{子对象分类器}
+
+用反变Hom函子构造幂集的过程
+$h^\textbf 2 : \textbf{Set} \to \textbf{Set} :: X \mapsto \textbf{Set}(X,\textbf 2)$，
+幂集记为子对象集$\text{Sub} \ X = PX = \{ A \mid A \subseteq X \}$，
+二元集记为$\Omega = \textbf 2 = \{ 0, 1\}$：
+
+$$
+\text{Sub} \ X =PX = \{ A \mid A \subseteq X \} \simeq \textbf{Set}(X,\Omega) = \textbf{Set}(X,\textbf 2)
+$$
+
+扩展到任意范畴$\mathcal C$，
+对象$\Omega \in \mathcal C$使得对于$\forall X \in \mathcal C$：
+
+$$
+\text{Sub} \ X \simeq \mathcal C(X,\Omega)
+$$
+
+$\Omega$被称为\textbf{子对象分类器(subobject classifier)}．
+在topos理论中，
+子对象分类器作为逻辑真值的集合，
+自带Heyting代数结构。
+
+
+对照集合$X \in \textbf{Set}$上的幂集$\text{Sub} \ X$，
+Hilbert空间$H \in \textbf{Hilb}$上有闭子空间的集合$\text{Sub} \ H$．
+如果有一个子对象分类器$\Omega = \textbf{Hilb}$，
+它必须是一个Hilbert空间，
+且满足
+
+$$
+\text{Sub} \ H \simeq\textbf{Hilb}(H,\Omega)
+$$
+
+它限制为线性映射的态射集，
+$\dim \textbf{Hilb}(H,\Omega) = \dim\Omega \cdot \dim H$
+
+\section{CCC}
+
+\cite{Baez2011Rosetta}
+给出了范畴的层次，
+特别是集合范畴和Hilbert空间范畴在其中的位置：
+
+$$
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAB12cYAPHAIwBmwAMJ0cAXxATS6TLnyEUZAIxVajFm07c+Q4AFkCYydNkgM2PASJkATOvrNWiDl14DhAISNgTUmTkrRVtSAGZHTRc3XU9gAAksBn4JAAJOLDB09z1hAGVffzMghRtlUgAWSOdtHLixACccIsCLeWslElIAVmqtVx0PfTyYSWzM7Nj9ERmA80tSzrtSB2onfpih4RFC8TmSjqJliLWo2qntn2M94rbgsuRlqtOagbrpguvTVoXDlArwn1ooNcqIIABbNC7b7zdohf6VIHnLZgyFXPw3H5wh4A3ovDYguIAMSgiWSaQyWUJ0whaE+GO+6hgUAA5vAiKBBA0IUgyCAcBAkCpWlyeYgVNQBUg7CLueDpZLBYgwrKxWFFUgKqr5YgAfyld1tUKNYgAGxGs0mgCcFuW+qQAHYLQ6TSpiBb1fbEAAOC3e13C8yinWmk1OoNyx0m30RsX+r2G2M6q2u91JoV8qXi4UUCRAA
+\begin{tikzcd}
+\textbf{Cat} \arrow[d]                                   &  &                                           &  &                                          \\
+\textbf{MonCat} \arrow[d] \arrow[rrd]                    &  &                                           &  &                                          \\
+\textbf{BMonCat} \arrow[d] \arrow[rrd]                   &  & \textbf{CMonCat} \arrow[rrd] \arrow[d]    &  &                                          \\
+\textbf{Hilb} \in \textbf{SMonCat} \arrow[d] \arrow[rrd] &  & \textbf{CBMonCat} \arrow[rrd] \arrow[d]   &  & \textbf{CompMonCat} \arrow[d]            \\
+\textbf{CartCat} \arrow[d]                               &  & \textbf{CSMonCat} \arrow[rrd] \arrow[lld] &  & \textbf{CompBMonCat} \arrow[d]           \\
+\textbf{Set} \in \textbf{CCC}                            &  &                                           &  & \textbf{FdHilb} \in \textbf{CompSMonCat}
+\end{tikzcd}
+$$
+
+$\textbf{Hilb} \in \textbf{SMonCat}$范畴是一个对称幺半范畴，
+它缺少构造CCC乃至topos所需的有限极限．
+
+
+
+
+\section{Topos}
+
+
 
 \chapter{概率}
 
@@ -2095,6 +2092,53 @@ Kochen-Specker定理说明谱预层$\Sigma$
 
 \appendix
 
+\chapter{附录：笔记}
+
+$k$-线性空间$H \in \textbf{Vct}_k$有自然配对
+$\textbf{Vct}(H^* \times H,k)$，
+它是$k$-双线性型．
+Hilbert空间$H$是完备的内积空间，
+内积是$\textbf{Vct}(H \times H,k)$形式的是$k$-双线性型．
+Riesz引理将这两种双线性型对应起来．
+
+限制在复Hilbert空间范畴$\textbf{Hilb}$上讨论，
+底空间$X$上的平方可积函数全体记：
+
+$$
+L^2(X) = \left\{ \psi :\ \int_X |\psi(x)|^2 \text dx < +\infty  \right\}
+$$
+
+因其平方可积，
+按逐点Hermite内积的方式定义内积：
+
+$$
+\braket{\psi}{\phi} = 
+\langle \psi,\phi \rangle = \int_X \overline{\psi(x)} \phi(x) \text dx
+$$
+
+其中被积项目是复数的Hermite内积，
+令$z = x + y \text i, w = u + v \text i$：
+
+$$
+\begin{aligned}
+\langle z,w \rangle &= \overline z w = (xu + yv) + (-xv + yu) \text i \\
+&= 
+\big\langle
+\begin{bmatrix} x & -y \\ y & x\end{bmatrix}, 
+\begin{bmatrix} u & -v \\ v & u\end{bmatrix}
+\big\rangle \\
+&= 
+\begin{bmatrix} 
+  xu + yv & xv - yu \\ 
+  -xv + yu & xu + yv
+\end{bmatrix}
+\end{aligned}
+$$
+
+这里的实部是实内积，虚不受辛形式．
+Hermite内积实际上给出了两个复数的夹角，
+保持了旋转不变性．
+
 \chapter{附录：Banaschewskia2006}
 
 Bernhard Banaschewskia, and Christopher J. Mulvey.
@@ -2294,11 +2338,161 @@ D\"oring和Isham通过以下对应建立了三者的统一：
 
 这一框架为量子引力等更深层理论提供了全新的数学工具，同时回应了海德格尔的追问：“什么是物？”——物是在多重语境中“部分存在”的东西．
 
+\chapter{附录：范畴论解读Hall2013：Quantum Theory for Mathematicians}
+
+\cite{Hall2013}
+
+$\textbf{Hilb}$为复Hilbert空间范畴，
+$\textbf{C}^\star$为C*-代数范畴，
+$\textbf{vN}$为冯·诺依曼代数范畴．
+$\text{Meas}(X)$为测度空间$X$上的测度范畴．
+
+有限维$H \in \textbf{FdHilb}$上的自伴算子，
+在单位正交基下有$n \times n$矩阵表示
+$A \in \mathbb C_n^n = \mathcal B(H)^\dagger$，
+满足共轭对称$A = A^\dagger$，
+相当于$\forall \phi,\psi \in H:\ \langle \phi,A\psi\rangle = \langle A\phi,\psi\rangle$．
+$M_n(\mathbb{C}) \in \textbf{C}^\star$作为C*-代数，
+矩阵$A$是代数元，
+其谱$\sigma(A) \subset \mathbb R$．
+
+无限维情况，
+令空间为$X = \mathbb R$，
+$H = L^2(X) \in \textbf{Hilb}$，
+定义位置算子$Q$使得
+
+$$
+(Q \psi)(x) = x\psi(x)
+$$
+
+满足$\forall \phi,\psi \in H:\ \langle \phi,Q\psi\rangle = \langle Q\phi,\psi\rangle$．
+它的定义域是：
+
+$$
+D(Q) = \left\{ \psi \in H = L^2(X) :\ \int_X |(Q \psi)(x)|^2 \text dx < \infty \right\}
+$$
+
+$D(Q) \subset H$且$\overline{D(Q)} = H$，
+$Q$是无界稠定算子．
+考虑$\lambda \in \mathbb C$和非零的$\psi \in D(Q)$满足：
+
+$$
+(Q - \lambda I )(\psi) = x\psi(x) - \lambda \psi(x) = (x - \lambda)\psi(x) = 0
+$$
+
+这要求$\psi(x) = 0$对于几乎所有$x \neq \lambda$成立．
+因此$\psi$必须是$\lambda$处的狄拉克δ函数，
+$\psi(x) = \delta(x - \lambda)$．
+然而，δ函数不属于$L^2(X)$， 
+因此$Q$没有特征值．
+
+\section{闭子空间}
+
+复Hilbert空间$H \in \textbf{Hilb}$
+的内积结构自动赋予了范数拓扑，
+定义其子对象时要考虑拓扑性质。
+若$H$的子空间在范数拓扑下是闭集，
+称为闭子空间．
+有限维中所有子空间都是闭子空间，
+无限维中闭子空间有特别的性质，
+它包含所有的极限点，
+易于做分析．
+
+$H$的所有闭子空间构成的集合记为 $\text{Sub} \ H$，
+这里的记号暗示了它是一个子对象格：
+以包含关系为偏序，
+构成正交模格$(\text{Sub} \ H,\subseteq,H,0)$．
+
+\begin{framed}
+
+它不满足分配律，
+不是Heyting代数，
+更不是Boolean代数．
+由于没有子对象分类器，
+它不构成topos．
+实际上$\text{Sub} \ H$对应着量子逻辑，
+而非直觉主义逻辑．
+
+由于$\text{Sub} \ H$十分接近一个topos，
+人们试图用各种手段将其引入到topos理论中．
+
+为交换von Neumann代数范畴构造Bohr topos，
+其子对象格恢复为$\text{Sub} \ H$．
+
+由于它是正交模格，
+可以嵌入到一个Heyting代数中．
+
+我们可以在$\text{Sub} \ H$上构造一个Grothendieck topos，
+使得$\text{Sub} \ H$成为这个tope的子对象格．
+  
+\end{framed}
+
+复Hilbert空间$H \in \textbf{Hilb}$上按照包含可以定义两个偏序范畴：
+闭子空间正交模格$\text{Sub} \ H$和投影算子集合 $\text{Proj} \ H$，
+它们作为范畴同构：
+
+$$
+\text{Sub} \ H \simeq \text{Proj} \ H
+$$
+
+对有界自伴算子$A\in \mathcal B(H)^\dagger$，
+其谱集$\sigma(A) \subset \mathbb R$上的Borel σ-代数$B(\sigma(A))$，
+作为谱集的子集族，
+在包含关系下构成Boolean代数．
+作为正交模格，
+它与$H$的闭子空间范畴$\text{Sub} \ H$之间存在自然同构：
+
+$$
+B(\sigma(A)) \simeq \text{Sub} \ H
+$$
+
+这样便建立了正交模格的同构：
+
+$$
+\begin{aligned}
+  P:B(\sigma(A)) &\to \text{Proj} \ H \\
+  E &\mapsto P_E
+\end{aligned}
+$$
+
+\section{投影值测度}
+
+复Hilbert空间$H \in \textbf{Hilb}$上，
+它把Borel σ-代数$B(\sigma(A))$中的每个可测集$E$映射为$H$上的一个正交投影算子$\mu(E)$：
+
+$$
+\begin{aligned}
+\mu: B(\sigma(A)) &\to \text{Proj} \ H \\
+E &\mapsto \mu(E)  
+\end{aligned}
+$$
+
+若它是正交模格同态，
+则构成了投影值测度。
+若视这些集合$B(\sigma(A))$，$\text{Sub} \ H$，$\text{Proj} \ H$为范畴，
+则$\mu$是一个函子，
+它在有限维中有特征值分解:
+
+$$
+A = \sum_i \lambda_i P_i
+$$
+
+谱定理，
+对有界自伴算子$A\in \mathcal B(H)^\dagger$
+存在唯一的投影值测度$\mu^A$，
+定义在谱$\sigma(A)$上的Borel σ-代数上，
+使得：
+
+$$
+A = \int_{\sigma(A)} \lambda \text d\mu^A(\lambda)
+$$
+
 
 
 
 % 参考文献
-\bibliographystyle{apalike}
-\bibliography{ref}
+%\bibliographystyle{apalike}
+%\bibliography{ref}
+\printbibliography
 
 \end{document}

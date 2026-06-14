@@ -1,0 +1,229 @@
+\chapter{辛几何}
+
+\section{近复结构}
+
+复数可以如下表示，
+体现实线性映射、酉群$\text{U}(1)\simeq \text{SO}(2)$：
+
+$$
+z = x + y \text i 
+= |z| \cdot \text e^{\theta \text i} = \begin{bmatrix}
+  x & -y \\ y & x 
+\end{bmatrix}
+= \sqrt{x^2 + y^2} \begin{bmatrix}
+  \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta
+\end{bmatrix}
+$$
+
+若把$\mathbb C$视为$2 \times 2$实矩阵空间$\mathbb R_2^2 \in\textbf{Vct}_\mathbb R$中的一个二维线性子空间，
+取基：
+
+$$
+I = \begin{bmatrix}
+  1 & 0 \\ 0 & 1
+\end{bmatrix}, \quad
+J = \begin{bmatrix}
+  0 & -1 \\ 1 & 0
+\end{bmatrix}, \quad
+$$
+
+使得$z = x I + y J$，
+且有$J^2 = J \circ J = -I$，
+相当于$\text i^2 = -1$。
+
+现在延伸到$n$-维复矩阵空间：
+
+$$
+\big( \mathbb C_n^n \in\textbf{Vct}_\mathbb C \big)
+\simeq
+\big( \mathbb R_{2n}^{2n} \in\textbf{Vct}_\mathbb R \big)
+$$
+
+一个复矩阵类似表示为：
+
+$$
+\begin{bmatrix}
+  z_1^1 & \cdots & z_1^n \\
+  \vdots & \ddots & \vdots \\
+  z_n^1 & \cdots & z_n^n \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+  x_1^1 & -y_1^1 & \cdots & x_1^n & -y_1^n \\
+  y_1^1 & x_1^1 & \cdots & y_1^n & x_1^n \\
+  \vdots & \vdots & \ddots & \vdots & \vdots \\
+  x_n^1 & -y_n^1 & \cdots & x_n^n & -y_n^n \\
+  y_n^1 & x_n^1 & \cdots & y_n^n & x_n^n \\
+\end{bmatrix}
+$$
+
+为了构造分块矩阵，取它等价的表示形式：
+
+$$
+\begin{aligned}
+\begin{bmatrix}
+  z_1^1 & \cdots & z_1^n \\
+  \vdots & \ddots & \vdots \\
+  z_n^1 & \cdots & z_n^n \\
+\end{bmatrix}
+&=
+\left[
+\begin{array}{ccc|ccc}
+  x_1^1 & \cdots & x_1^n & -y_1^1 & \cdots & -y_1^n \\
+  \vdots & \ddots & \vdots & \vdots & \ddots & \vdots \\
+  x_n^1 & \cdots & x_n^n & -y_n^1 & \cdots & -y_n^n \\
+  \hline
+  y_1^1 & \cdots & y_1^n & x_1^1 & \cdots & x_1^n \\
+  \vdots & \ddots & \vdots & \vdots & \ddots & \vdots \\
+  y_n^1 & \cdots & y_n^n & x_n^1 & \cdots & x_n^n \\
+\end{array}
+\right]
+\\
+&=
+\left[
+\begin{array}{c|c}
+  X & -Y \\
+  \hline
+  Y & X
+\end{array}
+\right]
+= X I_n + Y J_n
+\end{aligned}
+$$
+
+
+类似前述有基：
+
+$$
+I = 
+\left[
+\begin{array}{c|c}
+  I_n & 0 \\
+  \hline
+  0 & I_n
+\end{array}
+\right]
+, \quad
+J = 
+\left[
+\begin{array}{c|c}
+  0 & -I_n \\
+  \hline
+  I_n & 0
+\end{array}
+\right]
+$$
+
+$I$是$\mathbb R_{2n}^{2n}$的代数单位元，
+$J$则满足：
+
+$$
+J^2 = J \circ J = 
+\left[
+\begin{array}{c|c}
+  0 & -I_n \\
+  \hline
+  I_n & 0
+\end{array}
+\right]
+\circ
+\left[
+\begin{array}{c|c}
+  0 & -I_n \\
+  \hline
+  I_n & 0
+\end{array}
+\right]
+=
+\left[
+\begin{array}{c|c}
+  -I_n & 0 \\
+  \hline
+  0 & -I_n
+\end{array}
+\right]
+= - I.
+$$
+
+复数单位$\text i$和基矩阵$J$具有相同的性质：
+
+\begin{framed}
+  
+实向量空间$V$上的线性变换$J \in \text{End} \ V$若满足
+
+$$
+J^2 = -\text{id}_V
+$$
+
+称$J$是一个\textbf{近复结构}(almost complex structure)。
+
+\end{framed}
+
+在实矩阵表示下，
+实转置对应着复共轭转置，
+共轭携带的信息不变。
+在不混淆的情况下，
+把$J$写为转置/共轭的形式：
+
+$$
+J = \left[
+\begin{array}{c|c}
+0 & I_n\\
+\hline
+-I_n & 0
+\end{array}
+\right].
+$$
+
+它就是辛矩阵。
+
+\section{辛结构}
+
+作用在$k$-线性空间上，
+基于左右元的区分，
+一对对偶算子$f$作用在左元，
+$f^*$作用在右元．
+若$\forall x \in X, \beta \in Y^*:\ \langle x,f^* \beta \rangle = \langle f x, \beta \rangle $，
+则互为伴随算子．
+这里$\langle -,- \rangle$是$X \times X^*$和$Y \times Y^*$上的自然配对。
+考虑$X$上的线性自映射，
+自伴算子$A = A^\dagger$，
+若引入内积则自然变换可以用内积描述为：
+
+$$
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAA0QBfU9TXfIRRkATFVqMWbdgD0AVN14gM2PASIjy4+s1aIOivqsEbSY6jqn7ZCnkYHrhpAIzbJekAB1PDOmADmDDAABAC0pACC8mHB3gBOfoGsdsr8akLImq4W7mzevgFBwRHhobGeCYXJSioOGQAsWjm6bAAehqnGjsgAbE0SLfoR7Sm16UR95gNWIACeHWMmKI1Tlh4RwfOjaUvIjdnTHvmJRa2Rm+WVSQs73X0Ha3k+JyEbZ7OXL9ziMFD+8ERQAAzOIQAC2SDIIBwECQmkObAiIGovgARjAGAAFW5CEBBIE4Dog8FIADM1BhSGczRmUVsSmJEMQjWhsMQxBSjKQLMpiGcnNBTIArBS2SIBSTECLWWSJUy+jLEAB2Cl0LAMNhguhoOCUuVIAAcoqQAE5VerNdrdbD9XyobyFTg1Rr9FqdXqGYKqfa2Wboc7Le6bZ7Jc5qYqVf6La6rR7gV6+eHeUaoy6QG7rUSE84fVTwwwsGAPFAIExUUFkSAABYwOhQNiQIuVp3R8AEZIULhAA
+\begin{tikzcd}
+X \arrow[rr, "A"]                             &  & X                                          &  & x \arrow[rr, maps to]                                                                         &  & Ax                                                            \\
+{\langle -,A^* - \rangle} \arrow[u] \arrow[d] &  & {\langle A-,- \rangle} \arrow[u] \arrow[d] &  & {\langle x,A y \rangle} \arrow[u, maps to] \arrow[d, maps to] \arrow[rr, no head, Rightarrow] &  & {\langle A x,y \rangle} \arrow[u, maps to] \arrow[d, maps to] \\
+X^*                                           &  & X^* \arrow[ll, "A^*"]                      &  & A y                                                                                           &  & y \arrow[ll, maps to]                                        
+\end{tikzcd}
+$$
+
+复线性空间的内积是Hermite内积，
+它的实部是实内积，
+虚部是辛内积。
+
+线性空间$V$上的双线性形式称为斜对称形式，
+若满足：
+
+$$
+\omega (u,v) + \omega(v,u) = 0
+$$
+
+$2n$-维实线性空间$V$配置非退化斜对称形式$\omega$，
+构成辛空间$(V,\omega)$。
+
+若$J$是一个满足
+$J^2 = -I$ 的线性变换，则称其为一个\textbf{复结构}。在这种情况下，
+可由$J$定义一个由
+
+$$
+\omega_J(u,v) := \langle Ju,v\rangle
+$$
+
+给出的辛形式。特别地，若$V$配备一个内积$\langle\cdot,\cdot\rangle$，
+则一个矩阵$A\in \mathrm{GL}(2n,\mathbb R)$称为\textbf{辛矩阵}，若它满足
+
+$$
+A^T J A = J,
+$$

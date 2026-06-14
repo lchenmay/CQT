@@ -1,0 +1,109 @@
+\chapter{力学}
+
+位形空间$X$通常是一个$n$-维光滑流形，
+其上的函数集构成光滑函数代数$C(X)$。
+切丛$TX$构成物理上的\textbf{速度相空间}(velocity phase space)，
+在局部坐标系表示的广义坐标$x^i$下，
+有广义速度$\dot q^i = \text d q^i / \text d t$，
+二者构成$TX$的局部坐标。
+考虑函数$L(q^i,\dot q^i,t)$，
+它在时间上的积分称为\textbf{作用量}(action)：
+
+$$
+S = \int_0^T L \text d t
+$$
+
+\textbf{Hamilton变分原理}(variational principle of Hamilton)要求作用量最小，
+这样的极值问题涉及到对泛函求变分使得：
+
+$$
+\delta S = \delta \int_0^T L \text d t = 0
+$$
+
+需要以独立的方式去扰动$C(X)$的点。
+函数求导扰动的是用实数无穷小量$\varepsilon$扰动$x$：
+
+$$
+\frac{\text d f}{\text d x} \bigg|_{x = x_0}
+= \lim_{\varepsilon \to 0}
+\frac{f(x_0 + \varepsilon) - f(x_0)}{\varepsilon}
+$$
+
+而泛函更复杂，
+如果上述极限的分母仍是实数无穷小量$\varepsilon$，
+那么$\varepsilon$扰动$f$需要引入一个函数$g$来产生
+$f(x) + \varepsilon g(x)$。
+普通的$g$会同时扰动$f$在许多$x$处的函数值，
+无法独立出点$x=x_0$对函数变换的贡献。
+为了在$x = x_0$点附近扰动，
+狄拉克$\delta$函数就很适合：
+
+$$
+\delta(x) = \begin{cases}
++\infty, & x=0,\\
+0, & x\ne 0,
+\end{cases}
+\qquad \text{s.t.} \quad
+\int_{-\infty}^{\infty}\delta(x)\,dx = 1.
+$$
+
+于是$f(x) + \varepsilon \delta$只在$x = x_0$处扰动了$f$。
+应用狄拉克$\delta$函数构造\textbf{泛函导数}(functional derivative)：
+
+$$
+\frac{\delta F}{\delta f}
+= \lim_{\varepsilon\to 0}
+\frac{F[f(x)+\varepsilon\delta(x^\prime - x)]-F[f(x)]}{\varepsilon}
+$$
+
+现在需要能让作用量最小的Lagrangian $L$，
+满足：
+
+$$
+\frac{\delta L}{\delta x} = 0
+$$
+
+总机械能$E = T + V$守恒的情况下，
+动能和势能此消彼长。
+考虑到量子力学只能测量平均值，
+在时间区间$[0,\tau]$上通过积分得到
+
+$$
+\overline T = \frac{1}{\tau}\int_0^\tau \frac{m \dot x^2 \text d t}{2}, \quad 
+\overline V = \frac{1}{\tau}\int_0^\tau V[x(t)] \text d t
+$$
+
+求二者的变分\cite{Lancaster2014}：
+
+$$
+\frac{\delta \overline T[x]}{\delta x(t)} = - \frac{m \ddot x}{\tau}, \quad
+\frac{\delta \overline V[x]}{\delta x(t)} = \frac{V^\prime[x(t)]}{\tau}
+$$
+
+于是
+
+$$
+\frac{\delta (\overline T[x] - \overline V[x])}{\delta x(t)} = 0
+$$
+
+这样得到了我们需要的Lagrangian:
+
+$$
+L = T - V
+$$
+
+满足\textbf{Hamilton最小作用量原理}(Hamilton's principle of least action)。
+视坐标和速度为独立变量:
+
+$$
+\frac{\delta S}{\delta x(t)} 
+= \frac{\delta L}{\delta x(t)} - \frac{\text d}{\text d t} \frac{\delta L}{\delta \dot x(t)} 
+= 0
+$$
+
+得到Euler-Lagrange方程。
+
+
+\cite{MarsdenRatiu1994}
+
+

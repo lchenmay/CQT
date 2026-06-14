@@ -1,5 +1,5 @@
 \babel@toc {chinese}{}\relax 
-\contentsline {chapter}{符号列表}{v}{chapter*.2}%
+\contentsline {chapter}{符号列表}{vi}{chapter*.2}%
 \contentsline {chapter}{\numberline {1}前言}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Grothendieck topos}{3}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Gelfand 对偶}{5}{section.1.2}%
@@ -37,25 +37,33 @@
 \contentsline {section}{\numberline {4.5}光滑函数层}{32}{section.4.5}%
 \contentsline {section}{\numberline {4.6}全局对象}{34}{section.4.6}%
 \contentsline {section}{\numberline {4.7}语言}{35}{section.4.7}%
-\contentsline {chapter}{\numberline {5}概率}{37}{chapter.5}%
-\contentsline {chapter}{\numberline {6}量子理论}{38}{chapter.6}%
-\contentsline {section}{\numberline {6.1}可观测量}{38}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Topos}{39}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Kochen‑Specker定理}{40}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Kochen-Specker 赋值 $\Rightarrow $ 全局截面}{41}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}结论}{42}{subsection.6.3.2}%
-\contentsline {section}{\numberline {6.4}Mitchell–Bénabou 语言}{42}{section.6.4}%
-\contentsline {chapter}{附录：Banaschewskia2006}{43}{appendix*.3}%
-\contentsline {chapter}{附录：DoeringIsham2011}{45}{appendix*.4}%
-\contentsline {section}{\numberline {.1}核心统一机制}{45}{section.Alph0.1}%
-\contentsline {section}{\numberline {.2}三大支柱的统一}{45}{section.Alph0.2}%
-\contentsline {subsection}{\numberline {.2.1}类型理论：形式语言 $L(S)$}{45}{subsection.Alph0.2.1}%
-\contentsline {subsection}{\numberline {.2.2}逻辑：海廷代数与直觉主义推理}{46}{subsection.Alph0.2.2}%
-\contentsline {subsection}{\numberline {.2.3}量子理论：在 $\mathbf {Sets}^{\mathcal {V}(H)^{\mathrm {op}}}$ 中的实现}{46}{subsection.Alph0.2.3}%
-\contentsline {subsubsection}{语境范畴 $\mathcal {V}(H)$}{46}{subsection.Alph0.2.3}%
-\contentsline {subsubsection}{谱预层}{47}{subsection.Alph0.2.3}%
-\contentsline {subsubsection}{具身化（Daseinisation）——类型到对象的映射}{47}{subsection.Alph0.2.3}%
-\contentsline {subsubsection}{非交换谱定理}{47}{subsection.Alph0.2.3}%
-\contentsline {subsubsection}{真值对象与拟态}{47}{subsection.Alph0.2.3}%
-\contentsline {section}{\numberline {.3}统一的核心洞察}{48}{section.Alph0.3}%
-\contentsline {section}{\numberline {.4}结论}{48}{section.Alph0.4}%
+\contentsline {section}{\numberline {4.8}量子逻辑}{36}{section.4.8}%
+\contentsline {section}{\numberline {4.9}子对象分类器}{37}{section.4.9}%
+\contentsline {section}{\numberline {4.10}CCC}{37}{section.4.10}%
+\contentsline {section}{\numberline {4.11}Topos}{38}{section.4.11}%
+\contentsline {chapter}{\numberline {5}概率}{39}{chapter.5}%
+\contentsline {chapter}{\numberline {6}量子理论}{40}{chapter.6}%
+\contentsline {section}{\numberline {6.1}可观测量}{40}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Topos}{41}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Kochen‑Specker定理}{42}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Kochen-Specker 赋值 $\Rightarrow $ 全局截面}{43}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}结论}{44}{subsection.6.3.2}%
+\contentsline {section}{\numberline {6.4}Mitchell–Bénabou 语言}{44}{section.6.4}%
+\contentsline {chapter}{附录：笔记}{45}{appendix*.3}%
+\contentsline {chapter}{附录：Banaschewskia2006}{46}{appendix*.4}%
+\contentsline {chapter}{附录：DoeringIsham2011}{48}{appendix*.5}%
+\contentsline {section}{\numberline {.1}核心统一机制}{48}{section.Alph0.1}%
+\contentsline {section}{\numberline {.2}三大支柱的统一}{48}{section.Alph0.2}%
+\contentsline {subsection}{\numberline {.2.1}类型理论：形式语言 $L(S)$}{48}{subsection.Alph0.2.1}%
+\contentsline {subsection}{\numberline {.2.2}逻辑：海廷代数与直觉主义推理}{49}{subsection.Alph0.2.2}%
+\contentsline {subsection}{\numberline {.2.3}量子理论：在 $\mathbf {Sets}^{\mathcal {V}(H)^{\mathrm {op}}}$ 中的实现}{49}{subsection.Alph0.2.3}%
+\contentsline {subsubsection}{语境范畴 $\mathcal {V}(H)$}{49}{subsection.Alph0.2.3}%
+\contentsline {subsubsection}{谱预层}{50}{subsection.Alph0.2.3}%
+\contentsline {subsubsection}{具身化（Daseinisation）——类型到对象的映射}{50}{subsection.Alph0.2.3}%
+\contentsline {subsubsection}{非交换谱定理}{50}{subsection.Alph0.2.3}%
+\contentsline {subsubsection}{真值对象与拟态}{50}{subsection.Alph0.2.3}%
+\contentsline {section}{\numberline {.3}统一的核心洞察}{51}{section.Alph0.3}%
+\contentsline {section}{\numberline {.4}结论}{51}{section.Alph0.4}%
+\contentsline {chapter}{附录：范畴论解读Hall2013：Quantum Theory for Mathematicians}{53}{appendix*.6}%
+\contentsline {section}{\numberline {.5}闭子空间}{54}{section.Alph0.5}%
+\contentsline {section}{\numberline {.6}投影值测度}{55}{section.Alph0.6}%
