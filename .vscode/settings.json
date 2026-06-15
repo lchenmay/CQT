@@ -1,26 +1,26 @@
 {
   "latex-workshop.latex.recipes": [
     {
-      "name": "latexmk (lualatex)",
-      "tools": ["latexmk"]
+      "name": "lualatex",
+      "tools": ["lualatex"]
     }
   ],
   "latex-workshop.latex.tools": [
     {
-      "name": "latexmk",
-      "command": "latexmk",
+      "name": "lualatex",
+      "command": "lualatex",
       "args": [
         "-synctex=1",
         "-interaction=nonstopmode",
         "-file-line-error",
-        "-pdf",
-        "-lualatex",
-        "-outdir=%OUTDIR%",
         "%DOC%"
       ],
       "env": {}
     }
   ],
+  "latex-workshop.latex.defaultEditor": "latex-workshop",
+  "latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%",
+  "latex-workshop.latex.recipe.default": "lualatex",
   "latex-workshop.latex.clean.fileTypes": [
     "*.aux",
     "*.bbl",
