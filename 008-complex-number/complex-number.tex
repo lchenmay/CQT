@@ -1,0 +1,865 @@
+%!TEX program = lualatex
+\documentclass[10pt, openany]{book}
+
+\usepackage{../preamble}
+\addbibresource{../ref.bib}
+
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\textbf{复数讲义}}
+\fancyhead[LO]{\textit{}}
+
+\begin{document}
+
+\frontmatter
+
+\title{\textbf{复数讲义}\\ \large }
+\author{Lao Chen}
+\date{\today}
+\maketitle
+\tableofcontents
+
+\mainmatter
+
+\chapter*{前言}
+\phantomsection
+\addcontentsline{toc}{chapter}{前言}
+
+这本讲义的目的是用一种逻辑上可以自我发展的模式，
+以合理的方式引入复数的结构，
+包括复数、复数域、近复结构等等。
+
+按照中学课本的标准方式，
+给出复数相关的一些说明。
+我们将在后面的章节中，
+用新的观点来回顾。
+
+\begin{framed}
+
+设 \(x, y\) 为实数，形如
+$z = x + y \text i$
+的数称为\textbf{复数}(complex number)\index{复数}，其中 \(\mathrm{i}\) 称为\textbf{虚数单位}(imaginary unit)\index{虚数单位}，满足
+$\text i ^2 = -1$。
+实数 \(x\) 称为复数 \(z\) 的\textbf{实部}(real part)\index{实部}，记作 \(x = \operatorname{Re}(z)\)；实数 \(y\) 称为 \(z\) 的\textbf{虚部}(imaginary part)\index{虚部}，记作 \(y = \operatorname{Im}(z)\)。
+当 \(y=0\) 时，\(z = x\) 为实数。
+全体复数构成的集合记作
+$\mathbb{C} = \{ x + y\mathrm{i} \mid x, y \in \mathbb{R} \}$。
+设 \(z_1 = x + y\mathrm{i}\)，\(z_2 = c + d\mathrm{i}\)（其中 \(x,y,c,d \in \mathbb{R}\)）。
+
+$$
+z_1 \pm z_2 = (x \pm c) + (y \pm d)\mathrm{i}.
+$$
+
+\[
+z_1 \cdot z_2 = (x + y\mathrm{i})(c + d\mathrm{i}) = (xc - yd) + (xd + yc)\mathrm{i}.
+\]
+特别地，\( (x+y\mathrm{i})(x-y\mathrm{i}) = x^2 + y^2 \)。
+
+复数 \(z = x+y\mathrm{i}\) 的\textbf{共轭复数}(complex conjugate)\index{共轭复数}定义为
+\[
+\overline{z} = x - y\mathrm{i}.
+\]
+共轭运算满足：
+\[
+\overline{\overline{z}} = z,\quad \overline{z_1 \pm z_2} = \overline{z_1} \pm \overline{z_2},\\
+\overline{z_1 z_2} = \overline{z_1} \cdot \overline{z_2},\quad \overline{\left(\frac{z_1}{z_2}\right)} = \frac{\overline{z_1}}{\overline{z_2}}\ (z_2 \neq 0).
+\]
+
+复数 \(z = x+y\mathrm{i}\) 的\textbf{模}(modulus)\index{模（复数）}定义为
+\[
+|z| = \sqrt{x^2 + y^2}.
+\]
+
+模具有以下性质：
+$$
+|z| \ge 0,\quad |z| = 0 \iff z=0,\\
+|z_1 z_2| = |z_1| \cdot |z_2|,\quad \left|\frac{z_1}{z_2}\right| = \frac{|z_1|}{|z_2|}\ (z_2 \neq 0),\\
+|z|^2 = z \overline{z},\quad |z_1 + z_2| \le |z_1| + |z_2| \quad \text{(三角不等式)}.
+$$
+
+若 \(z_2 \neq 0\)，则
+\[
+\frac{z_1}{z_2} = \frac{x+y\mathrm{i}}{c+d\mathrm{i}} = \frac{(x+y\mathrm{i})(c-d\mathrm{i})}{(c+d\mathrm{i})(c-d\mathrm{i})}
+= \frac{xc + yd}{c^2+d^2} + \frac{yc - xd}{c^2+d^2}\,\mathrm{i}.
+\]
+
+\begin{enumerate}
+    \item \(z + \overline{z} = 2\operatorname{Re}(z)\)，\(z - \overline{z} = 2\mathrm{i}\operatorname{Im}(z)\)；
+    \item \(\operatorname{Re}(z) = \dfrac{z+\overline{z}}{2}\)，\(\operatorname{Im}(z) = \dfrac{z-\overline{z}}{2\mathrm{i}}\)；
+    \item \(\overline{z_1 z_2} = \overline{z_1}\,\overline{z_2}\)，\(\overline{z_1/z_2} = \overline{z_1}/\overline{z_2}\)（\(z_2 \neq 0\)）。
+\end{enumerate}
+
+\end{framed}
+
+我们希望用更加自然的方式引入复数，
+而不是强迫读者承受着直观的阻力去接受$\text i = \sqrt{-1}$。
+我们需要改变对数的认识：
+
+\begin{framed}
+  数是一种特别的线性算子
+\end{framed}
+
+复数可以如下表示，
+体现实线性映射、酉群$\text{U}(1)\simeq \text{SO}(2)$：
+
+$$
+z = x + y \text i 
+= |z| \cdot \text e^{\theta \text i} = \begin{bmatrix}
+  x & -y \\ y & x 
+\end{bmatrix}
+= \sqrt{x^2 + y^2} \begin{bmatrix}
+  \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta
+\end{bmatrix}
+$$
+
+若把$\mathbb C$视为$2 \times 2$实矩阵空间$\mathbb R_2^2 \in\textbf{Vct}_\mathbb R$中的一个二维线性子空间，
+取基：
+
+$$
+I = \begin{bmatrix}
+  1 & 0 \\ 0 & 1
+\end{bmatrix}, \quad
+J = \begin{bmatrix}
+  0 & -1 \\ 1 & 0
+\end{bmatrix}, \quad
+$$
+
+使得$z = x I + y J$，
+且有$J^2 = J \circ J = -I$，
+相当于$\text i^2 = -1$。
+
+现在延伸到$n$-维复矩阵空间：
+
+$$
+\big( \mathbb C_n^n \in\textbf{Vct}_\mathbb C \big)
+\simeq
+\big( \mathbb R_{2n}^{2n} \in\textbf{Vct}_\mathbb R \big)
+$$
+
+一个复矩阵类似表示为：
+
+$$
+\begin{bmatrix}
+  z_1^1 & \cdots & z_1^n \\
+  \vdots & \ddots & \vdots \\
+  z_n^1 & \cdots & z_n^n \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+  x_1^1 & -y_1^1 & \cdots & x_1^n & -y_1^n \\
+  y_1^1 & x_1^1 & \cdots & y_1^n & x_1^n \\
+  \vdots & \vdots & \ddots & \vdots & \vdots \\
+  x_n^1 & -y_n^1 & \cdots & x_n^n & -y_n^n \\
+  y_n^1 & x_n^1 & \cdots & y_n^n & x_n^n \\
+\end{bmatrix}
+$$
+
+为了构造分块矩阵，取它等价的表示形式：
+
+$$
+\begin{aligned}
+\begin{bmatrix}
+  z_1^1 & \cdots & z_1^n \\
+  \vdots & \ddots & \vdots \\
+  z_n^1 & \cdots & z_n^n \\
+\end{bmatrix}
+&=
+\left[
+\begin{array}{ccc|ccc}
+  x_1^1 & \cdots & x_1^n & -y_1^1 & \cdots & -y_1^n \\
+  \vdots & \ddots & \vdots & \vdots & \ddots & \vdots \\
+  x_n^1 & \cdots & x_n^n & -y_n^1 & \cdots & -y_n^n \\
+  \hline
+  y_1^1 & \cdots & y_1^n & x_1^1 & \cdots & x_1^n \\
+  \vdots & \ddots & \vdots & \vdots & \ddots & \vdots \\
+  y_n^1 & \cdots & y_n^n & x_n^1 & \cdots & x_n^n \\
+\end{array}
+\right]
+\\
+&=
+\left[
+\begin{array}{c|c}
+  X & -Y \\
+  \hline
+  Y & X
+\end{array}
+\right]
+= X I_n + Y J_n
+\end{aligned}
+$$
+
+
+类似前述有基：
+
+$$
+I = 
+\left[
+\begin{array}{c|c}
+  I_n & 0 \\
+  \hline
+  0 & I_n
+\end{array}
+\right]
+, \quad
+J = 
+\left[
+\begin{array}{c|c}
+  0 & -I_n \\
+  \hline
+  I_n & 0
+\end{array}
+\right]
+$$
+
+$I$是$\mathbb R_{2n}^{2n}$的代数单位元，
+$J$则满足：
+
+$$
+J^2 = J \circ J = 
+\left[
+\begin{array}{c|c}
+  0 & -I_n \\
+  \hline
+  I_n & 0
+\end{array}
+\right]
+\circ
+\left[
+\begin{array}{c|c}
+  0 & -I_n \\
+  \hline
+  I_n & 0
+\end{array}
+\right]
+=
+\left[
+\begin{array}{c|c}
+  -I_n & 0 \\
+  \hline
+  0 & -I_n
+\end{array}
+\right]
+= - I.
+$$
+
+复数单位$\text i$和基矩阵$J$具有相同的性质：
+
+
+在实矩阵表示下，
+实转置对应着复共轭转置，
+共轭携带的信息不变。
+在不混淆的情况下，
+把$J$写为转置/共轭的形式：
+
+$$
+J = \left[
+\begin{array}{c|c}
+0 & I_n\\
+\hline
+-I_n & 0
+\end{array}
+\right].
+$$
+
+它就是辛矩阵。
+
+\section{辛结构}
+
+作用在$k$-线性空间上，
+基于左右元的区分，
+一对对偶算子$f$作用在左元，
+$f^*$作用在右元．
+若$\forall x \in X, \beta \in Y^*:\ \langle x,f^* \beta \rangle = \langle f x, \beta \rangle $，
+则互为伴随算子．
+这里$\langle -,- \rangle$是$X \times X^*$和$Y \times Y^*$上的自然配对。
+考虑$X$上的线性自映射，
+自伴算子$A = A^\dagger$，
+若引入内积则自然变换可以用内积描述为：
+
+$$
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAA0QBfU9TXfIRRkATFVqMWbdgD0AVN14gM2PASIjy4+s1aIOivqsEbSY6jqn7ZCnkYHrhpAIzbJekAB1PDOmADmDDAABAC0pACC8mHB3gBOfoGsdsr8akLImq4W7mzevgFBwRHhobGeCYXJSioOGQAsWjm6bAAehqnGjsgAbE0SLfoR7Sm16UR95gNWIACeHWMmKI1Tlh4RwfOjaUvIjdnTHvmJRa2Rm+WVSQs73X0Ha3k+JyEbZ7OXL9ziMFD+8ERQAAzOIQAC2SDIIBwECQmkObAiIGovgARjAGAAFW5CEBBIE4Dog8FIADM1BhSGczRmUVsSmJEMQjWhsMQxBSjKQLMpiGcnNBTIArBS2SIBSTECLWWSJUy+jLEAB2Cl0LAMNhguhoOCUuVIAAcoqQAE5VerNdrdbD9XyobyFTg1Rr9FqdXqGYKqfa2Wboc7Le6bZ7Jc5qYqVf6La6rR7gV6+eHeUaoy6QG7rUSE84fVTwwwsGAPFAIExUUFkSAABYwOhQNiQIuVp3R8AEZIULhAA
+\begin{tikzcd}
+X \arrow[rr, "A"]                             &  & X                                          &  & x \arrow[rr, maps to]                                                                         &  & Ax                                                            \\
+{\langle -,A^* - \rangle} \arrow[u] \arrow[d] &  & {\langle A-,- \rangle} \arrow[u] \arrow[d] &  & {\langle x,A y \rangle} \arrow[u, maps to] \arrow[d, maps to] \arrow[rr, no head, Rightarrow] &  & {\langle A x,y \rangle} \arrow[u, maps to] \arrow[d, maps to] \\
+X^*                                           &  & X^* \arrow[ll, "A^*"]                      &  & A y                                                                                           &  & y \arrow[ll, maps to]                                        
+\end{tikzcd}
+$$
+
+复线性空间的内积是Hermite内积，
+它的实部是实内积，
+虚部是辛内积。
+
+线性空间$V$上的双线性形式称为斜对称形式，
+若满足：
+
+$$
+\omega (u,v) + \omega(v,u) = 0
+$$
+
+$2n$-维实线性空间$V$配置非退化斜对称形式$\omega$，
+构成辛空间$(V,\omega)$。
+
+若$J$是一个满足
+$J^2 = -I$ 的线性变换，则称其为一个\textbf{复结构}。在这种情况下，
+可由$J$定义一个由
+
+$$
+\omega_J(u,v) := \langle Ju,v\rangle
+$$
+
+给出的辛形式。特别地，若$V$配备一个内积$\langle\cdot,\cdot\rangle$，
+则一个矩阵$A\in \mathrm{GL}(2n,\mathbb R)$称为\textbf{辛矩阵}，若它满足
+
+$$
+A^T J A = J,
+$$
+
+在\cite{ChrissGinzburg1997}中如此定义： 
+
+\begin{framed}
+    
+A symplectic structure on \( X \) is a non-degenerate regular (i.e., \( C^\infty \), resp. holomorphic, algebraic) 2-form \( \omega \) such that \( d\omega = 0 \).
+
+\end{framed}
+
+Let \( X = \mathbb{C}^{2n} \) with coordinates \( q_1, \ldots, q_n, p_1, \ldots, p_n \). Then
+
+\[
+\omega = dp_1 \wedge dq_1 + \cdots + dp_n \wedge dq_n
+\]
+
+
+\chapter{交换代数}
+
+\section{理想}
+
+
+\section{扩环}
+
+以有限集合$X = \{x_i\} \in\textbf{FinSet}$为基，
+以集合$A$为系数集，
+有函数集$h^A X = A^X = \textbf{Set}(X,A)$，
+给定其中的函数$f:X \to A$为每个$x_i$指定了系数$a_i = f(x_i)$，
+以及对应的$(a_i,x_i)$，
+从而产生形式和：
+$\sum_i a_i x_i = a_1 x_1 + a_2 + x_2 + \cdots = \simeq \{ (a_1,x_1),(a_2,x_2), \cdots \}_i$，
+这里$a_1 x_1 + a_2 + x_2 + \cdots$只是形式加法，
+并不意味着有可加性．
+形式和的全体记为：
+$A[X] = \{ \sum_i a_i x_i \} \simeq h^A X$．
+
+若生成集$X = \textbf 1 = \{1\}$为单点集，
+$\sum_i a_i x_i = a_1 1$，
+因此
+$A[\textbf{1}] = \{ a_1 1 \} \simeq \{ a_1 \} \simeq A \simeq h^A \textbf 1$，
+形式和的全体相当于系数集．
+$\mathbb Z$可以视为基$X=\{1\}$的整系数形式和的集合．
+
+当系数集$A \in \textbf{Ab}$是Abel群，
+借助$A$中的交换加法，
+定义形式和$A[X]$的含幺可逆交换加法：
+$\sum_i a_i x_i + \sum_i b_i x_i = \sum_i (a_i + b_i) x_i$，
+使得$A[X] \in \textbf{Ab}$构成Abel群．
+
+有限集合$X$生成的是有限形式和，
+若系数$A \in \textbf{CRing}$是交换环，
+借助$A$中的交换乘法，
+定义形式和$A[X]$的含幺交换乘法：
+$(\sum_i a_i x_i) \cdot (\sum_i b_i x_i)$，
+展开合并后就会出现生成元的有限次幂．
+为了让$A[X]$的乘法封闭，
+需要对幂进行处理．
+以下固定整数环系数$A = \mathbb Z$，
+且明确生成元$1 \in \mathbb Z$是整数，
+于是整数$1$作为生成元的任意幂还是它本身，
+这样解决了形式和$\mathbb Z[\{1\}]$的乘法封闭性问题，
+使得$\mathbb Z[\{1\}] \in\textbf{CRing}$构成交换环，
+它就是整数环．
+
+添加一个生成元$s$,
+对$X = \{1,s\}$做整系数形式和，
+$\sum_i a_i x_i = a_1 1 + a_2 s \simeq \{ (a_1,1),(a_2,s) \}_i$，
+形式和的全体为：
+$\mathbb Z[X] = \{ a_1 1 + a_2 s \}$．
+根据以上讨论让生成元$1$为整数，
+为了让形式和$\mathbb Z[X]$的乘法封闭，
+要求包含$s$的幂可以回到形式和$a_1 1 + a_2 s$中，
+简单方法是要求$s\cdot s = d \mathbb Z$，
+这样$(a_1 s) \cdot (a_2 s) = (a_1 a_2)d$，
+实现了形式和乘法的封闭性．
+记$s = \sqrt d$，
+形式和相应简记为：
+$a + b\sqrt{d} = a 1 + b \sqrt{d}$．
+
+注意这里还需要考虑根号运算本身的问题：
+$d = 24$具有平方因数$2^2$，
+导致$\sqrt{2^2 \times 6} = 2 \sqrt 6$，
+这样会引入新的生成元$\sqrt 6$，
+破坏了封闭性．
+我们要求$d$是一个无平方因数，
+即$d$的因数分解后没有平方以上的项．
+因此我们应当使用无平方因数的根式作为生成元$\sqrt d$．
+通过给$\mathbb Z$添加无平方因数的根$\sqrt d$，
+得到的环称为\textbf{二次扩环}（Quadratic Extension）
+$\mathbb{Z}[\sqrt{d}] = \{a + b\sqrt d\}$．
+当 $d=-1$ 时，
+形式化的记$ \text i = \sqrt{-1}$，
+得到虚二次扩环 $\mathbb{Z}[i] = \{a + b\text i\}$，
+即\textbf{Gauss整数环}．
+
+\section{扩域}
+
+\section{Galois理论}
+
+
+\begin{framed}
+\noindent
+
+设 \( E/F \) 是一个有限扩张。
+
+\begin{itemize}
+    \item \( E/F \) 称为\textbf{可分扩张}，如果 \( E \) 中每个元素在 \( F \) 上的极小多项式无重根。
+    \item \( E/F \) 称为\textbf{正规扩张}，如果 \( E \) 是 \( F \) 上某个多项式分裂域。
+\end{itemize}
+
+有限扩张 \( E/F \) 称为\textbf{Galois 扩张}，如果它同时是\textbf{可分}且\textbf{正规}的。此时记 Galois 群为
+\[
+\operatorname{Gal}(E/F) = \{ \sigma \in \operatorname{Aut}(E) \mid \sigma|_F = \mathrm{id}_F \}.
+\]
+
+设 \( E/F \) 是有限 Galois 扩张，Galois 群为 \( G = \operatorname{Gal}(E/F) \)。则存在一一对应
+\[
+\left\{ \text{中间域 } K \mid F \subseteq K \subseteq E \right\}
+\longleftrightarrow
+\left\{ \text{子群 } H \leq G \right\},
+\]
+由 \( K \mapsto \operatorname{Gal}(E/K) \) 和 \( H \mapsto E^H \) 给出，其中 \( E^H \) 是 \( H \) 的不动域。对应满足：
+\begin{itemize}
+    \item \([E:K] = |\operatorname{Gal}(E/K)|\)，\([K:F] = [G : \operatorname{Gal}(E/K)]\)；
+    \item \( K/F \) 是 Galois 扩张当且仅当 \( \operatorname{Gal}(E/K) \triangleleft G \)，此时
+    \[
+    \operatorname{Gal}(K/F) \cong G / \operatorname{Gal}(E/K).
+    \]
+\end{itemize}
+
+\textbf{基本过程}：给定 \( E/F \) 的 Galois 扩张，通过 Galois 对应，可以将中间域的问题转化为子群的问题，从而利用群论研究域扩张的结构，这是 Galois 理论的核心思想。
+\end{framed}
+
+\begin{framed}
+\noindent
+
+考虑扩张 \(\mathbb{C}/\mathbb{R}\)。
+
+\begin{itemize}
+    \item \(\mathbb{C} = \mathbb{R}(\mathrm{i})\)，其中 \(\mathrm{i}^2 = -1\)。
+    \item \(\mathrm{i}\) 在 \(\mathbb{R}\) 上的极小多项式为 \(x^2 + 1\)，无重根（可分），且分裂域为 \(\mathbb{C}\)（正规）。因此 \(\mathbb{C}/\mathbb{R}\) 是 Galois 扩张。
+    \item Galois 群 \(G = \operatorname{Gal}(\mathbb{C}/\mathbb{R})\) 由两个自同构组成：
+    \[
+    G = \{ \mathrm{id}, \sigma \},
+    \]
+    其中 \(\sigma\) 为复共轭：\(\sigma(a + b\mathrm{i}) = a - b\mathrm{i}\)。
+    \item 因此 \(G \cong \mathbb{Z}/2\mathbb{Z}\)。
+    \item 中间域只有 \(\mathbb{R}\) 和 \(\mathbb{C}\) 本身，对应于 \(G\) 的两个子群 \(\{ \mathrm{id} \}\) 和 \(G\)。
+    \item \(\mathbb{R}\) 是 \(G\) 的不动域：\(\mathbb{C}^G = \mathbb{R}\)。
+\end{itemize}
+这个例子是 Galois 理论最基本、最典型的例子。
+\end{framed}
+
+\section{代数基本定理}
+
+$\mathbb R$的有限扩张只有$\mathbb R$和$\mathbb C$。
+
+\section{代数封闭域}
+
+\chapter{Abel群自同态}
+
+\begin{framed}
+  数是一种特别的线性算子。
+\end{framed}
+
+我们需要审视算子、线性算子这些基本概念，
+以便从线性算子的角度来探讨数。
+线性结构是最重要的代数结构，
+人们最熟悉的线性结构体现在线性空间：
+
+\begin{framed}
+\noindent
+
+设 $k$ 是一个域，
+$V$ 是一个非空集合，
+称为$k$-\textbf{线性空间}，
+其元素称为\textbf{向量}。
+若在 $V$ 上定义了两个运算：
+
+\begin{itemize}
+    \item \textbf{加法}：$V \times V \to V$，记为 $(u,v) \mapsto u+v$；
+    \item \textbf{数乘}：$k \times V \to V$，记为 $(\lambda, v) \mapsto \lambda v$，
+\end{itemize}
+且满足以下八条公理（对任意 $u,v,w \in V$，$\lambda,\mu \in k$）：
+\begin{enumerate}
+    \item $u+v = v+u$（加法交换律）；
+    \item $(u+v)+w = u+(v+w)$（加法结合律）；
+    \item 存在零向量 $0 \in V$，使得 $v+0 = v$（加法单位元）；
+    \item 对每个 $v \in V$，存在 $-v \in V$，使得 $v+(-v)=0$（加法逆元）；
+    \item $\lambda(\mu v) = (\lambda\mu)v$（数乘结合律）；
+    \item $1_k v = v$（单位元作用）；
+    \item $\lambda(u+v) = \lambda u + \lambda v$（数乘对向量加法的分配律）；
+    \item $(\lambda+\mu)v = \lambda v + \mu v$（数乘对域加法的分配律）。
+\end{enumerate}
+则称 $V$ 是域 $k$ 上的一个\textbf{线性空间}（或\textbf{向量空间}）。
+
+\end{framed}
+
+线性空间的定义中蕴含了Abel群、交换环、模、域的概念，
+而线性结构最基础的构成在于环和模。
+环和模从逻辑上可以说是在Abel群自同态上自我发展出的概念，
+Abel群、环、模之所以构成抽象代数最基本的概念，
+是因为Abel群是最基本的一种丰富范畴。
+
+\section{Abel群范畴}
+
+闭范畴、幺半范畴、丰富范畴是现代研究线性结构的工具，
+简单起见我们先介绍这类范畴中的一种封闭性，
+使得其态射集仍然构成了范畴中的对象：
+
+$$
+\begin{aligned}
+  [-,-]: \mathcal C^\text{op} \times \mathcal C &\to \mathcal C \\
+  (X,Y) &\mapsto \mathcal C[X,Y]
+\end{aligned}
+$$
+
+这里的态射集使用方括号强调封闭性。
+实际上态射集这种叫法，
+就暗示了集合范畴上固定端点的函数全体构成一个集合：
+
+$$
+\textbf{Set}[X,Y] = \text{Hom}_\mathcal C(X,Y) = \{ f: X \to Y \} \in\textbf{Set}
+$$
+
+范畴论讨论的范围远远超过集合范畴，
+态射集也只是沿用集合范畴的属于，
+存在着态射集不是集合的情况，
+需要区分范畴和小范畴：
+
+\begin{framed}
+\noindent
+
+以所有范畴为对象，
+范畴间的函子为态射，
+构成范畴$\textbf{CAT}$。
+令$\mathcal C \in \textbf{CAT}$，
+若 $\text{Ob} \mathcal C \in\textbf{Set}$ 是一个集合（而非真类），
+则称 $\mathcal C$ 为\textbf{小范畴}（small category）；
+否则称为\textbf{大范畴}（large category）。
+
+$\forall A,B \in\textbf{Set}:\ \mathcal{C}(A,B) \in\textbf{Set}$，
+称 $\mathcal{C}$ 为\textbf{局部小范畴}（locally small category）。
+
+小范畴和函子构成范畴$\textbf{cat}$，
+局部小范畴和函子构成范畴$\textbf{Cat}$，
+有子范畴的关系：
+
+$$
+\textbf{cat} \subset \textbf{Cat} \subset \textbf{CAT}
+$$
+
+\end{framed}
+
+通常在Abel群上开始引入交换的加法，
+Abel群范畴$\textbf{Ab}$具有封闭性：
+
+$$
+\textbf{Ab}[X,Y] \in \textbf{Ab}
+$$
+
+研究其全体自同态所构成的Abel群：
+
+$$
+\text{End} \ X = \textbf{Ab}[X,X] \in \textbf{Ab}
+$$
+
+可以让复合映射作为产生封闭性，
+即有幺半群$(\text{End} \ X, \circ, 1_X)$，
+这样就有了加法和乘法的代数结构$(\text{End} \ X, +, 0_X, \circ, 1_X)$。
+
+\section{模}
+
+\begin{framed}
+\noindent
+
+含幺环 $R \in \textbf{Ring}$ 和 Abel 群 $(X, +, 0) \in \textbf{Ab}$ 构成 $A$-左模，
+若有数量左乘法
+
+$$
+R \times X \to X :: (r, x) \mapsto r x
+$$
+
+满足 $\forall r, s \in R,\ x, y \in X$：
+\begin{enumerate}
+    \item $r(x + y) = rx + ry$；（分配律）
+    \item $(r + s)x = rx + sx$；（分配律）
+    \item $(rs)x = r(sx)$；（结合律）
+    \item $1_R x = x$。（单位元作用）
+\end{enumerate}
+
+类似定义数量右乘法，
+可以定义$A$-右模。
+
+\end{framed}
+
+$R$-左模正是 Abel 群 $X$ 配备一个 $R$ 到其自同态环的表示$\rho\in\textbf{Ring}(R,\text{End} \ X)$。
+上述定义中，
+模的公理使得数量乘法对应于环同态：
+
+\begin{equation}
+\begin{aligned}
+\rho: R &\to \text{End} \ X \\
+r &\mapsto \rho(r)
+\end{aligned}
+\quad
+\text{s.t.}
+\quad
+\begin{aligned}
+\rho: R \times X &\to X \\
+(r,x) &\mapsto rx = \rho(r)(x)
+\end{aligned}
+\end{equation}
+\label{eq:module-as-ring-homo}
+
+因为对乘法交换性的要求，
+我们只讨论交换环$A\in\textbf{CRing}$，
+相应的表示$\rho\in\textbf{CRing}(A,\text{End} \ X)$限制在交换环范畴。
+交换环$A$产生了数量乘法的交换律$(ab)x = a(bx) = b(ax)$，
+使得左模和右模等价成为双模。
+之后不再区分统称$A$-模。
+交换环的理想也不需要区分左右理想，
+统称理想。
+更有趣的是，
+交换环$A$的理想和$A$-模的子模是对应的：
+
+\begin{framed}
+\noindent
+
+含幺交换环 $A\in\textbf{CRing}$的Abel群$(A,+,0_A)$子群$I$称为\textbf{理想}，
+若满足吸收律：
+
+$$
+\forall a \in A,\ \forall i \in I:\quad a i \in I
+$$
+
+定义等价关系$a \sim b$ iff. $a - b \in I$
+构造\textbf{商环} $A/I$。
+
+$A$-模$X$的Abel群 $X$ 子群 $(Y,+,0_X)$称为\textbf{子模}，
+若满足吸收律：
+
+$$
+\forall a \in A,\ \forall y \in Y:\quad ay \in Y
+$$
+
+定义等价关系$x \sim y$ iff. $x - y \in Y$
+构造\textbf{商模} $X/Y$。
+
+\end{framed}
+
+易于验证理想和子模的对应关系。
+在交换代数中，
+环$A$的理想的全体$I_A$有着丰富的序结构，
+对应到$A$-模$X$的子模的全体$\text{Sub} \ X$，
+有着同样丰富的结构，
+两者都是完备模格。
+
+
+\section{域}
+
+接下来讨论域$k$，
+它作为一种特殊的交换环，
+没有真极大理想，
+这意味着$I_k$的结构是平凡的。
+$\text{Im} \ \rho \in\textbf{CRing}$得到了自同态环$\text{End} \ X$的交换子环。
+
+$k$-模$X$就是$k$-线性空间。
+通过(\ref{eq:module-as-ring-homo})的环表示，
+域$k$中的元素视为$k$-线性空间$X$上的交换线性算子。
+在数域中，
+这些数字就是交换线性算子。
+$k = \mathbb R$实空间$X = \mathbb R_n$有标准的数乘：
+
+$$
+\begin{aligned}
+  \mathbb R \times \mathbb R_n &\to \mathbb R_n \\
+  \left(\lambda,\begin{bmatrix}
+    x_1 \\ \vdots \\ x_n
+  \end{bmatrix} \right) &\mapsto 
+  \begin{bmatrix}
+    \lambda x_1 \\ \vdots \\ \lambda x_n
+  \end{bmatrix}
+\end{aligned}
+$$
+
+它等效于矩阵子环$A = \{ \lambda I_n:\ \lambda \in \mathbb R \} \subset \mathbb R_n^n$上的模乘法：
+
+$$
+\begin{aligned}
+  A \times \mathbb R_n &\to \mathbb R_n \\
+  \left(\lambda I_n,\begin{bmatrix}
+    x_1 \\ \vdots \\ x_n
+  \end{bmatrix} \right) &\mapsto 
+  \begin{bmatrix}
+    \lambda x_1 \\ \vdots \\ \lambda x_n
+  \end{bmatrix}
+\end{aligned}
+$$
+
+有同构$A = \{ \lambda I_n:\ \lambda \in \mathbb R \} \simeq \mathbb R$，
+即数域$k = \mathbb R$作为交换子环嵌入了非交换的矩阵算子环$\mathbb R_n^n$。
+矩阵算子环的交换子环种类非常丰富。
+然而，
+其中能够构成含幺交换子环的只有两种类型，
+一种就是上述纯量子环$\{ \lambda I_n:\ \lambda \in \mathbb R \}$，
+另一种是当$n$为偶数时，
+反对称矩阵的分块对角嵌入。
+
+\chapter{辛}
+
+\cite{li2014gaodeng}
+
+\section{多重线性映射}
+
+\begin{framed}
+\noindent
+
+从域 \( F \) 上的向量空间 \( V \) 到域 \( F \) 上的向量空间 \( Z \) 上的 \( p \) 线性映射（\(p\)-linear map）是指一个映射
+
+$$
+f: \underbrace{V \times \cdots \times V}_{p\text{ 次}} \longrightarrow Z,
+$$
+
+并且条件
+
+$$
+\begin{aligned}
+f(v_1, \dots, v_{j-1}, a v_j + w, v_{j+1}, \dots, v_p)
+&= a\, f(v_1, \dots, v_{j-1}, v_j, v_{j+1}, \dots, v_p) \\
+& + f(v_1, \dots, v_{j-1}, w, v_{j+1}, \dots, v_p)
+\end{aligned}
+$$
+
+对所有 \( 1 \le j \le p \), \( a \in F \) 及 \( v_j, w \in V \) 都成立。这即是说映射 \( f \) 对每一个分量都是线性的。在这种情况下，我们也称 \( f \) 是多重线性的（multilinear）。
+
+\end{framed}
+
+\begin{framed}
+\noindent
+
+给定 \( F \) 向量空间 \( V \) 和 \( Z \)。称一个 \( p \) 线性映射
+\[
+g: \underbrace{V \times \cdots \times V}_{p\text{ 次}} \longrightarrow Z
+\]
+是\textbf{交错 \( p \) 线性映射}（alternating \( p \)-linear map）或 \( p \) \textbf{交错映射}（\( p \)-alternating map），如果对任意 \( v_1, \dots, v_p \in V \)，有
+\[
+i \neq j,\; v_i = v_j \implies g(v_1, \dots, v_p) = 0.
+\]
+
+设 \( \operatorname{Alt}^p(V, Z) \) 是从 \( V \) 到 \( Z \) 的所有交错 \( p \) 线性映射构成的 \( F \) 向量空间。对于 \( Z = F \) 的情形，所有的交错 \( p \) 线性函数
+\[
+\underbrace{V \times \cdots \times V}_{p\text{ 次}} \longrightarrow F
+\]
+所构成的空间简写为 \( \operatorname{Alt}^p(V) \)。这些函数也称为 \( V \) 上的\textbf{交错 \( p \) 型}（alternating \( p \)-forms）。
+
+根据定义可知，对于 \( p \) 个元素构成的置换群 \( \mathcal{S}_p \) 中的元素 \( \sigma \)，我们有如下等式成立
+\[
+g(v_{\sigma(1)}, \dots, v_{\sigma(p)}) = (-1)^{\operatorname{sgn}(\sigma)} \, g(v_1, \dots, v_p).
+\]
+
+\end{framed}
+
+\section{行列式}
+
+\begin{framed}
+我们把 \( F^n \) 中的向量写成列形式：
+\[
+\begin{pmatrix}
+a_1 \\
+\vdots \\
+a_n
+\end{pmatrix}, \quad a_i \in F,
+\]
+将一个矩阵 \( A = (a_{ij}) \in M_{n \times n}(F) \) 写成 \( n \) 列：
+\[
+A = (c_1 \cdots c_n), \quad c_j = 
+\begin{pmatrix}
+a_{1j} \\
+\vdots \\
+a_{nj}
+\end{pmatrix} \in F^n.
+\]
+现在我们可以认为 \( n \times n \) 矩阵 \( A \) 与 \( (F^n)^n \) 中的向量组 \( (c_1, \cdots, c_n) \) 一一对应：
+\[
+M_{n \times n}(F) \leftrightarrow \underbrace{F^n \times \cdots \times F^n}_{n\text{ 次}} : A \leftrightarrow (c_1, \cdots, c_n).
+\]
+
+定理：向量空间 \( F^n \) 只有一个交错 \( n \) 线性函数
+\[
+d: \underbrace{F^n \times \cdots \times F^n}_{n\text{ 次}} \longrightarrow F
+\]
+使得 \( d(I) = 1 \)，其中 \( I \) 是单位矩阵。
+\end{framed}
+
+\begin{framed}
+\noindent
+给定一个 \( n \times n \) 矩阵 \( A = (a_{ij}) \)，我们将矩阵 \( A \) 的行列式（determinant）定义为
+\[
+\sum_{\sigma \in \mathcal{S}_n} (-1)^{\operatorname{sgn}(\sigma)} a_{\sigma(1),1} \cdots a_{\sigma(n),n}.
+\]
+我们将这一和式记为 \( \det A \) 或 \( |A| \) 或
+\[
+\begin{vmatrix}
+a_{11} & \cdots & a_{1n} \\
+\vdots & \ddots & \vdots \\
+a_{n1} & \cdots & a_{nn}
+\end{vmatrix}.
+\]
+\end{framed}
+
+\section{外代数}
+
+\cite{li2014gaodeng} 4.6节：对偶空间的外积
+
+\section{辛形式、辛群、辛结构}
+
+\begin{framed}
+  
+实向量空间$X$上的线性变换$J \in \text{End} \ V$
+称\textbf{近复结构}(almost complex structure)，
+若满足
+
+$$
+J^2 = -1_X
+$$
+
+\end{framed}
+
+
+\chapter{全纯函数}
+
+\chapter{谱}
+
+\chapter{C*-代数}
+
+\section{复含幺结合代数}
+
+\section{C*-代数}
+
+\section{Gelfand理论}
+
+\backmatter
+
+\printindex
+
+% 参考文献
+%\bibliographystyle{apalike}
+%\bibliography{ref}
+\printbibliography[heading=bibintoc]
+
+\end{document}

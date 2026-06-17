@@ -42,20 +42,23 @@
 
 \allsectionsfont{\rmfamily\bfseries}
 
-\usepackage{amssymb}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{amscd} 
+\usepackage{mathtools}
+
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage{quoting}
 \usepackage{setspace}
 \onehalfspacing
+
 \usepackage{tikz}
-\usepackage{fancyhdr}
-\usepackage{amsmath, amsthm}
-\usepackage{bm} 
-\usepackage{libertine} 
-\usepackage[libertine]{newtxmath} 
 \usepackage{tikz-cd}
-\usepackage{amscd} 
+\usetikzlibrary{decorations.pathmorphing, decorations.markings}
+
+\usepackage{fancyhdr}
+\usepackage{bm} 
+\usepackage[libertine]{newtxmath} 
 \usepackage{nicematrix} 
 \usepackage{adjustbox} 
 \usepackage{framed} 
@@ -65,7 +68,6 @@
 
 \usepackage[toc,page]{appendix}
 \changefontsizes{9.5pt} 
-
 
 \NiceMatrixOptions{
   custom-line = {
@@ -87,4 +89,8 @@
 \usepackage[style=index]{glossaries}   % 生成类似于索引的格式
 \makeglossaries
 
+\usepackage{makeidx}
+\makeindex
+
 \usepackage[backend=biber, style=authoryear-comp, sorting=nyt, citestyle=authoryear]{biblatex}
+%\usepackage[backend=biber, style=apa]{biblatex}
