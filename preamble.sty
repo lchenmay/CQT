@@ -97,4 +97,10 @@
   {\symbol{"2018}}{\symbol{"2019}}
 \usepackage[backend=biber, style=authoryear-comp, sorting=nyt, citestyle=authoryear, language=english, autolang=none]{biblatex}
 % 引用格式 [Author Year] 方括号
-\renewcommand*{\mkbibparens}[1]{\mkbibbrackets{#1}}
+\renewcommand*{\mkbibparens}[1]{#1}
+\DeclareCiteCommand{\cite}[\mkbibbrackets]
+  {\usebibmacro{prenote}}
+  {\usebibmacro{citeindex}%
+   \usebibmacro{cite}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
