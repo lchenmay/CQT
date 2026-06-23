@@ -1,6 +1,11 @@
 \PassOptionsToPackage{final}{hyperref}
 
 \usepackage{comment}
+\usepackage{silence}
+% 已知无害的包间命令重定义警告 — 必须在 sectsty/hyperref 之前
+\WarningFilter{LaTeX}{has changed}
+% 共享 preamble 中 glossaries 可能在个别文档中未使用
+\WarningFilter{glossaries}{No \\printglossary}
 
 % ============== 考虑出血的版式 ===================================
 \usepackage[
@@ -55,13 +60,10 @@
 \usepackage{adjustbox} 
 \usepackage{framed} 
 \usepackage{scrextend}
-\usepackage{silence}
 \WarningFilter{latexfont}{Font shape}
 \WarningFilter{latexfont}{Size substitutions}
 \WarningFilter{latexfont}{Some font shapes}
 \WarningFilter{hyperref}{unreferenced destination}
-% 已知无害的包间命令重定义警告
-\WarningFilter{LaTeX}{has changed}
 
 \usepackage{physics}
 

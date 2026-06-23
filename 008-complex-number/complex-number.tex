@@ -70,10 +70,11 @@ z_1 \cdot z_2 = (x + y\mathrm{i})(c + d\mathrm{i}) = (xc - yd) + (xd + yc)\mathr
 \]
 
 模具有以下性质：
-$$
+$$ 
 |z| \ge 0,\quad |z| = 0 \iff z=0,\\
 |z_1 z_2| = |z_1| \cdot |z_2|,\quad \left|\frac{z_1}{z_2}\right| = \frac{|z_1|}{|z_2|}\ (z_2 \neq 0),\\
-|z|^2 = z \overline{z},\quad |z_1 + z_2| \le |z_1| + |z_2| \quad \text{(三角不等式)}.
+|z|^2 = z \overline{z},\\
+|z_1 + z_2| \le |z_1| + |z_2| \quad \text{(三角不等式)}.
 $$
 
 若 \(z_2 \neq 0\)，则
@@ -268,7 +269,10 @@ $$
 基于左右元的区分，
 一对对偶算子$f$作用在左元，
 $f^*$作用在右元．
-若$\forall x \in X, \beta \in Y^*:\ \langle x,f^* \beta \rangle = \langle f x, \beta \rangle $，
+若
+\[
+\forall x \in X, \beta \in Y^*:\ \langle x,f^* \beta \rangle = \langle f x, \beta \rangle,
+\]
 则互为伴随算子．
 这里$\langle -,- \rangle$是$X \times X^*$和$Y \times Y^*$上的自然配对。
 考虑$X$上的线性自映射，
@@ -372,6 +376,7 @@ $(\sum_i a_i x_i) \cdot (\sum_i b_i x_i)$，
 且明确生成元$1 \in \mathbb Z$是整数，
 于是整数$1$作为生成元的任意幂还是它本身，
 这样解决了形式和$\mathbb Z[\{1\}]$的乘法封闭性问题，
+\linebreak
 使得$\mathbb Z[\{1\}] \in\textbf{CRing}$构成交换环，
 它就是整数环．
 
@@ -400,7 +405,9 @@ $d = 24$具有平方因数$2^2$，
 因此我们应当使用无平方因数的根式作为生成元$\sqrt d$．
 通过给$\mathbb Z$添加无平方因数的根$\sqrt d$，
 得到的环称为\textbf{二次扩环}（Quadratic Extension）
-$\mathbb{Z}[\sqrt{d}] = \{a + b\sqrt d\}$．
+\[
+\mathbb{Z}[\sqrt{d}] = \{a + b\sqrt d\}.
+\]
 当 $d=-1$ 时，
 形式化的记$ \text i = \sqrt{-1}$，
 得到虚二次扩环 $\mathbb{Z}[i] = \{a + b\text i\}$，
@@ -511,6 +518,7 @@ $V$ 是一个非空集合，
 
 线性空间的定义中蕴含了Abel群、交换环、模、域的概念，
 而线性结构最基础的构成在于环和模。
+\linebreak
 环和模从逻辑上可以说是在Abel群自同态上自我发展出的概念，
 Abel群、环、模之所以构成抽象代数最基本的概念，
 是因为Abel群是最基本的一种丰富范畴。
@@ -533,7 +541,11 @@ $$
 就暗示了集合范畴上固定端点的函数全体构成一个集合：
 
 $$
-\textbf{Set}[X,Y] = \text{Hom}_\mathcal C(X,Y) = \{ f: X \to Y \} \in\textbf{Set}
+\begin{aligned}
+\textbf{Set}[X,Y]
+  = \text{Hom}_\mathcal C(X,Y)
+  = \{ f: X \to Y \} \in\textbf{Set}
+\end{aligned}
 $$
 
 范畴论讨论的范围远远超过集合范畴，
@@ -579,7 +591,10 @@ $$
 $$
 
 可以让复合映射作为产生封闭性，
-即有幺半群$(\text{End} \ X, \circ, 1_X)$，
+即有幺半群
+\[
+(\text{End} \ X, \circ, 1_X),
+\]
 这样就有了加法和乘法的代数结构$(\text{End} \ X, +, 0_X, \circ, 1_X)$。
 
 \section{模}

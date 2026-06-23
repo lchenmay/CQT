@@ -1,84 +1,9 @@
 %!TEX program = lualatex
 \documentclass[10pt, openany]{book}
 
-\usepackage{comment}
-\usepackage{silence}
-\WarningFilter{latex}{Command \underbar has changed}
-\WarningFilter{latex}{Command \underline has changed}
+\usepackage{../preamble}
+\addbibresource{../ref.bib}
 
-% ============== 考虑出血的版式 ===================================
-\usepackage[
-    paperwidth=6in,
-    paperheight=9in,
-    top=0.8in,
-    bottom=0.8in,
-    inner=0.75in,
-    outer=0.6in,
-    bindingoffset=0.25in,
-    footskip=0.4in
-]{geometry}
-
-% ============== 语言和字体 ===================================
-\usepackage[x-4]{pdfx} 
-\usepackage{fontspec}
-\usepackage[provide=*, chinese]{babel}
-\usepackage{sectsty}
-
-
-\babelfont{rm}[
-    Path = ./font/,
-    Renderer = HarfBuzz,
-    BoldFont = {GFSDidot-Regular.ttf},
-    BoldFeatures = {RawFeature={embolden=3.0}},
-    ItalicFont = {timesi.ttf}
-]{GFSDidot-Regular.ttf}
-
-\babelfont{sf}[Path = ./font/, Renderer = HarfBuzz]{GFSDidot-Regular.ttf}
-\babelfont{tt}[Path = ./font/, Renderer = HarfBuzz]{NotoSerifSC-Regular.ttf}
-
-\babelfont[chinese]{rm}[
-    Path = ./font/,
-    Renderer = HarfBuzz,
-    BoldFont = {NotoSerifSC-ExtraBold.ttf},
-    ItalicFont = {StKaiTi.ttf}
-]{NotoSerifSC-Regular.ttf}
-
-\allsectionsfont{\rmfamily\bfseries}
-
-\usepackage{amssymb}
-\usepackage{enumitem}
-\usepackage{titlesec}
-\usepackage{quoting}
-\usepackage{setspace}
-\onehalfspacing
-\usepackage{tikz}
-\usepackage{graphicx}
-\usetikzlibrary{calc, positioning, arrows.meta}
-\usepackage{fancyhdr}
-\usepackage{mathtools,amsthm}
-\usepackage{bm} 
-\usepackage{libertine} 
-\usepackage[libertine]{newtxmath} 
-\usepackage{extarrows}
-\usepackage{tikz-cd} 
-\usepackage{nicematrix} 
-\usepackage{adjustbox} 
-\usepackage{framed} 
-\usepackage{scrextend}
-\changefontsizes{9.5pt} 
-
-\NiceMatrixOptions{
-  custom-line = {
-    letter = : ,
-    command = hdashline ,
-    tikz = { dashed }
-  }
-}
-
-\setlength{\parskip}{1em} 
-
-\pagestyle{fancy}
-\fancyhf{}
 \fancyhead[LE,RO]{\thepage}
 \fancyhead[RE]{\textbf{张量与矩阵}}
 \fancyhead[LO]{\textit{范畴论观点}}
