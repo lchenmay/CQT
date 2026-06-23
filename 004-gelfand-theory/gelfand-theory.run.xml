@@ -59,6 +59,7 @@
       <file>authoryear-comp.bbx</file>
       <file>authoryear.cbx</file>
       <file>biblatex.cfg</file>
+      <file>english.lbx</file>
     </requires>
   </internal>
   <external package="biblatex" priority="5" active="0">
@@ -78,6 +79,9 @@
     </provides>
     <requires type="dynamic">
       <file>gelfand-theory.bcf</file>
+    </requires>
+    <requires type="editable">
+      <file>../ref.bib</file>
     </requires>
   </external>
 </requests>

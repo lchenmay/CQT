@@ -1,8 +1,6 @@
+\PassOptionsToPackage{final}{hyperref}
 
 \usepackage{comment}
-\usepackage{silence}
-\WarningFilter{latex}{Command \underbar has changed}
-\WarningFilter{latex}{Command \underline has changed}
 
 % ============== 考虑出血的版式 ===================================
 \usepackage[
@@ -17,28 +15,22 @@
 ]{geometry}
 
 % ============== 语言和字体 ===================================
-\usepackage[x-4]{pdfx} 
+\usepackage{hyperref}
 \usepackage{fontspec}
-\usepackage[provide=*, chinese]{babel}
+\usepackage[english]{babel}
 \usepackage{sectsty}
 
+% 正文: NotoSerifSC (支持中文+西文)
+% 注意: 不使用 HarfBuzz 渲染器，因为它在 CJK 字符映射时有 BUG，
+% 会将部分标准 CJK 字符映射到 Kangxi Radical/CJK Compatibility 码位
 \babelfont{rm}[
     Path = ./font/,
-    Renderer = HarfBuzz,
-    BoldFont = {GFSDidot-Regular.ttf},
-    BoldFeatures = {RawFeature={embolden=3.0}},
-    ItalicFont = {timesi.ttf}
-]{GFSDidot-Regular.ttf}
-
-\babelfont{sf}[Path = ./font/, Renderer = HarfBuzz]{GFSDidot-Regular.ttf}
-\babelfont{tt}[Path = ./font/, Renderer = HarfBuzz]{NotoSerifSC-Regular.ttf}
-
-\babelfont[chinese]{rm}[
-    Path = ./font/,
-    Renderer = HarfBuzz,
     BoldFont = {NotoSerifSC-ExtraBold.ttf},
     ItalicFont = {StKaiTi.ttf}
 ]{NotoSerifSC-Regular.ttf}
+
+\babelfont{sf}[Path = ./font/]{GFSDidot-Regular.ttf}
+\babelfont{tt}[Path = ./font/]{NotoSerifSC-Regular.ttf}
 
 \allsectionsfont{\rmfamily\bfseries}
 
@@ -63,6 +55,13 @@
 \usepackage{adjustbox} 
 \usepackage{framed} 
 \usepackage{scrextend}
+\usepackage{silence}
+\WarningFilter{latexfont}{Font shape}
+\WarningFilter{latexfont}{Size substitutions}
+\WarningFilter{latexfont}{Some font shapes}
+\WarningFilter{hyperref}{unreferenced destination}
+% 已知无害的包间命令重定义警告
+\WarningFilter{LaTeX}{has changed}
 
 \usepackage{physics}
 
@@ -92,5 +91,10 @@
 \usepackage{makeidx}
 \makeindex
 
-\usepackage[backend=biber, style=authoryear-comp, sorting=nyt, citestyle=authoryear]{biblatex}
-%\usepackage[backend=biber, style=apa]{biblatex}
+\usepackage{csquotes}
+\DeclareQuoteStyle[american]{chinese}
+  {\symbol{"201C}}{\symbol{"201D}}
+  {\symbol{"2018}}{\symbol{"2019}}
+\usepackage[backend=biber, style=authoryear-comp, sorting=nyt, citestyle=authoryear, language=english, autolang=none]{biblatex}
+% 引用格式 [Author Year] 方括号
+\renewcommand*{\mkbibparens}[1]{\mkbibbrackets{#1}}

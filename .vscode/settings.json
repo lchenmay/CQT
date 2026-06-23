@@ -1,43 +1,18 @@
 {
+  "latex-workshop.latex.tools": [
+    {
+      "name": "lualatex",
+      "command": "lualatex",
+      "args": ["-interaction=nonstopmode", "-halt-on-error", "%DOC%.tex"]
+    }
+  ],
   "latex-workshop.latex.recipes": [
     {
       "name": "lualatex",
       "tools": ["lualatex"]
     }
   ],
-  "latex-workshop.latex.tools": [
-    {
-      "name": "lualatex",
-      "command": "lualatex",
-      "args": [
-        "-synctex=1",
-        "-interaction=nonstopmode",
-        "-file-line-error",
-        "%DOC%"
-      ],
-      "env": {}
-    }
-  ],
-  "latex-workshop.latex.defaultEditor": "latex-workshop",
-  "latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%",
-  "latex-workshop.latex.recipe.default": "lualatex",
-  "latex-workshop.latex.clean.fileTypes": [
-    "*.aux",
-    "*.bbl",
-    "*.blg",
-    "*.fdb_latexmk",
-    "*.fls",
-    "*.log",
-    "*.out",
-    "*.toc",
-    "*.synctex.gz",
-    "*.bcf",
-    "*.run.xml",
-    "*.glg",
-    "*.glo",
-    "*.gls",
-    "*.idx",
-    "*.ind",
-    "*.ilg"
-  ]
+  "latex-workshop.latex.recipe.default": "lastUsed",
+  "latex-workshop.latex.autoBuild.run": "never",
+  "latex-workshop.view.pdf.viewer": "tab"
 }
