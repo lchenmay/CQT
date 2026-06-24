@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>复数化的概率</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"></script>
+<style>
+body {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+}
+h1 { font-size: 24px; text-align: center; margin: 20px 0 10px; }
+h2 { font-size: 20px; margin: 30px 0 15px; border-left: 4px solid #1a73e8; padding-left: 12px; }
+h3 { font-size: 18px; margin: 20px 0 10px; }
+blockquote {
+  margin: 15px 0;
+  padding: 10px 20px;
+  background: #f5f7fa;
+  border-left: 4px solid #1a73e8;
+  color: #555;
+}
+hr { border: none; border-top: 1px solid #eee; margin: 30px 0; }
+img { max-width: 100%; height: auto; display: block; margin: 20px auto; }
+.katex { font-size: 1.1em; }
+.katex-display { overflow-x: auto; overflow-y: hidden; }
+p { margin: 10px 0; }
+.ref-list { font-size: 14px; color: #666; }
+.ref-list li { margin: 5px 0; }
+</style>
+</head>
+<body>
+<h1>1 + 1 = 0：当概率活在单位圆上</h1>
+<p>你学了一辈子概率，知道两个互斥事件同时发生的概率就是 $p_1 + p_2$。</p>
+<p>$0.3 + 0.4 = 0.7$。天经地义。</p>
+<p>但量子力学说：不一定。有时候 $0.3 + 0.4 = 0$。有时候 $0.3 + 0.4 = 1$。有时候加出来甚至是一个你从来没见过的数。</p>
+<p>因为量子力学的概率，不在你熟悉的那条 $[0,1]$ 线段上。</p>
+<p><strong>它在复平面的单位圆盘里。</strong></p>
+<hr>
+<h2>概率不是线段，是单位圆盘</h2>
+<p>在单位圆盘 $D = \{z \in \mathbb C \mid |z| \leq 1\}$ 内部的任意复数 $z$，其模平方 $|z|^2 = z\bar z$ 的取值范围是 $I = [0,1]$。这个实数中的闭区间，正是概率的取值范围。这样，任何概率 $p$ 都存在 $p = |z|^2$ 的表示。并且，它是旋转不变的。</p>
+<p>换句话说，一个实数概率 $p \in I$，和复平面单位圆盘 $D$ 中的一个半径为 $\sqrt{p}$ 的圆一一对应。若两个复数相差一个旋转，则 $|z_1| = |z_2|$，构成等价关系 $z_1 \sim z_2$，于是概率的单位闭区间可以描述为商集：</p>
+<p>$
+I = [0,1] = D/{\sim}
+$</p>
+<p>实数概率是复数概率的影子。你扔掉了相位，只剩下长度。经典概率论在这条影子上工作了三百多年，从 Pascal 到 Kolmogorov，没有人怀疑影子下面还有一个完整的圆盘。</p>
+<p><img src="%E5%85%AC%E4%BC%97%E5%8F%B7%E9%85%8D%E5%9B%BE/fig1-unit-disk.png" alt="单位圆盘中的复数概率"></p>
+<p>直接在实数上相加是概率论讨论的问题。而放到复平面上，对应了半径为 $\sqrt{p_1}$ 和 $\sqrt{p_2}$ 的两个圆的某种加法，这似乎比实数概率的直接相加还缺少直观意义。如果考虑两个圆上的点的复数加法，则有趣得多。</p>
+<hr>
+<h2>复数化的概率：$1+1=0$ 是怎么来的</h2>
+<p>双缝实验是最经典的例子。一束电子射向两条平行狭缝。按照经典概率，电子穿过左缝落到屏幕上某点的概率是 $p_1$，穿过右缝是 $p_2$，合起来应该是 $p_1 + p_2$。</p>
+<p>但实验结果是：屏幕上出现了明暗相间的条纹。某些位置电子从不光顾——概率为零。即使两条缝都敞开，电子反而不到那里去了。</p>
+<p>这相当于：<strong>两个非零的概率加在一起，得到了零。</strong> 实数加法做不出这个结果。所以概率不能只是实数。</p>
+<p>假设 $p_1 = |z_1|^2$ 和 $p_2 = |z_2|^2$，且 $|z_1| \geq |z_2|$。</p>
+<p>在推导之前，我们需要一个关键的视角转换：<strong>把复数看作线性算子，而非平面上的点。</strong></p>
+<p>复数加法导致概率可以互相抵消——要理解这一点，必须先看清复数是什么。</p>
+<hr>
+<h2>复数的矩阵表示</h2>
+<p>我们需要改变对数的认识：</p>
+<blockquote>
+<p><strong>数是一种特别的线性算子</strong></p>
+</blockquote>
+<p>复数 $z = x + y\mathrm{i}$ 可以等价地写成一个 $2 \times 2$ 的实矩阵：</p>
+<p>$
+z = x + y\mathrm{i}
+= |z| \cdot \mathrm{e}^{\theta \mathrm{i}}
+= \begin{bmatrix} x & -y \\ y & x \end{bmatrix}
+= \sqrt{x^2 + y^2} \begin{bmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{bmatrix}
+$</p>
+<p>旋转矩阵 $\begin{bmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{bmatrix}$ 构成 $\mathrm{SO}(2)$——二维平面上的所有旋转。乘以缩放因子 $|z|$ 后，成为 $\mathrm{U}(1)$——模为 $1$ 的复数全体，即单位圆上的旋转群。矩阵的行列式 $\det = x^2 + y^2 = |z|^2$ 正好是概率。</p>
+<p>若把 $\mathbb C$ 视为 $2 \times 2$ 实矩阵空间中的一个二维线性子空间，取基：</p>
+<p>$
+I = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}, \quad
+J = \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}
+$</p>
+<p>使得 $z = x I + y J$，且有 $J^2 = J \circ J = -I$，相当于 $\mathrm{i}^2 = -1$。$\mathrm{i}^2 = -1$ 不是强行规定——它就是这个矩阵自乘的结果。$I$ 是代数单位元，$J$ 是复结构：一个满足 $J^2 = -I$ 的线性变换，它把实向量空间&quot;升级&quot;为复向量空间——乘以 $\mathrm{i}$ 等价于作用 $J$。两者共同生成复数的全部运算。</p>
+<p>为什么这个视角重要？因为一旦把复数看成 $I$ 和 $J$ 的线性组合——也就是矩阵——<strong>复数的加法就变成了矩阵的加法</strong>。而矩阵加法允许各分量独立加减：$x I + y J$ 中的 $x$ 和 $y$ 各自独立相加。这是&quot;概率可以互相抵消&quot;的根本原因。点与点的加法没有抵消一说，但矩阵的加法有。</p>
+<p>$
+z_1 + z_2 = (x_1 I + y_1 J) + (x_2 I + y_2 J) = (x_1 + x_2) I + (y_1 + y_2) J
+$</p>
+<p>其模平方为：</p>
+<p>$
+\begin{aligned}
+|z_1 + z_2|^2 &= (x_1 + x_2)^2 + (y_1 + y_2)^2 \\
+&= x_1^2 + 2x_1x_2 + x_2^2 + y_1^2 + 2y_1y_2 + y_2^2 \\
+&= x_1^2 + y_1^2 + x_2^2 + y_2^2 + 2x_1x_2 + 2y_1y_2 \\
+&= |z_1|^2 + |z_2|^2 + 2(x_1x_2 + y_1y_2) \\
+&= p_1 + p_2 + 2(x_1x_2 + y_1y_2)
+\end{aligned}
+$</p>
+<p>对比在商集 $I = D/{\sim}$ 中的实数加法 $p_1 + p_2$，这里在复平面上的运算要灵活得多。在上式里我们看到 $p_1 + p_2$ 出现了，但最终的概率受到 $2(x_1x_2 + y_1y_2)$ 项的修正，它反映了两个复数之间的相位差夹角，使得最终的概率取值范围为：</p>
+<p>$
+|z_1|^2 - |z_1|^2 \leq |z_1 + z_2|^2 \leq |z_1|^2 + |z_1|^2
+$</p>
+<p>这反映出，尽管两个复数分别通过模平方携带了各自的概率信息，但两者做复数加法时，可能会互相抵消一部分，使得求和后对应的概率介于以上范围。于是我们把实数概率求和发展为某种可以互相抵消一部分概率的求和。</p>
+<p>现在让我们回到开头的例子，看看 $0.3 + 0.4$ 到底能等于多少。</p>
+<p>把 $p_1 = 0.3$ 和 $p_2 = 0.4$ 对应到复平面上。概率 $0.3$ 意味着我们需要的复数模长为 $\sqrt{0.3}$，概率 $0.4$ 意味着复数模长为 $\sqrt{0.4}$。但模长只定了半径，角度是自由的——正是这个角度决定了一切。</p>
+<p><strong>情况一：同相位。</strong> 取 $z_1 = \sqrt{0.3}$，$z_2 = \sqrt{0.4}$（都在正实轴上，角度差为 $0$）。则：</p>
+<p>$
+|z_1 + z_2|^2 = (\sqrt{0.3} + \sqrt{0.4})^2 = 0.3 + 0.4 + 2\sqrt{0.12}
+$</p>
+<p>竟然超过了 $1$！这是经典概率不可能出现的数——但在量子力学中，这对应的是两个通道<strong>相长干涉</strong>，概率被放大了。</p>
+<p><strong>情况二：反相位。</strong> 取 $z_1 = \sqrt{0.3}$，$z_2 = -\sqrt{0.4}$（角度差为 $\pi$，即 $180^\circ$）。则：</p>
+<p>$
+|z_1 + z_2|^2 = (\sqrt{0.3} - \sqrt{0.4})^2 = 0.3 + 0.4 - 2\sqrt{0.12}
+$</p>
+<p>几乎等于零。两个有显著概率的通道，因为相位完全相反，互相抵消殆尽——这就是双缝实验中暗条纹的来历 [1]。</p>
+<p><strong>情况三：任意相位。</strong> 如果 $z_1 = \sqrt{0.3}$，$z_2 = \sqrt{0.4}\,e^{\theta\mathrm{i}}$，则：</p>
+<p>$
+|z_1 + z_2|^2 = 0.7 + 2\sqrt{0.12}\cos\theta
+$</p>
+<p>随着 $\theta$ 从 $0$ 到 $2\pi$ 旋转，这个值在 $(\sqrt{0.3}-\sqrt{0.4})^2$ 到 $(\sqrt{0.3}+\sqrt{0.4})^2$ 之间连续变化。同一个 $0.3$ 和 $0.4$，因为相位差的不同，可以加出区间里任意一个数。</p>
+<p>经典概率只看到了 $0.7$。复数概率揭示了一个完整的可能性区间。两个等长反平行的向量相加得到零——这就是 $1+1=0$ 的几何学。</p>
+<p><img src="%E5%85%AC%E4%BC%97%E5%8F%B7%E9%85%8D%E5%9B%BE/fig2-interference.png" alt="相位干涉：同相叠加 vs 反相抵消"></p>
+<hr>
+<h2>为什么是复数？因为数是线性算子</h2>
+<p>你可能会问：二维实向量 $\mathbb R^2$ 也有方向和抵消，为什么不用 $\mathbb R^2$？</p>
+<p>因为复数比向量多一个关键的代数结构：<strong>线性算子的复合</strong>。</p>
+<p>上一节我们看到，复数作为 $I$ 和 $J$ 的线性组合，不仅支持加法，还支持矩阵乘法——而矩阵乘法就是线性算子的复合。两个复数相乘仍然是复数，封闭、可逆、有单位元 $I$。这恰好构成一个交换算子环。在量子力学里，这对应演化算子的复合：把系统先演化一步再演化一步，等价于一步复合演化。</p>
+<p>$\mathbb R^2$ 做不到。你可以定义内积、外积，但没有一个封闭的、可逆的向量乘法。这就是为什么物理学家死守 $\mathbb C$ 不放——不是他们喜欢虚数，是 $\mathbb C$ 的代数结构恰好匹配物理系统的复合律。</p>
+<p>所以复数概率的真正含义是：<strong>概率不是数，是算子。概率的加法不是数的加法，是算子的加法。</strong> 算子的和可以小于任何一个加数——这在矩阵世界里再正常不过。</p>
+<hr>
+<h2>从单位圆到整个数学图景</h2>
+<p>这一个小小的观察——概率活在单位圆盘里而不是线段上——连接了二十世纪数学和物理最深的一条线索。</p>
+<p>Gelfand 在 1943 年证明：一个紧拓扑空间上的所有连续函数，完全决定了那个空间本身。<strong>几何 = 代数。</strong> 空间和它上面的函数环是同一枚硬币的两面 [2]。</p>
+<p>这条线索直通量子力学：经典相空间由交换的函数代数刻画；量子化，就是把交换代数换成非交换的算子代数。概率，从实数值函数变成复数值算子。</p>
+<p>推到极致，Topos 量子理论揭示了交换子代数范畴 $\mathcal{V}(H)$ 编码了所有可能的&quot;经典视角&quot;，量子命题的真值在这些视角上变化，形成筛（sieve）。真值不在 $\{0,1\}$ 中，而在海廷代数 $\Gamma\Omega$ 中。Kochen-Specker 定理等价于谱预层无全局元素 [3]。这一框架回应了海德格尔的追问：&quot;什么是物？&quot;——<strong>物是在多重语境中&quot;部分存在&quot;的东西。</strong> [4]</p>
+<p>就像复数概率不在 $[0,1]$ 线段上，而在整个单位圆盘里——你看到的实数概率只是它投射到线段上的影子。经典概率论，一直在用投影工作。</p>
+<p><img src="%E5%85%AC%E4%BC%97%E5%8F%B7%E9%85%8D%E5%9B%BE/fig3-shadow-metaphor.png" alt="复数概率投射为实数概率的影子"></p>
+<p>一切从「$1 + 1$ 可以等于 $0$」这个反直觉的事实开始。</p>
+<hr>
+<p><strong>参考文献</strong></p>
+<ol>
+<li>M. Born, <em>Zur Quantenmechanik der Stoßvorgänge</em>, Zeitschrift für Physik 37, 863–867 (1926).</li>
+<li>I. M. Gelfand and M. A. Naimark, <em>On the imbedding of normed rings into the ring of operators in Hilbert space</em>, Matematicheskii Sbornik 12(2), 197–213 (1943).</li>
+<li>S. Kochen and E. P. Specker, <em>The problem of hidden variables in quantum mechanics</em>, Journal of Mathematics and Mechanics 17, 59–87 (1967).</li>
+<li>A. Döring and C. J. Isham, <em>&quot;What is a Thing?&quot;: Topos Theory in the Foundations of Physics</em>, in <em>New Structures for Physics</em> (ed. B. Coecke), Lecture Notes in Physics 813, 753–937, Springer (2011).</li>
+</ol>
+
+<script>
+renderMathInElement(document.body, {
+  delimiters: [
+    {left: '$$', right: '$$', display: true},
+    {left: '$', right: '$', display: false}
+  ],
+  throwOnError: false,
+  strict: false
+});
+</script>
+</body>
+</html>

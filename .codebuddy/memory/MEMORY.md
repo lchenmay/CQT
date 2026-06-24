@@ -66,3 +66,11 @@
 - App ID: cli_aab0372c38f99bcd, 用户: user290940, Brand: feishu
 - 个人文档: https://qcn8q2iy81an.feishu.cn/wiki/TG69wUm8liTxZLkPLjucRNU9nf4
 - Token 约2小时过期，需 lark-cli auth login 重新授权
+
+## 公众号文章 HTML 渲染注意事项
+- MathJax → SVG 渲染：`$$...$$` 多行块（含 `\begin{bmatrix}...\end{bmatrix}` 等环境）必须**完整合并**后一次性交给 MathJax 渲染，绝不能逐行拆开。
+- 正确做法：解析 Markdown 时，收集 `$$...$$` 之间的所有行，拼接成完整 LaTeX 字符串，再调用 `mathjax.tex2svg()`。
+- 错误做法：逐行 `tex2svg()` 会把矩阵/对齐等跨行环境拆散，导致渲染出黑块或错位。
+- 同样适用于 `\begin{aligned}`、`\begin{cases}`、`\begin{pmatrix}` 等所有 amsmath 跨行环境。
+- 文章文件位置：`c:\Dev\CQT\公众号文章-复数化的概率.md`（源文件），`c:\Dev\CQT\公众号文章-复数化的概率-wx.html`（微信发布版）
+- **「相关阅读」规则**：只能引用已在公众号公开发表、有公网 URL 的文章。绝不能引用 CQT 内部 LaTeX 文档（如 `/004-gelfand-theory/` 等），这些没有公网地址、没有发表过。如果没有可引用的已发表文章，直接去掉「相关阅读」板块。
