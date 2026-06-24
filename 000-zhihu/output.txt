@@ -1,0 +1,528 @@
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024) 
+ restricted system commands enabled.
+(./zhihu.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+ (c:/texlive/2024/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2024/06/29 v1.4n Standard LaTeX document class
+(c:/texlive/2024/texmf-dist/tex/latex/base/bk10.clo)) (../preamble.sty
+(c:/texlive/2024/texmf-dist/tex/latex/comment/comment.sty
+Excluding comment 'comment')
+(c:/texlive/2024/texmf-dist/tex/latex/silence/silence.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty
+(c:/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty)
+(c:/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty
+(c:/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty)))
+(c:/texlive/2024/texmf-dist/tex/latex/hyperref/hyperref.sty
+(c:/texlive/2024/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(c:/texlive/2024/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(c:/texlive/2024/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(c:/texlive/2024/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(c:/texlive/2024/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(c:/texlive/2024/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(c:/texlive/2024/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/hyperref/nameref.sty
+(c:/texlive/2024/texmf-dist/tex/latex/refcount/refcount.sty)
+(c:/texlive/2024/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(c:/texlive/2024/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(c:/texlive/2024/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(c:/texlive/2024/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(c:/texlive/2024/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/hyperref/puenc.def)
+(c:/texlive/2024/texmf-dist/tex/latex/url/url.sty)
+(c:/texlive/2024/texmf-dist/tex/generic/bitset/bitset.sty
+(c:/texlive/2024/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(c:/texlive/2024/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(c:/texlive/2024/texmf-dist/tex/latex/hyperref/hluatex.def
+(c:/texlive/2024/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(c:/texlive/2024/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(c:/texlive/2024/texmf-dist/tex/latex/fontspec/fontspec.sty
+(c:/texlive/2024/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(c:/texlive/2024/texmf-dist/tex/latex/l3kernel/expl3.sty
+(c:/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-luatex.def)))
+(c:/texlive/2024/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
+(c:/texlive/2024/texmf-dist/tex/latex/base/fontenc.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(c:/texlive/2024/texmf-dist/tex/generic/babel/babel.sty
+(c:/texlive/2024/texmf-dist/tex/generic/babel/luababel.def)
+(c:/texlive/2024/texmf-dist/tex/generic/babel/luababel.def)
+(c:/texlive/2024/texmf-dist/tex/generic/babel-english/english.ldf))
+(c:/texlive/2024/texmf-dist/tex/generic/babel/locale/en/babel-english.tex)
+(c:/texlive/2024/texmf-dist/tex/latex/sectsty/sectsty.sty
+
+LaTeX Warning: Command \underbar  has changed.
+               Check if current package is valid.
+
+
+LaTeX Warning: Command \underline  has changed.
+               Check if current package is valid.
+
+) (c:/texlive/2024/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2024/texmf-dist/tex/latex/amsmath/amstext.sty
+(c:/texlive/2024/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(c:/texlive/2024/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(c:/texlive/2024/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(c:/texlive/2024/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(c:/texlive/2024/texmf-dist/tex/latex/amscls/amsthm.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/amsmath/amscd.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/mathtools/mathtools.sty
+(c:/texlive/2024/texmf-dist/tex/latex/tools/calc.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/mathtools/mhsetup.sty))
+(c:/texlive/2024/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/titlesec/titlesec.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/quoting/quoting.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/setspace/setspace.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(c:/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(c:/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(c:/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(c:/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
+(c:/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
+(c:/texlive/2024/texmf-dist/tex/latex/graphics/trig.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(c:/texlive/2024/texmf-dist/tex/latex/graphics-def/luatex.def)))
+(c:/texlive/2024/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.co
+de.tex)) (c:/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-luatex.def
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def))
+)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+)) (c:/texlive/2024/texmf-dist/tex/latex/xcolor/xcolor.sty
+(c:/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(c:/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.te
+x)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric
+.code.tex)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.t
+ex)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.co
+de.tex)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex
+)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.te
+x)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex
+)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithm
+etics.code.tex)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex))
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.cod
+e.tex)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.te
+x)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code
+.tex)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.c
+ode.tex)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex)
+
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.co
+de.tex)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+) (c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code
+.tex)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+) (c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex)))
+ (c:/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex)
+(c:/texlive/2024/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.st
+y)
+(c:/texlive/2024/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.st
+y)) (c:/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(c:/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(c:/texlive/2024/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.co
+de.tex)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarytopaths.code.tex)))
+(c:/texlive/2024/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty
+(c:/texlive/2024/texmf-dist/tex/generic/tikz-cd/tikzlibrarycd.code.tex
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarymatrix.code.tex)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+braryquotes.code.tex)
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.cod
+e.tex)))
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarydecorations.pathmorphing.code.tex
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarydecorations.code.tex
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.t
+ex))
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydec
+orations.pathmorphing.code.tex))
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarydecorations.markings.code.tex
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydec
+orations.markings.code.tex))
+(c:/texlive/2024/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/tools/bm.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/newtx/newtxmath.sty
+`newtxmath' v1.754, 2024/09/22 Math macros based originally on txfonts (msharpe
+) (c:/texlive/2024/texmf-dist/tex/latex/base/ifthen.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(c:/texlive/2024/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(c:/texlive/2024/texmf-dist/tex/generic/xkeyval/xkvutils.tex)))
+(c:/texlive/2024/texmf-dist/tex/latex/oberdiek/centernot.sty)
+(c:/texlive/2024/texmf-dist/tex/generic/kastrup/binhex.tex)
+amsthm NOT loaded
+) (c:/texlive/2024/texmf-dist/tex/latex/nicematrix/nicematrix.sty
+(c:/texlive/2024/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/tools/array.sty))
+(c:/texlive/2024/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+(c:/texlive/2024/texmf-dist/tex/latex/adjustbox/adjcalc.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/adjustbox/trimclip.sty
+(c:/texlive/2024/texmf-dist/tex/latex/collectbox/collectbox.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/adjustbox/tc-pgf.def))
+(c:/texlive/2024/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/varwidth/varwidth.sty))
+(c:/texlive/2024/texmf-dist/tex/latex/framed/framed.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/koma-script/scrextend.sty
+(c:/texlive/2024/texmf-dist/tex/latex/koma-script/scrkbase.sty
+(c:/texlive/2024/texmf-dist/tex/latex/koma-script/scrbase.sty
+(c:/texlive/2024/texmf-dist/tex/latex/koma-script/scrlfile.sty
+(c:/texlive/2024/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+(c:/texlive/2024/texmf-dist/tex/latex/koma-script/scrlogo.sty)))))
+
+LaTeX Warning: Command \@footnotemark  has changed.
+               Check if current package is valid.
+
+) (c:/texlive/2024/texmf-dist/tex/latex/physics/physics.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/appendix/appendix.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/glossaries/base/glossaries.sty
+(c:/texlive/2024/texmf-dist/tex/latex/mfirstuc/mfirstuc.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/xfor/xfor.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/tracklang/tracklang.sty
+(c:/texlive/2024/texmf-dist/tex/generic/tracklang/tracklang.tex))
+(c:/texlive/2024/texmf-dist/tex/latex/translator/translator.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/glossaries-english/glossaries-english.ldf
+) (c:/texlive/2024/texmf-dist/tex/latex/datatool/datatool-base.sty
+(c:/texlive/2024/texmf-dist/tex/latex/substr/substr.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/datatool/datatool-fp.sty
+(c:/texlive/2024/texmf-dist/tex/latex/fp/fp.sty
+`Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
+(c:/texlive/2024/texmf-dist/tex/latex/fp/defpattern.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/fp/fp-basic.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/fp/fp-addons.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/fp/fp-snap.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/fp/fp-exp.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/fp/fp-trigo.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/fp/fp-pas.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/fp/fp-random.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/fp/fp-eqn.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/fp/fp-upn.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/fp/fp-eval.sty))))
+(c:/texlive/2024/texmf-dist/tex/latex/glossaries/styles/glossary-hypernav.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/glossaries/styles/glossary-list.sty)
+(c:/texlive/2024/texmf-dist/tex/latex/glossaries/styles/glossary-long.sty
+(c:/texlive/2024/texmf-dist/tex/latex/tools/longtable.sty))
+(c:/texlive/2024/texmf-dist/tex/latex/glossaries/styles/glossary-super.sty
+(c:/texlive/2024/texmf-dist/tex/latex/supertabular/supertabular.sty))
+(c:/texlive/2024/texmf-dist/tex/latex/glossaries/styles/glossary-tree.sty))
+(c:/texlive/2024/texmf-dist/tex/latex/base/makeidx.sty)
+Writing index file zhihu.idx
+(c:/texlive/2024/texmf-dist/tex/latex/csquotes/csquotes.sty
+(c:/texlive/2024/texmf-dist/tex/latex/csquotes/csquotes.def)
+(c:/texlive/2024/texmf-dist/tex/latex/csquotes/csquotes.cfg))
+(c:/texlive/2024/texmf-dist/tex/latex/biblatex/biblatex.sty
+(c:/texlive/2024/texmf-dist/tex/latex/logreq/logreq.sty
+(c:/texlive/2024/texmf-dist/tex/latex/logreq/logreq.def))
+(c:/texlive/2024/texmf-dist/tex/latex/biblatex/blx-dm.def)
+(c:/texlive/2024/texmf-dist/tex/latex/biblatex/blx-unicode.def)
+(c:/texlive/2024/texmf-dist/tex/latex/biblatex/blx-compat.def)
+(c:/texlive/2024/texmf-dist/tex/latex/biblatex/biblatex.def)
+(c:/texlive/2024/texmf-dist/tex/latex/biblatex/bbx/authoryear-comp.bbx
+(c:/texlive/2024/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
+(c:/texlive/2024/texmf-dist/tex/latex/biblatex/bbx/standard.bbx)))
+(c:/texlive/2024/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx)
+(c:/texlive/2024/texmf-dist/tex/latex/biblatex/biblatex.cfg)
+(c:/texlive/2024/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty)))
+(./zhihu.aux) (c:/texlive/2024/texmf-dist/tex/latex/newtx/omlnxlmi.fd)
+(c:/texlive/2024/texmf-dist/tex/latex/newtx/untxexa.fd)
+(c:/texlive/2024/texmf-dist/tex/latex/newtx/lmsntxsy.fd)
+(c:/texlive/2024/texmf-dist/tex/latex/newtx/lmxntxexx.fd)
+*geometry* driver: auto-detecting
+*geometry* detected driver: luatex
+(./zhihu.out) (./zhihu.out)
+(c:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (c:/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(c:/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(c:/texlive/2024/texmf-dist/tex/latex/biblatex/lbx/english.lbx)
+No file zhihu.bbl.
+(c:/texlive/2024/texmf-dist/tex/latex/lm/ot1lmr.fd)
+(c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(c:/texlive/2024/texmf-dist/tex/latex/newtx/untxmia.fd)
+(c:/texlive/2024/texmf-dist/tex/latex/newtx/untxsym.fd)
+(c:/texlive/2024/texmf-dist/tex/latex/newtx/untxsyc.fd)
+[1{c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+[2] (./zhihu.toc)
+[3]
+[4]
+Chapter 1.
+
+Overfull \hbox (533.01242pt too wide) in paragraph at lines 54--55
+[]\TU/NotoSerifSC-Regular.ttf(2)/m/n/9.5 本讲是为后面在微分流形上
+引入余切空间和切空间做技术准备。主要的技术是方向导数
+。由于微分流形不同于欧氏空间，我们无法直接定义导数，
+需要借助函数和参数曲线的复合映射来实现微分运算。 
+
+Overfull \hbox (0.56525pt too wide) in paragraph at lines 56--57
+\U/ntxsym/m/n/9.5 R \LMS/ntxsy/m/n/9.5 ! \OML/nxlmi/m/it/9.5 M$ \TU/NotoSerifSC
+-Regular.ttf(2)/m/n/9.5 则提供了对流形进行「探测」的手段。通
+过函数与参数曲线的复合 $\OML/nxlmi/m/it/9.5 f \LMS/ntxsy/m/n/9.5 ^^N
+
+
+Overfull \hbox (16.74365pt too wide) in paragraph at lines 56--57
+\OML/nxlmi/m/it/9.5  \OT1/NotoSerifSC-Regular.ttf(0)/m/n/9.5 : \U/ntxsym/m/n/9
+.5 R \LMS/ntxsy/m/n/9.5 ! \U/ntxsym/m/n/9.5 R$\TU/NotoSerifSC-Regular.ttf(2)/m/
+n/9.5 ，我们将问题拉回到熟悉的实数域，从而可以在流形上
+定义方向导数。 
+
+Overfull \hbox (257.51242pt too wide) in paragraph at lines 68--69
+[]\TU/NotoSerifSC-Regular.ttf(2)/b/n/9.5 函数芽\TU/NotoSerifSC-Regular.ttf(2
+)/m/n/9.5 ：局部化等价。对函数芽求方向导数，引出余切空
+间。利用参数曲线构造复合映射，对参数求复合导数，类似
+方向导数的运算。 
+
+Overfull \hbox (770.51242pt too wide) in paragraph at lines 70--71
+[]\TU/NotoSerifSC-Regular.ttf(2)/m/n/9.5 我们的注意力只在函数在无
+限接近一点时的性质，是一种局部化的处理。在谈论一点附
+近的函数性质时，用函数芽代替函数。函数芽的集合上可以
+定义加法和数乘运算，构造线性空间的结构。这里的加法和
+数乘相当于函数上相同运算后的等价化（局部化）。 
+
+Overfull \hbox (115.01242pt too wide) in paragraph at lines 72--73
+[]\TU/NotoSerifSC-Regular.ttf(2)/m/n/9.5 进一步考察方向导数构造的
+某种映射的核，可以验证它构成一个线性子空间，从而可以
+构造商空间。 
+
+[1]
+Overfull \hbox (10.51242pt too wide) in paragraph at lines 84--85
+[]\TU/NotoSerifSC-Regular.ttf(2)/m/n/9.5 切空间是余切空间的对偶空
+间，切向量是余切向量的对偶向量。在微分流形
+
+Overfull \hbox (74.08955pt too wide) in paragraph at lines 84--85
+\OML/nxlmi/m/it/9.5 M$ \TU/NotoSerifSC-Regular.ttf(2)/m/n/9.5 的一点 $\OML/n
+xlmi/m/it/9.5 p$ \TU/NotoSerifSC-Regular.ttf(2)/m/n/9.5 处，余切空间 $\OM
+L/nxlmi/m/it/9.5 T[]M$ \TU/NotoSerifSC-Regular.ttf(2)/m/n/9.5 由函数芽的
+微分构成，而切空间 $\OML/nxlmi/m/it/9.5 T[]M$ \TU/NotoSerifSC-Regular.
+ttf(2)/m/n/9.5 则定义为余切空间的对偶： 
+
+Overfull \hbox (21.89255pt too wide) in paragraph at lines 93--93
+|[]\TU/NotoSerifSC-Regular.ttf(2)/b/n/13.68002 MP󰀱󰀹：拓扑加油站(
+󰀱)：道路连通、同伦、基本群| 
+
+Overfull \hbox (238.51242pt too wide) in paragraph at lines 98--99
+[]\TU/NotoSerifSC-Regular.ttf(2)/m/n/9.5 从连通性开始，不连通的拓
+扑空间可以通过连通分支分解，每个分支的开集组合仍保持
+开集性质。道路连通是比连通更强的条件。 
+
+Overfull \hbox (95.53085pt too wide) in paragraph at lines 100--101
+\LMS/ntxsy/m/n/9.5 »\OT1/NotoSerifSC-Regular.ttf(0)/m/n/9.5 0\OML/nxlmi/m/it/9
+.5 ; \OT1/NotoSerifSC-Regular.ttf(0)/m/n/9.5 1\LMS/ntxsy/m/n/9.5 ¼ ! \OML/nxlm
+i/m/it/9.5 Y$\TU/NotoSerifSC-Regular.ttf(2)/m/n/9.5 ，满足 $\OML/nxlmi/m/it/
+9.5 H\LMS/ntxsy/m/n/9.5 ¹\OML/nxlmi/m/it/9.5 x; \OT1/NotoSerifSC-Regular.ttf(0
+)/m/n/9.5 0\LMS/ntxsy/m/n/9.5 º \U/ntxmia/m/it/9.5 = \OML/nxlmi/m/it/9.5 f\LMS
+/ntxsy/m/n/9.5 ¹\OML/nxlmi/m/it/9.5 x\LMS/ntxsy/m/n/9.5 º$\TU/NotoSerifSC-Reg
+ular.ttf(2)/m/n/9.5 ，$\OML/nxlmi/m/it/9.5 H\LMS/ntxsy/m/n/9.5 ¹\OML/nxlmi/m/
+it/9.5 x; \OT1/NotoSerifSC-Regular.ttf(0)/m/n/9.5 1\LMS/ntxsy/m/n/9.5 º \U/ntx
+mia/m/it/9.5 = \OML/nxlmi/m/it/9.5 g\LMS/ntxsy/m/n/9.5 ¹\OML/nxlmi/m/it/9.5 x\
+LMS/ntxsy/m/n/9.5 º$\TU/NotoSerifSC-Regular.ttf(2)/m/n/9.5 。道路同伦则
+要求基点保持不动。同伦是等价关系。 
+
+Overfull \hbox (393.71947pt too wide) in paragraph at lines 102--103
+[]\TU/NotoSerifSC-Regular.ttf(2)/b/n/9.5 基本群 $\OML/nxlmi/m/it/9.5 ^^Y[]\L
+MS/ntxsy/m/n/9.5 ¹\OML/nxlmi/m/it/9.5 X; x[]\LMS/ntxsy/m/n/9.5 º$\TU/NotoSeri
+fSC-Regular.ttf(2)/m/n/9.5 ：以 $\OML/nxlmi/m/it/9.5 x[]$ \TU/NotoSerifSC-Reg
+ular.ttf(2)/m/n/9.5 为基点的道路同伦等价类构成的群。基本群
+是一个拓扑不变量，用于描述拓扑空间的「洞」的数量。在
+同伦意义下，基本群在同伦等价下不变。 
+
+[2]
+Chapter 2.
+
+Overfull \hbox (266.00804pt too wide) in paragraph at lines 117--118
+[]\TU/NotoSerifSC-Regular.ttf(2)/b/n/9.5 单形\TU/NotoSerifSC-Regular.ttf(2)/m
+/n/9.5 （simplex）：$\OML/nxlmi/m/it/9.5 q$ \TU/NotoSerifSC-Regular.ttf(2)/m
+/n/9.5 维标准单形 $\U/ntxmia/m/it/9.5 ^^A[]$ \TU/NotoSerifSC-Regular.ttf(2
+)/m/n/9.5 是 $\U/ntxsym/m/n/9.5 R[]$ \TU/NotoSerifSC-Regular.ttf(2)/m/n/9.5 
+中 $\OML/nxlmi/m/it/9.5 q \LMS/ntxsy/m/n/9.5 Ï \OT1/NotoSerifSC-Regular.ttf(0
+)/m/n/9.5 1$ \TU/NotoSerifSC-Regular.ttf(2)/m/n/9.5 个有序点围成的凸
+集。󰀰维单形是点，󰀱维单形是线段，󰀲维单形是三角形
+，以此类推。 
+
+Overfull \hbox (21.89255pt too wide) in paragraph at lines 128--128
+|[]\TU/NotoSerifSC-Regular.ttf(2)/b/n/13.68002 MP󰀲󰀱：代数加油站(
+󰀱)：同态的像与核、闭与恰当| 
+
+[3]
+Overfull \hbox (18.74463pt too wide) in paragraph at lines 145--146
+[]\TU/NotoSerifSC-Regular.ttf(2)/b/n/9.5 闭链群\TU/NotoSerifSC-Regular.ttf(2
+)/m/n/9.5 ：$\OML/nxlmi/m/it/9.5 Z[] \U/ntxmia/m/it/9.5 = [] \OML/nxlmi/m/it/9
+.5 @[]$\TU/NotoSerifSC-Regular.ttf(2)/m/n/9.5 （闭链）；\TU/NotoSerifSC-Re
+gular.ttf(2)/b/n/9.5 边缘链群\TU/NotoSerifSC-Regular.ttf(2)/m/n/9.5 ：$\OM
+L/nxlmi/m/it/9.5 B[] \U/ntxmia/m/it/9.5 = [] \OML/nxlmi/m/it/9.5 @[]$\TU/NotoSe
+rifSC-Regular.ttf(2)/m/n/9.5 （边缘链）；\TU/NotoSerifSC-Regular.ttf(2)/b
+/n/9.5 恰当\TU/NotoSerifSC-Regular.ttf(2)/m/n/9.5 ：当
+
+Overfull \hbox (14.74138pt too wide) in paragraph at lines 157--158
+[]\TU/NotoSerifSC-Regular.ttf(2)/m/n/9.5 复形 $\OML/nxlmi/m/it/9.5 K$ \TU/Not
+oSerifSC-Regular.ttf(2)/m/n/9.5 上所有 $\OML/nxlmi/m/it/9.5 q$ \TU/NotoSerif
+SC-Regular.ttf(2)/m/n/9.5 维（定向）单形的集合记为 $\OML/nxlmi/m/it
+/9.5 T[]\LMS/ntxsy/m/n/9.5 ¹\OML/nxlmi/m/it/9.5 K\LMS/ntxsy/m/n/9.5 º$\TU/Not
+oSerifSC-Regular.ttf(2)/m/n/9.5 ，用整数加群自由生成链群
+
+Overfull \hbox (96.01242pt too wide) in paragraph at lines 166--167
+[]\TU/NotoSerifSC-Regular.ttf(2)/m/n/9.5 同调群描述了复形中「不能
+被边界填满的洞」的代数结构，是代数拓扑中最重要的不变
+量之一。 
+
+[4]
+Chapter 3.
+
+Overfull \hbox (276.51242pt too wide) in paragraph at lines 179--180
+[]\TU/NotoSerifSC-Regular.ttf(2)/m/n/9.5 进一步往后学习微分几何，
+需要对外微分形式有扎实的理解。从代数角度初步引入张量
+的概念，以便将来从张量的角度更好地理解外微分。 
+
+Overfull \hbox (126.81143pt too wide) in paragraph at lines 181--182
+[]\TU/NotoSerifSC-Regular.ttf(2)/b/n/9.5 初识张量\TU/NotoSerifSC-Regular.tt
+f(2)/m/n/9.5 ：一个平凡的例子——金额可以视为一维线性空
+间，元角分这些单位实际上是空间上的基：󰀱元
+
+Overfull \hbox (94.31877pt too wide) in paragraph at lines 181--182
+\TU/NotoSerifSC-Regular.ttf(2)/m/n/9.5 = 󰀱󰀰󰀰分。这个例子揭示
+了张量的本质：物理量在不同基（单位）下的表示，遵循确
+定的变换规则。 
+
+Overfull \hbox (322.29604pt too wide) in paragraph at lines 183--184
+[]\TU/NotoSerifSC-Regular.ttf(2)/b/n/9.5 张量积\TU/NotoSerifSC-Regular.ttf(2
+)/m/n/9.5 ：给定两个线性空间 $\OML/nxlmi/m/it/9.5 V$ \TU/NotoSerifSC-R
+egular.ttf(2)/m/n/9.5 和 $\OML/nxlmi/m/it/9.5 W$\TU/NotoSerifSC-Regular.ttf(2)
+/m/n/9.5 ，它们的张量积 $\OML/nxlmi/m/it/9.5 V \LMS/ntxsy/m/n/9.5 
+ \OML/nxlmi/m/it/9.5 W$ \TU/NotoSerifSC-Regular.ttf(2)/m/n/9.5 是满足泛性
+质的双线性映射的靶空间。对偶、逆变与协变的概念自然地
+融入张量积的框架中。 
+
+Overfull \hbox (182.09659pt too wide) in paragraph at lines 185--186
+[]\TU/NotoSerifSC-Regular.ttf(2)/b/n/9.5 张量丛\TU/NotoSerifSC-Regular.ttf(2
+)/m/n/9.5 ：在微分流形上，每一点 $\OML/nxlmi/m/it/9.5 p \LMS/ntxsy/m
+/n/9.5 2 \OML/nxlmi/m/it/9.5 M$ \TU/NotoSerifSC-Regular.ttf(2)/m/n/9.5 处有
+切空间 $\OML/nxlmi/m/it/9.5 T[]M$ \TU/NotoSerifSC-Regular.ttf(2)/m/n/9.5 
+和余切空间 $\OML/nxlmi/m/it/9.5 T[]M$\TU/NotoSerifSC-Regular.ttf(2)/m/n/9.
+5 ，它们的张量积构造了各种类型的张量丛，如
+
+Overfull \hbox (34.91794pt too wide) in paragraph at lines 195--196
+[]\TU/NotoSerifSC-Regular.ttf(2)/m/n/9.5 外代数（Grass-mann 代数）是
+建立在向量空间上的分次代数。对于 $\OML/nxlmi/m/it/9.5 n$ \TU/No
+toSerifSC-Regular.ttf(2)/m/n/9.5 维向量空间
+
+[5]
+Overfull \hbox (36.56967pt too wide) in paragraph at lines 199--200
+[]\TU/NotoSerifSC-Regular.ttf(2)/b/n/9.5 外微分 $\OML/nxlmi/m/it/9.5 d \OT1/
+NotoSerifSC-Regular.ttf(0)/m/n/9.5 : \U/ntxmia/m/it/9.5 
+[]\LMS/ntxsy/m/n/9.5 ¹\OML/nxlmi/m/it/9.5 M\LMS/ntxsy/m/n/9.5 º ! \U/ntxmia/m
+/it/9.5 
+[]\LMS/ntxsy/m/n/9.5 ¹\OML/nxlmi/m/it/9.5 M\LMS/ntxsy/m/n/9.5 º$\TU/NotoSerif
+SC-Regular.ttf(2)/m/n/9.5 ：满足 $\OML/nxlmi/m/it/9.5 d[] \U/ntxmia/m/it/9.5
+ = \OT1/NotoSerifSC-Regular.ttf(0)/m/n/9.5 0$ \TU/NotoSerifSC-Regular.ttf(2)/m/
+n/9.5 的线性算子，是微分形式的自然推广。 
+
+Overfull \hbox (177.96794pt too wide) in paragraph at lines 204--204
+|[]\TU/NotoSerifSC-Regular.ttf(2)/b/n/13.68002 MP󰀲󰀵：力学与电磁学
+中的外微分(󰀱)：镜像、极/轴向量、叉乘、Nabla算子| 
+
+Overfull \hbox (143.51242pt too wide) in paragraph at lines 209--210
+[]\TU/NotoSerifSC-Regular.ttf(2)/m/n/9.5 结合电磁学讲解外微分的物
+理意义。通过镜像的实例，揭示向量与微分形式之间微妙的
+物理意义上的区别。 
+
+Overfull \hbox (390.51242pt too wide) in paragraph at lines 211--212
+[]\TU/NotoSerifSC-Regular.ttf(2)/b/n/9.5 极向量与轴向量\TU/NotoSerifSC-R
+egular.ttf(2)/m/n/9.5 ：在空间反射（镜像变换）下，极向量（
+如位置、速度）改变符号，轴向量（如角速度、磁场）保持
+不变。这一区别在微分形式的语言中自然地体现为
+
+Overfull \hbox (151.42592pt too wide) in paragraph at lines 213--214
+[]\TU/NotoSerifSC-Regular.ttf(2)/b/n/9.5 Nabla 算子与外微分\TU/NotoSerifS
+C-Regular.ttf(2)/m/n/9.5 ：三维欧氏空间中的梯度（grad）、旋度
+（curl）、散度（div）分别对应外微分作用于
+
+Overfull \hbox (53.72597pt too wide) in paragraph at lines 218--218
+|[]\TU/NotoSerifSC-Regular.ttf(2)/b/n/13.68002 MP󰀲󰀶：力学与电磁学
+中的外微分(󰀲)：Maxwell方程组| 
+
+[6]
+Chapter 4.
+
+Overfull \hbox (40.55952pt too wide) in paragraph at lines 242--243
+[]\TU/NotoSerifSC-Regular.ttf(2)/m/n/9.5 中学三角函数中学习过万能
+公式，即用 $\OML/nxlmi/m/it/9.5 x \U/ntxmia/m/it/9.5 = [] []$ \TU/NotoSeri
+fSC-Regular.ttf(2)/m/n/9.5 表示各种以 $\OML/nxlmi/m/it/9.5 ^^R$ \TU/NotoSe
+rifSC-Regular.ttf(2)/m/n/9.5 为变量的三角函数。 
+
+Overfull \hbox (128.99327pt too wide) in paragraph at lines 257--258
+[]\TU/NotoSerifSC-Regular.ttf(2)/m/n/9.5 Cay-ley 变换将反对称矩阵映
+射为正交矩阵，建立了李代数与李群之间的桥梁。在线性算
+子理论中，Cay-
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+[7]
+Overfull \hbox (55.75816pt too wide) in paragraph at lines 267--268
+[]\TU/NotoSerifSC-Regular.ttf(2)/m/n/9.5 同伦与同调是两种最基本的
+代数拓扑方法。取球面上的基点 $\OML/nxlmi/m/it/9.5 a \LMS/ntxsy/m/
+n/9.5 2 \OML/nxlmi/m/it/9.5 S[]$\TU/NotoSerifSC-Regular.ttf(2)/m/n/9.5 ，拓
+扑空间上的基点
+
+Overfull \hbox (100.01242pt too wide) in paragraph at lines 273--275
+\TU/NotoSerifSC-Regular.ttf(2)/m/n/9.5 建立了球面和拓扑空间基点的
+对应。类似于基本群的做法，过基点连续映射的分类引出了
+高维同伦群
+
+Overfull \hbox (112.07379pt too wide) in paragraph at lines 276--277
+[]\TU/NotoSerifSC-Regular.ttf(2)/m/n/9.5 对于 Lie 群，其同伦群具有
+特殊的代数结构，反映了 Lie 群的拓扑性质与代数性质之间
+的深刻联系。 
+
+[8]
+Chapter 5.
+
+Overfull \hbox (68.32251pt too wide) in paragraph at lines 284--284
+|[]\TU/NotoSerifSC-Regular.ttf(2)/b/n/13.68002 MP󰀱󰀰󰀷：Lorentz群表
+示论(󰀴)：Möbius群与射影线性群

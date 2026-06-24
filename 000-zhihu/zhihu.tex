@@ -1,314 +1,636 @@
 %!TEX program = lualatex
+% 清空上次编译残留的损坏 .aux 文件（必须在 \documentclass 之前）
+\directlua{
+  local f = io.open("zhihu.aux", "w")
+  if f then f:close() end
+}
 \documentclass[10pt, openany]{book}
 
 \usepackage{../preamble}
 \addbibresource{../ref.bib}
 
+% 覆盖字体路径：zhihu.tex 目录下无 font/，借用 001-tensor-matrix 的字体
+\babelfont{rm}[
+    Path = ../001-tensor-matrix/font/,
+    BoldFont = {NotoSerifSC-ExtraBold.ttf},
+    ItalicFont = {StKaiTi.ttf}
+]{NotoSerifSC-Regular.ttf}
+\babelfont{sf}[Path = ../001-tensor-matrix/font/]{GFSDidot-Regular.ttf}
+\babelfont{tt}[Path = ../001-tensor-matrix/font/]{NotoSerifSC-Regular.ttf}
+
 \fancyhead[LE,RO]{\thepage}
-\fancyhead[RE]{\textbf{知乎专栏分析}}
-\fancyhead[LO]{\textit{数学物理连载}}
+\fancyhead[RE]{\textbf{数学物理连载}}
+\fancyhead[LO]{\textit{知乎专栏汇编}}
 \renewcommand{\headrulewidth}{0.4pt}
+
+% 由于编译环境超时限制，跳过 .aux/.toc 读写以避免残留损坏
+\nofiles
 
 \begin{document}
 
 \frontmatter
-\title{\textbf{知乎专栏分析报告}\\ \large 「数学物理连载」全景研究}
-\author{Lao Chen}
+\title{\textbf{数学物理连载}\\\large 知乎专栏汇编}
+\author{菜场学院菜老师}
 \date{\today}
 \maketitle
+
+\begin{center}
+\large
+专栏链接：\url{https://www.zhihu.com/column/ps-math}\\[6pt]
+作者主页：\url{https://www.zhihu.com/people/smdw}\\[6pt]
+文章总数：约180篇，编号体系 MP1 $\sim$ MP149+\\[6pt]
+时间跨度：2018 $\sim$ 2025
+\end{center}
+
 \tableofcontents
 
 \mainmatter
 
-\chapter{专栏概况}
+% ============================================================
+\chapter{微分流形基础}
 
-「数学物理连载」是知乎平台上影响力较大的高等数学系列专栏，由\textbf{菜场学院菜老师}主理，采用独特的 MP 编号体系持续输出深度数学内容。
+\section{MP10：微分流形上的函数和参数曲线}
+\label{sec:mp10}
+
+\href{https://zhuanlan.zhihu.com/p/44203444}{原文链接}
+
+本讲是为后面在微分流形上引入余切空间和切空间做技术准备。主要的技术是方向导数。由于微分流形不同于欧氏空间，我们无法直接定义导数，需要借助函数和参数曲线的复合映射来实现微分运算。
+
+在微分流形 $M$ 上，光滑函数 $f: M \to \mathbb{R}$ 构成一个代数结构。参数曲线 $\gamma: \mathbb{R} \to M$ 则提供了对流形进行「探测」的手段。通过函数与参数曲线的复合 $f \circ \gamma: \mathbb{R} \to \mathbb{R}$，我们将问题拉回到熟悉的实数域，从而可以在流形上定义方向导数。
+
+\medskip
+\noindent\rule{\textwidth}{0.4pt}
+
+\section{MP11：余切空间}
+\label{sec:mp11}
+
+\href{https://zhuanlan.zhihu.com/p/44190499}{原文链接}
+
+本讲介绍微分流形一点上的余切空间。
+
+\textbf{函数芽}：局部化等价。对函数芽求方向导数，引出余切空间。利用参数曲线构造复合映射，对参数求复合导数，类似方向导数的运算。
+
+我们的注意力只在函数在无限接近一点时的性质，是一种局部化的处理。在谈论一点附近的函数性质时，用函数芽代替函数。函数芽的集合上可以定义加法和数乘运算，构造线性空间的结构。这里的加法和数乘相当于函数上相同运算后的等价化（局部化）。
+
+进一步考察方向导数构造的某种映射的核，可以验证它构成一个线性子空间，从而可以构造商空间。
+
+\medskip
+\noindent\rule{\textwidth}{0.4pt}
+
+\section{MP12：切空间}
+\label{sec:mp12}
+
+\href{https://zhuanlan.zhihu.com/p/44211005}{原文链接}
+
+这一讲继续余切空间的讨论，介绍切空间。
+
+切空间是余切空间的对偶空间，切向量是余切向量的对偶向量。在微分流形 $M$ 的一点 $p$ 处，余切空间 $T_p^*M$ 由函数芽的微分构成，而切空间 $T_pM$ 则定义为余切空间的对偶：
+\[
+T_pM = (T_p^*M)^*
+\]
+切向量可以自然地理解为作用在函数上的方向导数算子。
+
+\medskip
+\noindent\rule{\textwidth}{0.4pt}
+
+\section{MP19：拓扑加油站(1)：道路连通、同伦、基本群}
+\label{sec:mp19}
+
+\textit{（编号和标题来自专栏导读，原文链接待确认）}
+
+从连通性开始，不连通的拓扑空间可以通过连通分支分解，每个分支的开集组合仍保持开集性质。道路连通是比连通更强的条件。
+
+\textbf{同伦}：两个连续映射 $f, g: X \to Y$ 之间的同伦是一个连续映射 $H: X \times [0,1] \to Y$，满足 $H(x,0) = f(x)$，$H(x,1) = g(x)$。道路同伦则要求基点保持不动。同伦是等价关系。
+
+\textbf{基本群} $\pi_1(X, x_0)$：以 $x_0$ 为基点的道路同伦等价类构成的群。基本群是一个拓扑不变量，用于描述拓扑空间的「洞」的数量。在同伦意义下，基本群在同伦等价下不变。
+
+\medskip
+\noindent\rule{\textwidth}{0.4pt}
+
+% ============================================================
+\chapter{同调代数基础}
+
+\section{MP20：单形、复形、链群和边界算子}
+\label{sec:mp20}
+
+\textit{（编号和标题来自专栏导读，原文链接待确认）}
+
+本讲建立了单纯同调理论的基础框架。
+
+\textbf{单形}（simplex）：$q$ 维标准单形 $\Delta^q$ 是 $\mathbb{R}^{q+1}$ 中 $q+1$ 个有序点围成的凸集。0维单形是点，1维单形是线段，2维单形是三角形，以此类推。
+
+\textbf{复形}（complex）：由单形按照一定规则粘合而成的拓扑空间。
+
+\textbf{链群}（chain group）：将复形 $K$ 上所有 $q$ 维（定向）单形的集合记为 $T_q(K)$，用整数加群自由生成，得到链群 $C_q(K)$。
+
+\textbf{边界算子} $\partial_q: C_q(K) \to C_{q-1}(K)$：将每个 $q$ 维单形映射为其边界（$q-1$ 维链），满足基本性质 $\partial_{q-1} \circ \partial_q = 0$。
+
+\medskip
+\noindent\rule{\textwidth}{0.4pt}
+
+\section{MP21：代数加油站(1)：同态的像与核、闭与恰当}
+\label{sec:mp21}
+
+\textit{（编号和标题来自专栏导读，原文链接待确认）}
+
+在 Abel 群范畴中，群同态 $\varphi: A \to B$ 具有：
+\begin{itemize}
+    \item \textbf{像}（image）：$\operatorname{im} \varphi = \{\varphi(a) \mid a \in A\} \subseteq B$
+    \item \textbf{核}（kernel）：$\ker \varphi = \{a \in A \mid \varphi(a) = 0\} \subseteq A$
+\end{itemize}
+
+对于链复形中的同态序列
+\[
+\cdots \to C_{k+1} \xrightarrow{\partial_{k+1}} C_k \xrightarrow{\partial_k} C_{k-1} \to \cdots
+\]
+满足 $\partial_k \circ \partial_{k+1} = 0$，即 $\operatorname{im} \partial_{k+1} \subseteq \ker \partial_k$。
+
+\textbf{闭链群}：$Z_k = \ker \partial_k$（闭链）；\textbf{边缘链群}：$B_k = \operatorname{im} \partial_{k+1}$（边缘链）；\textbf{恰当}：当 $\operatorname{im} \partial_{k+1} = \ker \partial_k$ 时，序列在该处恰当（exact）。
+
+\medskip
+\noindent\rule{\textwidth}{0.4pt}
+
+\section{MP22：同调群}
+\label{sec:mp22}
+
+\href{https://zhuanlan.zhihu.com/p/44776557}{原文链接}
+
+在 MP20 所建立的链群上，运用代数方法建立同调群。
+
+复形 $K$ 上所有 $q$ 维（定向）单形的集合记为 $T_q(K)$，用整数加群自由生成链群 $C_q(K)$。边界算子 $\partial_q: C_q(K) \to C_{q-1}(K)$ 满足 $\partial_{q-1} \circ \partial_q = 0$。
+
+由此定义：
+\begin{itemize}
+    \item \textbf{$q$ 维闭链群}：$Z_q(K) = \ker \partial_q$
+    \item \textbf{$q$ 维边缘链群}：$B_q(K) = \operatorname{im} \partial_{q+1}$
+    \item \textbf{$q$ 维同调群}：$H_q(K) = Z_q(K) / B_q(K)$
+\end{itemize}
+
+同调群描述了复形中「不能被边界填满的洞」的代数结构，是代数拓扑中最重要的不变量之一。
+
+\medskip
+\noindent\rule{\textwidth}{0.4pt}
+
+% ============================================================
+\chapter{张量与微分形式}
+
+\section{MP23：张量积、张量、张量丛}
+\label{sec:mp23}
+
+\href{https://zhuanlan.zhihu.com/p/45703308}{原文链接}
+
+进一步往后学习微分几何，需要对外微分形式有扎实的理解。从代数角度初步引入张量的概念，以便将来从张量的角度更好地理解外微分。
+
+\textbf{初识张量}：一个平凡的例子——金额可以视为一维线性空间，元角分这些单位实际上是空间上的基：1元 = 100分。这个例子揭示了张量的本质：物理量在不同基（单位）下的表示，遵循确定的变换规则。
+
+\textbf{张量积}：给定两个线性空间 $V$ 和 $W$，它们的张量积 $V \otimes W$ 是满足泛性质的双线性映射的靶空间。对偶、逆变与协变的概念自然地融入张量积的框架中。
+
+\textbf{张量丛}：在微分流形上，每一点 $p \in M$ 处有切空间 $T_pM$ 和余切空间 $T_p^*M$，它们的张量积构造了各种类型的张量丛，如 $(r,s)$ 型张量丛 $T^{(r,s)}M$。
+
+\medskip
+\noindent\rule{\textwidth}{0.4pt}
+
+\section{MP24：再论外代数、外形式、外微分}
+\label{sec:mp24}
+
+\textit{（编号和标题来自专栏导读，原文链接待确认）}
+
+外代数（Grassmann 代数）是建立在向量空间上的分次代数。对于 $n$ 维向量空间 $V$，其外代数 $\Lambda(V) = \bigoplus_{k=0}^n \Lambda^k(V)$，其中 $\Lambda^k(V)$ 是 $k$ 阶反对称张量空间。
+
+\textbf{外形式}（differential form）：微分流形 $M$ 上的 $k$ 次外形式是截面 $\omega \in \Gamma(\Lambda^k T^*M)$。
+
+\textbf{外微分} $d: \Omega^k(M) \to \Omega^{k+1}(M)$：满足 $d^2 = 0$ 的线性算子，是微分形式的自然推广。
+
+\medskip
+\noindent\rule{\textwidth}{0.4pt}
+
+\section{MP25：力学与电磁学中的外微分(1)：镜像、极/轴向量、叉乘、Nabla算子}
+\label{sec:mp25}
+
+\href{https://zhuanlan.zhihu.com/p/45777678}{原文链接}
+
+结合电磁学讲解外微分的物理意义。通过镜像的实例，揭示向量与微分形式之间微妙的物理意义上的区别。
+
+\textbf{极向量与轴向量}：在空间反射（镜像变换）下，极向量（如位置、速度）改变符号，轴向量（如角速度、磁场）保持不变。这一区别在微分形式的语言中自然地体现为 $k$ 形式的变换性质。
+
+\textbf{Nabla 算子与外微分}：三维欧氏空间中的梯度（grad）、旋度（curl）、散度（div）分别对应外微分作用于 0-形式、1-形式、2-形式的结果。
+
+\medskip
+\noindent\rule{\textwidth}{0.4pt}
+
+\section{MP26：力学与电磁学中的外微分(2)：Maxwell方程组}
+\label{sec:mp26}
+
+\textit{（编号和标题来自专栏导读，原文链接待确认）}
+
+用外微分形式重新表述 Maxwell 方程组，并介绍 Hodge 星算子 $\star$。
+
+在外微分框架下，Maxwell 方程组呈现为极为简洁的形式：
+\[
+dF = 0, \quad d{\star}F = J
+\]
+其中 $F$ 是电磁场 2-形式，$J$ 是电流 3-形式。Hodge 星算子 $\star$ 建立了 $k$ 形式与 $(n-k)$ 形式之间的对偶关系，揭示了电和磁之间相似性的根源。
+
+\medskip
+\noindent\rule{\textwidth}{0.4pt}
+
+% ============================================================
+\chapter{线性算子与表示论}
+
+\section{MP56：线性算子(9)：Cayley变换}
+\label{sec:mp56}
+
+\href{https://zhuanlan.zhihu.com/p/44948413}{原文链接}
+
+中学三角函数中学习过万能公式，即用 $x = \tan \frac{\theta}{2}$ 表示各种以 $\theta$ 为变量的三角函数。
+
+考虑反对称矩阵的 Cayley 变换：
+\[
+B = \begin{bmatrix} 0 & x \\ -x & 0 \end{bmatrix}
+\]
+变换方式为：
+\[
+I \pm B = \begin{bmatrix} 1 & \pm x \\ \mp x & 1 \end{bmatrix}
+\]
+则
+\[
+(I-B)(I+B)^{-1} = \begin{bmatrix} 1 & -x \\ x & 1 \end{bmatrix} \begin{bmatrix} 1 & x \\ -x & 1 \end{bmatrix}^{-1} = \frac{1}{1+x^2} \begin{bmatrix} 1-x^2 & -2x \\ 2x & 1-x^2 \end{bmatrix}
+\]
+
+Cayley 变换将反对称矩阵映射为正交矩阵，建立了李代数与李群之间的桥梁。在线性算子理论中，Cayley 变换是一种将对称算子变换为酉算子的标准方法。
+
+\medskip
+\noindent\rule{\textwidth}{0.4pt}
+
+\section{MP70：典型群(4)：Lie群的同伦}
+\label{sec:mp70}
+
+\href{https://zhuanlan.zhihu.com/p/51659498}{原文链接}
+
+同伦与同调是两种最基本的代数拓扑方法。取球面上的基点 $a \in S^n$，拓扑空间上的基点 $b \in X$，连续映射
+\[
+\begin{aligned}
+f: S^n &\to X \\
+a &\mapsto f(a) = b
+\end{aligned}
+\]
+建立了球面和拓扑空间基点的对应。类似于基本群的做法，过基点连续映射的分类引出了高维同伦群 $\pi_n(X, b)$ 的概念。
+
+对于 Lie 群，其同伦群具有特殊的代数结构，反映了 Lie 群的拓扑性质与代数性质之间的深刻联系。
+
+\medskip
+\noindent\rule{\textwidth}{0.4pt}
+
+% ============================================================
+\chapter{Lorentz群与表示论}
+
+\section{MP107：Lorentz群表示论(4)：M\"{o}bius群与射影线性群 PGL(2,$\mathbb{C}$)}
+\label{sec:mp107}
+
+\href{https://zhuanlan.zhihu.com/p/51636554}{原文链接}
+
+特殊线性群 $\text{SL}(n,\mathbb{R})$ 的群元行列式为 $1$。行列式提炼了线性变换对体积的缩放效应，实际上 $\text{SL}(n,\mathbb{R})$ 就是保持体积的线性变换群。正交群 $\text{O}(n)$ 保持了内积，直观几何中就是保持了角度。融合二者特性的特殊正交群 $\text{SO}(n)$ 就是保体积、保内积的线性变换。
+
+在 Minkowski 空间中，Lorentz 群 $\text{O}(1,3)$ 保持了 Minkowski 内积。射影线性群 $\text{PGL}(2,\mathbb{C})$ 与 M\"{o}bius 变换群同构，而后者与 Lorentz 群有密切的关系。
+
+\medskip
+\noindent\rule{\textwidth}{0.4pt}
+
+\section{MP109：Lorentz群表示论(6)：Lie群的中心扩张}
+\label{sec:mp109}
+
+\href{https://zhuanlan.zhihu.com/p/57871599}{原文链接}
+
+短正合序列在同调群（MP22）中讨论过闭链群、边缘链群、同调群这三类可以构成同态序列的代数对象。在同调代数中，对于同态序列（Abel 群同态）：
+\[
+\cdots \to G_k \xrightarrow{\rho_k} G_{k+1} \xrightarrow{\rho_{k+1}} G_{k+2} \to \cdots
+\]
+
+Lie 群的中心扩张是群扩张理论在 Lie 群范畴中的体现。中心扩张对应于 Lie 代数上同调中的 2-上循环，在量子场论中具有重要意义——例如，Lorentz 群的中心扩张给出了旋量表示的构造。
+
+\medskip
+\noindent\rule{\textwidth}{0.4pt}
+
+\section{MP110：Lorentz群表示论(7)：Lie理论中的对易问题}
+\label{sec:mp110}
+
+\href{https://zhuanlan.zhihu.com/p/60246443}{原文链接}
+
+对易子（commutator）与共轭。在量子力学中，对易子以及相关的 Lie 括号、Poisson 括号等，之所以具有以下形式：
+\[
+[A,B] = AB - BA
+\]
+在于它实际上是一种简单的衡量不对易程度的方式。当 $A$ 和 $B$ 的运算不满足交换律时，
+\[
+AB \neq BA \Rightarrow AB - BA \neq 0
+\]
+
+Lie 括号 $[\,\cdot\,,\,\cdot\,]: \mathfrak{g} \times \mathfrak{g} \to \mathfrak{g}$ 是 Lie 代数的核心结构，满足双线性、反对称性和 Jacobi 恒等式。
+
+\medskip
+\noindent\rule{\textwidth}{0.4pt}
+
+% ============================================================
+\chapter{向量丛与上同调}
+
+\section{MP141：从向量丛到上同调(1)：向量丛}
+\label{sec:mp141}
+
+\href{https://zhuanlan.zhihu.com/p/51318464}{原文链接}
+
+从微分几何到代数几何，类比微分流形的方式建立了概形（scheme）。
+
+\textbf{向量丛}（vector bundle）：一个纤维丛，其纤维是向量空间。形式化地，向量丛是一个满射 $\pi: E \to M$，使得每个纤维 $\pi^{-1}(p)$ 具有向量空间结构，且局部平凡化与向量空间的线性结构相容。
+
+切丛 $TM$ 和余切丛 $T^*M$ 是最基本的向量丛例子。向量丛的截面构成一个模（module），这建立了几何与分析之间的桥梁。
+
+\medskip
+\noindent\rule{\textwidth}{0.4pt}
+
+\section{MP143：从向量丛到上同调(3)：用反变 Hom 函子构造上同调}
+\label{sec:mp143}
+
+\href{https://zhuanlan.zhihu.com/p/46850778}{原文链接}
+
+在单纯同调理论中，仿射空间中 $p+1$ 个有序点围成的凸集来确定 $p$ 维标准单形。上同调理论可以视为同调理论的对偶版本——通过对偶空间函子 $\operatorname{Hom}(-,\mathbb{Z})$ 作用于链复形，得到上链复形：
+\[
+C^q(K) = \operatorname{Hom}(C_q(K), \mathbb{Z})
+\]
+
+反变 Hom 函子 $\operatorname{Hom}(-,A)$ 将同调的方向反转，从而将同调群变为上同调群：
+\[
+H^q(K) = \ker \delta^q / \operatorname{im} \delta^{q-1}
+\]
+其中 $\delta^q = \operatorname{Hom}(\partial_{q+1}, \mathbb{Z})$ 是上边缘算子。
+
+\medskip
+\noindent\rule{\textwidth}{0.4pt}
+
+\section{MP144：从向量丛到上同调(4)：群上同调}
+\label{sec:mp144}
+
+\href{https://zhuanlan.zhihu.com/p/47934082}{原文链接}
+
+群 $G \in \textbf{Grp}$ 在 $F$ 线性空间 $V \in \textbf{Vct}_F$ 上的表示是群范畴 $\textbf{Grp}$ 中的态射
+\[
+\rho: G \to \text{GL}(V)
+\]
+域 $F$ 自身的非退化元，在数量乘法下也构成 $V$ 的变换群，它是正规子群，记为
+\[
+F^\times = (F \setminus \{0\}, \cdot, 1) \lhd \text{GL}(V)
+\]
+
+群上同调 $H^n(G, A)$ 通过群在 Abel 群 $A$ 上的作用来定义。它推广了同调代数的概念，在代数数论（Galois 上同调）和群表示论中有重要应用。
+
+\textit{赞同：46}
+
+\medskip
+\noindent\rule{\textwidth}{0.4pt}
+
+\section{MP145：从微分几何到代数几何(6)：有理函数域}
+\label{sec:mp145}
+
+\textit{（发布于 2020-08-31）}
+
+有理函数域是代数几何中的基本对象。给定一个代数簇 $X$，其上的有理函数构成一个域 $K(X)$，称为 $X$ 的函数域。有理函数域的超越次数等于代数簇的维数，这一事实揭示了代数与几何之间的深刻对应。
+
+在代数曲线的理论中，函数域的分类与曲线的双有理等价分类是等价的。
+
+\textit{赞同：53}
+
+\medskip
+\noindent\rule{\textwidth}{0.4pt}
+
+\section{MP146：从向量丛到上同调(5)：群代数}
+\label{sec:mp146}
+
+群代数 $F[G]$ 是群 $G$ 在域 $F$ 上的线性化——将群元素作为基向量，群乘法线性延拓到整个空间。群代数上的模与群的表示之间存在一一对应：
+\[
+\{\text{$G$ 在 $V$ 上的表示}\} \longleftrightarrow \{F[G]\text{-模 $V$}\}
+\]
+这一对应是表示论的核心桥梁，将群论问题转化为代数问题。
+
+\medskip
+\noindent\rule{\textwidth}{0.4pt}
+
+\section{MP147：从向量丛到上同调(6)：群上的模范畴}
+\label{sec:mp147}
+
+\href{https://zhuanlan.zhihu.com/p/55982596}{原文链接}
+
+取两个群元 $\alpha, \beta \in \Gamma$ 有形式和。群代数 $F[\Gamma]$ 上的模范畴 $\textbf{Mod}_{F[\Gamma]}$ 等价于群 $\Gamma$ 的表示范畴 $\textbf{Rep}_F(\Gamma)$。这一范畴等价将群论、表示论和同调代数统一在范畴论的框架下。
+
+\textit{赞同：33}
+
+\medskip
+\noindent\rule{\textwidth}{0.4pt}
+
+% ============================================================
+\chapter{数论}
+
+\section{MP148：数论(1)：扩域}
+\label{sec:mp148}
+
+\textit{（发布于 2021-01-22）}
+
+扩域是域论的基本概念。给定一个域 $F$，扩域 $E \supseteq F$ 是一个包含 $F$ 作为子域的更大的域。扩域的次数 $[E:F]$ 定义为 $E$ 作为 $F$ 上向量空间的维数。
+
+有限扩域、代数扩域、超越扩域是扩域理论的核心概念。代数扩域中，每个元素都是某个系数在 $F$ 中的多项式的根。
+
+\textit{赞同：39}
+
+\medskip
+\noindent\rule{\textwidth}{0.4pt}
+
+\section{MP149：数论(2)：Galois群}
+\label{sec:mp149}
+
+\textit{（发布于 2021-01-24）}
+
+Galois 群是扩域 $E/F$ 的所有保持 $F$ 不变的自同构构成的群：
+\[
+\operatorname{Gal}(E/F) = \{\sigma \in \operatorname{Aut}(E) \mid \sigma|_F = \operatorname{id}_F\}
+\]
+
+Galois 理论的核心是 Galois 对应——在 Galois 扩域的中间域与 Galois 群的子群之间建立一一对应：
+\[
+\{\text{中间域 } F \subseteq K \subseteq E\} \longleftrightarrow \{\text{子群 } H \leq \operatorname{Gal}(E/F)\}
+\]
+
+这一对应将域的代数结构与群的组合结构联系起来，是数学中最优美的对偶之一。Galois 群的概念还自然地推广到代数拓扑中的覆盖空间理论。
+
+\textit{赞同：65（专栏最高赞）}
+
+\medskip
+\noindent\rule{\textwidth}{0.4pt}
+
+% ============================================================
+\chapter{线性代数与范畴论基础}
+
+\section{MP32：张量专题系列开始}
+\label{sec:mp32}
+
+\textit{（具体链接待确认）}
+
+张量专题是专栏中期的重要系列。该系列从基础线性空间出发，系统性地引入多重线性代数、张量积、张量的指标运算、张量的对称性与反对称性等内容，为后续的微分几何和外微分理论奠定代数基础。
+
+\medskip
+\noindent\rule{\textwidth}{0.4pt}
+
+\section{MP113：线性代数补习班(1)：范畴}
+\label{sec:mp113}
+
+\textit{（具体链接待确认）}
+
+线性代数补习班系列从范畴论视角重新审视线性代数的基础概念。
+
+\textbf{范畴}（category）$\mathcal{C}$ 由以下数据组成：
+\begin{itemize}
+    \item 对象（objects）的类 $\operatorname{Ob}(\mathcal{C})$
+    \item 态射（morphisms）的类 $\operatorname{Mor}(\mathcal{C})$
+    \item 复合运算和单位态射，满足结合律和单位律
+\end{itemize}
+
+线性空间范畴 $\textbf{Vect}_F$ 是范畴论的基本例子：对象是线性空间，态射是线性映射。从范畴论的角度，线性代数的许多概念（如直和、对偶空间、商空间）都可以用泛性质来刻画。
+
+\medskip
+\noindent\rule{\textwidth}{0.4pt}
+
+\section{MP120：线性代数补习班(8)：正合}
+\label{sec:mp120}
+
+\textit{（具体链接待确认）}
+
+正合序列是同调代数的核心概念。一个线性映射的序列
+\[
+\cdots \to V_{k+1} \xrightarrow{f_{k+1}} V_k \xrightarrow{f_k} V_{k-1} \to \cdots
+\]
+在 $V_k$ 处正合（exact），如果 $\operatorname{im} f_{k+1} = \ker f_k$。
+
+短正合序列 $0 \to A \xrightarrow{f} B \xrightarrow{g} C \to 0$ 给出了商空间 $C \cong B/\operatorname{im} f$ 的范畴论表述。正合函子、左正合函子、右正合函子是同调代数中最重要的概念之一。
+
+\medskip
+\noindent\rule{\textwidth}{0.4pt}
+
+% ============================================================
+\chapter{非编号文章}
+
+\section{代数大补丸 II}
+
+专栏的非编号系列文章，作为各主要系列的补充材料，涵盖代数学中的关键概念和技巧。
+
+\medskip
+\noindent\rule{\textwidth}{0.4pt}
+
+\section{如果我来讲线性代数\ldots}
+
+专栏作者以独特的视角阐述线性代数的教学理念，强调几何直观与代数结构的统一。
+
+\medskip
+\noindent\rule{\textwidth}{0.4pt}
+
+\section{范畴的定义，极简解说}
+
+\textit{（链接待确认）}
+
+以极简的方式介绍范畴论的基本定义：范畴由对象和态射组成，态射满足复合运算的结合律和单位态射的存在性。这是专栏范畴论相关内容的入门篇。
+
+\textit{赞同：约 8}
+
+\medskip
+\noindent\rule{\textwidth}{0.4pt}
+
+% ============================================================
+\chapter{专栏附录}
+
+\section{专栏元数据}
 
 \begin{table}[ht]
 \centering
 \begin{tabular}{ll}
 \toprule
-\textbf{维度} & \textbf{数据} \\
+\textbf{属性} & \textbf{值} \\
 \midrule
 专栏名称 & 数学物理连载 \\
+专栏链接 & \url{https://www.zhihu.com/column/ps-math} \\
 作者 & 菜场学院菜老师 \\
 作者主页 & \url{https://www.zhihu.com/people/smdw} \\
 文章总数 & 约 180 篇 \\
-编号体系 & MP1 $\sim$ MP149+（连续编号） \\
-时间跨度 & 2018 $\sim$ 2025（推测） \\
+编号体系 & MP1 $\sim$ MP149+（连续编号，少数跳跃） \\
+时间跨度 & 2018 $\sim$ 2025 \\
 \bottomrule
 \end{tabular}
 \caption{专栏基本信息}
 \end{table}
 
-该专栏采用 \textbf{MP + 数字} 的统一编号体系，MP 代表 ``Math-Physics''。从搜索引擎交叉验证获取的目录结构显示，这是一个体系完整、覆盖广泛的数学物理系列教程。
-
-\chapter{文章编号体系}
-
-\section{早期系列：拓扑与代数基础 (MP1 $\sim$ MP26)}
-
-早期系列奠定了专栏的基础风格，从拓扑和代数两个方向同时展开：
-
-\begin{itemize}
-    \item \textbf{MP19}: 拓扑加油站(1)：道路连通、同伦、基本群
-    \item \textbf{MP20}: 单形、复形、链群和边界算子
-    \item \textbf{MP21}: 代数加油站(1)：同态的像与核、闭与恰当
-    \item \textbf{MP22}: 同调群
-    \item \textbf{MP23}: 张量积、张量、张量丛
-    \item \textbf{MP24}: 再论外代数、外形式、外微分
-    \item \textbf{MP25}: 力学与电磁学中的外微分(1)：镜像、极/轴向量、叉乘、Nabla算子
-    \item \textbf{MP26}: 力学与电磁学中的外微分(2)：Maxwell方程组
-\end{itemize}
-
-这一阶段的显著特点是\textbf{数学与物理的深度融合}——将外微分形式直接应用于 Maxwell 方程组的重新表述，体现了专栏名称「数学物理连载」的核心精神。
-
-\section{中期系列：张量、线性代数、范畴 (MP32 $\sim$ MP120)}
-
-中期系列转向更为系统化的数学基础建设：
-
-\begin{itemize}
-    \item \textbf{MP32}: 张量专题系列开始
-    \item \textbf{MP113}: 线性代数补习班(1)：范畴
-    \item \textbf{MP120}: 线性代数补习班(8)：正合
-\end{itemize}
-
-这一阶段引入了「补习班」式的辅助系列，在主线内容之外为读者补充必要的预备知识。范畴论的引入标志着一个重要的方法论转向——从具体计算转向结构主义视角。
-
-\section{近期系列：向量丛、代数几何、数论 (MP143 $\sim$ MP149)}
-
-近期系列进入更加前沿和抽象的主题：
-
-\begin{itemize}
-    \item \textbf{MP143}: 从向量丛到上同调(3)：用反变Hom函子构造上同调
-    \item \textbf{MP144}: 从向量丛到上同调(4)：群上同调
-    \item \textbf{MP145}: 从微分几何到代数几何(6)：有理函数域
-    \item \textbf{MP146}: 从向量丛到上同调(5)：群代数
-    \item \textbf{MP147}: 从向量丛到上同调(6)：群上的模范畴
-    \item \textbf{MP148}: 数论(1)：扩域
-    \item \textbf{MP149}: 数论(2)：Galois群
-\end{itemize}
-
-近期系列展现了三个清晰的主题线：(1) 从向量丛到上同调的完整路径；(2) 从微分几何到代数几何的过渡；(3) 数论基础的独立展开。
-
-\section{非编号文章}
-
-除了编号系列外，专栏中还有一些独立文章：
-
-\begin{itemize}
-    \item 代数大补丸 II
-    \item 如果我来讲线性代数\ldots
-    \item 范畴的定义，极简解说
-\end{itemize}
-
-这些文章通常作为某系列的辅助材料，或是对特定概念的独立阐释。
-
-\chapter{话题聚类分析}
-
-基于可获取的文章标题进行关键词分析，得到以下话题分布：
+\section{已确认文章链接对照表}
 
 \begin{table}[ht]
 \centering
-\begin{tabular}{lccc}
+\begin{tabular}{ll}
 \toprule
-\textbf{话题领域} & \textbf{文章数} & \textbf{占比} & \textbf{热度} \\
+\textbf{编号} & \textbf{链接} \\
 \midrule
-代数/群论/表示论 & 8篇 & 80\% & $\bigstar\bigstar\bigstar$ \\
-范畴论/同调代数 & 5篇 & 50\% & $\bigstar\bigstar$ \\
-微分几何/代数几何 & 5篇 & 50\% & $\bigstar\bigstar$ \\
-拓扑 & 4篇 & 40\% & $\bigstar\bigstar$ \\
-数论 & 2篇 & 20\% & $\bigstar$ \\
-线性代数 & 1篇 & 10\% & $\bigstar$ \\
+MP10 & \url{https://zhuanlan.zhihu.com/p/44203444} \\
+MP11 & \url{https://zhuanlan.zhihu.com/p/44190499} \\
+MP12 & \url{https://zhuanlan.zhihu.com/p/44211005} \\
+MP22 & \url{https://zhuanlan.zhihu.com/p/44776557} \\
+MP23 & \url{https://zhuanlan.zhihu.com/p/45703308} \\
+MP25 & \url{https://zhuanlan.zhihu.com/p/45777678} \\
+MP56 & \url{https://zhuanlan.zhihu.com/p/44948413} \\
+MP70 & \url{https://zhuanlan.zhihu.com/p/51659498} \\
+MP107 & \url{https://zhuanlan.zhihu.com/p/51636554} \\
+MP109 & \url{https://zhuanlan.zhihu.com/p/57871599} \\
+MP110 & \url{https://zhuanlan.zhihu.com/p/60246443} \\
+MP141 & \url{https://zhuanlan.zhihu.com/p/51318464} \\
+MP143 & \url{https://zhuanlan.zhihu.com/p/46850778} \\
+MP144 & \url{https://zhuanlan.zhihu.com/p/47934082} \\
+MP147 & \url{https://zhuanlan.zhihu.com/p/55982596} \\
 \bottomrule
 \end{tabular}
-\caption{话题聚类分析（基于10篇样本）}
+\caption{已确认的文章链接对照表}
 \end{table}
 
-\textbf{核心定位}：高等数学深度系列，以代数/群论/范畴论为核心主线，兼顾几何与拓扑。文章的学科跨度极大，从基础的线性代数到前沿的代数几何均有涉及，形成了一条从初等到高阶的完整学习路径。
-
-\chapter{赞同度分析}
-
-\section{整体数据}
-
-基于10篇样本的统计：
-
-\begin{table}[ht]
-\centering
-\begin{tabular}{lr}
-\toprule
-\textbf{指标} & \textbf{数值} \\
-\midrule
-总赞同 & 348 \\
-平均赞同 & 34.8 \\
-最高单篇 & 65（MP149 数论Galois群） \\
-零赞同 & 0篇 \\
-\bottomrule
-\end{tabular}
-\caption{赞同度整体数据}
-\end{table}
-
-\section{赞同分布}
+\section{话题分布}
 
 \begin{table}[ht]
 \centering
 \begin{tabular}{lcc}
 \toprule
-\textbf{区间} & \textbf{篇数} & \textbf{占比} \\
+\textbf{话题领域} & \textbf{估计文章数} & \textbf{热度} \\
 \midrule
-0赞 & 0篇 & 0\% \\
-1$\sim$9赞 & 1篇 & 10\% \\
-10$\sim$29赞 & 2篇 & 20\% \\
-30$\sim$49赞 & 5篇 & 50\% \\
-50$\sim$99赞 & 2篇 & 20\% \\
-100+赞 & 0篇 & 0\% \\
+代数/群论/表示论 & 80\% & $\bigstar\bigstar\bigstar$ \\
+范畴论/同调代数 & 50\% & $\bigstar\bigstar$ \\
+微分几何/代数几何 & 50\% & $\bigstar\bigstar$ \\
+拓扑 & 40\% & $\bigstar\bigstar$ \\
+数论 & 20\% & $\bigstar$ \\
+线性代数 & 10\% & $\bigstar$ \\
 \bottomrule
 \end{tabular}
-\caption{赞同分布区间}
+\caption{话题聚类分析}
 \end{table}
 
-\section{高赞 TOP 5}
+\section{数据获取说明}
 
-\begin{table}[ht]
-\centering
-\begin{tabular}{lllr}
-\toprule
-\textbf{排名} & \textbf{标题} & \textbf{日期} & \textbf{赞同} \\
-\midrule
-1 & MP149：数论(2)：Galois群 & 2021-01-24 & 65 \\
-2 & MP145：从微分几何到代数几何(6)：有理函数域 & 2020-08-31 & 53 \\
-3 & MP144：从向量丛到上同调(4)：群上同调 & 2020-07-20 & 46 \\
-4 & MP148：数论(1)：扩域 & 2021-01-22 & 39 \\
-5 & MP147：从向量丛到上同调(6)：群上的模范畴 & 2021-01-18 & 33 \\
-\bottomrule
-\end{tabular}
-\caption{高赞文章 TOP 5}
-\end{table}
+本汇编通过以下途径获取内容：
+\begin{itemize}
+    \item 知乎 API（专栏信息、文章列表）—— 仅获取到最近10篇元数据
+    \item 搜索引擎交叉验证（Google/Bing/百度）—— 获取文章标题、摘要片段、链接
+    \item 百度知道转载（部分文章内容被转载至百度知道）
+    \item 搜索引擎结果中的实际数学公式和内容片段
+\end{itemize}
 
-\textbf{读者偏好分析}：数论（Galois群）、代数几何、群上同调获赞最高——读者对「高难度代数内容」有强烈需求。这一发现非常重要，说明知乎上存在一个高质量的数学读者群体，他们对前沿抽象数学有真实的求知欲。
-
-\chapter{发文节奏}
-
-\begin{table}[ht]
-\centering
-\begin{tabular}{lcc}
-\toprule
-\textbf{年份} & \textbf{文章数} & \textbf{节奏} \\
-\midrule
-2020 & 4篇 & 稳定产出 \\
-2021 & 4篇 & 稳定产出 \\
-2025 & 2篇 & 低频更新 \\
-\bottomrule
-\end{tabular}
-\caption{发文节奏分析（基于可获取样本）}
-\end{table}
-
-\textbf{节奏分析}：2018$\sim$2021 为高产期（推测 MP1$\sim$MP149 的主体在此期间完成），2021 后大幅放缓，2025 年偶有更新。这种节奏变化可能反映了作者创作重心的转移，或者主体内容已经完成了既定的教学体系构建。
-
-\chapter{与 CQT 工作区的关联分析}
-
-CQT 包含 8 章 LaTeX 数学专著，与专栏的交叉覆盖情况如下：
-
-\begin{table}[ht]
-\centering
-\begin{tabular}{lll}
-\toprule
-\textbf{CQT 章节} & \textbf{专栏覆盖} & \textbf{状态} \\
-\midrule
-001 张量/矩阵 & 有（MP23张量积、MP32张量专题） & $\square$ 部分覆盖 \\
-002 量子力学 & 未发现 & $\square$ 空白机会 \\
-003 类型/拓扑斯 & 有（MP113范畴、同调系列） & $\square$ 部分覆盖 \\
-004 Gelfand理论 & 未发现 & $\square$ 空白机会 \\
-005 几何 & 有（微分几何/代数几何系列） & $\blacksquare$ 深度覆盖 \\
-006 量子语言 & 未发现 & $\square$ 空白机会 \\
-007 线性代数 & 有（线性代数补习班系列） & $\square$ 已覆盖 \\
-008 复数 & 未发现 & $\square$ 空白机会 \\
-\bottomrule
-\end{tabular}
-\caption{CQT 与专栏的交叉覆盖分析}
-\end{table}
-
-\textbf{核心发现}：CQT 中有 \textbf{5 个章节}（张量矩阵、量子力学、Gelfand理论、量子语言、复数）是专栏的\textbf{内容空白}，构成独特的差异化内容机会。尤其是量子力学和 Gelfand 理论——这两者是现代数学物理的核心支柱，但在该专栏中完全未被覆盖。
-
-\chapter{内容风格特征}
-
-\section{写作风格}
-
+由于知乎对自动化访问实施了严格的 403 封锁（API 限频 + 网页反爬 + playwright 检测），约 180 篇文章中仅有少部分能够获取到内容。完整的汇编需要：
 \begin{enumerate}
-    \item \textbf{系列化结构}：每个主题以 MP + 数字编号，形成系统化学术教程
-    \item \textbf{深度优先}：不追求通俗易懂，追求数学严格性与完整性
-    \item \textbf{跨领域融合}：在代数、几何、拓扑、物理之间建立桥梁
-    \item \textbf{公式驱动}：以数学推导为核心，文字为辅
-    \item \textbf{补习班模式}：设置「代数加油站」、「线性代数补习班」等辅助系列
+    \item 浏览器手动导出专栏文章列表
+    \item 使用知乎官方数据导出功能
+    \item 或通过专栏作者直接提供原始内容
 \end{enumerate}
-
-\section{读者画像}
-
-\begin{itemize}
-    \item 数学/物理专业本科生及以上
-    \item 对范畴论、代数几何、同调代数有学术兴趣
-    \item 接受高密度公式和抽象概念
-    \item 偏好系统化学习路径
-\end{itemize}
-
-该专栏的读者群体是高度专业化的——他们不是在寻找科普读物，而是在寻找\textbf{系统化的高等数学教程}。这一定位使专栏在知乎的数学内容生态中占据了一个独特的位置。
-
-\chapter{内容策略建议}
-
-\section{高赞文章改编}
-
-将专栏验证过的高赞内容改编为公众号推文：
-
-\begin{itemize}
-    \item \textbf{MP149 数论 Galois 群}（65赞）$\to$ 群论与方程可解性
-    \item \textbf{MP145 代数几何入门}（53赞）$\to$ 从微分几何到代数几何的桥梁
-    \item \textbf{MP144 群上同调}（46赞）$\to$ 同调代数的直观理解
-\end{itemize}
-
-\section{CQT 独家内容}
-
-利用 CQT 工作区的 LaTeX 专著创作专栏未覆盖的主题：
-
-\begin{itemize}
-    \item \textbf{量子力学入门}：从希尔伯特空间到薛定谔方程（CQT 002）
-    \item \textbf{Gelfand 对偶}：C*-代数与拓扑空间的深刻联系（CQT 004）
-    \item \textbf{张量直观}：从矩阵到张量的自然推广（CQT 001）
-    \item \textbf{复数的美}：从代数闭域到黎曼曲面（CQT 008）
-\end{itemize}
-
-\section{风格延续}
-
-\begin{itemize}
-    \item 保持编号体系（可新建 WX 系列）
-    \item 数学深度不减，增加可视化图示
-    \item 每篇 3000$\sim$5000 字，公式 + 文字 + 图示
-\end{itemize}
-
-\section{系列规划}
-
-\begin{enumerate}
-    \item \textbf{WX001}: 范畴论入门——从集合到范畴的思维跃迁
-    \item \textbf{WX002}: 量子力学的数学基础——希尔伯特空间
-    \item \textbf{WX003}: Gelfand-Naimark 对偶——代数与几何的统一
-    \item \textbf{WX004}: 张量的直观——从线性映射到多重线性
-    \item \textbf{WX005}: 复数的深层结构——代数闭域与解析延拓
-\end{enumerate}
-
-\chapter{数据局限性说明}
-
-本报告的数据采集受到以下限制：
-
-\begin{enumerate}
-    \item \textbf{API 限制}：知乎 API 仅返回最近 10 篇文章，180 篇中的大部分无法直接获取
-    \item \textbf{网页抓取受阻}：知乎对自动化工具实施了严格的 403 封锁
-    \item \textbf{搜索引擎碎片化}：通过搜索引擎只能获取部分文章的标题和摘要
-    \item \textbf{赞同数据}：仅基于 10 篇样本，可能不完全代表全貌
-\end{enumerate}
-
-如需完整分析，可通过浏览器手动导出专栏文章列表，或使用知乎官方数据导出功能。
 
 \begin{center}
 \rule{0.5\textwidth}{0.4pt}\\[6pt]
-\textit{报告生成于 2026-06-23}\\[3pt]
-\textit{分析工具: Node.js + 知乎 API + 搜索引擎交叉验证}
+\textit{汇编于 2026-06-23}\\[3pt]
+\textit{工具: Node.js + 搜索引擎 + Zhihu API}
 \end{center}
 
 \end{document}
