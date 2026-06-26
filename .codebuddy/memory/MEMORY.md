@@ -67,6 +67,20 @@
 - 个人文档: https://qcn8q2iy81an.feishu.cn/wiki/TG69wUm8liTxZLkPLjucRNU9nf4
 - Token 约2小时过期，需 lark-cli auth login 重新授权
 
+## arXiv 重点论文追踪
+
+### 2606.24621 — Infinitesimal Causality (Sridhar Mahadevan, 2026-06-23)
+- **链接**: https://arxiv.org/abs/2606.24621 | PDF: https://arxiv.org/pdf/2606.24621
+- **分类**: math.CT (主), cs.AI, math.ST (次), 17页
+- **核心**: Frobenius Markov 范畴中引入切丛语义刻画无穷小因果关系。干预 = 使 Frobenius 复制/丢弃操作变形的切向量，李括号衡量变形是否保持经典信息流结构。
+- **两种 Frobenius 结构**: (1) 代数 Frobenius — 基于经典变量的复制/比较/丢弃; (2) 几何 Frobenius 可积性条件 — 干预分布的渐近闭包。
+- **Pearl do-演算的范畴论解释**: 忽略无关干预 → 余单位不变性; 行动/观察交换 → 余积与推进兼容性; 条件独立 → 渐近括号闭包。
+- **CQT 关联**: 范畴论基础(003-type-topos) + Gelfand对偶(004)可与此论文的 Frobenius 代数结构产生联系。
+
+### Joey Woo — Cohesive ∞-Topos with Quantum Modality from C*-Algebras (2606.02269)
+- 通过 Gelfand 对偶建立量子模态与离散经典场论的联系
+- CQT 关联: 直接与 003-type-topos + 004-gelfand-theory 相关
+
 ## 公众号文章 HTML 渲染注意事项
 - MathJax → SVG 渲染：`$$...$$` 多行块（含 `\begin{bmatrix}...\end{bmatrix}` 等环境）必须**完整合并**后一次性交给 MathJax 渲染，绝不能逐行拆开。
 - 正确做法：解析 Markdown 时，收集 `$$...$$` 之间的所有行，拼接成完整 LaTeX 字符串，再调用 `mathjax.tex2svg()`。
