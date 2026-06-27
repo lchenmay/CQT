@@ -1,5 +1,11 @@
 # 每日研究前沿 - 执行历史
 
+## 2026-06-27 (arXiv 2026-06-26 提交)
+- **量子**: 41篇新提交 + 13篇交叉 = 54篇。亮点: Ion-Tweezer量子架构(2606.27235, Schiffer/Monroe/Zoller/Cirac)、量子Max Cut 0.651近似(2606.27224, Rydberg原子)、Witness Expansion混合态资源检测统一框架(2606.27105)、多路由Bell测试改进DI-QKD(2606.26329)、LLM安全门控ARTIQ控制代码(2606.27231)、定制嵌入量子ML(2606.26312, IBM硬件验证)
+- **Topos**: math.CT 3篇新提交。亮点: Chang(2606.26553) 范畴化谱对偶(CSD)—Gelfand对偶的范畴化推广，直接连接type-topos和Gelfand理论(math.CT×math.OA)；Gambino & Tendas(2606.26717) 等正则理论与分类Topos构造
+- **Gelfand理论**: math.OA 1篇新提交。无直接Gelfand论文，但Chang的CSD(2606.26553)中Spec函子是Gelfand对偶的现代范畴化推广。Omland(2606.27198) 扭群C*-代数自反性
+- **AI**: cs.AI 74篇新提交。Agent多智能体约15篇—AgentX生产部署推荐系统(2606.26859)、AHOIS Socratic自主科学发现(2606.26722)、auto-psych自主心理学理论发现(2606.26460)。安全/推理: LeanGuard 395M编码器(2606.26686)、级联线性特征反Sycophancy(2606.26155)、Narration-of-Thought伦理推理(2606.26366, ACL2026)。量子+AI交叉: NanoPhotoNet-PINL AI驱动超表面逆设计(2606.26751)、QPINN量子PINN(2606.26865)、HI-NQS Transformer神经量子态(2606.26760)
+
 ## 2026-06-26 (arXiv 2026-06-25 提交)
 - **量子**: 56篇新提交。亮点: 自由电子量子态层析(2606.25397)、4000量子比特假真空衰变(2606.25889)、量子条件互信息=信道容量一半(2606.25264)、双曲RNN神经量子态(2606.25600)、LLM进化量子纠错码发现(2606.25870)、Sp(2N,R)干涉测量(2606.25768)、Gelfand-Tsetlin模式用于第一/第二量子化转换(2606.25029)
 - **Topos**: math.CT 8篇(仅1篇新提交)。亮点: ICML 2026的Zhang et al.(2606.25357) — 范畴论组合行为语义用于RL状态抽象(math.CT×cs.LG×cs.AI)
