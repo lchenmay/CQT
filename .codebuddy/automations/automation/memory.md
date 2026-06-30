@@ -1,5 +1,11 @@
 # 每日研究前沿 - 执行历史
 
+## 2026-06-30 (arXiv 2026-06-29 提交)
+- **量子**: 44篇新提交 + 14篇交叉。亮点: 工业级自旋-光子界面(2606.27787, Huet/Senellart)、量子系综不可克隆定理(2606.27756, Du/Cheng/Yuan)、时间重标度加速多体动力学(2606.27630)、无全局相位锁定TF-QKD(2606.27792)、超导量子硬件混合NN识别量子相(2606.28201, Wallraff组)、量子LiDAR精度提升50倍(2606.27838)
+- **Topos**: math.CT 1篇新提交 + 3篇交叉。亮点: 量子仪器单子(2606.27805, Tobias Fritz) cs.LO×cs.PL×math.CT×quant-ph四重交叉——范畴论形式化量子操作；组合量子仪器(2606.28291, Booth等)五重交叉含math.OA；Heyting代数Topos更新(2606.03861v2)；Gray积(∞,n)-范畴(2606.27574)
+- **Gelfand理论**: math.OA 1篇新提交。无直接Gelfand论文。量子环面Riesz乘积(2604.20774)属非交换几何延伸；组合量子仪器(2606.28291)使用冯·诺依曼代数(Gelfand-Naimark核心对象)
+- **AI**: cs.AI 20篇新提交 + 111篇交叉。Agent安全成新热点——Agent原生免疫系统ANIS(2606.28270)、Prompt Injection不可消除数学证明(2606.27567)。世界模型规划三连发(27483/27780/27806)。RLVR: Tandem RL(2606.28166)。量子+AI: 量子自编码器脑MRI(2606.27411)
+
 ## 2026-06-27 (arXiv 2026-06-26 提交)
 - **量子**: 41篇新提交 + 13篇交叉 = 54篇。亮点: Ion-Tweezer量子架构(2606.27235, Schiffer/Monroe/Zoller/Cirac)、量子Max Cut 0.651近似(2606.27224, Rydberg原子)、Witness Expansion混合态资源检测统一框架(2606.27105)、多路由Bell测试改进DI-QKD(2606.26329)、LLM安全门控ARTIQ控制代码(2606.27231)、定制嵌入量子ML(2606.26312, IBM硬件验证)
 - **Topos**: math.CT 3篇新提交。亮点: Chang(2606.26553) 范畴化谱对偶(CSD)—Gelfand对偶的范畴化推广，直接连接type-topos和Gelfand理论(math.CT×math.OA)；Gambino & Tendas(2606.26717) 等正则理论与分类Topos构造
