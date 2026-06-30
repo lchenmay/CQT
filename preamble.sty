@@ -29,13 +29,13 @@
 % 注意: 不使用 HarfBuzz 渲染器，因为它在 CJK 字符映射时有 BUG，
 % 会将部分标准 CJK 字符映射到 Kangxi Radical/CJK Compatibility 码位
 \babelfont{rm}[
-    Path = ./font/,
+    Path = c:/Dev/CQT/font/,
     BoldFont = {NotoSerifSC-ExtraBold.ttf},
     ItalicFont = {StKaiTi.ttf}
 ]{NotoSerifSC-Regular.ttf}
 
-\babelfont{sf}[Path = ./font/]{GFSDidot-Regular.ttf}
-\babelfont{tt}[Path = ./font/]{NotoSerifSC-Regular.ttf}
+\babelfont{sf}[Path = c:/Dev/CQT/font/]{GFSDidot-Regular.ttf}
+\babelfont{tt}[Path = c:/Dev/CQT/font/]{NotoSerifSC-Regular.ttf}
 
 \allsectionsfont{\rmfamily\bfseries}
 
@@ -51,7 +51,8 @@
 
 \usepackage{tikz}
 \usepackage{tikz-cd}
-\usetikzlibrary{decorations.pathmorphing, decorations.markings}
+\usetikzlibrary{decorations.pathmorphing, decorations.markings, positioning, backgrounds, fit, shapes.geometric}
+\usepackage{float}
 
 \usepackage{fancyhdr}
 \usepackage{bm} 
@@ -106,3 +107,74 @@
    \usebibmacro{cite}}
   {\multicitedelim}
   {\usebibmacro{postnote}}
+
+% ============== 自定义环境和方法定义 ===================================
+\newtheorem{definition}{定义}[chapter]
+\newtheorem{principle}{原则}[chapter]
+
+% ============== 代码样式配置 ===================================
+\usepackage{listings}
+\usepackage{xcolor}
+
+% 定义颜色
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+% 代码样式
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+\lstset{style=mystyle}
+
+% 语言定义
+\lstdefinelanguage{FSharp}{
+    morekeywords={let,new,type,in,fun,match,with,rec,open,module,namespace,do,begin,end,then,else,if,struct,enum,delegate,class,interface,abstract,sealed,override,default,static,void,public,private,internal,const,mutable,inline,when,yield,return,forall},
+    sensitive=true,
+    morecomment=[l]{//},
+    morecomment=[s]{(*}{*)},
+    morestring=[b]",
+}
+
+\lstdefinelanguage{TypeScript}{
+    morekeywords={const,let,var,function,return,export,import,from,as,type,interface,class,extends,implements,new,delete,this,super,console,require,module,typeof,instanceof,if,else,switch,case,default,for,while,do,break,continue,try,catch,finally,throw,async,await,Promise,string,number,boolean,void,never,any,unknown},
+    sensitive=true,
+    morecomment=[l]{//},
+    morecomment=[s]{/*}{*/},
+    morestring=[b]',
+    morestring=[b]",
+    morestring=[b]`,
+}
+
+\lstdefinelanguage{JSON}{
+    morekeywords={true,false,null},
+    sensitive=false,
+    morestring=[b]",
+    morestring=[d]'
+}
+
+% 自定义样式
+\lstdefinestyle{cmd}{
+    backgroundcolor=\color{black},
+    basicstyle=\ttfamily\footnotesize\color{white},
+    breaklines=true,
+    frame=single,
+    framerule=0pt,
+    columns=fullflexible,
+}
