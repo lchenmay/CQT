@@ -1640,7 +1640,11 @@ $$
 
 
 $$
-\begin{CD}    f \in \text{Hom}(Y,Z) @>h^X>> \text{Hom}(X,f) \in  \text{Hom}(h^X(Y),h^X(Z)) \\    @| @. \\   f \in \text{Hom}(Y,Z) @>F>> F(f) \in  \text{Hom}(F(Y),F(Z)) \\    \end{CD} \\
+\begin{tikzcd}
+f \in \mathbf{Sets}(Y,Z) \arrow[rrrr, "h^X"] &  &  &  & \mathbf{Sets}(X,f) \in \mathbf{Sets}(h^X(Y),h^X(Z)) \\
+                                              &  & {} \arrow[rr, Rightarrow] &  & {} \\
+f \in \mathbf{Sets}(Y,Z) \arrow[rrrr, "F"]   &  &  &  & F(f) \in \mathbf{Sets}(F(Y),F(Z))
+\end{tikzcd}
 $$
 
 以拓扑空间$X$中的开集为对象，

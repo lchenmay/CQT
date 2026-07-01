@@ -14,3 +14,6 @@
 *.out
 *.fdb_latexmk
 /node_modules
+004-gelfand-theory/compile_output.txt
+004-gelfand-theory/gelfand-theory.glg
+004-gelfand-theory/gelfand-theory.gls
