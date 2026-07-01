@@ -1,5 +1,11 @@
 # 每日研究前沿 - 执行历史
 
+## 2026-07-01 (arXiv 2026-06-30 提交)
+- **量子**: 109篇新提交。亮点: 1000+量子比特可训练生成模型(28483, Tüysüz/Kyriienko)、借用恒等统一魔法态蒸馏(28518, Singh/Gidney/Jones)、离子阱DQPT首次实验(28664)、同位素纯化锗空穴量子比特T2*>20μs(28695)、180量子比特精确MIS(28866)、连续监测精确遍历性(29042)、Claude Fable 5+Lean4机器验证FGG猜想(29687)、超导qutrit链接(29475)、PTER无偏Trotter模拟(29741)
+- **Topos**: math.CT 6篇新提交。🔥 Spivak(28984) 范畴论统一梯度学习+哈密顿力学(math.CT×cs.AI)——今日最重要跨领域论文；van Gool/Wrigley(28736) 学说典范扩张点空间→Topos解释；Benjamin等(30254) 弱ω-范畴可逆生成元计算元→预层Topos
+- **Gelfand理论**: math.OA 3篇新提交。无直接Gelfand论文。Zhang(29694) Kac型自由正交量子群超压缩性；Bikram等(30194) amenable群von Neumann代数Wiener-Wintner定理；Hirota(28665交叉) C*-代数正锥Fischer-Muszély方程
+- **AI**: cs.AI 111篇新提交。Agent行动对齐(28739, Li/Zhao)——Agent安全≠内容安全；AI自主定理发现(28747)；流推理模型(29150)；HExA实验Agent(29315)从2%→77%；LLM自主发明符号语言降3-6×token(29354)；MoD架构级自我辩论(29425)；OSWorld2.0仅20.6%完成率(29537)
+
 ## 2026-06-30 (arXiv 2026-06-29 提交)
 - **量子**: 44篇新提交 + 14篇交叉。亮点: 工业级自旋-光子界面(2606.27787, Huet/Senellart)、量子系综不可克隆定理(2606.27756, Du/Cheng/Yuan)、时间重标度加速多体动力学(2606.27630)、无全局相位锁定TF-QKD(2606.27792)、超导量子硬件混合NN识别量子相(2606.28201, Wallraff组)、量子LiDAR精度提升50倍(2606.27838)
 - **Topos**: math.CT 1篇新提交 + 3篇交叉。亮点: 量子仪器单子(2606.27805, Tobias Fritz) cs.LO×cs.PL×math.CT×quant-ph四重交叉——范畴论形式化量子操作；组合量子仪器(2606.28291, Booth等)五重交叉含math.OA；Heyting代数Topos更新(2606.03861v2)；Gray积(∞,n)-范畴(2606.27574)

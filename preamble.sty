@@ -23,8 +23,7 @@
 \setlength{\columnsep}{20pt}      % 加大两栏之间的物理间距，防止文字和竖线 | 撞车
 \setlength{\columnseprule}{0.4pt} % 如果有分栏线，明确指定其粗细
 
-% ============== 语言和字体 ===================================
-\usepackage{hyperref}
+% ============== 语言和字体（中西文视觉一致性优化） ===================================
 \usepackage{fontspec}
 \usepackage[english]{babel}
 \usepackage{sectsty}
@@ -43,15 +42,21 @@
 
 \allsectionsfont{\rmfamily\bfseries}
 
+% ============== 数学环境（移除冲突的 newtxmath，确保字形一致） ===================================
 \usepackage{amsmath, amssymb, amsthm}
 \usepackage{amscd} 
 \usepackage{mathtools}
+\usepackage{physics}
 
 \usepackage{enumitem}
+\setlist{nosep} % 优化列表间距，防止全局段距污染列表导致排版过于松散
+
 \usepackage{titlesec}
 \usepackage{quoting}
+
+% ============== 全局行距控制 ===================================
 \usepackage{setspace}
-\onehalfspacing
+\onehalfspacing % 全局 1.5 倍行距
 
 \usepackage{tikz}
 \usepackage{tikz-cd}
@@ -60,7 +65,6 @@
 
 \usepackage{fancyhdr}
 \usepackage{bm} 
-\usepackage[libertine]{newtxmath} 
 \usepackage{nicematrix} 
 \usepackage{adjustbox} 
 \usepackage{framed} 
@@ -70,8 +74,6 @@
 \WarningFilter{latexfont}{Size substitutions}
 \WarningFilter{latexfont}{Some font shapes}
 \WarningFilter{hyperref}{unreferenced destination}
-
-\usepackage{physics}
 
 % ============== 微排版优化（减少 Hbox 越界）===================================
 \usepackage{microtype} % 激活微排版技术（自动微调字距、词距，极大减少 Hbox 越界）
@@ -95,20 +97,23 @@
 \fancyhf{}
 \renewcommand{\headrulewidth}{0.4pt}
 
-%\usepackage{cite}
-\usepackage[style=index]{glossaries}   % 生成类似于索引的格式
-\makeglossaries
-
-\usepackage{makeidx}
-\makeindex
-
 \usepackage{csquotes}
 \DeclareQuoteStyle[american]{chinese}
   {\symbol{"201C}}{\symbol{"201D}}
   {\symbol{"2018}}{\symbol{"2019}}
-\usepackage[backend=biber, style=authoryear-comp, sorting=nyt, citestyle=authoryear, language=english, autolang=none, block=space]{biblatex}
-% 引用格式 [Author Year] 方括号
-\renewcommand*{\mkbibparens}[1]{#1}
+
+% ============== 文献引用配置（完全采用 biblatex 原生经典控制，支持低版本内核） ===================================
+\usepackage[
+    backend=biber, 
+    style=authoryear-comp, 
+    sorting=nyt, 
+    citestyle=authoryear, 
+    language=english, 
+    autolang=none, 
+    block=space
+]{biblatex}
+
+% 修复方案：使用经典兼容语法生成方括号引用 [Author Year]，避免未定义命令错误
 \DeclareCiteCommand{\cite}[\mkbibbrackets]
   {\usebibmacro{prenote}}
   {\usebibmacro{citeindex}%
@@ -116,11 +121,21 @@
   {\multicitedelim}
   {\usebibmacro{postnote}}
 
+% 核心修复：允许 biblatex 在长文献引用的作者、年份、以及多文献分号处折行，彻底消除 Overfull \hbox
+\renewcommand*{\nameyeardelim}{\addcomma\space\allowbreak}
+\renewcommand*{\multicitedelim}{\addsemicolon\space\allowbreak}
+
+\usepackage[style=index]{glossaries}   % 生成类似于索引的格式
+\makeglossaries
+
+\usepackage{makeidx}
+\makeindex
+
 % ============== 自定义环境和方法定义 ===================================
 \newtheorem{definition}{定义}[chapter]
 \newtheorem{principle}{原则}[chapter]
 
-% ============== 代码样式配置 ===================================
+% ============== 代码样式配置（行距隔离优化） ===================================
 \usepackage{listings}
 \usepackage{xcolor}
 
@@ -137,7 +152,8 @@
     keywordstyle=\color{magenta},
     numberstyle=\tiny\color{codegray},
     stringstyle=\color{codepurple},
-    basicstyle=\ttfamily\footnotesize,
+    % 核心隔离：\linespread{1.0}\selectfont 强制代码块内部回归单倍紧凑行距，免疫全局 1.5 倍行距污染
+    basicstyle=\ttfamily\footnotesize\linespread{1.0}\selectfont,
     breakatwhitespace=false,      % 允许在非空白字符处折行
     breaklines=true,              % 核心：必须开启自动折行
     captionpos=b,
@@ -156,7 +172,7 @@
 }
 \lstset{style=mystyle}
 
-% 语言定义
+% 语言定义：FSharp
 \lstdefinelanguage{FSharp}{
     morekeywords={let,new,type,in,fun,match,with,rec,open,module,namespace,do,begin,end,then,else,if,struct,enum,delegate,class,interface,abstract,sealed,override,default,static,void,public,private,internal,const,mutable,inline,when,yield,return,forall},
     sensitive=true,
@@ -165,6 +181,7 @@
     morestring=[b]",
 }
 
+% 语言定义：TypeScript
 \lstdefinelanguage{TypeScript}{
     morekeywords={const,let,var,function,return,export,import,from,as,type,interface,class,extends,implements,new,delete,this,super,console,require,module,typeof,instanceof,if,else,switch,case,default,for,while,do,break,continue,try,catch,finally,throw,async,await,Promise,string,number,boolean,void,never,any,unknown},
     sensitive=true,
@@ -175,6 +192,7 @@
     morestring=[b]`,
 }
 
+% 语言定义：JSON
 \lstdefinelanguage{JSON}{
     morekeywords={true,false,null},
     sensitive=false,
@@ -185,7 +203,7 @@
 % 自定义样式
 \lstdefinestyle{cmd}{
     backgroundcolor=\color{black},
-    basicstyle=\ttfamily\footnotesize\color{white},
+    basicstyle=\ttfamily\footnotesize\color{white}\linespread{1.0}\selectfont,
     breaklines=true,
     frame=single,
     framerule=0pt,
@@ -197,3 +215,7 @@
 \newcommand{\cmd}[1]{\texttt{\color{black}{#1}}}
 % \pathref{} - 文件路径样式
 \newcommand{\pathref}[1]{\texttt{\color{blue!50!black}{#1}}}
+
+% ============== 后置交叉引用核心（确保位置在最底部） ===================================
+\usepackage{hyperref} 
+% 放在最后引入，确保 hyperref 完美接管前面的 titlesec、amsthm、biblatex 等所有跳转锚点
