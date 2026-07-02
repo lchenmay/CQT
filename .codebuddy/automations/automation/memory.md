@@ -1,5 +1,11 @@
 # 每日研究前沿 - 执行历史
 
+## 2026-07-02 (arXiv 2026-07-01 提交)
+- **量子**: 68篇新提交。亮点: 等变QNN可训练性相干定律(30688, Ugail/Howard)、Trotter误差对角元素标度改进(30738, Maxwell/Casares/Xanadu)、SPRINT量子化学乘积公式(30741)、CryoZip低温QEC症候压缩48×(30805)、Page曲线组合推导(30941, von Gersdorff)、广义概率论全面介绍(31097)、RCQC非经典性时间反转(31103)、泡利权重QEM(31195)、擦除后选择极限(31428)、波粒二象性=不确定关系(31443)、无资源但有资源性(31516)、无矩阵量子模拟(31598)、参考系拖曳引力纠缠(31678)、三个远程原子节点纠缠(32006, Rempe组)
+- **Topos**: math.CT 1篇新提交 + 4替换。Almeida(31854) 模态逻辑下降理论(math.CT×math.LO)——descent theory是Grothendieck Topos核心概念；Demirdilek Grothendieck-Verdier函子(v2)；今日无直接几何层论论文
+- **Gelfand理论**: math.OA 2篇新提交 + 2交叉。🔥 Bourne/Carey等(31322, 84页) 实Hilbert C*-模解析指标+谱流——今日最重要非交换几何论文，Van Daele K-理论统一八种实K-理论群；Quero/Ioana/Tan(31929) 首次构造无交叉积分解的II₁因子；Gui(30928交叉) Cardy型CFT共形网；Wei/Yin(31528交叉) 自由随机微分方程
+- **AI**: cs.AI 356篇新提交。Agent: 对比反思提示优化(30840)、偏好构建vs获取(30863)、AgentBound行为治理(30970)、OpenLife开放世界人工生命12周实验(31046)、科学创意轨迹合成(31229)。推理/形式化: BayesBench信念轨迹(30850)、自动形式化STOC论文主定理(31134, 🔥里程碑)、Lean忠实性评估(31002)、空间推理模态切换(31285)。安全: LabGuard实验室规则运行时约束(31045)。自主研究: SAGE多假设失败归因42%→92%(31478)、世界模型崩溃相变(31399)。量子+AI: DRL原子控制(30765)、QML代理LBM(31351)、ML优化CV-QKD(31534)
+
 ## 2026-07-01 (arXiv 2026-06-30 提交)
 - **量子**: 109篇新提交。亮点: 1000+量子比特可训练生成模型(28483, Tüysüz/Kyriienko)、借用恒等统一魔法态蒸馏(28518, Singh/Gidney/Jones)、离子阱DQPT首次实验(28664)、同位素纯化锗空穴量子比特T2*>20μs(28695)、180量子比特精确MIS(28866)、连续监测精确遍历性(29042)、Claude Fable 5+Lean4机器验证FGG猜想(29687)、超导qutrit链接(29475)、PTER无偏Trotter模拟(29741)
 - **Topos**: math.CT 6篇新提交。🔥 Spivak(28984) 范畴论统一梯度学习+哈密顿力学(math.CT×cs.AI)——今日最重要跨领域论文；van Gool/Wrigley(28736) 学说典范扩张点空间→Topos解释；Benjamin等(30254) 弱ω-范畴可逆生成元计算元→预层Topos
