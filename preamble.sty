@@ -1,4 +1,4 @@
-\PassOptionsToPackage{final}{hyperref}
+\PassOptionsToPackage{final, unicode}{hyperref}
 
 \usepackage{comment}
 \usepackage{silence}
@@ -27,14 +27,16 @@
 \setotherlanguage{english}
 
 % 使用系统字体（确保这些字体已安装）
-\setmainfont{Noto Serif SC}[
-    BoldFont = {Noto Serif SC SemiBold},
-    ItalicFont = {Noto Serif SC},
+% NotoSerifSC-VF.ttf 是 Variable Font，需用 Weight=600 指定 SemiBold
+\setmainfont{NotoSerifSC-VF.ttf}[
+    BoldFont = {NotoSerifSC-VF.ttf},
+    BoldFeatures = {Weight=600},
+    ItalicFont = {NotoSerifSC-VF.ttf},
     ItalicFeatures = {FakeSlant = 0.2}
 ]
 
-\setsansfont{Noto Sans SC}
-\setmonofont{Noto Sans SC}
+\setsansfont{NotoSansSC-VF.ttf}
+\setmonofont{NotoSansSC-VF.ttf}
 
 \usepackage{sectsty}
 \allsectionsfont{\rmfamily\bfseries}
@@ -86,6 +88,8 @@
 
 % ============== 微排版优化 ===================================
 \usepackage{microtype}
+% CJK 可变字体禁用字体扩展（expansion），只保留 protrusion，否则编译极慢/卡死
+\microtypesetup{expansion=false}
 
 \usepackage[toc,page]{appendix}
 \changefontsizes{9.5pt} 
@@ -227,5 +231,6 @@
 }
 
 % ============== 后置交叉引用核心 ===================================
-\usepackage{hyperref} 
+\usepackage[unicode, pdfencoding=auto]{hyperref} 
 \usepackage{bookmark}
+\hypersetup{unicode=true, pdfencoding=unicode}
