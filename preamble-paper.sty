@@ -1,0 +1,235 @@
+\PassOptionsToPackage{final, unicode}{hyperref}
+
+\usepackage{comment}
+\usepackage{silence}
+\WarningFilter{LaTeX}{has changed}
+\WarningFilter{glossaries}{No \printglossary or \printglossaries found}
+\WarningFilter{microtype}{Unknown slot number of character}
+
+% ============== 期刊论文版式 ===================================
+\usepackage[
+    a4paper,
+    top=2.5cm,
+    bottom=2.5cm,
+    left=2.5cm,
+    right=2.5cm,
+    footskip=1cm
+]{geometry}
+
+% ============== 语言和字体 ===================================
+\usepackage{fontspec}
+\usepackage{polyglossia}
+
+% 设置语言
+\setmainlanguage{chinese}
+\setotherlanguage{english}
+
+% 使用系统字体（确保这些字体已安装）
+% NotoSerifSC-VF.ttf 是 Variable Font，需用 Weight=600 指定 SemiBold
+\setmainfont{NotoSerifSC-VF.ttf}[
+    BoldFont = {NotoSerifSC-VF.ttf},
+    BoldFeatures = {Weight=600},
+    ItalicFont = {NotoSerifSC-VF.ttf},
+    ItalicFeatures = {FakeSlant = 0.2}
+]
+
+\setsansfont{NotoSansSC-VF.ttf}
+\setmonofont{NotoSansSC-VF.ttf}
+
+\usepackage{sectsty}
+\allsectionsfont{\rmfamily\bfseries}
+
+\usepackage{ragged2e}
+
+% 中文断行设置
+\AtBeginDocument{%
+  \RaggedRight
+  \emergencystretch=2em
+  \tolerance=2000
+  \pretolerance=1000
+  \hbadness=5000
+  \hyphenpenalty=50
+  \exhyphenpenalty=50
+}
+
+% ============== 数学环境 ===================================
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{stmaryrd}
+\usepackage{amscd} 
+\usepackage{mathtools}
+\usepackage{physics}
+\usepackage{mathrsfs}
+
+\usepackage{enumitem}
+\setlist{nosep}
+
+\usepackage{titlesec}
+\usepackage{quoting}
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{decorations.pathmorphing, decorations.markings, positioning, backgrounds, fit, shapes.geometric}
+\usepackage{float}
+
+\usepackage{fancyhdr}
+\usepackage{bm} 
+\usepackage{nicematrix} 
+\usepackage{adjustbox} 
+\usepackage{framed} 
+\usepackage{scrextend}
+\usepackage{booktabs}
+\WarningFilter{latexfont}{Font shape}
+\WarningFilter{latexfont}{Size substitutions}
+\WarningFilter{latexfont}{Some font shapes}
+\WarningFilter{hyperref}{unreferenced destination}
+
+% ============== 微排版优化 ===================================
+\usepackage{microtype}
+% CJK 可变字体禁用字体扩展（expansion），只保留 protrusion，否则编译极慢/卡死
+\microtypesetup{expansion=false}
+
+\usepackage[toc,page]{appendix}
+\changefontsizes{9.5pt} 
+
+\NiceMatrixOptions{
+  custom-line = {
+    letter = : ,
+    command = hdashline ,
+    tikz = { dashed }
+  }
+}
+
+\setlength{\parskip}{1em} 
+
+\newtheorem{example}{例}[section]
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\usepackage{csquotes}
+\DeclareQuoteStyle[american]{chinese}
+  {\symbol{"201C}}{\symbol{"201D}}
+  {\symbol{"2018}}{\symbol{"2019}}
+
+% ============== 文献引用配置 ===================================
+\usepackage[
+    backend=biber, 
+    style=authoryear-comp, 
+    sorting=nyt, 
+    citestyle=authoryear, 
+    language=english, 
+    autolang=none, 
+    block=space
+]{biblatex}
+
+\DeclareCiteCommand{\cite}[\mkbibbrackets]
+  {\usebibmacro{prenote}}
+  {\usebibmacro{citeindex}%
+   \usebibmacro{cite}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
+
+\renewcommand*{\nameyeardelim}{\addcomma\space\allowbreak}
+\renewcommand*{\multicitedelim}{\addsemicolon\space\allowbreak}
+
+\usepackage[style=index]{glossaries}
+\makeglossaries
+
+\usepackage{makeidx}
+\makeindex
+
+% ============== 自定义环境 ===================================
+\newtheorem{definition}{定义}[section]
+\newtheorem{principle}{原则}[section]
+
+% ============== 代码样式配置 ===================================
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize\linespread{1.0}\selectfont,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    columns=flexible,
+    extendedchars=true,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    frame=single,
+    framerule=0.5pt,
+    rulecolor=\color{gray!30}
+}
+\lstset{style=mystyle}
+
+\lstdefinelanguage{FSharp}{
+    morekeywords={let,new,type,in,fun,match,with,rec,open,module,namespace,do,begin,end,then,else,if,struct,enum,delegate,class,interface,abstract,sealed,override,default,static,void,public,private,internal,const,mutable,inline,when,yield,return,forall},
+    sensitive=true,
+    morecomment=[l]{//},
+    morecomment=[s]{(*}{*)},
+    morestring=[b]",
+}
+
+\lstdefinelanguage{TypeScript}{
+    morekeywords={const,let,var,function,return,export,import,from,as,type,interface,class,extends,implements,new,delete,this,super,console,require,module,typeof,instanceof,if,else,switch,case,default,for,while,do,break,continue,try,catch,finally,throw,async,await,Promise,string,number,boolean,void,never,any,unknown},
+    sensitive=true,
+    morecomment=[l]{//},
+    morecomment=[s]{/*}{*/},
+    morestring=[b]',
+    morestring=[b]",
+    morestring=[b]`,
+}
+
+\lstdefinelanguage{JSON}{
+    morekeywords={true,false,null},
+    sensitive=false,
+    morestring=[b]",
+    morestring=[d]'
+}
+
+\lstdefinestyle{cmd}{
+    backgroundcolor=\color{black},
+    basicstyle=\ttfamily\footnotesize\color{white}\linespread{1.0}\selectfont,
+    breaklines=true,
+    frame=single,
+    framerule=0pt,
+    columns=fullflexible,
+}
+
+% ============== 行内命令和文件路径宏 ======================
+\newcommand{\cmd}[1]{\texttt{\color{black}{#1}}}
+\newcommand{\pathref}[1]{\texttt{\color{blue!50!black}{#1}}}
+
+% ============== 矢量级替代图标 ===================================
+\newcommand{\docSuccess}{\textcolor{green!50!black}{\ensuremath{\checkmark}}}
+\newcommand{\docFailure}{\textcolor{red!80!black}{\ensuremath{\times}}}
+\newcommand{\docWarning}{\begin{tikzpicture}[baseline=-0.6ex]\draw[fill=yellow,draw=yellow!60!black] (0,0) circle (0.45ex);\end{tikzpicture}}
+\newcommand{\docChart}{%
+  \begin{tikzpicture}[baseline=-0.2ex, x=3.2pt, y=3.2pt]
+    \fill[blue!70!black] (0,0) rectangle (0.8,1.5);
+    \fill[blue!70!black] (1.2,0) rectangle (2.0,3.5);
+    \fill[blue!70!black] (2.4,0) rectangle (3.2,2.2);
+  \end{tikzpicture}%
+}
+
+% ============== 后置交叉引用核心 ===================================
+\usepackage[unicode, pdfencoding=auto]{hyperref} 
+\usepackage{bookmark}
+\hypersetup{unicode=true, pdfencoding=unicode}
