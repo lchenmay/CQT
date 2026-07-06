@@ -49,42 +49,46 @@
 
 \section{连续函数代数}
 
-单点集$\textbf 1$上的实值函数集同构于实域
-$\mathbb R^\textbf 1 \simeq \mathbb R$，
+单点集$\textbf{1}$上的实值函数集同构于实域
+$\mathbb R^\textbf{1} \simeq \mathbb R$，
 它是实标量空间。
-$n$个点构成的点集$\textbf n$上的实值函数集同构于实线性空间
-$\mathbb R^\textbf n \simeq \mathbb R_n$，
+$n$个点构成的点集$\textbf{n}$上的实值函数集同构于实线性空间
+$\mathbb R^\textbf{n} \simeq \mathbb R_n$，
 它是实向量空间：
-
-$$
-\dim \ \mathbb R^\textbf n = \dim \mathbb R_n = |\textbf n| = n
-$$
-
-两个有限点集$\text m$和$\text n$的集合范畴张量积同构于直积：
-
-$$
-\text m \otimes \text n \simeq \text m \times \text n
-$$
-
+$\dim \ \mathbb R^\textbf{n} = \dim \mathbb R_n = |\textbf{n}| = n$。
+两个有限点集$\textbf{m}$和$\textbf{n}$的集合范畴张量积同构于直积：
+$\textbf{m} \otimes \textbf{n} \simeq \textbf{m} \times \textbf{n}$，
 其张量积上的实值函数集同构于实矩阵空间
+$\mathbb R^{\textbf{m} \otimes \textbf{n}} \simeq \mathbb R^{\textbf{m} \oplus \textbf{n}} \simeq \mathbb R^{\textbf{m}} \otimes \mathbb R^{\textbf{n}} \simeq \mathbb R_m^n$。
+更高阶的有限点集的张量积作为底空间，
+其上的实值函数集同构于取值于多元实值数组空间
+
 $$
-\mathbb R^{\text m \otimes \text n} \simeq \mathbb R^{\text m \oplus \text n} \simeq \mathbb R^\text m \otimes \mathbb R^\text n \simeq \mathbb R_m^n
+X = \bigotimes_{\alpha=1}^o \textbf{n}_\alpha, \quad
+\mathbb R^X \simeq 
+\bigotimes_{\alpha=1}^o \mathbb R_{n_\alpha}
 $$
 
-更高阶的有限点集的张量积上的实值函数集同构于取值于多元实值数组空间
-$$
-\mathbb R^{\bigotimes_{\alpha=1}^o \text n_\alpha} \simeq \bigotimes_{\alpha=1}^o \mathbb R_{n_\alpha}
-$$
 这一结构统一了标量、向量等。
-$X = \bigotimes_{\alpha=1}^o \text n_\alpha$作为有限离散点集，
+$X = \bigotimes_{\alpha=1}^o \textbf{n}_\alpha$作为有限离散点集，
 有平凡拓扑和离散拓扑，
 并可视特定情况赋予介于二者之间的更有意义的拓扑，
-从而决定了其上的交换含幺连续函数代数：
+从而决定了其上的交换含幺连续函数代数$C(X)$。
+
+\section{神经网络}
+
+输入和输入分别构造在两个上述底空间上，
+形成态射：
 
 $$
-C(X)
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBoBGAXVJADcBDAGwFcYkQAdD4AAi5xgAPHACMAZsAC2AXwD6XJmgAW9Ph2khppdJlz5CKAEwVqdJq3YANHgF41IrAHMIeSfDUDh4qXIWNl9JraIBjYeAREACwmNAwsbIicHJL0OEoiIjwASgB61lzYbgCO9k4uWG5wailpGdmyUvIciioaWjph+kRkAMymcRaJXLz8QqISYL4cIjA4qlxtwaF6EUakfbHmCSAAmralzq7uo14TUzNzQR0rBsjRG2bx7Fw16Zm5ewUVMCVcDoffKovVJverAMBNC70RbXcK3MjEfpbZ4cTzjYAAZVmMJCujhRGMiM2TyGqLG3ixOBxy3xKGiRMegySaO8ADUAMZUzSmGBQRzwIigMQAJwgkiQZBAOAgSHI7RAIrFspo0qQxil9CwjHYkDAbHlivFiB6KpliGiGq1OoI+uChqQFtViAArAbRUbJU6em6lYhyKaHT6jeqna67e6kAA2AOIADsQaQsZjAA5pJRpEA
+\begin{tikzcd}
+\textbf{Set} \arrow[rr]                       &  & \textbf{Set} \arrow[rr]                                &  & \textbf{Vct}                                                  \\
+\{ \textbf{m}_\alpha \} \arrow[rr] \arrow[dd] &  & X = \bigotimes \textbf{m}_\alpha \arrow[rr] \arrow[dd] &  & \mathbb R^X \simeq \bigotimes \mathbb R_{m_\alpha} \arrow[dd] \\
+                                              &  &                                                        &  &                                                               \\
+\{ \textbf{n}_\beta \} \arrow[rr]             &  & Y = \bigotimes \textbf{n}_\beta \arrow[rr]             &  & \mathbb R^Y \simeq \bigotimes \mathbb R_{n_\beta}            
+\end{tikzcd}
 $$
-
 
 \section{Hadamard积}
 
