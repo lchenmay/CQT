@@ -24,17 +24,28 @@
 \setmainlanguage{chinese}
 \setotherlanguage{english}
 
-% 使用系统字体（确保这些字体已安装）
-% NotoSerifSC-VF.ttf 是 Variable Font，需用 Weight=600 指定 SemiBold
-\setmainfont{NotoSerifSC-VF.ttf}[
-    BoldFont = {NotoSerifSC-VF.ttf},
-    BoldFeatures = {Weight=600},
-    ItalicFont = {NotoSerifSC-VF.ttf},
+% 使用项目本地 NotoSerifSC / NotoSansSC 静态字体
+\setmainfont{NotoSerifSC}[
+    Path           = ../font/,
+    Extension      = .ttf,
+    UprightFont    = *-Regular,
+    BoldFont       = *-Bold,
+    ItalicFont     = *-Regular,
     ItalicFeatures = {FakeSlant = 0.2}
 ]
 
-\setsansfont{NotoSansSC-VF.ttf}
-\setmonofont{NotoSansSC-VF.ttf}
+\setsansfont{NotoSerifSC}[
+    Path        = ../font/,
+    Extension   = .ttf,
+    UprightFont = *-Regular,
+    BoldFont    = *-Bold
+]
+\setmonofont{NotoSerifSC}[
+    Path        = ../font/,
+    Extension   = .ttf,
+    UprightFont = *-Regular,
+    BoldFont    = *-Bold
+]
 
 \usepackage{sectsty}
 \allsectionsfont{\rmfamily\bfseries}
@@ -111,7 +122,7 @@
 
 \usepackage{csquotes}
 \DeclareQuoteAlias{english}{american}
-\DeclareQuoteStyle[american]{chinese}
+\DeclareQuoteStyle{chinese}
   {\symbol{"201C}}{\symbol{"201D}}
   {\symbol{"2018}}{\symbol{"2019}}
 
