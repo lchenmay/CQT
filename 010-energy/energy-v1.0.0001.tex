@@ -85,393 +85,326 @@ $|\text e^{+\varepsilon} - 1| \neq |\text e^{-\varepsilon} - 1|$。
 本文所研究的问题和随机热力学、随机动力学、能量采集系统、机器人学等应用领域有关。
 
 \section{文献综述}
+ 
+\paragraph{随机热力学与有限时间热力学}
+如何在非平衡条件下利用系统的随机涨落来提取做功并最大化输出~\cite{Seifert2012Stochastic, Esposito2010Entropy}。
+该领域研究微观或介观系统（如布朗粒子）在随机热浴中如何通过非平衡过程（如压缩、膨胀、接触不同热源）来提取有用功~\cite{Kramers1940Brownian, Jarzynski1997Nonequilibrium}。
+几何视角方面，典型模型如布朗陀螺仪（Brownian gyrator）研究如何利用各向异性的温度场（热非对称性）来驱动粒子定向运动并做功~\cite{Filippetti2021Brownian, Sasa2014Stochastic}，
+这类研究常通过最优输运理论~\cite{Villani2009Optimal}和几何框架来量化最优功率与耗散之间的权衡，
+与本文通过几何结构理解能量交换的思路一致。
 
-我们需要从乘性域的对数、指数运输、正射影空间上的 Aitchison 距离、
-余切丛上外蕴辛形式 $\Omega = \text dF \wedge \text dx$等数学结构获得启发，
-借助成分数据分析、非Newton微积分与热带几何、几何控制理论、随机几何力学等领域的成果，
-设法以域同构或丛同构为桥梁，将非线性几何拉直为线性结构、
-将局部约束提升为全局对称性、
-将能量流编织为拓扑网络。
+\paragraph{随机动力学与控制（能量采集系统）}
+研究如何通过设计控制策略从随机的环境激励（如振动、海浪）中最大化地提取能量~\cite{Zuo2013Energy, Ding2019Energy}。
+该领域研究振动能量采集器（将环境振动转化为电能）和海浪能转换器~\cite{Falnes2002Ocean, Li2019Review}，
+环境激励（如振动、海浪）本身就是高度随机的过程，通常建模为零均值的高斯过程~\cite{Rice1944Mathematical}。
+其控制策略的核心挑战在于设计最优或次优的随机控制器，例如在惯性海浪能转换器（ISWEC）中，
+通过随机最优控制理论设计的控制器能比传统的线性阻尼器显著提高平均吸收功率~\cite{Giorgi2020Nonlinear, Paduano2021Control}，
+这直接对应本文通过控制力 $F$ 来最大化 $J(F)$ 的目标。
 
-\subsection{乘性域的代数与几何基础}
+\paragraph{机器人学与导航（非欧几何中的不确定性传播）}
+机器人状态（如位姿 $SE(2)$ 或 $SE(3)$）本身就在非交换的李群上演化，与本文的底空间结构相似~\cite{Murray1994Mathematical, Barfoot2017State}。
+该领域处理机器人系统在具有非完整约束（如不能侧向移动的车辆）和非欧几里得配置空间（如平面运动群 $SE(2)$）中的不确定性（噪声）~\cite{Bloch2003Nonholonomic, Bloch2015Geometric}。
+其数学工具大量使用李群（Lie Group）、指数映射（Exponential Map）和福克-普朗克方程来精确传播状态概率密度~\cite{Wang2019Lie, Solin2015Gaussian}，这
+与本文利用指数映射连接对数空间与物理空间并研究不对称性对系统影响的思路在数学上一致，
+最新研究甚至将保形预测与李群结合以在非欧空间中获得更紧致、更高效的置信区域~\cite{Klein2023Conformal}。
 
-比例型数据（即成分数据）在经典统计学中长期受困于闭合约束——
-各分量之和为定值——所引发的协方差矩阵奇异性问题。
-\textcite{Aitchison1986} 在其奠基性著作中开创了全新的处理范式：
-将单形嵌入正射影空间，以对数比值取代原始比例，
-进而定义了一种以摄动运算（perturbation）和乘幂运算（powering）
-为基本算符的 Hilbert 空间结构。
-\textcite{PawlowskyGlahnEgozcue2001} 继而在微分几何的立场上
-把这一体系重新解读为单形上的 Riemann 流形，
-其测地线恰好度量了 Aitchison 距离。
-这两部工作共同锚定了本文乘性域 \eqref{eq:Multiplicative-Field} 中
-$\sqplus$ 与 $\sqtimes$ 二元运算的统计几何原点：
-对数比值变换所诱导的线性化，
-本质上是将成分数据所处的约束空间"拉平"为欧氏空间的一个域同构。
+\paragraph{随机偏微分方程与数值分析}~\cite{Pardoux2007Stochastic, Hairer2011Ergodicity}
+直接求解随机微分方程（SDE）的各阶矩方程，而非通过路径采样来估计~\cite{Jentzen2010Taylor, Kloeden2012Numerical}。
+直接相关性在于，研究明确指出对于几何布朗运动（乘性噪声），其二阶矩方程的变分形式自然定义在射影-注入张量积空间上~\cite{Lang2017Stochastic, Flandoli2018Regularization}，
+这与本文从张量空间角度理解该问题的思路完全吻合，为本文的理论提供了坚实的数学分析工具。
 
-\textcite{Amari2016} 在信息几何中提出的
-双对偶仿射联络（Dually Coupled Affine Connections）理论，
-为上述几何图景注入了更深层的结构洞见。
-信息几何的核心舞台恰恰坐落于正射影空间 $\mathbb R P^+_n$
-（或在等价意义上，单纯形 Simplex）之上。
-Amari 所揭示的关键事实是：
-当平直测地线从流形的一个坐标系拉回至其对偶坐标系时，
-非线性联络会在两套坐标之间引入空间扭曲——
-这一现象精妙地说明了：
-对数空间 $\mathbb R_{n+1}$ 中原本对称的随机扰动，
-为什么一经拉回至实际空间 $X$，
-就不可避免地转化为物理做功的非对称性。
 
-在代数层面，\textcite{GrossmanKatz1972} 系统性构造了非Newton微积分的完整框架：
-以乘法群 $(\mathbb R^+,\cdot)$ 替换经典的加法群 $(\mathbb R,+)$
-作为底域，重新逐层定义了极限、导数与积分等基本概念。
-该工作是本文从 Lie 群指数映射的角度
-选取自然对数底 $b=\text e$ 作为乘性域 $\boxed{\mathbb R^+}$ 的标准底数的
-直接数学先驱。
-\textcite{CordovaLepe2006} 进一步推广了乘性度（multiplicative degree）
-的概念，并将其植入非Newton动力学与增长模型的定性分析之中，
-为在乘性域上处理微分方程的渐近行为提供了系统工具。
 
-\textcite{Has2026} 等人在近期工作中
-将这一代数框架一举推升至完整的微分几何层面：
-在配备比例度规（Proportional Metric）的乘性空间上，
-他们显式构造了乘性 Riemann 联络（Multiplicative Affine Connection）、
-Christoffel 符号以及 Riemann 曲率张量，
-并且严格证明了乘性欧氏空间与传统欧氏空间之间的同构与拉回关系。
-该成果为本文将动力学从对数空间拉回至 $\mathbb R^+$ 的操作
-提供了无可挑剔的流形工具——
-乘性空间由此不再仅仅是一个代数域，
-而是进化为一个武装了完整曲率理论的微分流形。
+\begin{framed}
+  
+底空间 $\mathbb R^+_{n+1}$ 作为乘性Lie群，配备左不变度量，其指数映射 $\exp: \mathbb R_{n+1} \to \mathbb R^+_{n+1}$ 的Jacobi行列式给出体积元的伸缩因子。令对数空间中的Brown运动~\cite{Nelson1967Dynamical} 具有方差 $\sigma^2 t$，其生成元作用于函数 $f$ 上为 $\mathcal L f = \frac{\sigma^2}{2} \sum_i \partial_{y_i}^2 f$。通过It\^o公式~\cite{ItO1951Stochastic,Protter2005Stochastic} 将其投影到正射影空间 $\mathbb R P^+_n$（齐次坐标规范下第一个变元固定为 $1$），可得诱导漂移项，该项正比于 $\sigma^2$，是加性对称性破缺的几何源头。记广义坐标 $X \in \mathbb R^n$（即 $\mathbb R P^+_n$ 的仿射补丁），引入乘性联络 $\nabla^{\mathrm{mult}}$~\cite{KobayashiNomizu1963Foundations}，外力 $F$ 在指数映射下的拉回定义为 $\tilde F(y) = \mathrm{diag}(\mathrm e^{y_i}) \, F(\mathrm e^y)$。对微小平移 $\mathrm dy = \pm\varepsilon \, \mathbf e_i$，功的增量为 $\Delta W = F_i(x) \cdot (\mathrm e^{\varepsilon} - 1) x_i$，比较 $+\varepsilon$ 与 $-\varepsilon$ 的功增量之差，得到非线性整流函数 $\phi(\varepsilon) = \mathrm e^{\varepsilon} - \mathrm e^{-\varepsilon} = 2\sinh(\varepsilon)$，该函数是后续优化问题的核心核函数。将外力 $F$（或等价势场 $V$）视为依赖于当前坐标 $x$ 和时间 $t$ 的控制变量，目标泛函取为 $J(F) = \mathbb E\left[\int_0^T F(x_t)\circ \mathrm dx_t\right] = \mathbb E\left[\int_0^T \sum_i F_i(x_t)\cdot x_i(t)\circ \mathrm dy_i(t)\right]$，其中 $\circ$ 表示Stratonovich积分~\cite{Stratonovich1966New} 以保证能量守恒的链式法则。由于 $x_i = \mathrm e^{y_i}$ 是凸函数，Jensen不等式~\cite{Jensen1906SurLesFonctions} 表明，当 $F_i$ 与 $x_i$ 异号时系统倾向于从随机背景中吸收更多功，即从热浴中提取能量。对应的Hamilton-Jacobi-Bellman方程含有一个来自It\^o修正的额外一阶项 $+\frac12\sigma^2 x_i \partial_{x_i}$，该正是净能量流的来源。优化分析表明，最大能量提取不在平衡态处实现，而在于边界追踪或奇异点吸引机制：乘性域 $\mathbb R^+$ 的非完备性（$0$ 和 $\infty$ 为边界）使得最优控制驱使粒子轨迹接近 $0$，因为 $e^{-\varepsilon}$ 的损失小于 $e^{+\varepsilon}$ 的收益。可采用分段常数反馈策略：当 $y_i > 0$ 时施加正阻尼，当 $y_i < 0$ 时施加负阻尼，该非对称阻尼将热噪声的随机对称功转化为定向力学功。通过Girsanov定理~\cite{Bismut1981LargeDeviations}，最大功问题可等价地转化为最小化相对熵问题，即使粒子的实际测度尽可能偏离无外力时的Wiener测度，而几何非对称性提供了实现该偏离的曲率自由度。数值模拟方面，建议在对数空间进行均匀步长Euler-Maruyama离散后指数映射回 $X$，监测累积功 $W(t)$ 的期望值和方差，预期观察到 $\mathbb E[W(t)] \propto t$ 且斜率显著大于零，即纯粹的几何棘轮效应。采用强化学习框架将 $F$ 参数化为神经网络并以 $\Delta W$ 为奖励函数进行训练，网络将自发学会利用坐标接近 $0$ 的瞬态吸气、在坐标变大前排气。最终的理论突破在于，能量交换最大化依赖于力场 $F(x)$ 与乘性联络 $\nabla^{\mathrm{mult}}$ 之间的非交换对易子；当 $F$ 的梯度与坐标 $X$ 不可交换时，系统产生额外功，其大小由李括号 $[F, X]$ 决定，最大能量提取等价于在 $\mathbb R P^+_n$ 上构造具有最大和乐群的非保守力场~\cite{KobayashiNomizu1963Foundations}。建议从 $n=1$ 的一维情形出发求解HJB方程的显式解（可转化为Kummer函数），再推广至高维情形。
 
-在域变换的对偶方向上，\textcite{Litvinov2007} 对 Maslov 反去量子化程序做了全景式综述：
-借助 $\varepsilon$-对数变换 $x \mapsto \ln_{\varepsilon} x$，
-在 $\varepsilon \to 0$ 的极限下，
-经典算术域被连续地形变为热带半环
+\end{framed}
+
+
+本手册的数学结构——乘性域的对数-指数搬运、射影空间上的 Aitchison 距离、
+以及余切丛上的外蕴辛形式 $\Omega = \text dF \wedge \text dx$——并非凭空构造，
+而是扎根于三条交汇的学术脉络。
+这三条脉络虽然在学科归属上分属成分数据分析、非Newton微积分与热带几何、
+以及几何控制理论，但它们共享一个底层共识：
+通过域同构或丛同构，将非线性结构线性化、将局部约束全局化、
+将能量流网络拓扑化。
+以下沿这三条线索组织综述，
+并指明每篇文献与 J7 体系的具体关联。
+
+\subsection{乘性域与对数-指数结构}
+
+\subsubsection{成分数据分析：Aitchison 几何}
+
+比例数据（成分数据）在统计学中长期面临闭合约束
+（各成分之和为常数）带来的奇异性问题。
+\textcite{Aitchison1986} 在其开创性专著中，
+通过将单形嵌入正射影空间并以对数比值代替原始比例，
+提出了以摄动运算（perturbation）和乘幂运算（powering）为基本运算的
+Hilbert 空间结构。
+\textcite{PawlowskyGlahnEgozcue2001} 进一步从微分几何视角
+将该体系阐释为单形上的 Riemann 流形，
+其测地线对应 Aitchison 距离。
+这两部工作确立了本文 \eqref{eq:Multiplicative-Field} 乘性域中
+$\sqplus$ 与 $\sqtimes$ 运算的统计几何根源：
+对数比值变换所诱导的线性结构
+正是将成分数据的约束空间"拉直"为欧氏空间的域同构。
+
+\textcite{Amari2016} 在信息几何中提出的双对偶仿射联络
+（Dually Coupled Affine Connections）理论，
+为这一几何图景提供了更深刻的解释。
+信息几何的核心对象正是正射影空间 $\mathbb R P^+_n$
+（或单纯形 Simplex）上的动力学。
+Amari指出，在流形的两个对偶坐标系之间，
+平直的测地线通过非线性联络拉回后会产生空间扭曲——
+这恰好解释了
+对数空间 $\mathbb R_{n+1}$ 中对称的随机扰动，
+为何在拉回实际空间 $X$ 后必然产生物理做功的非对称性。
+
+\subsubsection{非Newton微积分：乘性导数体系}
+
+\textcite{GrossmanKatz1972} 系统构建了非Newton微积分，
+以乘法群 $(\mathbb R^+,\cdot)$ 取代加法群 $(\mathbb R,+)$
+作为底域，重新定义了极限、导数和积分的概念。
+这是本文乘性域 $\boxed{\mathbb R^+}$
+从 Lie 群指数映射的角度选择自然对数底 $b=\text e$ 的数学前驱。
+\textcite{CordovaLepe2006} 推广了乘性度（multiplicative degree）的概念，
+将其应用于非Newton动力学与增长模型，
+为乘性域上微分方程的定性分析提供了工具。
+
+\textcite{Has2026} 等人近期将这一代数框架推进到了微分几何的完整层面：
+在具有比例度规（Proportional Metric）的乘性空间上，
+构建了乘性Riemann联络（Multiplicative Affine Connection）、
+Christoffel 符号和Riemann曲率张量，
+并证明了乘性欧氏空间与传统欧氏空间的同构与拉回关系。
+这为本文将动力学从对数空间拉回至 $\mathbb R^+$
+提供了严格的流形工具——
+乘性空间不仅仅是代数域，
+更是一个配备了完整曲率理论的微分流形。
+
+\subsubsection{热带几何与 Maslov 反去量子化}
+
+\textcite{Litvinov2007} 综述了 Maslov 反去量子化程序：
+通过 $\varepsilon$-对数变换 $x \mapsto \ln_{\varepsilon} x$，
+在 $\varepsilon \to 0$ 极限下将经典算术域连续形变为热带半环
 $(\mathbb R \cup \{-\infty\}, \max, +)$。
-该程序与本文所讨论的热带几何构成精确的对偶关系：
-本文的变换保持了从域到域的同构性
-（同时保留加法与乘法两种运算），
-而 Maslov 程序则将域压缩为幂等半环
-（加法退化为取极大值运算）。
-两者共同分享了"对数--指数对偶"这一核心数学母题，
-为我们理解乘性域在更大的去量子化框架中所处的坐标
-提供了不可或缺的参照系。
+这与本文热带几何讨论直接对偶：
+本文的变换方向是从域到域（保留加法与乘法两个运算），
+而 Maslov 程序是从域到幂等半环（加法退化为取最大）。
+二者共享对数-指数对偶这一数学核心，
+为理解乘性域在更广泛的去量子化框架中的位置提供了参照。
 
-在几何基础方面，\textcite{Hartshorne1977} 的经典射影空间理论，
+\subsubsection{射影几何基础}
+
+\textcite{Hartshorne1977} 的射影空间理论
 是本文对数齐次坐标 \eqref{eq:log-homo-coord} 与
-正射影空间构造 \eqref{eq:proj-space-positive} 的代数几何基石。
-将标准齐次坐标转化为对数齐次坐标这一操作，
-在拓扑学上等价于从射影空间的商拓扑 $\mathbb R^+_{n+1}/\sim$
-到商线性空间 $\mathbb R_{n+1}/[\mathbf 1]$ 的一个同胚映射：
-群作用的乘法非线性被对数彻底拉直为沿恒等方向的平移不变性。
-而射影空间所内禀的 Grassmann 结构——
-尤其是恒等线 $[\mathbf 1]$ 这一特殊对象——
-则为规范对称性与尺度剥离提供了根本的几何不变量基础。
+正射影空间构造 \eqref{eq:proj-space-positive} 的代数几何根基。
+将齐次坐标拉直为对数齐次坐标的操作，
+本质上是从射影空间的商拓扑 $\mathbb R^+_{n+1}/\sim$ 到
+商线性空间 $\mathbb R_{n+1}/[\mathbf 1]$ 的
+拓扑同胚：群作用的非线性被对数拉直为平移不变性，
+而射影空间中的 Grassmann 结构（尤其是恒等线 $[\mathbf 1]$）
+提供了规范对称性与尺度剥离的
+几何不变量基础。
 
-综上，乘性域 $\boxed{\mathbb R^+}$ 将 Aitchison 几何的对数--指数搬运机制、
-非Newton微积分的运算法则体系、热带去量子化的域变换程序，
-统一熔铸为 $\mathbb R^+$ 上一个具备完整运算规则的域结构，
-并通过对数齐次坐标将其嵌入线性代数与射影几何的操作范畴。
+\subsection{Dirac结构与端口-Hamilton系统}
 
-\subsection{随机热力学与能量采集系统}
+\subsubsection{Dirac流形的创立}
 
-在非平衡条件下，怎样捕获并利用系统自身的随机涨落，
-从中提取机械功并使之最大化，构成了随机热力学的核心议题~\cite{Seifert2012Stochastic, Esposito2010Entropy}。
-研究对象聚焦于微观乃至介观尺度的系统（典型如布朗粒子），
-考察它们在随机热浴中通过非平衡热力学过程——
-压缩、膨胀、交替接触不同热源——来获取有用功的机制~\cite{Kramers1940Brownian, Jarzynski1997Nonequilibrium}。
-在几何层面，布朗陀螺仪（Brownian gyrator）作为标志性模型，
-揭示了各向异性温度场（即热非对称性）如何驱动粒子产生定向位移并对外做功~\cite{Filippetti2021Brownian, Sasa2014Stochastic}；
-后续研究则进一步借助最优输运理论~\cite{Villani2009Optimal}
-和微分几何的语言，定量刻画最优输出功率与不可逆耗散之间的约束关系。
-这一从几何结构出发把握能量交换的分析路径，
-与本文的方法论基础高度契合。
-
-在工程应用层面，能量采集系统的研究方向致力于通过设计精巧的控制策略，
-从具有内在随机性的环境激励源——如机械振动、海洋波浪——
-中最大化地汲取可用能量~\cite{Zuo2013Energy, Ding2019Energy}。
-其中涉及两类典型装置：振动能量采集器（将环境机械振动转换为电能）
-与海浪能转换器~\cite{Falnes2002Ocean, Li2019Review}。
-环境激励本身即为高度随机的物理过程，
-通常被抽象为零均值的高斯随机过程~\cite{Rice1944Mathematical}。
-控制设计的核心困难在于构造最优或近似最优的随机控制器；
-以惯性海浪能转换器（ISWEC）为例，
-基于随机最优控制理论所设计的控制器，
-其平均吸收功率显著超越了传统线性阻尼策略~\cite{Giorgi2020Nonlinear, Paduano2021Control}。
-该问题直接映射至本文的核心目标：
-通过调节控制力场 $F$ 以最大化泛函 $J(F)$。
-
-机器人系统的状态变量——如平面运动群 $SE(2)$ 或空间运动群 $SE(3)$ 中的位姿——
-天然定义于非交换李群之上，
-这与本文底空间的代数结构一脉相承~\cite{Murray1994Mathematical, Barfoot2017State}。
-该领域着力处理机器人在非完整约束
-（例如无法侧向平移的轮式车辆）
-和非欧氏位形空间（如 $SE(2)$）中
-不确定性的建模与传播问题~\cite{Bloch2003Nonholonomic, Bloch2015Geometric}。
-其工具链大量依赖李群理论、指数映射
-以及福克--普朗克方程，
-以实现对状态概率密度的精确推演~\cite{Wang2019Lie, Solin2015Gaussian}；
-这一数学机制与本文利用指数映射沟通对数空间与物理空间、
-进而分析非对称性对系统行为的扰动效应，在内部结构上完全一致。
-最新进展甚至将保形预测框架与李群相结合，
-在非欧空间中构造出更紧致且统计效率更高的置信域~\cite{Klein2023Conformal}。
-
-在数值方法维度，有别于通过大量路径采样估计统计量的传统套路，
-随机偏微分方程领域直接对随机微分方程（SDE）的各阶矩方程进行解析或数值求解~\cite{Pardoux2007Stochastic, Hairer2011Ergodicity}~\cite{Jentzen2010Taylor, Kloeden2012Numerical}。
-与本研究的直接关联在于：
-已有工作明确指出，对于几何布朗运动（即乘性噪声驱动的情形），
-其二阶矩方程的自然变分表述恰好坐落于
-射影--注入张量积空间之上~\cite{Lang2017Stochastic, Flandoli2018Regularization}。
-该观察与本文从张量空间的视角审视问题的立场完全吻合，
-为本文的理论推导提供了坚硬的数学分析支撑。
-
-\subsection{几何力学：Dirac结构、PCH系统与辛动力学}
-
-\textcite{Courant1990} 所引入的 Dirac 流形（Dirac manifold）概念，
-是对经典辛结构的一次实质性推广：
-它将辛形式与 Poisson 双矢量的约束统一收纳于
-一个极大各向同性子丛 $D \subset TM \oplus T^*M$ 之中。
-这一推广的直接物理动因在于
-同时处理力学系统中的几何约束与能量耗散——
-当辛形式在约束子流形上发生退化（如 Dirac 括号），
-或者当系统承受非保守外力时，
-Dirac 结构依然能够提供能量演化的不变几何描写。
+\textcite{Courant1990} 引入的Dirac流形（Dirac manifold）
+是辛结构的推广：它将辛形式与 Poisson 双矢量的约束统一在
+一个极大各向同性子丛 $D \subset TM \oplus T^*M$ 中。
+这一推广的物理动机是处理力学系统中的约束与耗散——
+当辛形式退化（如约束子流形上的 Dirac 括号）
+或系统承受非保守力时，
+Dirac结构仍然提供了能量演化的不变几何描述。
 本文引入 $\Omega = \text dF \wedge \text dx$ 作为外蕴标准辛形式，
-其最终的理论归属指向的正是 Dirac 结构：
-当力场 $F$ 的辛形式在余切丛上遭遇退化——
-例如位置完全不可控、系统仅能观测能量流的被动动力学工况——
-Dirac 结构以其更宽广的几何包容力承载了这种"辛破损"。
+其最终的理论归宿正是Dirac结构：
+当力场 $F$ 的辛形式在余切丛上退化时
+（如位置不可控、仅观测能量流的被动动力学场景），
+Dirac结构用更宽容的几何包容了这种"辛破损"。
 
-在此基础上，\textcite{MaschkeVanDerSchaft1992} 首次提出端口-受控Hamilton系统（PCH），
-其核心理念是将传统封闭系统的 Hamilton 方程
-\emph{对外开口}：通过态方程
-$\dot{z} = [J(z)-R(z)]\nabla\mathcal H + g(z)u$，
-把外部输入 $u$ 与内部能量 $\mathcal H$ 的梯度经由端口捆绑为
-功率共轭对 $(u,y)$，
-使得外源所做功率 $u^T y$ 的量纲恒为功率。
-这一定义与本文 $F \wedge \text dx$ 的 $1$-形式描述构成精确对齐。
+\subsubsection{端口-Hamilton系统的创立与演进}
 
-\textcite{VanDerSchaftMaschke2002} 将该 PCH 范式从集总参数域
-扩展至分布参数系统，利用 Dirac 结构为边值能量流建立了内蕴几何模型。
-此工作的关键突破在于：边界端口不再被压缩为一个有限维向量，
-而是伸展为分布在系统空间边界上的场量，
-做功 $1$-形式 $\omega = F \wedge \text dx$ 随之转换为边界积分形式。
-这为本文"位置黑箱、力场做功为唯一观测量"的物理设定，
-提供了分布参数连续介质层面上的严格几何表达。
+\textcite{MaschkeVanDerSchaft1992} 首次提出端口-受控Hamilton系统（PCH），
+核心思想是将传统封闭系统的 Hamilton 方程
+\emph{开口化}：通过形如 $\dot{z} = [J(z)-R(z)]\nabla\mathcal H + g(z)u$
+的方程，将外部输入 $u$ 与内部能量 $\mathcal H$ 的梯度通过端口配对为
+功率共轭对 $(u,y)$，使得外源做功 $u^T y$ 的量纲恰好是功率。
+这与本文 $F \wedge \text dx$ 的 1-形式描述完全对齐。
 
-\textcite{CerveraVanDerSchaftBanos2007} 建立了 PCH 系统互联的统一代数框架：
-严格证明了任意两个 PCH 子系统通过功率连续耦合
-（即一方的输出 $y_1$ 等于另一方的输入 $u_2$）串联之后，
-整体系统仍然保持为一个良定义的 PCH 系统——
-其 Dirac 结构恰好是原始两个 Dirac 结构的复合。
-这一模块化封闭性是本文构建复杂能流网络的理论基石：
-无论各子系统内部的辛几何多么错综复杂，
-只要端口遵守功率共轭约束，
-整个系统的能量拓扑便能逐层拼装成型。
+\textcite{VanDerSchaftMaschke2002} 将 PCH 框架从集总参数系统
+推广到分布参数系统，利用 Dirac 结构为边值能量流建立了几何模型。
+该项工作的关键创新在于：边界端口不再是一个有限维向量，
+而是分布在系统空间边界上的场量，
+做功 $1$-形式 $\omega = F \wedge \text dx$ 变为边界积分形式。
+这为本文"位置不可控、力场做功为核心观测量"的物理图像
+提供了分布参数连续介质层面上的严格几何语言。
 
-\textcite{VanDerSchaftJeltsema2014} 对 PCH 理论给出了百科全书式的综述，
-覆盖了从有限维到无限维、从线性到非线性的全谱系统论视角。
-该综述凝练出 PCH 的三大核心支柱：
-辛骨架（$J$ 矩阵）、耗散架构（$R$ 矩阵），
-以及功率端口（$g, y$ 对偶对），
-为本文后续 PCH 专节提供了标准化的术语框架与稳定性判据。
-\textcite{VanDerSchaftMaschke2020} 进一步深入探讨了非线性 PCH 系统中
-Dirac 代数约束与 Lagrange 约束之间的精细关系：
-系统的运动被约束子流形所规约，
-而约束本身却可以通过 Lagrange 乘子
-被重新编码为端口上的虚拟力。
-在本文所设定的"位置自由、仅力做功"场景下，
-这一框架将约束内化为 Dirac 结构的天然几何嵌入，
-而非外部强加的附加条件。
+\textcite{CerveraVanDerSchaftBanos2007} 建立了 PCH 系统互联的
+统一框架：证明了任意两个 PCH 系统通过功率连续耦合
+（一个的输出 $y_1$ 等于另一个的输入 $u_2$）连接后，
+整体系统仍然是一个 PCH 系统——
+其 Dirac 结构是原始两个 Dirac 结构的复合。
+这一模块化性质是本文构建复杂能流网络的基石：
+无论子系统内部的辛几何如何复杂，
+只要端口遵循功率共轭原则，
+整个系统的能量拓扑就可以逐层拼装。
 
-在标准几何力学方面，\textcite{MarsdenRatiu1994} 的经典著作系统地铺设了
-从 Newton 力学到 Hamilton 力学、再递进至辛约化与动量映射的完整几何路线。
-本文框架与 Marsden--Ratiu 体系的对接点在于：
-标准教科书以余切丛 $T^*Q$ 为起点，
-取动量 $p$ 为纤维坐标，定义正则辛形式
+\textcite{VanDerSchaftJeltsema2014} 给出了 PCH 理论的完整综述，
+涵盖从有限维到无限维、从线性到非线性的系统理论视角。
+该综述确立了 PCH 的三个核心支柱：
+辛骨架（$J$ 矩阵）、耗散架构（$R$ 矩阵）
+与功率端口（$g, y$ 对偶对），
+为本文的 PCH 专节提供了标准化的术语框架与稳定性判据。
+
+\textcite{VanDerSchaftMaschke2020} 研究了非线性 PCH 系统中
+Dirac代数约束与Lagrange约束的精确关系。
+该项工作处理的是力学系统最根本的张力：
+系统的运动受限于约束子流形，
+但约束本身可以通过乘子（Lagrange multipliers）
+转化为端口上的虚拟力。
+当位置不可控、仅余力做功时，
+该框架将约束视为 Dirac 结构中天然的几何嵌入，
+而非外部附加条件——
+这与本文对"位置自由运动、力捕捉能量流"的几何直觉完全吻合。
+
+\subsection{辛动力学与几何力学}
+
+\subsubsection{几何力学的标准框架}
+
+\textcite{MarsdenRatiu1994} 的 \emph{Introduction to Mechanics and Symmetry}
+是几何力学领域不可逾越的经典，
+系统阐述了从Newton力学到 Hamilton 力学、再到辛约化与动量映射的完整
+几何路径。
+本文框架与 Marsden-Ratiu 体系的关系在于：
+传统教科书从余切丛 $T^*Q$ 起步，以动量 $p$ 为纤维坐标定义辛形式
 $\Omega_{\text{canonical}} = \text dp \wedge \text dq$；
-本文则改以力场 $F$ 为纤维坐标，
-构造外蕴辛形式 $\Omega_F = \text dF \wedge \text dx$。
-Marsden--Ratiu 关于余切丛丛同构与动力学算子的体系性论述，
-恰好为本文论证两种辛形式的代数等价性提供了必要的几何基础设施：
-关系式 $\text dF = \mathcal D(\text dp)$ 的本质，
-正是纤维上由动力学诱导的丛同构。
+本文则以力场 $F$ 为纤维坐标，
+定义外蕴辛形式 $\Omega_F = \text dF \wedge \text dx$。
+Marsden-Ratiu 关于余切丛丛同构与动力学算子的系统讨论，
+为本文论证两种辛形式的代数等价性提供了必要的几何结构：
+$\text dF = \mathcal D(\text dp)$ 的本质是
+纤维上的动力学诱导丛同构。
 
-在数据驱动方向，\textcite{KirchdoerferOrtiz2016} 提出了数据驱动计算力学的全新范式，
-其核心突破在于完全悬置本构模型，
-直接利用力--位移（Force-Displacement）数据点在相空间中的分布，
-借助最近邻搜索在满足平衡与兼容性约束的数据子集内
-寻找最自洽的力学状态。
-该工作对本文的深刻启示是：
-它以一个强有力的命题证明了——
-即使在完全不定义动量、不执行 Legendre 变换的前提下，
+\subsubsection{数据驱动的辛骨架重建}
+
+\textcite{KirchdoerferOrtiz2016} 提出数据驱动计算力学，
+核心思想是弃用本构模型，
+直接利用力-位移（Force-Displacement）数据点在相空间中的分布，
+通过最近邻搜索在满足平衡与兼容性的数据子集中
+寻求最一致的力学状态。
+该工作对本文的启示在于：
+它证明了一个极为深刻的命题——
+即便不定义动量、不执行 Legendre 变换，
 仅凭 $F\text{-}x$ 的做功微分形式数据，
-就足以无模型地重建系统的 Hamilton 流骨架。
+就可以以无模型的方式重建系统的 Hamilton 流骨架。
+这正是本文"位置自由运动、仅观测力做功"这一物理图像
+在数据科学时代的精确对应。
 
-在非保守系统方面，\textcite{BravettiCruzTapias2017} 所建立的接触 Hamilton 力学框架，
-构成了辛力学的一种自然扩张：
-当系统中出现不可逆耗散与热交换时，
-辛形式 $\Omega$ 的封闭性被打破（$\text d\Omega \neq 0$），
-相空间体积的 Liouville 守恒随之瓦解。
-接触 $1$-形式 $-\text d\mathcal H + p\,\text dq$ 及其相伴的 Reeb 向量场，
-为非保守系统提供了保结构的动力学语言。
-这一框架正是本文 PCH 体系中耗散矩阵 $R(z)$ 的最深层几何来源：
-由 $R \ge 0$ 所保障的能量耗散不等式，
-实质上就是接触几何在端口-Hamilton 语境下的精确实现。
+\subsubsection{接触Hamilton力学与Lagrange相干结构}
 
-\textcite{Haller2015} 综述的 Lagrange 相干结构（LCS），
-作为非自治流场中组织流体输运的核心骨架，
+\textcite{BravettiCruzTapias2017} 建立的接触Hamilton力学
+是辛力学的自然推广：
+当系统存在不可逆的耗散与热交换时，
+辛形式 $\Omega$ 的封闭性被破坏（$\text d\Omega \neq 0$），
+相空间体积不再守恒。
+接触形式 $-\text d\mathcal H + p\,\text dq$ 及其 Reeb 向量场
+为非保守系统提供了保结构的动力学描述。
+这一框架是本文 PCH 体系中耗散矩阵 $R(z)$ 的
+最深层的几何基底：$R \ge 0$ 所保证的能量耗散不等式
+本质上就是接触几何在端口-Hamilton语境下的实现。
+
+\textcite{Haller2015} 综述的Lagrange相干结构（LCS），
+作为非自治流场中流体输运的核心组织者，
 为本文"胞腔流与能流刚性骨架"的物理直觉
-提供了流体力学维度上的严格对偶。
-在 Haller 的理论体系中，LCS 被界定为有限时间 Lyapunov 指数场的脊线，
-它们将不可控的底层流体运动分割为若干输运性质迥异的连贯区域。
-从本文的视角重新审视，
-$\Omega = \text dF \wedge \text dx$ 所编码的力场能量曲率，
-恰好在相空间中定义了一种 LCS 的类比物——
-一种不依附于具体轨道的、完全由做功形式本身所诱导的结构不变量。
+提供了流体力学层面的严格对应。
+在 Haller 的框架中，LCS 是有限时间 Lyapunov 指数场的脊线，
+它们将不可控的底层流体运动划分为
+具有不同输运性质的连贯区域。
+从本文视角看，当粒子在受环境驱动的不可控流场中自由运动时，
+$\Omega = \text dF \wedge \text dx$ 所描述的力场能量曲率充其量
+定义了相空间中的 LCS 类似物——
+一种不依赖于具体轨道的、由做功形式本身诱导的
+结构不变量。
 
-综上，外蕴辛形式 $\Omega = \text dF \wedge \text dx$ 将
-Courant 的 Dirac 流形、Van der Schaft 与 Maschke 的 PCH 端口语言、
-Marsden--Ratiu 的余切丛几何学，以及 Kirchdoerfer--Ortiz 的数据驱动重建，
-缝合为一套统一的"能量流几何"框架：
-位置是自由演化的、力场是核心观测量的、端口是对外开放的、
-Dirac 结构是辛破损时刻的安全兜底。
-接触 Hamilton 力学与 Lagrange 相干结构，
-则分别从耗散导致的相空间收缩和流场的拓扑骨架两个侧面，
-为该非保守、非自治系统在演化过程中的动力学不变量
-提供了最深层的几何安全网。
+\subsection{随机几何力学与随机热力学}
 
-\subsection{随机几何力学与非平衡能量交换}
+\subsubsection{随机微积分与辛流形的交汇}
 
-\textcite{Bismut1981} 在其开创性的著作中，
-首次系统地将随机微积分——
-涵盖 It\^{o} 积分与 Stratonovich 积分——
-铺设于辛流形和余切丛 $T^*X$ 之上。
-书中严密推演了底空间流形受到随机变分扰动时，
-相空间中的辛结构与 Hamilton 向量场所历经的几何形变，
-尤其剖析了动量映射在非线性拉回下所产生的非对称流。
-这为本文 It\^{o} 修正项对相空间体积刚性守恒的破坏效应
+\textcite{Bismut1981} 在其开创性著作中，
+率先将随机微积分（It\^{o} 和 Stratonovich）直接引入
+辛流形和余切丛 $T^*X$。
+书中详细推导了当底空间流形受到随机变分时，
+相空间上的辛结构和Hamilton向量场如何发生变形，
+特别是探讨了动量映射在非线性拉回下的非对称流。
+这为本文 5."随机过程"中
+It\^{o} 修正项对相空间体积刚性守恒的破坏
 提供了最深层的几何表述：
-底空间上的乘性噪声借助指数映射被搬运至余切丛，
-在纤维方向上催生出不对称的能量通量，
-其几何根源正是动量映射的非线性拉回在随机环境下的必然表现。
+底空间的乘性噪声通过指数映射被搬运至余切丛，
+在纤维上产生不对称的能量流，
+其本质是动量映射的非线性拉回在随机环境下的必然结果。
 
-\textcite{HolmTyranowski2016} 从变分原理的立场
+\textcite{HolmTyranowski2016} 从变分原理的角度
 进一步推进了这一方向：
-通过引入带有位置依赖的随机摄动（即乘性噪声），
-并运用随机 Hamilton-Pontryagin 变分原理，
-他们在保持系统守恒量和正定约束的前提下，
-实现了对系统几何辛结构的修正而非破坏。
+利用带有位置依赖的随机摄动（即乘性噪声），
+通过随机Hamilton-Pontryagin原理
+（Stochastic Hamilton-Pontryagin Principle），
+在保持系统守恒量和正定约束的前提下，
+修正而非破坏系统的几何辛结构。
 该工作为本文的核心命题——
-"位置不可控，但辛结构可观测"——
-铸就了坚实的变分学底座。
+"位置不可控但辛结构可观察"——
+提供了严格的变分学基础。
 
-在物理诠释层面，\textcite{Seifert2012} 的随机热力学综述
-为本文的核心定量结论
+\subsubsection{随机热力学的非平衡诠释}
+
+\textcite{Seifert2012} 的随机热力学综述
+为本文 5. 中得出的核心结论
 $\mathbb E[\omega] = \frac{1}{2}Fx\sigma^2 \text dt$
-搭建了通往物理诠释的关键桥梁。
-当底空间携带乘性噪声（如几何 Brown 运动）时，
-路径积分的微观可逆性遭到系统性瓦解：
-系统沿 $1$-形式 $\omega = F \wedge \text dx$
-在相空间中的轨迹演化过程中，
-热力学第一定律与第二定律均须接受 It\^{o} 修正的重新校准。
-该漂移项在物理本质上对应于
+提供了物理诠释的桥梁。
+当底空间具有乘性噪声（如几何Brown运动）时，
+路径积分的可逆性被系统性地打破：
+系统在相空间中沿着 $1$-形式 $\omega = F \wedge \text dx$
+轨迹演化时，
+热力学第一、第二定律均需接受 It\^{o} 修正。
+该漂移项本质上对应了
 环境噪声诱导的不可逆熵产生（Noise-induced Drift）——
-即底空间乘性几何偏置所催生的
+由于底空间乘性几何偏置导致的
 非平衡态耗散流（Dissipative Flux）。
 
-在此理论基础上，可以系统地将 J7 的能量提取机制阐述如下。
-将底空间 $\mathbb R^+_{n+1}$ 视为乘性 Lie 群，并为其装备左不变度量，
-则其指数映射 $\exp: \mathbb R_{n+1} \to \mathbb R^+_{n+1}$
-的 Jacobi 行列式直接给出了体积元的伸缩因子。
-设对数空间中的 Brown 运动~\cite{Nelson1967Dynamical} 
-具有方差 $\sigma^2 t$，
-其无穷小生成元对光滑函数 $f$ 的作用为
-$\mathcal L f = \frac{\sigma^2}{2} \sum_i \partial_{y_i}^2 f$。
-借助 It\^{o} 公式~\cite{ItO1951Stochastic,Protter2005Stochastic}，
-将该随机过程投影至正射影空间 $\mathbb R P^+_n$
-（齐次坐标规范化后第一分量固定为 $1$），
-即可提取出诱导漂移项；此项正比于 $\sigma^2$，
-构成加性对称性发生破缺的几何源头。
-取广义坐标 $X \in \mathbb R^n$（即 $\mathbb R P^+_n$ 的仿射补丁），
-引入乘性联络 $\nabla^{\mathrm{mult}}$
-~\cite{KobayashiNomizu1963Foundations}，
-定义外力 $F$ 在指数映射下的拉回为
-$\tilde F(y) = \mathrm{diag}(\mathrm e^{y_i}) \, F(\mathrm e^y)$。
-对于沿坐标轴的微小平移 $\mathrm dy = \pm\varepsilon \, \mathbf e_i$，
-功增量为 $\Delta W = F_i(x) \cdot (\mathrm e^{\varepsilon} - 1) x_i$；
-比较 $+\varepsilon$ 与 $-\varepsilon$ 两种情形下的功增量之差，
-得到非线性整流函数
-$\phi(\varepsilon) = \mathrm e^{\varepsilon} - \mathrm e^{-\varepsilon} = 2\sinh(\varepsilon)$，
-该函数即为后续优化问题中的核心核函数。
+\subsection{文献综述小结}
 
-将外力 $F$（等价的势场 $V$）建模为依赖于
-当前坐标 $x$ 和时间 $t$ 的控制变量，
-目标泛函设为
-$J(F) = \mathbb E\left[\int_0^T F(x_t)\circ \mathrm dx_t\right]
-:= \mathbb E\left[\int_0^T \sum_i F_i(x_t)\cdot x_i(t)\circ \mathrm dy_i(t)\right]$，
-其中 $\circ$ 标记 Stratonovich 积分~\cite{Stratonovich1966New}，
-从而保证能量守恒的链式法则成立。
-由于 $x_i = \mathrm e^{y_i}$ 为凸函数，
-Jensen 不等式~\cite{Jensen1906SurLesFonctions} 表明，
-当 $F_i$ 与 $x_i$ 异号时，
-系统倾向于从随机环境中汲取更多功，即从热浴中提取能量。
+综观四条脉络，J7研究的数学结构恰好处于它们的交汇点上：
+\begin{enumerate}
+  \item 乘性域 $\boxed{\mathbb R^+}$ 将 Aitchison 几何的
+  对数-指数搬运、非Newton微积分的运算法则、热带去量子化的域变换，
+  统一为 $\mathbb R^+$ 上一个可运算的域结构，
+  并通过对数齐次坐标将其拉入线性代数与射影几何的范畴。
 
-对应的 Hamilton--Jacobi--Bellman 方程含有一项
-由 It\^{o} 修正贡献的额外一阶项 $+\frac12\sigma^2 x_i \partial_{x_i}$，
-该项恰是净能量流的直接来源。
-优化分析揭示，最大能量提取并非实现于平衡态邻域，
-而存在于边界追踪或奇异点吸引机制之中：
-乘性域 $\mathbb R^+$ 的非完备性（$0$ 与 $\infty$ 为其边界）
-使得最优控制策略倾向于将粒子轨迹驱向 $0$，
-因为 $\mathrm e^{-\varepsilon}$ 带来的损失恒小于 $\mathrm e^{+\varepsilon}$ 产生的收益。
-实践中可采用分段常数反馈策略：
-当 $y_i > 0$ 时施加正向阻尼，
-当 $y_i < 0$ 时施加负向阻尼；
-此非对称阻尼机制将热噪声中的随机对称功转换为定向力学功。
+  \item 外蕴辛形式 $\Omega = \text dF \wedge \text dx$ 则把
+  Courant 的Dirac流形、Van der Schaft 与 Maschke 的 PCH 端口语言、
+  Marsden-Ratiu 的余切丛几何，以及 Kirchdoerfer-Ortiz 的数据驱动重建，
+  缝合为统一的"能量流几何"框架：
+  位置是自由的、力是核心的、端口是开放的、
+  Dirac结构是辛破损时的安全网。
 
-通过 Girsanov 定理~\cite{Bismut1981LargeDeviations}，
-最大化做功的问题可对偶地转化为
-最小化相对熵的问题——
-即驱动粒子的实际测度尽可能偏离无外力时的 Wiener 测度，
-而底空间的几何非对称性恰好为实现此偏离提供了曲率自由度。
-数值实现方面，建议在对数空间执行均匀步长的 Euler--Maruyama 离散，
-随后通过指数映射拉回至 $X$，
-监测累积功 $W(t)$ 的期望与方差；
-预期结果表现为 $\mathbb E[W(t)] \propto t$ 
-且斜率显著大于零，即纯粹的几何棘轮效应。
-若进一步采用强化学习框架，
-将 $F$ 参数化为神经网络并以 $\Delta W$ 为奖励函数，
-网络将自发习得如下策略：
-在坐标趋近 $0$ 的瞬态吸气蓄能、
-在坐标膨胀前排气释放。
+  \item 接触Hamilton力学与Lagrange相干结构则分别从耗散的相空间收缩
+  和流场的拓扑骨架角度，为该系统在非保守、非自治环境下
+  的动力学不变量提供了最深层的几何保障。
 
-最终的理论突破在于：
-能量交换的最大化依赖于力场 $F(x)$
-与乘性联络 $\nabla^{\mathrm{mult}}$ 之间的非交换对易子；
-当 $F$ 的梯度与坐标 $X$ 不可交换时，
-系统将产生额外的净功，
-其幅度由李括号 $[F, X]$ 决定。
-最大能量提取问题等价于
-在 $\mathbb R P^+_n$ 上构造具有最大和乐群的非保守力场
-~\cite{KobayashiNomizu1963Foundations}。
-建议从 $n=1$ 的一维情形出发求解 HJB 方程的显式解
-（可归约为 Kummer 函数），
-再逐步推广至任意有限维情形。
+  \item 随机几何力学（Bismut 的辛流形随机微积分、Holm--Tyranowski 的随机变分原理）
+  与随机热力学（Seifert 的噪声诱导漂移与非平衡耗散），
+  则从 It\^{o} 修正对相空间体积刚性守恒的破坏、
+  与底空间乘性几何偏置导致的不可逆熵产生这两个维度，
+  为 5. 中 $\mathbb E[\omega] = \frac{1}{2}Fx\sigma^2 \text dt$
+  所表征的随机动力学非对称性
+  提供了最深层的数学物理根基。
+\end{enumerate}
 
-随机几何力学（Bismut 的辛流形随机微积分、
-Holm--Tyranowski 的随机变分原理）
-与随机热力学（Seifert 的噪声诱导漂移与非平衡耗散理论），
-从 It\^{o} 修正对相空间体积刚性守恒的瓦解作用、
-以及底空间乘性几何偏置所引发的不可逆熵产生这两个维度，
-为 $\mathbb E[\omega] = \frac{1}{2}Fx\sigma^2 \text dt$
-所定量表征的随机动力学非对称性，
-提供了最深沉的数学物理根基。
-
-本手册后续各节的逻辑展开，均以本节所述文献为其理论源头——
-第 3 节（运动学）承接文献综述的第一条脉络，
-第 4 节（动力学）承接第二条与第三条脉络，
-第 5 节（随机过程）承接第四条脉络。
+本手册后续各节的推导，均以本节所述文献为理论基础——
+3.（运动学）承接文献综述第一条脉络，
+4.（动力学）承接第二条与第三条脉络，
+5.（随机过程）承接第四条脉络。
 
 \section{运动学}
 
