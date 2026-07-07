@@ -52,7 +52,7 @@
 
 $n$个点构成的有限点集记为$\textbf{n} = \{ 1,\ldots,n \}$，
 两个有限点集$\textbf{m}$和$\textbf{n}$的张量积同构于直积。
-自由函子$F:\textbf{Set} \to \textbf{}$将基生成为线性空间，
+自由函子$F:\textbf{Set} \to \textbf{Vct}$将基生成为线性空间，
 且保持张量积：
 
 $$
@@ -77,13 +77,14 @@ $$
 
 多个单点集构成张量的基：
 
-$$
+\begin{equation}
 X = \bigotimes_{\alpha=1}^o \textbf{n}_\alpha
-$$
+\label{eq:tensor-basis}  
+\end{equation}
 
-$0=0$时是标量空间即实域，
-$0=1$时是实线性空间，
-$0=2$时是二阶实张量空间可用矩阵空间表示。
+$o=0$时是标量空间即实域，
+$o=1$时是实线性空间，
+$o=2$时是二阶实张量空间可用矩阵空间表示。
 更高阶的张量积底空间$X$，
 其上的实值函数集同构于取值于多元实值数组空间
 
@@ -99,21 +100,28 @@ $$
 它有平凡拓扑和离散拓扑，
 并可视特定情况赋予介于二者之间的更有意义的拓扑，
 从而决定了其上的交换含幺连续函数代数$C(X)$。
+作为极端，
+平凡拓扑下$C(X) = \mathbb R$，
+离散拓扑下$C(X) = \mathbb R^X$。
 
 \section{神经网络}
 
-输入和输入分别构造在两个上述底空间上，
-形成态射：
+两个底空间\eqref{eq:tensor-basis}上构造从输入空间到输出空间的态射：
 
 $$
-% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBoBGAXVJADcBDAGwFcYkQAdD4AAi5xgAPHACMAZsAC2AXwD6XJmgAW9Ph2khppdJlz5CKAEwVqdJq3YANHgF41IrAHMIeSfDUDh4qXIWNl9JraIBjYeAREACwmNAwsbIicHJL0OEoiIjwASgB61lzYbgCO9k4uWG5wailpGdmyUvIciioaWjph+kRkAMymcRaJXLz8QqISYL4cIjA4qlxtwaF6EUakfbHmCSAAmralzq7uo14TUzNzQR0rBsjRG2bx7Fw16Zm5ewUVMCVcDoffKovVJverAMBNC70RbXcK3MjEfpbZ4cTzjYAAZVmMJCujhRGMiM2TyGqLG3ixOBxy3xKGiRMegySaO8ADUAMZUzSmGBQRzwIigMQAJwgkiQZBAOAgSHI7RAIrFspo0qQxil9CwjHYkDAbHlivFiB6KpliGiGq1OoI+uChqQFtViAArAbRUbJU6em6lYhyKaHT6jeqna67e6kAA2AOIADsQaQsZjAA5pJRpEA
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBoBGAXVJADcBDAGwFcYkQANAAgF4uAdfgCMsAcwh4AtvAH8cMAB44hAM2CSAvgH1BTNAAt6IDaXSZc+QigBMFanSat2gyfRz6hQrgCUAet0FsaQBHWRFxKRkXNw8vby11HX49Qw1jUxAMbDwCIjIAZnsGFjZEEABNXjCxCSxpOFl5JVVgMG1BIRgcIxMzbMsiW0KaYqcy6PdPH19KwLqYUI6ayIaJ2J8EsCTO7rTezPMcqxJSYiLHUpBBJuU1AGUuvYysi1ybU-OS5zlFW+AANQAxjg9vYYFBRPAiKAVAAnCCSJBkEA4CBIcg0bpYRjsSBgNj7OEIpC2FFoxD5QnwxGIZGoklU4mIDFkpCUjJEmkAFkx5IArBpKBogA
 \begin{tikzcd}
-\textbf{Set} \arrow[rr]                       &  & \textbf{Set} \arrow[rr]                                &  & \textbf{Vct}                                                  \\
-\{ \textbf{m}_\alpha \} \arrow[rr] \arrow[dd] &  & X = \bigotimes \textbf{m}_\alpha \arrow[rr] \arrow[dd] &  & \mathbb R^X \simeq \bigotimes \mathbb R_{m_\alpha} \arrow[dd] \\
-                                              &  &                                                        &  &                                                               \\
-\{ \textbf{n}_\beta \} \arrow[rr]             &  & Y = \bigotimes \textbf{n}_\beta \arrow[rr]             &  & \mathbb R^Y \simeq \bigotimes \mathbb R_{n_\beta}            
+\textbf{Set} \arrow[rr]                                &  & \textbf{Vct}                                                  \\
+X = \bigotimes \textbf{m}_\alpha \arrow[rr] \arrow[dd] &  & \mathbb R^X \simeq \bigotimes \mathbb R_{m_\alpha} \arrow[dd] \\
+                                                       &  &                                                               \\
+Y = \bigotimes \textbf{n}_\beta \arrow[rr]             &  & \mathbb R^Y \simeq \bigotimes \mathbb R_{n_\beta}            
 \end{tikzcd}
 $$
+
+如此构造的态射是线性映射，
+拟合能力有限，
+需要将其拓展为非线性模型，
+此时需要神经网络。
 
 \section{Hadamard积}
 
