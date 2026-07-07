@@ -49,29 +49,54 @@
 
 \section{连续函数代数}
 
-单点集$\textbf{1}$上的实值函数集同构于实域
-$\mathbb R^\textbf{1} \simeq \mathbb R$，
-它是实标量空间。
-$n$个点构成的点集$\textbf{n}$上的实值函数集同构于实线性空间
-$\mathbb R^\textbf{n} \simeq \mathbb R_n$，
-它是实向量空间：
-$\dim \ \mathbb R^\textbf{n} = \dim \mathbb R_n = |\textbf{n}| = n$。
-两个有限点集$\textbf{m}$和$\textbf{n}$的集合范畴张量积同构于直积：
-$\textbf{m} \otimes \textbf{n} \simeq \textbf{m} \times \textbf{n}$，
-其张量积上的实值函数集同构于实矩阵空间
-$\mathbb R^{\textbf{m} \otimes \textbf{n}} \simeq \mathbb R^{\textbf{m} \oplus \textbf{n}} \simeq \mathbb R^{\textbf{m}} \otimes \mathbb R^{\textbf{n}} \simeq \mathbb R_m^n$。
-更高阶的有限点集的张量积作为底空间，
+
+$n$个点构成的有限点集记为$\textbf{n} = \{ 1,\ldots,n \}$，
+两个有限点集$\textbf{m}$和$\textbf{n}$的张量积同构于直积。
+自由函子$F:\textbf{Set} \to \textbf{}$将基生成为线性空间，
+且保持张量积：
+
+$$
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAB12cYAPHAIwBmwAGJYwAZRg4AviBml0mXPkIoALOSq1GLNp258hwAGoBjWQH1OAWzo4AFv34ACAErzFIDNjwEiZACM2vTMrIgcXLwCgi42nkq+qkSawdShehG29k6ubgB6BtFCcS6c2DYwAI5l7HaOzu6W8QqJKv4oZADMIbrhkYYxLoSt3sp+asiaPel9+nU5jQVFRrFgtRXVtfW5TSNePu2TZABMvWHzgyU2tRB4lXC1V2sbWJU1K0M3Bm-wT8VrBJjJIdKakM6zC5ZBYNPL5YCfYw2GS3e5-RHCMAyFHlX4fGG7ZZRValTh3X6PbKw9yFYlDda497bRZ5ZqoinM6luSwjbQwKAAc3gRFAggAThB4ogyCAcBAkIFIZkQCJrASlkDxZKkCdqHKkF09XQsAw2HY0HB9aMtVLNLL5YgAKxGk1mugWq1eG1IABseodutlxtNEXNlvl1olUr99qQdpwwbdHojXqjSAA7P6DS6QyAw57RWnEJnY06c0nw5qizH9cXy6H3ZWZBQZEA
+\begin{tikzcd}
+\textbf{FinSet} \arrow[rrrr, "F_\mathbb R"]                                                                               &  &  &  & \textbf{Vct}_\mathbb R                                                                                                                                                        \\
+\textbf m \arrow[rrrr, maps to]                                                                                           &  &  &  & \mathbb R^\textbf m \simeq \mathbb R_m                                                                                                                                        \\
+\textbf m \otimes \textbf n \simeq \textbf m \times \textbf n \arrow[u, maps to] \arrow[d, maps to] \arrow[rrrr, maps to] &  &  &  & \mathbb R^{\textbf{m} \otimes \textbf{n}} \simeq \mathbb R^\textbf m \otimes \mathbb R^\textbf n \simeq \mathbb R_m \otimes \mathbb R_n \arrow[u, maps to] \arrow[d, maps to] \\
+\textbf n \arrow[rrrr, maps to]                                                                                           &  &  &  & \mathbb R^\textbf n \simeq \mathbb R_n                                                                                                                                       
+\end{tikzcd}
+$$
+
+且
+
+$$
+|\textbf m \otimes \textbf n| = |\textbf m \times \textbf n|
+= m \times n 
+= \dim \ \mathbb R^{\textbf{m} \otimes \textbf{n}}
+= \dim \mathbb R^\textbf m \otimes \mathbb R^\textbf n 
+= \dim \mathbb R_m \times \dim \mathbb R_n
+$$
+
+多个单点集构成张量的基：
+
+$$
+X = \bigotimes_{\alpha=1}^o \textbf{n}_\alpha
+$$
+
+$0=0$时是标量空间即实域，
+$0=1$时是实线性空间，
+$0=2$时是二阶实张量空间可用矩阵空间表示。
+更高阶的张量积底空间$X$，
 其上的实值函数集同构于取值于多元实值数组空间
 
 $$
-X = \bigotimes_{\alpha=1}^o \textbf{n}_\alpha, \quad
 \mathbb R^X \simeq 
 \bigotimes_{\alpha=1}^o \mathbb R_{n_\alpha}
 $$
 
-这一结构统一了标量、向量等。
-$X = \bigotimes_{\alpha=1}^o \textbf{n}_\alpha$作为有限离散点集，
-有平凡拓扑和离散拓扑，
+离散点集之内的点一般是没有联系的，
+体现了向量的基元素相互的独立性和无序性（指标置换）。
+但离散点集之间是可能产生联系的，
+体现在张量积$X$，
+它有平凡拓扑和离散拓扑，
 并可视特定情况赋予介于二者之间的更有意义的拓扑，
 从而决定了其上的交换含幺连续函数代数$C(X)$。
 
