@@ -15,6 +15,7 @@ Write-Host "按 Ctrl+C 停止`n"
 
 # 用于防抖的 hashtable: file_path -> timer
 $timers = @{}
+$running = @{}   # dir -> 是否正在编译（防止同目录重叠编译）
 $lock = [object]::new()
 
 $watcher = [System.IO.FileSystemWatcher]::new($texRoot, "*.tex")
@@ -44,19 +45,49 @@ $onChanged = {
         
         $dirCopy = $dir
         $timer.add_Elapsed({
+            # 防止同一目录的编译重叠（上一次还没结束就又触发）
+            [System.Threading.Monitor]::Enter($script:lock)
+            if ($script:running.ContainsKey($dirCopy) -and $script:running[$dirCopy]) {
+                [System.Threading.Monitor]::Exit($script:lock)
+                return
+            }
+            $script:running[$dirCopy] = $true
+            [System.Threading.Monitor]::Exit($script:lock)
+
+            $texName = "$(Split-Path $dirCopy -Leaf).tex"
             Write-Host "[$(Get-Date -Format 'HH:mm:ss')] 编译: $dirCopy" -ForegroundColor Green
             try {
-                Push-Location $dirCopy
-                $result = latexmk -lualatex -quiet "$(Split-Path $dirCopy -Leaf).tex" 2>&1
-                $warnings = ($result | Where-Object { $_ -match 'Warning|Error' })
-                if ($warnings) {
-                    Write-Host ($warnings -join "`n") -ForegroundColor DarkYellow
+                $sb = {
+                    param($dir, $tex)
+                    $env:PATH = "C:\texlive\2026\bin\windows;$env:PATH"
+                    Push-Location $dir
+                    try {
+                        # -interaction=nonstopmode: 遇错不等待键盘输入，避免进程挂死
+                        latexmk -lualatex -quiet -latexoption="-interaction=nonstopmode" $tex 2>&1
+                    } finally {
+                        Pop-Location
+                    }
                 }
-                Write-Host "[$(Get-Date -Format 'HH:mm:ss')] 完成: $dirCopy`n" -ForegroundColor Green
+                $job = Start-Job -ScriptBlock $sb -ArgumentList $dirCopy, $texName
+                $done = Wait-Job $job -Timeout 180
+                if (-not $done) {
+                    Write-Host "[$(Get-Date -Format 'HH:mm:ss')] 编译超时(180s)，强制终止: $dirCopy" -ForegroundColor Red
+                    Stop-Job $job -ErrorAction SilentlyContinue
+                } else {
+                    $result = Receive-Job $job
+                    $warnings = ($result | Where-Object { $_ -match 'Warning|Error' })
+                    if ($warnings) {
+                        Write-Host ($warnings -join "`n") -ForegroundColor DarkYellow
+                    }
+                    Write-Host "[$(Get-Date -Format 'HH:mm:ss')] 完成: $dirCopy`n" -ForegroundColor Green
+                }
+                Remove-Job $job -Force -ErrorAction SilentlyContinue
             } catch {
                 Write-Host "[$(Get-Date -Format 'HH:mm:ss')] 编译失败: $dirCopy -- $_" -ForegroundColor Red
             } finally {
-                Pop-Location
+                [System.Threading.Monitor]::Enter($script:lock)
+                $script:running[$dirCopy] = $false
+                [System.Threading.Monitor]::Exit($script:lock)
             }
         })
         $script:timers[$dir] = $timer
