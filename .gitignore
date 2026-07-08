@@ -25,3 +25,6 @@ watch-compile.ps1
 011-fi/fi.idx
 011-fi/fi.ilg
 011-fi/fi.ind
+010-energy/energy.bcf-SAVE-ERROR
+010-energy/energy.ind
+010-energy/energy.ilg
