@@ -1,5 +1,3 @@
-
-
 \documentclass[a4paper,10pt]{article}
 
 \usepackage{../preamble-paper}
@@ -21,16 +19,16 @@
 
 关于股票除权、拆股（Stock Splits）以及之后的股价表现（包括抗跌性与超额收益），在学术界和行为金融学中确实有非常多深入的研究。
 
-学术界通常不直接使用“抗跌”这个大白话，而是将其放在“名义价格错觉”\textbf{、}“信号理论”\textbf{和}“流动性假说”的框架下去研究。主要的几个核心学术结论如下：
+学术界通常不直接使用“抗跌”这个大白话，而是将其放在“名义价格错觉”、“信号理论”和“流动性假说”的框架下去研究。主要的几个核心学术结论如下：
 
-\subsection*{1. 名义价格错觉（Nominal Price Illusion）}
+\subsection*{1. 名义价格错觉（Nominal Price Illusion）与零碎股冲击}
 
 俄亥俄州立大学的学者 Birru 和 Wang 在 2016 年发表了一篇极具代表性的论文《Nominal Price Illusion》\cite{BirruWang2016}。
 
 \begin{itemize}
-    \item \textbf{研究发现}：散户投资者对低绝对股价的股票有一种“彩票心理”（Lottery-like stock preference），错误地认为低价股“上涨空间更大，下跌空间有限（更抗跌）”。
-    \item \textbf{心理机制}：这是一种认知偏差（Numerosity Bias）。除权后，投资者心理上觉得 50 元的股票比 100 元的股票安全，这种心理在短期内会产生微弱的买盘支撑。
-    \item \textbf{最新研究反转}：在 2024 年的一项针对互联网新一代券商（Neobrokers）的研究中\cite{Neobrokers2024}，学者发现随着“碎片化交易（Fractional Shares，即允许买入0.1股）”\textbf{的普及，这种价格错觉引发的抗跌或暴涨效应在美股正在大幅减弱。因为资金约束被打破了，投资者不再因为“买不起一手”而被迫偏好低价股。然而，在} A股市场（由于有“最小交易单位100股”的刚性限制），这种Affordability（负担能力）约束依然显著存在，因此低价对散户的吸引力依然存在。
+    \item \textbf{传统研究发现}：散户投资者对低绝对股价的股票有一种“彩票心理”（Lottery-like stock preference），错误地认为低价股“上涨空间更大，下跌空间有限（更抗跌）”。这是一种典型的认知偏差（Numerosity Bias）。
+    \item \textbf{最新研究反转（2024年）}：Borsboom 和 Füllbrunn (2024)\cite{BorsboomFullbrunn2024} 针对新一代互联网券商（Neobrokers）的研究发现，随着\textbf{“零碎股交易（Fractional Shares）”}的普及，这种由名义价格错觉引发的短期“抗跌或暴涨”效应在美股成熟市场已经显著减弱乃至消失。因为资金约束被彻底打破，散户不再因为“买不起一手”而被迫偏好低绝对股价。
+    \item \textbf{A股市场的特异性}：然而，由于 \textbf{A股市场依然存在“最小交易单位 100 股”的刚性限制}，这种名义门槛（Affordability Constraint）依然对中国散户具有显著的心理锚定效应，除权低价对散户的吸引力在本土环境依然部分存在。
 \end{itemize}
 
 \subsection*{2. 信号理论（Signaling Hypothesis）}
@@ -51,6 +49,25 @@
     \item \textbf{大股东减持与“贴权”}：研究指出，A股相当一部分高比例除权（送转）并不是因为基本面好，而是为了配合大股东解禁减持。在除权后，由于散户盲目涌入接盘，主力资金借机出货，导致股价在除权后表现出极高的\textbf{非抗跌性}（即显著的贴权，表现弱于大盘）。这也是为什么中国证监会后来对“高送转”出台了极其严格的监管指引。
 \end{itemize}
 
+\subsection*{4. 波动率跃升效应（The Volatility Spike Effect）}
+
+在量化金融学中，评估一只股票是否“抗跌”，核心指标之一是其收益率的波动率（Volatility）。经典文献直接否定了除权能降低风险的假设。
+
+\begin{itemize}
+    \item \textbf{实证发现}：Ohlson 和 Penman（1985）\cite{OhlsonPenman1985} 以及 Koski（1995）\cite{Koski1995} 针对美股拆股的大样本量化研究表明，股票在除权（拆股）后，其\textbf{日收益率的波动率（Standard Deviation）和系统性风险（Beta）平均显著上升约 20\% 至 30\%}。
+    \item \textbf{定量解释}：这种波动率的上升并不能完全由公司基本面的改变来解释。后续研究表明，这种波动率跃升（Volatility Spike）主要集中在除权后的前两周。由于绝对股价降低，噪音交易者（Noise Traders）和高频散户的频繁买卖引入了更多的市场噪音，反而使股价在面临市场冲击时\textbf{更容易出现剧烈波动，而不是更抗跌}。
+\end{itemize}
+
+\subsection*{5. 长期非流动性永久恶化（Permanent Illiquidity Deterioration）}
+
+管理层选择除权的重要借口之一是“提高股票流动性并增强股价稳定性”，但最近几年的微观结构前沿研究对这一假说提出了严厉挑战。
+
+\begin{itemize}
+    \item \textbf{买卖价差与订单簿受损}：早在 Conroy 等 (1990)\cite{ConroyHarrisBenet1990} 与 Lipson (2001)\cite{Lipson2001} 的基础研究中就发现，除权后限价订单簿（Limit Order Book）的百分比有效价差会扩大，深度变薄 30\%。
+    \item \textbf{最新前沿量化（2025年）}：Linton 与 Olive (2025)\cite{LintonOlive2025} 采用最新的动态半参数时间序列模型对近三十年的高频交易数据进行了拆解。实证结果表明，除权对流动性的影响具有严重的“双相特征”：虽然除权在短期内会由于散户订单数量（Order Count）的爆发带来暂时的交易活跃，但**长期来看，股票的阿米胡德非流动性指标（Amihud Illiquidity Trend）呈现出显著且永久性的上升（即流动性恶化）**。
+    \item \textbf{击穿效应}：这意味着，长期来看，除权去除了原先高价时机构资金提供的深厚限价单缓冲。当市场发生系统性恐慌抛盘时，变薄的订单簿极易引发“流动性黑洞”与价格踩踏，**导致除权后的股票在熊市或崩盘期间表现出极弱的抗跌性**。
+\end{itemize}
+
 \subsection*{总结学术界给出的量化视角}
 
 \begin{table}[h]
@@ -59,9 +76,13 @@
 \hline
 \textbf{研究维度} & \textbf{学术结论} & \textbf{对“抗跌”的实际映射} \\
 \hline
-\textbf{短期（除权后几天）} & 存在由于散户“名义价格错觉”带来的资金净流入。 & \textbf{微弱抗跌}。资金面因为绝对门槛降低，流动性变好。 \\
+\textbf{短期（除权后几天）} & 存在由于散户“名义价格错觉”带来的资金净流入，但在零碎股普及背景下逐步减弱。 & \textbf{微弱抗跌}。在存在 100 股限制的 A 股市场门槛降低，交易量技术性上升。 \\
 \hline
-\textbf{中长期（除权后数月）} & 股价走势高度分化，完全取决于除权背后的动因。 & \textbf{不抗跌，甚至更危险}。如果是由于基本面改善，则跟随业绩抗跌；如果是为了掩护减持，除权后往往加速下跌。 \\
+\textbf{微观结构（除权后数周）} & 日内波动率与 Beta 显著跃升 20\%--30\%，买卖百分比价差扩大。 & \textbf{不抗跌}。市场噪音增加导致价格日内震荡加剧，容易被极端单边单诱导。 \\
+\hline
+\textbf{长期微观特征（2025前沿）} & 长期 Amihud 非流动性趋势永久性恶化。机构订单簿深度变薄。 & \textbf{极不抗跌}。缺乏大单缓冲垫，在面临系统性大盘杀跌时极易形成价格击穿。 \\
+\hline
+\textbf{中长期（除权后数月）} & 表现高度分化。如果是为掩护大股东解禁送转，除权后往往陷入“贴权陷阱”。 & \textbf{更危险}。彻底暴露出缺乏基本面支撑的投机本质。 \\
 \hline
 \end{tabular}
 \end{table}
