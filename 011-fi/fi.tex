@@ -1,0 +1,73 @@
+
+
+\documentclass[a4paper,10pt]{article}
+
+\usepackage{../preamble-paper}
+\addbibresource{../ref.bib}
+\AtEveryBibitem{\clearfield{note}}
+
+\fancyhead[R]{\thepage}
+\fancyhead[L]{\textbf{交易研究}}
+
+\begin{document}
+
+\title{\textbf{交易研究}\\ \large }
+\author{Lao Chen}
+\date{\today}
+\maketitle
+\tableofcontents
+
+\section{除权}
+
+关于股票除权、拆股（Stock Splits）以及之后的股价表现（包括抗跌性与超额收益），在学术界和行为金融学中确实有非常多深入的研究。
+
+学术界通常不直接使用“抗跌”这个大白话，而是将其放在“名义价格错觉”\textbf{、}“信号理论”\textbf{和}“流动性假说”的框架下去研究。主要的几个核心学术结论如下：
+
+\subsection*{1. 名义价格错觉（Nominal Price Illusion）}
+
+俄亥俄州立大学的学者 Birru 和 Wang 在 2016 年发表了一篇极具代表性的论文《Nominal Price Illusion》\cite{BirruWang2016}。
+
+\begin{itemize}
+    \item \textbf{研究发现}：散户投资者对低绝对股价的股票有一种“彩票心理”（Lottery-like stock preference），错误地认为低价股“上涨空间更大，下跌空间有限（更抗跌）”。
+    \item \textbf{心理机制}：这是一种认知偏差（Numerosity Bias）。除权后，投资者心理上觉得 50 元的股票比 100 元的股票安全，这种心理在短期内会产生微弱的买盘支撑。
+    \item \textbf{最新研究反转}：在 2024 年的一项针对互联网新一代券商（Neobrokers）的研究中\cite{Neobrokers2024}，学者发现随着“碎片化交易（Fractional Shares，即允许买入0.1股）”\textbf{的普及，这种价格错觉引发的抗跌或暴涨效应在美股正在大幅减弱。因为资金约束被打破了，投资者不再因为“买不起一手”而被迫偏好低价股。然而，在} A股市场（由于有“最小交易单位100股”的刚性限制），这种Affordability（负担能力）约束依然显著存在，因此低价对散户的吸引力依然存在。
+\end{itemize}
+
+\subsection*{2. 信号理论（Signaling Hypothesis）}
+
+著名的金融学者 Ikenberry 等人对拆股/除权进行了长期的跟踪研究（《What do Stock Splits Really Signal?》\cite{Ikenberryetal}）。
+
+\begin{itemize}
+    \item \textbf{研究结论}：统计表明，历史上宣布拆股/大比例送转的公司，在随后的 12 个月到 3 年内，往往能跑赢大盘（产生超额收益 CAR）。
+    \item \textbf{核心逻辑}：这\textbf{不是因为除权动作本身让他们抗跌}，而是因为“管理层的自选择效应”。管理层只有在极度看好公司未来几年业绩、确定股价不会崩盘的情况下，才敢进行大比例除权。如果管理层预期公司快暴雷了，他们绝不敢除权（否则股价会直接沦为仙股或触发面值退市）。因此，除权实际上是管理层向市场释放的“高分贝信心信号”。
+\end{itemize}
+
+\subsection*{3. A股市场的本土化研究：“高送转”与贴权陷阱}
+
+针对中国A股的独特生态，国内学术界和券商研究所（如深交所金融创新实验室\cite{SZSE_HighDividend}、各大券商金融工程部）做过专门的量化研究。
+
+\begin{itemize}
+    \item \textbf{套利效应的终结}：早期A股存在显著的“高送转预案公告效应”。在除权前，股票往往能获得极高的超额收益。但研究表明，\textbf{在正式除权日（Ex-date）之后，这种超额收益会迅速逆转}。
+    \item \textbf{大股东减持与“贴权”}：研究指出，A股相当一部分高比例除权（送转）并不是因为基本面好，而是为了配合大股东解禁减持。在除权后，由于散户盲目涌入接盘，主力资金借机出货，导致股价在除权后表现出极高的\textbf{非抗跌性}（即显著的贴权，表现弱于大盘）。这也是为什么中国证监会后来对“高送转”出台了极其严格的监管指引。
+\end{itemize}
+
+\subsection*{总结学术界给出的量化视角}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{3.5cm}|p{6.5cm}|p{4.5cm}|}
+\hline
+\textbf{研究维度} & \textbf{学术结论} & \textbf{对“抗跌”的实际映射} \\
+\hline
+\textbf{短期（除权后几天）} & 存在由于散户“名义价格错觉”带来的资金净流入。 & \textbf{微弱抗跌}。资金面因为绝对门槛降低，流动性变好。 \\
+\hline
+\textbf{中长期（除权后数月）} & 股价走势高度分化，完全取决于除权背后的动因。 & \textbf{不抗跌，甚至更危险}。如果是由于基本面改善，则跟随业绩抗跌；如果是为了掩护减持，除权后往往加速下跌。 \\
+\hline
+\end{tabular}
+\end{table}
+
+如果想更直观地通过数据和历史回测了解除权、拆股对股价产生的真实收益影响，推荐观看 \href{https://www.youtube.com/watch?v=MgMTBNq7Bi4}{Do Stock Splits ACTUALLY Boost Returns? What the Numbers Say} 这段视频\cite{YouTube_StockSplits}。视频用大量的历史回测数据客观拆解了“拆股/除权”在公告日和执行日之后的真实统计表现，能帮你从数据上厘清这种“抗跌”或“暴涨”的迷思。
+
+\printbibliography[heading=bibintoc]
+
+\end{document}
