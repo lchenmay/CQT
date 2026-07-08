@@ -29,3 +29,6 @@ watch-compile.ps1
 010-energy/energy.ind
 010-energy/energy.ilg
 010-energy/energy.synctex(busy)
+kill-tex-orphans.ps1
+watch-compile.ps1
+watch-compile.ps1
