@@ -1,26 +1,31 @@
 {
   "latex-workshop.latex.recipes": [
     {
-      "name": "lualatex",
+      "name": "lualatex (latexmk 完整编译)",
       "tools": [
-        "lualatex"
+        "latexmk_lualatex"
       ]
     }
   ],
   "latex-workshop.latex.tools": [
     {
-      "name": "lualatex",
-      "command": "lualatex",
+      "name": "latexmk_lualatex",
+      "command": "latexmk",
       "args": [
-        "-synctex=1",
+        "-lualatex",
         "-interaction=nonstopmode",
-        "-file-line-error",
+        "-synctex=1",
+        "-gg",
         "%DOC%"
-      ]
+      ],
+      "env": {
+        "PATH": "C:\\texlive\\2026\\bin\\windows"
+      }
     }
   ],
-  "latex-workshop.latex.recipe.default": "lastUsed",
+  "latex-workshop.latex.recipe.default": "first",
   "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.latex.autoClean.run": "never",
   "latex-workshop.latex.clean.fileTypes": [
     "*.aux",
     "*.bbl",
