@@ -49,23 +49,28 @@
 
 \section{引言}
 
+在微纳尺度非平衡态热力学器件（如人工分子马达、微纳传感器）设计~
+\cite{Filippetti2021Brownian, Sasa2014Stochastic, Wijns2024Microscopic}、
+宏观环境振动与海浪能量收集（Energy Harvesting Systems）~
+\cite{Xu2023Brownian, Thibado2023Charging}、
+机器人复杂非欧空间位姿不确定性传播~
+\cite{Wang2019Lie}，
+以及广义资产配置流的动态对冲~
+\cite{Fernholz2002Stochastic, Karatzas2007Stochastic, Imkeller2010Geometry, Amari2020Information, Gu2020Empirical}
+等实际应用领域中，
+系统往往直接暴露于或依赖于底层环境的随机扰动。
+传统的能量转换机制多依赖于宏观机械刚性或人为构建的宏观非对称势垒，
+但在微介观尺度或高度动态变化的复杂网络中，
+净能量因\textbf{对称性阻碍}（symmetry obstruction）而失效。
+如何从环境固有的、零均值的随机涨落中持续且高效率地提取有用净功，
+构成了当前诸多跨学科工程与理论研究的重要课题。
+
 本文关注的是一类随机环境下粒子与系统的能量交换问题：
 加性对称的对数空间的随机涨落，
 映射到乘性非对称的相空间，
-如何打破能量交换的对称性，
+如何打破能量交换的对称性阻碍，
 利用这种破缺实现最大能量提取。
-在微纳尺度非平衡态热力学器件（如人工分子马达、微纳传感器）设计、
-宏观环境振动与海浪能量收集（Energy Harvesting Systems）、
-机器人复杂非欧空间位姿不确定性传播，
-以及广义资产配置流的动态对冲等实际应用领域中，
-系统往往直接暴露于或依赖于底层环境的无序随机微扰。
-
-传统的能量转换机制多依赖于宏观机械刚性或人为构建的宏观非对称势垒，
-但在微介观尺度或高度动态变化的复杂网络中，
-这些传统方法常因过阻尼耗散或相空间刚性守恒（No-Go 定理）而失效。
-如何从环境固有的、零均值的随机涨落中持续且高效率地提取有用净功，
-构成了当前诸多跨学科工程与理论研究的重大瓶颈。
-以下为问题的形式化设定：
+具体而言：
 
 粒子的几何自由度来自非负而不知上界的物理量，
 其取值的空间为乘性域
@@ -76,12 +81,10 @@ $\boxed{\mathbb R^+} = (\mathbb R^+,\sqplus,1,\sqtimes,\text e)$
 \eqref{eq:proj-space-positive}，
 其齐次坐标中第一个变元已经固定为$1$，
 剩余坐标嵌入平直空间中构成动力学的广义坐标$X = \mathbb R^n$。
-
 粒子位置的随机过程是在其对数空间$\mathbb R_{n+1}$中刻画的。
 其中的Brown运动在$\mathbb R P^+_n$上构成指数Brown运动。
 粒子通过对系统的作用力和系统产生能量交换，
 需要讨论相空间$T^*X$中的$1$-形式$\omega = F \wedge \text dx$的性质$\eqref{eq:power-1-form}$。
-
 值得注意的是：
 Brown运动是在对数空间$\mathbb R_{n+1}$发生的，
 到相空间$T^*X$上的动力学性质是不对称的。
@@ -91,10 +94,8 @@ Brown运动是在对数空间$\mathbb R_{n+1}$发生的，
 在指数映射下转化为乘性非对称性
 $|\text e^{+\varepsilon} - 1| \neq |\text e^{-\varepsilon} - 1|$。
 我们关注这种不对称性对于$1$-形式$\omega = F \wedge \text dx$的影响。
-
 我们的研究目标是了解，
 如何让粒子与系统交换的能量最大化。
-本文所研究的问题和随机热力学、随机动力学、能量采集系统、机器人学等应用领域有关。
 
 \section{背景}
 
@@ -105,7 +106,7 @@ $|\text e^{+\varepsilon} - 1| \neq |\text e^{-\varepsilon} - 1|$。
 将局部约束提升为全局对称性、
 将能量流编织为拓扑网络。
 
-\subsection{乘性域的代数与几何基础}
+\subsection{乘性域}
 
 比例型数据（即成分数据）在经典统计学中长期受困于闭合约束——
 各分量之和为定值——所引发的协方差矩阵奇异性问题。
@@ -185,7 +186,7 @@ $(\mathbb R \cup \{-\infty\}, \max, +)$。
 统一熔铸为 $\mathbb R^+$ 上一个具备完整运算规则的域结构，
 并通过对数齐次坐标将其嵌入线性代数与射影几何的操作范畴。
 
-\subsection{随机热力学与能量采集系统}
+\subsection{随机能量交换}
 
 在非平衡条件下，怎样捕获并利用系统自身的随机涨落，
 从中提取机械功并使之最大化，构成了随机热力学的核心议题~\cite{Seifert2012Stochastic, Esposito2010Entropy}。
@@ -237,7 +238,7 @@ $(\mathbb R \cup \{-\infty\}, \max, +)$。
 该观察与本文从张量空间的视角审视问题的立场完全吻合，
 为本文的理论推导提供了坚硬的数学分析支撑。
 
-\subsection{几何力学：Dirac结构、PCH系统与辛动力学}
+\subsection{几何力学}
 
 \textcite{Courant1990} 所引入的 Dirac 流形（Dirac manifold）概念，
 是对经典辛结构的一次实质性推广：
@@ -512,20 +513,36 @@ Holm--Tyranowski 的随机变分原理）
 
 \subsection{乘性域}
 
-
 指定底数(base) $\forall b\in\mathbb R^+$，
 有交换幺半群的同构和拓扑的同胚：
 
 $$
-% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAB12BbOnACwBGAgAQAlEAF9S6TLnyEUAFnJVajFm049+QsQD0A1JNUwoAc3hFQAMwBOELkjIgcEJAEZqcPlms4kALSeasysiCACegGS0iB2Dh7Urk5ePn6BwfShmuw4MAAeOMAMEGYSAPoinMLRUjb2jojOyU3UJRBoRABMAOxk1oxwMKoMdAIwDAAKsngEbLZYZnz+1Fka4Zx5hcWlFQIAFJsFOMKRAQCUMfUJiMEtwe2dKACc-YPDbWMT09izCiALJYrELrCJ6YBHbYlMqVYTVAISYwSIA
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAB12BbOnACwBGAgAQAlEAF9S6TLnyEUAFnJVajFm049+QsQD0A1JNUwoAc3hFQAMwBOELkjIgcEJAEZqcPlms4kALSeasysiCACegGS0iB2Dh7Urk5ePn6BwfShmuw4MAAeOMAMEGYSAPoinMLRUjb2jojOyU3UJRBoRABMAOxk1oxwMKoMdAIwDAAKsngEbLZYZnz+1Fka4Zx5hcWlFQIAFJEBAJTCALzC7uVavIIi4nVxDYkubojB7Z0oAJz9g8NtMYTabYWYKEALJYrELrCJ6YCbApFEplSrCaoBCTnS7lBHcW66USGCTGCRAA
 \begin{tikzcd}
-\mathbb R \arrow[rrrr, "b^-", shift left] \arrow["\text{log}_b(\text b^-)"', loop, distance=2em, in=215, out=145] &  &  &  & \mathbb R^+ \arrow[llll, "\text{log}_b \ -", shift left] \arrow["b^{\text{log}_b \ -}"', loop, distance=2em, in=35, out=325]
+\mathbb R \arrow[rrrr, "b^-", shift left] \arrow["\text{log}_b(b^-) = 1_\mathbb R"', loop, distance=2em, in=215, out=145] &  &  &  & \mathbb R^+ \arrow[llll, "\text{log}_b \ -", shift left] \arrow["b^{\text{log}_b \ -} = 1_{\mathbb R^+}"', loop, distance=2em, in=35, out=325]
 \end{tikzcd}
 $$
 
-从\textbf{Lie群、指数映射}的讨论，
-促使我们选择用自然对数的底$b = \text e$。
-可逆函数复合为恒等$\mathbb R^+ \to \mathbb R^+: p \mapsto \text e^{\text{ln} \ p} = p$，
+指数映射的讨论促使我们选择用自然对数的底$b = \text e$，
+具体而言：
+$G = (\mathbb R^+,\cdot,1)$不仅是幺半群也是Lie群，
+具有群的代数结构和微分流形的几何结构。
+$1$的切空间构成李代数$\mathfrak g = T_1 \mathbb R^+ \simeq (\mathbb R,+)$，
+它捕捉了单位元处的无穷小变换性质。
+Lie代数通过指数映射$\text{exp}: \mathfrak g: \to G$联系到Lie群，
+这里就是实际指数函数$\text{exp}(t) = \text e^t$。
+在这对可逆构造中，
+Lie代数的速度向量和Lie群上的测地线得到了对应：
+
+\begin{equation}
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAB12BbOnACwBGAgAQAlEAF9S6TLnyEUAFnJVajFm049+QsQD0A1JNUwoAc3hFQAMwBOELkjIgcEJAEZqcPlms4kALSeasysiBzsODAAHjjCMHoBktIgdg4e1K5OXj5+gcH0oZqRMTjADGASwpzCSVI29o6IzlnN1AwQEGhEAEwA7GTWjHAwqgx0AjAMAAqyeARstlhmfP7UhRrhnFGx5ZUAFNul8YkAlMIAvMLuAPpavIIi4vWpjRkubojBHV1EAJyDYajdoTKazbDzBQgJYrNYhTYRHZxBLAI67CpVGoBKpXW6o7gPXSiQwSYwSIA
+\begin{tikzcd}
+\mathbb R \arrow[rrrr, "\text e^-", shift left] \arrow["\text{ln}(\text e^-) = 1_\mathbb R"', loop, distance=2em, in=215, out=145] &  &  &  & \mathbb R^+ \arrow[llll, "\text{ln} \ -", shift left] \arrow["\text e^{\text{ln} \ -} = 1_{\mathbb R^+}"', loop, distance=2em, in=35, out=325]
+\end{tikzcd}
+\label{eq:Lie-group-algebra}
+\end{equation}
+
+可逆函数复合为$\mathbb R^+$上的恒等$p \mapsto \text e^{\text{ln} \ p} = p$，
 定义$\mathbb R^+$上的含幺交换运算：
 
 $$
@@ -571,40 +588,9 @@ $$
 \label{eq:Multiplicative-Field}
 \end{equation}
 
-$\mathbb R^+$ 变成了一个Lie群，
-其群乘法就是通常的乘法。
-这意味着其切空间（或对数空间）$\mathbb R$ 具有天然的平移不变性。
-在这种几何视角下，
+Lie群$G = \mathbb R^+$的切空间（或对数空间）$\mathbb R$ 具有天然的平移不变性，
 原本在 $0$ 附近极度非线性的空间，
 在对数空间中被彻底拉平了。
-
-\begin{framed}
-
-由对数-指数映射所"搬运"的域，
-在不同的领域有不同的正式名称与侧重：
-\begin{enumerate}
-  \item 在\emph{成分数据分析}（Compositional Data Analysis）中，该结构称为
-  \textbf{Aitchison 几何域}（Aitchison Geometry），其中 $\sqplus$
-  被称为 Perturbation（摄动运算），$\sqtimes$ 被称为 Powering（乘幂运算），
-  其所诱导的度量即 Aitchison 距离~\cite{Aitchison1986,PawlowskyGlahnEgozcue2001}。
-  Amari 的双对偶仿射联络理论~\cite{Amari2016} 从信息几何视角
-  解释了为何对数空间中平直的测地线拉回原空间后产生非线性扭曲。
-
-  \item 在\emph{非Newton微积分}（Non-Newtonian Calculus）中，该结构称为
-  \textbf{乘性域}（Multiplicative Field）或几何域（Geometric Field），
-  Grossman 与 Katz 以此为底域发展了乘性导数与积分体系~\cite{GrossmanKatz1972}，
-  Córdova-Lepe 进一步探讨了其在动力学与增长模型中的应用~\cite{CordovaLepe2006}。
-  Has 等人近期将Riemann几何完整推广至乘性分析框架~\cite{Has2026}，
-  构建了乘性Riemann联络与曲率张量，
-  证明了乘性欧氏空间与传统欧氏空间的同构与拉回关系。
-
-  \item 在\emph{热带几何与幂等分析}中，Litvinov 探讨了如何通过对数映射将经典
-  "$+$-$\cdot$"域形变为热带"$\max$-$+$"半环，即 Maslov 反去量子化
-  （Maslov dequantization）~\cite{Litvinov2007}。
-\end{enumerate}
-
-\end{framed}
-
 $(\mathbb R^+,\cdot,1)$决定了除法：
 
 \begin{equation*}
@@ -621,6 +607,37 @@ $\boxed{\mathbb R^+} = (\mathbb R^+,\sqtimes,\text e)$对应了除法：
 r \sqdiv q = \text{e}^{\frac{\ln r}{\ln q}} = r^{\frac{1}{\ln q}} \quad (q \neq 1),\quad
 \ln(r \sqdiv q) = \frac{\ln r}{\ln q}
 \end{equation*}
+
+由对数-指数映射所"搬运"的域，
+在不同的领域有不同的正式名称与侧重：
+\begin{enumerate}
+  \item 
+  在成分数据分析中，
+  该结构称为  \textbf{Aitchison 几何域}（Aitchison Geometry），
+  其中 $\sqplus$ 称为 Perturbation（摄动运算），
+  $\sqtimes$ 被称为 Powering（乘幂运算），
+  其所诱导的度量即 Aitchison 距离~
+  \cite{Aitchison1986,PawlowskyGlahnEgozcue2001}。
+  Amari 的双对偶仿射联络理论~\cite{Amari2016} 
+  从信息几何视角解释了为何对数空间中平直的测地线拉回原空间后产生非线性扭曲。
+
+  \item 
+  在非Newton微积分（Non-Newtonian Calculus）中，
+  该结构称为\textbf{乘性域}（Multiplicative Field）或几何域（Geometric Field），
+  Grossman 与 Katz 以此为底域发展了乘性导数与积分体系~
+  \cite{GrossmanKatz1972}，
+  Córdova-Lepe 进一步探讨了其在动力学与增长模型中的应用~
+  \cite{CordovaLepe2006}。
+  Has 等人近期将Riemann几何完整推广至乘性分析框架~\cite{Has2026}，
+  构建了乘性Riemann联络与曲率张量，
+  证明了乘性欧氏空间与传统欧氏空间的同构与拉回关系。
+
+  \item 
+  在热带几何与幂等分析中，
+  Litvinov 探讨了如何通过对数映射将经典$(+,\cdot)$"域形变为热带"$(\max,+)$"半环，
+  即 Maslov 反去量子化（Maslov dequantization）~\cite{Litvinov2007}。
+\end{enumerate}
+
 
 
 \subsection{对数齐次坐标}
@@ -1140,10 +1157,29 @@ Holm 与 Tyranowski 的随机变分原理~\cite{HolmTyranowski2016}
 辛结构可以通过随机Hamilton-Pontryagin原理进行修正，
 而非简单破坏。
 
-\section{不对称性}
+\section{对称性阻碍}
 
-\subsection{对称性阻碍与净功提取的不可行定理 (Symmetry Obstruction and the No-Go Theorem)}
-\label{sec:symmetry_obstruction}
+\subsection{对称性阻碍}
+\label{subsec:no_go_theorem}
+
+在经典力学、非平衡态统计物理以及几何控制理论中，所谓的“相空间刚性守恒（No-Go 定理）”并非指单一的孤立不变量，而是指由相空间的内蕴流形拓扑与测度守恒所强加于系统的一系列基本刚性硬约束。在本文的语境下，该定理严格宣告了：\textbf{在平坦的、具有加性平移不变性的欧氏相空间中，任何有界确定性的反馈控制策略，均无法从纯粹加性对称的环境随机涨落中持续提取出定向净功。} 这一物理宿命由以下三个层层递进的底层几何与物理机制所锁定：
+
+\paragraph{1. 微观测度层面：刘维尔定理与体积不可压缩性}
+在哈密顿动力学骨架下，系统的状态由广义坐标 $q$ 和广义动量 $p$ 构成的相空间点共同表征。根据经典的刘维尔定理（Liouville's Theorem） \cite{Goldstein2002Classical}，相空间概率流沿动力学轨道的流体密度（或体积元）在时间演化下是严格守恒的，其在数学上表现为相空间流速场的散度自发归零。
+这组几何特征赋予了概率流类似于“不可压缩流体”的刚性。当系统直接暴露于对称的环境噪声微扰时，相空间体积仅能历经无损的刚性变形，而绝不会发生局部的自发收缩或膨胀。当外部控制器企图在某个特定自由度（如动能共轭方向 $p$）上强行抑制随机涨落以榨取定向能流时，由于体积元的刚性不可压缩性，必然迫使其共轭自由度（如空间坐标 $q$）发生等比例的无序发散，从而在系综层面切断了单向、无代价提取能量的可能性。
+
+\paragraph{2. 辛拓扑层面：Gromov 不压缩定理与二维投影面积守恒}
+如果说刘维尔定理仅是对相空间总测度的全局约束，那么现代微分几何中的辛刚性（Symplectic Rigidity）则对局部能流施加了更深层的硬限制。余切丛 $T^*X$ 具有内蕴的封闭二维非退化不变量——标准辛形式 $\Omega = \mathrm{dp} \wedge \mathrm{dq}$。
+根据 Gromov 不压缩定理（Gromov's Non-Squeezing Theorem） \cite{Gromov1985Pseudo, McDuff2017Introduction}，一个半径为 $R$ 的辛球体，在通过任意保辛映射（即哈密顿时间演化流）时，若要强行穿过一个二维投影半径为 $r$ 的辛圆柱，当且仅当 $R \le r$。该定理表明，相空间不仅总体积刚性守恒，其在任意共轭二维子空间上的投影“影子的代数面积之和”同样受到几何刚性的严格制约。
+由于外蕴辛形式的封闭性（$\oint p \,\mathrm{dq} = 0$），非保守控制力场 $F$ 在平坦对称涨落的完整周期内，向系统注入的代数面积与回馈给环境的面积会自发产生完备的代数对冲。这从几何根源上封闭了通过“精巧设计非线性路径”来白嫖净功的尝试。
+
+\paragraph{3. 统计热力学层面：涨落定理与鞅限制}
+在随机动力学维度，相空间的刚性守恒直接映射为微观可逆性（Microscopic Reversibility）与平衡态遍历性。在欧氏平坦几何中，底层环境噪声具有时间和空间的偶对称性，系统沿任意相空间路径 $\gamma$ 演化的路径概率测度与其时间反演轨道 $\hat{\gamma}$ 严格受制于 Crooks 涨落定理 \cite{Crooks1999Entropy}。
+在无外界自由能差（$\Delta \mathcal{F}=0$）的闭合循环回路中，正反路径的发生概率完全对齐，导致全路径空间的期望净功自发抵消归零（$\langle W \rangle \equiv 0$）。此时，累积功过程构成严格的零均值鞅，利用 Doob 可选采样定理可知，任何“择时退出策略”均在加性对称流中失效。
+
+\paragraph{J7 框架的破局机制}
+本文提出的 $J7$ 框架之所以能够彻底绕过上述 No-Go 定理的死锁，其核心要义在于通过非线性指数映射 $x = \mathrm{e}^y$ 改变了底空间的流形度规，将平坦空间的加性平移不变性形变为乘性域 $\mathbb{R}^+$ 的比例几何。
+由于映射的非线性凸性特征，原本在对数空间中“保体积、不可压缩、完全对称”的加性布朗运动，在拉回物理相空间后，破坏了刘维尔体积元演化的空间对称性，导致保辛流动的刚性封闭性发生形变（辛破损）。根据随机微积分链式法则与 Jensen 不等式，系统在 It\^{o} 框架下自发催生出一个正比于环境噪声方差的 It\^{o} 修正漂移项（$\frac{1}{2}\sigma^2 x F'(x)$）。该漂移项在物理本质上充当了“噪声诱导漂移”的角色，将原本受 No-Go 定理限制的严格鞅整流为了下鞅流动（Submartingale Flux），从而在不违反全局热力学第二定律的前提下，实现了最大能量的单向提取。
 
 在本章中，我们将从随机动力学与几何力学的基本原理出发，严格论证一个普遍的“不可行定理”（No-Go Theorem）：\emph{在平坦空间中，若驱动环境的随机过程具有统计对称性，且系统不具备外部时变时序或内蕴非线性整流机制，则任何有界确定性反馈策略均无法从该环境中持续提取净有用功。} 本节将分别从路径积分的微观可逆性、马尔可夫分析的鞅限制、以及相空间的辛几何守恒三个逐层递进的维度阐明这一物理阻碍。
 
