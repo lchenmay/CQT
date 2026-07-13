@@ -1,0 +1,136 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage{../preamble-paper}
+\addbibresource{../ref.bib}
+\AtEveryBibitem{\clearfield{note}}
+\numberwithin{equation}{section}
+
+% 目录样式：... 点连接标题与页码
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftdotsep}{4.5}
+\renewcommand{\cftsecnumwidth}{2.3em}
+% 减少目录内行间距
+\setlength{\cftbeforesecskip}{4pt plus 1pt}
+\setlength{\cftbeforesubsecskip}{2pt plus 1pt}
+\setlength{\cftbeforesubsubsecskip}{1pt plus 0.5pt}
+\setlength{\cftbeforeparaskip}{0pt}
+
+% Custom binary operators for transported ring structure
+\newcommand{\sqplus}{\mathbin{\boxplus}}
+\newcommand{\sqtimes}{\mathbin{\boxtimes}}
+\newcommand{\sqminus}{\mathbin{\boxminus}}
+\newcommand{\sqdiv}{\mathbin{\boxed{/}}}
+
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\textbf{草稿}}
+\fancyhead[LO]{\textit{}}
+
+% 覆盖 polyglossia 中文节编号，使用纯数字+点格式（无"第""节""章"）
+\titleformat{\section}{\Large\rmfamily\bfseries}{\thesection.}{1em}{}
+\titleformat{\subsection}{\large\rmfamily\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalsize\rmfamily\bfseries}{\thesubsubsection}{1em}{}
+% paragraph 内嵌加粗 + 悬挂缩进 + 间距控制
+\newif\ifparablock
+\AddToHook{para/begin}{\ifparablock\vspace{1.5ex plus 0.3ex}\parablockfalse\fi}
+\titleformat{\paragraph}[runin]{\normalsize\rmfamily\bfseries}{\theparagraph}{1em}{\global\hangindent=2.5em\global\hangafter=1\global\parablocktrue\relax}
+\titlespacing{\paragraph}{0pt}{1.5ex plus 0.3ex minus 0.2ex}{0.8em}
+
+\begin{document}
+
+
+\subsection{Banach代数}
+
+复Banach空间$(A,\|\cdot\|)$若是复代数，
+且范数满足$\| a b\| \leq \|a\| \cdot \|a\|$，
+称\textbf{Banach代数}(Banach algebra)。
+范数不等式保证了乘法的连续，
+即当$a_n \to a,\ b_n \to b$时：
+$\|a_n b_n - ab\| 
+\leq \|a_nb_n - ab_n\| + \|a b_n - ab\|
+\leq \|a_n - a\| \|b_n\| + \|a \|\|b_n - b\| \to 0$。
+Banach空间$H$上的线性算子$\mathcal B(H)$是含幺Banach代数。
+
+对含幺Banach代数的元 
+$\forall a \in A$，
+其谱
+$\sigma(a) = \{ \lambda \in \mathbb{C} \mid \lambda 1_A - x \notin A^\times \}$
+是 $\mathbb C$ 的非空紧子集。
+
+
+设若不然，假设 $\sigma(x) = \emptyset$。
+这意味着对于所有的 $\lambda \in \mathbb{C}$，
+特征算子 $\lambda 1_A - x$ 在 $A$ 中都是可逆的。
+由此，我们可以定义全局有定义的预解算子值函数：
+$R(\lambda) = (\lambda 1_A - x)^{-1}, \quad \forall \lambda \in \mathbb{C}$
+
+任取一个有界线性泛函 $\varphi \in A^*$，并构造一个复值标量函数 $f: \mathbb{C} \to \mathbb{C}$：
+\begin{equation}
+f(\lambda) = \varphi(R(\lambda)) = \varphi\left( (\lambda 1_A - x)^{-1} \right)
+\end{equation}
+
+由于巴拿赫代数中的求逆映射是解析的，
+函数 $f(\lambda)$ 在整个复平面 $\mathbb{C}$ 上处处全纯（即 $f$ 是一个整函数）。
+
+接下来我们分析 $R(\lambda)$ 在 $|\lambda| \to \infty$ 时的渐近行为：
+\begin{equation}
+\|R(\lambda)\| = \left\| \lambda^{-1} \left(1_A - \frac{x}{\lambda}\right)^{-1} \right\| \le \frac{1}{|\lambda|} \frac{1}{1 - \frac{\|x\|}{|\lambda|}} \to 0 \quad (\text{当 } |\lambda| \to \infty)
+\end{equation}
+因此，$\lim_{|\lambda| \to \infty} f(\lambda) = 0$。根据连续性，整函数 $f$ 在整个复平面上必定是有界的。
+
+根据复分析中的 \textbf{Liouville 定理}，复平面上任何有界整函数都必定是常数。因此，$f(\lambda)$ 是常数函数。又因为其无穷远极限为零，迫使对所有的 $\lambda \in \mathbb{C}$ 都有 $f(\lambda) = 0$。
+
+由于这一结论对任意有界线性泛函 $\varphi \in A^*$ 都成立，根据 Hahn-Banach 定理（对偶泛函的非退化性），我们不得不得出：
+\begin{equation}
+R(\lambda) = (\lambda 1_A - x)^{-1} = 0_A, \quad \forall \lambda \in \mathbb{C}
+\end{equation}
+这产生了一个不可调和的矛盾，因为一个可逆元素绝不可能是零元素。因此，谱 $\sigma(x)$ 必定非空。
+\end{proof}
+
+\begin{proof}[定理~\ref{thm:gelfand-mazur} 的证明]
+任取元素 $x \in A$。根据引理~\ref{lem:nonempty-spectrum}，其谱 $\sigma(x)$ 非空。因此，至少存在一个复数 $\lambda_x \in \sigma(x)$。
+
+根据谱的定义，对应的特征算子
+\begin{equation}
+\lambda_x 1_A - x
+\end{equation}
+在 $A$ 中是不可逆的。
+
+由于 $A$ 被假设为一个除代数（非零元皆可逆），除代数中唯一不具备逆元的元素只能是零元素 $0_A$。因此，我们被迫得出：
+\begin{equation}
+\lambda_x 1_A - x = 0_A \implies x = \lambda_x 1_A
+\end{equation}
+这说明 $A$ 中的每一个元素 $x$，本质上都只是单位元 $1_A$ 的一个复标量倍数。
+
+我们现在定义如下规范映射：
+\begin{equation}
+\Phi: \mathbb{C} \to A, \quad \Phi(\lambda) = \lambda 1_A
+\end{equation}
+\begin{enumerate}[label=(\roman*)]
+  \item \textbf{代数同态}：显然，$\Phi$ 保持了加法、标量乘法和乘法（因为 $\Phi(\alpha\beta) = \alpha\beta 1_A = (\alpha 1_A)(\beta 1_A) = \Phi(\alpha)\Phi(\beta)$）。
+  \item \textbf{双射性}：由于 $1_A \neq 0_A$，$\lambda 1_A = 0_A \implies \lambda = 0$，故 $\Phi$ 是单射。又由前面的推导，任何 $x \in A$ 都可以写成 $\lambda_x 1_A = \Phi(\lambda_x)$ 的形式，故 $\Phi$ 也是满射。
+  \item \textbf{等距性}：对任意 $\lambda \in \mathbb{C}$，其范数满足：
+  \begin{equation}
+  \|\Phi(\lambda)\| = \|\lambda 1_A\| = |\lambda| \|1_A\| = |\lambda|
+  \end{equation}
+  因为含幺赋范代数的单位元满足规范化条件 $\|1_A\| = 1$。
+\end{enumerate}
+综上所述，$\Phi$ 是复巴拿赫代数之间的一个等距同构映射。
+\end{proof}
+
+\begin{remark}[几何重构的本质]
+Gelfand-Mazur 定理解释了为什么复数域 $\mathbb{C}$ 在经典和量子代数重构中具有统治地位。
+
+设 $A$ 是一个交换复巴拿赫代数，$\mathfrak{m} \subset A$ 是它的一个极大理想。由于 $\mathfrak{m}$ 是闭的，商代数 $A/\mathfrak{m}$ 继承了巴拿赫代数的结构。并且，由于 $\mathfrak{m}$ 的极大性，商环 $A/\mathfrak{m}$ 是一个除代数。
+
+根据 Gelfand-Mazur 定理，商巴拿赫除代数必定与复数域等距同构：
+\begin{equation}
+A/\mathfrak{m} \cong \mathbb{C}
+\end{equation}
+这一同构极具物理和几何威能：它确保了每一个极大理想 $\mathfrak{m}$，都唯一地对应着一个乘性线性泛函（即特征标） $\phi \in \Omega(A)$ 使得 $\ker(\phi) = \mathfrak{m}$。这正是“点”能从“纯代数”中重新被完好无损地提炼出来的最高代数保证。
+\end{remark}
+
+
+
+\end{document}

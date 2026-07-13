@@ -332,11 +332,20 @@ f: X \to \mathbb{R}, \quad f(i) = x_i
 
 \paragraph{热带几何（Tropical Geometry）与 ReLU/门控激活网络}
 
-如果进一步深入到代数几何的一个分支——\textbf{热带几何（Tropical Geometry）}\cite{Zhang2018Tropical}，你会发现你提到的理想理论被发挥到了极致。
+如果进一步深入到代数几何的一个分支——\
+textbf{热带几何（Tropical Geometry）}
+\cite{Zhang2018Tropical}，
+你会发现你提到的理想理论被发挥到了极致。
 
 \begin{itemize}
-\item \textbf{研究视角：} 由于神经网络（尤其是包含 ReLU、Max-pooling 和门控的网络）内部充斥着 $\max(0, x)$ 和逐元素相乘，这在数学上正好构成了\textbf{热带半环（Tropical Semiring）}（其中的加法是 $\max$，乘法是标准加法）。
-\item \textbf{代表研究：} 诸如 Liandrat 等人的 \textit{"Tropical Geometry of Deep Neural Networks"}。在这类研究中，整个前馈网络的计算图被直接翻译成热带多项式。网络通过激活门控对特征的抹除，在几何上表现为热带超曲面（Tropical Hypersurface）的交集与阶数的坍塌。这就把你说的"落入极大理想的交集"在热带代数几何里赋予了极度精确的代数簇（Algebraic Varieties）图像。
+\item \textbf{研究视角：} 
+由于神经网络（尤其是包含 ReLU、Max-pooling 和门控的网络）内部充斥着 $\max(0, x)$ 和逐元素相乘，
+这在数学上正好构成了\textbf{热带半环（Tropical Semiring）}（其中的加法是 $\max$，乘法是标准加法）。
+\item \textbf{代表研究：} 
+在这类研究中，整个前馈网络的计算图被直接翻译成热带多项式。
+网络通过激活门控对特征的抹除，
+在几何上表现为热带超曲面（Tropical Hypersurface）的交集与阶数的坍塌。
+这就把你说的"落入极大理想的交集"在热带代数几何里赋予了极度精确的代数簇（Algebraic Varieties）图像。
 \end{itemize}
 
 \paragraph{量子计算与张量网络（Tensor Networks）}

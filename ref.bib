@@ -50,7 +50,55 @@
   number    = {2},
   pages     = {345--382},
   year      = {1936},
-  note      = {冯·诺依曼代数的诞生，双交换子定理}
+  note      = {冯·诺依曼单作者论文；双交换子定理的原始证明在 Murray--von Neumann 1936 R.O. I 中给出}
+}
+
+@article{MurrayVonNeumann1936RO1,
+  author    = {F. J. Murray and J. von Neumann},
+  title     = {On Rings of Operators},
+  journal   = {Annals of Mathematics},
+  volume    = {37},
+  number    = {1},
+  pages     = {116--229},
+  year      = {1936},
+  doi       = {10.2307/1968693},
+  note      = {R.O. I：von Neumann 代数理论的奠基之作，包含双交换子定理（Double Commutant Theorem）}
+}
+
+@article{MurrayVonNeumann1937RO2,
+  author    = {F. J. Murray and J. von Neumann},
+  title     = {On Rings of Operators. {II}},
+  journal   = {Transactions of the American Mathematical Society},
+  volume    = {41},
+  number    = {2},
+  pages     = {208--248},
+  year      = {1937},
+  doi       = {10.2307/1969107},
+  note      = {R.O. II：因子（factors）分类理论的展开}
+}
+
+@article{VonNeumann1940RO3,
+  author    = {J. von Neumann},
+  title     = {On Rings of Operators. {III}},
+  journal   = {Annals of Mathematics},
+  volume    = {41},
+  number    = {1},
+  pages     = {94--161},
+  year      = {1940},
+  doi       = {10.2307/1968823},
+  note      = {R.O. III：von Neumann 独作，约化理论（reduction theory）}
+}
+
+@article{MurrayVonNeumann1943RO4,
+  author    = {F. J. Murray and J. von Neumann},
+  title     = {On Rings of Operators. {IV}},
+  journal   = {Annals of Mathematics},
+  volume    = {44},
+  number    = {4},
+  pages     = {716--808},
+  year      = {1943},
+  doi       = {10.2307/1969107},
+  note      = {R.O. IV：系列终篇，因子与迹的完备分类}
 }
 
 @book{Naimark1956,
@@ -2165,10 +2213,17 @@
 @article{Zhang2018Tropical,
   author    = {Liwen Zhang and Gregory Naitzat and Lek-Heng Lim},
   title     = {Tropical Geometry of Deep Neural Networks},
-  journal   = {ICML},
+  journal   = {Proceedings of the 35th International Conference on Machine Learning (ICML)},
+  volume    = {80},
+  pages     = {5824--5832},
   year      = {2018},
-  note      = {热带几何视角下的深度神经网络：ReLU 网络作为热带多项式}
+  publisher = {PMLR},
+  eprint    = {1805.07091},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.LG},
+  note      = {首次建立 ReLU 前馈神经网络与热带几何的联系：此类网络族等价于\textbf{热带有理映射}(tropical rational maps)族（非仅热带多项式，rational 允许除法）；单层网络由 zonotope 刻画，决策边界对应热带超曲面(tropical hypersurface)，线性区域对应热带有理函数多面体的顶点；深层网络比浅层指数级更强表达力。}
 }
+
 
 @article{Shazeer2017MoE,
   author    = {Noam Shazeer and Azalia Mirhoseini and Krzysztof Maziarz and Andy Davis and Quoc Le and Geoffrey Hinton and Jeff Dean},
@@ -2804,3 +2859,200 @@
   publisher = {APS},
   note      = {提出了 Crooks 涨落定理，从微观可逆性与路径概率测度层面对平坦对称随机过程下的功对冲给出了严格的热力学限制。}
 }
+
+@unpublished{FloridiJia2026Conduction,
+  author    = {Luciano Floridi and Yiyang Jia},
+  title     = {The Conduction Connective: An Irreducible Extension of Intuitionistic Modal Logic {IK}},
+  year      = {2026},
+  month     = jul,
+  note      = {Preprint, 34pp. 引入传导联结词(conduction)φ▷ψ扩展直觉主义模态逻辑IK，建立Hilbert系统H-DWS与标号矢列演算LS-DWS，证明S-serial bare frames上的完全性与可判定性（指数上界模型大小）。},
+  abstract  = {We introduce a binary connective φ▷ψ, called conduction, extending the intuitionistic modal logic IK. The satisfaction clause is: w|=φ▷ψ iff for every v≥w, if v|=φ then there exists u with vRu, v≤u, and u|=ψ. This composes intuitionistic implication with an existential modality over the intersection S=R∩≤. We show that a standalone modality ⟨S⟩ fails to persist, and that ▷ canonically resolves this. We prove irreducibility of ▷ over IK via bisimulation. We present the Hilbert system H-DWS with soundness, a fully labelled sequent calculus LS-DWS with an annotated-challenger mechanism ensuring rule-by-rule soundness, and prove completeness for the class of S-serial bare frames and decidability via terminating proof search with a singly exponential upper bound on model size. We compare the logic with intuitionistic conditional logics, identifying conduction as a constant-selection-function specialisation of the intuitionistic might-conditional.},
+  keywords  = {intuitionistic modal logic; conduction connective; labelled sequent calculus; decidability; birelational Kripke semantics},
+  classification = {MSC 03B45, 03B20, 03F05}
+}
+
+%% ============================================================
+%% Yiyang Jia (贾伊阳, Tokyo City University) — 研究跟踪文献
+%%   三大集群: 折纸数学 / 范畴·拓扑斯×机器学习 / 直觉主义逻辑
+%%   与 CQT §003-type-topos、§004-gelfand-theory 关联
+%% ============================================================
+
+%% --- 集群 A: 折纸数学 (Origami Mathematics) ---
+
+@article{JiaMitani2023Monoidal,
+  author    = {Yiyang Jia and Jun Mitani},
+  title     = {Making Strip Folding a Monoidal Category},
+  journal   = {JP Journal of Algebra, Number Theory and Applications},
+  year      = {2023},
+  note      = {把纸条折叠(strip folding)建模为幺半群范畴(monoidal category)，用两类算子刻画折叠行为的代数结构。}
+}
+
+@article{JiaMitani2022Boolean,
+  author    = {Yiyang Jia and Jun Mitani},
+  title     = {Category of Strip Folding in Terms of a Boolean Matrix Representation},
+  journal   = {JP Journal of Algebra, Number Theory and Applications},
+  year      = {2022},
+  note      = {先用布尔矩阵描述纸条折叠，再在其上建立折叠范畴，自然给出 meet semi-lattice 结构。}
+}
+
+@article{JiaMitani2024Heyting,
+  author    = {Yiyang Jia and Jun Mitani},
+  title     = {Heyting Algebra in Flat Origami},
+  journal   = {JP Journal of Algebra, Number Theory and Applications},
+  volume    = {63},
+  number    = {5},
+  pages     = {383--396},
+  year      = {2024},
+  note      = {将平面折叠折纸(flat-fold origami)的领域刻画为 (0,1)-topoi 范畴；用海廷代数(Heyting algebra, 直觉主义逻辑的代数语义)分析折纸自交结构。直观解释她为何能与 Floridi 合写直觉主义模态逻辑。}
+}
+
+@article{JiaMitani2023Order,
+  author    = {Yiyang Jia and Jun Mitani},
+  title     = {Order Theory in Strip Folding},
+  journal   = {JP Journal of Algebra, Number Theory and Applications},
+  year      = {2023},
+  note      = {在纸条折叠框架内建立系统化的序理论(order theory)。}
+}
+
+@article{JiaMitaniUehara2022MapFolding,
+  author    = {Yiyang Jia and Jun Mitani and Ryuhei Uehara},
+  title     = {Logical Matrix Representations in Map Folding},
+  journal   = {IEICE Transactions on Fundamentals of Electronics, Communications and Computer Sciences},
+  volume    = {E105.A},
+  number    = {10},
+  year      = {2022},
+  note      = {地图折叠中每个折叠态对应方格集上的唯一偏序，以逻辑矩阵(logical matrix)表示各折叠状态。}
+}
+
+@article{HigaJiaMitani2024Bistable,
+  author    = {Pamela Higa and Yiyang Jia and Jun Mitani},
+  title     = {3D Printing of Flat-Folded Bistable Origami-Like Structures},
+  journal   = {Journal for Geometry and Graphics},
+  year      = {2024},
+  note      = {利用双稳态(bistable)结构结合 3D 打印，实现由平面可折叠折纸启发的双稳态结构设计与制造系统。}
+}
+
+%% --- 集群 B: 范畴论 / 拓扑斯 × 机器学习 (Category / Topos × ML) ---
+
+@article{JiaPengYangChen2025Topos,
+  author       = {Yiyang Jia and Guohong Peng and Zheng Yang and Tianhao Chen},
+  title        = {Category-Theoretical and Topos-Theoretical Frameworks in Machine Learning: A Survey},
+  journal      = {Axioms},
+  volume       = {14},
+  number       = {3},
+  pages        = {204},
+  year         = {2025},
+  doi          = {10.3390/axioms14030204},
+  eprint       = {2408.14014},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.LG},
+  note         = {首次系统综述 topos-based learning；从梯度学习/概率学习/不变性学习/拓扑斯学习四类视角梳理范畴论驱动的机器学习。与 CQT §003-type-topos 直接相关，关联度最高。}
+}
+
+@article{JiaMitaniYangPeng2026TPN,
+  author    = {Yiyang Jia and Jun Mitani and Zheng Yang and Guohong Peng},
+  title     = {A Compositional Framework for Neural Network Modeling Using Typed Petri Nets},
+  journal   = {Transactions of the Japanese Society for Artificial Intelligence},
+  volume    = {41},
+  number    = {2},
+  pages     = {FN26-I\_1-16},
+  year      = {2026},
+  doi       = {10.1527/tjsai.41-2_FN26-I},
+  note      = {用类型 Petri 网(Typed Petri Nets, TPN)形式化建模神经网络的结构与动力学。}
+}
+
+@article{JiaMitani2026CatAI,
+  author    = {Yiyang Jia and Jun Mitani},
+  title     = {Categorical Frameworks for AI: A Survey and a TPN-based Foundation for Operational and Semantic Analysis},
+  journal   = {Transactions of the Japanese Society for Artificial Intelligence},
+  volume    = {41},
+  number    = {4},
+  pages     = {AN40-C\_1-10},
+  year      = {2026},
+  doi       = {10.1527/tjsai.41-4_AN40-C},
+  note      = {综述范畴框架在 AI 中的应用，并给出基于 TPN 的运算与语义分析基础。}
+}
+
+@unpublished{JiaWeiYangPeng2025GRN,
+  author       = {Yiyang Jia and Zheng Wei and Zheng Yang and Guohong Peng},
+  title        = {Modeling {GRNs} with a Probabilistic Categorical Framework},
+  year         = {2025},
+  month        = aug,
+  eprint       = {2508.13208},
+  archivePrefix = {arXiv},
+  primaryClass = {q-bio.MN},
+  note         = {引入概率范畴化基因调控网络(PC-GRN)框架，结合范畴论、贝叶斯类型 Petri 网与 GFlowNet/HyperNetwork 做端到端贝叶斯推断。}
+}
+
+%% --- 集群 C: 逻辑 / 模态逻辑 (与 Floridi 合作) ---
+
+@unpublished{FloridiJiaTohme2025LLM,
+  author       = {Luciano Floridi and Yiyang Jia and Fernando Tohm\'e},
+  title        = {A Categorical Analysis of Large Language Models and Why {LLMs} Circumvent the Symbol Grounding Problem},
+  year         = {2025},
+  month        = dec,
+  eprint       = {2512.09117},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.AI},
+  note         = {用范畴论框架分析人类与 LLM 如何将内容转化为关于可能世界状态空间 W 的真值命题，论证 LLM 规避而非解决符号接地(symbol grounding)问题。}
+}
+
+%% --- 合作论文 (Jia 为共同作者) ---
+
+@unpublished{PapamarkouEtal2026Agentic,
+  author       = {Theodore Papamarkou and Yiyang Jia and Anton Ayzenberg and Manuel Baltieri and Luciano Floridi and Marius Furter and Xuexing Lu and Sridhar Mahadevan and Kelin Xia and Junchi Yan and Zhaoyang Yu and Yivan Zhang and Mustafa Hajij},
+  title        = {A Double-categorical Structure for Interaction and Learning with Agentic {AI}},
+  year         = {2026},
+  note         = {草稿(Draft)。用双范畴(double category)结构刻画 Agentic AI 的交互与学习。Jia 为 13 位合作者之一。}
+}
+
+%% ============================================================
+%% 代数几何基础
+%% ============================================================
+
+@book{GrothendieckDieudonne1960EGA,
+  author    = {Grothendieck, Alexander and Dieudonn\'{e}, Jean},
+  title     = {\'{E}l\'{e}ments de G\'{e}om\'{e}trie Alg\'{e}brique {I}: {Le} langage des sch\'{e}mas},
+  series    = {Publications Math\'{e}matiques de l'IH\'{E}S},
+  volume    = {4},
+  publisher = {Springer-Verlag},
+  year      = {1960},
+  note      = {代数几何的奠基之作，EGA I 建立概形(scheme)的语言与基本性质}
+}
+
+@article{Zariski1947SimplePoint,
+  author    = {Zariski, Oscar},
+  title     = {The concept of a simple point of an algebraic variety},
+  journal   = {Transactions of the American Mathematical Society},
+  volume    = {62},
+  number    = {1},
+  pages     = {1--52},
+  year      = {1947},
+  note      = {代数簇上"简单点"（即光滑点）的形式化定义，Zariski 局部环理论的经典工作}
+}
+
+@book{Eisenbud1995Commutative,
+  author    = {Eisenbud, David},
+  title     = {Commutative Algebra: with a View Toward Algebraic Geometry},
+  series    = {Graduate Texts in Mathematics},
+  volume    = {150},
+  publisher = {Springer},
+  year      = {1995},
+  isbn      = {978-0-387-94268-1},
+  note      = {交换代数标准教材，以代数几何为图景，涵盖自由分解、Syzygy、Cohen-Macaulay 环等}
+}
+
+@misc{VakilRisingSea,
+  author    = {Vakil, Ravi},
+  title     = {The Rising Sea: {Foundations} of Algebraic Geometry},
+  howpublished = {Online lecture notes, Stanford University},
+  year      = {2017},
+  note      = {代数几何经典网络讲义，全文超过2000页，从概形语言到小平邦彦对偶}
+}
+
+
+
+
+
+
+

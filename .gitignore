@@ -32,3 +32,13 @@ watch-compile.ps1
 kill-tex-orphans.ps1
 watch-compile.ps1
 watch-compile.ps1
+004-gelfand-theory/gelfand-theory - old.idx
+004-gelfand-theory/gelfand-theory - old.ilg
+004-gelfand-theory/gelfand-theory - old.ind
+004-gelfand-theory/gelfand-theory.ilg
+004-gelfand-theory/gelfand-theory.ind
+009-ai/ai.ilg
+009-ai/ai.ind
+999-scratch/scratch.idx
+999-scratch/scratch.ilg
+999-scratch/scratch.ind
