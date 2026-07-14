@@ -15,13 +15,181 @@
 \maketitle
 \tableofcontents
 
+\section{随机过程}
+
+从价格序列推断其背后的随机过程模型，是金融计量经济学的核心议题。
+近年来的研究呈现出两条清晰的主线：
+一条是在传统随机过程模型框架内持续深耕，
+另一条是利用机器学习方法开辟新的路径。
+
+\cite{MaungSwanson2025Forecasting} 
+对当前方法进行了较全面的概述，
+系统地回顾了从简单的随机游走模型，
+到离散时间的 GARCH 族模型，
+再到连续时间的随机波动率模型，
+并讨论了大数据和机器学习方法在其中的应用，
+直接回应了从数据中建模和预测金融时间序列的各种工具。
+
+\cite{Chakraborti2007FinTSOverview} 
+则清晰地梳理了金融时间序列的几个关键“典型事实”（stylized facts），
+如厚尾（fat tails）、
+波动率聚集（volatility clustering）和收益率的自相关缺失，
+并系统介绍了用于描述这些特征的随机模型
+（如随机游走、GARCH、跳跃扩散模型），
+是理解为何需要复杂模型的基础。
+
+在机器学习与高维方法方面，
+\cite{Yang2025MLFinTS} 
+专门聚焦于机器学习方法，
+如神经网络、随机森林、LASSO 回归等在金融时间序列预测中的应用，
+讨论了如何利用这些方法处理金融数据的非线性、动态性和混沌特性，
+并比较了不同模型的性能。
+
+\cite{Masini2023MLAdvances} 
+则深入探讨了监督式机器学习的最新进展，
+特别是惩罚回归、集成方法以及浅层和深度神经网络（包括前馈和循环神经网络），
+不仅介绍了方法，还讨论了在金融和经济学中的应用和预测能力检验。
+
+\cite{EmmertStreib2026TSFMethods} 
+的覆盖面更广，从传统统计模型一直延伸到深度学习架构，
+如 RNN、CNN、Transformer、图神经网络，甚至包括 Neural ODEs 等较新的方法，
+为模型选择提供了一个全景式的分类和比较框架。
+
+在特定模型的深度研究上，
+\cite{Virbickaite2015BayesianGARCH}
+专注于 GARCH 模型的贝叶斯推断方法，
+详细比较了各种参数和非参数贝叶斯方法，
+特别是讨论了对厚尾分布的灵活处理。
+
+\cite{Sims2010ContinuousTime} 
+则从理论层面讨论了金融中连续时间随机过程
+（如几何布朗运动、Cox-Ingersoll-Ross 模型等）
+的设定与估计问题，
+为理论模型如何与实际数据结合提供了视角。
+
+总体来看，当前该领域的研究趋势可以概括为：
+传统模型（从随机游走到 GARCH、随机波动率模型及其各种扩展，
+如 EGARCH、GJR）仍然是为波动率、风险等提供基准预测的核心工具；
+而处理非线性、高维数据的需求，
+使得深度学习和集成学习方法在预测准确性方面展现出巨大潜力，
+成为主流研究范式之一；
+同时，高维函数型时间序列分析、贝叶斯非参数方法等新方向，
+也为更精细地利用高频、高维数据提供了新的建模思路。
+
+\section{收益率}
+
+在金融时间序列分析中，原始价格序列通常是非平稳的，直接建模会导致伪回归等问题。因此，通常将价格序列转换为收益率序列，使其具有平稳性，便于后续的统计建模和预测。
+设 $P_t$ 为资产在时刻 $t$ 的价格（通常使用调整收盘价），$P_{t-1}$ 为前一时刻的价格。
+简单收益率和对数收益率定义为：
+
+\begin{equation}
+    R_t = \frac{P_t - P_{t-1}}{P_{t-1}} = \frac{P_t}{P_{t-1}} - 1
+    \qquad
+    r_t = \ln\left(\frac{P_t}{P_{t-1}}\right) = \ln P_t - \ln P_{t-1}
+    \label{eq:log_return}
+\end{equation}
+
+计算得到的收益率序列通常满足平稳性。
+可通过 ADF 检验（Augmented Dickey-Fuller Test）验证：
+
+\begin{equation}
+    \Delta r_t = \alpha + \beta t + \gamma r_{t-1} + \sum_{i=1}^{p} \delta_i \Delta r_{t-i} + \varepsilon_t
+\end{equation}
+
+若拒绝单位根原假设 $(\gamma = 0)$，则认为序列平稳。
+给定初始价格 $P_0$ 和对数收益率序列 $\{r_1, \dots, r_T\}$，可还原价格：
+从价格序列转换为收益率序列是金融建模的基础操作。
+在实证研究中，推荐使用对数收益率，
+因其具有良好的统计性质（时间可加性、近似对称性、近似正态性），
+是GARCH、SV等波动率模型的输入标准。
+
+GARCH 和 SV 模型本身不直接基于Brown运动，
+它们使用的是离散时间的独立同分布冲击。
+但当采样频率提高时，
+两者的连续时间极限都会收敛到由Brown运动驱动的随机微分方程。
+因此，可以说它们是对Brown运动驱动过程的离散时间近似。
+这里是指对数价格空间上的Brown运动。
+
+\subsection{GARCH模型}
+
+设收益率序列 $\{y_t\}$，其均值方程为：
+\begin{equation}
+    y_t = \mu + \varepsilon_t, \qquad \varepsilon_t = \sigma_t z_t, \qquad z_t \sim \text{i.i.d.}(0,1).
+\end{equation}
+其中 $\mu$ 为条件均值（可包含 ARMA 结构），$\{\varepsilon_t\}$ 为残差序列。
+
+条件方差 $\sigma_t^2$ 服从如下动态过程：
+\begin{equation}
+    \sigma_t^2 = \omega + \sum_{i=1}^{q} \alpha_i \varepsilon_{t-i}^2 + \sum_{j=1}^{p} \beta_j \sigma_{t-j}^2, \label{eq:garch_variance}
+\end{equation}
+其中参数满足：
+\begin{equation}
+    \omega > 0, \qquad \alpha_i \ge 0 \ (i=1,\dots,q), \qquad \beta_j \ge 0 \ (j=1,\dots,p).
+\end{equation}
+
+为保证平稳性，要求：
+\begin{equation}
+    \sum_{i=1}^{q} \alpha_i + \sum_{j=1}^{p} \beta_j < 1.
+\end{equation}
+此时无条件方差为：
+\begin{equation}
+    \operatorname{Var}(y_t) = \frac{\omega}{1 - \sum_{i=1}^{q} \alpha_i - \sum_{j=1}^{p} \beta_j}.
+\end{equation}
+
+\subsection{随机波动率}
+
+综合当前实证研究来看，
+对于一般的金融价格时间序列，
+随机波动率（SV）模型在白箱模型中更接近真实市场 
+\cite{PangZhao2025GARCHSV}。
+在一系列严格的实证比较中，
+SV模型在刻画波动率方面比GARCH模型展现出了更明显的优势。
+
+GARCH和SV模型是白箱框架下最主流的两类选择，
+但二者的工作方式有本质区别：
+GARCH模型的波动率是过去收益率和过去波动率的确定性函数；
+而SV模型的波动率本身有自己的随机过程，
+引入了额外的新息，
+因此自由度更高，能更灵活地捕捉波动的突变。
+
+实证数据明确支持了SV模型的优势。
+在预测精度方面，对标普500指数的一项研究发现，
+ARSV(1)模型（一种SV模型）在样本内拟合和样本外预测上表现都优于GARCH(1,1)模型 \cite{PangZhao2025GARCHSV}；在期权定价方面，ARSV模型在拟合和预测看跌期权价格时表现也显著优于GARCH模型 \cite{PangZhao2025GARCHSV}；
+在厚尾特征方面，资产收益率普遍存在“尖峰厚尾”特征，能够刻画厚尾特征的SV模型（SV-T）预测能力最好。
+
+金融市场的价格波动本质上是一个受无数新信息冲击的复杂系统，
+SV模型内置的随机性更贴合这种现实：
+首先，SV模型不把波动率看作过去数据的死结果，
+而是认为它本身就是一个受独立随机因素驱动的活过程，
+更能解释波动率无法用历史数据完全解释的剧烈变动；
+其次，资产收益率的平方或绝对值序列的自相关函数（ACF）通常衰减很慢，
+呈现出长记忆性，
+SV模型中的某些设定（如长记忆随机波动率模型）能更好地捕捉这一现象；
+最后，大量学术研究，包括针对标普500指数和汇率市场的实证分析，
+都倾向于支持SV模型在拟合和预测上的优越性 
+\cite{PangZhao2025GARCHSV}。
+
+因此，对于“哪个白箱模型更接近真实市场”这一问题，
+目前答案最倾向于随机波动率（SV）模型。
+虽然GARCH模型因其计算简便仍是业界广泛使用的基准，
+但若追求对市场真实波动更精准的刻画以及更可靠的预测能力，
+SV模型具有更强的理论和实证依据。
+
+当然，选择模型也需考虑实际约束：
+SV模型的参数估计更复杂，
+通常需要使用MCMC等模拟方法，
+在开发轻量级实时交易系统时可能面临计算成本挑战；
+而GARCH模型依然是许多实务场景的首选，
+但对于学术研究或构建更精细的风险管理模型，
+SV模型值得投入计算资源。
+
 \section{除权}
 
 关于股票除权、拆股（Stock Splits）以及之后的股价表现（包括抗跌性与超额收益），在学术界和行为金融学中确实有非常多深入的研究。
 
 学术界通常不直接使用“抗跌”这个大白话，而是将其放在“名义价格错觉”、“信号理论”和“流动性假说”的框架下去研究。主要的几个核心学术结论如下：
 
-\subsection*{1. 名义价格错觉（Nominal Price Illusion）与零碎股冲击}
+\subsection{1. 名义价格错觉（Nominal Price Illusion）与零碎股冲击}
 
 俄亥俄州立大学的学者 Birru 和 Wang 在 2016 年发表了一篇极具代表性的论文《Nominal Price Illusion》\cite{BirruWang2016}。
 
@@ -31,7 +199,7 @@
     \item \textbf{A股市场的特异性}：然而，由于 \textbf{A股市场依然存在“最小交易单位 100 股”的刚性限制}，这种名义门槛（Affordability Constraint）依然对中国散户具有显著的心理锚定效应，除权低价对散户的吸引力在本土环境依然部分存在。
 \end{itemize}
 
-\subsection*{2. 信号理论（Signaling Hypothesis）}
+\subsection{2. 信号理论（Signaling Hypothesis）}
 
 著名的金融学者 Ikenberry 等人对拆股/除权进行了长期的跟踪研究（《What do Stock Splits Really Signal?》\cite{Ikenberryetal}）。
 
@@ -40,7 +208,7 @@
     \item \textbf{核心逻辑}：这\textbf{不是因为除权动作本身让他们抗跌}，而是因为“管理层的自选择效应”。管理层只有在极度看好公司未来几年业绩、确定股价不会崩盘的情况下，才敢进行大比例除权。如果管理层预期公司快暴雷了，他们绝不敢除权（否则股价会直接沦为仙股或触发面值退市）。因此，除权实际上是管理层向市场释放的“高分贝信心信号”。
 \end{itemize}
 
-\subsection*{3. A股市场的本土化研究：“高送转”与贴权陷阱}
+\subsection{3. A股市场的本土化研究：“高送转”与贴权陷阱}
 
 针对中国A股的独特生态，国内学术界和券商研究所（如深交所金融创新实验室\cite{SZSE_HighDividend}、各大券商金融工程部）做过专门的量化研究。
 
@@ -49,7 +217,7 @@
     \item \textbf{大股东减持与“贴权”}：研究指出，A股相当一部分高比例除权（送转）并不是因为基本面好，而是为了配合大股东解禁减持。在除权后，由于散户盲目涌入接盘，主力资金借机出货，导致股价在除权后表现出极高的\textbf{非抗跌性}（即显著的贴权，表现弱于大盘）。这也是为什么中国证监会后来对“高送转”出台了极其严格的监管指引。
 \end{itemize}
 
-\subsection*{4. 波动率跃升效应（The Volatility Spike Effect）}
+\subsection{4. 波动率跃升效应（The Volatility Spike Effect）}
 
 在量化金融学中，评估一只股票是否“抗跌”，核心指标之一是其收益率的波动率（Volatility）。经典文献直接否定了除权能降低风险的假设。
 
@@ -58,7 +226,7 @@
     \item \textbf{定量解释}：这种波动率的上升并不能完全由公司基本面的改变来解释。后续研究表明，这种波动率跃升（Volatility Spike）主要集中在除权后的前两周。由于绝对股价降低，噪音交易者（Noise Traders）和高频散户的频繁买卖引入了更多的市场噪音，反而使股价在面临市场冲击时\textbf{更容易出现剧烈波动，而不是更抗跌}。
 \end{itemize}
 
-\subsection*{5. 长期非流动性永久恶化（Permanent Illiquidity Deterioration）}
+\subsection{5. 长期非流动性永久恶化（Permanent Illiquidity Deterioration）}
 
 管理层选择除权的重要借口之一是“提高股票流动性并增强股价稳定性”，但最近几年的微观结构前沿研究对这一假说提出了严厉挑战。
 
@@ -68,7 +236,7 @@
     \item \textbf{击穿效应}：这意味着，长期来看，除权去除了原先高价时机构资金提供的深厚限价单缓冲。当市场发生系统性恐慌抛盘时，变薄的订单簿极易引发“流动性黑洞”与价格踩踏，**导致除权后的股票在熊市或崩盘期间表现出极弱的抗跌性**。
 \end{itemize}
 
-\subsection*{总结学术界给出的量化视角}
+\subsection{总结学术界给出的量化视角}
 
 \begin{table}[h]
 \centering

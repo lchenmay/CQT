@@ -637,6 +637,147 @@ $$
 它在弱算子拓扑下是闭的。
 \cite{MurrayVonNeumann1936RO1}
 
+\section{经典力学与量子力学}
+
+以下用实矩阵算子表示的复数，
+体现$\dim_\mathbb R \mathbb C = 2$，
+因$\{I,J\}$是$\mathbb C$的正交自然基：
+
+$$
+z = x + \text i y 
+= \begin{bmatrix}
+  x & - y \\ y & x
+\end{bmatrix}
+= x I + y J
+= x\begin{bmatrix}
+  1 & 0 \\ 0 & 1
+\end{bmatrix}
++ y\begin{bmatrix}
+  0 & - 1 \\ 1 & 0
+\end{bmatrix}
+$$
+
+这里的$J$相当于虚数单位$\text i$。
+扩展到$n\times n$维复矩阵$[z_i^j] = [x_i^j] + \text i[y_i^j]$：
+
+$$
+[z_i^j]
+=
+\begin{bmatrix}
+  [x_i^j] & [-y_i^j] \\
+  [y_i^j] & [x_i^j]
+\end{bmatrix}
+= [x_i^j] I_{2n} + [y_i^j] J_{2n}
+=
+[x_i^j] \begin{bmatrix}
+  I_n & 0 \\
+  0 & I_n
+\end{bmatrix}
++
+[y_i^j] \begin{bmatrix}
+  0 & -I_n \\
+  I_n & 0
+\end{bmatrix}
+$$
+
+这里出现了偶数维的单位矩阵$I_{2n}$和辛矩阵$J_{2n}$。
+一般考虑实域，
+$(Z,\Omega)$称为辛向量空间，
+若$\Omega$是$Z$非退化斜对称的双线性型，
+即辛形式。
+在一对对偶空间$Z = V^* \times V$上构造
+\textbf{正则辛形式}（canonical symplectic form）：
+
+\begin{equation}
+\begin{aligned}
+  \Omega: Z = V^* \times V &\to \mathbb R \\
+  ((f,u),(g,v)) &\mapsto 
+  \Omega((f,u),(g,v))
+  = g(u) - f(v)
+  = \langle g,u \rangle - \langle f,v \rangle
+\end{aligned}
+\label{eq:canonical-symp-form}  
+\end{equation}
+
+在有限维$V \simeq \mathbb R_n$时，
+$\Omega: \mathbb R^n \times \mathbb R_n \to \mathbb R$
+有坐标表示：
+
+$$
+((f,u),(g,v)) \mapsto 
+  \Omega((f,u),(g,v))
+  = f_2 v_1 - f_1 v_2
+  = 
+  \begin{bmatrix} f & g \end{bmatrix}
+  J_{2n}
+  \begin{bmatrix} u \\ v \end{bmatrix}
+$$
+
+辛形式作为$(1,1)$-型张量，
+其坐标表示就是辛矩阵$J_{2n}$。
+这类张量易于转为内积，
+从而在内积空间上可以定义辛形式：
+$\Omega((f,u),(g,v)) = \langle f,u \rangle - \langle g,v \rangle$。
+复数以共轭乘法构成内积空间：
+
+$$
+\begin{aligned}
+\langle z,w \rangle &= \overline z w = (xu + yv) + (-xv + yu) \text i \\
+&=\begin{bmatrix} 
+  xu + yv & xv - yu \\ 
+  -xv + yu & xu + yv
+\end{bmatrix} \\
+& = (xu + yv) I + (-xv + yu) J
+\end{aligned}
+$$
+
+这里的实部是实内积，虚部是辛形式．
+Hermite内积实际上给出了两个复数的夹角，
+保持了旋转不变性．
+推广到复矩阵代数的Hermite内积
+（Einstein求和约定）：
+
+$$
+\langle [z_i],[w_i] \rangle 
+= z_i \overline w^j 
+= (x_ju^j + y_jv^j) + \text i(u_jy^j + v_jx^j)
+= \Re \langle z,w \rangle - \Im\langle z,w \rangle
+$$
+
+实部是实内积，
+虚部是辛内积。
+这样把最常见的二次型张量：
+Riemann度量，
+复结构，
+辛结构统一起来了，
+推广到流形的丛就是Kähler流形。
+复矩阵代数再推广到Hilbert空间，
+得到量子力学的辛形式
+\cite{MarsdenRatiu1994}：
+$\Omega(\psi_1,\psi_2) = - 2 \hbar h \Im\langle \psi_1,\psi_2 \rangle$。
+
+
+\subsection{Hermite内积}
+
+
+$k$-线性空间$H \in \textbf{Vct}_k$有自然配对
+$\textbf{Vct}(H^* \times H,k)$，
+它是$k$-双线性型．
+Hilbert空间$H$是完备的内积空间，
+内积是$\textbf{Vct}(H \times H,k)$形式的是$k$-双线性型．
+Riesz引理将这两种双线性型对应起来．
+
+限制在复Hilbert空间范畴$\textbf{Hilb}$上讨论，
+底空间$X$上的平方可积函数全体记：
+
+$$
+L^2(X) = \left\{ \psi :\ \int_X |\psi(x)|^2 \text dx < +\infty  \right\}
+$$
+
+因其平方可积，
+按逐点Hermite内积的方式定义内积：
+
+
 \section{Topos}
 
 回到非交换的算子代数$A$，
@@ -698,6 +839,97 @@ Kochen–Specker定理说明，
 形成一个全局赋值（全局截面）。
 
 
+\subsection{Topos}
+
+预层$F: \mathcal C^\text{op} \to \textbf{Set}$是函子，
+预层构成的范畴$\textbf{Set}^{\mathcal C^\text{op}}$是函子范畴。
+构造到预层范畴的形状为$\mathcal D$的\textbf{图}（diagram），
+即从索引范畴到目标范畴的函子
+$J: \mathcal D \to \textbf{Set}^{\mathcal C^\text{op}} $，
+使得$\forall d \in D$得到反变函子
+$J(d): \mathcal C^\text{op} \to \textbf{Set}$。
+其极限定义为：
+$$
+(\lim_{d \in \mathcal{D}} J(d))(C) := \lim_{d \in \mathcal{D}} (J(d)(C)).
+$$
+由于 \(\mathbf{Set}\) 是完备的，右侧极限存在。
+且该构造自然满足函子性，
+故$\textbf{Set}^{\mathcal C^\text{op}}$的极限存在。
+有终对象
+$\mathbf{1}(C) = \{*\}$（恒为单点集的预层），
+以及拉回：逐点取集合的拉回。
+
+预层$\forall X \in \textbf{Set}^{\mathcal C^\text{op}}$，
+定义幂对象：
+$$
+\mathcal{P}(X)(C) := \{ \text{子预层 } S 
+\subseteq \text{hom}_{\mathcal{C}}(-, C) \times X \}.
+$$
+即，它是对象 \(C\) 所代表的预层与 \(X\) 的乘积的所有子预层构成的集合。
+
+对于态射 \(f: D \to C\)，限制映射为 \(\mathcal{P}(X)(f): \mathcal{P}(X)(C) \to \mathcal{P}(X)(D)\)，
+将 \(S\) 拉回至 \(D\)：\(S \mapsto S \times_{\text{hom}(-, C)} \text{hom}(-, D)\)。
+
+\textbf{关键验证：} 我们需要建立自然同构。
+对于任意预层 \(Y\)，一个自然变换 \(\alpha: Y \to \mathcal{P}(X)\) 等价于在 \(\mathcal{C}\) 的每个对象 \(C\) 处选择 \(Y(C)\) 的一个子预层 \(S_C \subseteq \text{hom}(-, C) \times X\)。这又等价于给出一个子预层 \(S \subseteq Y \times X\)。因此，
+\[
+\text{hom}(Y, \mathcal{P}(X)) \cong \text{Sub}(Y \times X).
+\]
+故 \(\mathcal{P}(X)\) 是 \(X\) 的幂对象。
+
+
+初等 Topos 要求对于任意对象 \(Y, Z\)，
+存在指数对象 \(Z^Y\) 使得 \(\text{hom}(X \times Y, Z) \cong \text{hom}(X, Z^Y)\)。
+
+预层范畴具有指数对象。
+
+对于预层 \(Y, Z \in \mathbf{Set}^{\mathcal{C}^{op}}\)，定义指数预层 \(Z^Y\) 为：
+\[
+Z^Y(C) := \text{hom}_{\mathbf{Set}^{\mathcal{C}^{op}}}(\text{hom}(-, C) \times Y, Z).
+\]
+这本质上是将 \(Z\) 提升为 \(Y\) 的“内部 Hom”。可以验证，存在求值态射 \(\mathrm{ev}: Z^Y \times Y \to Z\)，并且该构造给出了所需的伴随关系。
+
+
+这是证明中最关键的一步。
+
+预层范畴存在子对象分类器（Subobject Classifier）。
+
+定义预层 \(\Omega \in \mathbf{Set}^{\mathcal{C}^{op}}\) 如下：
+\[
+\Omega(C) := \{ S \subseteq \text{hom}_{\mathcal{C}}(-, C) \mid S \text{ 是一个筛 (Sieve)} \}.
+\]
+即，\(\Omega(C)\) 是对象 \(C\) 上的所有筛构成的集合。
+
+对于态射 \(f: D \to C\)，限制映射为：
+\[
+\Omega(f): \Omega(C) \to \Omega(D), \quad S \mapsto f^*(S) = \{ g: E \to D \mid f \circ g \in S \}.
+\]
+
+定义真值态射（Truth Morphism）\(\top: \mathbf{1} \to \Omega\) 为：
+\[
+\top_C: \{*\} \to \Omega(C), \quad * \mapsto \max S_C = \text{hom}_{\mathcal{C}}(-, C).
+\]
+即，它将每个对象映射到该对象上的最大筛（整个 Hom 集）。
+
+现在，对任意单态射 \(i: X \hookrightarrow Y\)，我们定义其特征态射 \(\chi_i: Y \to \Omega\) 如下：
+对于任意 \(C \in \mathcal{C}\) 和 \(y \in Y(C)\)，
+\[
+\chi_i(C)(y) := \{ f: D \to C \mid Y(f)(y) \in X(D) \} \in \Omega(C).
+\]
+即，它是所有使得 \(y\) 沿 \(f\) 拉回后落到子对象 \(X\) 中的态射 \(f\) 构成的集合。这显然是一个筛。
+
+由此可得，对任意 \(Y\) 的子对象 \(X \hookrightarrow Y\)，存在唯一的态射 \(\chi\) 使得下图是拉回：
+\[
+\begin{tikzcd}
+X \arrow[r] \arrow[d] & \mathbf{1} \arrow[d, "\top"] \\
+Y \arrow[r, "\chi"] & \Omega
+\end{tikzcd}
+\]
+其中 \(X\) 是 \(Y\) 通过 \(\chi\) 拉回 \(\top\) 得到的。因此，\(\Omega\) 是子对象分类器。
+
+它是初等topos，
+当$\mathcal C \in \textbf{cat}$是小范畴时，
+它是Grothendieck topos。
 
 \subsection{拓扑}
 
@@ -1471,55 +1703,6 @@ $T^* = T^{-1}$是酉算子，
 几何上，
 自伴算子的实值$\lambda_i$缩放不旋转，
 酉算子的单位复数$\lambda_i = \text e^{\theta_i\text i}$旋转不缩放．
-
-
-\subsection{Hermite内积}
-
-
-$k$-线性空间$H \in \textbf{Vct}_k$有自然配对
-$\textbf{Vct}(H^* \times H,k)$，
-它是$k$-双线性型．
-Hilbert空间$H$是完备的内积空间，
-内积是$\textbf{Vct}(H \times H,k)$形式的是$k$-双线性型．
-Riesz引理将这两种双线性型对应起来．
-
-限制在复Hilbert空间范畴$\textbf{Hilb}$上讨论，
-底空间$X$上的平方可积函数全体记：
-
-$$
-L^2(X) = \left\{ \psi :\ \int_X |\psi(x)|^2 \text dx < +\infty  \right\}
-$$
-
-因其平方可积，
-按逐点Hermite内积的方式定义内积：
-
-$$
-\braket{\psi}{\phi} = 
-\langle \psi,\phi \rangle = \int_X \overline{\psi(x)} \phi(x) \text dx
-$$
-
-其中被积项目是复数的Hermite内积，
-令$z = x + y \text i, w = u + v \text i$：
-
-$$
-\begin{aligned}
-\langle z,w \rangle &= \overline z w = (xu + yv) + (-xv + yu) \text i \\
-&= 
-\big\langle
-\begin{bmatrix} x & -y \\ y & x\end{bmatrix}, 
-\begin{bmatrix} u & -v \\ v & u\end{bmatrix}
-\big\rangle \\
-&= 
-\begin{bmatrix} 
-  xu + yv & xv - yu \\ 
-  -xv + yu & xu + yv
-\end{bmatrix}
-\end{aligned}
-$$
-
-这里的实部是实内积，虚不受辛形式．
-Hermite内积实际上给出了两个复数的夹角，
-保持了旋转不变性．
 
 \subsection{二次型}
 

@@ -1,0 +1,736 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{BirruWang2016}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=bfd75df93c9477bdf685d6fd12a980a6}{%
+           family={Birru},
+           familyi={B\bibinitperiod},
+           given={Justin},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fe640e849a8886ad3d893292dd86464b}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Baolian},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c1707a7e22d4643f4e2c9d5d5de705b5}
+      \strng{fullhash}{c1707a7e22d4643f4e2c9d5d5de705b5}
+      \strng{fullhashraw}{c1707a7e22d4643f4e2c9d5d5de705b5}
+      \strng{bibnamehash}{c1707a7e22d4643f4e2c9d5d5de705b5}
+      \strng{authorbibnamehash}{c1707a7e22d4643f4e2c9d5d5de705b5}
+      \strng{authornamehash}{c1707a7e22d4643f4e2c9d5d5de705b5}
+      \strng{authorfullhash}{c1707a7e22d4643f4e2c9d5d5de705b5}
+      \strng{authorfullhashraw}{c1707a7e22d4643f4e2c9d5d5de705b5}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Financial Economics}
+      \field{note}{探讨散户投资者对低绝对股价股票的"彩票心理"及认知偏差}
+      \field{number}{3}
+      \field{title}{Nominal Price Illusion}
+      \field{volume}{119}
+      \field{year}{2016}
+      \field{pages}{578\bibrangedash 598}
+      \range{pages}{21}
+    \endentry
+    \entry{BorsboomFullbrunn2024}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=cd53ad658ff6681b7fda1ff630a8bd04}{%
+           family={Borsboom},
+           familyi={B\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c6549edf1f68f5b914db2172602474e5}{%
+           family={Füllbrunn},
+           familyi={F\bibinitperiod},
+           given={Sascha},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{22a652bdcea989f481fe9a8665887da0}
+      \strng{fullhash}{22a652bdcea989f481fe9a8665887da0}
+      \strng{fullhashraw}{22a652bdcea989f481fe9a8665887da0}
+      \strng{bibnamehash}{22a652bdcea989f481fe9a8665887da0}
+      \strng{authorbibnamehash}{22a652bdcea989f481fe9a8665887da0}
+      \strng{authornamehash}{22a652bdcea989f481fe9a8665887da0}
+      \strng{authorfullhash}{22a652bdcea989f481fe9a8665887da0}
+      \strng{authorfullhashraw}{22a652bdcea989f481fe9a8665887da0}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Behavioral Finance}
+      \field{number}{1}
+      \field{title}{Nominal Price (Dis)Illusion: Fractional Shares on Neobroker Trading Platforms}
+      \field{volume}{25}
+      \field{year}{2024}
+      \field{pages}{112\bibrangedash 128}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1080/15427560.2024.2449361
+      \endverb
+    \endentry
+    \entry{Chakraborti2007FinTSOverview}{misc}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=15476df4b3fff8858fe904c4d47e8697}{%
+           family={Chakraborti},
+           familyi={C\bibinitperiod},
+           given={Anirban},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=86217e977d22e093bc9c3adca7529f8f}{%
+           family={Patriarca},
+           familyi={P\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cdf9a3eb2ae6118347bedc915e781cfc}{%
+           family={Santhanam},
+           familyi={S\bibinitperiod},
+           given={M.\bibnamedelimi S.},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{bab1c901304808092ae8b2fc6d1f636e}
+      \strng{fullhash}{bab1c901304808092ae8b2fc6d1f636e}
+      \strng{fullhashraw}{bab1c901304808092ae8b2fc6d1f636e}
+      \strng{bibnamehash}{bab1c901304808092ae8b2fc6d1f636e}
+      \strng{authorbibnamehash}{bab1c901304808092ae8b2fc6d1f636e}
+      \strng{authornamehash}{bab1c901304808092ae8b2fc6d1f636e}
+      \strng{authorfullhash}{bab1c901304808092ae8b2fc6d1f636e}
+      \strng{authorfullhashraw}{bab1c901304808092ae8b2fc6d1f636e}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{q-fin.ST}
+      \field{eprinttype}{arXiv}
+      \field{howpublished}{arXiv preprint arXiv:0704.1738}
+      \field{note}{梳理金融时间序列的典型事实(stylized facts)：厚尾、波动率聚集、收益率自相关缺失，并介绍随机游走、GARCH、跳跃扩散等模型}
+      \field{title}{Financial time-series analysis: A brief overview}
+      \field{year}{2007}
+      \verb{eprint}
+      \verb 0704.1738
+      \endverb
+    \endentry
+    \entry{ConroyHarrisBenet1990}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=8a2eef1069201f41b9aa59284c67d99a}{%
+           family={Conroy},
+           familyi={C\bibinitperiod},
+           given={Robert\bibnamedelima M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7cd25173784bb783922be34851eab5dc}{%
+           family={Harris},
+           familyi={H\bibinitperiod},
+           given={Robert\bibnamedelima S.},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9066a7a9b321825541be1de894cbdc40}{%
+           family={Benet},
+           familyi={B\bibinitperiod},
+           given={Bruce\bibnamedelima A.},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{43df2f12de9236f8796cab8475314a8b}
+      \strng{fullhash}{43df2f12de9236f8796cab8475314a8b}
+      \strng{fullhashraw}{43df2f12de9236f8796cab8475314a8b}
+      \strng{bibnamehash}{43df2f12de9236f8796cab8475314a8b}
+      \strng{authorbibnamehash}{43df2f12de9236f8796cab8475314a8b}
+      \strng{authornamehash}{43df2f12de9236f8796cab8475314a8b}
+      \strng{authorfullhash}{43df2f12de9236f8796cab8475314a8b}
+      \strng{authorfullhashraw}{43df2f12de9236f8796cab8475314a8b}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Journal of Finance}
+      \field{number}{4}
+      \field{title}{The Effects of Stock Splits on Bid-Ask Spreads}
+      \field{volume}{45}
+      \field{year}{1990}
+      \field{pages}{1285\bibrangedash 1295}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1111/j.1540-6261.1990.tb02436.x
+      \endverb
+    \endentry
+    \entry{EmmertStreib2026TSFMethods}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=c366d0d37b00e25cc0c52232b4966ca9}{%
+           family={Emmert-Streib},
+           familyi={E\bibinithyphendelim S\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f2cc6c856f92845365038d5842a08dea}{%
+           family={Tripathi},
+           familyi={T\bibinitperiod},
+           given={Rittwik},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1f573a51071ffb2c0491e5ec1ed1763a}
+      \strng{fullhash}{1f573a51071ffb2c0491e5ec1ed1763a}
+      \strng{fullhashraw}{1f573a51071ffb2c0491e5ec1ed1763a}
+      \strng{bibnamehash}{1f573a51071ffb2c0491e5ec1ed1763a}
+      \strng{authorbibnamehash}{1f573a51071ffb2c0491e5ec1ed1763a}
+      \strng{authornamehash}{1f573a51071ffb2c0491e5ec1ed1763a}
+      \strng{authorfullhash}{1f573a51071ffb2c0491e5ec1ed1763a}
+      \strng{authorfullhashraw}{1f573a51071ffb2c0491e5ec1ed1763a}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ACM Computing Surveys}
+      \field{note}{全景式综述：从统计模型、经典机器学习到深度学习架构(RNN/CNN/Transformer/图神经网络/Neural ODEs)，提供模型选择分类框架}
+      \field{title}{Time Series Forecasting Methods: A Systematic Review from Classical Models to Deep Learning}
+      \field{year}{2026}
+      \verb{doi}
+      \verb 10.1145/3828164
+      \endverb
+    \endentry
+    \entry{Ikenberryetal}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=a750b023fd729199770d1775ec3779bd}{%
+           family={Ikenberry},
+           familyi={I\bibinitperiod},
+           given={David\bibnamedelima L.},
+           giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7067481189aa7a7f3a9cff920faef611}{%
+           family={Lakonishok},
+           familyi={L\bibinitperiod},
+           given={Josef},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2021bfa07e5f9b5be426e00f09841bad}{%
+           family={Vermaelen},
+           familyi={V\bibinitperiod},
+           given={Theo},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fc7d9c64109987cb1251a8a52999628f}
+      \strng{fullhash}{fc7d9c64109987cb1251a8a52999628f}
+      \strng{fullhashraw}{fc7d9c64109987cb1251a8a52999628f}
+      \strng{bibnamehash}{fc7d9c64109987cb1251a8a52999628f}
+      \strng{authorbibnamehash}{fc7d9c64109987cb1251a8a52999628f}
+      \strng{authornamehash}{fc7d9c64109987cb1251a8a52999628f}
+      \strng{authorfullhash}{fc7d9c64109987cb1251a8a52999628f}
+      \strng{authorfullhashraw}{fc7d9c64109987cb1251a8a52999628f}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Financial Economics}
+      \field{note}{关于拆股/除权长期跟踪研究的经典文献}
+      \field{number}{2}
+      \field{title}{What do Stock Splits Really Signal?}
+      \field{volume}{41}
+      \field{year}{1996}
+      \field{pages}{235\bibrangedash 258}
+      \range{pages}{24}
+    \endentry
+    \entry{Koski1995}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7e69d34d5fc86fdf25c380bda3270dfd}{%
+           family={Koski},
+           familyi={K\bibinitperiod},
+           given={Jennifer\bibnamedelima Lynch},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7e69d34d5fc86fdf25c380bda3270dfd}
+      \strng{fullhash}{7e69d34d5fc86fdf25c380bda3270dfd}
+      \strng{fullhashraw}{7e69d34d5fc86fdf25c380bda3270dfd}
+      \strng{bibnamehash}{7e69d34d5fc86fdf25c380bda3270dfd}
+      \strng{authorbibnamehash}{7e69d34d5fc86fdf25c380bda3270dfd}
+      \strng{authornamehash}{7e69d34d5fc86fdf25c380bda3270dfd}
+      \strng{authorfullhash}{7e69d34d5fc86fdf25c380bda3270dfd}
+      \strng{authorfullhashraw}{7e69d34d5fc86fdf25c380bda3270dfd}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Financial Research}
+      \field{number}{3}
+      \field{title}{Measurement Effects and the Variance Increased Associated with Stock Splits}
+      \field{volume}{18}
+      \field{year}{1995}
+      \field{pages}{267\bibrangedash 285}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1111/j.1475-6803.1995.tb00569.x
+      \endverb
+    \endentry
+    \entry{LintonOlive2025}{report}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=5a0866101878426973767ab807061225}{%
+           family={Linton},
+           familyi={L\bibinitperiod},
+           given={Oliver},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d7532a222e9dc8c4975a4fc991131525}{%
+           family={Olive},
+           familyi={O\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{2}{%
+        {University of Cambridge}%
+        {CUHK Working Paper}%
+      }
+      \strng{namehash}{6503416e82afb273c146800399834de4}
+      \strng{fullhash}{6503416e82afb273c146800399834de4}
+      \strng{fullhashraw}{6503416e82afb273c146800399834de4}
+      \strng{bibnamehash}{6503416e82afb273c146800399834de4}
+      \strng{authorbibnamehash}{6503416e82afb273c146800399834de4}
+      \strng{authornamehash}{6503416e82afb273c146800399834de4}
+      \strng{authorfullhash}{6503416e82afb273c146800399834de4}
+      \strng{authorfullhashraw}{6503416e82afb273c146800399834de4}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The permanent and temporary effects of stock splits on liquidity in a dynamic semiparametric model}
+      \field{type}{Working Paper}
+      \field{year}{2025}
+    \endentry
+    \entry{Lipson2001}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2c43c459e9c748dea11ebffe9079596d}{%
+           family={Lipson},
+           familyi={L\bibinitperiod},
+           given={Marc\bibnamedelima L.},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2c43c459e9c748dea11ebffe9079596d}
+      \strng{fullhash}{2c43c459e9c748dea11ebffe9079596d}
+      \strng{fullhashraw}{2c43c459e9c748dea11ebffe9079596d}
+      \strng{bibnamehash}{2c43c459e9c748dea11ebffe9079596d}
+      \strng{authorbibnamehash}{2c43c459e9c748dea11ebffe9079596d}
+      \strng{authornamehash}{2c43c459e9c748dea11ebffe9079596d}
+      \strng{authorfullhash}{2c43c459e9c748dea11ebffe9079596d}
+      \strng{authorfullhashraw}{2c43c459e9c748dea11ebffe9079596d}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Financial Markets}
+      \field{number}{1}
+      \field{title}{Stock Splits, Liquidity, and Limit Order Book Depth}
+      \field{volume}{4}
+      \field{year}{2001}
+      \field{pages}{69\bibrangedash 96}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1016/S1386-4181(00)00016-1
+      \endverb
+    \endentry
+    \entry{Masini2023MLAdvances}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=af1b6b8d8f9615e7812c09f1539e069f}{%
+           family={Masini},
+           familyi={M\bibinitperiod},
+           given={Ricardo\bibnamedelima P.},
+           giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=01783f2f51593682234db659efc5338f}{%
+           family={Medeiros},
+           familyi={M\bibinitperiod},
+           given={Marcelo\bibnamedelima C.},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1199b71571338d4e7eb21ed8c93482c1}{%
+           family={Mendes},
+           familyi={M\bibinitperiod},
+           given={Eduardo\bibnamedelima F.},
+           giveni={E\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c08b1ada7b4254fc7561b182a51e53e6}
+      \strng{fullhash}{c08b1ada7b4254fc7561b182a51e53e6}
+      \strng{fullhashraw}{c08b1ada7b4254fc7561b182a51e53e6}
+      \strng{bibnamehash}{c08b1ada7b4254fc7561b182a51e53e6}
+      \strng{authorbibnamehash}{c08b1ada7b4254fc7561b182a51e53e6}
+      \strng{authornamehash}{c08b1ada7b4254fc7561b182a51e53e6}
+      \strng{authorfullhash}{c08b1ada7b4254fc7561b182a51e53e6}
+      \strng{authorfullhashraw}{c08b1ada7b4254fc7561b182a51e53e6}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Journal of Economic Surveys}
+      \field{note}{综述监督式机器学习的近期进展：惩罚回归、集成方法、浅层与深度神经网络(前馈/循环)，含金融与经济中的应用与预测能力检验}
+      \field{number}{1}
+      \field{title}{Machine learning advances for time series forecasting}
+      \field{volume}{37}
+      \field{year}{2023}
+      \field{pages}{76\bibrangedash 111}
+      \range{pages}{36}
+      \verb{doi}
+      \verb 10.1111/joes.12429
+      \endverb
+      \verb{eprint}
+      \verb 2012.12802
+      \endverb
+    \endentry
+    \entry{MaungSwanson2025Forecasting}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=777f78619107371b84bad7df9b3fcb29}{%
+           family={Maung},
+           familyi={M\bibinitperiod},
+           given={Khine},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ed24b3bcff28b17e99b7b3dc54f8a6b0}{%
+           family={Swanson},
+           familyi={S\bibinitperiod},
+           given={Norman\bibnamedelima R.},
+           giveni={N\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{967b3f9efad79e10e5d6c6b90d172fb2}
+      \strng{fullhash}{967b3f9efad79e10e5d6c6b90d172fb2}
+      \strng{fullhashraw}{967b3f9efad79e10e5d6c6b90d172fb2}
+      \strng{bibnamehash}{967b3f9efad79e10e5d6c6b90d172fb2}
+      \strng{authorbibnamehash}{967b3f9efad79e10e5d6c6b90d172fb2}
+      \strng{authornamehash}{967b3f9efad79e10e5d6c6b90d172fb2}
+      \strng{authorfullhash}{967b3f9efad79e10e5d6c6b90d172fb2}
+      \strng{authorfullhashraw}{967b3f9efad79e10e5d6c6b90d172fb2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Forecasting}
+      \field{note}{核心综述：从随机游走、GARCH 族到连续时间随机波动率模型，并讨论大数据与机器学习在金融预测中的应用}
+      \field{number}{4}
+      \field{title}{A survey of models and methods used for forecasting when investing in financial markets}
+      \field{volume}{41}
+      \field{year}{2025}
+      \field{pages}{1355\bibrangedash 1382}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1016/j.ijforecast.2025.03.002
+      \endverb
+    \endentry
+    \entry{OhlsonPenman1985}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=e4f44a2c0fc490251b6730f1b7bc7230}{%
+           family={Ohlson},
+           familyi={O\bibinitperiod},
+           given={James\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=66d4d18de54ea6253bf0fccc0fda53e6}{%
+           family={Penman},
+           familyi={P\bibinitperiod},
+           given={Stephen\bibnamedelima H.},
+           giveni={S\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f72266a6ac78b1c4d51356de71d4b4bc}
+      \strng{fullhash}{f72266a6ac78b1c4d51356de71d4b4bc}
+      \strng{fullhashraw}{f72266a6ac78b1c4d51356de71d4b4bc}
+      \strng{bibnamehash}{f72266a6ac78b1c4d51356de71d4b4bc}
+      \strng{authorbibnamehash}{f72266a6ac78b1c4d51356de71d4b4bc}
+      \strng{authornamehash}{f72266a6ac78b1c4d51356de71d4b4bc}
+      \strng{authorfullhash}{f72266a6ac78b1c4d51356de71d4b4bc}
+      \strng{authorfullhashraw}{f72266a6ac78b1c4d51356de71d4b4bc}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Financial Economics}
+      \field{number}{2}
+      \field{title}{Volatility Increases Subsequent to Stock Splits}
+      \field{volume}{14}
+      \field{year}{1985}
+      \field{pages}{251\bibrangedash 266}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1016/0304-405X(85)90017-0
+      \endverb
+    \endentry
+    \entry{PangZhao2025GARCHSV}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=15bfbfe1db67917fc953926d49afd752}{%
+           family={Pang},
+           familyi={P\bibinitperiod},
+           given={Tao},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f0e7d180081df6c4c59c600f7c044474}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Yang},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f3c76cfb6b5b5a3d9e5be0b5b4baba7b}
+      \strng{fullhash}{f3c76cfb6b5b5a3d9e5be0b5b4baba7b}
+      \strng{fullhashraw}{f3c76cfb6b5b5a3d9e5be0b5b4baba7b}
+      \strng{bibnamehash}{f3c76cfb6b5b5a3d9e5be0b5b4baba7b}
+      \strng{authorbibnamehash}{f3c76cfb6b5b5a3d9e5be0b5b4baba7b}
+      \strng{authornamehash}{f3c76cfb6b5b5a3d9e5be0b5b4baba7b}
+      \strng{authorfullhash}{f3c76cfb6b5b5a3d9e5be0b5b4baba7b}
+      \strng{authorfullhashraw}{f3c76cfb6b5b5a3d9e5be0b5b4baba7b}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Risks}
+      \field{note}{{S\&P} 500 指数实证比较：ARSV(1) 在物理测度下样本内外均优于 {GARCH}(1,1)；看跌期权定价 {ARSV}(1) 显著更优}
+      \field{number}{2}
+      \field{title}{On {GARCH} and Autoregressive Stochastic Volatility Approaches for Market Calibration and Option Pricing}
+      \field{volume}{13}
+      \field{year}{2025}
+      \field{pages}{31}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/risks13020031
+      \endverb
+    \endentry
+    \entry{Sims2010ContinuousTime}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6ea5ed711258737020e21f785822b8e5}{%
+           family={Sims},
+           familyi={S\bibinitperiod},
+           given={Christopher\bibnamedelima A.},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=31b54f7f973032bd0ab1b3a6ac95f63b}{%
+           family={Aït-Sahalia},
+           familyi={A\bibinithyphendelim S\bibinitperiod},
+           given={Yacine},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=e1954df31fff05759fb382c941707eb0}{%
+           family={Hansen},
+           familyi={H\bibinitperiod},
+           given={Lars\bibnamedelima Peter},
+           giveni={L\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {North-Holland}%
+      }
+      \strng{namehash}{6ea5ed711258737020e21f785822b8e5}
+      \strng{fullhash}{6ea5ed711258737020e21f785822b8e5}
+      \strng{fullhashraw}{6ea5ed711258737020e21f785822b8e5}
+      \strng{bibnamehash}{6ea5ed711258737020e21f785822b8e5}
+      \strng{authorbibnamehash}{6ea5ed711258737020e21f785822b8e5}
+      \strng{authornamehash}{6ea5ed711258737020e21f785822b8e5}
+      \strng{authorfullhash}{6ea5ed711258737020e21f785822b8e5}
+      \strng{authorfullhashraw}{6ea5ed711258737020e21f785822b8e5}
+      \strng{editorbibnamehash}{0bc36986b0cf6d7d087c65993c2a43ee}
+      \strng{editornamehash}{0bc36986b0cf6d7d087c65993c2a43ee}
+      \strng{editorfullhash}{0bc36986b0cf6d7d087c65993c2a43ee}
+      \strng{editorfullhashraw}{0bc36986b0cf6d7d087c65993c2a43ee}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Handbook of Financial Econometrics: Tools and Techniques}
+      \field{chapter}{7}
+      \field{note}{讨论金融中连续时间随机过程(几何布朗运动、CIR 模型等)的设定与估计，为理论模型与实际数据结合提供视角}
+      \field{title}{Estimation of continuous-time models in finance}
+      \field{year}{2010}
+      \field{pages}{267\bibrangedash 325}
+      \range{pages}{59}
+    \endentry
+    \entry{Virbickaite2015BayesianGARCH}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=4961e7ed2ae47aaf1ef4821cbda52d9f}{%
+           family={Virbickaitė},
+           familyi={V\bibinitperiod},
+           given={Aušrinė},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0b8fb67c2b958a4635b8ff20173f73a0}{%
+           family={Ausín},
+           familyi={A\bibinitperiod},
+           given={M.\bibnamedelimi Concepción},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0ceb8c3ab1e1da44da96853947589184}{%
+           family={Galeano},
+           familyi={G\bibinitperiod},
+           given={Pedro},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{18afe8d58be56970eac13084d3ef137c}
+      \strng{fullhash}{18afe8d58be56970eac13084d3ef137c}
+      \strng{fullhashraw}{18afe8d58be56970eac13084d3ef137c}
+      \strng{bibnamehash}{18afe8d58be56970eac13084d3ef137c}
+      \strng{authorbibnamehash}{18afe8d58be56970eac13084d3ef137c}
+      \strng{authornamehash}{18afe8d58be56970eac13084d3ef137c}
+      \strng{authorfullhash}{18afe8d58be56970eac13084d3ef137c}
+      \strng{authorfullhashraw}{18afe8d58be56970eac13084d3ef137c}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Economic Surveys}
+      \field{note}{综述 GARCH 模型的贝叶斯推断方法，比较参数与非参数贝叶斯方法，特别讨论厚尾分布的灵活处理}
+      \field{number}{1}
+      \field{title}{Bayesian inference methods for univariate and multivariate GARCH models: A survey}
+      \field{volume}{29}
+      \field{year}{2015}
+      \field{pages}{76\bibrangedash 96}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1111/joes.12046
+      \endverb
+    \endentry
+    \entry{Yang2025MLFinTS}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d80871593fd0ca4912c9131e8cccf9e1}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Xuanqi},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d80871593fd0ca4912c9131e8cccf9e1}
+      \strng{fullhash}{d80871593fd0ca4912c9131e8cccf9e1}
+      \strng{fullhashraw}{d80871593fd0ca4912c9131e8cccf9e1}
+      \strng{bibnamehash}{d80871593fd0ca4912c9131e8cccf9e1}
+      \strng{authorbibnamehash}{d80871593fd0ca4912c9131e8cccf9e1}
+      \strng{authornamehash}{d80871593fd0ca4912c9131e8cccf9e1}
+      \strng{authorfullhash}{d80871593fd0ca4912c9131e8cccf9e1}
+      \strng{authorfullhashraw}{d80871593fd0ca4912c9131e8cccf9e1}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of World Economy}
+      \field{note}{聚焦机器学习(神经网络、随机森林、LASSO 等)在金融时间序列预测中的应用，讨论非线性、动态性与混沌特性的处理}
+      \field{number}{4}
+      \field{title}{Machine Learning in Financial Time Series Forecasting: A Systematic Review}
+      \field{volume}{4}
+      \field{year}{2025}
+      \field{pages}{145\bibrangedash 159}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.56397/JWE.2025.08.14
+      \endverb
+    \endentry
+    \entry{YouTube_StockSplits}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4f1723a891a7137620b452d209b27d70}{%
+           family={{YouTube 视频}},
+           familyi={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{4f1723a891a7137620b452d209b27d70}
+      \strng{fullhash}{4f1723a891a7137620b452d209b27d70}
+      \strng{fullhashraw}{4f1723a891a7137620b452d209b27d70}
+      \strng{bibnamehash}{4f1723a891a7137620b452d209b27d70}
+      \strng{authorbibnamehash}{4f1723a891a7137620b452d209b27d70}
+      \strng{authornamehash}{4f1723a891a7137620b452d209b27d70}
+      \strng{authorfullhash}{4f1723a891a7137620b452d209b27d70}
+      \strng{authorfullhashraw}{4f1723a891a7137620b452d209b27d70}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.youtube.com/watch?v=MgMTBNq7Bi4}}
+      \field{note}{历史回测数据解读拆股/除权真实收益表现}
+      \field{title}{Do Stock Splits ACTUALLY Boost Returns? What the Numbers Say}
+    \endentry
+    \entry{SZSE_HighDividend}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=3c78a7e8d1773a9c40ccc13ca74e31dd}{%
+           family={深交所金融创新实验室},
+           familyi={深\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {深圳证券交易所}%
+      }
+      \strng{namehash}{3c78a7e8d1773a9c40ccc13ca74e31dd}
+      \strng{fullhash}{3c78a7e8d1773a9c40ccc13ca74e31dd}
+      \strng{fullhashraw}{3c78a7e8d1773a9c40ccc13ca74e31dd}
+      \strng{bibnamehash}{3c78a7e8d1773a9c40ccc13ca74e31dd}
+      \strng{authorbibnamehash}{3c78a7e8d1773a9c40ccc13ca74e31dd}
+      \strng{authornamehash}{3c78a7e8d1773a9c40ccc13ca74e31dd}
+      \strng{authorfullhash}{3c78a7e8d1773a9c40ccc13ca74e31dd}
+      \strng{authorfullhashraw}{3c78a7e8d1773a9c40ccc13ca74e31dd}
+      \field{sortinit}{深}
+      \field{sortinithash}{feb2a043c008d4653dce58f66401cb9c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{针对中国A股高送转现象的量化研究报告}
+      \field{title}{A股高送转公告效应与贴权陷阱研究}
+      \field{type}{techreport}
+      \field{year}{佚年}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

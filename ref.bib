@@ -2554,10 +2554,10 @@
 @article{Noether1918Invariante,
   author    = {Noether, Emmy},
   title     = {Invariante Variationsprobleme},
-  journal   = {Nachrichten von der Gesellschaft der Wissenschaften zu Göttingen},
+  journal   = {Nachrichten von der Königl. Gesellschaft der Wissenschaften zu Göttingen, Mathematisch-physikalische Klasse},
   year      = {1918},
   pages     = {235--257},
-  note      = {Noether定理的原始论文}
+  note      = {Noether 定理的原始论文（德文）。第一定理（Theorem I）给出：作用量泛函在连续对称变换群下不变 $\Rightarrow$ 存在相应的守恒律；应用于力学即平移/旋转对称性 $\Rightarrow$ 动量/角动量/能量守恒。第二定理处理含任意函数的不变性（规范对称）。}
 }
 
 @book{Goldstein1980Classical,
@@ -3049,6 +3049,129 @@
   year      = {2017},
   note      = {代数几何经典网络讲义，全文超过2000页，从概形语言到小平邦彦对偶}
 }
+
+%% ============================================================
+%% 金融时间序列：从随机过程到机器学习的综述
+%% ============================================================
+
+@article{MaungSwanson2025Forecasting,
+  author    = {Maung, Khine and Swanson, Norman R.},
+  title     = {A survey of models and methods used for forecasting when investing in financial markets},
+  journal   = {International Journal of Forecasting},
+  volume    = {41},
+  number    = {4},
+  pages     = {1355--1382},
+  year      = {2025},
+  doi       = {10.1016/j.ijforecast.2025.03.002},
+  note      = {核心综述：从随机游走、GARCH 族到连续时间随机波动率模型，并讨论大数据与机器学习在金融预测中的应用}
+}
+
+@misc{Chakraborti2007FinTSOverview,
+  author    = {Chakraborti, Anirban and Patriarca, Marco and Santhanam, M. S.},
+  title     = {Financial time-series analysis: A brief overview},
+  howpublished = {arXiv preprint arXiv:0704.1738},
+  year      = {2007},
+  eprint    = {0704.1738},
+  archivePrefix = {arXiv},
+  primaryClass = {q-fin.ST},
+  note      = {梳理金融时间序列的典型事实(stylized facts)：厚尾、波动率聚集、收益率自相关缺失，并介绍随机游走、GARCH、跳跃扩散等模型}
+}
+
+@article{Yang2025MLFinTS,
+  author    = {Yang, Xuanqi},
+  title     = {Machine Learning in Financial Time Series Forecasting: A Systematic Review},
+  journal   = {Journal of World Economy},
+  volume    = {4},
+  number    = {4},
+  pages     = {145--159},
+  year      = {2025},
+  doi       = {10.56397/JWE.2025.08.14},
+  note      = {聚焦机器学习(神经网络、随机森林、LASSO 等)在金融时间序列预测中的应用，讨论非线性、动态性与混沌特性的处理}
+}
+
+@article{Masini2023MLAdvances,
+  author    = {Masini, Ricardo P. and Medeiros, Marcelo C. and Mendes, Eduardo F.},
+  title     = {Machine learning advances for time series forecasting},
+  journal   = {Journal of Economic Surveys},
+  volume    = {37},
+  number    = {1},
+  pages     = {76--111},
+  year      = {2023},
+  doi       = {10.1111/joes.12429},
+  eprint    = {2012.12802},
+  archivePrefix = {arXiv},
+  note      = {综述监督式机器学习的近期进展：惩罚回归、集成方法、浅层与深度神经网络(前馈/循环)，含金融与经济中的应用与预测能力检验}
+}
+
+@article{EmmertStreib2026TSFMethods,
+  author    = {Emmert-Streib, Frank and Tripathi, Rittwik},
+  title     = {Time Series Forecasting Methods: A Systematic Review from Classical Models to Deep Learning},
+  journal   = {ACM Computing Surveys},
+  year      = {2026},
+  doi       = {10.1145/3828164},
+  note      = {全景式综述：从统计模型、经典机器学习到深度学习架构(RNN/CNN/Transformer/图神经网络/Neural ODEs)，提供模型选择分类框架}
+}
+
+@article{Virbickaite2015BayesianGARCH,
+  author    = {Virbickait\.{e}, Au\v{s}rin\.{e} and Aus\'{i}n, M. Concepci\'{o}n and Galeano, Pedro},
+  title     = {Bayesian inference methods for univariate and multivariate GARCH models: A survey},
+  journal   = {Journal of Economic Surveys},
+  volume    = {29},
+  number    = {1},
+  pages     = {76--96},
+  year      = {2015},
+  doi       = {10.1111/joes.12046},
+  note      = {综述 GARCH 模型的贝叶斯推断方法，比较参数与非参数贝叶斯方法，特别讨论厚尾分布的灵活处理}
+}
+
+@incollection{Sims2010ContinuousTime,
+  author    = {Sims, Christopher A.},
+  title     = {Estimation of continuous-time models in finance},
+  booktitle = {Handbook of Financial Econometrics: Tools and Techniques},
+  editor    = {A\"{i}t-Sahalia, Yacine and Hansen, Lars Peter},
+  publisher = {North-Holland},
+  chapter   = {7},
+  pages     = {267--325},
+  year      = {2010},
+  note      = {讨论金融中连续时间随机过程(几何布朗运动、CIR 模型等)的设定与估计，为理论模型与实际数据结合提供视角}
+}
+
+@article{PangZhao2025GARCHSV,
+  author    = {Pang, Tao and Zhao, Yang},
+  title     = {On {GARCH} and Autoregressive Stochastic Volatility Approaches for Market Calibration and Option Pricing},
+  journal   = {Risks},
+  volume    = {13},
+  number    = {2},
+  pages     = {31},
+  year      = {2025},
+  doi       = {10.3390/risks13020031},
+  note      = {{S\&P} 500 指数实证比较：ARSV(1) 在物理测度下样本内外均优于 {GARCH}(1,1)；看跌期权定价 {ARSV}(1) 显著更优}
+}
+
+@incollection{Carnero2001SVGARCH,
+  author    = {Carnero, M. A. and Pe\~{n}a, D. and Ruiz, E.},
+  title     = {Comparing conditional variance models: Theory and empirical evidence},
+  booktitle = {Working Paper},
+  year      = {2001},
+  note      = {证明 {ARSV}(1) 在过度峰度、低阶自相关和波动率高持续性方面优于 {GARCH}(1,1)}
+}
+
+@article{Bollerslev1986GARCH,
+  author    = {Bollerslev, Tim},
+  title     = {Generalized autoregressive conditional heteroskedasticity},
+  journal   = {Journal of Econometrics},
+  volume    = {31},
+  number    = {3},
+  pages     = {307--327},
+  year      = {1986},
+  doi       = {10.1016/0304-4076(86)90063-1}
+}
+
+
+
+
+
+
 
 
 

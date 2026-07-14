@@ -747,8 +747,157 @@ $(\mathbb R \cup \{-\infty\}, \max, +)$。
 
 \section{动力学}
 
+有时候用$\mathbb RA_n$表示$n$-维实\textbf{仿射空间}（affine space），
+强调它没有原点，
+只能求差不能求和的性质，
+以区别于其\textbf{平移群}（group of parallel displacement）
+$\mathbb R_n$。
+$\forall x,y\in \mathbb RA_n:\ x - y \in \mathbb R_n$，
+赋予Euclide距离使$\mathbb RA_n$构成度量空间和拓扑空间，
+即Eulicde空间。
+Galileo时空结构就是\textbf{世界点}（world point）构成的Euclide空间
+$\mathbb RA_{1+3} \simeq \mathbb RA \oplus \mathbb RA_3$。
+
+令$X = \mathbb RA_3$为底空间，
+讨论其上关于时间$t \in \mathbb RA$的动力学。
+$X$上的光滑函数代数记$C(X)$，
+若$\exists U \in C(X)$
+s.t.
+保守力$F = - \frac{\partial U}{\partial x} = - \partial_i U \text d x_i$，
+对于$\forall m \in \mathbb R^+$应用Newton定律，
+$\ddot x = F/m = - \text dU/m$。
+保守系统的能量守恒定律：
+$$
+\frac{\text d(T + U)}{\text dt}
+=\frac{\text d}{2 \text dt} \dot x^2 + \frac{\text d U}{\text dt}
+= \dot x \ddot x - \frac{\text dF}{\text dt}
+= \dot x \ddot x - \dot x \frac{F}{m}
+= 0
+$$
+
+\begin{framed}
+
+类比函数$f$对自变量$t$求导，
+泛函$F$对自变量$f$的
+\textbf{泛函导数}（functional derivative）有类似结构：
+
+$$
+\frac{\text df}{\text dx} = \lim_{\varepsilon \to 0}
+\frac{f(x + \varepsilon) - f(x)}{\varepsilon},
+\qquad
+\frac{\delta F}{\delta f} = \lim_{\varepsilon \to 0}
+\frac{F[f + \varepsilon g] - F[f]}{\varepsilon}
+$$
+
+难度在于，
+用实数$\varepsilon$去扰动自变量$x$就可以完成函数求导，
+同样去用实数$\varepsilon$去扰动自变量$f$时，
+如果用普通函数$g\in C(X)$简单地$\varepsilon g$，
+它带来的是整个$X$上函数的变化。
+为了将变化控制在某一点$x_0 \in X$，
+以便考察函数变分的性质，
+将Dirac delta广义函数略加改造让它适合于任意作为底空间的测度空间$X$，
+将其定义为乘性连续线性泛函（特征标），
+从而用双线性形式表述求值映射，
+使得点$x \in X$对应到线性泛函$\phi_x = \langle \delta_x, - \rangle$：
+
+$$
+\begin{aligned}
+C(X) \times X &\to \mathbb R \\
+(a,x_0) &\mapsto \phi_x(a) = \langle \delta_{x_0}, a \rangle 
+= \int_X a(x)\delta_{x_0} \text dx = a(x_0) \\
+\end{aligned}
+$$
+
+令$g = \delta_{x_0}$，
+得到泛函导数：
+
+\begin{equation}
+\frac{\delta F}{\delta f} = \lim_{\varepsilon \to 0}
+\frac{F[f + \varepsilon \delta_{x_0}] - F[f]}{\varepsilon}
+\label{eq:functional-derivative}
+\end{equation}
+
+\end{framed}
+
+动能和势能之差的泛函导数退化
+~\cite{Lancaster2014}：
+$\frac{\delta (T - V)}{\delta x} = 0$，
+这意味着差值是常数，
+它就是Lagrange量
+$L = T - V$。
+将其对时间积分得到\textbf{作用量}（action），
+对作用量做泛函导数有Hamilton最小作用量原理，
+以及相应的Euler-Lagrange方程：
+
+\begin{equation}
+\frac{\delta S}{\delta x(t)} 
+= \frac{\delta}{\delta x(t)}\int_T L \text dt = 0, \qquad
+\frac{\delta L}{\delta x(t)} - \frac{\text d}{\text dt} \frac{\delta L}{\delta \dot x(t)} = 0
+\label{eq:Euler-Lagrange-eq}
+\end{equation}
+
+它等价于D'Alembert-Lagrange原理。
+Legendre变换$H = p \dot x - L$将其转为Hamilton方程
+~\cite{Arnold1989}：
+
+\begin{equation}
+\frac{\text dp}{\text dt} = - \frac{\partial H}{\partial x}, \quad  
+\frac{\text dx}{\text dt} = \frac{\partial H}{\partial p}
+\label{eq:Hamilton-eq}
+\end{equation}
+
+有切丛上的实光滑函数$L \in C(TX)$
+和光滑映射$h: X \to X$及其推出$h_*: TX \to TX$。
+若 $\forall v \in TX:\ L(h_* v) = L(v)$,
+称Lagrange系统$(X,L)$ \textbf{接纳}（admit） $h$。
+有Nöther定理
+~\cite{Noether1918Invariante}：
+若$(X,L)$接纳单参数微分同胚群 $h^s: X \to X, s \in \mathbb R$，
+则对应于$L$的Lagrange方程有切丛上的第一积分：
+
+$$
+I(q, \dot q) = \left. \frac{\partial L}{\partial \dot{q}} \frac{d h^s(q)}{ds} \right|_{s=0}
+$$
+
+\textbf{证明.}
+
+首先，设 \( M = \mathbb{R}^n \) 为坐标空间。令 \( \varphi : \mathbb{R} \to M \)，\( q = \varphi(t) \) 是拉格朗日方程的解。由于 \( h^s_* \) 保持 \( L \)，平移后的解 \( h^s \circ \varphi : \mathbb{R} \to M \) 对任意 \( s \) 也满足拉格朗日方程。\(^{38}\)
+
+考虑映射 \( \Phi : \mathbb{R} \times \mathbb{R} \to \mathbb{R}^n \)，定义为 \( q = \Phi(s, t) = h^s(\varphi(t)) \)（图 70）。
+
+我们用点表示对 \( t \) 的导数，用撇表示对 \( s \) 的导数。由假设，
+\[
+0 = \frac{\partial L(\Phi, \dot{\Phi})}{\partial s} = \frac{\partial L}{\partial q} \cdot \Phi' + \frac{\partial L}{\partial \dot{q}} \dot{\Phi}',
+\]
+其中 \( L \) 的偏导数在点 \( \mathbf{q} = \Phi(s, t), \dot{\mathbf{q}} = \dot{\Phi}(s, t) \) 处取值。
+
+如前述，对任意固定的 \( s \)，映射 \( \Phi|_{s=\text{const}} : \mathbb{R} \to \mathbb{R}^n \) 满足拉格朗日方程
+\[
+\frac{\partial}{\partial t} \left[ \frac{\partial L}{\partial \dot{\mathbf{q}}} (\Phi(s, t), \dot{\Phi}(s, t)) \right] = \frac{\partial L}{\partial \mathbf{q}} (\Phi(s, t), \dot{\Phi}(s, t)).
+\]
+
+引入记号 \( F(s, t) = (\partial L / \partial \dot{\mathbf{q}})(\Phi(s, t), \dot{\Phi}(s, t)) \)，并将 \( \partial F / \partial t \) 代入 (1) 中的 \( \partial L / \partial \dot{\mathbf{q}} \)。
+
+将 \( \dot{\mathbf{q}}' \) 写为 \( d\mathbf{q}' / dt \)，我们得到
+\[
+0 = \left( \frac{d}{dt} \frac{\partial L}{\partial \dot{\mathbf{q}}} \right) \mathbf{q}' + \frac{\partial L}{\partial \dot{\mathbf{q}}} \left( \frac{d}{dt} \mathbf{q}' \right) = \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{\mathbf{q}}} \mathbf{q}' \right) = \frac{dI}{dt}.
+\]
+
+\textbf{注.} 第一积分 \( I = (\partial L / \partial \dot{\mathbf{q}}) \mathbf{q}' \) 是使用局部坐标 \( \mathbf{q} \) 定义的。事实上，\( I(\mathbf{v}) \) 的值不依赖于坐标系统 \( \mathbf{q} \) 的选择。
+
+实际上，\( I \) 是当向量 \( \mathbf{v} \in TM_x \) 在 \( TM_x \) 内部以速度 \( (d/ds)|_{s=0} h^s \mathbf{x} \) 变化时，\( L(\mathbf{v}) \) 的变化率。因此，\( I(\mathbf{v}) \) 作为切向量 \( \mathbf{v} \in TM_x \) 的函数是良定义的。当 \( M \) 是流形时，诺特定理以同样的方式证明。
+
+得到Nöther定理。
+
 \subsection{辛形式}
 
+$2n$-维光滑流形$X$上的\textbf{辛结构}（symplectic structure）
+是$X$上的一个非退化的$2$-微分形式$\omega$，
+满足$\text d\omega = 0$。
+配置了辛结构的流形$(X,\omega)$称为\textbf{辛流形}（symplectic manifold）。
+$n$-维光滑流形$X$的余切丛$T^*X$有自然的新结构
+$\omega = \text dp \wedge \text dx$。
 $X = \mathbb R^n$中坐标微分$\text dx$和力$F$的做功过程用$1$-形式，
 构成Poincaré-Cartan形式的基底。
 其外微分用$2$-形式，
@@ -789,6 +938,19 @@ X_H = \omega^\sharp (\text d H)
 $$
 
 这就是Hamilton方程。
+定义
+
+$$
+\frac{\partial}{\partial \overline z}
+=\frac{1}{2} \left( \frac{\partial}{\partial x} + \text i \frac{\partial}{\partial p} \right)
+$$
+
+Hamilton方程成为
+\cite{MarsdenRatiu1994}：
+
+$$
+\dot z = - 2\text i \frac{\partial H}{\partial \overline z}
+$$
 
 
 Hamilton力学利用速度$\text dx / \text dt$的Legendre变换得到动量$p$，
