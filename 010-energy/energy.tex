@@ -1269,6 +1269,29 @@ Holm 与 Tyranowski 的随机变分原理~\cite{HolmTyranowski2016}
 辛结构可以通过随机Hamilton-Pontryagin原理进行修正，
 而非简单破坏。
 
+\subsection{Bayes理论}
+
+在一个随机事件发生的条件下，
+另一个随机事件发生的条件概率，
+满足$P(A|B)P(B) = P(B|A)P(A) = P(A \cap B)$，
+得到Bayes公式：
+
+\begin{equation}
+P(A|B) = \frac{P(A \cap B)}{P(B)},\quad 
+P(B|A) = \frac{P(A \cap B)}{P(A)}
+\label{eq:Bayesian}
+\end{equation}
+
+以及多个事件的全概率公式：
+
+$$
+P(A_i|B) = \frac{P(B|A_i)P(A_i)}{\sum_i P(B|A_i)P(A_i)}
+$$
+
+这里$P(A_i)$是先验概率，
+$P(B|A_i)$是似然概率，
+$P(A_i|B)$是后验概率。
+
 \section{对称性阻碍}
 
 \subsection{对称性阻碍}
