@@ -76,6 +76,57 @@
 同时，高维函数型时间序列分析、贝叶斯非参数方法等新方向，
 也为更精细地利用高频、高维数据提供了新的建模思路。
 
+\subsection{波动率}
+
+波动率是对数价格的标准差。
+用移动平均的时间窗更新，
+带有衰减的移动平均可以描述波动率跳空收敛的过程。
+GARCH模型通过极大似然估计确定方差方程的参数，
+描述波动率的历史变化并有一定预测能力。
+
+K线是有相关性的OHLC时间序列构成的，
+可以计算收盘价波动率，
+Parkinson波动率，
+Garman-Klass波动率等。
+我们采用Yang-Zhang波动率，
+波动率分解为隔夜跳空、日内波动、趋势分量三部分
+\cite{YangZhang2000Volatility}。
+
+设第 $t$ 期的 OHLC 价格为 $O_t, H_t, L_t, C_t$，样本窗口长度为 $n$。定义如下三个分量。
+
+隔夜波动率：
+\begin{equation}
+\sigma_o^2 = \frac{1}{n-1} \sum_{t=1}^{n} \left( \ln \frac{O_t}{C_{t-1}} - \bar{\mu}_o \right)^2, \qquad
+\bar{\mu}_o = \frac{1}{n} \sum_{t=1}^{n} \ln \frac{O_t}{C_{t-1}}
+\end{equation}
+
+开收盘波动率：
+\begin{equation}
+\sigma_c^2 = \frac{1}{n-1} \sum_{t=1}^{n} \left( \ln \frac{C_t}{O_t} - \bar{\mu}_c \right)^2, \qquad
+\bar{\mu}_c = \frac{1}{n} \sum_{t=1}^{n} \ln \frac{C_t}{O_t}
+\end{equation}
+
+Rogers-Satchell 日内波动率：
+\begin{equation}
+\sigma_{rs}^2 = \frac{1}{n} \sum_{t=1}^{n} \left( \ln \frac{H_t}{C_t} \ln \frac{H_t}{O_t} + \ln \frac{L_t}{C_t} \ln \frac{L_t}{O_t} \right)
+\end{equation}
+
+加权系数：
+\begin{equation}
+k = \frac{0.34}{1.34 + \frac{n+1}{n-1}}
+\end{equation}
+
+Yang-Zhang 波动率估计量：
+\begin{equation}
+\sigma_{YZ}^2 = \sigma_o^2 + k \cdot \sigma_c^2 + (1-k) \cdot \sigma_{rs}^2
+\end{equation}
+
+用$n$个bar计算后，
+到$w$个bar时间窗口的归一化波动率：
+\begin{equation}
+\overline \sigma = \sigma \sqrt{\frac{w}{n}}
+\end{equation}
+
 \section{收益率}
 
 在金融时间序列分析中，原始价格序列通常是非平稳的，直接建模会导致伪回归等问题。因此，通常将价格序列转换为收益率序列，使其具有平稳性，便于后续的统计建模和预测。
