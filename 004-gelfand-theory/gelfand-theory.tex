@@ -141,6 +141,154 @@ $A^\times = \{ a \in k_n^n \mid \det a \neq 0 \}$。
 \label{eq:spec-set}
 \end{equation}
 
+
+为了了解矩阵算子 $a \in A$ 在何种条件下相当于 $\lambda \in k$ 的数乘，
+使得方程 $\lambda I_n = a$ 在某种条件下成立，
+即要求矩阵算子 $a_\lambda = \lambda I_n - a \notin A^\times$ 不可逆。
+在矩阵代数中，
+这种可逆性条件是由行列式方程
+$p(\lambda) = \det(\lambda I_n - a) = 0$ 刻画的。
+行列式代表的楔积有多线性的自然展开，
+上式可得到域 $k$ 上的多项式表述 $p(\lambda) \in k[\lambda]$，
+称为\textbf{特征多项式}（characteristic polynomial）。
+此时体现出复数域 $\mathbb{C}$ 作为代数封闭域的优点，
+以后的讨论都在复数域上进行。
+令 $A = (\mathbb{C}_n^n,\circ,I_n)$ 为 $n \times n$ 维复矩阵代数，
+其特征多项式可以分解为：
+
+$$
+p(\lambda) = \det(a_\lambda) = \det(\lambda I_n - a) = \prod_i (\lambda - \lambda_i)
+$$
+
+$n \times n$矩阵代数中，
+矩阵算子的分量$[p(\lambda)]_i^j = \lambda \delta_i^j - a_i^j$，
+在对角构成$n$个一次多项式，
+及其对应的作为\textbf{代数集}（algebraic set）的闭点（如果有解）。
+借助行列式$\det(p(\lambda))$得到$n$-次特征多项式，
+其根是Zariski拓扑意义下这些代数集的并集，
+也就是谱集：
+
+\begin{equation}
+\sigma(a) = \{ \lambda \in \mathbb{C} \mid a_\lambda = \lambda I_n - a \notin A^\times \} = \{ \lambda_i \}
+\end{equation}
+
+$\lambda I_n - a$ 的不可逆性对应了 $p(\lambda) = 0$ 的可解性，
+其非退化解 $\lambda \neq 0$ 即为矩阵 $a$ 的特征值。
+它提示我们在某种条件下， $a$ 作为算子可以用乘性算子来等效：
+$\lambda I_n = a$，
+其等效的条件即为特征向量的存在性。
+
+\begin{framed}
+  
+
+令 $A = (k_n^n, \circ, I_n)$ 为 $n \times n$ 维 $k$-矩阵代数。
+$V = k_n \in \mathbf{Vect}_k$ 是 $n$ 维 $k$-列向量空间，
+视为 $A$-左模。
+\textbf{外幂算子}（exterior power）$\Lambda^n$ 将其提升到 $n$ 阶外积空间，
+同时也把 $T \in \operatorname{End} V$ 提升为 $\Lambda^n(T) \in \operatorname{End} \Lambda^n(V)$：
+
+$$
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRADUACAXk4GsA+oQC+pdJlz5CKMgCYqtRizZdegkWJAZseAkVnkF9Zq0QgAOuYAydALYAjKHQB6YABTsAlD06X7WAHMAdxgoAJgBLE52EFFxHSl9UnlqY2UzSxsHJ1cPb14-QJCwiKiYuK0JXWkSUgBGIyVTEFjNbUk9FAMG1Ka2VviOmoBmesaTfor26qIAFjHeibMByoTO5ABWQ0X0kD4V6cSULZTFJb3YhVDwhBRQADMAJwhbJDIQHAgkOp3mgBUQNQGHR7DAGAAFKpHECPQIACxwKyeLyQBg+X0QozOu0ydkcLncf08gJAwNBEKhnVJMHuiIqyNeiHen1RvzYuOyBKRz0ZP3RSCxaWaHPxrhJZLBkLW0hh8LpmgZSHm-MQW1JWDAzSgECY9gYrGocJgdCgSDATAYDGoODoWAYbEgmu5KMQADZrRiAOxAjVanV6g0gI0ms0Wq0fW32syO1j0nlIAAcHqQAE42RlzLAcG4ieKQZLKTLYQEEZdhEA
+\begin{tikzcd}
+V = k_n \arrow[dd, "T"'] \arrow[rr, "\Lambda^n"] &  & \Lambda^n(V) = \bigwedge_i V \arrow[dd, "\Lambda^n(T)"] &                           &    & k \arrow[dd, "\det(T)"'] \\
+{} \arrow[rr, Rightarrow]                        &  & {}                                                      & {} \arrow[r, Rightarrow] & {} &                          \\
+V = k_n \arrow[rr, "\Lambda^n"']                 &  & \Lambda^n(V) = \bigwedge_i V                            &                           &    & k                        
+\end{tikzcd}
+$$
+
+根据\eqref{eq:dim-exterior-alg}，
+$\dim \Lambda^n(V) = \binom{n}{n} = 1$，
+作为 $k$-线性空间有 $\Lambda^n(V) \simeq k$。
+在微分几何中，
+它对应 Hodge 星算子的维度关系。
+$\Lambda^n(T) \in \operatorname{End} \Lambda^n(V)$ 等价于 $\lambda \in \operatorname{End} k$。
+$\Lambda^n(T)$ 构成了 $1$ 维的乘性算子，
+将其简化为域中的数，
+即将行列式定义为：对于 $\forall w \in \Lambda^n(V)$，
+
+\begin{equation}
+\det (T) \cdot w = \Lambda^n(T)(w)
+\label{eq:det-wedge}
+\end{equation}
+
+
+\end{framed}
+
+有限维线性算子可以用det构造作为Zariski并集的谱集，
+有限维行列式依赖于外代数的最高次外幂的$1$-维性质，
+而在无限维没有最高次幂，
+不存在非零的斜对称$\infty$-线性型。
+无限维度没有类似行列式的工具来刻画，
+只能用基本的可逆性来定义谱。
+
+延续前面对于矩阵代数的讨论，
+若 $A$ 是含幺代数则可以讨论可逆性，
+其可逆元全体记为 $A^\times$。
+谱理论研究代数元 $a \in A$ 在何种条件下相当于 $\lambda_a \in \mathbb{C}$ 的数量乘法。
+矩阵代数通过行列式是否退化来研究，
+而在一般的含幺代数中，
+任何非零线性泛函 $\varphi \in A^*$ 均满足 $\varphi(1_A)=1$。
+$\varphi$ 作用于 $\forall a \in A$ 得到数 $\lambda_a = \varphi(a) \in \mathbb{C}$。
+若算子 $a$ 的作用相当于数乘 $\lambda_a 1_A = a$，
+则有 $\varphi(a_\lambda) = \varphi(\lambda_a 1_A - a) = \varphi(0_A) = 0$。
+若 $a_\lambda = \lambda_a 1_A - a$ 可逆，
+则将导出矛盾：
+$1 = \varphi(1_A) = \varphi(a_\lambda \cdot a_\lambda^{-1}) = 0$。
+故 $a_\lambda = \lambda_a 1_A - a$ 必定不可逆，
+此数乘的数落在谱中：
+$\lambda_a = \varphi(a) \in \sigma(a)$。
+
+著名的 \textbf{Gleason-Kahane-Zelazko 定理}给出了以下等价条件：
+\begin{itemize}
+  \item $\varphi$ 是非零且乘性的；
+  \item $\varphi(1) = 1$， 且 $\forall a \in A^\times:\ \varphi(a) \neq 0$；
+  \item $\forall a \in A:\ \varphi(a) \in \sigma(a)$。
+\end{itemize}
+
+即乘性线性泛函的值必定落在相应元素的谱中。
+反之，若线性泛函 $\varphi$ 满足 $\varphi(1_A)=1$ 且 $\varphi(a) \in \sigma(a)$ 对所有 $a$ 成立，
+则可推出 $\varphi$ 必为乘性泛函。
+
+若$A$是Banach代数则$\sigma(a)$是非空紧集．
+
+复连续函数代数$A = C(X)$是典型的交换代数，
+记$Z(f) = \{ x\in X \mid f(x) = 0\}$为$f \in C(X)$的零点集/解集，
+$A^\times = \{ f \in C(X) \mid Z(f) = \varnothing \}$．
+函数$f\in C(X)$有谱
+
+$$
+\begin{aligned}
+\sigma(f) 
+&= \{ \lambda \in \mathbb C \mid \lambda 1_A - f \notin A^\times \} \\
+&= \{ \lambda \in \mathbb C \mid Z(\lambda 1_A - f) \neq \varnothing \}
+\end{aligned}
+$$
+
+非空的零点集意味着
+$\exists \lambda\in\sigma(f),x\in X$，
+使得函数$f$在$x$点上相当于幺元按照$\lambda$倍数的缩放．
+在函数的值域中
+$\forall \lambda \in f(X)$，
+$\exists x \in X$
+s.t.
+$\lambda 1_A(x) = f(x)$，
+即
+$\lambda 1_A - f \notin A^\times$，
+于是$f(X) \subseteq \sigma(f)$．
+$\forall \lambda \in \sigma(f)$，
+$\exists x \in X$
+s.t.
+$(\lambda 1_A - f)(x) = 0$，
+即 
+$\lambda 1_A(x) = \lambda = f(x)$
+于是$\sigma(f) \subseteq f(X)$，
+得到用零点集描述的谱集：
+
+$$
+\sigma(f) = f(X)
+$$
+
+
 \subsection{复代数}
 
 虽然可以继续在域$k$上讨论，
@@ -378,7 +526,6 @@ $\text{ev}_a: \mathbb C^A \to \mathbb C$连续，
 使得对于复开集$\forall V \in \mathcal O_\mathbb C$，
 其原像$\text{ev}_a^{-1}(V) = \{ \phi \in \mathbb C^A \mid \phi(a) \in V,\ a \in A, \ V \in \mathcal{O}_{\mathbb{C}} \}$必须是开集，
 这样最粗的拓扑称为弱 * 拓扑。
-可以证明$\Delta(A)$在弱 * 拓扑下构成紧Hausdorff空间，
 这样构造了Gelfand拓扑$\Delta(A)$。
 由于不存在平凡的幂零元，
 Gelfand拓扑等价于Zariski拓扑在极大谱上的限制。
@@ -394,6 +541,32 @@ Gelfand拓扑等价于Zariski拓扑在极大谱上的限制。
 
 从而诱导了\textbf{剩余域}（residue field）的同构：
 $C(X)/\mathfrak{m}_x \simeq \mathbb{C}$。
+
+\paragraph{Gelfand变换的同胚}
+
+\eqref{eq:character-fun-alg}中$\Phi: X \to \Delta(C(X))$的过程是单满的，
+拓扑上是同胚。
+
+\paragraph{Gelfand变换的交换含幺C*-代数同构}
+
+当$A$是含幺交换C*-代数时，
+$\Delta(A)$在弱 * 拓扑下构成紧Hausdorff空间。
+根据$\Delta(A) \times A \to \mathbb C$的自然映射，
+类似求值映射得到：
+$\hat a : \Delta(A) \to \mathbb C :: \hat a(\phi) = \phi(a)$，
+它是拓扑空间上的连续函数$\hat a \in \mathbb C^{\Delta(A)}$，
+从而实现了$A \to \mathbb C^{\Delta(A)}$的映射，
+称为Gelfand变换。
+Gelfand变换对代数结构和对合结构的保持易于证明，
+C*-代数的对合和$\|a\|^2 = \|a^*a\|$保证了Gelfand变换是等距变换，
+根据Stone-Weistrass定理，
+在紧Hausdorff空间上，
+Gelfand变换是满射，
+于是在含幺C*-代数范畴中，
+Gelfand变换构造了等距同构
+$A \simeq \mathbb C^{\Delta(A)}$。
+
+
 当$X$是紧Hausdorff空间时，
 所有的特征标都具有前述的构造方式，
 特征标和极大理想一一对应，
@@ -1766,36 +1939,6 @@ $$
 专门考虑算子 $a$ 在何种条件下相当于 $\lambda_a$ 的乘法。
 我们先从最简单的矩阵代数开始。
 
-令 $A = (k_n^n, \circ, I_n)$ 为 $n \times n$ 维 $k$-矩阵代数。
-$V = k_n \in \mathbf{Vect}_k$ 是 $n$ 维 $k$-列向量空间，
-视为 $A$-左模。
-\textbf{外幂算子}（exterior power）$\Lambda^n$ 将其提升到 $n$ 阶外积空间，
-同时也把 $T \in \operatorname{End} V$ 提升为 $\Lambda^n(T) \in \operatorname{End} \Lambda^n(V)$：
-
-$$
-% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRADUACAXk4GsA+oQC+pdJlz5CKMgCYqtRizZdegkWJAZseAkVnkF9Zq0QgAOuYAydALYAjKHQB6YABTsAlD06X7WAHMAdxgoAJgBLE52EFFxHSl9UnlqY2UzSxsHJ1cPb14-QJCwiKiYuK0JXWkSUgBGIyVTEFjNbUk9FAMG1Ka2VviOmoBmesaTfor26qIAFjHeibMByoTO5ABWQ0X0kD4V6cSULZTFJb3YhVDwhBRQADMAJwhbJDIQHAgkOp3mgBUQNQGHR7DAGAAFKpHECPQIACxwKyeLyQBg+X0QozOu0ydkcLncf08gJAwNBEKhnVJMHuiIqyNeiHen1RvzYuOyBKRz0ZP3RSCxaWaHPxrhJZLBkLW0hh8LpmgZSHm-MQW1JWDAzSgECY9gYrGocJgdCgSDATAYDGoODoWAYbEgmu5KMQADZrRiAOxAjVanV6g0gI0ms0Wq0fW32syO1j0nlIAAcHqQAE42RlzLAcG4ieKQZLKTLYQEEZdhEA
-\begin{tikzcd}
-V = k_n \arrow[dd, "T"'] \arrow[rr, "\Lambda^n"] &  & \Lambda^n(V) = \bigwedge_i V \arrow[dd, "\Lambda^n(T)"] &                           &    & k \arrow[dd, "\det(T)"'] \\
-{} \arrow[rr, Rightarrow]                        &  & {}                                                      & {} \arrow[r, Rightarrow] & {} &                          \\
-V = k_n \arrow[rr, "\Lambda^n"']                 &  & \Lambda^n(V) = \bigwedge_i V                            &                           &    & k                        
-\end{tikzcd}
-$$
-
-根据\eqref{eq:dim-exterior-alg}，
-$\dim \Lambda^n(V) = \binom{n}{n} = 1$，
-作为 $k$-线性空间有 $\Lambda^n(V) \simeq k$。
-在微分几何中，
-它对应 Hodge 星算子的维度关系。
-$\Lambda^n(T) \in \operatorname{End} \Lambda^n(V)$ 等价于 $\lambda \in \operatorname{End} k$。
-$\Lambda^n(T)$ 构成了 $1$ 维的乘性算子，
-将其简化为域中的数，
-即将行列式定义为：对于 $\forall w \in \Lambda^n(V)$，
-
-\begin{equation}
-\det (T) \cdot w = \Lambda^n(T)(w)
-\label{eq:det-wedge}
-\end{equation}
-
 \subsection{特征多项式}
 
 含幺代数可以讨论逆的问题。
@@ -1811,36 +1954,6 @@ $\det(T) \in k^\times$。
 行列式刻画了可逆性：
 $A^\times = \{ a \in k_n^n \mid \det a \neq 0 \}$。
 
-为了了解矩阵算子 $a \in A$ 在何种条件下相当于 $\lambda \in k$ 的数乘，
-使得方程 $\lambda I_n = a$ 在某种条件下成立，
-即要求矩阵算子 $a_\lambda = \lambda I_n - a \notin A^\times$ 不可逆。
-在矩阵代数中，
-这种可逆性条件是由行列式方程
-$p(\lambda) = \det(\lambda I_n - a) = 0$ 刻画的。
-行列式代表的楔积有多线性的自然展开，
-上式可得到域 $k$ 上的多项式表述 $p(\lambda) \in k[\lambda]$，
-称为\textbf{特征多项式}（characteristic polynomial）。
-此时体现出复数域 $\mathbb{C}$ 作为代数封闭域的优点，
-以后的讨论都在复数域上进行。
-令 $A = (\mathbb{C}_n^n,\circ,I_n)$ 为 $n \times n$ 维复矩阵代数，
-其特征多项式可以分解为：
-
-$$
-p(\lambda) = \det(a_\lambda) = \det(\lambda I_n - a) = \prod_i (\lambda - \lambda_i)
-$$
-
-其解集合构成复矩阵算子 $a \in A$ 的谱：
-
-\begin{equation}
-\sigma(a) = \{ \lambda \in \mathbb{C} \mid a_\lambda = \lambda I_n - a \notin A^\times \} = \{ \lambda_i \}
-\end{equation}
-
-$\lambda I_n - a$ 的不可逆性对应了 $p(\lambda) = 0$ 的可解性，
-其非退化解 $\lambda \neq 0$ 即为矩阵 $a$ 的特征值。
-它提示我们在某种条件下， $a$ 作为算子可以用乘性算子来等效：
-$\lambda I_n = a$，
-其等效的条件即为特征向量的存在性。
-
 \subsection{迹}
 
 在$k$-线性空间范畴中有自然配对
@@ -1851,77 +1964,6 @@ $$
 \text{End} \ X \simeq X^* \otimes X
 $$
 
-
-
-
-\subsection{谱}
-
-延续前面对于矩阵代数的讨论，
-若 $A$ 是含幺代数则可以讨论可逆性，
-其可逆元全体记为 $A^\times$。
-谱理论研究代数元 $a \in A$ 在何种条件下相当于 $\lambda_a \in \mathbb{C}$ 的数量乘法。
-矩阵代数通过行列式是否退化来研究，
-而在一般的含幺代数中，
-任何非零线性泛函 $\varphi \in A^*$ 均满足 $\varphi(1_A)=1$。
-$\varphi$ 作用于 $\forall a \in A$ 得到数 $\lambda_a = \varphi(a) \in \mathbb{C}$。
-若算子 $a$ 的作用相当于数乘 $\lambda_a 1_A = a$，
-则有 $\varphi(a_\lambda) = \varphi(\lambda_a 1_A - a) = \varphi(0_A) = 0$。
-若 $a_\lambda = \lambda_a 1_A - a$ 可逆，
-则将导出矛盾：
-$1 = \varphi(1_A) = \varphi(a_\lambda \cdot a_\lambda^{-1}) = 0$。
-故 $a_\lambda = \lambda_a 1_A - a$ 必定不可逆，
-此数乘的数落在谱中：
-$\lambda_a = \varphi(a) \in \sigma(a)$。
-
-著名的 \textbf{Gleason-Kahane-Zelazko 定理}给出了以下等价条件：
-\begin{itemize}
-  \item $\varphi$ 是非零且乘性的；
-  \item $\varphi(1) = 1$， 且 $\forall a \in A^\times:\ \varphi(a) \neq 0$；
-  \item $\forall a \in A:\ \varphi(a) \in \sigma(a)$。
-\end{itemize}
-
-即乘性线性泛函的值必定落在相应元素的谱中。
-反之，若线性泛函 $\varphi$ 满足 $\varphi(1_A)=1$ 且 $\varphi(a) \in \sigma(a)$ 对所有 $a$ 成立，
-则可推出 $\varphi$ 必为乘性泛函。
-
-若$A$是Banach代数则$\sigma(a)$是非空紧集．
-
-复连续函数代数$A = C(X)$是典型的交换代数，
-记$Z(f) = \{ x\in X \mid f(x) = 0\}$为$f \in C(X)$的零点集/解集，
-$A^\times = \{ f \in C(X) \mid Z(f) = \varnothing \}$．
-函数$f\in C(X)$有谱
-
-$$
-\begin{aligned}
-\sigma(f) 
-&= \{ \lambda \in \mathbb C \mid \lambda 1_A - f \notin A^\times \} \\
-&= \{ \lambda \in \mathbb C \mid Z(\lambda 1_A - f) \neq \varnothing \}
-\end{aligned}
-$$
-
-非空的零点集意味着
-$\exists \lambda\in\sigma(f),x\in X$，
-使得函数$f$在$x$点上相当于幺元按照$\lambda$倍数的缩放．
-在函数的值域中
-$\forall \lambda \in f(X)$，
-$\exists x \in X$
-s.t.
-$\lambda 1_A(x) = f(x)$，
-即
-$\lambda 1_A - f \notin A^\times$，
-于是$f(X) \subseteq \sigma(f)$．
-$\forall \lambda \in \sigma(f)$，
-$\exists x \in X$
-s.t.
-$(\lambda 1_A - f)(x) = 0$，
-即 
-$\lambda 1_A(x) = \lambda = f(x)$
-于是$\sigma(f) \subseteq f(X)$，
-得到用零点集描述的谱集：
-
-$$
-\sigma(f) = f(X)
-$$
 
 
 \section{Gelfand理论}
