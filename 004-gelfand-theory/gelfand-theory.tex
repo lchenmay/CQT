@@ -719,6 +719,113 @@ A = \int_{\sigma(A)} \lambda \text d\mu^A(\lambda)
 \end{equation}
 
 
+\subsection{正规算子}
+
+若定义了$\dagger$，
+例如实线性映射$N$的转置$N^T$，
+或者复线性映射$N$的共轭转置$N^*$，
+则可以用$NN^* = N^*N$定义正规算子，
+它隐含了$N$是自映射的条件：
+
+$$
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZAJgBoAGAXVJADcBDAGwFcYkQANEAX1PU1z5CKchWp0mrdl179seAkQBsYmgxZtEnHuJhQA5vCKgAZgCcIAWySiQOCEgCMNAEYwwUJAFoAzLfVSWgByIDSM9G6MAAoCCsIgZlj6ABY4PHwg5lZONPY2ru6eiL7+kpogQQB6ADrVUPT6hmahIOGRMfJC7IkpabKZFtaItnnDYRAQaEQAnKImTHAw4m0w0bFdWj2pLQHlVbX1jTBmAAQh-VlDznYOiNeME1MoxADscwtLYRGrHYKKm0ltmoyuwgvs6g0mulTIMkGQbnDxpMZu9GItlt81p1-glAWlgRpQTUIUdTucMpdEQjEPCHsiRKR5mjPq1Mb84t08TsQcFiYcoRdYTTcrdaY8iI4AByo9FfdrrHFbfESQnBaEDbLC6li+kkN6Mj4Y+XY+JK7mqirg-nHHTcIA
+\begin{tikzcd}
+X \arrow[rr, "N^\dagger"', bend right] \arrow["NN^\dagger"', loop, distance=2em, in=215, out=145] &  & X \arrow[ll, "N"', bend right] \arrow["N^\dagger N"', loop, distance=2em, in=35, out=325] &  &  &  & X \arrow["N^\dagger N"', loop, distance=2em, in=35, out=325] \arrow["N^\dagger"', loop, distance=2em, in=305, out=235] \arrow["N"', loop, distance=2em, in=125, out=55] \arrow["NN^\dagger"', loop, distance=2em, in=215, out=145]
+\end{tikzcd}
+$$
+
+正规算子中最重要的两类算子，
+酉算子$U$和自拌算子$H$的联系：
+
+$$
+UU^\dagger = U^\dagger U = I,\quad 
+H^\dagger = H,\quad
+U = \text e^{\text i H}
+$$
+
+在谱上：
+
+$$
+\sigma(H) \subset \mathbb R,\quad 
+\sigma(U) \subset S
+$$
+
+且$| \text{tr} \ U | = 1$．
+例子：
+
+$$
+H = \text{diag}(h_1,h_2)
+= \begin{bmatrix}
+    h_1 & 0 \\
+    0 & h_2
+\end{bmatrix},\quad
+U = \text e^{\text i H}
+= \text{diag}(\text e^{\text i h_1},\text e^{\text i h_2})
+= \begin{bmatrix}
+    \text e^{\text i h_1} & 0 \\
+    0 & \text e^{\text i h_1}
+\end{bmatrix}
+$$
+
+有限维线性空间$V\in\textbf{FdVct}$
+可以按特征值特征空间对$\{(\lambda_i,E_i)\}$分解为：
+
+$$
+V = \bigoplus_i E_i
+$$
+
+令$P_i$是向$E_i$的正交投影算子：
+\begin{itemize}
+    \item 完备性：$\sum_i P_i = I$
+    \item 正交性：$P_iP_j = \delta_i^j$
+    \item 算子表示：$H = \sum \lambda_i P_i$
+\end{itemize}
+
+集合$X$的子集族是幂集$\textbf{2}^\mathbb R$的子集，
+要求子集族对补集封闭，
+对可数并/交封闭，
+构成$sigma$-代数．
+最小的是$\{\varnothing,X\}$，
+最大的是$\textbf{2}^\mathbb R$，
+其余介于二者之间．
+
+令$B$为实数的Borel子集，
+如下构造投影算子：
+
+$$
+E(B) = \sum_{\lambda_i \in B} P_i
+$$
+
+有性质：
+\begin{itemize}
+    \item $E(\varnothing) = 0$
+    \item $E(\mathbb R) = I$
+    \item $E(B_1 \cap B_2) = E(B_1)E(B_2)$
+\end{itemize}
+
+于是算子可以写成:
+
+$$
+H = \int_{\sigma(H)} \lambda \text d E(\lambda)
+$$
+
+无限维Hilbert空间$\mathcal H$的谱$\sigma(H)$不再是孤立点，
+而可能包含连续谱．
+令$\Sigma$为实Borel代数，
+谱测度是映射$E: \Sigma \to \mathcal B(\mathcal H)$，
+使得：
+\begin{itemize}
+    \item 投影性：$E(B)$是正交投影算子
+    \item 规范性：$E(\mathbb R) = 1$
+    \item 强可列可加性：
+    对于两两不相交集合序列$\{B_i\}$，
+    对于$\forall \psi \in \mathcal H$有：
+    $$
+    E\left( \bigcup_i B_i \right) \psi = \sum_i E(B_i) \psi
+    $$
+\end{itemize}
+
+
 \subsection{闭子空间}
 
 复Hilbert空间$H \in \textbf{Hilb}$
