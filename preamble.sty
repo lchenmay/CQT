@@ -20,13 +20,10 @@
 
 % ============== 语言和字体 ===================================
 \usepackage{fontspec}
-\usepackage{polyglossia}
 
-% 设置语言
-\setmainlanguage{chinese}
-\setotherlanguage{english}
-
-% 使用系统字体（确保这些字体已安装）
+% 使用系统字体（必须在 polyglossia 之前定义主字体，
+% 否则 lyluatex 在 \begin{document} 抓不到字体族名而报
+% "you probably loaded polyglossia before defining the main font" 警告）
 % NotoSerifSC-VF.ttf 是 Variable Font，需用 Weight=600 指定 SemiBold
 \setmainfont{NotoSerifSC-VF.ttf}[
     BoldFont = {NotoSerifSC-VF.ttf},
@@ -37,6 +34,12 @@
 
 \setsansfont{NotoSansSC-VF.ttf}
 \setmonofont{NotoSansSC-VF.ttf}
+
+% 语言设置在主字体定义之后（polyglossia 需放到 \setmainfont 之后加载，
+% 这也是 fontspec/polyglossia 的推荐顺序）
+\usepackage{polyglossia}
+\setmainlanguage{chinese}
+\setotherlanguage{english}
 
 \usepackage{sectsty}
 \allsectionsfont{\rmfamily\bfseries}
@@ -105,7 +108,7 @@
 
 \setlength{\parskip}{1em} 
 
-\newtheorem{example}{例}[chapter]
+\newtheorem{example}{例}[section]
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -144,8 +147,8 @@
 \makeindex
 
 % ============== 自定义环境 ===================================
-\newtheorem{definition}{定义}[chapter]
-\newtheorem{principle}{原则}[chapter]
+\newtheorem{definition}{定义}[section]
+\newtheorem{principle}{原则}[section]
 
 % ============== 代码样式配置 ===================================
 \usepackage{listings}

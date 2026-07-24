@@ -1,0 +1,25 @@
+% preamble-music.sty —— 仅音乐章加载，避免污染其余 25 章
+% 出版级乐谱渲染：lyluatex（LilyPond 引擎）
+% 命名空间干净（\ly... / \lilypond / \includely），与 preamble.sty 零宏冲突
+\ProvidesPackage{preamble-music}
+
+% 主方案：LilyPond 引擎，质量等同商业制谱
+% latexmkrc 已开启 -shell-escape
+\usepackage{lyluatex}
+
+\usepackage{showexpl}
+
+
+% 直接把 lilypond 绝对路径写入 lyluatex 的 Lua 选项（package option 转发不可靠）
+% winget 的 App Execution Alias 在 lyluatex 子进程中无法启动，故指向真实二进制
+\setluaoption{ly}{program}{C:/Users/RR/AppData/Local/Microsoft/WinGet/Packages/LilyPond.LilyPond_Microsoft.Winget.Source_8wekyb3d8bbwe/lilypond-2.24.4/bin/lilypond.exe}
+
+% 行内符号（谱号 / 升降号 / 音符头）增强；需要系统安装 Emmentaler 字体。
+% 若首次编译报字体缺失，可注释下行，仅用 lyluatex 的整段乐谱。
+% \usepackage{lilyglyphs}
+
+% 回退方案（无需 LilyPond，但命令式、灵活度低）：
+% 取消下行注释，并注释上面的 \usepackage{lyluatex}
+% \input musixtex
+
+\endinput

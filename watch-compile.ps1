@@ -9,7 +9,8 @@
 #  - 脚本退出时（含 VSCode 关闭）强制终止所有编译进程树
 
 $ErrorActionPreference = "Stop"
-$env:PATH = "C:\texlive\2026\bin\windows;$env:PATH"
+# 加入 LilyPond 二进制路径（lyluatex 通过绝对路径调用，但 PATH 也备一份以防万一）
+$env:PATH = "C:\texlive\2026\bin\windows;C:\Users\RR\AppData\Local\Microsoft\WinGet\Packages\LilyPond.LilyPond_Microsoft.Winget.Source_8wekyb3d8bbwe\lilypond-2.24.4\bin;$env:PATH"
 
 $texRoot = "C:\Dev\CQT"
 $debounceMs   = 2000   # 2秒防抖
@@ -135,6 +136,7 @@ $onChanged = {
                 $proc = Start-Process -FilePath "latexmk" `
                     -ArgumentList "-lualatex", "-quiet",
                                   "-latexoption=-interaction=nonstopmode",
+                                  "-latexoption=-shell-escape",
                                   $texName `
                     -WorkingDirectory $dirCopy `
                     -WindowStyle Hidden `

@@ -3,24 +3,21 @@
     {
       "name": "lualatex (latexmk 完整编译)",
       "tools": [
-        "latexmk_lualatex"
+        "latexmk_conditional"
       ]
     }
   ],
   "latex-workshop.latex.tools": [
     {
-      "name": "latexmk_lualatex",
-      "command": "latexmk",
+      "name": "latexmk_conditional",
+      "command": "powershell.exe",
       "args": [
-        "-lualatex",
-        "-interaction=nonstopmode",
-        "-synctex=1",
-        "-gg",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "c:/Dev/CQT/build-tex.ps1",
         "%DOC%"
-      ],
-      "env": {
-        "PATH": "C:\\texlive\\2026\\bin\\windows"
-      }
+      ]
     }
   ],
   "latex-workshop.latex.recipe.default": "first",
