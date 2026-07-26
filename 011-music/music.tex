@@ -37,283 +37,161 @@
 
 \begin{document}
 
-\title{\textbf{音乐与记谱}\\  }
+\title{\textbf{音乐分析}\\  }
 \author{Lao Chen}
 \maketitle
 \setcounter{tocdepth}{1}
 \tableofcontents
 
-\section{肖邦《第四叙事曲》Op.\,52分析}
+\section{肖邦《第四叙事曲》Op.\,52}
 
 \cite{Samson1992Ballades}
 \cite{Schachter1990Triad}
 \cite{QianRenkang2006Ballade}
 
-[mm. 1-7] 
-在C大调的V-I间游移，
-低音缺少明确的主音支撑。
+F小调I - ii7，
+第一句
 
-\begin{lilypond}
-\version "2.24.4"
-\paper{ indent=0\mm }
-\score {
-  \new PianoStaff << \new Staff = "1" {
-  \clef "treble" \key as \major \time 6/8 \stemUp
-  <<
-  \new Voice = "1" { \voiceOne <g' g''>8 <g' g''>8 <g' g''>8 <g' g''>8 <g' g''>8 <g' g''>8 
-  | <g' g''>8 <g' g''>8 <g' g''>8 <g' g''>8 <f' f''>8 <e' e''>8 
-  | <e' e''>8 <d' d''>8 <c' c''>8 e''4. 
-  | <e' g''>8 <g' g''>8 <g' g''>8 <g' g''>8 <f' f''>8 <e' e''>8 
-  | <e' e''>8 <d' d''>8 <c' c''>8 e''4. 
-  | <e' e''>8 <d' d''>8 <c' c''>8 e''4. 
-  | e''4. e''4 c''8 }
-  \new Voice = "2" { \voiceTwo g'16 c''16 g'16 c''16 g'16 c''16 
-  | g'16 <bes' c''>16 g'16 <bes' c''>16 g'16 <bes' c''>16 g'16 <a' c''>16 f'16 <a' c''>16 e'16 <a' c''>16 
-  | e'16 <g' b'>16 d'16 <g' b'>16 c'16 g'16 e'16 <g' c''>16 e'16 <f' c''>16 e'16 <g' c''>16 
-  | e'16 c''16 g'16 <bes' c''>16 g'16 <bes' c''>16 g'16 <a' c''>16 f'16 <a' c''>16 e'16 <a' c''>16 
-  | e'16 <g' b'>16 d'16 <g' b'>16 c'16 g'16 e'16 <g' c''>16 e'16 <f' c''>16 e'16 <g' c''>16 
-  | e'16 <g' b'>16 d'16 <g' b'>16 c'16 g'16 e'16 <g' c''>16 e'16 <f' c''>16 e'16 <g' c''>16 
-  | e'16 <f' c''>16 e'16 <g' c''>16 e'16 <f' c''>16 <e' c''>4 }
+\lilypond{
+  \new PianoStaff 
+  << 
+    \new Staff = "1" {
+      \clef "treble" \key as \major \time 6/8 \stemUp 
+        r8 <as'! c''>8 f''8 
+        \bar "|" 
+        e''8 <g' bes'!>8 des''4
+        <as'! c''>8 f''8 
+        \bar "|" 
+        e''8 <g' bes'!>8 des''8
+
+        r8 <as' c''>16 des''16 c''16 des''16
+        es''8 <as' es''>8 es''8
+        es''8 <g' des''>16 c''16 bes'16 c''16
+        as'8
+
+        \bar "||"
+
+        <as' c'' f''>4.
+        \bar "|" 
+        <g' bes'! des'' e''>4.
+        <as' c'' f''>4.
+        \bar "|" 
+        <g' bes'! des'' e''>4.
+      } 
+    \new Staff = "2" {
+      \clef "bass" \key as \major \time 6/8 \stemDown
+        f,8 <c' f'>8 <as! c' f'>8 
+        \bar "|" 
+        f <des' e'>8 <bes des' e'>8
+        f,8 <c' f'>8 <as! c' f'>8 
+
+        f <des' e'>8 <bes des' e'>8
+
+        f <c' f'>8 <as c' f'>8
+
+        es8 c'8 es8
+
+        es,8 <des' es'>8 <g des' es'>8
+
+        as,8
+         
+        \bar "||" 
+
+        <f, as! c' f'>4.
+        \bar "|" 
+        <f bes c' des'>4.
+        <f, as! c' f'>4.
+        \bar "|" 
+        <f bes c' des'>4.
+      }
   >>
-} \new Staff = "2" {
-  \clef "bass" \key as \major \time 6/8 \stemDown
-  <<
-  \new Voice = "5" { \voiceOne r4 r8 e'8 e'8 d'8 
-  | d'8 c'8 r8 f,16 c'16 a16 c'16 d16 c'16 
-  | g,16 g16 <f b>16 g16 e16 g16 c16 g16 c'16 a16 g16 r16 
-  | c,16 g16 c'16 d'16 e'8 f,16 c'16 a16 c'16 d16 c'16 
-  | g,16 g16 <f b>16 g16 e16 g16 c16 g16 c'16 a16 g16 r16 
-  | g,16 g16 <f b>16 g16 e16 g16 c16 g16 c'16 a16 g16 c16 
-  | c'16 a16 g16 c16 c'16 a16 <c g>4 r8 }
-  \new Voice = "6" { \voiceTwo c8. }
-  >>
-} >>
-  \layout{}
 }
-\end{lilypond}
 
-mm. 125-134
+第二句
 
-\begin{lilypond}
-\version "2.24.4"
-\paper{ indent=0\mm }
-\score {
-  \new PianoStaff << \new Staff = "1" {
-  \clef "treble" \key as \major \time 6/8
-  <<
-  \new Voice = "1" { \voiceOne <es'' as''>8 <es'' as''>8 <es'' as''>8 <es'' as''>8 <es'' g''>8 <bes' es''>8 
-  | <es'' ges''>8 <es'' ges''>8 <es'' ges''>8 es''8 eses''8 des''8 
-  | <c'' ges''>8 <c'' ges''>8 <c'' ges''>8 <c'' ges''>8 <c'' f''>8 c''8 
-  | <b' e''>8 <b' e''>8 <b' e''>8 e''4. 
-  | b'16 a'16 <e' e''>8 <e' e''>8 <e' e''>8 <d' d''>8 <cis' cis''>8 
-  | <cis' cis''>8 <b b'>8 <a a'>8 cis''4. 
-  | e''8 <e' e''>8 <e' e''>8 <e' e''>8 <d' d''>8 <cis' cis''>8 
-  | <cis' cis''>8 <b b'>8 <a a'>8 cis''4. 
-  | <cis' cis''>8 <b b'>8 <a a'>8 cis''4. 
-  | a'16 a'8 a'8 a'16 cis''4. cis'16 d'''16 f''16 f'16 e'8 a'4 a'8 bes'8 gis'8 }
-  \new Voice = "2" { \voiceTwo des''16 c''16 c''16 bes'16 c''16 as'16 bes'16 as'16 bes'16 f'16 g'16 es'16 
-  | bes'16 a'16 c''16 ges'16 bes'16 ges'16 bes'16 ges'16 bes'16 ges'16 bes'16 ges'16 
-  | beses'16 as'16 as'16 g'16 as'16 es'16 as'16 g'16 as'16 e'16 f'16 c'16 
-  | e'16 dis'16 fis'16 b16 e'16 b16 b'16 e'16 b'16 dis'16 b'16 d'16 
-  | cis'16 g'16 e'16 <g' a'>16 e'16 <g' a'>16 e'16 <fis' a'>16 d'16 <fis' a'>16 cis'16 <fis' a'>16 
-  | cis'16 <e' gis'>16 b16 <e' gis'>16 a16 e'16 cis'16 <e' a'>16 cis'16 <d' a'>16 cis'16 <e' a'>16 
-  | cis'16 <g' a'>16 e'16 <g' a'>16 e'16 <g' a'>16 e'16 <fis' a'>16 d'16 <fis' a'>16 cis'16 <fis' a'>16 
-  | cis'16 gis'16 b16 <cis' gis'>16 a16 <cis' fis'>16 gis16 <eis' gis'>16 cis'16 <eis' gis'>16 cis'16 <eis' gis'>16 
-  | cis'16 <e' gis'>16 b16 <e' gis'>16 a16 e'16 cis'16 <e' a'>16 cis'16 <d' a'>16 cis'16 <e' a'>16 
-  | cis'16 d'16 cis'16 e'16 cis'16 d'16 <cis' a'>4. }
-  \new Voice = "3" { \voiceThree ges''4. 
-  | b'8 
-  | cis''4. }
-  \new Voice = "5" { \voiceFour f''16 d''16 d'16 }
+\lilypond{
+  \new PianoStaff 
+  << 
+    \new Staff = "1" {
+      \clef "treble" \key as \major \time 6/8 \stemUp 
+        r8 <as'! c''>8 f''8 
+        e''8 <g' bes'!>8 des''8~des''8
+        
+        <as'! c''>8 f''8 
+        e''8 <g' bes'!>8 des''8
+
+        \bar "|" 
+
+        r8 <as' c''>16 des''16 c''16 des''16
+        es''8 es''8 es''8
+        es''8 des''16 c''16 bes'16 c''16
+        as'8
+
+        \bar "||"
+
+        <as' c'' f''>4.
+        <g' bes'! des'' e''>4.
+        \bar "|" 
+        <as' c'' f''>4.
+        <g' bes'! des'' e''>4.
+      } 
+    \new Staff = "2" {
+      \clef "bass" \key as \major \time 6/8 \stemDown
+        f,8 <c' f'>8 <as! c' f'>8 
+        f <des' e'>8 <bes des' e'>8
+        \bar "|" 
+        f,8 <c' f'>8 <as! c' f'>8 
+        f <des' e'>8 <bes des' e'>8
+
+        \bar "||" 
+
+        <f, as! c' f'>4.
+        <f bes c' des'>4.
+        \bar "|" 
+        <f, as! c' f'>4.
+        <f bes c' des'>4.
+      }
   >>
-} \new Staff = "2" {
-  \clef "bass" \key as \major \time 6/8
-  <<
-  \new Voice = "5" { \voiceOne <as,, as,>8 <es, es>8 <as, es>8 r8 bes8 bes8 
-  | bes8 a16 bes16 a16 bes16 es'4. 
-  | <as,, as,>8 <es, es>8 <as, as>8 as8 as8 as8 
-  | gis8 fisis16 gis16 fisis16 gis16 gis'4. 
-  | a,,16 e16 a16 b16 cis'8 d,16 a16 fis16 a16 b,16 a16 
-  | e,16 e16 <d gis>16 e16 cis16 e16 a,16 e16 a16 fis16 e8 
-  | a,,16 a,16 e16 b16 cis'8 d,16 a16 fis16 a16 fis,16 cis16 
-  | eis,16 cis16 gis16 cis16 fis,16 cis16 cis,16 gis,16 gis16 cis16 cis'8 
-  | e,16 e16 <d gis>16 e16 cis16 e16 a,16 e16 a16 fis16 e16 a,16 
-  | a16 fis16 e16 a,16 a16 fis16 <a, e>4. e16 cis'4. r4 r8 }
-  \new Voice = "6" { \voiceTwo <as, es>4. 
-  | <as, es>4. 
-  | as,4. 
-  | gis,4. 
-  | a,4. 
-  | a,8. }
-  >>
-} >>
-  \layout{}
 }
-\end{lilypond}
-
-\section{LilyPond 基本语法速查}
-
-\subsection{行内乐谱}
-
-行内乐谱用 \texttt{\string\lilypond\{ ... \}} 命令嵌入正文，随文本流式排版，适用于短小的音乐片段。
 
 
-\begin{LTXexample}[language=TeX, basicstyle=\ttfamily\small]
-\lilypond{c'4 d' e' f'}
-\lilypond{<c' e' g'>2.}
-\lilypond{g'8 a' b' c''}
-\end{LTXexample}
+As大调I，
 
-\subsection{常用 inline 示例}
+\lilypond{
+  \new PianoStaff 
+  << 
+    \new Staff = "1" {
+      \clef "treble" \key as \major \time 6/8 \stemUp 
+        r8 <c'' es''>8 as''8 
+        g''8 <bes' des''>8 fes''8~fes''8
+        <c'' es''>8 as''8 
+        g''8 <bes' des''>8 fes''8
 
-\subsubsection{单音与音阶}
+        \bar "||" 
 
-\lilypond{c'4 d' e' f'}，或快速音阶跑动
-\lilypond{c''16 d'' e'' f'' g'' a'' b'' c'''}。
+        <c'' es'' as''>4.
+        <bes' des'' fes''>4.
+        <c'' es'' as''>4.
+        <bes' des'' fes''>4.
+      } 
+    \new Staff = "2" {
+      \clef "bass" \key as \major \time 6/8 \stemDown
+        as,,8 <es' as'>8 <c' es' as'>8 
+        as <fes' g'>8 <des' fes' g'>8
 
-\subsubsection{和弦}
+        as,8 <es' as'>8 <c' es' as'>8 
+        as <fes' g'>8 <bes des' g'>8
 
-单个和弦 \lilypond{<c' e' g'>2.}，或带琶音记号的和弦
-\lilypond{<c' e' g'>\arpeggio}。
+        \bar "||" 
 
-\subsubsection{连奏与符杠}
-
-\lilypond{c'8( d' e' f')} 为连奏，\lilypond{c'8[ d' e' f']} 为符杠分组。
-
-\subsubsection{休止符}
-
-\lilypond{r4 r8 r16} 表示四分、八分、十六分休止符。
-
-\subsubsection{强弱记号}
-
-\lilypond{c'4\p d'\mf e'\f f'\ff} 展示不同力度标记。
-
-\subsection{与整段乐谱的区别}
-
-\begin{center}
-\begin{tabular}{lll}
- & \textbf{Inline} & \textbf{完整乐谱} \\
-命令 & \texttt{\string\lilypond\{...\}} & \texttt{\string\begin\{lilypond\}...\string\end\{lilypond\}} \\
-适用场景 & 短片段、示例 & 完整乐谱、多声部、多行 \\
-换行 & 不换行 & 独立成段 \\
-\end{tabular}
-\end{center}
-
-\subsection{注意事项}
-
-\begin{enumerate}
-\item \texttt{\string\lilypond} 命令必须在一行内完成，不能跨行。
-\item 内容较长时建议使用 \texttt{lilypond} 环境而非 inline。
-\item 如果 \texttt{\string\lilypond} 命令频繁使用，建议定义简写宏：
-\begin{lstlisting}[language=TeX, basicstyle=\ttfamily\small]
-\newcommand{\ly}[1]{\lilypond{#1}}
-% 之后可用 \ly{c'4 d' e'} 简化输入
-\end{lstlisting}
-\end{enumerate}
-
-\subsection{音符与时值}
-
-音符用小写字母 \texttt{c d e f g a b} 表示，时值用数字跟在后面：
-
-\begin{center}
-\begin{tabular}{lll}
-\texttt{c4} & 四分音符 C \\
-\texttt{d8} & 八分音符 D \\
-\texttt{e2} & 二分音符 E \\
-\texttt{f1} & 全音符 F \\
-\texttt{g16} & 十六分音符 G \\
-\texttt{a4.} & 附点四分音符 A \\
-\end{tabular}
-\end{center}
-
-八度标记：\texttt{c'} 为中央 C，\texttt{c''} 高八度，\texttt{c,} 低八度。
-
-\subsection{休止符}
-
-休止符用 \texttt{r} 表示，后跟时值：\texttt{r4}、\texttt{r8}、\texttt{r2.}。
-
-\subsection{升降号与调号}
-
-\begin{center}
-\begin{tabular}{lll}
-\texttt{cis'} & 升 C \\
-\texttt{des'} & 降 D \\
-\texttt{\string\key f \string\minor} & 设置 f 小调调号 \\
-\texttt{\string\key c \string\major} & 设置 C 大调调号 \\
-\end{tabular}
-\end{center}
-
-\subsection{连音与分组}
-
-\begin{center}
-\begin{tabular}{lll}
-\texttt{c8( d e)} & 连奏（slur） \\
-\texttt{c8[ d e]} & 符杠分组（beam） \\
-\texttt{c4\string~ c4} & 延音线（tie） \\
-\end{tabular}
-\end{center}
-
-\subsection{和弦}
-
-和弦用尖括号括起：\texttt{<c e g>}，后跟时值如 \texttt{<c e g>2.}。琶音记号用 \texttt{\string\arpeggio}。
-
-\subsection{谱面指令}
-
-\begin{center}
-\begin{tabular}{lll}
-\texttt{\string\clef treble} & 高音谱号 \\
-\texttt{\string\clef bass} & 低音谱号 \\
-\texttt{\string\stemUp} & 符干朝上 \\
-\texttt{\string\stemDown} & 符干朝下 \\
-\texttt{\string\voiceOne} & 第一声部 \\
-\texttt{\string\voiceTwo} & 第二声部 \\
-\end{tabular}
-\end{center}
-
-\subsection{强弱与速度}
-
-\begin{center}
-\begin{tabular}{lll}
-\texttt{\string\p}、\texttt{\string\mp}、\texttt{\string\mf}、\texttt{\string\f}、\texttt{\string\ff} & 强弱记号 \\
-\texttt{\string\< ... \string\!} & 渐强 \\
-\texttt{\string\> ... \string\!} & 渐弱 \\
-\texttt{\string\tempo 4=80} & 速度设定 \\
-\texttt{\string\tempo "Andante"} & 速度文字 \\
-\end{tabular}
-\end{center}
-
-\subsection{基本结构}
-
-\begin{lstlisting}[language=TeX, basicstyle=\ttfamily\small]
-\version "2.24.4"
-
-\score {
-  \new PianoStaff <<
-    \new Staff = "right" \relative c'' {
-      \key f \minor
-      \time 6/8
-      \clef treble
-      c4. d8 e f
-    }
-    \new Staff = "left" \relative c {
-      \key f \minor
-      \time 6/8
-      \clef bass
-      f4. f4.
-    }
+        <as,, c' es' as'>4.
+        <as des' fes' g'>4.
+        <as, c' es' as'>4.
+        <as bes des' fes' g'>4.
+      }
   >>
-  \layout { }
 }
-\end{lstlisting}
 
-\subsection{常见语法陷阱}
-
-\begin{enumerate}
-\item 括号必须成对：\texttt{\{} 与 \texttt{\}}、\texttt{<<} 与 \texttt{>>}、\texttt{(} 与 \texttt{)}。
-\item \texttt{\string\score} 块必须完整闭合。
-\item 命令拼写错误会导致编译失败，如 \texttt{\string\fermata} 正确，\texttt{\string\fermate} 错误。
-\item \texttt{\string\relative} 模式中，音符八度根据前一个音符自动推算。
-\end{enumerate}
 
 \printbibliography
 

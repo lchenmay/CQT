@@ -121,7 +121,10 @@ $onChanged = {
             $script:running[$dirCopy] = $true
             [System.Threading.Monitor]::Exit($script:lock)
 
-            $texName = "$(Split-Path $dirCopy -Leaf).tex"
+            # 直接用触发变更的 .tex 文件名（不再假设 文件名 == 目录名）。
+            # 否则 011-music/ 目录会去找不存在的 011-music.tex 而失败；
+            # 真实文件是 music.tex，$path 正是被保存的那个 .tex。
+            $texName = Split-Path $path -Leaf
             Write-Host "[$(Get-Date -Format 'HH:mm:ss')] 编译中: $dirCopy\$texName" -ForegroundColor Green
 
             # ---- 编译前清理 ----
