@@ -4,6 +4,35 @@
 
 ---
 
+## 2026-07-28
+
+### Probability, Curvature and Spectrum on Graphs
+- **来源**: arXiv 2607.21639
+- **链接**: https://arxiv.org/abs/2607.21639
+- **作者**: Tianhong Zhao
+- **分类**: math-ph（数学物理）, math.SP（谱论）
+- **摘要**: 对带 Laplacian $\Delta=-d^2/dx^2$ 的度量图，图迹公式在量子概率与曲率下获得新解释；基于 Wilson 线/holonomy 启发的图曲率概念与 von Neumann 遍历定理。直接命中 §004-Gelfand 谱几何视角（谱决定几何）。
+
+---
+
+### Self-adjoint extensions of $k$-photon light-matter Hamiltonians
+- **来源**: arXiv 2607.22378
+- **链接**: https://arxiv.org/abs/2607.22378
+- **作者**: Felix Fischer, Felix Knapp, Daniel Burgarth, Davide Lonigro
+- **分类**: math-ph, quant-ph（量子光学）
+- **摘要**: 严格证明 $k$-光子光-物质耦合哈密顿量 $H=H_{\rm mat}\otimes I+I\otimes\omega a^\ast a+\Sigma\otimes(a^\ast)^k+\Sigma^\ast\otimes a^k$ 的自伴性：当 $\Sigma$ 正规非零时 $k\le2$ 自伴，$k\ge3$ 计算亏指数并参数化所有自伴延拓。属 §002 可观测量的自伴性与 §004 无界算子谱论核心议题。
+
+---
+
+### Essential self-adjointness of semi-bounded operators
+- **来源**: arXiv 2607.22472
+- **链接**: https://arxiv.org/abs/2607.22472
+- **作者**: M. Griesemer, V. Kußmaul
+- **分类**: math-ph, math.FA（泛函分析）
+- **摘要**: 给出半有界算子本质自伴的局部判据（用逼近恒等的有界算子定义局部性），推广 Wienholtz–Simader 方法，应用到多体薛定谔算子、伪相对论哈密顿量、非相对论 QED 标准模型。§004 算子代数/无界算子谱论的基石性工具。
+
+---
+
 ## 2026-06-30
 
 ### Agentic Architecture: Noise Reduction, Goal Projection
