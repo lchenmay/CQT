@@ -33,6 +33,15 @@
 
 ---
 
+### Finite-Precision Algebraic Quantum Field Theory
+- **来源**: arXiv 2607.24445
+- **链接**: https://arxiv.org/abs/2607.24445
+- **作者**: Abbas Edalat
+- **分类**: quant-ph, math-ph（代数量子场论 / 算子代数）
+- **摘要**: 把区间量子力学（IQM）扩展到 AQFT：以「量子包裹（parcel）」= 态空间弱*开凸区为有限精度基本信息单元，重述 Reeh–Schlieder、Haag 定理、模理论、KMS、Unruh 效应；**从极限包裹几何恢复 Murray–von Neumann 因子分类及 II₁ 因子迹/投影等价**。§004-Gelfand 算子代数/谱几何视角最强基础命中，同时是相对论量子理论的有限精度操作性重构。
+
+---
+
 ## 2026-06-30
 
 ### Agentic Architecture: Noise Reduction, Goal Projection
