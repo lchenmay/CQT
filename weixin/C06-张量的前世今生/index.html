@@ -83,8 +83,55 @@
 </head>
 <body>
 <article class="wrap">
-  <img class="cover" src="images/Elegant_fusion_of_a_19th_centu_2026-07-29T07-25-53.png" alt="封面">
-  <div class="cover-cap">封面 · 古典曲面网格 × 现代神经网络多维数组（AI 生成）</div>
+  <svg class="cover" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice" role="img" aria-label="封面：古典曲面网格与现代神经网络多维数组">
+    <defs>
+      <linearGradient id="covbg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#081726"/>
+        <stop offset="0.5" stop-color="#0d3a5e"/>
+        <stop offset="1" stop-color="#0a6e74"/>
+      </linearGradient>
+      <radialGradient id="covglow" cx="0.5" cy="0.40" r="0.65">
+        <stop offset="0" stop-color="#3fd0d6" stop-opacity="0.45"/>
+        <stop offset="1" stop-color="#3fd0d6" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="800" height="1000" fill="url(#covbg)"/>
+    <rect width="800" height="1000" fill="url(#covglow)"/>
+    <g stroke="#7fe3e0" stroke-opacity="0.5" fill="none" stroke-width="1.4">
+      <path d="M60 540 Q400 640 740 540"/>
+      <path d="M95 600 Q400 720 705 600"/>
+      <path d="M140 660 Q400 800 660 660"/>
+      <path d="M190 720 Q400 880 610 720"/>
+      <path d="M250 778 Q400 950 550 778"/>
+      <path d="M120 510 Q400 560 680 510"/>
+      <path d="M200 510 Q400 580 600 510"/>
+      <path d="M300 510 Q400 600 500 510"/>
+      <path d="M400 510 L400 980"/>
+      <path d="M500 510 Q400 600 300 510"/>
+      <path d="M600 510 Q400 580 200 510"/>
+      <path d="M680 510 Q400 560 120 510"/>
+    </g>
+    <g stroke="#9ad8ff" stroke-opacity="0.35" stroke-width="1">
+      <line x1="220" y1="250" x2="330" y2="190"/>
+      <line x1="220" y1="250" x2="300" y2="330"/>
+      <line x1="330" y1="190" x2="470" y2="200"/>
+      <line x1="330" y1="190" x2="380" y2="300"/>
+      <line x1="300" y1="330" x2="380" y2="300"/>
+      <line x1="470" y1="200" x2="560" y2="280"/>
+      <line x1="380" y1="300" x2="560" y2="280"/>
+      <line x1="380" y1="300" x2="500" y2="380"/>
+      <line x1="560" y1="280" x2="500" y2="380"/>
+    </g>
+    <g fill="#cdeeff">
+      <circle cx="220" cy="250" r="9"/><circle cx="330" cy="190" r="9"/><circle cx="300" cy="330" r="9"/>
+      <circle cx="470" cy="200" r="9"/><circle cx="380" cy="300" r="9"/><circle cx="560" cy="280" r="9"/><circle cx="500" cy="380" r="9"/>
+    </g>
+    <g fill="#ffffff" fill-opacity="0.9">
+      <circle cx="220" cy="250" r="3"/><circle cx="330" cy="190" r="3"/><circle cx="300" cy="330" r="3"/>
+      <circle cx="470" cy="200" r="3"/><circle cx="380" cy="300" r="3"/><circle cx="560" cy="280" r="3"/><circle cx="500" cy="380" r="3"/>
+    </g>
+  </svg>
+  <div class="cover-cap">封面 · 古典曲面网格 × 现代神经网络多维数组（矢量绘制）</div>
 
   <div class="head">
     <h1>张量的前世今生：一个被"拉伸"出来的数学帝国</h1>
@@ -106,8 +153,31 @@
     <p>到了 1854 年，黎曼把高斯的想法推进到任意 $n$ 维"流形"，提出黎曼度量 $g_{ij}$ 与曲率。这时一个难题已经浮现：<b>换一套坐标系，这些系数该怎么变，才能描述同一个几何对象？</b></p>
     <p>1869 年，Christoffel 给出了关键一刀。他在研究"二次微分形式如何随坐标变换"时，引入了今天我们称为 <b>Christoffel 符号</b> $\Gamma^k_{ij}$ 的量，并定义了<b>协变导数</b>——让微分运算在坐标变换下依然"正确"。这，就是张量变换律与协变微分的真正诞生地。</p>
     <figure class="fig">
-      <img src="images/Editorial_illustration_of_a_sp_2026-07-29T07-36-17.png" alt="图1">
-      <figcaption>图1 · 球面经纬网格与第一基本形式（示意图，AI 生成）</figcaption>
+      <svg viewBox="0 0 560 380" role="img" aria-label="球面经纬网格与第一基本形式">
+        <defs>
+          <radialGradient id="sphere" cx="0.38" cy="0.32" r="0.8">
+            <stop offset="0" stop-color="#fff7e6"/>
+            <stop offset="0.6" stop-color="#f1e0bb"/>
+            <stop offset="1" stop-color="#d6bf8c"/>
+          </radialGradient>
+        </defs>
+        <rect width="560" height="380" fill="#faf6ee"/>
+        <circle cx="280" cy="190" r="150" fill="url(#sphere)" stroke="#b89b5e" stroke-width="2"/>
+        <g fill="none" stroke="#a7894d" stroke-opacity="0.7" stroke-width="1.4">
+          <ellipse cx="280" cy="190" rx="150" ry="46"/>
+          <ellipse cx="280" cy="190" rx="150" ry="95"/>
+          <ellipse cx="280" cy="190" rx="62" ry="150"/>
+          <ellipse cx="280" cy="190" rx="112" ry="150"/>
+          <line x1="130" y1="190" x2="430" y2="190"/>
+          <path d="M150 132 Q280 152 410 132"/>
+          <path d="M134 190 Q280 210 426 190"/>
+          <path d="M150 248 Q280 268 410 248"/>
+        </g>
+        <path d="M298 150 A150 150 0 0 1 346 170" fill="none" stroke="#d64545" stroke-width="4"/>
+        <text x="356" y="158" font-family="Georgia, serif" font-size="20" font-style="italic" fill="#d64545">ds</text>
+        <text x="120" y="358" font-family="Georgia, serif" font-size="14" fill="#8a6d3b">第一基本形式：ds² = E du² + 2F du dv + G dv²</text>
+      </svg>
+      <figcaption>图1 · 球面经纬网格与第一基本形式（示意图，矢量绘制）</figcaption>
     </figure>
 
     <h2>二、一个"借来"的名字</h2>
@@ -128,16 +198,74 @@
     <p>1913 年，爱因斯坦与格罗斯曼合作尝试广义相对论，数学部分正靠 Ricci 的绝对微分学。到 <b>1915 年</b>，爱因斯坦写出正确场方程，核心是<b>里奇张量</b> $R_{\mu\nu}$ 与<b>爱因斯坦张量</b> $G_{\mu\nu}=R_{\mu\nu}-\tfrac12 R g_{\mu\nu}$。</p>
     <p>广义协变性要求：物理定律必须用<b>张量方程</b>表达，这样无论观测者怎么选坐标系，定律都长一个样。一夜之间，张量从"冷门意大利工具"变成物理学的通用语言。</p>
     <figure class="fig">
-      <img src="images/Spacetime_curvature_and_gravit_2026-07-29T07-36-19.png" alt="图3">
-      <figcaption>图3 · 时空弯曲与引力透镜（示意图，AI 生成）</figcaption>
+      <svg viewBox="0 0 560 380" role="img" aria-label="时空弯曲与引力透镜">
+        <defs>
+          <radialGradient id="space" cx="0.5" cy="0.5" r="0.75">
+            <stop offset="0" stop-color="#1b1140"/>
+            <stop offset="1" stop-color="#070418"/>
+          </radialGradient>
+          <radialGradient id="lens" cx="0.5" cy="0.5" r="0.5">
+            <stop offset="0.5" stop-color="#000000"/>
+            <stop offset="0.6" stop-color="#ffd27f"/>
+            <stop offset="0.78" stop-color="#a05a1a" stop-opacity="0.5"/>
+            <stop offset="1" stop-color="#a05a1a" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <rect width="560" height="380" fill="url(#space)"/>
+        <g fill="#ffffff">
+          <circle cx="60" cy="55" r="1.5"/><circle cx="120" cy="90" r="1.2"/><circle cx="40" cy="150" r="1.4"/>
+          <circle cx="95" cy="200" r="1.1"/><circle cx="55" cy="300" r="1.6"/><circle cx="140" cy="330" r="1.3"/>
+          <circle cx="500" cy="60" r="1.4"/><circle cx="530" cy="120" r="1.2"/><circle cx="495" cy="300" r="1.5"/>
+          <circle cx="470" cy="340" r="1.1"/><circle cx="300" cy="40" r="1.3"/><circle cx="350" cy="355" r="1.2"/>
+        </g>
+        <circle cx="280" cy="190" r="120" fill="url(#lens)"/>
+        <circle cx="280" cy="190" r="60" fill="#04020c"/>
+        <g fill="none" stroke="#ffe9a8" stroke-width="2" stroke-opacity="0.85">
+          <path d="M40 120 Q170 150 268 176"/>
+          <path d="M40 120 Q190 55 268 176"/>
+          <path d="M40 270 Q170 245 268 204"/>
+          <path d="M40 270 Q190 330 268 204"/>
+        </g>
+        <circle cx="40" cy="120" r="5" fill="#ffffff"/>
+        <circle cx="40" cy="270" r="5" fill="#ffffff"/>
+        <text x="30" y="105" font-family="Georgia, serif" font-size="14" fill="#ffffff">恒星</text>
+        <text x="476" y="195" font-family="Georgia, serif" font-size="15" fill="#9ad8ff">观测者</text>
+      </svg>
+      <figcaption>图3 · 时空弯曲与引力透镜（示意图，矢量绘制）</figcaption>
     </figure>
 
     <h2>四、几何深化：Cartan 与外微分</h2>
     <p>1920 年代，<b>Élie Cartan</b> 用"活动标架法"与<b>外微分</b>重写了张量语言。他把反对称的张量单独拎出来，发展成<b>微分形式</b>——这套工具后来成为研究联络、曲率、李群的主力，也延伸到比张量更精细的<b>旋量</b>。</p>
     <p>至此，张量在微分几何里彻底安家。</p>
     <figure class="fig">
-      <img src="images/Abstract_geometric_illustratio_2026-07-29T07-36-22.png" alt="图4">
-      <figcaption>图4 · 活动标架沿流形滑动（示意图，AI 生成）</figcaption>
+      <svg viewBox="0 0 560 380" role="img" aria-label="活动标架沿流形滑动">
+        <defs>
+          <marker id="arrB" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+            <path d="M0,0 L7,3 L0,6 Z" fill="#2b6cb0"/>
+          </marker>
+          <marker id="arrO" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+            <path d="M0,0 L7,3 L0,6 Z" fill="#e8843c"/>
+          </marker>
+        </defs>
+        <rect width="560" height="380" fill="#f5fbfb"/>
+        <path d="M40 300 C160 180 240 320 360 200 C440 120 500 200 540 160" fill="none" stroke="#bfe9e4" stroke-width="64" stroke-linecap="round" opacity="0.6"/>
+        <path d="M40 300 C160 180 240 320 360 200 C440 120 500 200 540 160" fill="none" stroke="#2bb3a3" stroke-width="2.5" stroke-dasharray="6 5" opacity="0.7"/>
+        <g stroke-width="2.5" fill="none">
+          <line x1="150" y1="225" x2="200" y2="200" stroke="#2b6cb0" marker-end="url(#arrB)"/>
+          <line x1="150" y1="225" x2="165" y2="278" stroke="#e8843c" marker-end="url(#arrO)"/>
+          <line x1="300" y1="238" x2="350" y2="232" stroke="#2b6cb0" marker-end="url(#arrB)"/>
+          <line x1="300" y1="238" x2="306" y2="290" stroke="#e8843c" marker-end="url(#arrO)"/>
+          <line x1="430" y1="175" x2="480" y2="158" stroke="#2b6cb0" marker-end="url(#arrB)"/>
+          <line x1="430" y1="175" x2="448" y2="225" stroke="#e8843c" marker-end="url(#arrO)"/>
+        </g>
+        <g font-family="Georgia, serif" font-size="14" font-style="italic">
+          <text x="205" y="196" fill="#2b6cb0">e₁</text><text x="168" y="295" fill="#e8843c">e₂</text>
+          <text x="355" y="228" fill="#2b6cb0">e₁</text><text x="310" y="307" fill="#e8843c">e₂</text>
+          <text x="485" y="154" fill="#2b6cb0">e₁</text><text x="452" y="242" fill="#e8843c">e₂</text>
+        </g>
+        <text x="40" y="40" font-family="Georgia, serif" font-size="15" fill="#2b6cb0">局部标架随点滑动，始终贴附流形（e₁ 切向，e₂ 法向）</text>
+      </svg>
+      <figcaption>图4 · 活动标架沿流形滑动（示意图，矢量绘制）</figcaption>
     </figure>
 
     <h2>五、代数化：Bourbaki 的"终极统一"</h2>
