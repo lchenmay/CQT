@@ -42,6 +42,33 @@
 
 ---
 
+### Effect-valued measurement models and contextuality
+- **来源**: arXiv 2607.25900
+- **链接**: https://arxiv.org/abs/2607.25900
+- **作者**: Samson Abramsky
+- **分类**: quant-ph（量子情境性 / 层论）
+- **摘要**: 把 Abramsky–Brandenburger **层论情境性**处理从概率分布推广到**凸效应代数（convex effect algebra）A 值**测量模型；用有序向量空间表示效应模，证明**非情境性由关联锥规划可行性刻画**（概率情形退化为线性规划），由锥对偶给出「情境性的 Bell 见证」概念，并导出资源指标效应结构诱导的分级 monad。-convex effect algebra 即 §004 算子代数（effect module）基础设施；层论情境性即 §003-type-topos 综述核心议题——**§003 + §004 双模块直接命中**。
+
+---
+
+### Algebraic paradoxes in adaptive quantum computation
+- **来源**: arXiv 2607.26157
+- **链接**: https://arxiv.org/abs/2607.26157
+- **作者**: Samson Abramsky, Rui Soares Barbosa, Carmen Constantin, Martti Karvonen
+- **分类**: quant-ph（量子情境性 / 上同调）
+- **摘要**: 证明自适应 $\mathbb{Z}_2$-线性 MBQC 协议若确定性计算非仿射布尔函数，则底层量子资源满足一组不相容线性方程——推广 Mermin 全有或全无论证的**代数形式强情境性**，且可**上同调检测**，解决 Raussendorf 留下的开放问题（自适应情形上同调见证未知）。上同调见证 + 代数情境性 = §003 topos 情境性上同调/层论描述，同时牵动 §004 算子代数/逻辑——**§003 + §004 双模块直接命中**。
+
+---
+
+### Quantum mechanics on the line with two origins
+- **来源**: arXiv 2607.26080
+- **链接**: https://arxiv.org/abs/2607.26080
+- **作者**: Abhiram Sripat
+- **分类**: quant-ph / math-ph / math.OA（算子代数 / 谱论）
+- **摘要**: 研究「双原点直线」$\mathbb{L}_2$ 上的标量/旋量量子动力学：标量理论不敏感（$L^2$ 酉等价），但非平凡旋量结构暴露双原点——一阶算子 $-id/dx$ 对称但**非本质自伴、亏指数 (1,1)**，自伴演化需附加原点透射条件。亏指数/自伴延拓即 §004 无界算子谱论（von Neumann 亏指数理论）核心，分类标 math.OA——**§004 算子代数直接命中**。
+
+---
+
 ## 2026-06-30
 
 ### Agentic Architecture: Noise Reduction, Goal Projection
