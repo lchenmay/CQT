@@ -69,6 +69,26 @@
 
 ---
 
+## 2026-08-01
+
+### Purifications for Convex Cones
+- **来源**: arXiv 2607.28202
+- **链接**: https://arxiv.org/abs/2607.28202
+- **作者**: Felix Campidell, Tim Netzer
+- **分类**: quant-ph, math.FA（泛函分析 / 广义概率理论）
+- **摘要**: 仅用有限维真凸锥几何研究纯化原理（量子理论与 GPT 核心）：证明不可分解齐次锥（含 Lorentz 锥）每内点均有纯化，给局部自同构唯一性判据；边界上单纯形面锥仅纯点可纯化。凸锥/广义概率理论是 §004 算子代数 effect module 与量子态几何的基础设施——**§004 强命中**。
+
+---
+
+### Holography in the linearized quantum gravity regime and modular crossed product
+- **来源**: arXiv 2607.27337
+- **链接**: https://arxiv.org/abs/2607.27337
+- **作者**: Avinandan Mondal
+- **分类**: hep-th（AdS/CFT / 代数量子场论）
+- **摘要**: 线性化量子引力 regime 的全息映射（bulk GNS 希尔伯特空间等距嵌入边界 CFT GNS），用**模交叉积（modular crossed product）**构造在 dressed **Type-II 代数**中证明对偶 CFT 态状态依赖熵满足真空减去 HRT 公式，含相对熵与 JLMS 条件。**§004-Gelfand 模理论（modular theory）/ Type II₁ 因子 / AQFT 最强命中**。
+
+---
+
 ## 2026-06-30
 
 ### Agentic Architecture: Noise Reduction, Goal Projection
