@@ -89,6 +89,35 @@
 
 ---
 
+## 2026-08-04
+
+### First Law of Proto-Area Entropy from Modular Spectral Geometry
+- **来源**: arXiv 2607.29432
+- **链接**: https://arxiv.org/abs/2607.29432
+- **作者**: Ling-Zheng Xia, Lixin Xu
+- **分类**: hep-th（交叉 gr-qc, quant-ph）
+- **摘要**: 从**模谱几何（modular spectral geometry）**导出 proto-area 熵的第一定律。模谱几何以 Tomita-Takesaki **模算子（modular operator）**的谱为核心，是 §004-Gelfand 模理论（modular theory）与 AQFT 黑洞熵/相对熵框架的直接延伸——**§004 强命中**。
+
+---
+
+### Entropy Geometry and Normalized Means on Infinite-Dimensional Hamiltonian Manifolds
+- **来源**: arXiv 2607.28660
+- **链接**: https://arxiv.org/abs/2607.28660
+- **作者**: Jean-Pierre Magnot
+- **分类**: math-ph（无穷维几何 / 算子均值）
+- **摘要**: 在无穷维哈密顿流形上用**归一化均值（normalized means，如 Kubo-Ando 算子均值）**与熵几何刻画结构。算子均值与熵几何是 §004 算子代数（正算子锥、算子不等式）的标准设施——**§004 命中**。
+
+---
+
+### Realization embeddings of the rank two Racah algebra into the rank two Jacobi algebra
+- **来源**: arXiv 2607.29358
+- **链接**: https://arxiv.org/abs/2607.29358
+- **作者**: Nicolas Crampé, Sarah Post, Luc Vinet
+- **分类**: math-ph（结合代数 / 二次代数）
+- **摘要**: 将二阶 Racah 代数实现嵌入二阶 Jacobi 代数，属 Askey 方案二次（结合）算符代数族。与 §004 算子代数（特殊函数算子实现、二次代数表示）相关——**§004 命中**。
+
+---
+
 ## 2026-06-30
 
 ### Agentic Architecture: Noise Reduction, Goal Projection
