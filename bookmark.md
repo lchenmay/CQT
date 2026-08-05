@@ -118,6 +118,53 @@
 
 ---
 
+## 2026-08-05
+
+### Connes spectral distance on twisted fuzzy torus
+- **来源**: arXiv 2608.01110
+- **链接**: https://arxiv.org/abs/2608.01110
+- **作者**: Zhi-Kang You, Bing-Sheng Lin
+- **分类**: math-ph（非交换几何）
+- **摘要**: 在**扭曲模糊环面（twisted fuzzy torus）**上计算 **Connes 谱距离**——Connes 谱距离是 Alain Connes 非交换几何（NCG）纲领的核心度量概念。属 §003-type-topos / §004 非交换几何**强命中**。
+
+---
+
+### A Quantum Dominant Energy Condition
+- **来源**: arXiv 2608.01814
+- **链接**: https://arxiv.org/abs/2608.01814
+- **作者**: Stefan Hollands, Roberto Longo, Gerardo Morsella
+- **分类**: gr-qc（交叉 hep-th, quant-ph）
+- **摘要**: 提出**量子主能量条件**，将 GR 经典主能量条件推广到算符代数化 QFT。作者含 Roberto Longo（Tomita-Takesaki 模理论、AQFT 权威）。是 §004-Gelfand **模理论 / 相对熵**在量子引力基础的应用——**§004 强命中**。
+
+---
+
+### Beyond K-Theory: Geometry and Holomorphy in Hyperbolic Band Theory
+- **来源**: arXiv 2608.01596
+- **链接**: https://arxiv.org/abs/2608.01596
+- **作者**: Steven Rayan
+- **分类**: math-ph（K 理论 / 拓扑能带）
+- **摘要**: 在双曲能带理论中超越 K 理论，用几何与全纯结构分类。K 理论是 §001 拓扑 / §003 范畴（拓扑绝缘体分类、Vec 范畴）的核心工具——**§001/§003 命中**。
+
+---
+
+### q-Deformed Topological Recursion: Quantum Curves and Non-perturbative Analysis
+- **来源**: arXiv 2608.02179
+- **链接**: https://arxiv.org/abs/2608.02179
+- **作者**: Fridolin Melong, Raimar Wulkenhaar
+- **分类**: math-ph（非交换几何 / 矩阵模型）
+- **摘要**: q-形变拓扑递归与量子曲线，作者含 Wulkenhaar（非交换 φ⁴ 矩阵模型 / NCG 权威）。与 §003/§004 非交换几何、矩阵模型相关——**§004 命中**。
+
+---
+
+### Twenty-one characterizations of reversible quantum channels
+- **来源**: arXiv 2608.01088
+- **链接**: https://arxiv.org/abs/2608.01088
+- **作者**: Nan Li, Yuan Li, Hanyu Yang, Shunlong Luo
+- **分类**: quant-ph（算子代数 / 信道）
+- **摘要**: 给出可逆量子信道（↔ 酉/可逆 CPTP 映射）的 21 种等价刻画。量子信道即完全正保迹映射，是 §004 算子代数（C*-代数上的正映射）的标准对象——**§004 命中**。
+
+---
+
 ## 2026-06-30
 
 ### Agentic Architecture: Noise Reduction, Goal Projection
