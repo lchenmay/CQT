@@ -165,6 +165,62 @@
 
 ---
 
+## 2026-08-06
+
+### The geometry of absolute separability and other convex matrix properties from spectrum
+- **来源**: arXiv 2608.03390
+- **链接**: https://arxiv.org/abs/2608.03390
+- **作者**: Jennifer Ahiable, Naga Bhavya Teja Kothakonda, Andreas Winter
+- **分类**: quant-ph（交叉 math-ph，算子代数 / 凸几何）
+- **摘要**: 从谱刻画绝对可分性的凸几何及其他凸矩阵性质。绝对可分性（absolute separability）是可分态锥的核心几何性质，直接命中 §004-Gelfand 算子代数（density operator 凸集、convex matrix / effect module 基础设施）——**§004 强命中**。
+
+---
+
+### Structure of matrix product locally purifiable density operators
+- **来源**: arXiv 2608.02724
+- **链接**: https://arxiv.org/abs/2608.02724
+- **作者**: Yale Yauk, Yuhan Liu, Ignacio Cirac
+- **分类**: quant-ph（算子代数 / 密度算符）
+- **摘要**: 刻画矩阵乘积局部可纯化密度算符的结构。纯化（purification）与密度算符凸几何是 effect module 基础设施，与 §004 算子代数（convex effect algebra）直接同线，接续 2607.28202（凸锥纯化）、2607.25900（effect-valued measurement）——**§004 命中**。
+
+---
+
+### Integral Hilbert spaces and the dynamics of loop quantum cosmos
+- **来源**: arXiv 2608.02798
+- **链接**: https://arxiv.org/abs/2608.02798
+- **作者**: Janek Kozicki, Tomasz Pawłowski
+- **分类**: gr-qc（圈量子引力 / 谱几何）
+- **摘要**: 积分 Hilbert 空间与圈量子宇宙动力学。圈量子引力用 Hilbert 空间与算子代数描述几何，是 NCG/谱三元组在量子引力的近邻，命中 §004-Gelfand 谱几何 / 算子代数——**§004 命中**。
+
+---
+
+### Size Operator and Spectral Clustering in the Two Coupled SYK Model
+- **来源**: arXiv 2608.02696
+- **链接**: https://arxiv.org/abs/2608.02696
+- **作者**: Juan Santos-Suárez, Martí Berenguer, Javier Mas, Alfonso V. Ramallo
+- **分类**: hep-th（SYK 模型 / 谱论）
+- **摘要**: 双耦合 SYK 模型中的 size 算子与谱聚类。size 算子 = 算符代数的生成元，谱聚类直接是谱论议题，命中 §004-Gelfand 算子代数 / 谱几何——**§004 命中**。
+
+---
+
+### A generalization of the Fredenhagen-Haag derivation of Hawking radiation
+- **来源**: arXiv 2608.03066
+- **链接**: https://arxiv.org/abs/2608.03066
+- **作者**: Felipe Dilho Alves
+- **分类**: gr-qc（交叉，AQFT / 算子代数）
+- **摘要**: 推广 Fredenhagen–Haag 的霍金辐射推导到一类 Vaidya 时空。Fredenhagen–Haag 是 AQFT / 局部代数派生物理的奠基性工作，直接落 §004-Gelfand 算子代数视角（局部代数、模理论）——**§004 强命中**。
+
+---
+
+### Zesting and the relative complexity of Reshetikhin-Turaev invariants
+- **来源**: arXiv 2608.02795
+- **链接**: https://arxiv.org/abs/2608.02795
+- **作者**: Colleen Delaney, Calvin McPhail-Snyder
+- **分类**: math-ph（交叉 math.QA，范畴论 / TQFT）
+- **摘要**: Reshetikhin–Turaev 不变量的 zesting 与相对复杂度。模张量范畴 / TQFT 不变量属 §003-type-topos 范畴论线（范畴量子场论近邻）——**§003 命中**。
+
+---
+
 ## 2026-06-30
 
 ### Agentic Architecture: Noise Reduction, Goal Projection
