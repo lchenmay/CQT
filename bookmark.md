@@ -221,6 +221,71 @@
 
 ---
 
+## 2026-08-07
+
+### A new perspective on non-commutative deformations of field and gauge theories
+- **来源**: arXiv 2608.04097
+- **链接**: https://arxiv.org/abs/2608.04097
+- **作者**: Riccardo Borsato, Tim Meier
+- **分类**: hep-th（非对易几何 / 规范场）
+- **摘要**: 非对易场论与规范形变的新的视角。非对易空间是 §004-Gelfand 非交换几何（NCG）的直接主题，接续 2608.01110 模糊环面、2608.04717 模糊 S^7 的「非对易空间」线——**§004 强命中**。
+
+---
+
+### Quantization of Algebraic Varieties Defined by Casimir Polynomials via Matrix Regularization: Fuzzy $S^7$ and Beyond
+- **来源**: arXiv 2608.04717
+- **链接**: https://arxiv.org/abs/2608.04717
+- **作者**: Akifumi Sako
+- **分类**: hep-th（交叉 math-ph，模糊空间 / 矩阵正则化）
+- **摘要**: 用矩阵正则化把 Casimir 多项式定义的代数簇量子化（模糊 $S^7$ 等）。矩阵正则化 = 模糊空间的标准构造，与 2608.01110 模糊环面、2608.03390 convex matrix 同属 §004 非交换几何 / 模糊空间线——**§004 命中**。
+
+---
+
+### The Born Representation Theorem and the Unistochastic Theorem
+- **来源**: arXiv 2608.04354
+- **链接**: https://arxiv.org/abs/2608.04354
+- **作者**: Jacob A. Barandes
+- **分类**: quant-ph（交叉 math-ph，量子概率 / 算子代数）
+- **摘要**: 证明 Born 规则的表示定理与 unistochastic 矩阵定理。Born 规则 = 投影测度的算子代数表述，unistochastic 是密度矩阵几何（酉轨道）基础对象，属 §004「量子概率 / 可观测量代数」核心；同时触及 Born 规则基础地位（量子基础）——**§004 双命中（量子基础）**。
+
+---
+
+### Generalized comodule tube algebras for boundary and domain wall defects of (2+1)D topological order
+- **来源**: arXiv 2608.05071
+- **链接**: https://arxiv.org/abs/2608.05071
+- **作者**: Zhian Jia, Sheng Tan
+- **分类**: hep-th（拓扑序 / 范畴）
+- **摘要**: (2+1)D 拓扑序边界/畴壁缺陷的广义 comodule tube 代数。拓扑序 / tube 代数 / 模范畴属 §003-type-topos 范畴量子场论与凝聚态拓扑交叉——**§003 命中**。
+
+---
+
+### Tilts from 2-Groups
+- **来源**: arXiv 2608.04248
+- **链接**: https://arxiv.org/abs/2608.04248
+- **作者**: Sven Harder, Theodore Jacobson, Zhengdi Sun
+- **分类**: hep-th（高阶范畴 / 2-群）
+- **摘要**: 2-群的 tilts。2-群 / 高阶对称属 §003-type-topos 高阶范畴线——**§003 命中**。
+
+---
+
+### Sharp Continuity of Petz and Sandwiched Rényi Conditional Entropies
+- **来源**: arXiv 2608.04947
+- **链接**: https://arxiv.org/abs/2608.04947
+- **作者**: Hao-Chung Cheng, Po-Chieh Liu
+- **分类**: quant-ph（交叉 math-ph，量子信息 / 信道）
+- **摘要**: Petz 与夹心 Rényi 条件熵的尖锐连续性。量子信道 / 相对熵是 §004-Gelfand 算子代数（完全正保迹映射、模相对熵）的标准对象，接续 01814 QDEC 的模相对熵线——**§004 命中**。
+
+---
+
+### Quantum gravity around ultracold black holes from DSSYK
+- **来源**: arXiv 2608.04745
+- **链接**: https://arxiv.org/abs/2608.04745
+- **作者**: Francesca Mariani, Thomas G. Mertens, Jacopo Papalini, Thomas Tappeiner
+- **分类**: hep-th（交叉 gr-qc，量子引力 / SYK）
+- **摘要**: 用 DSSYK 研究超冷黑洞周围的量子引力。SYK/DSYT 是 §004 谱几何与 NCG 的近邻模型，接续 2608.02696 SYK size 算子谱聚类——**§004 命中**。
+
+---
+
 ## 2026-06-30
 
 ### Agentic Architecture: Noise Reduction, Goal Projection
