@@ -286,6 +286,80 @@
 
 ---
 
+## 2026-08-08
+
+### Local Uniqueness of the Born Rule on Categories with Complex-Weighted Morphisms
+- **来源**: arXiv 2608.05197
+- **链接**: https://arxiv.org/abs/2608.05197
+- **作者**: Tayfun Ustun
+- **分类**: quant-ph（交叉 math-ph，量子概率 / 范畴）
+- **摘要**: 复权重态射范畴上 Born 规则的局部唯一性。Born 规则 = 投影测度的算子代数表述，复权重范畴对 §003-type-topos（范畴量子力学）与 §004-Gelfand（算子代数/量子概率）双命中，并触及 Born 规则基础地位——**§003 + §004 双命中（量子基础）**。
+
+---
+
+### Transparent boundary conditions for the spatially discrete Schrödinger equation
+- **来源**: arXiv 2608.05338
+- **链接**: https://arxiv.org/abs/2608.05338
+- **作者**: Mashrab E. Akramov, Jambul R. Yusupov, Matthias Ehrhardt, Davron U. Matrasulov
+- **分类**: math-ph（谱论 / 离散薛定谔）
+- **摘要**: 离散薛定谔方程的透明边界条件与无反射传输。离散哈密顿量谱论/传输问题，属 §004-Gelfand 谱几何与算子理论（离散谱）——**§004 命中**。
+
+---
+
+### Triviality in a Non-Perturbative Second-Order Mean-Field Theory for $\phi^4_4$
+- **来源**: arXiv 2608.05998
+- **链接**: https://arxiv.org/abs/2608.05998
+- **作者**: (math-ph new)
+- **分类**: math-ph（量子场论 / 平凡性）
+- **摘要**: $\phi^4_4$ 非微扰平均场理论中的平凡性。四维标量场论平凡性是 §004-Gelfand 量子场论/算符代数基础设施的核心议题——**§004 命中**。
+
+---
+
+### Three Generations in E7
+- **来源**: arXiv 2608.06271
+- **链接**: https://arxiv.org/abs/2608.06271
+- **作者**: John C. Baez
+- **分类**: math-ph（代数 / 表示论）
+- **摘要**: 例外李代数 E7 中的三代粒子结构。例外李代数/表示论属 §003-type-topos 范畴与代数几何线（代数表示）——**§003 命中**。
+
+---
+
+### Finite Quantum Histories: Holonomy Spectra, Minimal Clocks, and Exact Clock-Change Covariance
+- **来源**: arXiv 2608.05748
+- **链接**: https://arxiv.org/abs/2608.05748
+- **作者**: (math-ph cross quant-ph)
+- **分类**: math-ph（交叉 quant-ph，算子代数 / 历史）
+- **摘要**: 有限维量子历史：单值谱、最小钟、钟变换协变。单值矩阵谱与历史扇区同构于 $\mathrm{Fix}(M)$，钟代数正规化属 §004-Gelfand 算子代数（关系性时间/历史扇区）——**§004 命中（量子基础）**。
+
+---
+
+### Quantum information loss
+- **来源**: arXiv 2608.05535
+- **链接**: https://arxiv.org/abs/2608.05535
+- **作者**: (gr-qc / hep-th / quant-ph cross)
+- **分类**: gr-qc（量子信息 / 信道）
+- **摘要**: 量子信息丢失的度量（prepare-evolve-measure 信道），证明"普遍 pristine"等价于 Knill-Laflamme QEC 条件。§004-Gelfand 算子代数（量子信道/相对熵）标准对象，兼及黑洞信息——**§004 命中（量子基础）**。
+
+---
+
+### Relative entropy of entanglement of Haar random states
+- **来源**: arXiv 2608.05274
+- **链接**: https://arxiv.org/abs/2608.05274
+- **作者**: (hep-th cross quant-ph)
+- **分类**: hep-th（量子信息 / 相对熵）
+- **摘要**: Haar 随机态的相对熵纠缠。相对熵/纠缠度量是 §004-Gelfand 算子代数（信道与相对熵）标准对象——**§004 命中**。
+
+---
+
+### GLSM monodromy on quantum period lattice of Calabi-Yau fourfold flops
+- **来源**: arXiv 2608.06280
+- **链接**: https://arxiv.org/abs/2608.06280
+- **作者**: (hep-th new)
+- **分类**: hep-th（镜像对称 / 代数几何）
+- **摘要**: CY 四折 flop 的 GLSM monodromy 与周期格。镜像对称/同调镜像属 §003-type-topos 范畴与代数几何线——**§003 命中**。
+
+---
+
 ## 2026-06-30
 
 ### Agentic Architecture: Noise Reduction, Goal Projection
