@@ -360,6 +360,71 @@
 
 ---
 
+## 2026-08-11
+
+### Topological defects in reflection positive topological field theories
+- **来源**: arXiv 2608.07217
+- **链接**: https://arxiv.org/abs/2608.07217
+- **作者**: Lukas Müller
+- **分类**: math-ph（交叉，TQFT / 拓扑缺陷）
+- **摘要**: 反射正拓扑场论中的拓扑缺陷。反射正 TQFT / 拓扑缺陷属 §003-type-topos 范畴量子场论线（TQFT / 凝聚态拓扑）——**§003 命中**。
+
+---
+
+### The two-sided Bogoliubov inequality in von Neumann algebras ...
+- **来源**: arXiv 2608.07246
+- **链接**: https://arxiv.org/abs/2608.07246
+- **作者**: Much, Verch, Schütte, Delle Site
+- **分类**: math-ph（交叉，算子代数）
+- **摘要**: von Neumann 代数中的双边 Bogoliubov 不等式，联系自由能与量子关联。von Neumann 代数 = §004-Gelfand 算子代数核心对象——**§004 强命中**。
+
+---
+
+### Spectral Topology and Universal Krylov Dynamics
+- **来源**: arXiv 2608.07258
+- **链接**: https://arxiv.org/abs/2608.07258
+- **作者**: Murugan, Van Zyl, Watanabe
+- **分类**: hep-th（交叉 math-ph，谱论）
+- **摘要**: 谱拓扑与普适 Krylov 动力学。谱方法/Krylov 空间属 §004-Gelfand 谱几何（算子谱论）——**§004 命中**。
+
+---
+
+### Tilting Mutations and Quiver-Invariant Dualities in Brane Tilings
+- **来源**: arXiv 2608.07269
+- **链接**: https://arxiv.org/abs/2608.07269
+- **作者**: Lee, Seong, Suzzoni
+- **分类**: hep-th（交叉 math-ph，范畴 / 几何）
+- **摘要**: brane tiling 中的倾斜突变与箭图不变对偶。箭图/突变/规范-几何对偶属 §003-type-topos 范畴（箭图表示/突变）——**§003 命中**。
+
+---
+
+### New symplectic singularities from SU(2) gauge theories
+- **来源**: arXiv 2608.06451
+- **链接**: https://arxiv.org/abs/2608.06451
+- **作者**: Hanany, Kumaran, Liu, Schedler
+- **分类**: hep-th（规范理论 / 几何表示）
+- **摘要**: $SU(2)$ 规范理论中的新辛奇点。规范理论/辛奇点/几何表示属 §003-type-topos 范畴（几何表示/辛几何）——**§003 命中**。
+
+---
+
+### Quantum-cosmological corrections to inflationary spectra from Gaussian wave packets
+- **来源**: arXiv 2608.07164
+- **链接**: https://arxiv.org/abs/2608.07164
+- **作者**: Sonet, Tronconi, Venturi
+- **分类**: gr-qc（量子宇宙学 / 谱几何）
+- **摘要**: 高斯波包给出的量子宇宙学对暴胀谱的修正。量子宇宙学波函数/谱修正属 §004-Gelfand 谱几何（Wheeler–DeWitt 谱）与量子基础——**§004 命中（量子基础）**。
+
+---
+
+### Quantum de Sitter and Analytically Continued Chern Simons Theory
+- **来源**: arXiv 2608.07467
+- **链接**: https://arxiv.org/abs/2608.07467
+- **作者**: Alexander, Blakey
+- **分类**: hep-th（交叉 math-ph，TQFT / 量子引力）
+- **摘要**: 量子 de Sitter 与解析延拓 Chern–Simons 理论。CS 理论/拓扑场论属 §003-type-topos 范畴（TQFT）近邻 + 量子引力基础——**§003 命中**。
+
+---
+
 ## 2026-06-30
 
 ### Agentic Architecture: Noise Reduction, Goal Projection
