@@ -425,6 +425,53 @@
 
 ---
 
+## 2026-08-13
+
+### Quantum steering is equivalent to state-preserving conditional expectations
+- **来源**: arXiv 2608.10783
+- **链接**: https://arxiv.org/abs/2608.10783
+- **作者**: see arXiv
+- **分类**: quant-ph / math.OA（算子代数）/ math-ph
+- **摘要**: 证明量子导引等价于保态条件期望，在 von Neumann 代数与子因子（subfactor）理论下建立联系。von Neumann 代数/条件期望 = §004-Gelfand 算子代数核心对象——**§004 强命中 + 量子基础**。
+
+---
+
+### Geometrize the nongeometric space
+- **来源**: arXiv 2608.09958
+- **链接**: https://arxiv.org/abs/2608.09958
+- **作者**: Tran Chi Quy, Sonnet Nguyen Quang Hung
+- **分类**: math.QA / math-ph / math.CT / hep-th
+- **摘要**: 用下降理论将非几何 R-空间表述为 bicategory-valued stack，处理非交换非结合几何。bicategory-valued stack/范畴论框架 = §003-type-topos 范畴论命中；非交换几何 = NCG 近邻——**§003 命中 + NCG**。
+
+---
+
+### Hochschild Cohomology, Modular Tensor Categories, and Mapping Class Groups II
+- **来源**: arXiv 2608.11193
+- **链接**: https://arxiv.org/abs/2608.11193
+- **作者**: see arXiv
+- **分类**: math.QA / math-ph
+- **摘要**: 模张量范畴的 Hochschild 上同调及其与映射类群表示。模张量范畴是 TQFT/拓扑序核心代数结构——**§003-type-topos 范畴论命中**。
+
+---
+
+### von Neumann entropy and its geometric estimation
+- **来源**: arXiv 2608.11151
+- **链接**: https://arxiv.org/abs/2608.11151
+- **作者**: see arXiv
+- **分类**: quant-ph / math-ph
+- **摘要**: von Neumann 熵的几何估计。von Neumann 熵是 von Neumann 代数态的核心熵量（与 Tomita–Takesaki 模理论相连）——**§004-Gelfand 算子代数命中**。
+
+---
+
+### Testing the relational interpretation of quantum mechanics with gravity
+- **来源**: arXiv 2608.10334
+- **链接**: https://arxiv.org/abs/2608.10334
+- **作者**: see arXiv
+- **分类**: quant-ph / gr-qc
+- **摘要**: Schwarzschild 时空中的波-粒混合度检验量子力学关联诠释（relational interpretation）。Rovelli 关联诠释方向，与量子引力基础直接相关——**量子基础（relational）命中**。
+
+---
+
 ## 2026-06-30
 
 ### Agentic Architecture: Noise Reduction, Goal Projection
