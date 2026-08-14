@@ -472,6 +472,53 @@
 
 ---
 
+## 2026-08-14
+
+### Connecting the tensor-categorical formulation of anyon condensation with operator algebras and entropic order parameters
+- **来源**: arXiv 2608.12157
+- **链接**: https://arxiv.org/abs/2608.12157
+- **作者**: see arXiv
+- **分类**: cond-mat.str-el / hep-th / quant-ph
+- **摘要**: 将任意子凝聚的张量范畴表述与算子代数（准局域 C*-代数、DHR 双模）及熵序参量相连。张量范畴 = §003-type-topos 范畴论命中；准局域 C*-代数/DHR 双模 = §004-Gelfand 算子代数命中——**§003 + §004 双重命中**。
+
+---
+
+### Contextuality in the n-qubit Pauli group
+- **来源**: arXiv 2608.12021
+- **链接**: https://arxiv.org/abs/2608.12021
+- **作者**: see arXiv
+- **分类**: quant-ph
+- **摘要**: n-qubit Pauli 群中情境性的系统刻画（Kochen-Specker/contextuality）。情境性是量子逻辑核心，与 spectral presheaf topos 方法及 §004 效应代数/POVM 近邻——**量子基础（contextuality）+ §003/§004 近邻**。
+
+---
+
+### Uniformly Stable Minimal Weyl-Heisenberg Measurements Approaching the SIC Benchmark
+- **来源**: arXiv 2608.11872
+- **链接**: https://arxiv.org/abs/2608.11872
+- **作者**: see arXiv
+- **分类**: quant-ph
+- **摘要**: 构造逼近 SIC 基准的最小 Weyl-Heisenberg 测量（SIC POVM 近似）。SIC POVM 是 §004-Gelfand 测量框架（POVM/von Neumann 代数上正算符值测度）核心对象——**§004 命中 + 量子基础（measurement）**。
+
+---
+
+### Scalar Finite-Proper-Time Field Theory as Spectral Operator Calculus
+- **来源**: arXiv 2608.11721
+- **链接**: https://arxiv.org/abs/2608.11721
+- **作者**: see arXiv
+- **分类**: hep-th / math-ph
+- **摘要**: 将有限固有时间标量场论表述为谱算子微积分（spectral operator calculus）。谱算子微积分直接归属 §004-Gelfand 算子代数/谱几何线（谱理论是 Gelfand 谱论核心），与 Connes 谱三元组近邻——**§004 命中**。
+
+---
+
+### Universal quadratic field equations via homotopy algebras
+- **来源**: arXiv 2608.11307
+- **链接**: https://arxiv.org/abs/2608.11307
+- **作者**: see arXiv
+- **分类**: hep-th / math-ph
+- **摘要**: 在同伦代数（L∞/homotopy algebras）框架下统一导出二次场方程。L∞/A∞ 同伦代数是 §003-type-topos 范畴/高阶代数结构线直接命中——**§003 命中**。
+
+---
+
 ## 2026-06-30
 
 ### Agentic Architecture: Noise Reduction, Goal Projection
