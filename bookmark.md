@@ -519,6 +519,62 @@
 
 ---
 
+## 2026-08-15
+
+### Categorical symmetries and generalized charges from operator algebras
+- **来源**: arXiv 2608.13402
+- **链接**: https://arxiv.org/abs/2608.13402
+- **作者**: see arXiv
+- **分类**: hep-th / math-ph / quant-ph
+- **摘要**: 从算子代数（局域网、DHR 理论）重构范畴对称性与广义荷，把 fusion category / 融合范畴对称性锚定在 von Neumann 代数网上。范畴对称性 = §003-type-topos 范畴论命中；局域算子代数网 = §004-Gelfand 算子代数命中——**§003 + §004 双重命中**（接续 2608.12157 的任意子凝聚张量范畴×算子代数线）。
+
+---
+
+### Modular theory and emergent geometry in subalgebra inclusions
+- **来源**: arXiv 2608.12512
+- **链接**: https://arxiv.org/abs/2608.12512
+- **作者**: see arXiv
+- **分类**: hep-th / math-ph
+- **摘要**: 以 Tomita-Takesaki 模理论处理子代数包含（inclusion）与涌现几何，模流/相对模哈密顿量给出几何自由度。模理论是 §004-Gelfand von Neumann 代数核心工具，「代数包含 → 几何」即 Connes 式非交换几何纲领——**§004 强命中**。
+
+---
+
+### Spectral triples and finite-dimensional approximations of noncommutative spaces
+- **来源**: arXiv 2608.13278
+- **链接**: https://arxiv.org/abs/2608.13278
+- **作者**: see arXiv
+- **分类**: math-ph / math.OA
+- **摘要**: 谱三元组（spectral triple）的有限维逼近与非交换空间收敛性。谱三元组 = Connes 非交换几何的定义性对象，直接落在 §004-Gelfand 的「交换 C*-代数 ↔ 空间」对偶推广线上——**§004 强命中**（与 2608.11721 谱算子微积分、模糊空间系列同线）。
+
+---
+
+### Sheaf-theoretic contextuality and the logic of quantum measurement scenarios
+- **来源**: arXiv 2608.13035
+- **链接**: https://arxiv.org/abs/2608.13035
+- **作者**: see arXiv
+- **分类**: quant-ph / math.CT
+- **摘要**: 用层论（sheaf theory）刻画测量情境的整体/局部一致性障碍，Abramsky-Brandenburger 纲领的推进。层 = topos 的核心构件，spectral presheaf 与量子逻辑内在语义直属 §003-type-topos——**§003 强命中 + 量子基础（contextuality）**（接续 2608.12021 Pauli 群情境性）。
+
+---
+
+### Operational derivation of quantum theory from information-theoretic axioms
+- **来源**: arXiv 2608.13088
+- **链接**: https://arxiv.org/abs/2608.13088
+- **作者**: see arXiv
+- **分类**: quant-ph
+- **摘要**: 从操作性/信息论公理（GPT 框架）重构量子理论，给出 Jordan 代数或 C*-代数式表示定理。公理化重构的终点正是 §004-Gelfand 的代数表示（GNS/Jordan-Banach），而 GPT 的凸-范畴表述与 §003 相接——**§004 强命中 + 量子基础（reconstruction）**。
+
+---
+
+### Relational quantum mechanics and the algebra of local observers
+- **来源**: arXiv 2608.13551
+- **链接**: https://arxiv.org/abs/2608.13551
+- **作者**: see arXiv
+- **分类**: quant-ph / gr-qc
+- **摘要**: 把 Rovelli 关联量子力学（RQM）中「观察者相对事实」形式化为局域观察者代数与交叉积（crossed product）构造。观察者代数/交叉积是 §004-Gelfand von Neumann 代数命中，关联诠释是量子基础主线——**§004 命中 + 量子基础（relational）**（接续 2608.10334 关联诠释检验）。
+
+---
+
 ## 2026-06-30
 
 ### Agentic Architecture: Noise Reduction, Goal Projection
