@@ -1745,6 +1745,126 @@ C:/Dev/.codebuddy/temp/AIO/codegen/{guid}/
 \end{principle}
 
 % ================================================================
+\chapter{类型论}
+% ================================================================
+
+\subsection{从简单类型到依赖类型}
+
+绝大多数程序员接触的“类型”止步于简单类型系统（Simple Type System）——
+\cmd{int}、\cmd{string}、\cmd{bool}、泛型、接口。
+这是第一层理解：\textbf{类型 = 数据形状的约束}。
+
+但数理逻辑意义上的类型论远不止于此。
+在 Martin-L\"of 类型论（MLTT）中，类型是\emph{命题}，程序是\emph{证明}。
+依赖类型（Dependent Types）允许类型\emph{依赖于值}：
+
+\begin{lstlisting}[language=FSharp]
+(* 依赖类型的核心思想：类型可以依赖值 *)
+// 简单类型：长度为 n 的数组是 List<int>
+// 依赖类型：长度为 n 的数组是 Vec n int
+// 其中 n 是一个值，而非类型参数
+\end{lstlisting}
+
+\begin{definition}[命题即类型（Curry-Howard 对应）]
+Curry-Howard 同构揭示了程序与证明之间的深层对偶关系：
+\begin{itemize}
+    \item 类型 = 逻辑命题
+    \item 程序 = 该命题的构造性证明
+    \item 类型检查 = 证明验证
+\end{itemize}
+这意味着：\textbf{一个类型正确的程序，就是一个数学证明。}
+\end{definition}
+
+这一视角将程序设计从“写出能运行的代码”提升为“写出可验证的规约”。
+
+\subsection{国内类型论研究的四层金字塔}
+
+类型论在国内的分布极不均衡。根据一项调查~\cite{JackZhu2026TypeTheory}，
+可以清晰地划分为四个层次：
+
+\begin{table}[h]
+\centering
+\begin{tabular}{p{2.5cm} p{5cm} p{4.5cm}}
+\toprule
+\textbf{层级} & \textbf{人群特征} & \textbf{规模与特点} \\
+\midrule
+第一层 & 普通程序员，仅了解简单类型系统（Java/C++泛型） & 人数极多，但与数理逻辑中的类型论不是一回事 \\
+第二层 & 能使用证明助手（Lean/Agda/Coq）进行基础形式化 & 规模不大（几百人），对元理论理解较浅 \\
+第三层 & 真正理解类型论元理论，可进行研究 & 人数极少（全国几十人），集中在少数高校（中大/复旦/北大/中科院） \\
+第四层 & \textbf{最大缺口}：既精通类型论元理论，又懂工程/多物理场/算子谱 & \textbf{极其稀缺}，类型论与工程圈层严重脱节 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{framed}
+\centering
+\large 核心观察：国内真正吃透依赖类型论的人非常少，\textbf{属于极小的小众圈层}。\cite{JackZhu2026TypeTheory}
+\end{framed}
+
+\subsection{工程师为什么要学依赖类型论？}
+
+工程师学习依赖类型论，\textbf{不是为了在下一行代码里用它}，
+而是为了掌握一种能够描述“代码规格”本身的\textbf{元语言}。
+
+\begin{principle}[工程师的元能力]
+依赖类型论让你对程序的理解，
+从“这段代码能跑”提升到\textbf{“这段代码为什么必然正确”}。
+\end{principle}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{p{3.5cm} p{5cm} p{4.5cm}}
+\toprule
+\textbf{维度} & \textbf{常规编程语言} & \textbf{依赖类型论} \\
+\midrule
+核心任务 & 编写程序，告诉计算机“如何做” & 编写证明，告诉计算机“为何如此” \\
+类型的作用 & 作为接口，约束数据的形状 & 作为规格，描述数据的性质 \\
+错误发现 & 通过测试来发现错误 & 通过类型检查来\textbf{排除}整个错误类别 \\
+验证时机 & 主要在运行时（通过测试） & 主要在编译时（通过证明） \\
+文档效果 & 代码与文档可能不一致 & 代码即文档，类型即规格 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+依赖类型论对工程师的核心价值体现在三个层面：
+
+\begin{enumerate}
+    \item \textbf{获得“编译时正确性”的超能力}：在未来，处理核心算法（加密协议、并发锁、内存安全）时，依赖类型可以让你用数学证明来取代部分单元测试，从根源上杜绝整类 bug。
+    
+    \item \textbf{理解下一代工程工具的逻辑}：形式化验证正在逐步工具化。像 TLA+（分布式系统）、Rust 的借用检查器、PyTorch 的 \cmd{torch.jit.script}，其底层逻辑都与“约束求解”和“程序逻辑”有关。依赖类型论是理解这些工具背后原理的“第一性原理”。
+    
+    \item \textbf{打通跨学科协作的语言壁垒}：当你和数学家、物理学家讨论一个物理场（如“一个无散度的矢量场”）时，依赖类型提供了一种精确的、可计算的交流语言，使得规格本身就可以被代码校验。
+\end{enumerate}
+
+\subsection{依赖类型论在本项目中的映射}
+
+本手册的整个设计——JCS 的确定性生成、FCS 的编译检查、MCTS 的搜索树、红蓝对抗的靶场化——都可以看作依赖类型论思想的\emph{工程投影}：
+
+\begin{itemize}
+    \item \textbf{TypeSys / Design-*.json} = 类型论中的“语境”（Context）——所有类型定义的唯一真相源
+    \item \textbf{FSharp.Compiler.Service} = 类型检查器——验证代码是否符合规约
+    \item \textbf{JCS 的只读 VFS 钩子} = 类型论中的“禁止逃逸”——生成代码不可修改
+    \item \textbf{MCTS 搜索树 + UCT 剪枝} = 类型推导中的“搜索空间剪枝”——用编译器作为奖励函数
+    \item \textbf{红蓝对抗的靶场化} = 类型论中的“反例构造”——红军生成测试脚本作为形式化反证
+\end{itemize}
+
+\begin{principle}[从类型论到工程]
+本手册试图证明：\textbf{依赖类型论不仅仅是理论研究的前沿，它已经以“工程化约束”的形式进入了工业级代码生成系统。}
+
+Copilot 的 L3 编译器反馈循环，本质上是一个\emph{将 LLM 的概率输出通过类型系统校验收敛为确定性输出的闭环}。
+这正是依赖类型论思想在工程中的落地形态。
+\end{principle}
+
+\begin{framed}
+\centering
+\large 类型论不是象牙塔里的数学游戏——\\
+它是将模糊意图转化为精确约束的\textbf{工程语言}。
+
+提示词有天花板，类型检查没有。\cite{Liu2023LostInMiddle}
+\end{framed}
+
+
+% ================================================================
 \chapter{前沿研究与系统演进}
 % ================================================================
 
