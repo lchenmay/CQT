@@ -519,6 +519,187 @@
 
 ---
 
+## 2026-08-19
+
+### Quantum channels on duals of von Neumann algebras in the Schrödinger picture
+- **来源**: arXiv 2608.15116
+- **链接**: https://arxiv.org/abs/2608.15116
+- **作者**: Sviatoslav V. Dzhenzher
+- **分类**: quant-ph / math.OA
+- **摘要**: 在 Schrödinger 绘景下研究 von Neumann 代数对偶上的量子信道，把信道论纳入 von Neumann 代数框架。直接落在 §004-Gelfand 的 von Neumann 代数 + 量子信道核心议题（接续 2608.13750 von Neumann 代数 Choi–Jamiołkowski、2608.07207 无穷维 Kraus 分解线）——**§004 强命中**。
+
+---
+
+### Ground states on the C*-algebras of Fell bundles over étale groupoids
+- **来源**: arXiv 2608.16588
+- **链接**: https://arxiv.org/abs/2608.16588
+- **作者**: (C*-代数 / 群胚算子代数)
+- **分类**: math.OA
+- **摘要**: 研究 étale 群胚上 Fell bundle 的 C*-代数 Grund 态，推进群胚 C*-代数分类。属 §004-Gelfand 的 C*-代数 / 群胚算子代数结构（与 2608.14482 AH-代数广群模型同族）——**§004 命中**。
+
+---
+
+### 1-Bounded Entropy for C*-Algebras
+- **来源**: arXiv 2608.15409
+- **链接**: https://arxiv.org/abs/2608.15409
+- **分类**: math.OA
+- **摘要**: 引入 C*-代数的 1-有界熵，接算子代数熵与分类理论。属 §004-Gelfand 的 C*-代数不变量——**§004 命中**。
+
+---
+
+### Non-uniqueness of continuous trace-scaling flows on certain full factors
+- **来源**: arXiv 2608.15385
+- **链接**: https://arxiv.org/abs/2608.15385
+- **分类**: math.OA
+- **摘要**: 证明某些 full factor 上连续 trace-缩放流的非唯一性，触及 von Neumann 代数 (full factor) 动力学。属 §004-Gelfand 的 von Neumann 代数因子理论——**§004 命中**。
+
+---
+
+### Operator Systems in Duality
+- **来源**: arXiv 2608.16395
+- **链接**: https://arxiv.org/abs/2608.16395
+- **分类**: math.OA
+- **摘要**: 研究算子系统（operator systems）的对偶结构，接算子空间/算子代数对偶。属 §004-Gelfand 的算子代数对偶——**§004 命中**。
+
+---
+
+### Complex Hadamard Matrices — Quantum Symmetries, Equivalence and Non-Local Games
+- **来源**: arXiv 2608.14858
+- **链接**: https://arxiv.org/abs/2608.14858
+- **作者**: Michael Brannan, Daniel Gromada, Roberto Hernández Palomares, Nicholas Priebe
+- **分类**: math.QA / math.OA
+- **摘要**: 用复 Hadamard 矩阵刻画量子对称（quantum symmetries）、等价类与非局域博弈，含 Hopf/量子群对称与算子代数结构。量子对称是 §003 范畴/量子群胚方向的核心，同时接 §004 算子代数（接续 2608.14064 Hopf algebroid）——**§003 + §004 双命中**。
+
+---
+
+### Invariant connections in geometric mechanics: reduction, nonlocality, and curvature effects
+- **来源**: arXiv 2608.16561
+- **链接**: https://arxiv.org/abs/2608.16561
+- **作者**: Qiao Huang
+- **分类**: math.DG / math-ph
+- **摘要**: 研究几何力学中的不变联络，涉及约化（reduction）、非局域性与曲率。接辛约化/几何力学主线，是 §003 几何/约化方向的候选，也为随机几何控制提供几何基底——**§003（几何力学）+ 几何控制候选**。
+
+---
+
+### The Geometry of Stochastic Fluid Dynamics
+- **来源**: arXiv 2608.15321
+- **链接**: https://arxiv.org/abs/2608.15321
+- **作者**: Darryl D. Holm
+- **分类**: physics.flu-dyn / math-ph
+- **摘要**: 用几何（随机流体动力学、随机 Clebsch 变量、随机 Euler-Poincaré）框架刻画随机流体。接随机几何力学/随机最优控制主线（Itô 修正 + 微分几何）——**随机几何力学强相关（二·核心推荐）**。
+
+---
+
+### Topological Field Theory and Stochastic Dynamics
+- **来源**: arXiv 2608.15220
+- **链接**: https://arxiv.org/abs/2608.15220
+- **作者**: Igor V. Ovchinnikov
+- **分类**: hep-th / math-ph
+- **摘要**: 把拓扑场论与随机动力学联系起来（随机过程的拓扑/几何表述）。接随机动力学 + 范畴化谱对偶（范畴/§003 近邻）——**§003 近邻 + 随机动力学**。
+
+---
+
+### Deformation of scalar generalized bi-Hamiltonian structure
+- **来源**: arXiv 2608.15538
+- **链接**: https://arxiv.org/abs/2608.15538
+- **作者**: Zhe Wang
+- **分类**: math.DG / math-ph
+- **摘要**: 研究广义双哈密顿（bi-Hamiltonian）结构的形变，接可积系统/几何力学。属 §003 几何力学 + 随机控制（PCH/Dirac 结构近邻）——**§003 几何控制候选**。
+
+---
+
+### Separable Counterexamples to Complementary Quantum Correlations, and Why Random Search Missed Them
+- **来源**: arXiv 2608.14798
+- **链接**: https://arxiv.org/abs/2608.14798
+- **作者**: Lilong Qian
+- **分类**: quant-ph
+- **摘要**: 给出互补量子关联的可分离反例，澄清量子关联结构。属量子基础/信息——**量子基础（interpretation/information）**。
+
+---
+
+### Anomalous Weak Pointer Shifts as Postselected Interference among Coarse-Grained Histories
+- **来源**: arXiv 2608.15197
+- **链接**: https://arxiv.org/abs/2608.15197
+- **作者**: Cody Charles Payne, Eliahu Cohen
+- **分类**: quant-ph
+- **摘要**: 把异常弱指针偏移解释为粗粒历史间后选择干涉，接一致性历史（consistent histories）/弱测量诠释。属量子基础/诠释主线——**量子基础（interpretation）**（接续 2608.13894 玻姆、非定域性诠释线）。
+
+---
+
+## 2026-08-18
+
+### Choi–Jamiołkowski-type isomorphisms for von Neumann algebras
+- **来源**: arXiv 2608.13750
+- **链接**: https://arxiv.org/abs/2608.13750
+- **作者**: Marcin Marciniak, Michał Cholewiak
+- **分类**: math.OA / math-ph / quant-ph
+- **摘要**: 把经典 Choi–Jamiołkowski 信道-态同构推广到 von Neumann 代数框架，给出信道与态算子的代数对应。直接落在 §004-Gelfand 的算子代数（von Neumann 代数）核心议题，是量子信息信道论与算子代数的接口——**§004 强命中**（与 2608.07207 无穷维 Kraus 分解、2608.05535 信道同线）。
+
+---
+
+### AF-action groupoid models for diagonal AH-algebras
+- **来源**: arXiv 2608.14482
+- **链接**: https://arxiv.org/abs/2608.14482
+- **作者**: Ali Imad Raad, Jonathan Taylor
+- **分类**: math.OA / math.FA
+- **摘要**: 用 AF-作用广群（groupoid）模型刻画对角 AH-代数，AT-代数与 Elliott 分类纲领的推进。AH-代数是 C*-代数分类的核心对象，属 §004-Gelfand 的 C*-代数结构理论——**§004 强命中**（接续 2608.13707 可分离 C*-代数、2608.24445 有限精度 AQFT 因子分类线）。
+
+---
+
+### A simple separable C*-algebra which is not singly generated
+- **来源**: arXiv 2608.13707
+- **链接**: https://arxiv.org/abs/2608.13707
+- **作者**: George A. Elliott, Chun Guang Li, Zhuang Niu
+- **分类**: math.OA
+- **摘要**: 构造一个非单生成的可分离 C*-代数，澄清 C*-代数生成元结构。属 §004-Gelfand 的 C*-代数基础结构——**§004 命中**。
+
+---
+
+### Spectral nonassociative L^p-spaces for JBW^*-algebras
+- **来源**: arXiv 2608.14231
+- **链接**: https://arxiv.org/abs/2608.14231
+- **作者**: Cédric Arhancet
+- **分类**: math.FA / math.OA
+- **摘要**: 为 JBW*-代数引入谱非结合 L^p 空间，推进非结合算子代数的函数空间理论。JBW* 代数与 Jordan 算子代数相接，关联 §004-Gelfand 的谱理论与 Jordan 代数表示（与 2608.13088 GPT→Jordan/C* 重构线呼应）——**§004 命中**。
+
+---
+
+### Nonorthogonal-state erasure as the resource behind apparent second-law violations
+- **来源**: arXiv 2608.13881
+- **链接**: https://arxiv.org/abs/2608.13881
+- **作者**: Xinshu Xia, Hui Hui Qin, Yu-Han Ma, Chang-Pu Sun, Hui Dong
+- **分类**: quant-ph
+- **摘要**: 论证非正交态擦除（nonorthogonal-state erasure）是表观第二定律违背的真正资源，澄清涨落定理与信息热力学的基础机制。量子基础 + 随机热力学交叉——**§004 近邻（量子信息热力学）+ 量子基础（热力学第二定律）**（与 2608.14493 量子信息引擎、2608.14523 Landsman 熵讲义同线）。
+
+---
+
+### Cleft Extensions for Hopf Algebroids without Antipodes
+- **来源**: arXiv 2608.14064
+- **链接**: https://arxiv.org/abs/2608.14064
+- **作者**: Xiao Han (QMUL), Peter Schauenburg (IMB, UBE)
+- **分类**: math.CT / math-ph / math.RA
+- **摘要**: 研究无对极（antipode）Hopf 代数胚（Hopf algebroid）的 cleft 扩张，推进广义对称与量子群胚理论。Hopf algebroid 是量子对称与拓扑序的核心代数结构，属 §003-type-topos 范畴/代数方向——**§003 命中**（接续 2608.13402 范畴对称性、2608.12157 任意子凝聚张量范畴线）。
+
+---
+
+### A groupoidal approach to quantum reference frames
+- **来源**: arXiv 2608.14133
+- **链接**: https://arxiv.org/abs/2608.14133
+- **作者**: Samuel Fedida, Alberto Ibort, Arnau Mas-Dorca
+- **分类**: math-ph / quant-ph / math.CT
+- **摘要**: 用广群（groupoid）语言重构量子参考系（QRF）理论，把"关系性事实"锚定在广群对称上。广群是范畴论的核心对象，QRF 又属关系量子力学（RQM）基础——**§003 命中 + 量子基础（relational）**（接续 2608.13551 观察者代数交叉积、2608.10334 关联诠释线）。
+
+---
+
+### de Broglie-Bohm Dynamics with Schrödinger Source Fields: A Framework for Subquantum Theory
+- **来源**: arXiv 2608.13894
+- **链接**: https://arxiv.org/abs/2608.13894
+- **作者**: Said Mikki
+- **分类**: quant-ph / math-ph
+- **摘要**: 提出带 Schrödinger 源场的德布罗意-玻姆动力学，给出潜量子（subquantum）理论框架。属量子诠释主线（玻姆因果诠释）——**量子基础（interpretation）**（接续 2607.27339 稳定子态判别、非定域性诠释线）。
+
+---
+
 ## 2026-08-15
 
 ### Categorical symmetries and generalized charges from operator algebras
