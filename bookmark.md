@@ -519,6 +519,117 @@
 
 ---
 
+## 2026-08-20
+
+### Shape Theory of ∞-Topoi: Inverse Limits, Products, and (Co)homology
+- **来源**: arXiv 2608.17525
+- **链接**: https://arxiv.org/abs/2608.17525
+- **作者**: Georg Lehner
+- **分类**: math.CT / math.AT / math.GN / math.KT
+- **摘要**: 发展 ∞-Topos（高阶层拓扑斯）的 shape 理论，研究逆极限、乘积与（上）同调。直接是 **Grothendieck topos / 高阶 topos 理论**核心对象，含上同调（谱对偶近邻）。
+- **关联度**：**§003-type-topos 强命中**（topos 理论主线，接续 2608.12157 范畴谱对偶、2608.14064 Hopf algebroid 线）；属 CQT §003 拓扑斯核心议题。
+
+---
+
+### Cohomology for solutions of polygon equations
+- **来源**: arXiv 2608.17263
+- **链接**: https://arxiv.org/abs/2608.17263
+- **作者**: Serban Matei Mihalache, Tomoro Mochida
+- **分类**: math-ph / math.AT / math.CO / math.CT
+- **摘要**: 研究多边形方程（polygon equations，Yang-Baxter 类可积结构）解的上同调，含范畴/代数结构。属 §003 范畴/上同调近邻（接续 2608.12157 张量范畴、2608.14064 Hopf algebroid）。
+
+---
+
+### Universal quantum theory from dynamical consistency
+- **来源**: arXiv 2608.17688
+- **链接**: https://arxiv.org/abs/2608.17688
+- **作者**: Chiara Marletto, Vlatko Vedral
+- **分类**: quant-ph / physics.hist-ph
+- **摘要**: 从"动力一致性（dynamical consistency）"第一性原理导出普适量子论。属量子基础（构造性诠释/信息基础），同时是 §003 范畴化量子力学近邻（与 2608.13551 观察者代数、2608.10334 关联诠释线呼应）。**量子基础 + §003 近邻**。
+
+---
+
+### No extension of the Quantum Tensor Product admits a Superposition principle
+- **来源**: arXiv 2608.17510
+- **链接**: https://arxiv.org/abs/2608.17510
+- **作者**: Vincenzo Fiorentino, Kuntal Sengupta
+- **分类**: quant-ph
+- **摘要**: 证明量子张量积的任何扩张都不保留叠加原理，触及量子态结构基础。属**量子基础（结构/诠释）**。
+
+---
+
+### Quantifying Measurement Objectivity: A Retrodictive Approach
+- **来源**: arXiv 2608.17400
+- **链接**: https://arxiv.org/abs/2608.17400
+- **作者**: Jiaxi Kuang, Teruaki Nagasawa, Kensei Torii, Francesco Buscemi
+- **分类**: quant-ph
+- **摘要**: 用逆预测（retrodictive）框架量化测量客观性，接量子测量理论/基础。属**量子基础（测量/诠释）**（与 2608.13894 玻姆线、2608.15197 弱测量线呼应）。
+
+---
+
+### Gisin's Argument and the Limits of Causal Explanations in Relativistic Spacetime
+- **来源**: arXiv 2608.18010
+- **链接**: https://arxiv.org/abs/2608.18010
+- **作者**: Felix J. Rutzinger
+- **分类**: quant-ph / physics.hist-ph
+- **摘要**: 在相对论时空框架下重审 Gisin 论证，界定因果解释的极限。属**量子基础（因果性/定域性诠释）**（与 2608.14110 量子因果序、非定域性线呼应）。
+
+---
+
+### Readout Orientation Controls Measurement-Accessible Quantum Tangent Geometry
+- **来源**: arXiv 2608.17065
+- **链接**: https://arxiv.org/abs/2608.17065
+- **作者**: Marwan Ait Haddou
+- **分类**: quant-ph / math.DG
+- **摘要**: 读出方向控制"测量可达的量子切几何"，把量子态几何（tangent space）与测量耦合。属**量子信息几何（information geometry 近邻）**，接随机热力学信息几何关键词。
+
+---
+
+### A Projected Semiexplicit Integrator for Dissipative Systems with Configuration-Dependent Kinetic Energy: Contact-Herglotz Formulation
+- **来源**: arXiv 2608.17198
+- **链接**: https://arxiv.org/abs/2608.17198
+- **作者**: Lorena Loera-Galeana, Santiago Mejía, Espartaco Alvarado, Héctor Medel-Cobaxin
+- **分类**: math-ph / math.NA
+- **摘要**: 用 **Contact-Herglotz 表述**处理构型依赖动能的耗散系统，给出半显式投影积分器。Contact 几何是随机热力学/耗散哈密顿框架，接 §003 几何力学 + 非平衡耗散。**随机热力学/几何控制强相关（二·核心推荐）**。
+
+---
+
+### Policy Iteration for Linear-Quadratic Stochastic Differential Games with State- and Control-Dependent Noise
+- **来源**: arXiv 2608.17940
+- **链接**: https://arxiv.org/abs/2608.17940
+- **作者**: Karl Handwerker, Felix Thömmes, Lucas Günther, Balint Varga, Sören Hohmann
+- **分类**: eess.SY / math.OC
+- **摘要**: 研究**状态与控制依赖噪声**（即乘性噪声 multiplicative noise）下的线性二次随机微分博弈策略迭代。直接命中任务关键词"Multiplicative Noise"+"Stochastic Control"组合。**随机控制/乘性噪声强相关（二·核心推荐）**（与 2608.14289 扩散策略网络、2608.15243 遍历随机最优控制同线）。
+
+---
+
+### Infinite-Horizon Inverse Linear-Quadratic Differential Games with State- and Control-Dependent Noise
+- **来源**: arXiv 2608.17939
+- **链接**: https://arxiv.org/abs/2608.17939
+- **作者**: Lucas Günther, Karl Handwerker, Felix Thömmes, Balint Varga, Sören Hohmann
+- **分类**: eess.SY / math.OC
+- **摘要**: 无限时域逆线性二次微分博弈，同样含**状态与控制依赖噪声（乘性噪声）**。接 2608.17940 同族，随机控制/乘性噪声。**随机控制强相关（二·核心推荐）**。
+
+---
+
+### Choquet-Type Relations and a State Space Level Amendment of Arveson's Hyperrigidity Conjecture
+- **来源**: arXiv 2608.17868
+- **链接**: https://arxiv.org/abs/2608.17868
+- **作者**: Hridoyananda Saikia
+- **分类**: math.OA / math.FA
+- **摘要**: 修正 Arveson 超刚性猜想的状态空间层表述，算子代数经典问题。属 **§004-Gelfand（算子代数）**（接续 2608.15116 von Neumann 信道、2608.16395 算子系统对偶线）。
+
+---
+
+### Simplicity of reduced crossed products
+- **来源**: arXiv 2608.17025
+- **链接**: https://arxiv.org/abs/2608.17025
+- **作者**: Thomas Bray, Matthew Kennedy
+- **分类**: math.OA / math.DS / math.GR
+- **摘要**: 研究约化交叉积（reduced crossed products）的单纯性，C*-代数交叉积结构。属 **§004-Gelfand（C*-代数）**（与 2608.16588 Fell bundle C*-、2608.14482 AH-代数同族）。
+
+---
+
 ## 2026-08-19
 
 ### Quantum channels on duals of von Neumann algebras in the Schrödinger picture

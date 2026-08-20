@@ -1,6 +1,6 @@
-## 📅 [2026-08-19] CQT 研究前沿动态
+## 📅 [2026-08-20] CQT 研究前沿动态
 
-> 抓取批次：**TUESDAY, 18 AUGUST 2026**（arXiv 美东周二 20:00 公告 ≈ 北京周三 08:00；北京运行日 2026-08-19）。当日为正常工作日推送，与 08-18 运行的 MON 17 AUG 批次不同 → 新批次。
+> 抓取批次：**WEDNESDAY, 19 AUGUST 2026**（arXiv 美东周三 20:00 公告 ≈ 北京周四 08:00；北京运行日 2026-08-20）。正常工作日推送，与 08-19 运行的 TUE 18 AUG 不同 → 新批次。
 
 ---
 
@@ -10,118 +10,112 @@
 
 | 分类 | 新提交数 | 备注 |
 |------|---------|------|
-| quant-ph | 116 | 分页 skip=50,100 全取，无截断 |
-| math-ph | 47 | 含 §003/§004 多命中 |
-| gr-qc | 49 | 量子引力/黑洞 |
-| hep-th | 54 | skip=50 补回 51–54 |
-| cond-mat.stat-mech | 25 | 4 篇非平衡/信息/热电 |
-| math.OC | 51 | 1 篇随机最优控制 |
-| math.OA | 24 | batch-day 7 篇算子代数 |
-| math.CT | 22 | batch-day 6 篇，无 topos/Hopf 直接命中 |
-| eess.SY | 49 | 能源关键词 0 命中 |
+| quant-ph | 82 | 分页 skip=50 取 51–82，无截断 |
+| math-ph | 26 | 含 §003/几何力学 |
+| gr-qc | 23 | 量子引力 |
+| hep-th | 24 | 规范/引力对偶 |
+| cond-mat.stat-mech | 23 | 3 篇非平衡 |
+| math.OC | 30 | 随机控制 2608.17910 |
+| math.OA | 2 | batch-day 算子代数 |
+| math.CT | 3 | batch-day，**含 ∞-Topoi 强命中** |
+| eess.SY | 39 | 乘性噪声随机博弈 + HJ 可达性 |
 
 **量子基础与解释子区块（Quantum Foundations & Interpretation）**
 
-1. **2608.15197** — *Anomalous Weak Pointer Shifts as Postselected Interference among Coarse-Grained Histories*（Payne, Cohen）。把异常弱指针偏移解释为粗粒历史间的后选择干涉 → 一致性历史/弱测量诠释。**interpretation（弱测量/历史）**。
-2. **2608.14871** — *Minimality of the Pure Qubit ZX Calculus*（Stoltz, Vilmart）。纯量子比特 ZX 演算的极小性，范畴化量子推导演算 → **基础/量子信息（范畴方法）**。
-3. **2608.14798** — *Separable Counterexamples to Complementary Quantum Correlations*（Qian）。互补量子关联的可分离反例，澄清量子关联结构 → **量子关联/基础**。
-4. **2608.16561 / 2608.15220** — 几何力学不变联络（约化）与拓扑场论-随机动力学，提供随机动力学的几何/范畴基底（见 §003）。
+1. **2608.18010** — *Gisin's Argument and the Limits of Causal Explanations in Relativistic Spacetime*（Rutzinger）。相对论时空下重审 Gisin 论证，界定因果解释极限 → **因果性/定域性诠释**（接 2608.14110 量子因果序线）。
+2. **2608.17688** — *Universal quantum theory from dynamical consistency*（Marletto, Vedral）。从动力一致性第一原理导出普适量子论 → **构造性诠释/信息基础**（§003 近邻）。
+3. **2608.17510** — *No extension of the Quantum Tensor Product admits a Superposition principle*（Fiorentino, Sengupta）。证明量子张量积扩张不保留叠加原理 → **态结构基础**。
+4. **2608.17400** — *Quantifying Measurement Objectivity: A Retrodictive Approach*（Kuang 等）。逆预测量化测量客观性 → **测量/诠释**（接 2608.13894 玻姆、2608.15197 弱测量线）。
+5. **2608.17065** — *Readout Orientation Controls Measurement-Accessible Quantum Tangent Geometry*（Ait Haddou）。读出方向控制"测量可达量子切几何" → **量子信息几何（information geometry 近邻）**。
+6. **2608.17198** — *Contact-Herglotz Formulation for Dissipative Systems*（Loera-Galeana 等）。Contact 几何处理耗散系统 → 随机热力学/几何力学基础（见 §003/二）。
 
 **§003-type-topos 映射**
 
-- **2608.14858** — *Complex Hadamard Matrices — Quantum Symmetries, Equivalence and Non-Local Games*（Brannan, Gromada, Hernández Palomares, Priebe）。复 Hadamard 矩阵刻画**量子对称（quantum symmetries）**，含 Hopf/量子群对称与算子代数结构。→ **§003（量子对称/范畴）+ §004（算子代数）双命中**（接续 2608.14064 Hopf algebroid、2608.14464 量子对称线）。
-- **2608.16560** — *U_q~q sl(2;R) Turaev-Viro invariants for cusped 3-manifolds*：量子代数/拓扑不变量（含 Hopf 类结构）→ §003 拓扑量子代数。
-- **2608.16561** — *Invariant connections in geometric mechanics: reduction, nonlocality, curvature*（Huang）：不变联络、约化（reduction）→ **§003 几何力学/辛约化**。
-- **2608.15538** — *Deformation of scalar generalized bi-Hamiltonian structure*（Wang）：双哈密顿形变 → §003 几何力学（PCH/Dirac 近邻）。
-- **2608.15321** — *The Geometry of Stochastic Fluid Dynamics*（Holm）：随机流体动力学几何（随机 Clebsch、随机 Euler-Poincaré）→ **随机几何力学强相关**。
-- **2608.15220** — *Topological Field Theory and Stochastic Dynamics*（Ovchinnikov）：随机动力学的拓扑/几何表述 → §003 近邻 + 随机动力学。
-- 备注：今日 math.CT（6 篇）无 topos/Hopf algebroid/层论直接命中，§003 命中主要来自 math-ph / math.QA 交叉。
+- **2608.17525** — *Shape Theory of ∞-Topoi: Inverse Limits, Products, and (Co)homology*（Lehner）。发展 **∞-Topos（高阶层拓扑斯）** 的 shape 理论，含逆极限、乘积与（上）同调。→ **§003 Grothendieck topos 强命中**（接续 2608.12157 范畴谱对偶、2608.14064 Hopf algebroid 线）；这是本周首个 **topos 理论直接强命中**。
+- **2608.17263** — *Cohomology for solutions of polygon equations*（Mihalache, Mochida）。多边形方程（Yang-Baxter 类）解的上同调 → §003 范畴/上同调近邻。
+- **2608.17688** — 动力一致性量子论 → §003 范畴化量子力学近邻（与 2608.13551 观察者代数线呼应）。
+- **2608.17221** — *Gegenbauer connections and su(1,1) ladder structures*（Vallejo, Kirchbach）→ Lie 代数/联络几何，§003 几何近邻。
 
 **§004-Gelfand 映射**
 
-- **2608.15116** — *Quantum channels on duals of von Neumann algebras in the Schrödinger picture*（Dzhenzher）。von Neumann 代数对偶上的量子信道，Schrödinger 绘景。→ **§004（von Neumann 代数 + 量子信道）强命中**（接续 2608.13750 von Neumann CJ 同构、2608.07207 无穷维 Kraus 线）。
-- **2608.16588** — *Ground states on the C*-algebras of Fell bundles over étale groupoids*：群胚 C*-代数 Grund 态 → **§004（C*-代数/群胚）**（与 2608.14482 AH-代数广群模型同族）。
-- **2608.15409** — *1-Bounded Entropy for C*-Algebras*：C*-代数 1-有界熵 → **§004（C*-代数不变量）**。
-- **2608.15385** — *Non-uniqueness of continuous trace-scaling flows on certain full factors*：full factor 上 trace-缩放流非唯一 → **§004（von Neumann 因子）**。
-- **2608.16395** — *Operator Systems in Duality*：算子系统对偶 → **§004（算子代数对偶）**。
-- **2608.14858** — 量子对称/算子代数（见 §003）→ §004 近邻。
+- **2608.17868** — *Choquet-Type Relations and a State Space Level Amendment of Arveson's Hyperrigidity Conjecture*（Saikia）。修正 Arveson 超刚性猜想的状态空间层表述 → **§004（算子代数/泛函分析）**（接续 2608.15116 von Neumann 信道、2608.16395 算子系统对偶）。
+- **2608.17025** — *Simplicity of reduced crossed products*（Bray, Kennedy）。约化交叉积单纯性 → **§004（C*-代数交叉积）**（与 2608.16588 Fell bundle C*-、2608.14482 AH-代数同族）。
+- 注：今日 math.OA（batch-day）仅 2 篇，无 von Neumann 直接命中，但 §004 持续有稳定输入。
 
-**Foundations/arXiv 入库**：以上 §003/§004/基础强命中共 12 篇已追加至 `bookmark.md` 之 `## 2026-08-19` 节（按 arXiv ID 去重）。
+**Foundations/arXiv 入库**：上述 §003/§004/基础强命中共 12 篇已追加至 `bookmark.md` 之 `## 2026-08-20` 节（按 arXiv ID 去重）。
 
 ---
 
 ### 二、随机热力学与几何控制核心推荐
 
-> 能源主题（布朗回转器/几何棘轮/对数势阱净能交换/PCH/Dirac 结构）本批 **0 命中**；随机几何力学、量子热力学、随机最优控制有实质进展。按相关性降序：
+> 本批**布朗回转器/棘轮/PCH/Dirac 结构仍 0 命中**，但**乘性噪声 + HJB 关键词首次实质命中**（eess.SY），随机几何力学（Contact-Herglotz）亦有强文。按相关性降序：
 
-1. **【高】Quantum channels on duals of von Neumann algebras in the Schrödinger picture（2608.15116）**
-   - 中文：von Neumann 代数对偶上的量子信道（Schrödinger 绘景）｜作者：S. V. Dzhenzher｜来源：quant-ph / math.OA
-   - 核心突破：把量子信道论系统纳入 **von Neumann 代数对偶**，给出 Schrödinger 绘景下的信道结构。
-   - 数学模型：信道 $\mathcal{E}: \mathcal{M}_* \to \mathcal{M}_*$（对偶 predual），完全正性与保迹的对偶刻画。
-   - 关联度：§004 算子代数 + 量子信息熵线核心，兼接随机量子动力学。
+1. **【高】A Projected Semiexplicit Integrator for Dissipative Systems with Configuration-Dependent Kinetic Energy: Contact-Herglotz Formulation（2608.17198）**
+   - 中文：构型依赖动能耗散系统的投影半显式积分器（Contact-Herglotz 表述）｜作者：L. Loera-Galeana 等｜来源：math-ph
+   - 核心突破：用 **Contact 几何 / Herglotz 原理**统一处理耗散系统，给出数值稳定的半显式积分器。Contact 几何是非平衡/随机热力学的标准几何框架。
+   - 数学模型：Contact Hamiltonian $H(q,p,\tau)$ + Herglotz 变分（作用量随演化累积）；构型依赖动能 $T(q,\dot q)$。
+   - 关联度：随机热力学/几何力学核心，直接接 §003 几何控制 + 非平衡耗散（与 2608.15321 随机流体几何同线）。
 
-2. **【高】Charging of a Quantum Battery by a Two-Photon Quantum Pulse（2608.15653）**
-   - 中文：双光子量子脉冲对量子电池的充能｜作者：Darsheshdar, Moniri, Khanbekyan｜来源：quant-ph
-   - 核心突破：用双光子脉冲协议提升量子电池充能功率与稳定性，量化非平衡充能功。
-   - 数学模型：二能级/多能级电池哈密顿 + 脉冲驱动 $\hat{H}_{\rm int}(t)$；充能功 $\langle W\rangle = \Delta\langle H\rangle$。
-   - 关联度：量子热力学/能量收集核心（量子电池属 energy 主线）。
+2. **【高】Policy Iteration for LQ Stochastic Differential Games with State- and Control-Dependent Noise（2608.17940） & Infinite-Horizon Inverse LQ Differential Games with State- and Control-Dependent Noise（2608.17939）**
+   - 中文：状态与控制依赖噪声下的线性二次随机微分博弈策略迭代 / 无限时域逆 LQ 微分博弈｜作者：Handwerker, Thömmes, Günther, Varga, Hohmann（KIT）｜来源：eess.SY / math.OC
+   - 核心突破：在**乘性噪声（multiplicative noise，state-and-control-dependent）**下求解 LQ 随机博弈的值迭代与逆问题——首次同时命中任务关键词 "Multiplicative Noise" + "Stochastic Control"。
+   - 数学模型：SDE $dX = (AX+Bu)dt + (C X + D u)\circ dW$（控制依赖噪声项）；值函数满足带噪声耦合的 Riccati/HJB 类方程。
+   - 关联度：随机最优控制（乘性噪声）核心，接 2608.14289 扩散策略、2608.15243 遍历随机控制线。
 
-3. **【中高】The Geometry of Stochastic Fluid Dynamics（2608.15321）**
-   - 中文：随机流体动力学的几何｜作者：Darryl D. Holm｜来源：math-ph / physics.flu-dyn
-   - 核心突破：用随机 Clebsch 变量与随机 Euler-Poincaré 框架统一随机流体，把 **Itô 修正嵌入微分几何**（曲率/变分）。
-   - 数学模型：随机 Euler-Poincaré 约化 + 随机变分原理；几何噪声项对应 §003 几何力学。
-   - 关联度：随机几何力学标杆，直接接 §003 几何控制 + Itô/辛几何关键词。
+3. **【高】Universal quantum theory from dynamical consistency（2608.17688）**
+   - 中文：从动力一致性导出普适量子论｜作者：C. Marletto, V. Vedral（Oxford）｜来源：quant-ph
+   - 核心突破：以"动力一致性"为唯一公理导出量子理论，属构造性诠释，与 §003 范畴化量子力学近邻。
+   - 数学模型：一致性约束 $\Rightarrow$ 干涉/纠缠结构涌现。
+   - 关联度：量子基础 + §003 双重（已部分归入一·基础）。
 
-4. **【中】Topological Field Theory and Stochastic Dynamics（2608.15220）**
-   - 中文：拓扑场论与随机动力学｜作者：I. V. Ovchinnikov｜来源：hep-th / math-ph
-   - 核心突破：把随机过程（含朗之万/福克-普朗克）映射为拓扑场论，给出随机动力学的范畴/几何表述。
-   - 数学模型：随机动力学的场论作用量；与非平衡势、随机共振相接。
-   - 关联度：§003 范畴化谱对偶近邻 + 随机热力学。
+4. **【高】Shape Theory of ∞-Topoi（2608.17525）**
+   - 中文：∞-Topoi 的 shape 理论：逆极限、乘积与（上）同调｜作者：G. Lehner｜来源：math.CT
+   - 核心突破：系统建立高阶 topos 的 shape/同调理论，直接是 **Grothendieck topos** 在高阶层框架的推进。
+   - 关联度：**§003 topos 强命中**（CQT §003-type-topos 核心），本周首个 topos 直接强命中。
 
-5. **【中】Boltzmann structure of sampling: Intrinsic p-value and emergent closed-form（2608.14608）**
-   - 中文：采样的玻尔兹曼结构：内禀 p 值与涌现闭式｜作者：O. Loukas｜来源：math.ST / math-ph
-   - 核心突破：揭示采样算法的玻尔兹曼/熵结构，p 值有涌现闭式表达 → 连随机热力学与统计采样。
-   - 数学模型：采样分布 ↔ 玻尔兹曼测度 $p \propto e^{-\beta E}$。
-   - 关联度：随机热力学（信息几何/采样）侧。
+5. **【中】Extending and Unifying the Fundamental Tasks of Hamilton-Jacobi Reachability Analysis（2608.18060）**
+   - 中文：扩展并统一 Hamilton-Jacobi 可达性分析的基本任务｜作者：Hirsch, Sharpless, Lee, Herbert｜来源：eess.SY
+   - 核心突破：统一 HJ 可达性分析的若干子任务，属 **HJ（=HJB）框架的几何控制**。
+   - 数学模型：HJI 方程 $V_t + H(x,\nabla V)=0$ 的可达性求解。
+   - 关联度：HJB/几何控制关键词命中（中优先级，偏确定性可达性）。
 
-6. **【中】Ergodic Stochastic Optimal Control Problems（2608.15243）**
-   - 中文：遍历随机最优控制问题｜作者：C. Ma, H. Zhao｜来源：math.OC
-   - 核心突破：处理**遍历（长期平均）随机最优控制**，给出值函数与 HJB 类方程的适定性。
-   - 数学模型：遍历 HJB $\lambda + \inf_a \{L^a V + f\} = 0$（平均代价特征值）。
-   - 关联度：随机最优控制（HJB 关键词）核心，但偏抽象测度论、未显式几何。
+6. **【中】Readout Orientation Controls Measurement-Accessible Quantum Tangent Geometry（2608.17065）**
+   - 中文：读出方向控制测量可达的量子切几何｜作者：M. Ait Haddou｜来源：quant-ph / math.DG
+   - 核心突破：把量子态切空间几何与测量耦合，接**信息几何（information geometry）**。
+   - 关联度：随机热力学"信息几何"关键词近邻（high-priority 关键词 "Stochastic Thermodynamics AND Information Geometry" 的几何侧）。
 
 ---
 
 ### 三、每日研究前沿四方向
 
-**量子（quant-ph，116 篇）**
-- **量子电池/热力学**：2608.15653 双光子脉冲充能（见二·2）。
-- **量子基础/诠释**：2608.15197 弱指针偏移、2608.14798 互补关联反例、2608.14871 ZX 演算极小性。
-- **量子控制**：2608.15715 连续量子反馈控制（Kraus-参数化信念强化学习）、2608.15161 FPGA 量子控制处理器、2608.14891 Floquet-Liouville 驱动开放系统。
-- **量子信息**：2608.14798 魔术态稳定子统计力学、2608.16860 经典对抗容错与 PCP。
+**量子（quant-ph，82 篇）**
+- **量子基础/诠释**：2608.18010（Gisin 因果解释极限）、2608.17688（动力一致性量子论）、2608.17510（张量积无叠加）、2608.17400（测量客观性逆预测）。
+- **量子信息/熵/信道**：2608.18070（Rényi/Tsallis 熵估计）、2608.17331（Rényi 可加性违例认证）、2608.17217（高斯玻色信道能量约束通信）、2608.18053（6 阶复 Hadamard 矩阵完全分类）。
+- **量子纠错/编译**：2608.17870（中性原子 QEC 解码风险沉积）、2608.17085（2D 拓扑码最小权译码困难度）、2608.17115（纠缠辅助局部可恢复码）、2608.17023（Bicycle 码中性原子编译）。
+- **量子控制/传感**：2608.17572（强化学习变分量子传感）、2608.17629（慢解析时变哈密顿量子模拟）。
 
-**Topos / 范畴论（math.CT，6 篇 batch-day）**
-- 今日 6 篇（格值关系范畴、monoidal 子范畴、关系 doctrine 商-理解对偶、奇异范畴模、有理等变稳定同伦 ambidexterity、有限预三角范畴）**均无 topos/Hopf algebroid/层论直接命中**。
-- §003 实际命中来自 math-ph/math.QA 交叉：2608.14858（量子对称）、2608.16560（Turaev-Viro）、2608.16561（几何力学约化）、2608.15538（bi-Hamiltonian）。
+**Topos / 范畴论（math.CT，3 篇 batch-day）**
+- **2608.17525** ∞-Topoi shape 理论（**Grothendieck topos 强命中**）。
+- **2608.17263** polygon equations 上同调（§003 近邻）。
+- **2608.17101** Monoid schemes 形变理论（范畴/交换代数，无直接 topos）。
 
-**Gelfand 理论 / 算子代数（math.OA，batch-day 7 篇）**
-- **2608.15116** von Neumann 代数对偶量子信道（§004 强命中）。
-- **2608.16588** Fell bundle C*-代数 Grund 态、**2608.15409** C*-代数 1-有界熵、**2608.15385** full factor trace-缩放流、**2608.16395** 算子系统对偶、**2608.14858** 量子对称算子代数。→ §004 本周（17/18/19 三日）持续丰收。
+**Gelfand 理论 / 算子代数（math.OA，2 篇 batch-day）**
+- **2608.17868** Arveson 超刚性 Choquet 关系（算子代数）。
+- **2608.17025** 约化交叉积单纯性（C*-代数）。
 
 **AI（cs.AI / cs.LG）**
-- **2608.15715** 量子反馈控制用信念强化学习（Kraus-参数化）→ AI×量子控制交叉。
-- **2608.14691** 量子快捷：复相位态动力学削减序列模型优化步数（AI×量子）。
-- **2608.15112** 概率保持 Transformer 解含时薛定谔方程（深度学习×量子）。
-- **2608.14673** 审计 AI 生成的数学证明（量子并行重复贪婪条件引理修正）→ 形式化/证明审计。
-- 量子+AI：以上 3 篇体现"扩散/Transformer+量子系统"与"AI 证明审计"趋势。
+- **2608.16900** QuantumNovelty：量子论文/专利的裁判式评审与可专利性筛查语言 Agent（AI 自主科研/评审）。
+- **2608.17135** 迭代张量网络变换做初等/滤波函数逐元求值（AI×张量网络）。
+- **2608.17572** 强化学习自动化变分量子传感（AI×量子控制）。
+- 量子+AI：以上体现"Agent 评审 + 强化学习量子控制"趋势；本批 AI 主线以 Agent/自动化科研为主。
 
 ---
 
 ### 💡 今日趋势洞察
 
-1. **§004 von Neumann 线再下一城**：2608.15116 把量子信道论推入 von Neumann 代数对偶，与 2608.13750（CJ 同构）、2608.07207（无穷维 Kraus）构成"无穷维量子信道—算子代数"完整闭环，建议优先成章。
-2. **随机几何力学回暖**：Holm 2608.15321（随机流体几何）+ 2608.15220（TFT 随机动力学）+ 2608.16561（几何力学约化）三篇同批，把 Itô 修正与辛/约化几何显性挂钩，是 energy 主线"几何侧"的实质进展（工程能源侧仍缺位）。
-3. **量子电池升温、宏观能源静默**：量子电池（2608.15653）接能量收集理论，但布朗回转器/棘轮/PCH/海浪能仍 0 命中；建议下一批次扩搜 nlin.AO、physics.class-ph、cond-mat.mes-hall 以补能源工程侧漏检。
+1. **§003 迎来首个 topos 直接强命中**：2608.17525（∞-Topoi shape 理论）填补本周 math.CT 连续缺位的 topos 空白，建议与 2608.12157（范畴谱对偶）、2608.14064（Hopf algebroid）并置，形成"层/拓扑斯—范畴对称"纵深。
+2. **乘性噪声 + HJB 首次实质命中**：2608.17940/17939（状态与控制依赖噪声 LQ 随机博弈）+ 2608.18060（HJ 可达性）三篇，首次把任务关键词"Multiplicative Noise""HJB"落到实文，是 energy 主线"随机控制侧"的突破（工程能源/PCH 仍缺位）。
+3. **Contact-Herglotz 重提几何耗散框架**：2608.17198 用 Contact 几何统一耗散系统，与 2608.15321（随机流体几何）共同撑起"随机几何力学"几何侧；建议下一批次扩搜 nlin.AO / physics.class-ph / cond-mat.mes-hall 补布朗回转器/棘轮/海浪能等工程能源侧。
 
 ---
-*下次检索建议：2026-08-20（周四）04:30 抓 **WEDNESDAY, 19 AUGUST 2026** 批次（正常工作日推送）。*
+*下次检索建议：2026-08-21（周五）04:30 抓 **THURSDAY, 20 AUGUST 2026** 批次（正常工作日推送）。*
