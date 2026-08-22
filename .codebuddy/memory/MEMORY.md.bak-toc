@@ -1,21 +1,4 @@
 # CQT 项目记忆
-<!-- TOC -->
-## Table of Contents
-
-- [CQT LaTeX 项目结构](#cqt-latex-项目结构)
-- [微信公众号](#微信公众号)
-- [知乎专栏](#知乎专栏)
-- [JCS 全栈系统架构 (c:/Dev/JCS)](#jcs-全栈系统架构-cdevjcs)
-- [TypeSys 代码生成流水线](#typesys-代码生成流水线)
-- [J7 量化交易平台 (c:/Dev/J7)](#j7-量化交易平台-cdevj7)
-- [Common 代码库 F# 风格规范 (c:/Dev/Common)](#common-代码库-f-风格规范-cdevcommon)
-- [飞书集成](#飞书集成)
-- [arXiv 重点论文追踪](#arxiv-重点论文追踪)
-  - [2606.24621 — Infinitesimal Causality (Sridhar Mahadevan, 2026-06-23)](#260624621-infinitesimal-causality-sridhar-mahadevan-2026-06-23)
-  - [Joey Woo — Cohesive ∞-Topos with Quantum Modality from C*-Algebras (2606.02269)](#joey-woo-cohesive-∞-topos-with-quantum-modality-from-c-algebras-260602269)
-- [公众号文章 HTML 渲染注意事项](#公众号文章-html-渲染注意事项)
-<!-- TOC -->
-
 
 ## CQT LaTeX 项目结构
 - 位置: c:/Dev/CQT

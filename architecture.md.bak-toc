@@ -1,36 +1,4 @@
 # CQT 项目架构与乐谱转换手册
-<!-- TOC -->
-## Table of Contents
-
-- [1. 编译工具链](#1-编译工具链)
-- [2. 音乐章乐谱渲染规范](#2-音乐章乐谱渲染规范)
-- [3. 乐谱 → LaTeX 转换管线（重点）](#3-乐谱-→-latex-转换管线（重点）)
-  - [3.1 结论：哪种输入格式最方便](#31-结论：哪种输入格式最方便)
-  - [3.2 环境依赖（本机已具备）](#32-环境依赖（本机已具备）)
-  - [3.3 一键脚本 `CQT/011-music/mscz2lytex.ps1`](#33-一键脚本-cqt011-musicmscz2lytexps1)
-- [最常用：MusicXML(.mxl) → 规范 .ly + 可 \input 的章节片段](#最常用：musicxmlmxl-→-规范-ly-可-input-的章节片段)
-- [.mscz：先经 MuseScore 导出 MusicXML，再转](#mscz：先经-musescore-导出-musicxml，再转)
-- [MIDI：指定调号，输出内联块](#midi：指定调号，输出内联块)
-  - [3.4 后处理三原则（脚本自动执行）](#34-后处理三原则（脚本自动执行）)
-  - [3.5 集成进 `music.tex`](#35-集成进-musictex)
-  - [3.6 排错 / 已知坑位](#36-排错-已知坑位)
-  - [3.7 实测记录（2026-07-24）](#37-实测记录（2026-07-24）)
-  - [3.8 生成 `.ly` 的声部组织与分片分析（重点）](#38-生成-ly-的声部组织与分片分析（重点）)
-    - [3.8.1 结构要点](#381-结构要点)
-    - [3.8.2 这对「分片分析」意味着什么](#382-这对「分片分析」意味着什么)
-    - [3.8.3 切分的锚点与障碍（ballade 实测）](#383-切分的锚点与障碍（ballade-实测）)
-    - [3.8.4 推荐方案：写 Python 提取脚本（不要手工切）](#384-推荐方案：写-python-提取脚本（不要手工切）)
-    - [3.8.5 实测记录（2026-07-24）](#385-实测记录（2026-07-24）)
-- [4. 附录：`mscz2lytex.ps1` 完整脚本](#4-附录：mscz2lytexps1-完整脚本)
-- [---- LilyPond (winget) install location ----](#lilypond-winget-install-location)
-- [---- resolve input ----](#resolve-input)
-- [---- detect MuseScore CLI ----](#detect-musescore-cli)
-- [---- MusicXML -> .ly ----](#musicxml---ly)
-- [---- MIDI -> .ly ----](#midi---ly)
-- [---- post-process .ly ----](#post-process-ly)
-- [===== main flow =====](#main-flow)
-<!-- TOC -->
-
 
 CQT 是一组数学 / 物理 / AI / 音乐讲义合集（26 章），统一用 `lualatex + latexmk` 编译。
 本手册记录项目编译链路，并**重点归档"乐谱 → LaTeX 片段"的复用经验**，让下次转换无需重新摸索。
