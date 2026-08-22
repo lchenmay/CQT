@@ -519,6 +519,152 @@
 
 ---
 
+## 2026-08-22
+
+### Bayesian inference and retrodiction for faithful states on von Neumann algebras
+- **来源**: arXiv 2608.20001
+- **链接**: https://arxiv.org/abs/2608.20001
+- **作者**: Pradyut Karmakar, Arthur J. Parzygnat
+- **分类**: math.OA / math.CT / quant-ph
+- **摘要**: 在 **von Neumann 代数**忠实态上建立贝叶斯推断与逆预测（retrodiction）理论，把量子贝叶斯/逆预测推广到算子代数框架。Parzygnat 是量子信息范畴化（量子仪器单子/贝叶斯范畴）核心人物。→ **§004（von Neumann 代数）+ 量子基础（retrodiction/诠释）双命中**（接续 2608.15116 von Neumann 信道、2608.13750 CJ 同构、2608.17400 测量客观性逆预测线）。
+
+---
+
+### Completely isometric subspaces of noncommutative L^p-spaces and contractive projections
+- **来源**: arXiv 2608.20082
+- **链接**: https://arxiv.org/abs/2608.20082
+- **作者**: (math.FA / math.OA)
+- **分类**: math.OA
+- **摘要**: 研究非交换 L^p 空间的完全等距子空间与压缩投影。非交换 L^p 空间是 §004 非交换分析/算子代数的核心对象（与 2608.14231 JBW*-代数谱 L^p 同族）。→ **§004 命中**。
+
+---
+
+### Tight Entropy Contraction of Generalized Quantum Depolarization
+- **来源**: arXiv 2608.19685
+- **链接**: https://arxiv.org/abs/2608.19685
+- **作者**: Li Gao, Long Zhao
+- **分类**: quant-ph / math.OA
+- **摘要**: 给出广义量子退极化信道的紧熵收缩（entropy contraction）界，接量子信道与算子代数熵不等式。→ **§004（量子信道/算子代数）**（与 2608.15116、2608.16395 同族）。
+
+---
+
+### Minimum attaining operators on reducing subspaces: Spectral structure and density
+- **来源**: arXiv 2608.19286
+- **链接**: https://arxiv.org/abs/2608.19286
+- **作者**: (math.FA / math.OA)
+- **分类**: math.OA
+- **摘要**: 研究约化子空间上最小达到算子（minimum attaining operators）的谱结构与稠密性。→ **§004（谱理论/算子代数）**。
+
+---
+
+### Renormalization group ontology in quantum foundations: a non-interacting spin-0 toy model
+- **来源**: arXiv 2608.19448
+- **链接**: https://arxiv.org/abs/2608.19448
+- **作者**: Gary Kapilevich
+- **分类**: quant-ph
+- **摘要**: 用量子基础视角的重整化群本体论（ontology）建模非相互作用自旋-0 玩具模型。→ **量子基础（诠释/本体论）**（接续 2608.13894 玻姆、2608.17688 动力一致性线）。
+
+---
+
+### Is the Quantum-Entangled Universe a Small World?
+- **来源**: arXiv 2608.19458
+- **链接**: https://arxiv.org/abs/2608.19458
+- **作者**: Gregory S. Duane
+- **分类**: quant-ph
+- **摘要**: 探讨量子纠缠宇宙的网络小世界结构，接量子关联/宇宙学基础。→ **量子基础（关联/宇宙学诠释）**。
+
+---
+
+### Non-Inertial Response of Correlations: From Scalar Bell Observables to an Extended Correlation Tensor
+- **来源**: arXiv 2608.19242
+- **链接**: https://arxiv.org/abs/2608.19242
+- **作者**: Timur F. Kamalov
+- **分类**: quant-ph
+- **摘要**: 研究非惯性系下关联的响应，从标量 Bell 可观测量到扩展关联张量。→ **量子基础（相对论/关联/诠释）**（接 2608.18010 Gisin 因果、2608.14110 量子因果序线）。
+
+---
+
+### Hamiltonian Floer Theory for Quantum Electrodynamics up to First Order in ħ
+- **来源**: arXiv 2608.19992
+- **链接**: https://arxiv.org/abs/2608.19992
+- **作者**: Oliver Fabert, Jesse Straat
+- **分类**: math-ph
+- **摘要**: 把哈密顿 Floer 理论推广到量子电动力学（至 ħ 一阶），接辛几何/几何力学与量子场论。→ **§003（辛几何/几何力学）**候选（与 2608.16561 不变联络约化、2608.15538 bi-Hamiltonian 同族）。
+
+---
+
+### Higher Chern-Simons Theory in 2n+2 Dimensions for Balanced 2-term L_∞-Algebras
+- **来源**: arXiv 2608.19539
+- **链接**: https://arxiv.org/abs/2608.19539
+- **作者**: Danhua Song, Yibo Wang
+- **分类**: math-ph / hep-th
+- **摘要**: 在平衡 2-项 L_∞-代数上构造高维 Chern-Simons 理论，接高阶代数/拓扑量子场论。→ **§003（高阶代数/范畴）**候选（与 2608.17525 ∞-topoi 高阶范畴线呼应）。
+
+---
+
+### Supergroup Gauged Linear Sigma Models and their Physical Mathematics
+- **来源**: arXiv 2608.19775
+- **链接**: https://arxiv.org/abs/2608.19775
+- **作者**: Arif Er, Zhangcheng Liu, Meng-Chwan Tan
+- **分类**: math-ph / hep-th
+- **摘要**: 超群规范线性 sigma 模型的物理数学，接超对称/代数几何与拓扑。→ **§003（代数/几何）**近邻。
+
+---
+
+### Quantum Rényi-Jarzynski Equality
+- **来源**: arXiv 2608.19320
+- **链接**: https://arxiv.org/abs/2608.19320
+- **作者**: Benjamin Bobell, Mert Okyay, Rahul Nandkishore
+- **分类**: cond-mat.stat-mech / quant-ph
+- **摘要**: 建立**量子 Rényi-Jarzynski 等式**，把经典涨落定理推广到量子 Rényi 熵框架。→ **随机热力学强命中**（二·核心推荐），接 2608.13881 第二定律、2608.19391 涨落定理线。
+
+---
+
+### State convertibility and fluctuation theorems from a dynamical reference: majorization meets martingales
+- **来源**: arXiv 2608.19391
+- **链接**: https://arxiv.org/abs/2608.19391
+- **作者**: Davide Cugini, Giacomo Guarnieri
+- **分类**: cond-mat.stat-mech / quant-ph
+- **摘要**: 从动力学参考系导出态可转换性与涨落定理，把 majorization 与鞅（martingale）结合。→ **随机热力学强命中**（二·核心推荐），接 2608.14276 多维 TUR 线。
+
+---
+
+### SAKE: Spectral Autodiff Kernel Expansion for Geometric Liouvillian Transport. A Differential-Geometric Framework for Response Transport in Quantum Dynamical Systems
+- **来源**: arXiv 2608.20132
+- **链接**: https://arxiv.org/abs/2608.20132
+- **作者**: Eric R. Bittner, Carlos Silva-Acuna, Hao Li, Simon Paiva-Ortega
+- **分类**: quant-ph / math.DG
+- **摘要**: 提出 SAKE 方法——用谱自微分核展开做**几何刘维尔输运**，给出量子动力学系统响应输运的**微分几何框架**。直接命中 "Ito correction AND (Symplectic OR Differential Geometry)" 关键词（微分几何 + 输运/响应）。→ **随机几何控制强命中（二·核心推荐）**。
+
+---
+
+### The Memory Hidden in Response Fluctuations: Trajectory-Level Fluctuation-Response Theory and Inequalities for Non-Markovian Jump Dynamics
+- **来源**: arXiv 2608.20328
+- **链接**: https://arxiv.org/abs/2608.20328
+- **作者**: (cond-mat.stat-mech)
+- **分类**: cond-mat.stat-mech
+- **摘要**: 建立非马尔可夫跳跃动力学的轨迹层级涨落-响应理论与不等式，揭示响应涨落中的记忆。→ **随机热力学强命中**（二·核心推荐）。
+
+---
+
+### Exact Fluctuation-Response Relations for Underdamped Langevin Dynamics
+- **来源**: arXiv 2608.20013
+- **链接**: https://arxiv.org/abs/2608.20013
+- **作者**: (cond-mat.stat-mech)
+- **分类**: cond-mat.stat-mech
+- **摘要**: 给出欠阻尼朗之万动力学的精确涨落-响应关系。→ **随机热力学强命中**（二·核心推荐），接 2608.17198 Contact-Herglotz 耗散线。
+
+---
+
+### Quantum Energy Storage versus Heat-to-Work Conversion in an Interacting Spin System
+- **来源**: arXiv 2608.19533
+- **链接**: https://arxiv.org/abs/2608.19533
+- **作者**: Omar Bachain, Mohamed Amazioug, Rachid Ahl Laamara
+- **分类**: quant-ph
+- **摘要**: 在相互作用自旋系统中比较量子储能与热-功转换，量化非平衡能量收集。→ **能量收集强命中（二·核心推荐）**（接 2608.15653 量子电池线）。
+
+---
+
 ## 2026-08-20
 
 ### Shape Theory of ∞-Topoi: Inverse Limits, Products, and (Co)homology
