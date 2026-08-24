@@ -1,6 +1,25 @@
 
 \documentclass[10pt, openany]{book}
 
+% 统一引用公共 preamble（preamble.sty 已含 biblatex/biber、tikz-cd、amsthm、中文引号、microtype、CJK 字体等）
+\usepackage{../preamble}
+
+\addbibresource{../ref.bib}
+\AtEveryBibitem{\clearfield{note}}
+
+% 公共 preamble 未涵盖、且正文使用的补充包（如 \xlongrightarrow）
+\usepackage{extarrows}
+
+\onehalfspacing
+\setlength{\parskip}{1em}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\textbf{线性代数讲义}}
+\fancyhead[LO]{\textit{范畴论观点}}
+\renewcommand{\headrulewidth}{0.4pt}
+
 \usepackage{comment}
 \usepackage{silence}
 \WarningFilter{latex}{Command \underbar has changed}
