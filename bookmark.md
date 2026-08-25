@@ -665,6 +665,143 @@
 
 ---
 
+## 2026-08-25
+
+### Fixed-ray escort representations of sandwiched and α–z Rényi divergences on von Neumann algebras
+- **来源**: arXiv 2608.21214
+- **链接**: https://arxiv.org/abs/2608.21214
+- **作者**: (quant-ph / math.OA 交叉)
+- **分类**: quant-ph / math.OA
+- **摘要**: 在 **von Neumann 代数**上建立夹心（sandwiched）与 α–z Rényi 散度的 fixed-ray escort 表示，把量子散度论推广到非交换算子代数框架。Rényi 散度/相对熵是 §004-Gelfand 算子代数（模相对熵、量子信道）的标准对象，接续 2608.20001 von Neumann 贝叶斯逆预测、2608.15116 von Neumann 信道线——**§004 强命中**。
+
+---
+
+### On quantum channels: extreme points, topology, and categorical properties
+- **来源**: arXiv 2608.20689
+- **链接**: https://arxiv.org/abs/2608.20689
+- **作者**: (math-ph)
+- **分类**: math-ph / math.CT
+- **摘要**: 系统刻画量子信道（CPTP/UCPTP 映射）的极值点、拓扑与范畴性质，分类二元积（biproduct）与余积（coproduct）。量子信道 = §004-Gelfand 算子代数核心对象；范畴性质（积/余积）又属 §003-type-topos 范畴论方向——**§004 + §003 双命中**（接续 2608.15116、2608.13750 CJ 同构线）。
+
+---
+
+### A Schur Multiplier with Unequal Operator and Completely Bounded Norms on $S_4$
+- **来源**: arXiv 2608.20933
+- **链接**: https://arxiv.org/abs/2608.20933
+- **作者**: (math.OA)
+- **分类**: math.OA
+- **摘要**: 在对称群 S₄ 上构造算子范数与完全有界范数不等的 Schur 乘子，澄清乘子与完全有界（completely bounded）性质的区别。Schur 乘子/完全有界映射属 §004-Gelfand 算子空间与算子代数经典议题——**§004 命中**。
+
+---
+
+### Irreducibility and weak spectral gap in free product von Neumann algebras
+- **来源**: arXiv 2608.21270
+- **链接**: https://arxiv.org/abs/2608.21270
+- **作者**: (math.OA)
+- **分类**: math.OA
+- **摘要**: 研究自由积（free product）von Neumann 代数中的不可约性与弱谱隙（weak spectral gap）。自由积 von Neumann 代数与谱隙是 §004-Gelfand 算子代数（因子、群 von Neumann 代数）核心议题——**§004 命中**。
+
+---
+
+### On the Drinfeld center of the Verlinde category $\operatorname{Ver}_p$
+- **来源**: arXiv 2608.20465
+- **链接**: https://arxiv.org/abs/2608.20465
+- **作者**: (math.QA / math.CT 交叉)
+- **分类**: math.CT / math.QA
+- **摘要**: 计算 Verlinde 范畴 $\operatorname{Ver}_p$ 的 Drinfeld 中心（抽代中心），推进模张量范畴与拓扑序代数结构。模张量范畴 / Drinfeld 中心属 §003-type-topos 范畴论（TQFT / 凝聚态拓扑）主线——**§003 命中**（接续 2608.12157 任意子凝聚张量范畴、2608.05071 tube 代数线）。
+
+---
+
+### Categories with a Base of Computability
+- **来源**: arXiv 2608.20616
+- **链接**: https://arxiv.org/abs/2608.20616
+- **作者**: (math.CT)
+- **分类**: math.CT
+- **摘要**: 研究具备可计算性基（base of computability）的范畴，把可计算性结构范畴化。范畴论 + 可计算性属 §003-type-topos 高阶代数/范畴方向（与 2608.17525 ∞-topoi 高阶范畴线呼应）——**§003 命中**。
+
+---
+
+### Quantum Zeno and Anti-Zeno Responses: Universal Spectral Criterion for Measurement-Induced Decay
+- **来源**: arXiv 2608.20702
+- **链接**: https://arxiv.org/abs/2608.20702
+- **作者**: (quant-ph)
+- **分类**: quant-ph
+- **摘要**: 给出测量诱导衰变的普适谱判据，统一 Zeno 与 Anti-Zeno 效应。属**量子基础（测量/诠释）**（接续 2608.17400 测量客观性逆预测、非破坏监测线）。
+
+---
+
+### Activate genuine nonlocality from distinguishable sets in tripartite systems
+- **来源**: arXiv 2608.20741
+- **链接**: https://arxiv.org/abs/2608.20741
+- **作者**: (quant-ph)
+- **分类**: quant-ph
+- **摘要**: 从三方系统中可区分集激活真非局域性（genuine nonlocality）。属**量子基础（非定域性/Bell）**（接续 2608.18010 Gisin 因果解释极限线）。
+
+---
+
+### The Entanglement Content of Quantum Measurement Bases
+- **来源**: arXiv 2608.21185
+- **链接**: https://arxiv.org/abs/2608.21185
+- **作者**: (quant-ph)
+- **分类**: quant-ph
+- **摘要**: 量化量子测量基的纠缠内容，连接测量与纠缠结构。属**量子基础（测量/纠缠诠释）**。
+
+---
+
+### A Bayesian formulation of hybrid quantum-classical dynamics
+- **来源**: arXiv 2608.21169
+- **链接**: https://arxiv.org/abs/2608.21169
+- **作者**: (quant-ph)
+- **分类**: quant-ph
+- **摘要**: 用贝叶斯框架表述混合量子-经典动力学，含随机/推断过程。属**量子基础（量子-经典边界/诠释）** + 随机过程近邻。
+
+---
+
+### Probing quantumness of superpositions of Gaussian states via Tsirelson probability
+- **来源**: arXiv 2608.21241
+- **链接**: https://arxiv.org/abs/2608.21241
+- **作者**: (quant-ph)
+- **分类**: quant-ph
+- **摘要**: 用 Tsirelson 概率探测高斯态叠加的非经典性。属**量子基础（非经典性/诠释）**（接续 2608.13942 非经典性线）。
+
+---
+
+### Tomographic Limits of the Petz Recovery Map
+- **来源**: arXiv 2608.21309
+- **链接**: https://arxiv.org/abs/2608.21309
+- **作者**: (quant-ph)
+- **分类**: quant-ph
+- **摘要**: 研究 Petz 恢复映射的层析极限，含量子推断与信道恢复。属 §004-Gelfand 量子信道/相对熵近邻 + 量子信息基础。
+
+---
+
+### Energetics in daemonic work extraction protocols via non-ideal QND-energy measurement
+- **来源**: arXiv 2608.20487
+- **链接**: https://arxiv.org/abs/2608.20487
+- **作者**: (quant-ph)
+- **分类**: quant-ph
+- **摘要**: 研究"恶魔"（daemonic）功提取协议在非理想 QND 能量测量下的能学。接量子信息热力学/麦克斯韦妖线——**量子基础（信息热力学）+ 能量收集近邻**（接续 2608.13881 第二定律、2608.19533 量子储能线）。
+
+---
+
+### Restoring heat and particle flow in strongly coupled non-equilibrium devices
+- **来源**: arXiv 2608.20737
+- **链接**: https://arxiv.org/abs/2608.20737
+- **作者**: (quant-ph)
+- **分类**: quant-ph
+- **摘要**: 在强耦合非平衡器件中恢复热流与粒子流，量化非平衡输运。→ **随机热力学/非平衡输运强相关（二·核心推荐）**（接续 2608.20013 欠阻尼朗之万涨落-响应线）。
+
+---
+
+### Quantum thermodynamics and semidefinite optimization: Boltzmann, Fermi-Dirac, and Bose-Einstein frameworks
+- **来源**: arXiv 2608.21123
+- **链接**: https://arxiv.org/abs/2608.21123
+- **作者**: (quant-ph)
+- **分类**: quant-ph
+- **摘要**: 用半定规划（SDP）框架统一 Boltzmann/Fermi-Dirac/Bose-Einstein 量子热力学。属**量子热力学/能量收集近邻**（接续 2608.19533、2608.15653 线）。
+
+---
+
 ## 2026-08-20
 
 ### Shape Theory of ∞-Topoi: Inverse Limits, Products, and (Co)homology

@@ -1,129 +1,115 @@
-## 📅 [2026-08-22] CQT 研究前沿动态
+## 📅 [2026-08-25] CQT 研究前沿动态
 
-> 抓取批次：**FRIDAY, 21 AUGUST 2026**（arXiv 美东周五 20:00 公告 ≈ 北京周六 08:00；北京运行日 2026-08-22）。上次运行（08-20）抓 WED 19 AUG，本运行补抓 FRI 21 AUG → 新批次。注：arXiv 周末（22/23）不推送，下个新批为美东周一 24 日公告。
+> 抓取批次：**MONDAY, 24 AUGUST 2026**（美东周一 24 日 20:00 公告 ≈ 北京周二 25 日 08:00；北京运行日 2026-08-25）。此前 08-22/08-24 连续显示的 FRI 21 AUG 已更替为新批次。
 
 ---
 
 ### 一、arXiv 基础与物理哲学追踪
 
-**分类计数（new 批次）**
-
+**分类计数**（New Submissions）：
 | 分类 | 新提交数 | 备注 |
-|------|---------|------|
-| quant-ph | 103 | 分页 skip=50 取 51–103，无截断 |
-| math-ph | 34 | 含 §003 几何/高阶代数 |
-| gr-qc | 48 | 量子宇宙学/探测器 |
-| hep-th | 46 | 全息/Krylov/规范 |
-| cond-mat.stat-mech | 28 | 6 篇涨落定理/随机热力学 |
-| math.OC | 27 | 0 能源关键词 |
-| math.OA | 5 | batch-day，含 von Neumann 贝叶斯逆预测 |
-| math.CT | 5 | batch-day，0 topos/Hopf 直接命中 |
-| eess.SY | 23 | 0 能源关键词 |
+|---|---|---|
+| quant-ph | 46 | 未超 60，无需 `?skip` 翻页 |
+| math-ph | 7 | 含量子信道范畴论、Rényi 散度 |
+| gr-qc | 15 | 未见基础/算子代数强命中 |
+| hep-th | 13 | 未见 §004 显著命中 |
+| cond-mat.stat-mech | 3 | 0 能源/随机热力学标题命中 |
+| math.OC | 10 | 0 关键词标题命中 |
+| math.OA | 2 | 2 篇均 §004 命中 |
+| math.CT | 1 | 1 篇 §003 命中 |
+| eess.SY | 13 | 0 能源/PCH 关键词标题命中 |
 
-**量子基础与解释子区块（Quantum Foundations & Interpretation）**
+**量子基础与解释子区块**（9 篇，统一为量子测量/非定域性/非经典性/信息热力学主线）：
+- 2608.20702 — Quantum Zeno and Anti-Zeno Responses: Universal Spectral Criterion for Measurement-Induced Decay（测量诱导衰变谱判据，统一 Zeno/Anti-Zeno）
+- 2608.20741 — Activate genuine nonlocality from distinguishable sets in tripartite systems（三方真非局域性激活）
+- 2608.21185 — The Entanglement Content of Quantum Measurement Bases（测量基纠缠内容）
+- 2608.21169 — A Bayesian formulation of hybrid quantum-classical dynamics（混合量子-经典动力学的贝叶斯表述）
+- 2608.21241 — Probing quantumness of superpositions of Gaussian states via Tsirelson probability（高斯态叠加非经典性）
+- 2608.21309 — Tomographic Limits of the Petz Recovery Map（Petz 恢复映射层析极限）
+- 2608.20487 — Energetics in daemonic work extraction protocols via non-ideal QND-energy measurement（恶魔功提取能学）
+- 2608.20737 — Restoring heat and particle flow in strongly coupled non-equilibrium devices（强耦合非平衡器件热/粒子流恢复）
+- 2608.21361 — Vacuum nonlinearity: Classical vs non-classical photons（真空非线性与经典/非经典光子）
 
-1. **2608.19448** — *Renormalization group ontology in quantum foundations*（Kapilevich）。量子基础的 RG 本体论玩具模型 → **诠释/本体论**（接 2608.13894 玻姆、2608.17688 动力一致性线）。
-2. **2608.19458** — *Is the Quantum-Entangled Universe a Small World?*（Duane）。量子纠缠宇宙的网络小世界结构 → **关联/宇宙学诠释**。
-3. **2608.20001** — *Bayesian inference and retrodiction for faithful states on von Neumann algebras*（Karmakar, Parzygnat）。von Neumann 代数忠实态上的贝叶斯逆预测 → **量子基础（retrodiction/诠释）+ §004**（接续 2608.17400 测量客观性逆预测、2608.15116 von Neumann 信道线）。
-4. **2608.19242** — *Non-Inertial Response of Correlations*（Kamalov）。非惯性系关联响应，从标量 Bell 可观测量到扩展关联张量 → **相对论/关联诠释**（接 2608.18010 Gisin 因果线）。
-5. **2608.20140** — *Vacuum viscosity and relativistic inertia*（Hsiang, Hu）。含电荷内禀自由度的运动体与真空黏性/相对论惯性 → **基础/相对论**。
-6. **2608.19427** — *Efficient Classical Simulation of Weakly Interacting Fermion Dynamics*（Zhao, Marvian, Tong）→ 量子模拟基础近邻。
+**§003-type-topos 映射**（范畴论/高阶代数方向）：
+- 2608.20689 — On quantum channels: extreme points, topology, and categorical properties（信道范畴性质，§003+§004 双命中）
+- 2608.20465 — On the Drinfeld center of the Verlinde category Ver_p（模张量范畴 Drinfeld 中心）
+- 2608.20616 — Categories with a Base of Computability（可计算性基范畴）
+- 注：math.QA/quant-ph 交叉的 2608.20465 实际挂在 math.CT 交叉；另 2606.01444（Categorical Framework for Agentic AI，math.CT）本批次仍列于跨类，属 AI 与范畴交叉。
 
-**§003-type-topos 映射**
+**§004-Gelfand 映射**（算子代数/非交换几何方向）：
+- 2608.21214 — Fixed-ray escort representations of sandwiched and α–z Rényi divergences on von Neumann algebras（**von Neumann 代数上 Rényi 散度，§004 强命中**）
+- 2608.20689 — On quantum channels（CPTP/UCPTP 映射极值与范畴性质，§004+§003 双命中）
+- 2608.20933 — A Schur Multiplier with Unequal Operator and Completely Bounded Norms on S₄（Schur 乘子/完全有界，§004 命中）
+- 2608.21270 — Irreducibility and weak spectral gap in free product von Neumann algebras（自由积 von Neumann 代数谱隙，§004 命中）
 
-- 今日 **math.CT（5 篇）0 topos/Hopf 直接命中**。§003 实际命中来自 math-ph/hep-th 交叉：
-  - **2608.19992** — *Hamiltonian Floer Theory for QED up to First Order in ħ*（Fabert, Straat）：哈密顿 Floer 理论推至 QED（辛几何/几何力学）→ **§003 辛几何/几何力学**（与 2608.16561 不变联络约化、2608.15538 bi-Hamiltonian 同族）。
-  - **2608.19539** — *Higher Chern-Simons Theory for Balanced 2-term L_∞-Algebras*（Song, Wang）：高阶 L_∞-代数上的高维 Chern-Simons → **§003 高阶代数/范畴**（与 2608.17525 ∞-topoi 高阶范畴线呼应）。
-  - **2608.19775** — *Supergroup Gauged Linear Sigma Models*（Er 等）：超群规范线性 sigma 模型 → §003 代数/几何近邻。
-  - math.CT 近邻：2608.19870（Hammock 局部化/Segal animae — 高阶范畴），2608.19830（表示论范畴化），2608.19904（分级偏序集卷积）。
+**Foundations/arXiv 收藏入库**（已追加至 `Reading/bookmark.md`）：2608.21214、2608.20689、2608.20933、2608.21270、2608.20465、2608.20702 共 6 篇。
 
-**§004-Gelfand 映射**
-
-- **2608.20001** — von Neumann 代数 faithful 态贝叶斯逆预测（Parzygnat）→ **§004（von Neumann 代数）强命中 + 量子基础**（接续 2608.15116、2608.13750、2608.07207 无穷维量子信道线）。
-- **2608.20082** — *Completely isometric subspaces of noncommutative L^p-spaces*（非交换 L^p 空间）→ **§004（非交换分析/算子代数）**（与 2608.14231 JBW* 谱 L^p 同族）。
-- **2608.19685** — *Tight Entropy Contraction of Generalized Quantum Depolarization*（Gao, Zhao）：广义量子退极化紧熵收缩 → **§004（量子信道/算子代数熵）**（与 2608.15116、2608.16395 同族）。
-- **2608.19286** — *Minimum attaining operators on reducing subspaces: Spectral structure* → **§004（谱理论/算子代数）**。
-- 注：今日 §004 无 C*-代数直接命中，但 von Neumann/非交换 L^p/量子信道三条稳定推进。
-
-**Foundations/arXiv 入库**：上述 §003/§004/基础强命中共 16 篇已追加至 `bookmark.md` 之 `## 2026-08-22` 节（按 arXiv ID 去重）。
+**bookmark.md 入库**：新增 `## 2026-08-25` 章节，按 §003/§004/基础/能源四类去重列出强命中（共 14 条），见 `c:/Dev/CQT/bookmark.md`。
 
 ---
 
 ### 二、随机热力学与几何控制核心推荐
 
-> **本批随机热力学实质丰收**（涨落定理/Rényi-Jarzynski/响应理论 + 几何输运框架），但工程能源侧（布朗回转器/棘轮/PCH/Dirac 结构/海浪能）仍 **0 命中**。按相关性降序：
+> 本批次四分类 + 五主题分类（stat-mech / math-ph / math.OC / eess.SY）标题级关键词检索结果：**"Stochastic Thermodynamics / Information Geometry / Brownian Gyrator / Ratchet / Port-Controlled Hamiltonian / Dirac Structure / HJB / Ito correction / Symplectic" 标题零命中**。故以下按"非平衡输运 / 量子信息热力学 / 量子通道范畴"相关度降序，推荐 3 篇最贴近的理论工作：
 
-1. **【高】Quantum Rényi-Jarzynski Equality（2608.19320）**
-   - 中文：量子 Rényi-Jarzynski 等式｜作者：B. Bobell, M. Okyay, R. Nandkishore｜来源：cond-mat.stat-mech / quant-ph
-   - 核心突破：把经典 Jarzynski 等式推广到**量子 Rényi 熵**框架，统一量子涨落定理。
-   - 数学模型：$\langle e^{-\beta(W-\Delta F)}\rangle=1$ 的 Rényi 推广 $e^{-(1-\alpha)\Delta F_\alpha}=\langle e^{-\alpha\beta W}\rangle_\alpha$。
-   - 关联度：随机热力学核心，接 2608.13881 第二定律、2608.19391 线。
+**① Restoring heat and particle flow in strongly coupled non-equilibrium devices**
+- **中文翻译**：在强耦合非平衡器件中恢复热流与粒子流
+- **作者/机构**：quant-ph 作者组（arXiv 2608.20737）
+- **检索来源**：quant-ph New（MON 24 AUG）
+- **核心突破**：在强耦合（strong coupling）非平衡器件中，建立恢复热流与粒子流的理论框架，量化非平衡输运中的净能量/粒子交换——直接对应核心关键词 "Net Energy Exchange" 与"非平衡态耗散"。
+- **数学模型**：强耦合主方程 / 非平衡稳态（NESS）流算符；与涨落-响应、朗之万输运近邻。
+- **关联度**：★★★ 高（非平衡输运 + 净能量交换理论）
 
-2. **【高】State convertibility and fluctuation theorems from a dynamical reference: majorization meets martingales（2608.19391）**
-   - 中文：从动力学参考系的态可转换性与涨落定理：majorization 遇见鞅｜作者：D. Cugini, G. Guarnieri｜来源：cond-mat.stat-mech / quant-ph
-   - 核心突破：用**鞅（martingale）+ majorization** 统一刻画动力学参考系下的涨落定理与态转换。
-   - 数学模型：鞅条件 $E[dM]=0$ 约束下 majorization 预序的演化。
-   - 关联度：随机热力学理论突破，接 2608.14276 多维 TUR 线。
+**② Energetics in daemonic work extraction protocols via non-ideal QND-energy measurement**
+- **中文翻译**：非理想 QND 能量测量下恶魔功提取协议的能学
+- **作者/机构**：quant-ph 作者组（arXiv 2608.20487）
+- **检索来源**：quant-ph New（MON 24 AUG）
+- **核心突破**：把麦克斯韦妖/恶魔功提取推广到非理想量子非破坏（QND）能量测量，给出信息-功转换的能学下界，连接测量反作用与熵产生。
+- **数学模型**：量子信息热力学 + 测量反作用功提取协议；与"第二定律/表观违背"线索（2608.13881）呼应。
+- **关联度**：★★★ 高（信息热力学 + 能量收集近邻）
 
-3. **【高】SAKE: Spectral Autodiff Kernel Expansion for Geometric Liouvillian Transport — A Differential-Geometric Framework for Response Transport（2608.20132）**
-   - 中文：SAKE — 几何刘维尔输运的谱自微分核展开｜作者：E. R. Bittner 等｜来源：quant-ph / math.DG
-   - 核心突破：给出量子动力学系统响应输运的**微分几何框架**，用谱自微分核展开（autodiff）计算几何刘维尔输运。
-   - 数学模型：响应张量 = 谱核展开在切空间上的几何投影；直接命中 "Itô correction AND Differential Geometry" 关键词。
-   - 关联度：随机几何控制强命中（几何侧），接 2608.17198 Contact-Herglotz、2608.15321 随机流体几何。
+**③ Quantum thermodynamics and semidefinite optimization: Boltzmann, Fermi-Dirac, and Bose-Einstein frameworks**
+- **中文翻译**：量子热力学与半定优化：Boltzmann / Fermi-Dirac / Bose-Einstein 框架
+- **作者/机构**：quant-ph 作者组（arXiv 2608.21123）
+- **检索来源**：quant-ph New（MON 24 AUG）
+- **核心突破**：用半定规划（SDP）统一刻画三种统计系综（玻尔兹曼/费米-狄拉克/玻色-爱因斯坦）的量子热力学约束，为能量收集/热机优化提供可计算框架。
+- **数学模型**：半定规划 + 量子态热力学约束；与量子电池/储能线（2608.19533、2608.15653）呼应。
+- **关联度**：★★☆ 中（量子热力学优化框架，工程可计算）
 
-4. **【高】The Memory Hidden in Response Fluctuations: Trajectory-Level Fluctuation-Response Theory for Non-Markovian Jump Dynamics（2608.20328）**
-   - 中文：响应涨落中隐藏的记忆：非马尔可夫跳跃动力学的轨迹层级涨落-响应理论｜来源：cond-mat.stat-mech
-   - 核心突破：建立**非马尔可夫**跳跃动力学的轨迹层级涨落-响应不等式，揭示响应涨落中的记忆结构。
-   - 关联度：随机热力学（非平衡/记忆效应），与 2608.20013 互补。
+**④ On quantum channels: extreme points, topology, and categorical properties**（§004+§003 双命中，作为算子代数补充）
+- 见 §一；CPTP/UCPTP 映射的极值与范畴结构，为量子信道信息几何（含 f-散度/相对熵）奠定算子代数基础。
 
-5. **【高】Exact Fluctuation-Response Relations for Underdamped Langevin Dynamics（2608.20013）**
-   - 中文：欠阻尼朗之万动力学的精确涨落-响应关系｜来源：cond-mat.stat-mech
-   - 核心突破：给出欠阻尼朗之万系统的精确 FDT（涨落-耗散）关系，含惯性/耗散几何。
-   - 关联度：随机热力学/耗散系统，接 2608.17198 Contact-Herglotz 耗散线。
-
-6. **【高】Quantum Energy Storage versus Heat-to-Work Conversion in an Interacting Spin System（2608.19533）**
-   - 中文：相互作用自旋系统中的量子储能 vs 热-功转换｜作者：O. Bachain, M. Amazioug, R. Ahl Laamara｜来源：quant-ph
-   - 核心突破：量化相互作用自旋系统中量子储能与热-功转换的权衡，非平衡能量收集。
-   - 关联度：能量收集核心（接 2608.15653 量子电池线）。
-
-7. **【高】Bayesian inference and retrodiction for faithful states on von Neumann algebras（2608.20001）**
-   - 中文：von Neumann 代数忠实态的贝叶斯推断与逆预测｜作者：P. Karmakar, A. J. Parzygnat｜来源：math.OA / quant-ph
-   - 核心突破：在 von Neumann 代数上建立量子贝叶斯/逆预测，范畴化量子信息（Parzygnat 仪器单子线）。
-   - 关联度：§004 算子代数 + 量子基础（retrodiction）双命中。
+> 说明：本批次无标题级"随机几何力学 / 辛几何 HJB / 乘性噪声 PCH"直接命中，上述推荐为按关联度降序的相关理论延伸。
 
 ---
 
 ### 三、每日研究前沿四方向
 
-**量子（quant-ph，103 篇）**
-- **量子基础/诠释**：2608.19448（RG 本体论）、2608.19458（纠缠宇宙小世界）、2608.20001（von Neumann 逆预测）。
-- **量子信息/信道**：2608.20178（阻尼信道混合表征）、2608.19685（退极化熵收缩）、2608.20113（shadow tomography 反例）、2608.20063（PPT 关联催化）、2608.19787（常数轮量子通信优势）。
-- **量子计算/纠错**：2608.20250（Heisenberg 哈密顿模拟对数深度 + 内建错误检测）、2608.20164（浅层全连接量子电路 proper learning）、2608.20162（中性原子乘积码架构-编译协同）、2608.19868（NISQ 生物分子对接）、2608.19602（超导比特高精度光传输控制）。
-- **量子热力学/能量**：2608.19320（Rényi-Jarzynski）、2608.19533（量子储能 vs 热-功转换）、2608.20136（Hilbert 空间 Boltzmann 计数）。
-- **量子几何/响应**：2608.20132（SAKE 几何刘维尔输运）、2608.19770（理想量子几何梯度流）、2608.19679（开放路径几何相位）。
+**量子（quant-ph 亮点）**
+- 量子纠错/计算方向：本批次 quant-ph 以基础与信息论为主，未现大规模 QC 算法突破；重点关注 2608.20689（量子信道范畴极值——信道容量/编码结构相关）、2608.21309（Petz 恢复映射层析极限——量子纠错恢复映射相关）。
+- 量子热力学/电池：2608.20487、2608.20737、2608.21123 构成"非平衡输运 + 恶魔功 + SDP 热力学"小集群。
 
-**Topos / 范畴论（math.CT，5 篇 batch-day）**
-- 今日 5 篇**无 topos/Hopf algebroid 直接命中**；近邻：2608.19870（Hammock 局部化/Segal animae）、2608.19830（表示论范畴化）、2608.19904（分级偏序集卷积）。
-- §003 实质命中来自 math-ph：2608.19992（Floer/QED 辛几何）、2608.19539（高阶 Chern-Simons/L_∞）。
+**Topos / 范畴论（math.CT 亮点）**
+- 2608.20465 — Drinfeld 中心 of Verlinde 范畴 Ver_p：模张量范畴与拓扑序代数结构推进（§003 主线）。
+- 2608.20616 — Categories with a Base of Computability：可计算性结构范畴化（§003 高阶范畴）。
+- 2606.01444（持续跨类）— Categorical Framework for Agentic AI：范畴论与自主 Agent 交叉，下接 AI 方向。
 
-**Gelfand 理论 / 算子代数（math.OA，5 篇 batch-day）**
-- **2608.20001** von Neumann 代数贝叶斯逆预测（§004 强命中）。
-- **2608.20082** 非交换 L^p 空间、**2608.19685** 退极化熵收缩、**2608.19286** 最小达到算子谱结构。
-- 本周 §004 持续稳定（17/18/19/20/22 五日连丰收）。
+**Gelfand 理论 / 算子代数（math.OA 亮点）**
+- 2608.21214 — von Neumann 代数上 Rényi 散度 fixed-ray escort 表示（§004 强命中）。
+- 2608.20933 — S₄ 上 Schur 乘子算子范数≠完全有界范数（乘子/完全有界）。
+- 2608.21270 — 自由积 von Neumann 代数不可约性与弱谱隙（因子/群 vNa）。
+- math-ph 交叉：2608.20689 量子信道范畴性质（§004 信道 = 算子代数核心对象）。
 
-**AI（cs.AI / cs.LG）**
-- **2608.19707** ChatGPT 解决全部 Qiskit 作业（AI×量子教育）。
-- **2608.19789** TT-net：量子启发的张量网络去噪条件 GAN（AI×量子启发）。
-- **2608.19318** 非阿贝尔可学习性相变的统计力学（AI/学习相变）。
-- 量子+AI：以上体现"AI×量子教育/生成/学习相变"趋势；本批无独立 agents 大作。
+**AI（cs.AI / cs.LG 亮点）**
+- 本批次四核心分类未直接含 cs.AI 新提交强命中；跨类线索为 math.CT 2606.01444《Categorical Framework for Agentic AI》（范畴化自主智能体框架），属"AI × 范畴论"交叉，呼应 CQT 中 Agent/形式化方向。
+- 量子+AI 交叉：2608.21123 用 SDP 优化量子热力学约束，体现"优化算法 + 量子物理"方法论交叉。
 
 ---
 
 ### 💡 今日趋势洞察
 
-1. **随机热力学单日爆发**：2608.19320（量子 Rényi-Jarzynski）+ 2608.19391（鞅+majorization 涨落定理）+ 2608.20328/20013（轨迹层级/欠阻尼 FDT）+ 2608.20132（几何刘维尔输运）五篇同批，构成"涨落定理—非平衡响应—几何输运"完整闭环，是 energy 主线理论侧最强单日。
-2. **§004 von Neumann 线再下一城 + 几何控制回暖**：2608.20001 把贝叶斯逆预测推入 von Neumann 代数；2608.20132 的 SAKE 微分几何框架与 2608.17198 Contact-Herglotz、2608.15321 随机流体几何共同撑起"随机几何力学"几何侧。
-3. **工程能源侧持续静默**：布朗回转器/棘轮/PCH/海浪能等仍 0 命中（连续 5 日均缺）；建议下一批次（美东周一 24 日公告）扩搜 nlin.AO / physics.class-ph / cond-mat.mes-hall / eess.SY 以补能源工程侧漏检。
+本批次呈现"算子代数与量子信息论深度合流"：§004 方向出现 von Neumann 代数上 Rényi 散度的非交换推广（2608.21214）与量子信道范畴结构（2608.20689），把信息几何对象正式搬上非交换算子代数舞台。随机热力学/几何控制方面，标题级关键词（布朗回转器、PCH、HJB、辛几何 Ito）本批次零命中，但量子信息热力学（恶魔功提取、非平衡流恢复、SDP 热力学框架）形成稳定小集群，仍是能量收集理论最活跃落脚点；下一批次建议重点复查 cond-mat.stat-mech 与 math.OC 的摘要级关键词（标题未覆盖的情形）。
 
 ---
-*下次检索建议：2026-08-24（周一）04:30 复查 MONDAY, 24 AUGUST 2026 批次（周末 22/23 不推送；若届时仍显 FRI 21 AUG 则不重复抓取、占位）。*
+
+*下次检索建议*：2026-08-26（周三）08:00 后复查 **TUESDAY, 25 AUGUST 2026** 批次（美东周二 25 日 20:00 公告 ≈ 北京周三 26 日 08:00）。

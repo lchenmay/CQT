@@ -53,3 +53,63 @@
 - **备注**: Floridi 是信息哲学/数字伦理创始人，此文为其涉足模态逻辑的罕见作品。传导联结词架起了直觉主义逻辑与条件逻辑的桥梁，对 CQT 中 Kripke 语义与范畴语义的交叉有价值。
 - **关联**: CQT §003-type-topos (Kripke 语义), §004-gelfand-theory (模态逻辑基础), PRel 双范畴可连接范畴论章节
 - **状态**: 📥 待读
+
+### [Anon2026RényiVNA] — Fixed-ray escort representations of sandwiched and α–z Rényi divergences on von Neumann algebras
+- **arXiv**: [2608.21214](https://arxiv.org/abs/2608.21214)
+- **作者**: (匿名/交叉 quant-ph × math.OA)
+- **日期**: 2026-08-24 (提交, MONDAY batch)
+- **分类**: quant-ph × math.OA (算子代数)
+- **摘要**: 在 von Neumann 代数上建立夹心（sandwiched）与 α–z Rényi 散度的 fixed-ray escort 表示，把量子散度论推广到非交换算子代数框架。Rényi 散度/相对熵是 §004-Gelfand 算子代数（模相对熵、量子信道）的标准对象。
+- **备注**: 接续 2608.20001 von Neumann 贝叶斯逆预测、2608.15116 von Neumann 信道线；§004 强命中
+- **关联**: CQT §004-gelfand-theory (von Neumann 代数/Rényi 散度), §003-type-topos
+- **状态**: 📥 待读
+
+### [Anon2026QChannelCat] — On quantum channels: extreme points, topology, and categorical properties
+- **arXiv**: [2608.20689](https://arxiv.org/abs/2608.20689)
+- **作者**: (math-ph)
+- **日期**: 2026-08-24 (提交)
+- **分类**: math-ph × math.CT
+- **摘要**: 系统刻画量子信道（CPTP/UCPTP 映射）的极值点、拓扑与范畴性质，分类二元积（biproduct）与余积（coproduct）。量子信道 = §004-Gelfand 算子代数核心对象；范畴性质又属 §003-type-topos 方向。
+- **备注**: §004 + §003 双命中；接续 2608.15116、2608.13750 CJ 同构线
+- **关联**: CQT §004-gelfand-theory, §003-type-topos
+- **状态**: 📥 待读
+
+### [Anon2026SchurS4] — A Schur Multiplier with Unequal Operator and Completely Bounded Norms on $S_4$
+- **arXiv**: [2608.20933](https://arxiv.org/abs/2608.20933)
+- **作者**: (math.OA)
+- **日期**: 2026-08-24 (提交)
+- **分类**: math.OA (算子代数)
+- **摘要**: 在对称群 S₄ 上构造算子范数与完全有界范数不等的 Schur 乘子，澄清乘子与完全有界（completely bounded）性质的区别。
+- **备注**: Schur 乘子/完全有界映射属 §004-Gelfand 算子空间经典议题
+- **关联**: CQT §004-gelfand-theory
+- **状态**: 📥 待读
+
+### [Anon2026FreeProdVNA] — Irreducibility and weak spectral gap in free product von Neumann algebras
+- **arXiv**: [2608.21270](https://arxiv.org/abs/2608.21270)
+- **作者**: (math.OA)
+- **日期**: 2026-08-24 (提交)
+- **分类**: math.OA (算子代数)
+- **摘要**: 研究自由积（free product）von Neumann 代数中的不可约性与弱谱隙（weak spectral gap）。
+- **备注**: 自由积 von Neumann 代数与谱隙属 §004-Gelfand 因子/群 von Neumann 代数核心
+- **关联**: CQT §004-gelfand-theory
+- **状态**: 📥 待读
+
+### [Anon2026DrinfeldVer] — On the Drinfeld center of the Verlinde category $\operatorname{Ver}_p$
+- **arXiv**: [2608.20465](https://arxiv.org/abs/2608.20465)
+- **作者**: (math.QA × math.CT)
+- **日期**: 2026-08-24 (提交)
+- **分类**: math.CT × math.QA
+- **摘要**: 计算 Verlinde 范畴 $\operatorname{Ver}_p$ 的 Drinfeld 中心（抽代中心），推进模张量范畴与拓扑序代数结构。
+- **备注**: 模张量范畴 / Drinfeld 中心属 §003-type-topos 范畴论（TQFT / 凝聚态拓扑）；接续 2608.12157 任意子凝聚张量范畴线
+- **关联**: CQT §003-type-topos
+- **状态**: 📥 待读
+
+### [Anon2026ZenoSpectral] — Quantum Zeno and Anti-Zeno Responses: Universal Spectral Criterion for Measurement-Induced Decay
+- **arXiv**: [2608.20702](https://arxiv.org/abs/2608.20702)
+- **作者**: (quant-ph)
+- **日期**: 2026-08-24 (提交)
+- **分类**: quant-ph (量子基础/测量)
+- **摘要**: 给出测量诱导衰变的普适谱判据，统一 Zeno 与 Anti-Zeno 效应。
+- **备注**: 量子基础（测量/诠释）；接续 2608.17400 测量客观性逆预测线
+- **关联**: CQT 量子基础/测量诠释
+- **状态**: 📥 待读
