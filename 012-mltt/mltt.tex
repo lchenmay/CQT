@@ -11,14 +11,14 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[LE,RO]{\thepage}
-\fancyhead[RE]{\textbf{Martin-L\"of 类型论与范畴论视角}}
-\fancyhead[LO]{\textit{MLTT · Topos · HoTT · 量子 Topos}}
+\fancyhead[RE]{\textbf{MLTT 讲义}}
+\fancyhead[LO]{\textit{类型论 · Topos · HoTT · 量子 Topos}}
 \renewcommand{\headrulewidth}{0.4pt}
 
 \begin{document}
 
 \frontmatter
-\title{\textbf{Martin-L\"of 类型论与范畴论视角}\\ \large 从《Intuitionistic Type Theory》出发的讨论}
+\title{\textbf{MLTT 讲义}\\ \large 从集合论与范畴论出发，走向 Martin-L\"of 类型论}
 \author{Lao Chen}
 \date{\today}
 \maketitle
@@ -27,32 +27,182 @@
 \mainmatter
 
 % =====================================================================
-\chapter{Martin-L\"of 类型论与范畴论视角}
+\chapter{为何需要类型论——从集合论与范畴论出发}
 
-\section{引言：从《Intuitionistic Type Theory》说起}
+\section{引言与读者假定}
 
-本章记录一组围绕 Per Martin-L\"of 的专著 \emph{Intuitionistic Type Theory} \cite{MartinLof1984ITT} 展开的系统性讨论。该书并非普通教材，而是 Martin-L\"of 在 \textbf{1980 年帕多瓦(Padua)系列讲座}的笔记整理（由 Giovanni Sambin 执笔），1984 年由 Bibliopolis 出版，标志着\emph{依值类型论（dependent type theory）}作为一门独立的形式基础正式成型——它既不同于 ZFC 集合论，也不同于 Church 的简单类型 $\lambda$-演算，其目标是为\emph{构造性数学}提供一个「既当逻辑、又当编程语言」的统一地基。
+本章假定读者熟悉两样东西：\textbf{集合论}（ZFC 的一阶语言、$\in$ 关系、幂集/分离/替换公理）与\textbf{范畴论}（范畴、函子、自然变换、伴随、切片范畴、子对象分类子）。我们不假定读者懂类型论或同伦类型论。
 
-在动手写本章前，我们已将该书正式加入项目参考文献库（bibkey：\texttt{MartinLof1984ITT}）。其思想可概括为四个核心支柱：
+围绕 Martin-L\"of 类型论（MLTT），这一章集中回答五个最常被问、也最值得先想清楚的问题：
+\begin{enumerate}
+  \item 有了集合论，为什么还需要类型论？
+  \item 集合论、类型论，用范畴和 topos 描述的共性与差别是什么？
+  \item 类型论与逻辑的关系如何？集合论对应布尔代数，类型论对应什么——是 Heyting 代数吗？
+  \item 有了（一般的）类型论，为什么还需要 MLTT？
+  \item MLTT 对知识表达（knowledge representation）有何意义？AI 时代学习它有什么好处？
+\end{enumerate}
+后面的章节（范畴语义、恒等类型与同伦、LCCC/Topos、量子 topos 内部语言等）再逐步深入技术细节。
+
+% =====================================================================
+\section{有了集合论，为什么还需要类型论？}
+
+\subsection{集合论作为基础：它能做什么}
+
+在 ZFC 中，一切数学对象都被编码为\textbf{集合}，唯一的原始关系是隶属 $\in$。自然数、实数、函数、群……最终都是某棵 $\in$-结构的树。它提供了：
+\begin{itemize}
+  \item 一阶逻辑 + 集合公理的\textbf{两层结构}：对象语言讲集合，元逻辑讲推理；
+  \item 通过幂集公理获得\textbf{内涵/外延都任意强}的构造力（impredicative）；
+  \item 经典逻辑（排中律、双重否定消去）作为默认逻辑。
+\end{itemize}
+
+\subsection{从「数学基础」到「计算与构造基础」时暴露的短板}
+
+当我们希望一个基础不仅能\textbf{证明}定理、还能\textbf{构造}对象并把证明当程序执行时，集合论暴露四处不适：
 
 \begin{enumerate}
-  \item \textbf{依值类型（dependent types）}：类型可以依赖于项，
-        $\Pi$ 类型（依赖积，对应「对任意……」）与 $\Sigma$ 类型（依赖和，对应「存在……并构造」）。这是它超越简单类型论的关键。
-  \item \textbf{命题即类型 / 证明即项（propositions-as-types, Curry–Howard）}：逻辑命题 = 类型，证明 = 该类型的项。逻辑与计算由此统一。
-  \item \textbf{恒等类型（identity type）}$\mathrm{Id}_A(a,b)$：后来成为同伦类型论（HoTT）的心脏——把「相等」解释为「项之间的路径」。
-  \item \textbf{归纳类型 / 累积宇宙（W-类型与 universe）}：解决自指导致的悖论，使系统一致。
+  \item \textbf{逻辑与数学对象割裂}。集合论里「逻辑」是外置于集合论的推理规则，而「命题即类型、证明即项」（Curry--Howard）把二者合而为一——这是类型论的标志性优势。
+  \item \textbf{类型安全在语法层不可见}。在集合论中 $x\in y$ 可以任意嵌套，所谓「类型错误」只能在语义层被发现；而类型论在\textbf{语法层}就强制每一项都有类型，错配在写下公式的瞬间就被拒绝。
+  \item \textbf{「依赖」表达不自然}。要表达「对每个 $n:\mathbb{N}$，有一个类型 $\mathrm{Vec}(n)$（长度为 $n$ 的向量）」，集合论要绕到指标集上的族/丛；类型论的\textbf{依值类型}（$\Pi$、$\Sigma$）则原生支持「类型依赖于项」。
+  \item \textbf{构造性脱节}。集合论的存在性证明不要求给出构造（反例不存在即算存在）。而构造性数学要求存在即给 witness，并拒绝非构造性的排中律与选择公理——这正是类型论（尤其是 MLTT）的立场。
 \end{enumerate}
 
-\begin{principle}[Martin-L\"of 的构造主义立场]
-  存在性证明必须提供\emph{构造（witness）}，而非仅仅证明「不存在反例」。这拒绝了排中律（Law of Excluded Middle）与非构造性的选择公理（AC），从而与经典集合论形成根本分野。
+\begin{principle}[类型论的定位]
+  类型论不是「替代集合论去做它已能做的一切」，而是提供一套\textbf{构造性 + 类型安全 + 命题即类型 + 原生依赖}的基础——它同时是逻辑系统、也是可执行的编程语言。
 \end{principle}
 
 % =====================================================================
-\section{依赖类型论的范畴语义：澄清一个常见误解}
+\section{集合论、类型论，用范畴和 topos 描述的共性与差别}
 
-\subsection{一个流传甚广的直觉}
+\subsection{两者都能用范畴论「内部语言」统一描述}
 
-初学者常把「依赖积 $\Pi$ ↔ 积，依赖和 $\Sigma$ ↔ 余积」当作一对对偶。这一直觉\emph{在离散退化情形下是对的}，但在一般情形下会丢失依赖类型论的精髓。
+范畴论提供了把一套基础「翻译」成范畴结构的通用办法——每个基础对应一个范畴，其「内部语言」就是该基础的逻辑/类型论。
+
+\begin{itemize}
+  \item \textbf{集合论}对应范畴 $\mathbf{Set}$（更精确地说，是带选择公理的良点布尔 topos）。它的内部语言是\textbf{经典高阶逻辑}；子对象分类子 $\Omega = \mathbf{2}$（两元素布尔代数）。
+  \item \textbf{（依值）类型论}对应\textbf{局部笛卡尔闭范畴（LCCC）}。Seely、Clairambault--Dybjer 的定理表明：依值类型论\emph{的语法}恰好由 LCCC 给出语义，$\Sigma_f\dashv f^{*}\dashv\Pi_f$ 就是切片范畴之间的基变换伴随。
+  \item \textbf{初等 topos}对应\textbf{直觉主义高阶逻辑}，其内部语言是 Heyting 代数值的。
+\end{itemize}
+
+\subsection{共性}
+
+三者都被纳入同一个范式：\textbf{「基础 = 某个范畴 + 它的内部语言」}，从而逻辑/类型与范畴语义构成 syntax--semantics 对偶。这是理解它们关系的万能钥匙。
+
+\subsection{差别}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{3.2cm}|p{3.6cm}|p{4.0cm}|}
+\hline
+\textbf{维度} & \textbf{集合论 / Set} & \textbf{类型论（直觉主义）/ LCCC} \\
+\hline
+内部逻辑 & 经典（排中律成立） & 直觉主义（排中律不必然） \\
+\hline
+子对象分类子 $\Omega$ & $\mathbf{2}$（布尔代数） & Heyting 代数（一般 topos） \\
+\hline
+可判定性 & impredicative（幂集/全称量化无界） & predicative（宇宙分层） \\
+\hline
+命题的真值状态 & proof-irrelevant（命题 = 子对象） & proof-relevant（命题 = 类型，可有多个证明项） \\
+\hline
+原生「相等」 & 外延公理给出的硬相等 & 恒等类型 $\mathrm{Id}$（HoTT 中 = 路径空间） \\
+\hline
+\end{tabular}
+\caption{集合论与类型论在范畴/topos 描述下的共性与差别}
+\end{table}
+
+一句话概括：\textbf{集合论是「布尔的、impredicative 的、proof-irrelevant 的」基础；类型论（直觉主义）是「Heyting 的、predicative 的、proof-relevant 的」基础；而初等 topos 落在中间（Heyting + proof-irrelevant）}。注意：一个 elementary topos 自动是 LCCC，但 LCCC 加上子对象分类子 $\Omega$ 才成为 topos——这一点在第四章再细说。
+
+% =====================================================================
+\section{类型论与逻辑：从布尔代数到 Heyting 代数}
+
+\subsection{集合论的语义终点：布尔代数}
+
+经典逻辑的真值只有 $0$ 与 $1$，所有命题的真值构成一个\textbf{布尔代数}——满足排中律 $x\vee\neg x = 1$ 与双重否定消去。在范畴侧，这对应 $\mathbf{Set}$ 中 $\Omega=\mathbf{2}$：
+
+\[
+  \text{集合论} \;\longleftrightarrow\; \text{布尔代数} \;\longleftrightarrow\; \text{经典逻辑} \;\longleftrightarrow\; \text{布尔 topos }(\Omega=\mathbf{2}).
+\]
+
+\subsection{类型论的语义终点：Heyting 代数}
+
+直觉主义逻辑拒绝把「未证明」强行二值化。一个命题在证明之前，其真值不必强制为 $0$ 或 $1$。于是真值落在一个\textbf{Heyting 代数}中（排中律不再普遍成立，只剩下相对伪补）。在范畴侧，这对应一般 topos 的内部语言（$\Omega$ 是 Heyting 代数）。
+
+\begin{itemize}
+  \item \textbf{Kripke 语义}：真值是「随可达世界单调递增」的赋值——一个命题在某世界为真，则在其可及的后续世界仍为真，但不强求其否定在别处为假。
+  \item \textbf{拓扑/层语义（Kripke--Joyal）}：真值由「开覆盖上的局部成立」给出，这正是 topos 内部语言的几何直觉。
+\end{itemize}
+
+所以对应链是：
+
+\[
+  \text{类型论（直觉主义）} \;\longleftrightarrow\; \text{Heyting 代数} \;\longleftrightarrow\; \text{构造性/直觉主义逻辑} \;\longleftrightarrow\; \text{（一般）topos 内部语言}.
+\]
+
+\subsection{类型论比 topos 逻辑更精细的一层}
+
+需要强调：上面说「类型论对应 Heyting 代数」是\textbf{第一近似}。严格地说，topos 的内部逻辑是 \textbf{proof-irrelevant} 的（命题 = 子对象 = $\Omega$ 的元素）；而 MLTT/HoTT 的命题是 \textbf{proof-relevant} 的——命题被当作「类型」，不同的证明是不同的项。更精确地说，HoTT 把命题的真值结构提升为\textbf{$\infty$-群胚（同伦类型）}：相等不是 yes/no，而是「路径空间」。因此：
+
+\[
+  \text{集合论} \to \text{布尔代数} \to \text{经典逻辑};
+  \qquad
+  \text{HoTT} \to \infty\text{-群胚 / 同伦类型} \to \text{构造性逻辑（带 proof-relevance）}.
+\]
+
+Heyting 代数是「命题真值」那一层；proof-relevance 与同伦是类型论独有、比 topos 逻辑更细的结构。
+
+% =====================================================================
+\section{有了类型论，为什么还需要 MLTT？}
+
+\subsection{「类型论」是一个大家族}
+
+Church 简单类型 $\lambda$-演算、$\lambda P$、CoC（Calculus of Constructions）、ITP 等都属于「类型论」，取舍各异。它们要么缺依赖、要么太「经典」、要么一致性机制不同。
+
+\subsection{MLTT 的甜点位置}
+
+Martin-L\"of 的依值类型论之所以特殊，在于它在四个张力之间取得平衡：
+
+\begin{enumerate}
+  \item \textbf{依赖类型（dependent types）}。类型可以依赖项，$\Pi$（依赖积，「对任意\ldots」）与 $\Sigma$（依赖和，「存在\ldots 并构造」）是简单类型论没有的。正是依赖类型让它能当「数学基础」——直接表达「对每个 $n:\mathbb{N}$，有 $\mathrm{Vec}(n)$」这类构造。
+  \item \textbf{明确的构造主义立场}。存在必须给构造，拒绝排中律与非构造性选择公理。这与 CoC 形成对照：CoC 是 impredicative 的，可编码经典数学；MLTT 保持 predicative。
+  \item \textbf{一致性的干净处理}。1971 年 $\mathrm{type}$-in-$\mathrm{type}$（类型本身也是一个类型）导致 Girard 悖论（不一致）。MLTT 用\textbf{累积宇宙（cumulative universe）}分层来避免自指，同时保持 predicative。
+  \item \textbf{与计算的直接对应}。MLTT 具备\textbf{规范化（normalization）/正则性（canonicity）}：一个闭项可机械归约为规范形式，「证明 = 可执行的程序」不仅在哲学上成立，在机器上可运行。这是它作为「既当逻辑、又当编程语言」的独特卖点。
+  \item \textbf{恒等类型成为 HoTT 的心脏}。$\mathrm{Id}_A(a,b)$ 后来被解释为路径空间，直接通向同伦类型论（见第三章）。
+\end{enumerate}
+
+\begin{principle}[为何是 MLTT 而非别的]
+  简单类型论太弱（无依赖）；CoC 太「经典 / impredicative」；MLTT 在「构造性 + 依赖 + 一致性 + 可计算」之间取得甜点，并天然导向 HoTT。
+\end{principle}
+
+% =====================================================================
+\section{MLTT 与知识表达：AI 时代为何要学}
+
+\subsection{知识表达（knowledge representation）视角}
+
+\begin{itemize}
+  \item \textbf{结构化知识可被精确类型化}。依赖类型让「概念依赖于参数」成为一等公民：例如「群」可表示为依赖类型「带 carrier 集合 + 运算 + 律」，比一阶逻辑（FOL）表达力强且类型安全。
+  \item \textbf{命题即类型、推理即构造}。知识库变成可机器检查、可组合的结构；一条「知识」不是孤立断言，而是一个带类型的项。
+  \item \textbf{proof-relevance 保留「为什么」}。不只是结论，连证明路径都被记录——这对可解释 AI 与形式化验证极有价值。
+\end{itemize}
+
+\subsection{AI 时代学习 MLTT 的具体好处}
+
+\begin{enumerate}
+  \item \textbf{形式化与可验证 AI}。MLTT/HoTT 是证明助手（Agda、Coq、Lean）的核心语言；学 MLTT = 学「可机器验证的知识表达」。
+  \item \textbf{类型即规范（types as specifications）}。用类型描述 AI 系统的行为规范，在编译期/证明期捕获错误，比仅靠测试更可靠。
+  \item \textbf{与 topos 的衔接 $\to$ 语境化知识}。知识可在 topos 内部「语境相关」地表达（如量子理论的谱预层）——对多语境、部分信息、上下文相关的知识表达有天然优势，这正是 CQT 量子 topos 的思路（见第四章）。
+  \item \textbf{Agentic AI 与范畴框架}。多 Agent 协作可用范畴论/类型论建模。Wang \& Buehler \cite{WangBuehler2026AgenticAI} 提出一种\emph{面向科学发现的自主 Agent（SRDS：Self-Revising Discovery Systems）的范畴框架}：用\emph{对称幺半范畴（symmetric monoidal category）}与\emph{弦图（string diagram）}把「假设生成 $\to$ 实验设计 $\to$ 评估 $\to$ 自我修订」的闭环刻画为可组合的态射；用\emph{operad} 描述多 Agent 间协议的合成与知识演化。这套框架的底层语言正好是 MLTT 擅长表达的东西——\emph{构造性（存在即给 witness）}保证了 Agent 的「修订」是可直接执行的程序，\emph{proof-relevance} 保证了每次知识演化都带着可追溯的证明路径，从而多 Agent 之间交换的不是裸结论，而是\emph{可机器校验、可组合的知识构造项}。
+  \item \textbf{相等即路径，更贴近现实知识}。HoTT 把「相等」解释为「路径」，能优雅地处理 AI 中常见的「近似 / 等价 / 重构」等非刚性相等，比集合论的硬外延相等更贴合现实知识的弹性。
+\end{enumerate}
+
+\begin{principle}[本讲义与 Wang \& Buehler 2026 的衔接]
+  Wang \& Buehler \cite{WangBuehler2026AgenticAI} 用\emph{范畴}（幺半范畴 / 弦图 / operad）刻画 Agentic AI 的知识演化；本讲义则进一步主张：当这种知识演化要落到\emph{可机器验证、proof-relevant} 的层面时，其「内部语言」正是 MLTT/HoTT。即：\emph{范畴框架 = Agent 间协作的语义骨架，MLTT = 该骨架内部可编程、可校验的类型化语言}。两者一外一内，构成「Agentic AI 知识表达」的完整栈。
+\end{principle}
+
+% =====================================================================
+\chapter{依赖类型论的范畴语义：纤维化与伴随}
+
+\section{一个常见误解}
+
+初学者常把「依赖积 $\Pi$ $\leftrightarrow$ 积，依赖和 $\Sigma$ $\leftrightarrow$ 余积」当作一对对偶。这一直觉\emph{在离散退化情形下是对的}，但在一般情形下会丢失依赖类型论的精髓。
 
 \begin{definition}[离散指标退化情形]
   若指标类型是一个离散的 $2$ 元集 $\mathbf{2}$，令 $P(\mathtt{true})=A,\; P(\mathtt{false})=B$，则
@@ -63,70 +213,35 @@
   因此 $\Sigma$ 在离散指标下「看起来像余积」，$\Pi$ 「看起来像积」。
 \end{definition}
 
-\subsection{一般（非离散）情形：纤维化}
+\section{一般（非离散）情形：纤维化}
 
 当指标基 $B$ 不是离散的、纤维随 $x:B$ 连续变化时：
-
 \begin{itemize}
   \item 依赖和 $\Sigma_f$（对态射 $f:A\to B$）是纤维化 $A\to B$ 的\emph{全空间（total space）}，不再是余积；
   \item 依赖积 $\Pi_f$ 是该纤维化的\emph{截面空间（space of sections）}，不再是积。
 \end{itemize}
 
-\subsection{正确的伴随陈述}
+\section{正确的伴随陈述}
 
 $\Pi$ 与 $\Sigma$\emph{不是互为左右伴随}；它们是\emph{同一个基变换（base-change / pullback）函子 $f^{*}$ 的左右伴随}。设 $f:A\to B$，则存在伴随
 \[
   \Sigma_f \;\dashv\; f^{*} \;\dashv\; \Pi_f ,
 \]
-其中 $f^{*}:\mathcal{C}/B\to\mathcal{C}/A$ 是沿 $f$ 的拉回。用交换图表示为：
-
-\begin{center}
-\begin{tikzcd}
-\mathcal{C}/A \arrow[r, shift left, "\Sigma_f"] \arrow[r, shift right, "\Pi_f"'] & \mathcal{C}/B \arrow[l, shift left, "f^{*}"]
-\end{tikzcd}
-\end{center}
+其中 $f^{*}:\mathcal{C}/B\to\mathcal{C}/A$ 是沿 $f$ 的拉回。
 
 \begin{itemize}
-  \item 当 $f:A\to 1$（平凡丛）时，$f^{*}=\Delta$ 为常值族函子，于是 $\Sigma_f = \times A$（积）、$\Pi_f = (-)^{A}$（指数 / 内蕴同态）。这正是由 (a) 退化而来的来源。
-  \item 而经典的「积 $\dashv$ 对角 $\Delta$ $\dashv$ 余积」（即 $\times\;\dashv\;\Delta\;\dashv\;\sqcup$）是\emph{另一组}伴随，只是恰好与离散退化情形重合。
+  \item 当 $f:A\to 1$（平凡丛）时，$f^{*}=\Delta$ 为常值族函子，于是 $\Sigma_f = \times A$（积）、$\Pi_f = (-)^{A}$（指数 / 内蕴同态）。
+  \item 而经典的「积 $\dashv$ 对角 $\Delta$ $\dashv$ 余积」是\emph{另一组}伴随，只是恰好与离散退化情形重合。
 \end{itemize}
 
 \begin{principle}[对待依赖类型论的正确姿态]
-  依赖类型论的精髓在于\emph{非离散基变换}；把它朴素理解成「积/余积对偶」会丢掉纤维化这一核心结构。因此范畴语义的正确表述是 $\Sigma_f\dashv f^{*}\dashv\Pi_f$，而非「$\Pi$ 是 $\Sigma$ 的对偶」。
+  依赖类型论的精髓在于\emph{非离散基变换}；把它朴素理解成「积/余积对偶」会丢掉纤维化这一核心结构。
 \end{principle}
 
 % =====================================================================
-\section{对一篇公众号文章的评述}
+\chapter{恒等类型与同伦：从相等到路径}
 
-在讨论过程中，我们评述了一篇微信公众号文章《MARTIN-LOF TYPE THEORY (MLTT) 依赖类型理论的意义》\cite{JackZhu2026TypeTheory}（作者：道法自然杰克朱，发布于其订阅号）。下面是去芜存菁的评述。
-
-\subsection{准确、可采的部分}
-
-\begin{itemize}
-  \item Curry–Howard / 命题即类型 / 证明即程序的对应；
-  \item MLTT 的构造主义立场（拒排中律、非构造性存在）；
-  \item 「HoTT = MLTT + 同伦几何语义（类型即拓扑空间）」；
-  \item 用累积宇宙避免自指悖论（即 universe 分层）。
-\end{itemize}
-
-\subsection{需要警惕的含混与错误}
-
-\begin{enumerate}
-  \item \textbf{「命题依赖于其一阶概念」当作 dependent type 的词源}——这是哲学化比喻，不是技术定义。技术上 dependent type = 类型的定义依赖于一个\emph{项（值）}，如 $\mathrm{Vec}(n)$ 依赖 $n:\mathbb{N}$。不要让比喻混同定义。
-  \item \textbf{「外延/内涵 MLTT」未定义就抛出}——这是要害区别：HoTT 必须建在\emph{内涵（intensional）MLTT}上（保留 proof-relevance）；外延 MLTT 带 identity reflection / Axiom K，会把 proof-relevance 塌缩掉，HoTT 反而建不成。
-  \item \textbf{「自指悖论」没点名 Girard 悖论}，也没说清 1984 版靠\emph{累积宇宙}恢复一致性的具体机制（见本章引言中关于 1971 年 $\mathrm{type}$-in-$\mathrm{type}$ 导致不一致的历史教训）。
-  \item \textbf{「范畴论描述关系、MLTT 是底层语言」把句法/语义割裂了}——准确说法是二者是 syntax–semantics 对偶（LCCC 给 MLTT 语义），不是「一个描述、一个基础」。
-  \item \textbf{「意识形态是一个概型」的延伸}是作者个人哲学发挥，不是数学。引用时必须与严谨内核分开，否则会污染讲义。
-\end{enumerate}
-
-\begin{principle}[对科普读物的使用纪律]
-  该文作为「动机/直觉」读物合格，但 CQT 引用务必用一手文献 \cite{MartinLof1984ITT} 而非公众号文。其真正价值在于帮我们预判读者常见误解。
-\end{principle}
-
-% =====================================================================
-\section{恒等类型与同伦：从相等到路径}
-
-\subsection{核心直觉}
+\section{核心直觉}
 
 在拓扑/单纯集模型中，$\mathrm{Id}_A(a,b)$ 被解释为 $A$ 中从 $a$ 到 $b$ 的\emph{路径空间}。所以「相等」不再是真/假命题，而是一个\emph{类型（同伦类型）}。
 
@@ -134,79 +249,104 @@ $\Pi$ 与 $\Sigma$\emph{不是互为左右伴随}；它们是\emph{同一个基�
   \begin{itemize}
     \item $\mathrm{refl}_a : \mathrm{Id}_A(a,a)$ 对应\emph{常值路径}；
     \item 归纳规则（J-规则 / 路径归纳）字面就是同伦论的「路径提升」：任何关于路径的性质只要对常值路径成立，就对一切路径成立；
-    \item \emph{proof-relevance（证明相关性）}：经典相等是 yes/no 命题；HoTT 里「相等」是一个\emph{可能有多个不同 inhabitant 的空间}——不同的路径 = 不同的证明；路径之间的路径 = 同伦（homotopy）。
+    \item \emph{proof-relevance}：经典相等是 yes/no 命题；HoTT 里「相等」是一个\emph{可能有多个不同 inhabitant 的空间}——不同的路径 = 不同的证明；路径之间的路径 = 同伦（homotopy）。
   \end{itemize}
 \end{definition}
 
-\subsection{升级与 univalence}
+\section{升级与 univalence}
 
-这一跃把范畴语义从 LCCC 提升到 $(\infty,1)$-范畴 / 模型范畴；「集合」变成 $\infty$-群胚（homotopy type）。Voevodsky 的 univalence 公理进一步断言
+这一跃把范畴语义从 LCCC 提升到 $(\infty,1)$-范畴 / 模型范畴；「集合」变成 $\infty$-群胚。Voevodsky 的 univalence 公理进一步断言
 \[
   (A = B) \;\simeq\; (A \simeq B),
 \]
-即「类型相等」等价于「类型间的等价」。这与「两点相等 $\Rightarrow$ 有连续路径」的思维近似一致，且在标准（单纯集 / 空间）模型里是\emph{字面语义}而非近似。
+即「类型相等」等价于「类型间的等价」。
 
 % =====================================================================
-\section{LCCC 与 Topos 结构}
+\chapter{LCCC 与 Topos 结构}
 
-\subsection{必要不充分}
+\section{必要不充分}
 
 \begin{itemize}
   \item \textbf{Topos $\Rightarrow$ LCCC}：每个 elementary topos 自动局部笛卡尔闭（每个切片 $\mathcal{C}/X$ 都是 topos）。
   \item \textbf{LCCC $\not\Rightarrow$ Topos}：LCCC 已有 $\Pi$、$\Sigma$、所有有限极限；还差一样核心东西——\emph{子对象分类子 $\Omega$}（等价地，幂对象 / power object）。加上 $\Omega$ 才升级为 topos。
 \end{itemize}
 
-因此 LCCC 强烈\emph{暗示} topos 结构，但并不\emph{蕴含}它。
-
-\subsection{两个常被忽略的界限}
+\section{两个常被忽略的界限}
 
 \begin{principle}[predicative vs impredicative]
-  Martin-L\"of ITT 是 \emph{predicative（可判定）}的；elementary topos 的内部逻辑是 \emph{impredicative} 的（幂对象给出 impredicative 量化）。所以 \emph{ITT $\leftrightarrow$ LCCC} 这对，比 \emph{topos 逻辑} 弱一档；HoTT（带 univalence）通常也是 predicative 的。
+  MLTT 是 \emph{predicative} 的；elementary topos 的内部逻辑是 \emph{impredicative} 的（幂对象给出 impredicative 量化）。所以 \emph{MLTT $\leftrightarrow$ LCCC} 比 \emph{topos 逻辑} 弱一档。
 \end{principle}
 
 \begin{principle}[proof-relevant vs proof-irrelevant]
-  ITT/HoTT 的命题是 \emph{proof-relevant} 的（命题作为类型，可能有多个证明）；topos 的内部逻辑是 \emph{proof-irrelevant} 的（命题 = $\Omega$ 的元素 = 子对象，是 Heyting 代数）。二者是同一族范畴结构（topos vs $\infty$-topos）上不同「内部语言」的区分轴。
+  MLTT/HoTT 的命题是 \emph{proof-relevant} 的；topos 的内部逻辑是 \emph{proof-irrelevant} 的（命题 = $\Omega$ 的元素 = 子对象）。二者是同一族范畴结构（topos vs $\infty$-topos）上不同「内部语言」的区分轴。
 \end{principle}
 
 % =====================================================================
-\section{ITT 内部语言 与 量子理论的 Topos 内部语言}
+\chapter{量子理论的 Topos 内部语言}
 
-\subsection{直接而深刻的关系}
+\section{直接而深刻的关系}
 
-D\"oring–Isham《A topos foundation for theories of physics》\cite{DoringIsham2008a}、Flori《A First Course in Topos Quantum Theory》\cite{Flori2013}、Heunen–Landsman–Spitters《Bohrification》\cite{HeunenLandsmanSpitters2009} 所用的，正是\emph{某个 topos 的内部语言}——具体是预层 topos $\mathbf{Set}^{\mathcal{V}(\mathcal{O})^{\mathrm{op}}}$（$\mathcal{V}(\mathcal{O})$ 是冯·诺依曼代数交换子代数构成的偏序集）。
+D\"oring--Isham \cite{DoringIsham2008a}、Flori \cite{Flori2013}、Heunen--Landsman--Spitters《Bohrification》\cite{HeunenLandsmanSpitters2009} 所用的，正是\emph{某个 topos 的内部语言}——具体是预层 topos $\mathbf{Set}^{\mathcal{V}(\mathcal{O})^{\mathrm{op}}}$。他们口中的「内部语言」\emph{本质就是} Martin-L\"of 框架作为语法的那种直觉主义（依赖）类型论 / 高阶逻辑。
 
-他们口中的「内部语言」\emph{本质就是} Martin-L\"of 框架作为语法的那种直觉主义（依赖）类型论 / 高阶逻辑（Lambek–Scott、Jacobs 的定理：topos 的内部语言 = dependent type theory）。
+\section{机制与 CQT 的缝合点}
 
-\subsection{机制与 CQT 的缝合点}
-
-该 topos 的子对象分类子 $\Omega$ 是一个「语境（交换子代数）」的 Heyting 代数，\emph{真值是局部/语境相关的}（Kripke–Joyal 语义）。这恰好让他们\emph{化解 Kochen–Specker 悖论}——全局值指派不存在，但「某可观测量的值」作为谱预层（spectral presheaf）的子对象 / 内部陈述却拥有良定义的语境化真值。
+该 topos 的子对象分类子 $\Omega$ 是一个「语境（交换子代数）」的 Heyting 代数，\emph{真值是局部/语境相关的}（Kripke--Joyal 语义）。这恰好让他们\emph{化解 Kochen--Specker 悖论}。
 
 \begin{principle}[CQT 的缝合公式]
   \[
-    \text{ITT 的内部语言（语法）} \;+\; \text{Gelfand 对偶（见第 004 章）}
-    \;=\; \text{D\"oring–Isham 量子 topos}.
+    \text{MLTT 的内部语言（语法）} \;+\; \text{Gelfand 对偶}
+    \;=\; \text{D\"oring--Isham 量子 topos}.
   \]
 \end{principle}
 
-这正是 Bohrification 在 topos \emph{内部}套用 Gelfand 对偶（交换 C*-代数 $\leftrightarrow$ 紧 Hausdorff 空间），得到\emph{内部 Gelfand 谱}（topos 内的「状态空间」）。因此 CQT 的 \texttt{003-type-topos}（topos / 内部语言）与 \texttt{004-gelfand-theory}（Gelfand–Naimark）两章，已经包含了量子 topos 的全部原料。
+这正是 Bohrification 在 topos \emph{内部}套用 Gelfand 对偶，得到\emph{内部 Gelfand 谱}。因此 CQT 的 \texttt{003-type-topos} 与 \texttt{004-gelfand-theory} 两章，已包含量子 topos 的全部原料。
 
-\subsection{精确化的界限}
+\section{精确化的界限}
 
-D\"oring–Isham 用的是 \emph{classical、proof-irrelevant、impredicative} 的 topos 高阶逻辑（命题 = $\Omega$ 元素 = 子对象），更贴近 \emph{Lawvere 的 ETCS / elementary topos 逻辑}，而非 Martin-L\"of 的 predicative、proof-relevant 类型论本身。但现代共识认为 topos 内部语言「就是」Martin-L\"of 传统的依赖类型论；区别只在 predicative/impredicative 与 proof-relevant/irrelevant 两条轴。HoTT 是 proof-relevant 的升级版，D\"oring–Isham 留在 proof-irrelevant。
+D\"oring--Isham 用的是 \emph{classical、proof-irrelevant、impredicative} 的 topos 高阶逻辑，更贴近 Lawvere 的 ETCS / elementary topos 逻辑，而非 Martin-L\"of 的 predicative、proof-relevant 类型论本身。但现代共识认为 topos 内部语言「就是」Martin-L\"of 传统的依赖类型论；区别只在 predicative/impredicative 与 proof-relevant/irrelevant 两条轴。
 
 % =====================================================================
-\section{暗线：与不可变架构（IA）的呼应}
+\chapter{暗线：与不可变架构（IA）的呼应}
 
 上一轮关于「不可变架构（Immutable Architecture）」的讨论，与本章主题存在一条隐性暗线：
 
 \begin{itemize}
   \item \emph{构造性 / proof-relevance} 与 \emph{append-only 不可变事实}共享同一哲学内核——都拒绝「就地修改」，转而显式记录可验证的构造 / 事实。
-  \item 在 Curry–Howard 视角下，一个 CRDT 的 $\mathrm{merge}$ 就是一个\emph{交换幺半群对象}（commutative monoid in the syntactic category of types）；这正是依赖类型论语义中的「半格 + 结合/交换/幂等」的精确范畴论表述，也正是第 006 章（operad / monoid）处理的结构。
+  \item 在 Curry--Howard 视角下，一个 CRDT 的 $\mathrm{merge}$ 就是一个\emph{交换幺半群对象}（commutative monoid in the syntactic category of types）；这正是依赖类型论语义中的「半格 + 结合/交换/幂等」的精确范畴论表述。
   \item 因此：\emph{IA 的工程直觉（CRDT 收敛）$\leftrightarrow$ Martin-L\"of 的类型论语义}，本质上是\emph{同一个交换幺半群 / 余极限结构}的两套话术。
 \end{itemize}
 
 % =====================================================================
-\section{对 CQT 讲义的扩充方案（已落实）}
+\appendix
+
+\chapter{对一篇公众号文章的评述}
+
+在讨论过程中，我们评述了一篇微信公众号文章《MARTIN-LOF TYPE THEORY (MLTT) 依赖类型理论的意义》\cite{JackZhu2026TypeTheory}。下面是去芜存菁的评述。
+
+\section{准确、可采的部分}
+
+\begin{itemize}
+  \item Curry--Howard / 命题即类型 / 证明即程序的对应；
+  \item MLTT 的构造主义立场（拒排中律、非构造性存在）；
+  \item 「HoTT = MLTT + 同伦几何语义（类型即拓扑空间）」；
+  \item 用累积宇宙避免自指悖论（即 universe 分层）。
+\end{itemize}
+
+\section{需要警惕的含混与错误}
+
+\begin{enumerate}
+  \item \textbf{「命题依赖于其一阶概念」当作 dependent type 的词源}——这是哲学化比喻，不是技术定义。
+  \item \textbf{「外延/内涵 MLTT」未定义就抛出}——HoTT 必须建在\emph{内涵（intensional）MLTT}上（保留 proof-relevance）；外延 MLTT 带 identity reflection / Axiom K，会把 proof-relevance 塌缩掉。
+  \item \textbf{「自指悖论」没点名 Girard 悖论}，也没说清 1984 版靠\emph{累积宇宙}恢复一致性的具体机制。
+  \item \textbf{「范畴论描述关系、MLTT 是底层语言」把句法/语义割裂了}——准确说法是二者是 syntax--semantics 对偶。
+  \item \textbf{「意识形态是一个概型」的延伸}是作者个人哲学发挥，不是数学。
+\end{enumerate}
+
+\begin{principle}[对科普读物的使用纪律]
+  该文作为「动机/直觉」读物合格，但 CQT 引用务必用一手文献 \cite{MartinLof1984ITT} 而非公众号文。
+\end{principle}
+
+\chapter{CQT 讲义扩充方案}
 
 本章的讨论已具体落到以下章节的扩充中：
 
@@ -216,11 +356,11 @@ D\"oring–Isham 用的是 \emph{classical、proof-irrelevant、impredicative} �
 \hline
 \textbf{目标章节} & \textbf{新增内容} \\
 \hline
-\texttt{003-type-topos} & 「依赖类型论：topos 的内部语言（语法层）」：语境与替换、$\Sigma_f\dashv f^{*}\dashv\Pi_f$、恒等类型与 J-规则、子对象分类子 $\Omega$（predicative vs impredicative）、量子理论的 topos 内部语言（D\"oring–Isham–Flori–Heunen，接 004 Gelfand）。 \\
+\texttt{003-type-topos} & 「依赖类型论：topos 的内部语言（语法层）」：语境与替换、$\Sigma_f\dashv f^{*}\dashv\Pi_f$、恒等类型与 J-规则、子对象分类子 $\Omega$（predicative vs impredicative）、量子理论的 topos 内部语言。 \\
 \hline
-\texttt{005-geo} & 新增子文件 \texttt{subfiles/hott.tex}「HoTT 桥：从相等到路径」：恒等类型 = 路径空间、高阶归纳类型 HIT 与黏合空间、univalence、几何=同伦类型。 \\
+\texttt{005-geo} & 子文件 \texttt{subfiles/hott.tex}「HoTT 桥：从相等到路径」：恒等类型 = 路径空间、高阶归纳类型 HIT 与黏合空间、univalence、几何=同伦类型。 \\
 \hline
-\texttt{006-quantum-lingual} & 追加「归纳类型 / W-类型 = 树 $\leftrightarrow$ operad 复合」：良基树 W-类型、W-类型与 operad 的树同构、CRDT 半格作为交换幺半群对象的实例（接 IA 讨论）。 \\
+\texttt{006-quantum-lingual} & 追加「归纳类型 / W-类型 = 树 $\leftrightarrow$ operad 复合」：良基树 W-类型、W-类型与 operad 的树同构、CRDT 半格作为交换幺半群对象的实例。 \\
 \hline
 \end{tabular}
 \caption{CQT 讲义扩充落点}

@@ -46,3 +46,6 @@ watch-compile.ps1
 011-music/music.tmp
 011-music/music.bbl-SAVE-ERROR
 /011-music/tmp-ly
+*.idx
+*.ilg
+*.ind
