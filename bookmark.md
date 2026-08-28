@@ -1237,3 +1237,43 @@
 - **分类**: math.AG（代数几何）, math.CT（范畴论）
 - **页数**: 204 页
 - **摘要**: 基于 stacks 建立相对 topos 理论的新基础。核心结果：给定 site 上 sheaf topos 上的 toposes 范畴与索引范畴之间的伴随。这推广了拓扑空间上预层与丛之间的经典伴随。允许将任何 Grothendieck topos 视为与 gros topos 关联的 petit topos，回答了 Grothendieck 在七十年代提出的问题。引入相对 site 概念，实现任意几何态射的表示。
+
+---
+
+## 2026-08-28
+
+### 从零开始理解一个自伴算子的完整构造过程
+- **来源**: 微信公众号「数学晚风」(Romani Isa)
+- **链接**: https://mp.weixin.qq.com/s/2tiVbmB3a4DlM4i93wiKIw
+- **作者**: Romani Isa
+- **分类**: math.FA（泛函分析）, math-ph（数学物理）, quant-ph（量子力学公设）
+- **摘要**: 以圆周拉普拉斯 $-d^2/dx^2$ 为最小示例，完整演示「微分表达式 + 定义域选取 → 对称算子 → 自伴延拓（$H^2_{\rm per}$ Sobolev 空间）→ 谱分解 → 量子物理解释」的构造链。强调自伴性依赖定义域而非微分形式；傅里叶基给出纯离散点谱 $(nk)^2$、二重简并对应诺特对称。命中 §002 可观测物的自伴性、§004 无界算子谱论与谱定理。
+
+---
+
+### 你也能发明谱序列——一篇让初学者不再发怵的导读（译）
+- **来源**: 微信公众号「一只寻找函子的猫」(译自 Timothy Y. Chow)
+- **链接**: https://mp.weixin.qq.com/s/hGbGxYmCuiRvWAEUx5oHgQ
+- **作者**: Timothy Y. Chow（原文 2006, AMS Notices）
+- **分类**: math.AT（代数拓扑）, 同调代数
+- **摘要**: 从带滤链复形出发，先模掉下层得关联分次复形算同调 $E^1$，再对 $E^r$ 反复取同调得 $E^{r+1}$，即「同调的同调」序列，直至收敛到真同调。消除谱序列的神秘感。近邻 §003-type-topos（层上同调、导出函子普遍使用谱序列）。
+
+---
+
+### 张量范畴学和高阶范畴学正是描写长程纠缠（拓扑序）的数学框架
+- **来源**: 微信公众号「超级侧卫6704」(摘编自文小刚《数学与物理是什么关系？》)
+- **链接**: https://mp.weixin.qq.com/s/V_VutN8nPrb-ArKIrDRnGg
+- **作者**: 文小刚
+- **分类**: cond-mat.str-el（拓扑序）, math.CT（张量范畴/高阶范畴）
+- **摘要**: 长程量子纠缠形成拓扑序；拓扑准粒子对应范畴的 object、融合/编织对应 morphism。2D 拓扑序由模张量范畴描写，3D 由融合二阶范畴描写；非阿贝尔统计是拓扑量子计算基础。文小刚称「第二次量子革命」基本量子物质是信息、纠缠生出粒子与时空，范畴论进入凝聚态标志此革命。强命中 §003-type-topos（模张量范畴、融合高阶范畴——与 arXiv 追踪中 2608.12157 任意子凝聚张量范畴、2608.17525 ∞-Topoi 同线）。
+
+---
+
+### 自指式内省：大语言模型难以跨越的复杂度阈值
+- **来源**: 微信公众号「集智俱乐部」(张江 等)
+- **链接**: https://mp.weixin.qq.com/s/OIpJuFtG2zcyvbbvw2qGKQ
+- **作者**: 张江（北京师范大学系统科学学院）
+- **分类**: cs.AI（AI 形式化/自指）, cs.LG
+- **摘要**: 借鉴 von Neumann 自复制自动机复杂度阈值，论证 LLM 递归自我改进需「内省(introspection)」功能类比物；用 Kleene 第二递归定理构造内省式自我改进程序，并证明其与 Schmidhuber Gödel 机在重写等价下一致（全局最优）。现有 LLM 仅为「准内省」。关联论文 Zhang, J.; Yuan, B.; Zhang, Q. Self-Referential Introspection in LLMs: The Critical Threshold for Recursive Self-Improvement. Entropy 2026, 28, 951。属每日前沿四方向之 AI 方向，与 CQT「AI+形式化/自指系统」交叉。
+
+---
