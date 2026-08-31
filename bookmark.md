@@ -1277,3 +1277,203 @@
 - **摘要**: 借鉴 von Neumann 自复制自动机复杂度阈值，论证 LLM 递归自我改进需「内省(introspection)」功能类比物；用 Kleene 第二递归定理构造内省式自我改进程序，并证明其与 Schmidhuber Gödel 机在重写等价下一致（全局最优）。现有 LLM 仅为「准内省」。关联论文 Zhang, J.; Yuan, B.; Zhang, Q. Self-Referential Introspection in LLMs: The Critical Threshold for Recursive Self-Improvement. Entropy 2026, 28, 951。属每日前沿四方向之 AI 方向，与 CQT「AI+形式化/自指系统」交叉。
 
 ---
+
+## 2026-08-31（Google Sheet · Pages 导入）
+
+### Math3ma
+- **来源**: Google Sheet · Pages
+
+---
+
+### https://mp.weixin.qq.com/s/54bEqTZKslfmAWv4BB5CkQ
+- **链接**: https://mp.weixin.qq.com/s/54bEqTZKslfmAWv4BB5CkQ
+- **来源**: Google Sheet · Pages
+
+---
+
+### https://mp.weixin.qq.com/s?__biz=MzI2MjU4MDYwOA==&mid=2247485857&idx=1&sn=5c426321eb3159916c2733ce9eba454f&scene=21#wechat_redirect
+- **链接**: https://mp.weixin.qq.com/s?__biz=MzI2MjU4MDYwOA==&mid=2247485857&idx=1&sn=5c426321eb3159916c2733ce9eba454f&scene=21#wechat_redirect
+- **来源**: Google Sheet · Pages
+
+---
+
+### Initial and terminal objects - Wikipedia
+- **来源**: Google Sheet · Pages
+
+---
+
+### Coproduct - Wikipedia
+- **来源**: Google Sheet · Pages
+
+---
+
+### Limit (category theory) - Wikipedia
+- **来源**: Google Sheet · Pages
+
+---
+
+### https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZARgBoAWAXVJADcBDAGwFcYkQAdDnGADxwBGAMwAEAawB6XBgCdIOABZYwAcxABfUuky58hFAAZSAVmp0mrdlx79h4icAAaAfWLqNWkBmx4CRMqY0DCxsiJzcfIKikk6uIlwQaCxwIi4ATO6a2j56RGkmZsGWYdaRdjHpmZ7eun4o5AVBFqHhNlH2sW4e2bX6yMaN5iFWEbbRDi7E8RwQeAC28KnOGd1eOr59AGyDRS2lYx2VqzUbRAObhc0jbeVSo+1TALzTN9HH67koA8SXw2GTLywCxS6XeOTqyG2PyafxAoKya3BfXy0KGxThyzBvSIDVRu3Ykyxp0MpDxV3+riJnxIpN+6IBAGolmkqRCyAY6XsOLJ5EpVKy+gM0pzrmVRMQBf5SMKYejJSgyABmEVheX9UjK2UtNUDKha9gaMwwKAqeBEUBCGQQOZIIwgHAQJD5NGhMDMRiMGiMegCGCMAAKHzqIEYMCEOFWluttpoDqQZBdSDdHq9Pr9gaR7FD4cjVptiDtccQiv1iGTnpDaYDQf0IbDEYRUfzCaLzvxZfdFe9vurmbC2YbnibSBL9sdiDb5PLqZ7Gex-fruejiAaY6QAHZS9PK7Oa1nF4280gBmuV1vOzP03uFznD8uT0XtomOymd1e+3Xb0Oj4gH+PN8+27du+86foOFo-k+RYAe2QFVnOxJgUuzarkWxCKneKGxuOxAZN+y7EKhOEGJh8bOmhGH4c2hY4ZREHLgAHNh8bGKRiDEC244MWxACczGINxVFIHxp7EKxQnsZxLFesoLRQBAzACKGIA0AoMD0FASYXva9BYIw7CQGAbBscQUE4QBjCyew8mKcpqnqZpL4Vjgun6WEhlsKWIAKM4+w4OIyHxkxokiZZRnWQpSmed5Dlaa+Ll6QZBDRe23m+fcAXqJQ6hAA
+- **链接**: https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZARgBoAWAXVJADcBDAGwFcYkQAdDnGADxwBGAMwAEAawB6XBgCdIOABZYwAcxABfUuky58hFAAZSAVmp0mrdlx79h4icAAaAfWLqNWkBmx4CRMqY0DCxsiJzcfIKikk6uIlwQaCxwIi4ATO6a2j56RGkmZsGWYdaRdjHpmZ7eun4o5AVBFqHhNlH2sW4e2bX6yMaN5iFWEbbRDi7E8RwQeAC28KnOGd1eOr59AGyDRS2lYx2VqzUbRAObhc0jbeVSo+1TALzTN9HH67koA8SXw2GTLywCxS6XeOTqyG2PyafxAoKya3BfXy0KGxThyzBvSIDVRu3Ykyxp0MpDxV3+riJnxIpN+6IBAGolmkqRCyAY6XsOLJ5EpVKy+gM0pzrmVRMQBf5SMKYejJSgyABmEVheX9UjK2UtNUDKha9gaMwwKAqeBEUBCGQQOZIIwgHAQJD5NGhMDMRiMGiMegCGCMAAKHzqIEYMCEOFWluttpoDqQZBdSDdHq9Pr9gaR7FD4cjVptiDtccQiv1iGTnpDaYDQf0IbDEYRUfzCaLzvxZfdFe9vurmbC2YbnibSBL9sdiDb5PLqZ7Gex-fruejiAaY6QAHZS9PK7Oa1nF4280gBmuV1vOzP03uFznD8uT0XtomOymd1e+3Xb0Oj4gH+PN8+27du+86foOFo-k+RYAe2QFVnOxJgUuzarkWxCKneKGxuOxAZN+y7EKhOEGJh8bOmhGH4c2hY4ZREHLgAHNh8bGKRiDEC244MWxACczGINxVFIHxp7EKxQnsZxLFesoLRQBAzACKGIA0AoMD0FASYXva9BYIw7CQGAbBscQUE4QBjCyew8mKcpqnqZpL4Vjgun6WEhlsKWIAKM4+w4OIyHxkxokiZZRnWQpSmed5Dlaa+Ll6QZBDRe23m+fcAXqJQ6hAA
+- **来源**: Google Sheet · Pages
+
+---
+
+### Categories for AI
+- **来源**: Google Sheet · Pages
+
+---
+
+### An Introduction to Generalized Type Systems
+- **来源**: Google Sheet · Pages
+
+---
+
+### Using the internal language of toposes in algebraic geometry
+- **链接**: https://arxiv.org/pdf/2111.03685.pdf
+- **来源**: Google Sheet · Pages
+
+---
+
+### Topos Internal Language
+- **来源**: Google Sheet · Pages
+
+---
+
+### Mitchell-Bénabou language
+- **来源**: Google Sheet · Pages
+
+---
+
+### Bewl: a programming language for topos theory
+- **来源**: Google Sheet · Pages
+
+---
+
+### https://www.researchgate.net/publication/228614514_The_Topos_of_Triads
+- **链接**: https://www.researchgate.net/publication/228614514_The_Topos_of_Triads
+- **来源**: Google Sheet · Pages
+
+---
+
+### relation between type theory and category theory in nLab
+- **来源**: Google Sheet · Pages
+
+---
+
+### https://www.youtube.com/watch?v=66glvnHX-a8
+- **链接**: https://www.youtube.com/watch?v=66glvnHX-a8
+- **来源**: Google Sheet · Pages
+
+---
+
+### From Sets to Types to Categories to Sets
+- **来源**: Google Sheet · Pages
+
+---
+
+### TYPES, SETS AND CATEGORIES
+- **来源**: Google Sheet · Pages
+
+---
+
+### FUNCTORIAL DATA MIGRATION
+- **链接**: https://arxiv.org/pdf/1009.1166
+- **来源**: Google Sheet · Pages
+
+---
+
+### Internal Language of a Monoidal Category
+- **来源**: Google Sheet · Pages
+
+---
+
+### The Yoneda Lemma without category theory: algebra and applications
+- **来源**: Google Sheet · Pages
+
+---
+
+### Bradley. At the Interface of Algebra and Statistics
+- **链接**: https://arxiv.org/pdf/2004.05631
+- **来源**: Google Sheet · Pages
+
+---
+
+### TD Bradley. The Structure of Meaning in Language
+- **来源**: Google Sheet · Pages
+
+---
+
+### Baez. Isbell Duality
+- **链接**: https://arxiv.org/pdf/2212.11079
+- **来源**: Google Sheet · Pages
+
+---
+
+### (PDF) Intuitionistic interpretation of quantum mechanics
+- **来源**: Google Sheet · Pages
+
+---
+
+### Bob Coecke, Quantum logic in intuitionistic perspective - PhilPapers
+- **来源**: Google Sheet · Pages
+
+---
+
+### https://github.com/bgavran/Category_Theory_Machine_Learning?tab=readme-ov-file
+- **链接**: https://github.com/bgavran/Category_Theory_Machine_Learning?tab=readme-ov-file
+- **来源**: Google Sheet · Pages
+
+---
+
+### Yiyang Jia. Survey
+- **链接**: https://arxiv.org/pdf/2408.14014
+- **来源**: Google Sheet · Pages
+
+---
+
+### Neural Networks and Polynomial Regression. Demystifying the Overparametrization Phenomena arXiv:2003.10523v1 [stat.ML] 23 Mar
+- **来源**: Google Sheet · Pages
+
+---
+
+### Nothing is lost, everything is created: introduction to persistent data structures
+- **链接**: https://xavierleroy.org/CdF/2022-2023/1.pdf
+- **来源**: Google Sheet · Pages
+
+---
+
+### https://zeromq.org/languages/fsharp/
+- **链接**: https://zeromq.org/languages/fsharp/
+- **来源**: Google Sheet · Pages
+
+---
+
+### https://www.cnblogs.com/neooelric/p/9020872.html
+- **链接**: https://www.cnblogs.com/neooelric/p/9020872.html
+- **来源**: Google Sheet · Pages
+
+---
+
+### https://juejin.cn/post/7273693149629497384
+- **链接**: https://juejin.cn/post/7273693149629497384
+- **来源**: Google Sheet · Pages
+
+---
+
+### https://dillinger.io/
+- **链接**: https://dillinger.io/
+- **来源**: Google Sheet · Pages
+
+---
+
+### The Topos of Transformer Networks
+- **链接**: http://arxiv.org/abs/2403.18415v1
+- **来源**: Google Sheet · Pages
+
+---
+
+### Quantum Bayes' rule and Petz transpose map from the minimum change principle
+- **链接**: https://arxiv.org/abs/2410.00319
+- **来源**: Google Sheet · Pages
+
+---
