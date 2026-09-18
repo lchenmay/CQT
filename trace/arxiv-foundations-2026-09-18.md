@@ -54,7 +54,7 @@
 2. **2609.18721 — All coherent measurements provide observational ergotropic advantage**
    - 中文：所有相干测量均提供可观测的功提取（ergotropic）优势｜来源：quant-ph
    - 核心突破：证明任意相干测量相对非相干测量都带来可观测的功提取优势，将量子相干资源与功提取定量化。
-   - 数学模型：ergy（最大可提取功）= 在 Hamiltonian 谱上的凸优化；相干测量改变可观测量本征态叠加，提升 ergotropy。
+   - 数学模型：ergotropy（最大可提取功）= 在 Hamiltonian 谱上的凸优化；相干测量改变可观测量本征态叠加，提升 ergotropy。
    - 关联度：**高**（量子热力学 / 能量收集 / 功提取）。
 
 3. **2609.18941 — A microscopic heat engine with many hidden variables**

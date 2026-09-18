@@ -1490,3 +1490,113 @@
 - **CQT 关联**: 强命中 **§002 可观测量的自伴性**（自伴 vs 厄米、自伴延拓）与 **§004 von Neumann 代数/谱论**（谱定理、密度矩阵、熵、算子代数分类）。额外价值：正交模格 vs 布尔代数，可与 MLTT 讲义 §1.3「类型论 ↔ Heyting 代数」对照（量子逻辑既非布尔亦非 Heyting，而是正交模格）——为讲义「集合论→类型论→量子逻辑」的代数谱系提供现成的科普级素材。
 
 ---
+
+## 2026-09-18
+
+### Quantum Behaviors Are Not Semialgebraic
+- **来源**: arXiv 2609.18865
+- **链接**: https://arxiv.org/abs/2609.18865
+- **作者**: Minbo Gao, Zhengfeng Ji, Chenghua Liu
+- **分类**: quant-ph / math-ph
+- **摘要**: 证明量子行为集合（量子关联 / Tsirelson 边界）不是半代数（semialgebraic）集，触及 Bell 情景与 Tsirelson 问题的实数代数几何 / 模型论本质。半代数集关联 Tarski–Seidenberg / o-极小结构，是 §003-type-topos（代数 / 几何范畴描述量子关联）与量子基础（非定域性数学结构）的交汇——**§003 + 量子基础 双命中**。
+
+---
+
+### From Reversible Quantum Dynamics to Statistical Probability
+- **来源**: arXiv 2609.18641
+- **链接**: https://arxiv.org/abs/2609.18641
+- **作者**: Wei-Min Zhang
+- **分类**: quant-ph
+- **摘要**: 从可逆量子动力学给出统计概率的动力学解，回应概率起源问题并联系 Hilbert 第六问题。属**量子基础（概率起源 / 诠释）**核心议题。
+
+---
+
+### Conditioning on the Future: A Filtration-Theoretic Formalization of Wheeler's Participatory Universe
+- **来源**: arXiv 2609.19025
+- **链接**: https://arxiv.org/abs/2609.19025
+- **分类**: quant-ph
+- **摘要**: 用 filtration 理论形式化 Wheeler「参与性宇宙」与延迟选择测量，把未来条件作用引入量子测量诠释。属**量子基础（诠释 / 延迟选择）**。
+
+---
+
+### Theory-agnostic nonclassicality certification in an integrated photonic circuit
+- **来源**: arXiv 2609.18691
+- **链接**: https://arxiv.org/abs/2609.18691
+- **作者**: Vinicius P. Rossi et al.
+- **分类**: quant-ph
+- **摘要**: 在集成光子电路中实现理论无关的广义情境性（generalized contextuality）认证。情境性即 §003-type-topos 层论情境性（spectral presheaf）核心——**§003 + 量子基础（contextuality）命中**。
+
+---
+
+### Proof of Heisenberg's Error-Disturbance Relation for Individual Measurements
+- **来源**: arXiv 2609.18211
+- **链接**: https://arxiv.org/abs/2609.18211
+- **作者**: Seiji Kosugi
+- **分类**: quant-ph
+- **摘要**: 个体测量层面 Heisenberg 误差–扰动关系的严格证明。属**量子基础（测量理论）**。
+
+---
+
+### The Operator Daugavet Property in Semifinite Noncommutative L_1-Spaces
+- **来源**: arXiv 2609.18044
+- **链接**: https://arxiv.org/abs/2609.18044
+- **分类**: math.OA / math.FA
+- **摘要**: 研究半有限 von Neumann 代数上非交换 L¹ 空间的算子 Daugavet 性质。非交换 L¹ / von Neumann 代数 = §004-Gelfand 算子代数核心对象——**§004 命中**。
+
+---
+
+### Cohomology of Amenable Traces
+- **来源**: arXiv 2609.18756
+- **链接**: https://arxiv.org/abs/2609.18756
+- **分类**: math.OA
+- **摘要**: 研究顺从迹（amenable traces）的上同调，涉及超有限 II₁ 因子。C*-代数 / von Neumann 代数（超有限 II₁ 因子）= §004-Gelfand 算子代数核心——**§004 命中**。
+
+---
+
+### Almost One Bit Violation of Minimum-Output Rényi Entropy Additivity Simultaneously at All Orders
+- **来源**: arXiv 2609.18747
+- **链接**: https://arxiv.org/abs/2609.18747
+- **分类**: math.OA（交叉 quant-ph）
+- **摘要**: 构造有限维量子信道最小输出 Rényi 熵可加性在所有阶同时近乎一比特违背。量子信道 / Rényi 熵可加性是 §004-Gelfand 算子代数（量子信道、相对熵）标准对象——**§004 + 量子基础（信息）命中**。
+
+---
+
+### Canonical and symplectic analysis of the Holst action in the G→0 limit
+- **来源**: arXiv 2609.17833
+- **链接**: https://arxiv.org/abs/2609.17833
+- **分类**: math-ph / gr-qc
+- **摘要**: 对 Holst 作用量在 G→0 极限做正则与辛分析，接几何力学 / 辛几何与自旋泡沫量子引力。属 §003 / §005 几何力学（辛约化）候选——**§003 几何力学命中**。
+
+---
+
+### Relaxation and Steady-State Entropy Production for Langevin SPDEs: A Dirichlet-Form Approach
+- **来源**: arXiv 2609.18201
+- **链接**: https://arxiv.org/abs/2609.18201
+- **分类**: math-ph / cond-mat.stat-mech
+- **摘要**: 用 Dirichlet 形式方法研究朗之万 SPDE 的弛豫与稳态熵产生。直接命中随机热力学（熵产生 / 非平衡耗散）——**随机热力学强命中（二·核心推荐）**。
+
+---
+
+### All coherent measurements provide observational ergotropic advantage
+- **来源**: arXiv 2609.18721
+- **链接**: https://arxiv.org/abs/2609.18721
+- **分类**: quant-ph
+- **摘要**: 证明所有相干测量都提供可观测的功提取（ergotropic）优势，把量子相干资源与功提取联系起来。属量子热力学 / 能量收集 HIGH——**能量收集强命中（二·核心推荐）**。
+
+---
+
+### Prediction with Five Experts and Geometric Stopping: A Probabilistic Construction and Analytic Verification
+- **来源**: arXiv 2609.17927
+- **链接**: https://arxiv.org/abs/2609.17927
+- **分类**: math.OC / math.PR
+- **摘要**: 用 Hamilton–Jacobi–Bellman 方程刻画五专家预测与几何停止问题。直接命中 "HJB AND Stochastic Optimal Control" 关键词组合——**HJB / 随机控制命中（二·核心推荐 MEDIUM）**。
+
+---
+
+### A microscopic heat engine with many hidden variables
+- **来源**: arXiv 2609.18941
+- **链接**: https://arxiv.org/abs/2609.18941
+- **分类**: cond-mat.stat-mech
+- **摘要**: 构造具多隐变量的微观热机，量化其熵产生与热力学性能。属非平衡 / 热机能量收集 HIGH——**随机热力学 / 能量收集命中（二·核心推荐）**。
+
+---
