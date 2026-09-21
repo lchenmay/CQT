@@ -1599,4 +1599,120 @@
 - **分类**: cond-mat.stat-mech
 - **摘要**: 构造具多隐变量的微观热机，量化其熵产生与热力学性能。属非平衡 / 热机能量收集 HIGH——**随机热力学 / 能量收集命中（二·核心推荐）**。
 
+## 2026-09-21
+
+### Emergent classicality and wavefunction branching in an isolated quantum many-body system
+- **来源**: arXiv 2609.19254
+- **链接**: https://arxiv.org/abs/2609.19254
+- **分类**: quant-ph
+- **摘要**: 在孤立量子多体系统中研究涌现经典性与波函数分支。属量子基础（诠释 / 退相干与经典性涌现）——**量子基础（interpretation）**（接 2608.19254 波函数分支、量子达尔文主义线）。
+
+### Phase-Flag Access and No-Go Constraints on Quotient-Space Real Quantum Mechanics
+- **来源**: arXiv 2609.20226
+- **链接**: https://arxiv.org/abs/2609.20226
+- **分类**: quant-ph
+- **摘要**: 研究商空间实量子力学的相位标记访问与 no-go 约束。属量子基础（实量子力学不可能性 / 结构 no-go）——**量子基础（interpretation）**。
+
+### Automated search for highly contextual Kochen-Specker proofs
+- **来源**: arXiv 2609.19862
+- **链接**: https://arxiv.org/abs/2609.19862
+- **分类**: quant-ph
+- **摘要**: 自动化搜索高情境性 Kochen-Specker 证明。情境性即 §003-type-topos 层论情境性（spectral presheaf）核心——**§003 + 量子基础（contextuality）命中**。
+
+### Mermin-Peres magic rectangles modulo odd primes
+- **来源**: arXiv 2609.20746
+- **链接**: https://arxiv.org/abs/2609.20746
+- **分类**: quant-ph
+- **摘要**: 奇素数模下的 Mermin-Peres 魔方（magic rectangles）。魔方 / 情境性即 §003 层论情境性与量子基础（contextuality）交汇——**§003 + 量子基础 命中**。
+
+### Procrastinating einselection in non-Markovian quantum dynamics
+- **来源**: arXiv 2609.20757
+- **链接**: https://arxiv.org/abs/2609.20757
+- **分类**: quant-ph
+- **摘要**: 在非马尔可夫量子动力学中研究"拖延的"einselection（环境诱导超选择）。einselection / 量子达尔文主义是量子测量与经典性涌现基础——**量子基础（measurement / einselection）**（接 2608.17400 测量客观性线）。
+
+### Environment Alignment and Redundant Record Formation in Imperfect-CNOT Quantum Darwinism
+- **来源**: arXiv 2609.20823
+- **链接**: https://arxiv.org/abs/2609.20823
+- **分类**: quant-ph
+- **摘要**: 在不完美 CNOT 下研究环境对齐与冗余记录形成，推进量子达尔文主义。属**量子基础（量子达尔文主义 / 退相干）**（接 2609.20757 einselection 线）。
+
+### All causally separable quantum processes are quantum circuits with classical control of causal order
+- **来源**: arXiv 2609.20774
+- **链接**: https://arxiv.org/abs/2609.20774
+- **分类**: quant-ph
+- **摘要**: 证明所有因果可分离量子过程都是带经典因果序控制的量子电路。因果序 / 因果可分离是量子基础（因果性诠释）核心议题——**量子基础（causal order）**。
+
+### Proof of Shor's conjecture on the accessible information of quantum dichotomies
+- **来源**: arXiv 2609.20600
+- **链接**: https://arxiv.org/abs/2609.20600
+- **分类**: quant-ph
+- **摘要**: 证明 Shor 关于量子二分类可达信息的猜想（Holevo 系 / 可达信息界）。属**量子基础（信息论基础）**（接 2608.21169 贝叶斯混合动力学线）。
+
+### Fifty Years of the GKLS Master Equation: Foundations and Early Developments
+- **来源**: arXiv 2609.19404
+- **链接**: https://arxiv.org/abs/2609.19404
+- **分类**: quant-ph
+- **摘要**: GKLS（Gorini–Kossakowski–Lindblad–Sudarshan）主方程 50 年综述：基础与早期发展。属**量子基础（开放量子系统 / 退相干理论基础）**（接 2608.13881 第二定律线）。
+
+### k-fold unbiased measurements and maximal incompatibility
+- **来源**: arXiv 2609.20728
+- **链接**: https://arxiv.org/abs/2609.20728
+- **分类**: quant-ph
+- **摘要**: 研究 k-fold 无偏测量与最大不相容性。属**量子基础（测量理论 / 不相容性）**。
+
+### Three-Dimensional Coulomb Discrete Spectrum via Symplectic Geometry and Phase-Space Constraints
+- **来源**: arXiv 2609.19159
+- **链接**: https://arxiv.org/abs/2609.19159
+- **分类**: math-ph
+- **摘要**: 用辛几何与相空间约束给出三维库仑离散谱的几何框架。辛几何 / 几何力学属 §003-type-topos 几何力学（辛约化）线——**§003 几何力学命中**（接 2609.17833 Holst 辛分析、2608.16561 不变联络约化线）。
+
+### Cocompactness and Presentability
+- **来源**: arXiv 2609.20533
+- **链接**: https://arxiv.org/abs/2609.20533
+- **分类**: math.CT
+- **摘要**: 研究余紧性（cocompactness）与可表现性（presentability）。presentable/accessible categories 属 §003-type-topos 范畴近邻（本批 math.CT 唯一新提交，无 Grothendieck topos 直接命中）。
+
+### Asymmetric phase transitions in random noncommutative geometries
+- **来源**: arXiv 2609.19898
+- **链接**: https://arxiv.org/abs/2609.19898
+- **分类**: math-ph
+- **摘要**: 在随机非交换几何中研究不对称相变。非交换几何即 Connes NCG 纲领，直接落在 §004-Gelfand 非交换几何线上——**§004 强命中**（接 2608.01110 模糊环面、2608.13278 谱三元组线）。
+
+### Superselection theory for 2D braided quantum spin systems via Connes fusion
+- **来源**: arXiv 2609.20725
+- **链接**: https://arxiv.org/abs/2609.20725
+- **分类**: math.OA
+- **摘要**: 用 Connes fusion 给出 2D 编织量子自旋系统的超选择（superselection）理论。Connes fusion / 超选择即 §004-Gelfand 算子代数（局部代数、融合范畴）核心——**§004 强命中**。
+
+### Toeplitz C*-algebras on radially weighted Fock spaces
+- **来源**: arXiv 2609.20652
+- **链接**: https://arxiv.org/abs/2609.20652
+- **分类**: math.OA
+- **摘要**: 研究径向加权 Fock 空间上的 Toeplitz C*-代数：交换性与谱表示。Toeplitz C*-代数属 §004-Gelfand C*-代数标准对象——**§004 命中**。
+
+### A Transfinite Christensen–Pedersen Argument
+- **来源**: arXiv 2609.20718
+- **链接**: https://arxiv.org/abs/2609.20718
+- **分类**: math.OA
+- **摘要**: 给出超限的 Christensen–Pedersen 论证（算子代数经典论题的推广）。属 §004-Gelfand 算子代数——**§004 命中**（接 2609.18044 半有限非交换 L¹ Daugavet 线）。
+
+### Parallel quantum channel discrimination and numerical ranges in tensor product subspaces
+- **来源**: arXiv 2609.20781
+- **链接**: https://arxiv.org/abs/2609.20781
+- **分类**: quant-ph
+- **摘要**: 研究并行量子信道辨别与张量积子空间中的数值域。量子信道 / 数值域是 §004-Gelfand 算子代数（量子信道、谱论）近邻——**§004 命中**（接 2608.20689 量子信道范畴性质线）。
+
+### Formal Fluctuation-Response Relations for Non-Stationary Systems: The Dynamic Conjugate Variable
+- **来源**: arXiv 2609.20525
+- **链接**: https://arxiv.org/abs/2609.20525
+- **分类**: cond-mat.stat-mech
+- **摘要**: 给出非稳态系统形式化涨落-响应关系与动态共轭变量。直接命中"非平衡态耗散 / 涨落-响应"高优先级线——**随机热力学强命中（二·核心推荐）**。
+
+### Martingale theory for heat and phase-space contraction in heterogeneous diffusions
+- **来源**: arXiv 2609.20681
+- **链接**: https://arxiv.org/abs/2609.20681
+- **分类**: cond-mat.stat-mech
+- **摘要**: 用鞅理论统一描述异质扩散中的热产生与相空间收缩，连接熵产生与扩散几何。属"净能量交换 / 熵产生"高优先级——**随机热力学强命中（二·核心推荐）**。
+
 ---
