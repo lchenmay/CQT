@@ -1716,3 +1716,145 @@
 - **摘要**: 用鞅理论统一描述异质扩散中的热产生与相空间收缩，连接熵产生与扩散几何。属"净能量交换 / 熵产生"高优先级——**随机热力学强命中（二·核心推荐）**。
 
 ---
+
+## 2026-09-22
+
+### The Limit and Its Ground. QBism, Scientific Realism, and the Born Rule
+- **来源**: arXiv 2609.22159
+- **链接**: https://arxiv.org/abs/2609.22159
+- **分类**: quant-ph（量子基础 / 科学哲学）
+- **摘要**: 剖析 Glick 的透视规范现实主义（perspectival normative realism）为何失败，以现象学"视域"重构 QBism 与 Born 规则的客观性。属**量子基础（诠释 / QBism / Born 规则）**（接 2608.05197 Born 规则范畴线）。
+
+### The Requirement of (at least) Complex Structure for Quantum Mechanics
+- **来源**: arXiv 2609.23041
+- **链接**: https://arxiv.org/abs/2609.23041
+- **分类**: quant-ph（量子基础 / 数学哲学）
+- **摘要**: 论证诸多"实值 QM"构造实质仍嵌入复结构；在态归一化 + 严格能量守恒下至少需复结构方允许时间演化。属**量子基础（数学哲学）**。
+
+### The Generalised Causality Principle
+- **来源**: arXiv 2609.22998
+- **链接**: https://arxiv.org/abs/2609.22998
+- **分类**: quant-ph（量子基础 / 因果性）
+- **摘要**: 针对过程矩阵形式提出广义因果原理，刻画单交互约束下的因果结构禁区，适用不定因果序场景。属**量子基础（因果性 / 不定因果序）**。
+
+### Complete Detector Records and Contextual Source Laws in a Retrocausal Spin Model
+- **来源**: arXiv 2609.23255
+- **链接**: https://arxiv.org/abs/2609.23255
+- **分类**: quant-ph（量子基础 / 逆因果）
+- **摘要**: 逆因果自旋源的正包络记录与上下文源律，弱探测保护 traded-off，关联量子校准与受限场访问。属**量子基础（逆因果 / 情境性）**。
+
+### On the Born rule in a new quantum approach
+- **来源**: arXiv 2609.24269
+- **链接**: https://arxiv.org/abs/2609.24269
+- **分类**: quant-ph（量子基础 / Born 规则）
+- **摘要**: Born 规则的新进路。属**量子基础（Born 规则）**。
+
+### Weak Values Beyond the Weak Limit
+- **来源**: arXiv 2609.22976
+- **链接**: https://arxiv.org/abs/2609.22976
+- **分类**: quant-ph（量子基础 / 测量理论）
+- **摘要**: 发现一类测量协议的条件值严格与探测强度无关、即重合弱值实部。属**量子基础（弱值 / 测量理论）**（接 2608.04099 序贯态判别线）。
+
+### An attainable Gill-Massar-type bound for spin-factor models
+- **来源**: arXiv 2609.23020
+- **链接**: https://arxiv.org/abs/2609.23020
+- **分类**: quant-ph, math.OA（量子基础 / Jordan 代数）
+- **摘要**: 在 spin factor（Jordan 代数态空间）上确定单拷贝多参数估计可达局域精度极限，SLD Fisher 信息正定时可达区恰为迹 ≤1 的实对称半正定阵。属**量子基础 + §004（Jordan 代数 / spin factor）**（接 2608.06777 Grassmannian 几何线）。
+
+### From 3-crossed modules to Gray-type 4-categories
+- **来源**: arXiv 2609.24034
+- **链接**: https://arxiv.org/abs/2609.24034
+- **分类**: math.CT（高阶范畴）
+- **摘要**: 3-交叉模 → Gray 型 4-范畴。属 §003-type-topos 高阶范畴近邻（接 2608.17525 ∞-Topoi 线）。
+
+### Observations on the variety of equationally linear Heyting semilattices
+- **来源**: arXiv 2609.24325
+- **链接**: https://arxiv.org/abs/2609.24325
+- **分类**: math.CT（范畴 / 逻辑）
+- **摘要**: 海廷半格 = 直觉主义逻辑代数，正是 topos 次对象分类器逻辑的内核。属 §003-type-topos 弱命中（层论逻辑基础）。
+
+### A non-spatial frame of smashing ideals
+- **来源**: arXiv 2609.22371
+- **链接**: https://arxiv.org/abs/2609.22371
+- **分类**: math.CT（张量三角范畴）
+- **摘要**: 张量三角范畴的 smashing 理想与局部化框架。属 §003-type-topos 范畴近邻（接 2609.20533 presentable 线）。
+
+### C*-extreme maps and *-homomorphisms from C(X) to finite von Neumann algebras
+- **来源**: arXiv 2609.22685
+- **链接**: https://arxiv.org/abs/2609.22685
+- **分类**: math.OA（C*-代数 / von Neumann 代数）
+- **摘要**: 研究 C(X) 到有限 von Neumann 代数的 C*-极值映射与 *-同态。属 **§004-Gelfand 强命中**（接 2608.20001 vNa 线）。
+
+### Quantitative decomposition and approximation for quasi-local operators
+- **来源**: arXiv 2609.23004
+- **链接**: https://arxiv.org/abs/2609.23004
+- **分类**: math.OA（算子代数 / AQFT）
+- **摘要**: 准局域算子的定量分解与逼近，关联 AQFT 局部代数。属 **§004-Gelfand 命中**。
+
+### The Identity as a Single Commutator of Affiliated Operators
+- **来源**: arXiv 2609.23510
+- **链接**: https://arxiv.org/abs/2609.23510
+- **分类**: math.OA（von Neumann 代数）
+- **摘要**: von Neumann 代数中附属算子恒等式表为单个交换子。属 **§004-Gelfand 命中**（接 2609.18044 半有限非交换 L¹ 线）。
+
+### Noncommutative Maximal Ergodic Theorems for Modulated (C,α)-Averages with Operator-Valued Weights
+- **来源**: arXiv 2609.23616
+- **链接**: https://arxiv.org/abs/2609.23616
+- **分类**: math.OA（非交换遍历 / 算子代数）
+- **摘要**: 带算子值权与调制的 (C,α)-平均非交换极大遍历定理。属 **§004-Gelfand 命中**。
+
+### Weak* polynomial density, diffuseness and proper infinitude
+- **来源**: arXiv 2609.23724
+- **链接**: https://arxiv.org/abs/2609.23724
+- **分类**: math.OA（von Neumann 代数）
+- **摘要**: von Neumann 代数的弱* 多项式稠密性、扩散性与真无限性。属 **§004-Gelfand 命中**。
+
+### Infinitesimal Freeness of Wigner Matrices
+- **来源**: arXiv 2609.24023
+- **链接**: https://arxiv.org/abs/2609.24023
+- **分类**: math.OA（自由概率 / 随机矩阵）
+- **摘要**: Wigner 矩阵的无穷小自由性。属 **§004-Gelfand 命中**（接 2608.21270 自由积 vNa 线）。
+
+### A complete characterization of eventually entanglement breaking unital quantum channels
+- **来源**: arXiv 2609.24168
+- **链接**: https://arxiv.org/abs/2609.24168
+- **分类**: math.OA, quant-ph（量子信道 / 算子代数）
+- **摘要**: 最终纠缠破缺酉正量子信道的完全刻画。属 **§004-Gelfand + 量子信息** 命中（接 2608.19685 量子退极化线）。
+
+### Bi-exact Wreath-like Product Groups
+- **来源**: arXiv 2609.24923
+- **链接**: https://arxiv.org/abs/2609.24923
+- **分类**: math.OA（群 C*-代数）
+- **摘要**: 类 Wreath 积的 bi-exact 群。属 **§004-Gelfand 命中**（群 C*-代数 / 算子代数）。
+
+### Campanato spaces via quantum semigroups
+- **来源**: arXiv 2609.22898
+- **链接**: https://arxiv.org/abs/2609.22898
+- **分类**: math.OA（量子半群 / 算子代数）
+- **摘要**: 经量子半群构造 Campanato 空间。属 **§004-Gelfand 命中**。
+
+### Optimal probing scale for current fluctuations in a Brownian gyrator
+- **来源**: arXiv 2609.24748
+- **链接**: https://arxiv.org/abs/2609.24748
+- **分类**: cond-mat.stat-mech（非平衡统计力学）
+- **摘要**: 确定布朗回转器中电流涨落的最优探测尺度。直接命中"布朗回转器 / 净能量交换"高优先级线——**随机热力学强命中（二·核心推荐）**。
+
+### Nonequilibrium energy transport and fluctuations in two-photon-driven nonlinear quantum optical systems
+- **来源**: arXiv 2609.23651
+- **链接**: https://arxiv.org/abs/2609.23651
+- **分类**: quant-ph（量子光学 / 非平衡）
+- **摘要**: 双光子驱动非线性量子光学系统中的非平衡能量输运与涨落。对应"净能量交换"高优先级——**随机热力学强命中（二·核心推荐）**。
+
+### Explanation of the Observed Energy Exchange through the vacuum in Optomechanics
+- **来源**: arXiv 2609.24900
+- **链接**: https://arxiv.org/abs/2609.24900
+- **分类**: quant-ph（腔光力学）
+- **摘要**: 解释光力学中经真空观测到的能量交换。对应"净能量交换"高优先级——**随机热力学强命中（二·核心推荐）**。
+
+### Quantum Otto Information Engine trio (Xiao & Wang)
+- **来源**: arXiv 2609.22821 / 2609.22826 / 2609.22831
+- **链接**: https://arxiv.org/abs/2609.22821
+- **分类**: quant-ph（量子热力学）
+- **摘要**: 有限时间量子 Otto 信息引擎近 unity 效率 / Filtering Demon / 超卡诺 Otto 信息引擎，反馈与相干功提取突破标准热力学界——**随机热力学强命中（二·核心推荐）**。
+
+---
