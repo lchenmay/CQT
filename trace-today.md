@@ -1,97 +1,90 @@
-## 📅 [2026-09-23] CQT 研究前沿动态
-*抓取批次：TUESDAY, 22 SEPTEMBER 2026（arXiv 美东 09-22 20:00 公告 ≈ 北京 09-23 08:00；异于上次成功批 FRI 18 SEP → 新批次）。报告日：北京 2026-09-23（周三）。*
+## 📅 [2026-09-24] CQT 研究前沿动态
+*抓取批次：WEDNESDAY, 23 SEPTEMBER 2026（arXiv 美东 09-23 20:00 公告 ≈ 北京 09-24 08:00；异于上次成功批 TUE 22 SEP → 新批次）。报告日：北京 2026-09-24（周四）。*
 
 ### 一、arXiv 基础与物理哲学追踪
 
 **分类计数（新投稿 / 含交叉与替换的总条目）**
 | 分类 | 新投稿 | 总条目 |
 |---|---|---|
-| quant-ph | **113** | 257 |
-| math-ph | 18 | 110 |
-| gr-qc | 37 | 126 |
-| hep-th | 30 | — |
-| cond-mat.stat-mech | 22 | 72 |
-| math.OC | 38 | 127 |
-| eess.SY | 50 | 134 |
-| math.CT | 4 | 13 |
-| math.OA | 9 | 23 |
-| math.DG | 48 | 89 |
-| cs.AI | 111 | 596 |
-| cs.LG | 241 | 636 |
+| quant-ph | **74** | 148 |
+| math-ph | 11 | 47 |
+| gr-qc | 35 | 72 |
+| hep-th | 22 | 80 |
+| cond-mat.stat-mech | 9 | 35 |
+| math.OC | 16 | 63 |
+| eess.SY | 26 | 61 |
+| math.CT | 1 | 6 |
+| math.OA | 7 | 17 |
+| math.DG | 30 | 63 |
+| cs.AI | 101 | 366 |
+| cs.LG | 118 | 325 |
 
-（quant-ph 用 `?skip=60` 补回 [64]–[113]，无截断。）
+（quant-ph 用 `?skip=60` 补回 [64]–[74]，无截断。）
 
-**🔬 量子基础与解释子区块（8 篇强命中 / 观察）**
-1. **2609.22159** — *The Limit and Its Ground. QBism, Scientific Realism, and the Born Rule*（Wiltsche）：剖析 Glick 的透视规范现实主义为何失败，以现象学"视域"重构 QBism 与 Born 规则客观性。——**量子基础（诠释 / QBism / Born 规则）**
-2. **2609.23041** — *The Requirement of (at least) Complex Structure for Quantum Mechanics*（Vaughan）：论证诸多"实值 QM"构造实质仍嵌入复结构；在态归一化 + 严格能量守恒下至少需复结构方允许时间演化。——**量子基础（数学哲学）**
-3. **2609.22998** — *The Generalised Causality Principle*（Naik）：针对过程矩阵形式提出广义因果原理，刻画单交互约束下的因果结构禁区。——**量子基础（因果性 / 不定因果序）**
-4. **2609.23255** — *Complete Detector Records and Contextual Source Laws in a Retrocausal Spin Model*（Weerasinghe）：逆因果自旋源的正包络记录与上下文源律，弱探测保护 traded-off。——**量子基础（逆因果 / 情境性）**
-5. **2609.24269** — *On the Born rule in a new quantum approach*：Born 规则的新进路。——**量子基础（Born 规则）**
-6. **2609.24169** — *No violation on a generalisation of Leggett-Garg inequality and Bell-CHSH inequality with extended probability*：以扩展概率推广 Leggett-Garg 与 Bell-CHSH 不等式。——**量子基础（Leggett-Garg / Bell 不等式）**
-7. **2609.22976** — *Weak Values Beyond the Weak Limit*（Andrei & Vedral）：发现一类测量协议的条件值严格与探测强度无关、即重合弱值实部。——**量子基础（弱值 / 测量理论）**
-8. **2609.23020** — *An attainable Gill-Massar-type bound for spin-factor models*（Yamagata）：在 spin factor（Jordan 代数态空间）上确定单拷贝多参数估计可达局域精度极限。——**量子基础 + §004（Jordan 代数）**
+**🔬 量子基础与解释子区块（9 篇强命中 / 观察）**
+1. **2609.26583** — *Preselection-Encoded Weak-Value Interferometry for Optical-Rotation Metrology*：预选编码弱值干涉术。**弱值 / 测量理论**——直接命中量子基础（继 2609.22976 弱值线）。
+2. **2609.25214** — *Nonlocal advantage of quantum coherence in tau-lepton pairs from electron–positron collisions*：从 e⁺e⁻ 碰撞 τ 轻子对观测非定域量子相干优势。**Bell 非定域性 / 量子相干**——基础。
+3. **2609.25726** — *The Failure of Simultaneous Quantum Typicality*：揭示"同时量子典型性"失效。**量子典型性（统计基础）**——基础。
+4. **2609.25382** — *Complementarity Test with Unmeasured, Permanently Inaccessible Path Markers*：用永久不可测路径标记检验互补性。**互补性 / 波粒二象性**——基础。
+5. **2609.25227** — *Localized Decoherence as a Constructive Tool*：将局域退相干用作构造性工具（物质波干涉光学模拟）。**退相干**——基础。
+6. **2609.25117** — *A non-robust quantum correlation self-test*：非鲁棒量子关联自检验。**自检验 / 关联**——基础（接 2609.25189 自检验线）。
+7. **2609.26548** — *Magnetic tuning of quantum backflow: Schrödinger vs Pauli system*：磁调控量子回流（薛定谔 vs 泡利系统）。**量子回流（奇异基础现象）**——基础。
+8. **2609.26453** — *Hilbert-space fragmentation selects channels of strong-to-weak spontaneous symmetry breaking*：希尔伯特空间碎片化选择强→弱自发对称破缺通道。**对称破缺（基础/非平衡）**——高优先级基础线。
+9. **2609.25208** — *Thermodynamic Proof of Quantumness without Structure*：无需结构假设的量子性热力学证明。**量子性 / 量子热力学**——基础近邻。
 
-**§003-type-topos 映射（弱/近邻命中）**
-- **2609.24034**（math.CT）*From 3-crossed modules to Gray-type 4-categories* — 高阶范畴（Gray 型 4-范畴），§003 高阶范畴近邻。
-- **2609.24325**（math.CT）*Observations on the variety of equationally linear Heyting semilattices* — 海廷半格 = 直觉主义逻辑代数，正是 topos 次对象分类器逻辑的内核，§003 弱命中。
-- **2609.22371**（math.CT）*A non-spatial frame of smashing ideals* — 张量三角范畴的局部化/ smashing 理想，§003 范畴近邻。
-- **2609.23034**（math-ph）*Higher-order and non-geometric symmetries and Noether's theorem in k-cosymplectic Hamiltonian field theory* — k-余辛哈密顿场论的 Noether 对称，§003 几何力学/辛约化近邻。
+**§003-type-topos 映射（弱命中）**
+- **2609.26270**（math.CT，Patrick Forré）*Sample-Smooth Spaces: A Convenient Category for Differentiable Probabilistic Programming* — "光滑空间"的便利范畴（可微概率编程）。光滑空间 = diffeological / smooth sets，是**合成微分几何 / 光滑 topos** 的直接近邻；§003 弱命中（层论/合成微分几何线）。
 
 **§004-Gelfand / 算子代数映射（强命中）**
-- **2609.22685**（math.OA）*C\*-extreme maps and \*-homomorphisms from C(X) to finite von Neumann algebras* — C\*-极值映射与 C(X)→有限 vNa 的同态，**§004 强命中**。
-- **2609.23004** — *Quantitative decomposition and approximation for quasi-local operators* — 准局域算子（AQFT/算子代数）。
-- **2609.23510** — *The Identity as a Single Commutator of Affiliated Operators* — von Neumann 附属算子的单交换子。
-- **2609.23616** — *Noncommutative Maximal Ergodic Theorems for Modulated (C,α)-Averages with Operator-Valued Weights* — 非交换极大遍历定理。
-- **2609.23724** — *Weak\* polynomial density, diffuseness and proper infinitude* — von Neumann 代数弱\* 多项式稠密性。
-- **2609.24023** — *Infinitesimal Freeness of Wigner Matrices* — 自由概率/随机矩阵。
-- **2609.24168** — *A complete characterization of eventually entanglement breaking unital quantum channels* — 量子信道完全刻画，**§004 + 量子信息**。
-- **2609.24923** — *Bi-exact Wreath-like Product Groups* — 群 C\*-代数。
-- **2609.22898** — *Campanato spaces via quantum semigroups* — 量子半群。
+- **2609.26319**（math.OA）*Solution to Dixmier's Problem about spectra of C\*-algebras* — **解决 Dixmier 关于 C\* 代数谱的著名问题**，**§004 旗舰强命中**。
+- **2609.25694** — *Covariant representations of actions of inverse semigroups: reduced and essential crossed-product C\*-algebras* — 逆半群作用的协变表示与交叉积 C\* 代数。
+- **2609.26496** — *Coarse rigidity in von Neumann algebras via derivations* — 经导数的 von Neumann 代数粗刚性。
+- **2609.26646** — *An ICC group with property (T) that is not properly proximal* — 具 property (T) 但非 properly proximal 的 ICC 群（群 von Neumann 代数）。
+- **2609.26643** — *The Coarse Novikov Conjecture for Finite Products of Fibred Coarsely Embeddable Spaces* — 粗 Novikov 猜想（算子 K-理论 / 粗几何）。
+- **2609.25871** — *The 2-Norm Distance on the Reflexive Lattice Generated by a Double Triangle Lattice of Projections* — 投影格（von Neumann 代数格结构）。
+- **2609.26515** — *A Separable Hilbertian Operator Space with CBAP and No Completely Bounded Basis* — 算子空间（CBAP / 完全有界基）。
 
 ### 二、随机热力学与几何控制核心推荐
 
-> 五关键词（Stochastic Thermodynamics+Information Geometry / Multiplicative Noise+PCH/Dirac / HJB+Stochastic Optimal Control / Ito+Symplectic）标题级仍 **0 精确命中**；但布朗回转器直接命中 + 量子热力学/几何控制近邻实质丰收。
+> 五关键词（Stochastic Thermodynamics+Information Geometry / Multiplicative Noise+PCH/Dirac / HJB+Stochastic Optimal Control / Ito+Symplectic）标题级仍 **0 精确命中**；但信息几何、端口受控 Hamilton、Mpemba 弛豫、重置动力学、随机 MPC 等近邻实质丰收。
 
-1. **【高优先级】2609.24748** — *Optimal probing scale for current fluctuations in a Brownian gyrator*（cond-mat.stat-mech）。**布朗回转器直接命中**。确定布朗回转器中电流涨落的最优探测尺度，属非平衡态耗散/净能量交换理论突破。数学模型：回转器两模耦合 Fokker–Planck / 电流涨落谱；关联度 ★★★★★。
-2. **【高优先级】2609.23651** — *Nonequilibrium energy transport and fluctuations in two-photon-driven nonlinear quantum optical systems*（quant-ph）。双光子驱动非线性量子光学系统中的**非平衡能量输运与涨落**，直接对应"净能量交换"高优先级线。数学模型：非线性量子光学主方程 + 稳态能量流；关联度 ★★★★★。
-3. **【高优先级】2609.24900** — *Explanation of the Observed Energy Exchange through the vacuum in Optomechanics*（quant-ph）。解释光力学中**经真空观测到的能量交换**，对应"净能量交换"高优先级。数学模型：腔光力学耦合 + 真空起伏能量流；关联度 ★★★★☆。
-4. **【高优先级】2609.22821 / 2609.22826 / 2609.22831**（quant-ph，Xiao & Wang 三人组）— *Finite-Time Quantum Otto Information Engine Achieving Near-Unity Efficiency* / *The Filtering Demon* / *Unbounded Work Extraction … Super-Carnot Otto Information Engine*。量子 Otto 信息引擎 + 麦克斯韦妖过滤 + 超卡诺功提取，反馈与相干功提取突破标准热力学界。数学模型：量子 Otto 循环 + 信息涨落定理；关联度 ★★★★★（能量收集/量子热力学理论突破）。
-5. **【中优先级】2609.22678** — *Riemannian Density-Driven Optimal Control: Tangent-Space LQR for Second-Order Multi-Agent Systems on Curved Manifolds*（math.OC）。弯曲黎曼流形上二阶多智能体系统的切空间 LQR 最优控制，微分几何 + 最优控制交叉。数学模型：黎曼流形几何 + LQR；关联度 ★★★★☆（中优先级：几何控制）。
-   - 补充中优先级：2609.23034（k-余辛哈密顿场论 Noether，几何力学/辛）；2609.23072（平均场 SDE 精确能控性 / Hautus 判据）、2609.24185（领导-跟随随机图博弈 LQ）属随机最优控制。
+1. **【高优先级】2609.25359** — *Superradiant Mpemba Relaxation in a Dicke Ladder*（quant-ph）。Dicke 梯子中的**超辐射 Mpemba 弛豫**（非平衡态反常弛豫加速）。属"随机对称性破缺 / 非平衡态耗散"高优先级线。数学模型：Dicke 模型主方程 + Mpemba 效应温度初值依赖；关联度 ★★★★★。
+2. **【高优先级】2609.25934** — *Therodynamic efficiency of communication channels*（cond-mat.stat-mech）。通信信道的**热力学效率**（信息–热力学基本极限）。属"净能量交换 / 信息热力学"高优先级。数学模型：信道热力学代价 + 效率界；关联度 ★★★★★。
+3. **【高优先级】2609.26159** — *Fisher-Information Geometry Linking Schrodinger Dynamics, Bipartite Correlations, and Decoherence*（quant-ph）。**Fisher 信息几何**将薛定谔动力学、两体关联与退相干统一链接。直接对应"随机热力学 + 信息几何"近邻。数学模型：Fisher 信息度量 + 量子动力学几何；关联度 ★★★★★。
+4. **【中优先级】2609.25920** — *Energy-optimal predictive control of discrete-time port-Hamiltonian systems: Closed-loop practical stability*（eess.SY）。离散时间**端口受控 Hamilton 系统**的能量最优预测控制（闭环实用稳定性）。对应"Multiplicative Noise/PCH/Dirac"近邻——**§几何控制中优先级**。数学模型：PCH 系统 + MPC；关联度 ★★★★☆。
+5. **【中高优先级】2609.25252** — *Approach to Steady-State in Nested Resetting Processes*（cond-mat.stat-mech）。嵌套重置过程的**稳态趋近**（非平衡重置动力学）。属"非平衡态 / 重置"中高优先级。数学模型：重置随机过程稳态；关联度 ★★★★☆。
+   - 补充中优先级：2609.25257 / 2609.26416（随机模型预测控制 / 子高斯扰动随机控制，HJB 随机最优控制近邻）；2609.25580（SO(3) 刚体 leader-follower 姿态同步，李群几何控制）；2609.25747（fast-slow 平面系统的 entry-exit 最优控制，几何奇异扰动）。
 
 ### 三、每日研究前沿四方向
 
 **① 量子（quant-ph 亮点）**
-- **2609.22572** — *Modular fault-tolerant quantum computing on a non-CSS code*：首次在离子阱上用非 CSS 完美 [[5,1,3]] 码实现全套容错通用逻辑操作（含实时反馈 QEC、magic-state 注入）。**QEC 旗舰**。
-- **2609.22176** — *Every architecture of six two-qubit gates is locally universal on three qubits*：三量子比特任意固定六两比特门架构局部普适性的首个解析判定（雅可比证书）。
-- **2609.22669** — *Metric Self-Dual Completion and Optimal Additive Hardness for Quantum and Graph-State Distance*：量子码距离/图态距离 NP-hard 加性近似（线性 gap），解决 Kapshikar–Kundu 公开问题。
-- **2609.24316** — *A Sharp Noise Threshold for Shor's Quantum Factoring*：Shor 分解/离散对数算法的尖锐噪声阈值。
-- **2609.23946** — *A constructive violation of additivity of minimum output von Neumann entropy*：最小输出冯·诺依曼熵可加性的构造性违例。
+- **2609.26691** — *Transversal non-Clifford gates on good quantum locally testable codes*：在 good qLTC 上实现横截非 Clifford 门（容错量子计算关键难题突破）。**QEC 旗舰**。
+- **2609.26735** — *Good Quantum Locally Testable Codes from Product Expansion*：由乘积展开构造 good qLTC。**QEC**。
+- **2609.25201** — *Measurement-Induced Phase Transitions and Logical-Space Localization in Floquet Monitored Clifford Circuits*：Floquet 监测 Clifford 线路中的测量诱导相变与逻辑空间局域化。**量子多体/信息**。
+- **2609.25660** — *Schrödingerization for quantum linear systems problems*：薛定谔化方法解量子线性系统问题。**量子算法**。
+- **2609.25680** — *BQP ⊆ IP Does Not Relativize*：BQP 包含于 IP 不相对化（量子复杂性）。
+- **2609.25816** — *Exponential Quantum Advantage in Testing Fourier Dimensionality*：检验傅里叶维数的指数级量子优势。
 
 **② Topos / 范畴论（math.CT）**
-- **2609.24034** — *From 3-crossed modules to Gray-type 4-categories*：3-交叉模 → Gray 型 4-范畴，高阶范畴结构。
-- **2609.24325** — *Observations on the variety of equationally linear Heyting semilattices*：海廷半格（直觉主义逻辑代数，topos 逻辑内核）。
-- **2609.22371** — *A non-spatial frame of smashing ideals*：张量三角范畴的 smashing 理想与局部化。
+- **2609.26270** — *Sample-Smooth Spaces: A Convenient Category for Differentiable Probabilistic Programming*（Forré）：光滑空间的便利范畴用于可微概率编程。§003 弱命中（合成微分几何 / 光滑集 topos 近邻）；同时是 概率编程 + 微分几何 的交叉，与 CQT 几何/概率线呼应。
 
 **③ Gelfand 理论 / 算子代数（math.OA）**
-- **2609.22685** — *C\*-extreme maps and \*-homomorphisms from C(X) to finite von Neumann algebras*（C\*/vNa）。
-- **2609.24168** — *eventually entanglement breaking unital quantum channels* 完全刻画（§004 + 量子信息）。
-- **2609.24023** — *Infinitesimal Freeness of Wigner Matrices*（自由概率/随机矩阵）。
-- **2609.23616** — *Noncommutative Maximal Ergodic Theorems*（非交换遍历）。
+- **2609.26319** — *Solution to Dixmier's Problem about spectra of C\*-algebras*：**解决 Dixmier 关于 C\* 代数谱的著名公开问题**，§004 本批最强命中。
+- **2609.25694** — 逆半群作用交叉积 C\* 代数（协变表示）。
+- **2609.26496** — von Neumann 代数粗刚性（导数方法）。
+- **2609.26646** — ICC 群 property (T) 但非 properly proximal（群 vNa）。
+- **2609.26643** — 粗 Novikov 猜想（算子 K-理论）。
 
 **④ AI（cs.AI / cs.LG）**
-- **2609.22682** — *Self-Organizing Agent Teams Learn to Reason Together*：固定智能体团队从协作中学习可复用组织策略（collaborative computation），AIME 2026 超完美 router 13.4 点。**Agent/推理**。
-- **2609.22712** — *Trustworthy Agentic AI: Failure Modes, Mitigation Strategies, and TADL*：可信 Agentic AI 五维 taxonomy + 六阶段 TADL 生命周期框架。
-- **2609.22951** — *AgentRouter: Heterogeneous Model Routing for Cost-Optimal Multi-Step Agentic Workflows*：12M 参数分类器对 Agent 轨迹逐步路由，降 72% 成本留 97.3% 质量。**Agent 工程**。
-- **2609.23023** — *PINNForge*：LLM 驱动、以执行反馈进化的 PINN 自动设计解 PDE（25 基准 24 项最低 MSE）。**AI+科学**。
-- **2609.22196**（cs.LG）— *EvoRank: LLM-Guided Evolution of Multi-Objective LTR Pipelines*（"开放自主排序工程师"）。**自主研究**。
-- **2609.24657**（quant-ph）— *Circuit Hypernetworks for Quantum-Augmented Diffusion Language Models*。**量子+AI 交叉**。
+- **2609.25199** — *Lean Pool: An AI-Maintained Archive of Formalized Mathematics*：AI 维护的形式化数学档案（Lean）。**形式化**。
+- **2609.26029** — *CQ4OE: benchmark for LLM-assisted ontology generation from competency questions*：LLM 辅助本体生成基准。**形式化 / 本体**。
+- **2609.25254** — *When LLM Agents Fail to Read the Room: ReAdapt for Relational Social Reasoning*：LLM 代理关系社会推理。**Agent/推理**。
+- **2609.25463** — *Rollout Efficiency in RL for Reasoning LLMs: A Taxonomy and Future Directions*：推理大模型 RL 的 rollout 效率。**推理**。
+- **2609.25643** — *Ladders of Thought: A Self-Evolving Curriculum of Progressively Simplified Reasoning Traces*：自演化推理轨迹课程。**推理**。
+- **2609.25555**（cs.AI）— *Weakly Supervised Quantum Error Mitigation*。**量子+AI 交叉**（量子误差缓解）。
+- **2609.25082**（cs.LG）— *Federating Quantum and Classical Computing: A Privacy-Preserving Hybrid Approach*。**量子+AI 交叉**（量子-经典联邦学习）。
 
 ### 💡 今日趋势洞察
-- 量子热力学/信息引擎（Xiao–Wang 三人组 + 量子信息引擎）本批集中爆发，麦克斯韦妖过滤与相干功提取成为非平衡量子热力学最活跃的前沿，且直接呼应 CQT「随机几何力学/能量收集」主线。
-- math.OA 本批 9 篇全部切中算子代数核心（C\*、von Neumann、量子信道、自由概率、非交换遍历），§004-Gelfand 线收获稳定；math.CT 虽仅 4 篇，但海廷半格与高阶范畴仍维持 §003 弱信号。
-- AI Agent 方向聚焦"可信 / 自组织 / 成本最优路由"，自主研究工程化（PINNForge、AutoGym）持续升温，量子+AI 交叉出现量子增强扩散语言模型，值得纳入 CQT 量子+AI 跟踪视野。
-
----
-
-⚠️ **缺口提示**：MONDAY 21 SEPTEMBER 2026 批次因 09-22 的定时运行未落盘而未能捕获，现已滚出 `/new`；如需补齐须用 dated URL 单独抓取。本次跳过直接处理 TUE 22 SEP。
+- math.OA 本批虽仅 7 篇，却含 **Dixmier 谱问题之解**这一算子代数里程碑，§004-Gelfand 线收获厚重；其余 6 篇清一色 C\*/von Neumann/算子空间/粗几何，稳定延续算子代数核心。
+- 量子热力学/非平衡弛豫方向本批出现 **Dicke 梯子超辐射 Mpemba 弛豫 + Fisher 信息几何统一薛定谔/退相干**，与 CQT「随机几何力学/能量收集」主线高度契合；端口受控 Hamilton 系统的能量最优 MPC 也补上了几何控制近邻。
+- AI 方向形式化（Lean Pool、本体生成基准）与量子+AI 交叉（弱监督量子误差缓解、量子-经典联邦）双线升温，建议持续纳入 CQT 量子+AI 跟踪视野。
