@@ -1994,3 +1994,133 @@
 - **摘要**: 嵌套重置过程的稳态趋近（非平衡重置动力学）。属"非平衡态"中高优先级——**随机热力学强命中（二·核心推荐）**。
 
 ---
+
+## 2026-09-24
+
+### Free semigroup non-relativistic phase space states quantisation
+- **来源**: arXiv 2609.27004
+- **链接**: https://arxiv.org/abs/2609.27004
+- **分类**: quant-ph（量子基础 / 几何量子化）
+- **摘要**: 自由半群的非相对论相空间态量子化。属**量子基础（相空间量子化 / 几何量子化）**。
+
+### Unbounded Operators, Physicality, and Modality in Quantum Theories
+- **来源**: arXiv 2609.28136
+- **链接**: https://arxiv.org/abs/2609.28136
+- **分类**: quant-ph（量子基础 / 算符与模态）
+- **摘要**: 量子理论中的无界算子、物理性与模态性。属**量子基础（算符 / 模态）**。
+
+### A Proof of Shor's Orthogonal-Measurement Conjecture and the Structure of Information-Optimal Quantum Measurements
+- **来源**: arXiv 2609.27992
+- **链接**: https://arxiv.org/abs/2609.27992
+- **分类**: quant-ph（量子基础 / 测量理论）
+- **摘要**: 证明 Shor 正交测量猜想并刻画信息最优量子测量结构。属**量子基础（测量理论 / 信息最优测量）**。
+
+### Minimal representations of topology-preserving quantum-like states
+- **来源**: arXiv 2609.27318
+- **链接**: https://arxiv.org/abs/2609.27318
+- **分类**: quant-ph（量子基础 / 量子态）
+- **摘要**: 保拓扑量子态的最小表示。属**量子基础（量子态表征）**。
+
+### Geometric perspective on quantum Rabi model: Superadiabatic universality and curvature non-adiabatic effects
+- **来源**: arXiv 2609.27662
+- **链接**: https://arxiv.org/abs/2609.27662
+- **分类**: quant-ph（量子基础 / 几何与绝热）
+- **摘要**: 量子 Rabi 模型的几何视角（超绝热普适性与曲率非绝热效应）。属**量子基础近邻（几何 / 绝热）**。
+
+### Quantum-Enhanced Sampling of Schrödinger Bridges
+- **来源**: arXiv 2609.27103
+- **链接**: https://arxiv.org/abs/2609.27103
+- **分类**: quant-ph（量子信息 / 信息几何）
+- **摘要**: 薛定谔桥的量子增强采样。对应"随机热力学 + 信息几何"近邻——**量子基础/热力学交界**。
+
+### Coherence-Enhanced Spatial Quantum Thermometry
+- **来源**: arXiv 2609.26936
+- **链接**: https://arxiv.org/abs/2609.26936
+- **分类**: quant-ph（量子热力学）
+- **摘要**: 相干增强空间量子测温。属**量子热力学 / 量子基础近邻**。
+
+### Transparent Domain Walls through Information Convex Sets
+- **来源**: arXiv 2609.26892
+- **链接**: https://arxiv.org/abs/2609.26892
+- **分类**: quant-ph（量子信息几何 / 凸集）
+- **摘要**: 经信息凸集的透明畴壁（量子信息几何 / 凸集）。属**量子基础近邻（信息几何）**。
+
+### Formal weakly enriched category theory
+- **来源**: arXiv 2609.28435
+- **链接**: https://arxiv.org/abs/2609.28435
+- **分类**: math.CT（高阶 / Enriched 范畴）
+- **摘要**: 形式化弱 enrichment 范畴论。属 §003-type-topos 弱命中（enriched/higher cats 线）。
+
+### Conservative functors to pointed categories
+- **来源**: arXiv 2609.27056
+- **链接**: https://arxiv.org/abs/2609.27056
+- **分类**: math.CT（范畴论）
+- **摘要**: 到 pointed 范畴的保守函子。属 §003-type-topos 弱命中（范畴论基础）。
+
+### Derived Smooth and Banach Higher Groupoids: Representability and Descent
+- **来源**: arXiv 2609.28220
+- **链接**: https://arxiv.org/abs/2609.28220
+- **分类**: math.DG（光滑群胚 / 合成微分几何）
+- **摘要**: 导出光滑 / Banach 高阶群胚：可表性与下降。光滑群胚 + descent 是合成微分几何 / 光滑 topos 近邻。属 §003-type-topos 中强命中（光滑 topos 线）。
+
+### A separably representable counterexample to Naimark's problem in ZFC
+- **来源**: arXiv 2609.26930
+- **链接**: https://arxiv.org/abs/2609.26930
+- **分类**: math.OA（C*-代数）
+- **摘要**: 在 ZFC 内给出 Naimark 问题的可分表示反例（C*-代数著名问题）。属 **§004-Gelfand 旗舰强命中**。
+
+### Partial factorization and reflexivity of operator algebras
+- **来源**: arXiv 2609.27479
+- **链接**: https://arxiv.org/abs/2609.27479
+- **分类**: math.OA（算子代数）
+- **摘要**: 算子代数的部分分解与自反性。属 **§004-Gelfand 强命中**。
+
+### C*-irreducible regular inclusions, Galois correspondence and aperiodicity
+- **来源**: arXiv 2609.27518
+- **链接**: https://arxiv.org/abs/2609.27518
+- **分类**: math.OA（C*-代数）
+- **摘要**: C*-不可约正则包含与 Galois 对应、非周期性。属 **§004-Gelfand 强命中**。
+
+### Certain Cuntz semigroup properties of extension C*-algebras
+- **来源**: arXiv 2609.27694
+- **链接**: https://arxiv.org/abs/2609.27694
+- **分类**: math.OA（C*-代数）
+- **摘要**: 扩张 C*-代数的 Cuntz 半群性质。属 **§004-Gelfand 强命中**。
+
+### Isometric embeddings of noncommutative L_p-spaces into noncommutative symmetric spaces
+- **来源**: arXiv 2609.27827
+- **链接**: https://arxiv.org/abs/2609.27827
+- **分类**: math.OA（非交换 Lp / 空间）
+- **摘要**: 非交换 L_p 空间等距嵌入非交换对称空间。属 **§004-Gelfand 强命中**。
+
+### Universal splitting of nonequilibrium phase transitions in driven Potts heat engines
+- **来源**: arXiv 2609.28148
+- **链接**: https://arxiv.org/abs/2609.28148
+- **分类**: cond-mat.stat-mech（非平衡 / 热机）
+- **摘要**: 驱动 Potts 热机中非平衡相变的普适分裂。属"非平衡态耗散 / 净能量交换 / 热机"高优先级——**随机热力学强命中（二·核心推荐）**。
+
+### Exact Collision Vertex for Stress and Heat Flux
+- **来源**: arXiv 2609.26807
+- **链接**: https://arxiv.org/abs/2609.26807
+- **分类**: cond-mat.stat-mech（非平衡输运）
+- **摘要**: 应力与热通量的精确碰撞顶点（非平衡输运微观理论）。属"非平衡态耗散 / 能量输运"高优先级——**随机热力学强命中（二·核心推荐）**。
+
+### Multiscale Entropies as Order Parameters for Nonequilibrium Phase Transitions
+- **来源**: arXiv 2609.27705
+- **链接**: https://arxiv.org/abs/2609.27705
+- **分类**: cond-mat.stat-mech（非平衡相变）
+- **摘要**: 将多尺度熵作为非平衡相变序参量。属"非平衡态耗散 / 熵产生"高优先级——**随机热力学强命中（二·核心推荐）**。
+
+### State-Dependent Delays in Optimal Control and Hamilton-Jacobi Equations
+- **来源**: arXiv 2609.27776
+- **链接**: https://arxiv.org/abs/2609.27776
+- **分类**: math.OC（最优控制 / HJB）
+- **摘要**: 状态相关时滞最优控制与 Hamilton-Jacobi 方程。对应"HJB + 随机最优控制"近邻——**几何控制中优先级（二·核心推荐）**。
+
+### Stochastic linear-quadratic control problem for regime-switching jump-diffusion system
+- **来源**: arXiv 2609.27589
+- **链接**: https://arxiv.org/abs/2609.27589
+- **分类**: math.OC（随机控制 / 跳跃扩散）
+- **摘要**: regime-switching 跳跃扩散系统的随机线性二次控制（金融应用）。对应"HJB + 随机最优控制"近邻——**随机控制中优先级（二·核心推荐）**。
+
+---
