@@ -2,7 +2,7 @@
 \documentclass[10pt, openany]{book}
 
 \usepackage{../preamble}
-\addbibresource{c:/Dev/CQT/ref.bib}
+\addbibresource{../ref.bib}
 
 \fancyhead[LE,RO]{\thepage}
 \fancyhead[RE]{\textbf{复数讲义}}
@@ -59,10 +59,10 @@ z_1 \cdot z_2 = (x + y\mathrm{i})(c + d\mathrm{i}) = (xc - yd) + (xd + yc)\mathr
 \overline{z} = x - y\mathrm{i}.
 \]
 共轭运算满足：
-\[
+\begin{gather*}
 \overline{\overline{z}} = z,\quad \overline{z_1 \pm z_2} = \overline{z_1} \pm \overline{z_2},\\
 \overline{z_1 z_2} = \overline{z_1} \cdot \overline{z_2},\quad \overline{\left(\frac{z_1}{z_2}\right)} = \frac{\overline{z_1}}{\overline{z_2}}\ (z_2 \neq 0).
-\]
+\end{gather*}
 
 复数 \(z = x+y\mathrm{i}\) 的\textbf{模}(modulus)\index{模（复数）}定义为
 \[
@@ -70,12 +70,12 @@ z_1 \cdot z_2 = (x + y\mathrm{i})(c + d\mathrm{i}) = (xc - yd) + (xd + yc)\mathr
 \]
 
 模具有以下性质：
-$$ 
+\begin{gather*}
 |z| \ge 0,\quad |z| = 0 \iff z=0,\\
 |z_1 z_2| = |z_1| \cdot |z_2|,\quad \left|\frac{z_1}{z_2}\right| = \frac{|z_1|}{|z_2|}\ (z_2 \neq 0),\\
 |z|^2 = z \overline{z},\\
 |z_1 + z_2| \le |z_1| + |z_2| \quad \text{(三角不等式)}.
-$$
+\end{gather*}
 
 若 \(z_2 \neq 0\)，则
 \[

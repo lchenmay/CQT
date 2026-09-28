@@ -1,54 +1,28 @@
 {
-  "latex-workshop.latex.recipes": [
-    {
-      "name": "lualatex (latexmk 完整编译)",
-      "tools": [
-        "latexmk_conditional"
-      ]
-    }
-  ],
   "latex-workshop.latex.tools": [
     {
-      "name": "latexmk_conditional",
-      "command": "powershell.exe",
+      "name": "latexmk-lualatex",
+      "command": "latexmk",
       "args": [
-        "-ExecutionPolicy",
-        "Bypass",
-        "-File",
-        "c:/Dev/CQT/build-tex.ps1",
+        "-lualatex",
+        "-shell-escape",
+        "-interaction=nonstopmode",
         "%DOC%"
       ]
     }
   ],
-  "latex-workshop.latex.recipe.default": "first",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk (lualatex)",
+      "tools": [
+        "latexmk-lualatex"
+      ]
+    }
+  ],
   "latex-workshop.latex.autoBuild.run": "onSave",
-  "latex-workshop.latex.autoClean.run": "never",
+  "latex-workshop.latex.autoBuild.clean": true,
   "latex-workshop.view.pdf.viewer": "tab",
-  "latex-workshop.view.pdf.tab.openOnCompile": true,
-  "latex-workshop.latex.clean.fileTypes": [
-    "*.aux",
-    "*.bbl",
-    "*.blg",
-    "*.idx",
-    "*.ind",
-    "*.lof",
-    "*.lot",
-    "*.out",
-    "*.toc",
-    "*.acn",
-    "*.acr",
-    "*.alg",
-    "*.glg",
-    "*.glo",
-    "*.gls",
-    "*.fls",
-    "*.log",
-    "*.fdb_latexmk",
-    "*.snm",
-    "*.nav",
-    "*.vrb",
-    "*.synctex.gz",
-    "*.run.xml",
-    "*.bcf"
-  ]
+  "latex-workshop.latex.clean.subfolder": {
+    ".latexmk": true
+  }
 }
