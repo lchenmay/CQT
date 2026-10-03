@@ -2124,3 +2124,853 @@
 - **摘要**: regime-switching 跳跃扩散系统的随机线性二次控制（金融应用）。对应"HJB + 随机最优控制"近邻——**随机控制中优先级（二·核心推荐）**。
 
 ---
+
+## 2026-09-25
+
+### Quantization and Mirror Reduction Do Not Commute in Hamiltonian Embeddings of Nonreciprocal Dynamics
+- **来源**: arXiv 2609.28494
+- **链接**: https://arxiv.org/abs/2609.28494
+- **分类**: quant-ph（量子基础 / 几何量子化）
+- **摘要**: 哈密顿嵌入中非互易动力学的量子化与镜面约化不对易。属**量子基础（几何量子化 / 约化）**（接 2609.27004 相空间量子化线）。
+
+### The Uncertainty Principle, Uncertainty Relations, and Underlying Trajectories: Feynman, Nelson, Bohm, and Persistent Kac-Dirac Dynamics
+- **来源**: arXiv 2609.29248
+- **链接**: https://arxiv.org/abs/2609.29248
+- **分类**: quant-ph（量子基础 / 隐轨迹与解释）
+- **摘要**: 不确定性原理、不确定关系与隐轨迹（Feynman / Nelson / Bohm / Kac-Dirac 动力学）。属**量子基础（量子轨迹 / 解释）**。
+
+### Anisotropic information geometry of entropy production
+- **来源**: arXiv 2609.29385
+- **链接**: https://arxiv.org/abs/2609.29385
+- **分类**: quant-ph（随机热力学 / 信息几何）
+- **摘要**: 熵产生的各向异性信息几何。对应"Stochastic Thermodynamics + Information Geometry"直接命中——**基础/热力学交界强命中（二·核心推荐 高）**。
+
+### Certified exact identification of the I3322 quantum value
+- **来源**: arXiv 2609.29693
+- **链接**: https://arxiv.org/abs/2609.29693
+- **分类**: quant-ph（量子基础 / Bell 非定域性）
+- **摘要**: I3322 量子值的认证式精确识别（I3322 为 Bell 不等式）。属**量子基础（Bell 非定域性）**。
+
+### Quantum Channel Stein Theorem beyond Definite Causal Order
+- **来源**: arXiv 2609.30268
+- **链接**: https://arxiv.org/abs/2609.30268
+- **分类**: quant-ph（量子基础 / 因果序）
+- **摘要**: 超越确定因果序的量子信道 Stein 定理。属**量子基础（因果序）**。
+
+### Universal holonomic control of algebras of observables
+- **来源**: arXiv 2609.28662
+- **链接**: https://arxiv.org/abs/2609.28662
+- **分类**: quant-ph（量子基础 / 算符代数）
+- **摘要**: 可观测量代数的普适全纯（holonomic）控制。属**量子基础（算符代数，§004 近邻）**。
+
+### Evaluation-efficient quantum architecture search with ZX-calculus-based topological reuse
+- **来源**: arXiv 2609.29098
+- **链接**: https://arxiv.org/abs/2609.29098
+- **分类**: quant-ph（范畴化量子信息）
+- **摘要**: 基于 ZX-演算的拓扑复用量子架构搜索。属 §003-type-topos 弱命中（categorical QIT）。
+
+### Groupoidal polygraphic homology
+- **来源**: arXiv 2609.29967
+- **链接**: https://arxiv.org/abs/2609.29967
+- **分类**: math.CT（高阶范畴 / 同调）
+- **摘要**: 群胚的多图同调（Guetta, Métayer）。属 §003-type-topos 弱命中（高阶范畴 / 同调）。
+
+### Filtered deformations of Lie groupoids
+- **来源**: arXiv 2609.29331
+- **链接**: https://arxiv.org/abs/2609.29331
+- **分类**: math.DG（李群胚 / 合成微分几何）
+- **摘要**: 李群胚的滤子形变。李群胚是合成微分几何 / 光滑 topos 近邻。属 §003-type-topos 弱-中命中。
+
+### C*-selflessness of vigorous groups
+- **来源**: arXiv 2609.29399
+- **链接**: https://arxiv.org/abs/2609.29399
+- **分类**: math.OA（C*-代数）
+- **摘要**: 活跃群的 C*-自无我性（C*-代数 / 群）。属 **§004-Gelfand 旗舰强命中**。
+
+### A computable wandering and tracelike vector for modular orbits in the Bergman space
+- **来源**: arXiv 2609.30014
+- **链接**: https://arxiv.org/abs/2609.30014
+- **分类**: math.OA（von Neumann / 模理论）
+- **摘要**: Bergman 空间模轨道的可计算游荡与迹型向量（Tomita-Takesaki 模理论）。属 **§004-Gelfand 强命中**。
+
+### W*-categories are von Neumann
+- **来源**: arXiv 2609.30015
+- **链接**: https://arxiv.org/abs/2609.30015
+- **分类**: math.OA（von Neumann 代数 / 范畴）
+- **摘要**: W*-范畴即 von Neumann 代数。属 **§004-Gelfand 强命中**。
+
+### The Dynamical Radius of Comparison for C*-Dynamical Systems
+- **来源**: arXiv 2609.30211
+- **链接**: https://arxiv.org/abs/2609.30211
+- **分类**: math.OA（C*-动力系统）
+- **摘要**: C*-动力系统的动力学比较半径（Radius of Comparison）。属 **§004-Gelfand 强命中**。
+
+### Collective thermalization, work reliability, and resource bounds in a population-inverted Dicke Otto engine
+- **来源**: arXiv 2609.30132
+- **链接**: https://arxiv.org/abs/2609.30132
+- **分类**: quant-ph（量子热机 / 能量收集）
+- **摘要**: 人口反转 Dicke Otto 引擎的集体热化、功可靠性与资源界。属"净能量交换 / 量子热机"高优先级——**能量收集强命中（二·核心推荐 高）**。
+
+### Fluctuation–Response Relation in Finite-Size Noisy Coupled Phase Oscillators
+- **来源**: arXiv 2609.28834
+- **链接**: https://arxiv.org/abs/2609.28834
+- **分类**: cond-mat.stat-mech（非平衡 / 涨落-响应）
+- **摘要**: 有限尺寸噪声耦合相振子的涨落-响应关系。属"非平衡态耗散"中高优先级——**随机热力学强命中（二·核心推荐 高-中）**。
+
+### Policy iteration for Hamilton-Jacobi-Isaacs equations with control constraints and comparison with Hamilton-Jacobi-Bellman equations
+- **来源**: arXiv 2609.29368
+- **链接**: https://arxiv.org/abs/2609.29368
+- **分类**: math.OC（最优控制 / HJB-HJI）
+- **摘要**: 带控制约束的 Hamilton-Jacobi-Isaacs 方程策略迭代，并与 HJB 比较。对应"HJB + 随机最优控制"近邻——**几何控制中优先级（二·核心推荐）**。
+
+### On Fast-Slow Mean-Field Forward-Backward Stochastic Systems
+- **来源**: arXiv 2609.28902
+- **链接**: https://arxiv.org/abs/2609.28902
+- **分类**: math.OC（随机控制 / 倒向 SDE）
+- **摘要**: 快-慢平均场正倒向随机系统（FBSDE）。对应"随机最优控制 / 倒向方程"近邻——**随机控制中优先级（二·核心推荐）**。
+
+---
+
+## 2026-09-28
+
+### On the applicability of Kolmogorov's theory of probability to the description of quantum phenomena. Part II: Bell inequalities
+- **来源**: arXiv 2609.31075
+- **链接**: https://arxiv.org/abs/2609.31075
+- **分类**: quant-ph（量子基础 / 概率公设与 Bell 非定域性）
+- **摘要**: Kolmogorov 概率论对量子现象适用性的第二部分，聚焦 Bell 不等式。属**量子基础与解释旗舰**（概率公理 vs Bell 非定域性根基层面）。
+
+### Bypassing no-go theorems on mixed classical-quantum systems: the (counter)example of hybrid van Hove theory
+- **来源**: arXiv 2609.31209
+- **链接**: https://arxiv.org/abs/2609.31209
+- **分类**: quant-ph（量子基础 / 经典-量子边界）
+- **摘要**: 以混合 van Hove 理论为例绕过混合经典-量子系统的 no-go 定理。属**量子基础（经典-量子混合系统）**。
+
+### Non-factor quantum dynamics and relativity
+- **来源**: arXiv 2609.30942
+- **链接**: https://arxiv.org/abs/2609.30942
+- **分类**: quant-ph（量子基础 / 量子动力学）
+- **摘要**: 非因子量子动力学与相对论。属**量子基础（动力学基础）**。
+
+### Quantum interaction can superactivate cheating under parallel repetition
+- **来源**: arXiv 2609.31223
+- **链接**: https://arxiv.org/abs/2609.31223
+- **分类**: quant-ph（量子基础 / 非定域博弈，近邻）
+- **摘要**: 并行重复下量子交互可超激活欺骗。属**量子基础（非定域博弈 / 量子密码）近邻**。
+
+### Graduated categories of presheaves
+- **来源**: arXiv 2609.30444
+- **链接**: https://arxiv.org/abs/2609.30444
+- **分类**: math.CT（范畴论 / 预设层）
+- **摘要**: 预设层（presheaves）的分阶范畴。属 **§003-type-topos 强命中**（presheaves = 层 = topos 原型）。
+
+### Geometric morphisms of virtual ultracategories
+- **来源**: arXiv 2609.31445
+- **链接**: https://arxiv.org/abs/2609.31445
+- **分类**: math.CT（范畴论 / 几何态射）
+- **摘要**: 虚拟 ultracategories 的几何态射（geometric morphism）。属 **§003-type-topos 强命中**（geometric morphism 即 topos 之间的态射）。
+
+### Categorical spin-networks: state-sum invariants of 4-manifolds from higher-gauge theory
+- **来源**: arXiv 2609.31365
+- **链接**: https://arxiv.org/abs/2609.31365
+- **分类**: math-ph（高阶范畴 / TQFT）
+- **摘要**: 由高阶规范理论（higher-gauge）得到的 4-流形 state-sum 不变量。属 **§003-type-topos 强命中**（higher-gauge = 高阶范畴）。
+
+### KMS and ground states for the normalized dynamics of the tame C*-algebras O_{m,n}
+- **来源**: arXiv 2609.30544
+- **链接**: https://arxiv.org/abs/2609.30544
+- **分类**: math.OA（C*-代数 / KMS 态）
+- **摘要**: tame C*-代数 O_{m,n} 归一化动力学的 KMS 态与基态。属 **§004-Gelfand 强命中**（KMS 态 = 算子代数统计力学，Gelfand 对偶）。
+
+### A unitary invariant for C*-algebras generated by isometries with a twisted commutation relation
+- **来源**: arXiv 2609.31220
+- **链接**: https://arxiv.org/abs/2609.31220
+- **分类**: math.OA（C*-代数 / 酉不变量）
+- **摘要**: 带扭曲交换关系的等距生成 C*-代数酉不变量。属 **§004-Gelfand 强命中**。
+
+### Factorisation and matrix amplification of real rank zero inclusions
+- **来源**: arXiv 2609.31556
+- **链接**: https://arxiv.org/abs/2609.31556
+- **分类**: math.OA（C*-分类纲领 / real rank zero）
+- **摘要**: real rank zero 包含的因式分解与矩阵放大。属 **§004-Gelfand 强命中**（real rank zero = C*-分类纲领）。
+
+### Geometric Dissipation Structures and the Koszul Form
+- **来源**: arXiv 2609.30976
+- **链接**: https://arxiv.org/abs/2609.30976
+- **分类**: math.DG（几何耗散 / 几何力学）
+- **摘要**: 以 Koszul 形式表述的几何耗散结构。对应"微分几何 + 耗散 / 非平衡"，与 PCH / Dirac 结构、Ito 修正几何框架近邻——**随机几何力学中-高优先级（二·核心推荐）**。
+
+### Unified description of random motions and generalized Fokker-Planck equations
+- **来源**: arXiv 2609.30424
+- **链接**: https://arxiv.org/abs/2609.30424
+- **分类**: cond-mat.stat-mech（随机输运 / Fokker-Planck）
+- **摘要**: 随机运动与广义 Fokker-Planck 方程统一描述。对应"乘性噪声 + Fokker-Planck / Ito 修正"近邻——**随机热力学中优先级（二·核心推荐）**。
+
+### Certificate-Carrying Distributed Model Predictive Control on Product Manifolds with SO(3)
+- **来源**: arXiv 2609.30655
+- **链接**: https://arxiv.org/abs/2609.30655
+- **分类**: eess.SY（几何控制 / Lie 群）
+- **摘要**: SO(3) 乘积流形上带证书的分布式 MPC（李群 / 李括号 + 几何控制）。对应"微分几何 / 李群 解决控制"——**几何控制中优先级（二·核心推荐）**。
+
+### Complexity drives the symmetry breaking of temperature fluctuations
+- **来源**: arXiv 2609.31521
+- **链接**: https://arxiv.org/abs/2609.31521
+- **分类**: cond-mat.stat-mech（非平衡 / 对称性破缺）
+- **摘要**: 复杂度驱动温度涨落的对称性破缺（非平衡统计，复杂度作序参量）。概念上属"随机对称性破缺 / 非平衡态耗散"高优先级——**随机热力学高概念近邻（二·核心推荐）**。
+
+---
+
+## 2026-09-29
+
+### Local Many Worlds in Spacetime: Deutsch-Hayden Descriptors and Local Wavefunctions
+- **来源**: arXiv 2609.33453
+- **链接**: https://arxiv.org/abs/2609.33453
+- **分类**: quant-ph（量子基础 / 多世界诠释）
+- **摘要**: 在时空局域框架下重构多世界诠释（Deutsch-Hayden 描述子 + 局域波函数）。属**量子基础与解释旗舰**（多世界诠释）。
+
+### Nakayama's reduction of quantum topos and Bayesian quantum computing
+- **来源**: arXiv 2609.34200
+- **链接**: https://arxiv.org/abs/2609.34200
+- **分类**: quant-ph（量子基础 / topos）
+- **摘要**: 量子 topos 的 Nakayama 归约与贝叶斯量子计算。属**量子基础**且**§003-type-topos 强命中**（量子 topos 直击）。
+
+### All-vs-Nothing Operational Manifestation of Preparation Contextuality
+- **来源**: arXiv 2609.34964
+- **链接**: https://arxiv.org/abs/2609.34964
+- **分类**: quant-ph（量子基础 / 语境性）
+- **摘要**: 制备语境性的全或无操作显现。属**量子基础（语境性）**。
+
+### Particles, Localization and "Collapse"
+- **来源**: arXiv 2609.32101
+- **链接**: https://arxiv.org/abs/2609.32101
+- **分类**: quant-ph（量子基础 / 测量坍缩）
+- **摘要**: 粒子、局域化与"坍缩"。属**量子基础（测量/坍缩问题）**。
+
+### Indefinite causal order with output-signalling instruments
+- **来源**: arXiv 2609.31863
+- **链接**: https://arxiv.org/abs/2609.31863
+- **分类**: quant-ph（量子基础 / 因果序）
+- **摘要**: 输出-signalling 仪器下的不定因果序。属**量子基础（因果序）近邻**。
+
+### Relative dualizability and the cobordism hypothesis for defects
+- **来源**: arXiv 2609.32723
+- **链接**: https://arxiv.org/abs/2609.32723
+- **分类**: math.CT（高阶范畴 / TQFT）
+- **摘要**: 带缺陷的 cobordism 假设的相对对偶性。属 **§003-type-topos 强命中**（cobordism 假设 = 高阶范畴/TQFT 标志）。
+
+### Deformations of generalized complex structures on G-flat transitive Courant algebroids
+- **来源**: arXiv 2609.35640
+- **链接**: https://arxiv.org/abs/2609.35640
+- **分类**: math.DG（广义复几何 / Courant 代数胚）
+- **摘要**: G-平坦传递 Courant 代数胚上广义复结构的形变（Courant 代数胚 = Dirac 结构推广，PCH 的几何母体）。属 **§003-type-topos 中命中** & **随机几何力学 Dirac 结构近邻**。
+
+### Transfer theory for noetherian forms
+- **来源**: arXiv 2609.33469
+- **链接**: https://arxiv.org/abs/2609.33469
+- **分类**: math.CT（范畴代数 / forms）
+- **摘要**: noetherian forms 的转移理论（范畴化代数）。属 **§003-type-topos 中命中**。
+
+### Higher orthogonality and truncation in canonical pretriangulated quotients
+- **来源**: arXiv 2609.34289
+- **链接**: https://arxiv.org/abs/2609.34289
+- **分类**: math.CT（三角范畴 / 同伦）
+- **摘要**: 标准预三角商中的高阶正交与截断。属 **§003-type-topos 中命中**。
+
+### Orbit-breaking in Deaconu-Renault groupoids and models for UCT Kirchberg algebras
+- **来源**: arXiv 2609.31883
+- **链接**: https://arxiv.org/abs/2609.31883
+- **分类**: math.OA（C*-代数 / 群胚）
+- **摘要**: Deaconu-Renault 群胚的轨道破缺与 UCT Kirchberg 代数模型。属 **§004-Gelfand 强命中**。
+
+### On generators of C_r^*(F_2)
+- **来源**: arXiv 2609.32058
+- **链接**: https://arxiv.org/abs/2609.32058
+- **分类**: math.OA（群 C*-代数）
+- **摘要**: 自由群约化群 C*-代数 C_r^*(F_2) 的生成元。属 **§004-Gelfand 强命中**。
+
+### Selfless nonnuclear crossed products
+- **来源**: arXiv 2609.34011
+- **链接**: https://arxiv.org/abs/2609.34011
+- **分类**: math.OA（C*-交叉积）
+- **摘要**: 非核交叉积的自无我性（selfless）。属 **§004-Gelfand 强命中**。
+
+### Distances Between von Neumann Subalgebras: Spin Models, Commuting Squares, and Free Group Factors
+- **来源**: arXiv 2609.34856
+- **链接**: https://arxiv.org/abs/2609.34856
+- **分类**: math.OA（von Neumann 代数）
+- **摘要**: von Neumann 子代数距离，含自旋模型、交换平方与自由群因子。属 **§004-Gelfand 强命中**。
+
+### Noncommutative Maximal Averages over Submanifolds and Variable Hypersurfaces
+- **来源**: arXiv 2609.34906
+- **链接**: https://arxiv.org/abs/2609.34906
+- **分类**: math.OA（非交换调和分析）
+- **摘要**: 子流形与变超曲面上的非交换极大平均。属 **§004-Gelfand 强命中**（非交换几何/算子代数）。
+
+### Unique equivariant pseudo expectation and generalized Powers averaging for crossed product
+- **来源**: arXiv 2609.35567
+- **链接**: https://arxiv.org/abs/2609.35567
+- **分类**: math.OA（C*-交叉积）
+- **摘要**: 交叉积的唯一等变伪期望与广义 Powers 平均。属 **§004-Gelfand 强命中**。
+
+### Local Determinant Defects and Low-Energy Subspace Stability in Semifinite von Neumann Algebras
+- **来源**: arXiv 2609.32095
+- **链接**: https://arxiv.org/abs/2609.32095
+- **分类**: math-ph（von Neumann 代数）
+- **摘要**: 半有限 von Neumann 代数中的局域行列式缺陷与低能子空间稳定性。属 **§004-Gelfand 强命中**。
+
+### Second largest eigenvalue does not bound stationary entropy production
+- **来源**: arXiv 2609.34352
+- **链接**: https://arxiv.org/abs/2609.34352
+- **分类**: cond-mat.stat-mech（随机热力学 / 熵产生）
+- **摘要**: 证明第二最大本征值无法界定稳态熵产生率。对应"非平衡态耗散 / 熵产生"——**随机热力学高优先级（二·核心推荐）**。
+
+### Non-stationary Statistics and Energetics of Brownian Motion under Stochastic Harmonic Confinement
+- **来源**: arXiv 2609.33751
+- **链接**: https://arxiv.org/abs/2609.33751
+- **分类**: cond-mat.stat-mech（布朗运动 / 能量学）
+- **摘要**: 随机谐振约束下布朗运动的非平稳统计与能量学（过阻尼 Langevin + 随机势 + 能量平衡）。对应"布朗运动 + 净能量交换 / 非平衡"——**随机热力学高优先级（二·核心推荐）**。
+
+### The Hamilton-Jacobi and Symplectic Analysis for Extended Hořava Gravity
+- **来源**: arXiv 2609.32218
+- **链接**: https://arxiv.org/abs/2609.32218
+- **分类**: math-ph（几何力学 / HJB+辛）
+- **摘要**: 扩展 Hořava 引力的 Hamilton-Jacobi 方程与辛约化分析。对应"Hamilton-Jacobi-Bellman + 辛几何"精确同现——**几何力学高优先级（二·核心推荐）**。
+
+### Optimal Reinsurance-Dividend Strategy ... A Viscosity Solution to the Impulse Control Problem
+- **来源**: arXiv 2609.32686
+- **链接**: https://arxiv.org/abs/2609.32686
+- **分类**: math.OC（最优控制 / HJB 黏性解）
+- **摘要**: 带固定交易成本的脉冲最优控制的 HJB 黏性解。对应"HJB + 随机最优控制"——**随机最优控制中-高优先级（二·核心推荐）**。
+
+### Mpemba effect without a wall
+- **来源**: arXiv 2609.32871
+- **链接**: https://arxiv.org/abs/2609.32871
+- **分类**: cond-mat.stat-mech（非平衡 / 反常弛豫）
+- **摘要**: 无壁 Mpemba 效应（非平衡反常弛豫）。概念属"非平衡态耗散"高优先级——**随机热力学高概念近邻**。
+
+---
+
+## 2026-09-30
+
+### Consistent histories and the ultrametric on infinite tensor products
+- **来源**: arXiv 2609.37375
+- **链接**: https://arxiv.org/abs/2609.37375
+- **分类**: quant-ph（量子基础 / 一致历史诠释）
+- **摘要**: 无限张量积上的超度量与一致历史（consistent histories）诠释。属**量子基础与解释旗舰**（一致历史，Gell-Mann/Hartle 路线）。
+
+### Experimental certification of multipartite Bell correlations using only few-body symmetric correlations
+- **来源**: arXiv 2609.37442
+- **链接**: https://arxiv.org/abs/2609.37442
+- **分类**: quant-ph（量子基础 / Bell 非定域性）
+- **摘要**: 仅用少体对称关联即可实验认证多体 Bell 关联。属**量子基础（Bell 非定域性）**。
+
+### Device-independent quantification of steerability in tripartite scenario
+- **来源**: arXiv 2609.36907
+- **链接**: https://arxiv.org/abs/2609.36907
+- **分类**: quant-ph（量子基础 / steering / DI）
+- **摘要**: 三体情境下无装置依赖（device-independent）的导引（steering）量化。属**量子基础（DI / steering）**。
+
+### Margenau-Hill distribution as a Necessary and Sufficient Signature of Measurement Incompatibility
+- **来源**: arXiv 2609.37144
+- **链接**: https://arxiv.org/abs/2609.37144
+- **分类**: quant-ph（量子基础 / 测量不兼容）
+- **摘要**: Margenau-Hill 分布作为测量不兼容性的充要特征。属**量子基础（测量不兼容性 / 测量问题）**。
+
+### A commuting operator self-test for exact entanglement embezzlement
+- **来源**: arXiv 2609.38083
+- **链接**: https://arxiv.org/abs/2609.38083
+- **分类**: quant-ph（量子基础 / 自测试 + 算子代数）
+- **摘要**: 交换算子（commuting operator）框架下的精确纠缠盗用自测试。属**量子基础（自测试）**且**算子代数近邻**。
+
+### Six functor formalisms via internal higher algebra
+- **来源**: arXiv 2609.37520
+- **链接**: https://arxiv.org/abs/2609.37520
+- **分类**: math.CT（高阶范畴 / 六函子形式体系）
+- **摘要**: 经内高阶代数的六函子形式体系（Grothendieck 六运算，TFT 标志）。属 **§003-type-topos 强命中**（六函子 = 高阶范畴/层论旗舰）。
+
+### Diagrammatic bases from stratified normalization
+- **来源**: arXiv 2609.36020
+- **链接**: https://arxiv.org/abs/2609.36020
+- **分类**: math.CT（图式 / 范畴）
+- **摘要**: 分层归一化导出的图式基。属 **§003-type-topos 中命中**。
+
+### On the Derivation of Twisted K-Theory from M-Theory
+- **来源**: arXiv 2609.36048
+- **链接**: https://arxiv.org/abs/2609.36048
+- **分类**: hep-th（K-理论 / 高阶结构）
+- **摘要**: 从 M-理论导出扭曲 K-理论。属 **§003-type-topos 中命中**（扭曲 K-理论）。
+
+### Twisted Cohomology of D-Brane Disk Integrals
+- **来源**: arXiv 2609.36274
+- **链接**: https://arxiv.org/abs/2609.36274
+- **分类**: hep-th（扭曲上同调 / 高阶结构）
+- **摘要**: D-膜圆盘积分的扭曲上同调。属 **§003-type-topos 中命中**（扭曲上同调）。
+
+### Opers on transversely holomorphic foliations
+- **来源**: arXiv 2609.38040
+- **链接**: https://arxiv.org/abs/2609.38040
+- **分类**: math.DG（oper / 横全纯叶层）
+- **摘要**: 横全纯叶层上的 oper（几何 Langlands / 高阶结构）。属 **§003-type-topos 中命中**（高阶结构）。
+
+### Higher-order convex orders under free additive convolution
+- **来源**: arXiv 2609.35901
+- **链接**: https://arxiv.org/abs/2609.35901
+- **分类**: math.OA（自由概率 / 算子代数）
+- **摘要**: 自由加性卷积（free additive convolution）下的高阶凸序。属 **§004-Gelfand 强命中**（自由概率 = Voiculescu 算子代数核心）。
+
+### Deformation Quantization of Schutz Quantum Cosmology: Relational Time, Constraints, and Physical States
+- **来源**: arXiv 2609.37585
+- **链接**: https://arxiv.org/abs/2609.37585
+- **分类**: math-ph（形变量子化 / 几何量子化）
+- **摘要**: Schutz 量子宇宙学的形变量子化（星乘 / 几何量子化）。属 **§004-Gelfand 中命中**（形变量子化 / 几何量子化）。
+
+### Derivation of Fokker-Planck equation and its entropy production
+- **来源**: arXiv 2609.36260
+- **链接**: https://arxiv.org/abs/2609.36260
+- **分类**: cond-mat.stat-mech（随机热力学 / Fokker-Planck / 熵产生）
+- **摘要**: 从微观动力学导出 Fokker-Planck 方程并给出其熵产生。对应"非平衡态耗散 / 熵产生"——**随机热力学高优先级（二·核心推荐）**。
+
+### The Spectral Cost of Detecting Nonequilibrium at Finite Temporal Resolution
+- **来源**: arXiv 2609.37205
+- **链接**: https://arxiv.org/abs/2609.37205
+- **分类**: cond-mat.stat-mech（非平衡检测 / 谱方法）
+- **摘要**: 有限时间分辨率下探测非平衡态的光谱代价（转移算子谱 / 特征指数）。对应"非平衡态耗散 / 非平衡检测"——**随机热力学高优先级（二·核心推荐）**。
+
+### Anomalous transport in periodic systems driven by active fluctuations
+- **来源**: arXiv 2609.37289
+- **链接**: https://arxiv.org/abs/2609.37289
+- **分类**: cond-mat.stat-mech（非平衡输运 / 主动物质）
+- **摘要**: 周期势系统由主动（非平衡）涨落驱动的反常输运（超/亚扩散）。对应"非平衡态耗散 / 随机对称性破缺"——**随机热力学高优先级（二·核心推荐）**。
+
+### Stochastic Lie-Bracket Approximations for Zeroth-Order Optimization on Manifolds
+- **来源**: arXiv 2609.38069
+- **链接**: https://arxiv.org/abs/2609.38069
+- **分类**: math.OC（流形随机优化 / Lie 括号 / 黎曼 Langevin）
+- **摘要**: 紧致流形上零阶优化的随机 Lie 括号近似，轨迹均方逼近黎曼 Langevin 扩散（流形 + 随机 + Lie 括号 + 几何补偿）。对应"Ito 修正 AND 微分几何"近邻——**几何随机最优化高优先级（二·核心推荐）**。
+
+### Crossover of Scaling Behaviors of Work Cumulants in a Driven Gaussian Field Theory
+- **来源**: arXiv 2609.36476
+- **链接**: https://arxiv.org/abs/2609.36476
+- **分类**: cond-mat.stat-mech（做功累积量 / 大偏差）
+- **摘要**: 驱动高斯场论中做功累积量标度行为的渡越（场论涨落 / 大偏差）。对应"非平衡做功 / 随机热力学"——**随机热力学高优先级（二·核心推荐）**。
+
+### Distribution of Scattering Matrix Elements in the case of Symplectic Symmetry
+- **来源**: arXiv 2609.37696
+- **链接**: https://arxiv.org/abs/2609.37696
+- **分类**: math-ph（散射矩阵 / 辛对称）
+- **摘要**: 辛对称下散射矩阵元分布（随机矩阵 / 辛对称性）。对应"Symplectic"关键词近邻——**几何/随机近邻（二·核心推荐）**。
+
+---
+
+## 2026-10-02
+
+### Frame dependence of Kochen-Specker contextuality for relativistic spin systems
+- **来源**: arXiv 2610.00274
+- **链接**: https://arxiv.org/abs/2610.00274
+- **分类**: quant-ph（Kochen-Specker 情境性 / 测量）
+- **摘要**: 相对论性自旋系统的 Kochen-Specker 情境性的参考系依赖。属**量子基础与解释**（情境性 / 测量基础）。
+
+### Hidden-State Updates and observable-record composition in retrocausal models
+- **来源**: arXiv 2610.00357
+- **链接**: https://arxiv.org/abs/2610.00357
+- **分类**: quant-ph（逆因果 / 解释）
+- **摘要**: 逆因果模型中的隐态更新与可观测量记录合成。属**量子基础与解释**（逆因果解释）。
+
+### Preservability of Measurement Incompatibility: Purification, Activation, and a No-Go Theorem
+- **来源**: arXiv 2610.01327
+- **链接**: https://arxiv.org/abs/2610.01327
+- **分类**: quant-ph（测量不相容 / 联合可测性）
+- **摘要**: 测量不相容性的可保持性：纯化、激活与不可能定理。属**量子基础与解释**（测量不相容 ≈ 联合可测性）。
+
+### Unbounded separation between definite and indefinite causal order in finite-dimensional quantum metrology
+- **来源**: arXiv 2610.01462
+- **链接**: https://arxiv.org/abs/2610.01462
+- **分类**: quant-ph（因果结构 / 不定因果序）
+- **摘要**: 定序与不定因果序在量子计量中的无界分离。属**量子基础与解释**（因果结构）。
+
+### Experimental realization of Wheeler's delayed-choice experiment with dual selections
+- **来源**: arXiv 2610.01832
+- **链接**: https://arxiv.org/abs/2610.01832
+- **分类**: quant-ph（延迟选择 / 测量解释）
+- **摘要**: 双选择 Wheeler 延迟选择实验的实现。属**量子基础与解释**（延迟选择 / 测量解释）。
+
+### Relative quasi-Gorenstein homological dimensions in extriangulated categories
+- **来源**: arXiv 2610.01483
+- **链接**: https://arxiv.org/abs/2610.01483
+- **分类**: math.CT（外三角范畴 / 同调）
+- **摘要**: 外三角范畴的相对拟 Gorenstein 同调维数。属 **§003-type-topos 中命中**（同调/三角范畴）。
+
+### Ternary semi-direct products in semi-abelian categories
+- **来源**: arXiv 2610.01671
+- **链接**: https://arxiv.org/abs/2610.01671
+- **分类**: math.CT（半阿贝尔范畴）
+- **摘要**: 半阿贝尔范畴中的三元半直积。属 **§003-type-topos 中命中**（范畴论）。
+
+### Gravity and generalised geometry from a Lie 2-algebroid perspective
+- **来源**: arXiv 2610.01292
+- **链接**: https://arxiv.org/abs/2610.01292
+- **分类**: hep-th（Lie 2-代数胚 / 广义几何）
+- **摘要**: Lie 2-代数胚视角的引力与广义几何。属 **§003-type-topos 中命中**（高阶范畴 / 广义几何）。
+
+### An Algorithm for Generating All Berglund-Hubsch-Type Calabi-Yau Orbifolds and Their Mirrors
+- **来源**: arXiv 2610.01957
+- **链接**: https://arxiv.org/abs/2610.01957
+- **分类**: hep-th（CY 轨形 / 镜像对称）
+- **摘要**: BH 型 CY 轨形及其镜像的枚举算法。属 **§003-type-topos 中命中**（镜像对称 / CY）。
+
+### No Shortcuts to Infinity: Weil-Petersson Distance in Calabi-Yau Complex Structure Moduli Space
+- **来源**: arXiv 2610.00470
+- **链接**: https://arxiv.org/abs/2610.00470
+- **分类**: hep-th（CY 模空间几何）
+- **摘要**: CY 复结构模空间的 Weil-Petersson 距离。属 **§003-type-topos 中命中**（CY 几何 / 模空间）。
+
+### An Explicit Polynomial Counterexample to Connes' Embedding Conjecture
+- **来源**: arXiv 2610.01536
+- **链接**: https://arxiv.org/abs/2610.01536
+- **分类**: math.OA（C*-代数 / Connes 嵌入猜想）
+- **摘要**: Connes 嵌入猜想的显式多项式反例。属 **§004-Gelfand 强命中**（C*-代数纲领里程碑）。
+
+### Unital embeddings of the Jiang--Su algebra are not unique
+- **来源**: arXiv 2610.02174
+- **链接**: https://arxiv.org/abs/2610.02174
+- **分类**: math.OA（Jiang-Su 代数 / C*-分类）
+- **摘要**: Jiang-Su 代数单位嵌入不唯一。属 **§004-Gelfand 强命中**（C*-分类纲领核心）。
+
+### The Baum-Connes conjecture: a concise course
+- **来源**: arXiv 2610.01802
+- **链接**: https://arxiv.org/abs/2610.01802
+- **分类**: math.OA（Baum-Connes / K-理论）
+- **摘要**: Baum-Connes 猜想简明教程。属 **§004-Gelfand 强命中**（K-理论 / 算子代数）。
+
+### Gromov-Hausdorff Convergence of Spectral Truncations for Noncommutative Tori
+- **来源**: arXiv 2610.01132
+- **链接**: https://arxiv.org/abs/2610.01132
+- **分类**: math.OA（非交换环面 / 非交换几何）
+- **摘要**: 非交换环面谱截断的 Gromov-Hausdorff 收敛。属 **§004-Gelfand 强命中**（非交换几何 / Gelfand 对偶）。
+
+### Free groups amenably act on unital simple AF-algebras
+- **来源**: arXiv 2610.01460
+- **链接**: https://arxiv.org/abs/2610.01460
+- **分类**: math.OA（AF-代数 / C*-分类）
+- **摘要**: 自由群在单 AF-代数上的顺从作用。属 **§004-Gelfand 强命中**（AF-代数）。
+
+### A quasidiagonal C*-algebra with a nonquasidiagonal maximal tensor square
+- **来源**: arXiv 2610.00230
+- **链接**: https://arxiv.org/abs/2610.00230
+- **分类**: math.OA（拟对角 C*-代数）
+- **摘要**: 拟对角 C*-代数具非拟对角极大张量平方。属 **§004-Gelfand 强命中**。
+
+### An induction proof of strong NF for amenable group C*-algebras
+- **来源**: arXiv 2610.00231
+- **链接**: https://arxiv.org/abs/2610.00231
+- **分类**: math.OA（顺从群 C*-代数）
+- **摘要**: 顺从群 C*-代数的强 NF 归纳证明。属 **§004-Gelfand 强命中**。
+
+### The Buchholz Algebra from the Universal Resolvent Algebra
+- **来源**: arXiv 2610.01622
+- **链接**: https://arxiv.org/abs/2610.01622
+- **分类**: math-ph（消解代数 / 代数化 QFT）
+- **摘要**: 来自普适消解代数的 Buchholz 代数。属 **§004-Gelfand 强命中**（消解代数 / AQFT）。
+
+### The Cuntz semigroup of a unital graph C*-algebra
+- **来源**: arXiv 2610.01915
+- **链接**: https://arxiv.org/abs/2610.01915
+- **分类**: math.OA（Cuntz 半群 / C*-分类）
+- **摘要**: 单位图 C*-代数的 Cuntz 半群。属 **§004-Gelfand 强命中**（C*-分类）。
+
+### Quantum real projective spaces as quantum CW-complexes via topological graphs
+- **来源**: arXiv 2610.02017
+- **链接**: https://arxiv.org/abs/2610.02017
+- **分类**: math.OA（量子 CW-复形 / 非交换几何）
+- **摘要**: 拓扑图视角的量子实射影空间作为量子 CW-复形。属 **§004-Gelfand 强命中**（非交换几何）。
+
+### A groupoid model for Rørdam's finite-infinite C*-algebra
+- **来源**: arXiv 2610.01543
+- **链接**: https://arxiv.org/abs/2610.01543
+- **分类**: math.OA（群胚 C*-代数）
+- **摘要**: Rørdam 有限-无限 C*-代数的群胚模型。属 **§004-Gelfand 强命中**。
+
+### On C*-nuclearity of graph operator systems
+- **来源**: arXiv 2610.01676
+- **链接**: https://arxiv.org/abs/2610.01676
+- **分类**: math.OA（C*-核性 / 算子系统）
+- **摘要**: 图算子系统 C*-核性。属 **§004-Gelfand 强命中**。
+
+### Minimal Wittstock Envelopes of Hermitian Completely Bounded Maps
+- **来源**: arXiv 2610.00114
+- **链接**: https://arxiv.org/abs/2610.00114
+- **分类**: math.OA（完全有界映射）
+- **摘要**: Hermitian 完全有界映射的极小 Wittstock 包络。属 **§004-Gelfand 强命中**（完全有界映射 / C*-代数）。
+
+### The crystal groupoid of a compact semisimple Lie group and its flag varieties
+- **来源**: arXiv 2610.01208
+- **链接**: https://arxiv.org/abs/2610.01208
+- **分类**: math.OA（群胚 / 算子代数）
+- **摘要**: 紧半单李群及其旗簇的晶体群胚。属 **§004-Gelfand 强命中**。
+
+### Physical-Work Fluctuation Relations from Accessible Quantum Macrostates
+- **来源**: arXiv 2610.00246
+- **链接**: https://arxiv.org/abs/2610.00246
+- **分类**: quant-ph（量子功涨落关系 / 非平衡热力学）
+- **摘要**: 由可及量子宏态导出的物理功涨落关系（Jarzynski/Crooks 类在量子可及态框架的推广）。对应"非平衡态耗散 / 随机热力学 / 功涨落"——**随机热力学高优先级（二·核心推荐）**。
+
+### Achieving Identical Stored Energy in Cascaded Collisional Quantum Battery Charging: Analytical Result
+- **来源**: arXiv 2610.01332
+- **链接**: https://arxiv.org/abs/2610.01332
+- **分类**: quant-ph（量子电池 / 储能）
+- **摘要**: 级联碰撞式量子电池充电中实现相同储能的解析条件。对应"能量收集 / 量子电池 / 储能"——**随机热力学高优先级（二·核心推荐）**。
+
+### Active-Matter Battery
+- **来源**: arXiv 2610.00428
+- **链接**: https://arxiv.org/abs/2610.00428
+- **分类**: cond-mat.stat-mech（主动物质 / 能量收集）
+- **摘要**: 主动物质电池——利用活性粒子非平衡活性从环境持续提取/存储能量（净能量交换）。对应"布朗回转器 / 净能量交换 / 主动物质能量学"——**随机热力学高优先级（二·核心推荐）**。
+
+### Work fluctuation speed limit in boundary conformal field theories
+- **来源**: arXiv 2610.01248
+- **链接**: https://arxiv.org/abs/2610.01248
+- **分类**: cond-mat.stat-mech（功涨落 / 速度极限）
+- **摘要**: BCFT 框架中的功涨落速度极限（热力学速度极限 + CFT 边界结构）。对应"非平衡态耗散 / 功涨落 / 速度极限"——**随机热力学高优先级（二·核心推荐）**。
+
+### Vector- and operator-valued backward stochastic equations ... maximum principle for singular stochastic control
+- **来源**: arXiv 2610.01545
+- **链接**: https://arxiv.org/abs/2610.01545
+- **分类**: math.OC（BSDE / 随机最优控制）
+- **摘要**: 量值/算子值倒向随机方程 + 无穷维奇异随机控制的最大值原理。对应"HJB AND 随机最优控制"——**几何随机最优化高优先级（二·核心推荐）**。
+
+### A Riccati Approach to Mixed H2/H∞ Closed-Loop Games for Infinite-Dimensional Stochastic Systems
+- **来源**: arXiv 2610.00756
+- **链接**: https://arxiv.org/abs/2610.00756
+- **分类**: math.OC（Riccati / 随机无穷维系统）
+- **摘要**: 无穷维随机系统的混合 H₂/H∞ Riccati 闭环博弈。对应"HJB/Riccati + 随机系统"——**几何随机中-高优先级（二·核心推荐）**。
+
+### The Ericson Transition in Time-Reversal Invariant Systems: Symplectically Invariant Hamiltonians
+- **来源**: arXiv 2610.00624
+- **链接**: https://arxiv.org/abs/2610.00624
+- **分类**: cond-mat.stat-mech（辛不变哈密顿量 / 时间反演）
+- **摘要**: 时间反演不变系统的 Ericson 跃迁：辛不变哈密顿量。对应"Symplectic"近邻——**几何随机中-高优先级（二·核心推荐）**。
+
+### Inverse Optimal Control with Convex Features and Box Constraints
+- **来源**: arXiv 2610.00033
+- **链接**: https://arxiv.org/abs/2610.00033
+- **分类**: math.OC（逆最优控制 / HJB）
+- **摘要**: 凸特征与盒约束的逆最优控制。对应"HJB AND 随机最优控制"——**几何随机中-高优先级（二·核心推荐）**。
+
+### Data-to-Certificates (D2C): Koopman Supereigenfunctions for Stability, Safety, and Control
+- **来源**: arXiv 2610.00178
+- **链接**: https://arxiv.org/abs/2610.00178
+- **分类**: math.OC（Koopman / 几何动力学控制）
+- **摘要**: Koopman 超本征函数 Data-to-Certificates 稳定性/安全/控制。对应"几何控制"——**几何随机中优先级（二·核心推荐）**。
+
+### Convergence Analysis of STORM Under Different Geometries
+- **来源**: arXiv 2610.01599
+- **链接**: https://arxiv.org/abs/2610.01599
+- **分类**: math.OC（优化几何）
+- **摘要**: STORM 在不同几何下的收敛分析（Riemannian 等）。对应"微分几何 + 优化"——**几何随机中优先级（二·核心推荐）**。
+
+### Minimal Experiments for Robust Stabilization: Information, Spectral Geometry, and Duration
+- **来源**: arXiv 2610.02187
+- **链接**: https://arxiv.org/abs/2610.02187
+- **分类**: eess.SY（谱几何 / 控制）
+- **摘要**: 鲁棒镇定的极小实验：信息、谱几何与时长。对应"谱几何 + 控制"——**几何控制中优先级（二·核心推荐）**。
+
+### The Geometry of Time: Horizon-Independent Feasibility and Repair for STL
+- **来源**: arXiv 2610.00199
+- **链接**: https://arxiv.org/abs/2610.00199
+- **分类**: eess.SY（几何 / 时序逻辑控制）
+- **摘要**: 时间的几何：STL 的时域无关可行性与修复。对应"几何 + 控制"近邻——**几何控制中优先级（二·核心推荐）**。
+
+---
+
+## 2026-10-01
+
+### Passive realism in the presence of open system dynamics
+- **来源**: arXiv 2609.38631
+- **链接**: https://arxiv.org/abs/2609.38631
+- **分类**: quant-ph（量子基础 / 实在论）
+- **摘要**: 开放系统动力学中的被动实在论（passive realism）。属**量子基础与解释**（实在论 / 开放量子系统）。
+
+### What makes a causal loop consistent?
+- **来源**: arXiv 2609.39735
+- **链接**: https://arxiv.org/abs/2609.39735
+- **分类**: quant-ph（量子基础 / 因果结构）
+- **摘要**: 因果环为何一致（因果结构与一致性）。属**量子基础与解释**（因果结构）。
+
+### Reverse quantum state diffusion from differential geometry
+- **来源**: arXiv 2609.39861
+- **链接**: https://arxiv.org/abs/2609.39861
+- **分类**: quant-ph（基础解释 / 连续测量 / 微分几何）
+- **摘要**: 从微分几何出发的反向量子态扩散（连续测量 / 随机薛定谔，量子轨迹解释 + 微分几何）。属**量子基础与解释**且**微分几何 + 随机近邻（二·核心推荐）**。
+
+### Causal inequalities witness non-stabilizerness
+- **来源**: arXiv 2609.40223
+- **链接**: https://arxiv.org/abs/2609.40223
+- **分类**: quant-ph（量子基础 / 因果不等式）
+- **摘要**: 因果不等式揭示非稳定子性。属**量子基础与解释**（因果不等式 / 因果结构）。
+
+### Compatibility of quantum instruments
+- **来源**: arXiv 2609.40266
+- **链接**: https://arxiv.org/abs/2609.40266
+- **分类**: quant-ph（量子基础 / 测量）
+- **摘要**: 量子仪器的相容性（≈ 联合可测性 / 测量相容）。属**量子基础与解释**（测量基础）。
+
+### Orthogonal Model Structures
+- **来源**: arXiv 2609.39317
+- **链接**: https://arxiv.org/abs/2609.39317
+- **分类**: math.CT（模型范畴 / 同伦论）
+- **摘要**: 正交模型结构（模型范畴 / 同伦类型）。属 **§003-type-topos 强命中**（模型范畴/同伦是高阶范畴/层论核心邻域）。
+
+### Homological surrogates in topological and bornological analysis
+- **来源**: arXiv 2609.40304
+- **链接**: https://arxiv.org/abs/2609.40304
+- **分类**: math.CT（同调 / 拓扑分析）
+- **摘要**: 拓扑/赋范分析中的同调代理。属 **§003-type-topos 中命中**（同调）。
+
+### Construction of mirror pairs of Berglund-Hubsch Calabi-Yau orbifolds
+- **来源**: arXiv 2609.38273
+- **链接**: https://arxiv.org/abs/2609.38273
+- **分类**: hep-th（Calabi-Yau 镜像对称）
+- **摘要**: Berglund-Hubsch CY 环面的镜像对称对。属 **§003-type-topos 中命中**（镜像对称）。
+
+### Fractional Superfluid Vortices and Worldsheet WZW Models
+- **来源**: arXiv 2609.39760
+- **链接**: https://arxiv.org/abs/2609.39760
+- **分类**: hep-th（WZW 模型 / 2d CFT）
+- **摘要**: WZW 模型（手征代数 / 2d CFT）。属 **§003-type-topos 中命中**（共形场论 / 手征代数）。
+
+### Large gaps and BTZ entropy in modular spectra
+- **来源**: arXiv 2609.39930
+- **链接**: https://arxiv.org/abs/2609.39930
+- **分类**: hep-th（模谱）
+- **摘要**: 模谱中的大间隙与 BTZ 熵（模张量范畴邻域）。属 **§003-type-topos 中命中**（模张量范畴）。
+
+### Fedosov manifolds with parallel symplectic Weyl curvature
+- **来源**: arXiv 2609.38703
+- **链接**: https://arxiv.org/abs/2609.38703
+- **分类**: math.DG（Fedosov 流形 / 形变量子化）
+- **摘要**: 具平行辛 Weyl 曲率的 Fedosov 流形（Fedosov 形变量子化 / 辛几何）。属 **§003/§004 弱命中**（形变量子化 / 几何量子化）。
+
+### Connes-embeddability and twisted group von Neumann algebras
+- **来源**: arXiv 2609.40246
+- **链接**: https://arxiv.org/abs/2609.40246
+- **分类**: math.OA（Connes 可嵌入性 / von Neumann 代数）
+- **摘要**: Connes 可嵌入性 + 扭曲群 von Neumann 代数。属 **§004-Gelfand 强命中**（CQT 算子代数核心命题）。
+
+### Z-stable and selfless inclusions for the infinite braid group
+- **来源**: arXiv 2609.38596
+- **链接**: https://arxiv.org/abs/2609.38596
+- **分类**: math.OA（C*-分类纲领）
+- **摘要**: 无限辫群的 Z-稳定 / selfless 包含。属 **§004-Gelfand 强命中**（C*-分类纲领）。
+
+### Central Haagerup Tensor Products and Completely Bounded Maps under Strong Morita Equivalence
+- **来源**: arXiv 2609.39241
+- **链接**: https://arxiv.org/abs/2609.39241
+- **分类**: math.OA（Haagerup 张量积 / Morita）
+- **摘要**: 强 Morita 等价下的中心 Haagerup 张量积与完全有界映射。属 **§004-Gelfand 强命中**。
+
+### Finite free position of maximal abelian *-subalgebras of the matrix algebra
+- **来源**: arXiv 2609.39677
+- **链接**: https://arxiv.org/abs/2609.39677
+- **分类**: math.OA（自由概率 / masa）
+- **摘要**: 矩阵代数极大交换 *-子代数的有限自由位置（自由概率 / Voiculescu）。属 **§004-Gelfand 强命中**（自由概率）。
+
+### Convergence of spectral smoothings from compact quantum group actions
+- **来源**: arXiv 2609.40189
+- **链接**: https://arxiv.org/abs/2609.40189
+- **分类**: math.OA（紧量子群 / 非交换几何）
+- **摘要**: 紧量子群作用下的谱光滑收敛。属 **§004-Gelfand 强命中**（紧量子群 / 非交换几何）。
+
+### K-theoretic invariants of the Toeplitz operator system and its dual
+- **来源**: arXiv 2609.40028
+- **链接**: https://arxiv.org/abs/2609.40028
+- **分类**: math.OA（K-理论 / Toeplitz）
+- **摘要**: Toeplitz 算子系统及其对偶的 K-理论不变量。属 **§004-Gelfand 强命中**（K-理论）。
+
+### K-theoretic invariants of four three-dimensional operator systems
+- **来源**: arXiv 2609.40029
+- **链接**: https://arxiv.org/abs/2609.40029
+- **分类**: math.OA（K-理论 / 算子系统）
+- **摘要**: 四个三维算子系统的 K-理论不变量。属 **§004-Gelfand 强命中**（K-理论）。
+
+### Dynamical C*-algebras and coarse geometry
+- **来源**: arXiv 2609.39762
+- **链接**: https://arxiv.org/abs/2609.39762
+- **分类**: math.OA（动态 C*-代数 / 粗几何）
+- **摘要**: 动态 C*-代数与粗几何。属 **§004-Gelfand 强命中**（C*-代数）。
+
+### UCP Extension in Dimension Three
+- **来源**: arXiv 2609.38539
+- **链接**: https://arxiv.org/abs/2609.38539
+- **分类**: math.OA（完全正映射）
+- **摘要**: 三维 UCP（单式完全正）扩张。属 **§004-Gelfand 强命中**（完全正映射 / C*-代数）。
+
+### Reference-Measure Freedom of the Effective Hamiltonian: From Stochastic Thermodynamics to the Macroscopic Limit
+- **来源**: arXiv 2609.38994
+- **链接**: https://arxiv.org/abs/2609.38994
+- **分类**: cond-mat.stat-mech（随机热力学 / 宏观极限）
+- **摘要**: 有效哈密顿量的参考测度自由度：随机热力学→宏观极限。对应"非平衡态耗散 / 随机热力学"——**随机热力学高优先级（二·核心推荐）**。
+
+### Excursion-Resolved Thermodynamic Inference without Observing Reverse Transitions
+- **来源**: arXiv 2609.39205
+- **链接**: https://arxiv.org/abs/2609.39205
+- **分类**: cond-mat.stat-mech（热力学推断 / 涨落定理）
+- **摘要**: 无需观测反向跃迁的游程分辨热力学推断（熵产生 / 自由能差）。对应"非平衡做功 / 随机热力学 + 推断"——**随机热力学高优先级（二·核心推荐）**。
+
+### CYNAR: a trajectory-based estimator of entropy production
+- **来源**: arXiv 2609.39654
+- **链接**: https://arxiv.org/abs/2609.39654
+- **分类**: cond-mat.stat-mech（熵产生 / 轨迹推断）
+- **摘要**: 基于轨迹的熵产生估计器 CYNAR（无需精细平衡假设）。对应"熵产生 / 非平衡态耗散"——**随机热力学高优先级（二·核心推荐）**。
+
+### Spectral theory for dynamical large deviations in non-Markov self-interacting processes
+- **来源**: arXiv 2609.40329
+- **链接**: https://arxiv.org/abs/2609.40329
+- **分类**: cond-mat.stat-mech（大偏差 / 非马尔可夫）
+- **摘要**: 非马尔可夫自相互作用过程的动力学大偏差谱理论。对应"大偏差 / 随机热力学"——**随机热力学中-高优先级（二·核心推荐）**。
+
+### Unified Optimality Conditions for Stochastic Optimal Control in the Rough Path and Itô Frameworks
+- **来源**: arXiv 2609.38395
+- **链接**: https://arxiv.org/abs/2609.38395
+- **分类**: math.OC（随机最优控制 / 粗糙路径 / Itô）
+- **摘要**: 粗糙路径与 Itô 框架下的随机最优控制统一最优性条件（HJB / 随机最大值原理；粗糙路径=几何化随机分析）。对应"HJB AND 随机最优控制" + "Ito 修正 AND 微分几何"双命中——**几何随机最优化高优先级（二·核心推荐）**。
+
+### Input-to-state stability of second-order port-Hamiltonian systems under nonlinear dynamic boundary feedback
+- **来源**: arXiv 2609.39948
+- **链接**: https://arxiv.org/abs/2609.39948
+- **分类**: math.OC（端口哈密顿 / 几何控制）
+- **摘要**: 二阶端口哈密顿（PCH）系统在非线动态边界反馈下的输入-状态稳定性（Dirac 结构 / 能量-流量端口）。对应"PCH / Dirac Structure" + "几何控制 via PCH"近邻——**几何随机最优化高优先级（二·核心推荐）**。
+
+### Several Accelerated and Stable Pseudo-Energy-Dissipative Lagrange Multiplier Methods
+- **来源**: arXiv 2609.39695
+- **链接**: https://arxiv.org/abs/2609.39695
+- **分类**: math.OC（能量耗散 / Lagrange 乘子）
+- **摘要**: 伪能量耗散 Lagrange 乘子法（能量-耗散几何方法）。对应"能量耗散 / 几何方法"——**几何随机中-高优先级（二·核心推荐）**。
+
+### Ergotropy from energetic coherence and the third law of thermodynamics
+- **来源**: arXiv 2609.38724
+- **链接**: https://arxiv.org/abs/2609.38724
+- **分类**: quant-ph（量子热力学 / ergotropy）
+- **摘要**: 能量相干与第三定律的做功能力（ergotropy）。对应"量子热力学 / 能量"——**随机热力学中-高优先级（二·核心推荐）**。
+
+### Spectrally Selective Charging of an Interacting Quantum Battery via an Anharmonic Mediator
+- **来源**: arXiv 2609.39393
+- **链接**: https://arxiv.org/abs/2609.39393
+- **分类**: quant-ph（量子电池 / 能量存储）
+- **摘要**: 非谐中介的相互作用量子电池谱选择性充电。对应"量子电池 / 能量存储"——**随机热力学中-高优先级（二·核心推荐）**。
+
+### Finite-Bandwidth Protection of a Three-Level Quantum Heat Engine Against Parasitic Heat Leaks
+- **来源**: arXiv 2609.40038
+- **链接**: https://arxiv.org/abs/2609.40038
+- **分类**: quant-ph（量子热机）
+- **摘要**: 三能级量子热机抗寄生热漏的有限带宽保护。对应"量子热机 / 热机"——**随机热力学中-高优先级（二·核心推荐）**。
+
+### Circuit-Based Dispersion Analysis of Periodic Cross-Shaped Unit Cells with Dirac Characteristics
+- **来源**: arXiv 2609.39610
+- **链接**: https://arxiv.org/abs/2609.39610
+- **分类**: eess.SY（Dirac 特征 / 几何控制）
+- **摘要**: 具 Dirac 特征的周期十字单元电路色散分析（Dirac 结构 = §能源关键词 PCH/Dirac）。对应"PCH OR Dirac Structure"近邻——**几何控制中优先级（二·核心推荐）**。
+
+---
+
+
+
+
