@@ -26,14 +26,15 @@
 % "you probably loaded polyglossia before defining the main font" 警告）
 % NotoSerifSC-VF.ttf 是 Variable Font，需用 Weight=600 指定 SemiBold
 \setmainfont{NotoSerifSC-VF.ttf}[
+    Path = {../font/},
     BoldFont = {NotoSerifSC-VF.ttf},
     BoldFeatures = {Weight=600},
     ItalicFont = {NotoSerifSC-VF.ttf},
     ItalicFeatures = {FakeSlant = 0.2}
 ]
 
-\setsansfont{NotoSansSC-VF.ttf}
-\setmonofont{NotoSansSC-VF.ttf}
+\setsansfont{NotoSansSC-VF.ttf}[Path={../font/}]
+\setmonofont{NotoSansSC-VF.ttf}[Path={../font/}]
 
 % 语言设置在主字体定义之后（polyglossia 需放到 \setmainfont 之后加载，
 % 这也是 fontspec/polyglossia 的推荐顺序）
