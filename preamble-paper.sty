@@ -40,9 +40,11 @@
 \setmainlanguage{chinese}
 \setotherlanguage{english}
 
+% 字体目录：默认 ../font/（CQT 树内）；引用方可在 \usepackage 前用 \fontdir 覆盖
+\providecommand{\fontdir}{../font/}
 % 使用项目本地 NotoSerifSC / NotoSansSC 静态字体
 \setmainfont{NotoSerifSC}[
-    Path           = ../font/,
+    Path           = \fontdir,
     Extension      = .ttf,
     UprightFont    = *-Regular,
     BoldFont       = *-Bold,
@@ -51,13 +53,13 @@
 ]
 
 \setsansfont{NotoSerifSC}[
-    Path        = ../font/,
+    Path        = \fontdir,
     Extension   = .ttf,
     UprightFont = *-Regular,
     BoldFont    = *-Bold
 ]
 \setmonofont{NotoSerifSC}[
-    Path        = ../font/,
+    Path        = \fontdir,
     Extension   = .ttf,
     UprightFont = *-Regular,
     BoldFont    = *-Bold
