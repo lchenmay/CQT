@@ -4,6 +4,22 @@
 \usepackage{silence}
 \WarningFilter{LaTeX}{has changed}
 \WarningFilter{glossaries}{No \printglossary or \printglossaries found}
+
+% sectsty 加载时会用 \CheckCommand 检查 \underbar/\underline，这两个命令通常已被其它包重定义，
+% 产生无行号的 LaTeX Warning；silence 包拦截不到 @latex@warning@no@line，这里直接补丁屏蔽。
+\makeatletter
+\let\orig@latex@warning@no@line\@latex@warning@no@line
+\def\@latex@warning@no@line#1{%
+  \in@{\underbar}{#1}%
+  \ifin@\else
+    \in@{\underline}{#1}%
+    \ifin@\else
+      \orig@latex@warning@no@line{#1}%
+    \fi
+  \fi}
+\makeatother
+\WarningFilter{glossaries}{No language module detected}
+\WarningFilter{tracklang}{No `datatool' support}
 \WarningFilter{microtype}{Unknown slot number of character}
 
 % ============== 期刊论文版式 ===================================
@@ -147,7 +163,10 @@
 \renewcommand*{\nameyeardelim}{\addcomma\space\allowbreak}
 \renewcommand*{\multicitedelim}{\addsemicolon\space\allowbreak}
 
-\usepackage[style=index]{glossaries}
+% biblatex 没有 chinese.lbx，把 polyglossia 的 chinese 映射到 english，消除 unsupported language 警告
+\DeclareLanguageMapping{chinese}{english}
+
+\usepackage[nolangwarn,style=index]{glossaries}
 \makeglossaries
 
 \usepackage{makeidx}
