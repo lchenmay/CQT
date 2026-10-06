@@ -73,6 +73,7 @@
 % 中文断行设置
 \AtBeginDocument{%
   \RaggedRight
+  \setlength{\parindent}{2em}% RaggedRight 会把 \parindent 清零，这里恢复：节后首段顶格，后续段落首行缩进
   \emergencystretch=2em
   \tolerance=2000
   \pretolerance=1000
@@ -96,6 +97,28 @@
 \usepackage{quoting}
 \usepackage{setspace}
 \onehalfspacing
+
+% ============== 全局版式：目录与章节标题样式 ==============
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftdotsep}{4.5}
+\renewcommand{\cftsecnumwidth}{2.3em}
+% 减少目录内行间距
+\setlength{\cftbeforesecskip}{4pt plus 1pt}
+\setlength{\cftbeforesubsecskip}{2pt plus 1pt}
+\setlength{\cftbeforesubsubsecskip}{1pt plus 0.5pt}
+\setlength{\cftbeforeparaskip}{0pt}
+
+% 覆盖 polyglossia 中文节编号，使用纯数字+点格式（无"第""节""章"）
+\titleformat{\section}{\Large\rmfamily\bfseries}{\thesection.}{1em}{}
+\titleformat{\subsection}{\large\rmfamily\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalsize\rmfamily\bfseries}{\thesubsubsection}{1em}{}
+% paragraph 内嵌加粗 + 悬挂缩进 + 间距控制
+\newif\ifparablock
+\AddToHook{para/begin}{\ifparablock\vspace{1.5ex plus 0.3ex}\parablockfalse\fi}
+\titleformat{\paragraph}[runin]{\normalsize\rmfamily\bfseries}{\theparagraph}{1em}{\global\hangindent=2.5em\global\hangafter=1\global\parablocktrue\relax}
+\titlespacing{\paragraph}{0pt}{1.5ex plus 0.3ex minus 0.2ex}{0.8em}
 
 \usepackage{tikz}
 \usepackage{tikz-cd}
@@ -266,3 +289,44 @@
 \usepackage[unicode, pdfencoding=auto]{hyperref} 
 \usepackage{bookmark}
 \hypersetup{unicode=true, pdfencoding=unicode}
+
+% ============== 通用引用样式与数学算子（由 study.tex 迁入，共享安全） ==============
+% 深红强调色（与 CWW marker 一致）
+\definecolor{myemphasis}{RGB}{143, 0, 0}
+
+% CWW talkquote：左缩进 2em、右 0、正体（对话/引用主力）
+\newenvironment{talkquote}{%
+  \begin{quoting}[leftmargin=2em, rightmargin=0pt, vskip=1.5ex]%
+  \leavevmode\setlength{\parskip}{1.2ex}%
+}{%
+  \end{quoting}%
+}
+
+% CWW numbereditem：斜体、左缩进 1.5em
+\newenvironment{numitem}{%
+  \vspace{1.5ex}\par\noindent\itshape
+  \begin{quoting}[leftmargin=1.5em, rightmargin=0pt, vskip=0pt]%
+}{%
+  \end{quoting}\vspace{1.5ex}%
+}
+
+% 左侧粗线框（基于 framed）
+\newenvironment{leftrulebox}{%
+  \def\FrameCommand{\vrule width 1pt \hspace{1em}}%
+  \MakeFramed{\advance\hsize-\width\FrameRestore}\vspace{0.6em}\itshape\noindent%
+}{%
+  \vspace{0.6em}\endMakeFramed%
+}
+
+% 右对齐题词 epigraph 风格
+\newenvironment{myepigraph}{%
+  \par\vspace{1.5ex}\hfill\begin{minipage}{0.72\textwidth}\raggedleft\itshape%
+}{%
+  \end{minipage}\par\vspace{1.5ex}%
+}
+
+% 自定义二元算子（transported ring structure）
+\newcommand{\sqplus}{\mathbin{\boxplus}}
+\newcommand{\sqtimes}{\mathbin{\boxtimes}}
+\newcommand{\sqminus}{\mathbin{\boxminus}}
+\newcommand{\sqdiv}{\mathbin{\boxed{/}}}

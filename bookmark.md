@@ -4,6 +4,120 @@
 
 ---
 
+## 2026-10-05
+
+### Clarifications on the Experimental Status of Real Quantum Theory
+- **来源**: arXiv 2610.03644
+- **链接**: https://arxiv.org/abs/2610.03644
+- **分类**: quant-ph（量子基础 / 解释）
+- **摘要**: 重新审视"实量子理论（Real Quantum Theory, RQT）"实验检验的现状。RQT 仅允许实希尔伯特空间，是量子理论是否本质上需要复结构的实验判定基准之一，直接关联量子态的复结构需求与解释议题。
+
+---
+
+### An operational characterization of finite-dimensional quantum theory
+- **来源**: arXiv 2610.03694
+- **链接**: https://arxiv.org/abs/2610.03694
+- **分类**: quant-ph（量子基础 / 操作主义）
+- **摘要**: 用纯操作/资源视角刻画有限维量子理论的独特性（与广义概率理论 GPT 区分）。属量子基础理论核心：用操作公理重建量子理论结构，关联可观测量代数与算子系统。
+
+---
+
+### Born rule in Schroedinger-Newton scenarios of semiclassical gravity
+- **来源**: arXiv 2610.03501
+- **链接**: https://arxiv.org/abs/2610.03501
+- **分类**: gr-qc, quant-ph（量子引力 / Born 规则）
+- **摘要**: 在半经典引力 Schrödinger–Newton 框架下考察 Born 规则的涌现与地位。直接触及量子测量问题 / Born 规则基础解释，属量子基础与半经典引力交叉。
+
+---
+
+### Quantizing the exterior region of a Kerr-AdS black hole leads to a resolution of the information paradox at the quantum level
+- **来源**: arXiv 2610.02237
+- **链接**: https://arxiv.org/abs/2610.02237
+- **分类**: gr-qc, hep-th（黑洞信息悖论 / 量子引力）
+- **摘要**: 对 Kerr-AdS 黑洞外部区域做量子化，声称在量子层面消解信息悖论。黑洞信息悖论属量子基础理论（幺正性 vs 热辐射）与算子系统交叉。
+
+---
+
+### Two-qutrit Werner state is always local
+- **来源**: arXiv 2610.02997
+- **链接**: https://arxiv.org/abs/2610.02997
+- **分类**: quant-ph（Bell 非定域性 / 纠缠）
+- **摘要**: 证明两-qutrit Werner 态恒为定域（无 Bell 非定域性），推进对 Werner 态非定域性阈值的理解。属量子非定域性与 Bell 不等式基础议题。
+
+---
+
+### Dagger Categories in Riemannian Geometry
+- **来源**: arXiv 2610.02257
+- **链接**: https://arxiv.org/abs/2610.02257
+- **分类**: math.CT, math.DG（范畴论 / dagger 范畴 / 黎曼几何）
+- **摘要**: 将 dagger 范畴结构引入黎曼几何（作者 Jón Hákon Garðarsson, Paolo Perrone）。直接命中 §003-type-topos：dagger 范畴是量子框架（CPM、量子信道）与几何结合的范畴化工具，关联量子仪器单子与几何语义。
+
+---
+
+### Premonoidal Semantics and Scalable Diagrammatics of Fermionic Quantum Computing
+- **来源**: arXiv 2610.02287
+- **链接**: https://arxiv.org/abs/2610.02287
+- **分类**: quant-ph, math.CT（范畴化量子计算 / premonoidal 范畴）
+- **摘要**: 发展费米子量子计算的 premonoidal 语义与可扩展图算。属 §003 范畴化量子信息（categorical QIT）方向，与 ZX-演算/弦图范畴论同源。
+
+---
+
+### Weak type (1,1) boundedness of Bochner–Riesz means at the critical index on quantum tori
+- **来源**: arXiv 2610.03107
+- **链接**: https://arxiv.org/abs/2610.03107
+- **分类**: math.OA, math-ph（非交换几何 / 量子环面）
+- **摘要**: 证明量子环面上 Bochner–Riesz 平均在临界指标的弱 (1,1) 有界性。量子环面（非交换环面）是 Connes 非交换几何原型，强命中 §004-Gelfand：非交换调和分析与 Gelfand 对偶的非交换推广。
+
+---
+
+### Talagrand type for noncommutative L_1 spaces
+- **来源**: arXiv 2610.03407
+- **链接**: https://arxiv.org/abs/2610.03407
+- **分类**: math.OA, math.FA（非交换 L_p 空间 / 算子空间）
+- **摘要**: 在非交换 L_1 空间上建立 Talagrand 型不等式。非交换 L_p 是 §004 算子代数（非交换测度论/概率）的核心构件，关联非交换遍历与自由概率。
+
+---
+
+### QWEP stability under twisted crossed products
+- **来源**: arXiv 2610.03424
+- **链接**: https://arxiv.org/abs/2610.03424
+- **分类**: math.OA（C*-代数 / QWEP 猜想 / 交叉积）
+- **摘要**: 证明 twisted 交叉积下 QWEP（Kirchberg 猜想）性质的稳定性。直接关联 Connes 嵌入猜想/QWEP 这一 §004 里程碑问题，属算子代数结构稳定性。
+
+---
+
+### Noncommutative Marcus-Ree inequality and Erdős channels
+- **来源**: arXiv 2610.02294
+- **链接**: https://arxiv.org/abs/2610.02294
+- **分类**: math-ph, math.OA（非交换概率 / 随机矩阵）
+- **摘要**: 建立非交换 Marcinkiewicz–Zygmund / Marcus–Ree 型不等式并应用于 Erdős 信道。§004-相关：非交换概率与随机矩阵属算子代数交叉，关联自由概率（Voiculescu）。
+
+---
+
+### Minimax entropy production for arbitrary processes
+- **来源**: arXiv 2610.03478
+- **链接**: https://arxiv.org/abs/2610.03478
+- **分类**: cond-mat.stat-mech（随机热力学 / 熵产生）
+- **摘要**: 对任意随机过程给出熵产生率的极小极大（minimax）界。强命中能源主题"非平衡态耗散 / 熵产生"：任意过程的熵产生下界的统一刻画，是高优先级随机热力学理论进展。
+
+---
+
+### From Heat to Homology: Spectral Gap Transfer for Exact Quantum Gibbs Sampling at All Temperatures
+- **来源**: arXiv 2610.02859
+- **链接**: https://arxiv.org/abs/2610.02859
+- **分类**: quant-ph（量子热力学 / Gibbs 采样）
+- **摘要**: 利用谱隙转移实现全温区精确量子 Gibbs 采样。中-高优先级：量子热机/热库与精确热态制备，关联非平衡量子热力学与量子模拟。
+
+---
+
+### Wasserstein Contraction of Stochastic Systems on Manifolds: A Differential Approach
+- **来源**: arXiv 2610.03264
+- **链接**: https://arxiv.org/abs/2610.03264
+- **分类**: math.OC, math.DG（随机系统 / 流形 / 最优传输）
+- **摘要**: 用微分方法证明流形上随机系统的 Wasserstein 收缩。中优先级：微分几何（Riemannian/Wasserstein 几何）用于随机动力学稳定性，关联几何控制与信息几何。
+
+---
+
 ## 2026-07-28
 
 ### Probability, Curvature and Spectrum on Graphs
