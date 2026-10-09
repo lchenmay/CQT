@@ -4,6 +4,39 @@
 
 ---
 
+## 2026-10-08
+
+### 由超图到 P 进因果性：离散决定论系统的非阿基米德框架
+- **来源**: WeChat 奇点O（mp.weixin.qq.com/s/jZHbqOfUapJZkNgKGKmF3g）
+- **链接**: https://mp.weixin.qq.com/s/jZHbqOfUapJZkNgKGKmF3g
+- **分类**: 量子基础 / 解释（非阿基米德 p 进因果性、超决定论；§002 近邻 / §003 关联）
+- **作者**: 黄岱永（Daiyong Huang）；蓝本 V. Anashin《Causality: The p-adic Theory》；索引 S. Wolfram Ruliad
+- **摘要**: 以 Wolfram 自然计算的 Ruliad 模型为索引、以 Anashin 的《因果性：p-进理论》为蓝本，系统综述离散决定论系统的 p 进（非阿基米德）因果性框架。核心命题：因果性本质是非阿基米德的，实数连续统描述离散因果系统有根本缺陷，p 进数的分形树状超度量拓扑天然契合离散因果系统的信息流动。将 p 进宇宙（非阿基米德完备域，保留连续度规）与 Ruliad 宇宙（纯离散图论）对比；详述 Z_p 逆极限、p 进展开、超度量强三角不等式、Cantor 集、1-Lipschitz 函数作为因果性的几何保障。应用于自动机理论、密码学伪随机、拉丁方设计，并为量子力学基础中的超决定论（'t Hooft 因果性公设、Volovich 数域无关性）提供严格数学实现——量子概率被视为有限观测精度下确定性复杂系统的认识论涌现。
+
+---
+
+### arXiv THU 8 OCT 2026 强命中（量子基础 / §003 / §004 / 能源）
+- **2610.09747** A Minimal Bicomplex Extension of the Complex Scalar Algebra of QM with an Ideal-Valued Sector — 量子基础（QM 代数结构 / Born 规则；§002）
+- **2610.09845** Redundant Records of the Past: Unifying Quantum Darwinism and Decoherent Histories — 量子基础（§002 达尔文主义 + 退相干历史）
+- **2610.10004** Causal confusion in quantum systems: distinguishing direct cause and common cause — 量子基础（量子因果推断）
+- **2610.10254** An Explicit Counterexample to Tsirelson's Problem via a Linear System Game — 量子基础（量子关联 / Bell；§002 + §004 近邻）
+- **2610.10143** Inequivalent Quantum Resources from Multipartite State Discrimination — 量子基础（多体非定域性）
+- **2610.09739** How protomodular is your favourite category? — §003（一般范畴论，弱；protomodular / change-of-base functor）
+- **2610.09390** Regular simple nuclear C*-algebras — §004（II₁ factor / tracial / Murray–von Neumann）
+- **2610.09678** The Differential Structure of Generators of KMS-Symmetric Quantum Markov Semigroups — §004（modular theory / QMS）
+- **2610.09836** The Geometric Arveson-Douglas Conjecture through Veronese Embeddings — §004（Toeplitz / KK-理论）
+- **2610.08891** Groups with rapid decay and trivial amenable radical are C*-simple — §004（C*-simplicity）
+- **2610.09741** Intrinsic Hutchinson measures and KMS states for IFS with large overlaps — §004（Kajiwara-Watatani C*-代数 / KMS）
+- **2610.09809** Complexity Rank of AT Algebras of Real Rank Zero — §004（AT 代数）
+- **2610.10377** Crystallization of the quantum Stiefel manifolds SO_q(2n+1)/SO_q(2n-1) — §004（量子 Stiefel / K-groups）
+- **2610.09867** Stochastic Optimal Control of Decoupled Reflected FBSDEs — 能源 / 几何控制（随机最优控制 / HJB / 反射 FBSDE）
+- **2610.10054** Transition Path Sampling Using Koopman Operators and Exit-Time Optimal Control — 能源 / 几何控制（Koopman + exit-time 最优随机控制）
+- **2610.09405** Heat Transport of the β-FPUT chain in the long-wave limit — 能源 / 随机热力学（NESS / 耗散 / Langevin 热库）
+- **2610.09062** Geometric heat pumping on a quantum processor — 能源 / 量子热力学（几何热泵）
+- **2610.10248** Dynamics of Work Extraction in Multipartite Atomic Systems: Role of Correlations and Relative Entropy — 能源 / 量子热力学（功提取 / 相对熵）
+
+---
+
 ## 2026-10-05
 
 ### Clarifications on the Experimental Status of Real Quantum Theory
