@@ -3428,6 +3428,63 @@
   note      = {提出"自我修订发现系统(SRDS)"——一种闭环自主科研 Agent 架构：用大型语言模型(LLM)驱动的智能体生成假设、设计实验、迭代修订，并通过多 Agent"研讨会(colloquium)"进行自我批评与交叉验证。核心贡献是用范畴论（范畴、函子、自然变换、幺半范畴/弦图）为这种多 Agent 协作与知识演化提供形式化框架(作者称"AI 的协变力学")，把 Agent 间的信息流与协议合成建模为范畴结构。与 CQT 的 §003-type-topos/范畴论方向及"量子+AI"交叉相关。}
 }
 
+%% ============================================================
+%% Koopman--von Neumann 算子理论（经典力学的算子方法, 1931–1933, §004 源头）
+%% ============================================================
+
+@article{Koopman1931,
+  author    = {Koopman, B. O.},
+  title     = {Hamiltonian systems and transformation in Hilbert space},
+  journal   = {Proceedings of the National Academy of Sciences of the United States of America},
+  volume    = {17},
+  number    = {5},
+  pages     = {315--318},
+  year      = {1931},
+  doi       = {10.1073/pnas.17.5.315},
+  url       = {https://doi.org/10.1073/pnas.17.5.315},
+  note      = {Koopman 算子理论的奠基短文：经典力学相空间上的可观测量在函数空间 $L^2$ 中由酉算子描述，将演化从状态空间转移到函数空间；是 Koopman 算子、遍历定理与谱方法的源头。命中 §004（算子 / Hilbert 空间谱论）}
+}
+
+@article{vonNeumann1932Operator,
+  author    = {von Neumann, J.},
+  title     = {Zur Operatorenmethode in der klassischen Mechanik},
+  journal   = {Annals of Mathematics},
+  series    = {2},
+  volume    = {33},
+  number    = {3},
+  pages     = {587--642},
+  year      = {1932},
+  doi       = {10.2307/1968537},
+  url       = {https://doi.org/10.2307/1968537},
+  note      = {系统化了 Koopman 1931 的发现：正式建立可观测量 $\leftrightarrow$ Hilbert 空间算子的对应、引入谱分解；引言明确称"Die von Herrn B. O. Koopman entdeckte Operatorenbehandlung der klassischen Mechanik"。续篇见 vonNeumann1933OperatorII。命中 §004（算子方法、谱分解）}
+}
+
+@article{vonNeumann1933OperatorII,
+  author    = {von Neumann, J.},
+  title     = {Operator Methods in Classical Mechanics, {II}},
+  journal   = {Annals of Mathematics},
+  series    = {2},
+  volume    = {33},
+  number    = {4},
+  pages     = {789--791},
+  year      = {1933},
+  doi       = {10.2307/1968872},
+  url       = {https://doi.org/10.2307/1968872},
+  note      = {《经典力学中的算子方法》第二部分，完成测度空间分类等工作。与 vonNeumann1932Operator 同系列。命中 §004}
+}
+
+@article{KoopmanVonNeumann1932,
+  author    = {Koopman, B. O. and von Neumann, J.},
+  title     = {Dynamical Systems of Continuous Spectra},
+  journal   = {Proceedings of the National Academy of Sciences of the United States of America},
+  volume    = {18},
+  number    = {3},
+  pages     = {255--263},
+  year      = {1932},
+  doi       = {10.1073/pnas.18.3.255},
+  url       = {https://doi.org/10.1073/pnas.18.3.255},
+  note      = {Koopman 与 von Neumann 合作，专门处理连续谱的动力系统；与 Koopman1931 / vonNeumann1932Operator 共同构成 Koopman--von Neumann 算子理论的原始文献群。命中 §004}
+}
 
 
 
@@ -3445,3 +3502,78 @@
 
 
 
+
+
+@article{Schonberg1954,
+  author    = {Schönberg, Mário},
+  title     = {On the passage from stochastic to wave equations},
+  journal   = {Il Nuovo Cimento},
+  volume    = {12},
+  number    = {1},
+  pages     = {153--156},
+  year      = {1954},
+  note      = {经典波函数与相空间波动力学的早期先驱工作之一，将经典统计力学在 Hilbert 空间形式下与波方程类比。}
+}
+
+@article{Loinger1962,
+  author    = {Loinger, Angelo},
+  title     = {Density matrix and wave functions in classical statistical mechanics},
+  journal   = {Il Nuovo Cimento},
+  volume    = {25},
+  number    = {2},
+  pages     = {473--489},
+  year      = {1962},
+  note      = {明确在经典统计力学中用密度矩阵与波函数描述相空间分布，是 KvN 经典波函数形式的奠基性工作。}
+}
+
+@article{WienerDellaRiccia1966,
+  author    = {Wiener, Norbert and Della Riccia, Giacomo},
+  title     = {Wave mechanics in classical phase space. {I}. {The} free particle},
+  journal   = {Journal of Mathematical Physics},
+  volume    = {7},
+  number    = {3},
+  pages     = {431--433},
+  year      = {1966},
+  note      = {在经典相空间中建立波力学（自由粒子），与 KvN 经典波函数形式等价。}
+}
+
+@article{Sudarshan1976,
+  author    = {Sudarshan, E. C. George},
+  title     = {Interaction between classical and quantum systems: {A} new approach to unified quantum dynamics},
+  booktitle = {Foundations of Quantum Mechanics},
+  editor    = {d'Espagnat, B.},
+  publisher = {Academic Press},
+  year      = {1976},
+  note      = {系统给出经典系统与量子系统统一处理的经典波函数表述。}
+}
+
+@article{Volovich1987,
+  author    = {Volovich, I. V.},
+  title     = {p-adic space-time and string theory},
+  journal   = {Theoretical and Mathematical Physics},
+  volume    = {71},
+  number    = {3},
+  pages     = {574--576},
+  year      = {1987},
+  doi       = {10.1007/BF01017041},
+  note      = {p 进时空与弦论的开创性论文，提出数域无关性（数域无关性公设）与 adelic 振幅}
+}
+
+@book{Hooft2016Cellular,
+  author    = {'t Hooft, Gerard},
+  title     = {The Cellular Automaton Interpretation of Quantum Mechanics},
+  publisher = {Springer},
+  series    = {Fundamental Theories of Physics},
+  volume    = {185},
+  year      = {2016},
+  doi       = {10.1007/978-3-319-41285-6},
+  note      = {超决定论（superdeterminism）的系统表述：量子力学是底层确定性细胞自动机的涌现}
+}
+
+@book{Anashin2022Causality,
+  author    = {Anashin, Vladimir},
+  title     = {Causality: The p-adic Theory},
+  publisher = {World Scientific},
+  year      = {2022},
+  note      = {离散时间因果函数的 p 进（非阿基米德）数学理论；本文 p 进因果性节的蓝本（年份/出版社待核对）}
+}

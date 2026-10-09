@@ -5,37 +5,9 @@
 \AtEveryBibitem{\clearfield{note}}
 \numberwithin{equation}{section}
 
-% 目录样式：... 点连接标题与页码
-\usepackage{tocloft}
-\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
-\renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}
-\renewcommand{\cftdotsep}{4.5}
-\renewcommand{\cftsecnumwidth}{2.3em}
-% 减少目录内行间距
-\setlength{\cftbeforesecskip}{4pt plus 1pt}
-\setlength{\cftbeforesubsecskip}{2pt plus 1pt}
-\setlength{\cftbeforesubsubsecskip}{1pt plus 0.5pt}
-\setlength{\cftbeforeparaskip}{0pt}
-
-% Custom binary operators for transported ring structure
-\newcommand{\sqplus}{\mathbin{\boxplus}}
-\newcommand{\sqtimes}{\mathbin{\boxtimes}}
-\newcommand{\sqminus}{\mathbin{\boxminus}}
-\newcommand{\sqdiv}{\mathbin{\boxed{/}}}
-
 \fancyhead[LE,RO]{\thepage}
 \fancyhead[RE]{\textbf{随机对称性与净能量交换}}
 \fancyhead[LO]{\textit{}}
-
-% 覆盖 polyglossia 中文节编号，使用纯数字+点格式（无"第""节""章"）
-\titleformat{\section}{\Large\rmfamily\bfseries}{\thesection.}{1em}{}
-\titleformat{\subsection}{\large\rmfamily\bfseries}{\thesubsection}{1em}{}
-\titleformat{\subsubsection}{\normalsize\rmfamily\bfseries}{\thesubsubsection}{1em}{}
-% paragraph 内嵌加粗 + 悬挂缩进 + 间距控制
-\newif\ifparablock
-\AddToHook{para/begin}{\ifparablock\vspace{1.5ex plus 0.3ex}\parablockfalse\fi}
-\titleformat{\paragraph}[runin]{\normalsize\rmfamily\bfseries}{\theparagraph}{1em}{\global\hangindent=2.5em\global\hangafter=1\global\parablocktrue\relax}
-\titlespacing{\paragraph}{0pt}{1.5ex plus 0.3ex minus 0.2ex}{0.8em}
 
 
 \begin{document}
@@ -46,6 +18,275 @@
 \setcounter{tocdepth}{1}
 \tableofcontents 
 
+\section{经典力学的算子化}
+
+\cite{Koopman1931}
+指出相空间上的 Hamilton 流可在 Hilbert 空间 $L^{2}$ 中由一元（酉）算子描述：
+演化不再作用于点态状态，而是作用于可观测量函数本身，
+从而把刘维尔不变测度与谱方法自然纳入同一框架。
+\cite{vonNeumann1932Operator}
+随即系统化这一发现\cite{vonNeumann1933OperatorII}，
+明确建立可观测量与 Hilbert 空间算子的对应并引入谱分解；
+二人又合作专门处理了连续谱情形 \cite{KoopmanVonNeumann1932}。
+
+这一 Koopman--von Neumann（KvN）形式把经典力学从相空间上的点动力学，
+重写为希尔伯特空间上的线性算子理论：经典态由波函数般的密度表示，
+经典演化由酉算子（Koopman 算子）给出，
+而 Hamilton 方程则等价于该 Hilbert 空间中的算符本征方程。
+它最初源于对 Hamilton 系统遍历理论的算子化研究，
+但核心贡献在于提供了一条严格、线性的经典力学表述，
+使经典与量子力学共享同一套算子语言——可观测量、谱、酉演化——
+从而为后文在算子层面讨论对称性与能量交换奠定数学基础。
+
+\subsection{从经典 Hamilton 方程到 KvN 算子}
+
+Koopman--von Neumann（KvN）形式的核心思想，是将经典力学从相空间上的点动力学转化为希尔伯特空间上的线性算子理论。以下从 Hamilton 方程出发，逐步导出 KvN 算子描述的经典力学系统。
+
+\subsubsection*{1. 经典 Hamilton 方程}
+
+设相空间坐标为 $(q,p)=(q_1,\dots,q_n,p_1,\dots,p_n)$，哈密顿量为 $H(q,p)$。Hamilton 方程为
+\begin{equation}
+    \dot q_i = \frac{\partial H}{\partial p_i},
+    \qquad
+    \dot p_i = -\frac{\partial H}{\partial q_i}
+    \qquad (i=1,\dots,n).
+    \label{eq:hamilton}
+\end{equation}
+这描述的是相空间中单个点的确定性运动。
+
+\subsubsection*{2. 从轨道到概率密度：Liouville 方程}
+
+我们不再追踪单个点，而是考虑相空间上的概率密度 $\rho(q,p,t)$。在时刻 $t$，系统处于相空间区域 $D$ 的概率为
+\begin{equation}
+    P(D,t) = \int_D \rho(q,p,t)\,dq\,dp .
+\end{equation}
+由于 Hamilton 流保持相空间体积（Liouville 定理），概率密度沿轨道守恒，这给出 Liouville 方程
+\begin{equation}
+    \frac{\partial \rho}{\partial t} + \{\rho,H\} = 0,
+    \label{eq:liouville}
+\end{equation}
+其中 $\{\cdot,\cdot\}$ 是 Poisson 括号
+\begin{equation}
+    \{f,g\} = \sum_{i=1}^n
+    \left(
+        \frac{\partial f}{\partial q_i}\frac{\partial g}{\partial p_i}
+        -
+        \frac{\partial f}{\partial p_i}\frac{\partial g}{\partial q_i}
+    \right).
+\end{equation}
+利用 Hamilton 方程，\eqref{eq:liouville} 也可以写成
+\begin{equation}
+    \frac{\partial \rho}{\partial t}
+    =
+    -\sum_{i=1}^n
+    \left(
+        \frac{\partial H}{\partial p_i}\frac{\partial \rho}{\partial q_i}
+        -
+        \frac{\partial H}{\partial q_i}\frac{\partial \rho}{\partial p_i}
+    \right).
+    \label{eq:liouville-expanded}
+\end{equation}
+
+\subsubsection*{3. 引入经典波函数}
+
+KvN 形式的关键一步是，将概率密度 $\rho$ 写成某个复值函数的模方：
+\begin{equation}
+    \rho(q,p,t) = |\psi(q,p,t)|^2 .
+    \label{eq:classical-wavefunction}
+\end{equation}
+这里 $\psi$ 就是所谓的\emph{经典波函数}，它属于希尔伯特空间 $L^2(\mathbb{R}^{2n})$，内积为
+\begin{equation}
+    \langle \phi \mid \psi \rangle
+    =
+    \int \overline{\phi(q,p)}\,\psi(q,p)\,dq\,dp .
+\end{equation}
+注意，$\psi$ 的相位没有直接物理意义，只有 $|\psi|^2$ 对应概率密度。但我们要求 $\psi$ 的演化保持 $L^2$ 范数，从而保证总概率守恒。
+
+需要指出，把经典态显式写成相空间中的复值波函数、并以 $\rho=|\psi|^2$ 表示概率密度，并不是 Koopman--von Neumann 原始算子表述的一部分。KvN 最初是在可观测量函数空间上引入酉算子（Koopman 算子）；而将经典力学改写成与薛定谔方程同形的复值波函数形式，是后来由 Schönberg \cite{Schonberg1954}、Loinger \cite{Loinger1962}、Wiener 与 Della Riccia \cite{WienerDellaRiccia1966}，以及 Sudarshan \cite{Sudarshan1976} 等人逐步建立的。这一“经典波函数”写法使经典力学在形式上与量子波动力学完全同构，二者唯一的代数差别在于对易关系（经典 $[\hat q,\hat p]=0$，量子 $[\hat q,\hat p]=i\hbar$）。
+
+\subsubsection*{4. 构造 Liouvillian 算子}
+
+我们希望 $\psi$ 的演化是线性的，并且能推出 $\rho=|\psi|^2$ 满足 Liouville 方程。为此，定义 \emph{Liouvillian 算子} $\hat L$ 作用在 $\psi$ 上：
+\begin{equation}
+    \hat L \psi
+    =
+    i \sum_{i=1}^n
+    \left(
+        \frac{\partial H}{\partial p_i}\frac{\partial \psi}{\partial q_i}
+        -
+        \frac{\partial H}{\partial q_i}\frac{\partial \psi}{\partial p_i}
+    \right),
+    \label{eq:liouvillian}
+\end{equation}
+或更紧凑地写为
+\begin{equation}
+    \hat L
+    =
+    i \sum_{i=1}^n
+    \left(
+        \frac{\partial H}{\partial p_i}\frac{\partial}{\partial q_i}
+        -
+        \frac{\partial H}{\partial q_i}\frac{\partial}{\partial p_i}
+    \right).
+\end{equation}
+注意，$\hat L$ 是一阶微分算子，而不是像量子力学中那样的二阶算子。
+
+\subsubsection*{5. KvN 演化方程}
+
+要求 $\psi$ 满足 \emph{KvN 方程}
+\begin{equation}
+    i \frac{\partial \psi}{\partial t} = \hat L \psi .
+    \label{eq:kvn}
+\end{equation}
+这个方程在形式上与薛定谔方程完全类似，只是把哈密顿算子换成了 Liouvillian 算子。
+
+我们来验证：如果 $\psi$ 满足 \eqref{eq:kvn}，那么 $\rho=|\psi|^2$ 确实满足 Liouville 方程。计算
+\begin{equation}
+    \frac{\partial \rho}{\partial t}
+    =
+    \frac{\partial}{\partial t}(\psi^*\psi)
+    =
+    \psi^*\frac{\partial \psi}{\partial t}
+    +
+    \psi\frac{\partial \psi^*}{\partial t}.
+\end{equation}
+由 \eqref{eq:kvn} 得
+\begin{equation}
+    \frac{\partial \psi}{\partial t} = -i\hat L\psi,
+    \qquad
+    \frac{\partial \psi^*}{\partial t} = +i\hat L^*\psi^* .
+\end{equation}
+如果 $\hat L$ 是厄米算子，即 $\hat L^*=\hat L$，那么
+\begin{equation}
+    \frac{\partial \rho}{\partial t}
+    =
+    \psi^*(-i\hat L\psi) + \psi(+i\hat L\psi^*)
+    =
+    -i\bigl(\psi^*\hat L\psi - \psi\hat L\psi^*\bigr).
+\end{equation}
+利用 $\hat L$ 的具体形式 \eqref{eq:liouvillian}，可以验证这恰好等于 $-\{\rho,H\}$，即 Liouville 方程 \eqref{eq:liouville}。
+
+\subsubsection*{6. 验证 $\hat L$ 的厄米性}
+
+在 $L^2(\mathbb{R}^{2n})$ 内积下，$\hat L$ 的厄米性需要分部积分。以一维为例：
+\begin{equation}
+    \hat L
+    =
+    i
+    \left(
+        \frac{\partial H}{\partial p}\frac{\partial}{\partial q}
+        -
+        \frac{\partial H}{\partial q}\frac{\partial}{\partial p}
+    \right).
+\end{equation}
+对于 $\phi,\psi\in L^2$，有
+\begin{equation}
+    \langle \phi \mid \hat L\psi \rangle
+    =
+    \int \overline{\phi}\,
+    i
+    \left(
+        \frac{\partial H}{\partial p}\frac{\partial \psi}{\partial q}
+        -
+        \frac{\partial H}{\partial q}\frac{\partial \psi}{\partial p}
+    \right)
+    dq\,dp .
+\end{equation}
+分部积分，并利用边界条件（$\psi,\phi$ 在无穷远处衰减），可以得到
+\begin{equation}
+    \langle \phi \mid \hat L\psi \rangle
+    =
+    \langle \hat L\phi \mid \psi \rangle .
+\end{equation}
+所以 $\hat L$ 是厄米的。因此，KvN 演化是幺正的：
+\begin{equation}
+    \psi(t) = e^{-i\hat L t}\psi(0),
+\end{equation}
+这保证了总概率 $\int |\psi|^2\,dq\,dp$ 守恒。
+
+\subsubsection*{7. 与量子力学的形式对比}
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{@{}lll@{}}
+        \toprule
+        特征 & 量子力学 & KvN 经典力学 \\
+        \midrule
+        态 & 波函数 $\psi(q)$ & 经典波函数 $\psi(q,p)$ \\
+        演化方程 & $i\hbar\,\partial_t\psi = \hat H\psi$ & $i\,\partial_t\psi = \hat L\psi$ \\
+        算子 & $\hat H$（二阶） & $\hat L$（一阶） \\
+        位置/动量算符 & $[\hat q,\hat p]=i\hbar$ & $[\hat q,\hat p]=0$ \\
+        概率密度 & $|\psi(q)|^2$ & $|\psi(q,p)|^2$ \\
+        谱 & 离散能级 & 连续 Koopman 频率 \\
+        \bottomrule
+    \end{tabular}
+    \caption{量子力学与 KvN 经典力学的形式对比。}
+    \label{tab:qm-kvn}
+\end{table}
+
+关键区别在于：在 KvN 中，位置和动量算符是乘法算符，它们对易。这正是“经典性”的代数标志。
+
+\subsubsection*{8. 总结}
+
+从 Hamilton 方程到 KvN 算子的推导路线为
+\begin{equation*}
+    \text{Hamilton 方程}
+    \;\longrightarrow\;
+    \text{Liouville 方程}
+    \;\longrightarrow\;
+    \rho=|\psi|^2
+    \;\longrightarrow\;
+    i\partial_t\psi = \hat L\psi .
+\end{equation*}
+其中 $\hat L$ 是由哈密顿量通过 Poisson 括号构造的一阶厄米算子。这样，经典力学就被完全算子化了：状态是希尔伯特空间中的矢量，演化是幺正的，可观测量是厄米算子。唯一与量子力学不同的是对易关系——经典力学中 $[\hat q,\hat p]=0$，量子力学中 $[\hat q,\hat p]=i\hbar$。
+
+这个形式为遍历理论提供了强大的工具：经典系统的混合、回复等性质，都可以通过 $\hat L$ 的谱来分析。
+
+\section{p进因果性}
+
+当代物理学的概率诠释与决定论立场之间的张力，自 Einstein 与 Bohr 的世纪论战以来从未停歇。Einstein 坚信“上帝不掷骰子”，认为量子力学的不完备性暗示了更深层的隐变量；哥本哈根学派则主张不可约化的随机性是自然界的内禀属性。在这一脉络下，'t Hooft 提出的\emph{超决定论}（superdeterminism）\cite{Hooft2016Cellular} 与 Volovich 的\emph{数域无关性公设}\cite{Volovich1987} 共同主张：若自然界在最微观尺度上是决定论且离散的，则物理定律应独立于数域的选择，演化完全由底层的离散因果机制决定；所谓“真随机”，只是观测者对初始数据精度之认知局限所表现出的决定算法的复杂性。Anashin 在其专著《Causality: The p-adic Theory》\cite{Anashin2022Causality} 中系统阐述了离散时间下因果函数的 p 进数学理论，并给出核心洞见：\emph{因果性本质上是非阿基米德的}。本文据 Huang \cite{Huang2026HypergraphPadicCausality} 的综述，梳理 p 进因果性的数学基础及其对经典与量子决定论的含义。
+
+\subsection*{1. 非阿基米德拓扑：因果舞台的几何}
+
+p 进数体系源于 Ostrowski 定理：有理数域 $\mathbb{Q}$ 上的非平凡绝对值在等价意义下只有两类——阿基米德绝对值与以素数 $p$ 为底的 p 进绝对值。对非零有理数 $x=p^{k}a/b$（$a,b$ 不被 $p$ 整除），定义
+\begin{equation}
+    |x|_{p}=p^{-k},\qquad |0|_{p}=0 .
+\end{equation}
+由此诱导的度量 $d_{p}(x,y)=|x-y|_{p}$ 满足\emph{强三角不等式}（非阿基米德性）
+\begin{equation}
+    d_{p}(x,z)\le \max\{d_{p}(x,y),\,d_{p}(y,z)\},
+\end{equation}
+从而 p 进空间中“任意三角形都是等腰三角形”，且两球要么不交、要么一个完全包含另一个。这种层次化、嵌套式的几何，正是离散因果系统状态空间演化的天然对应。
+
+\subsection*{2. 从时间到空间：逆极限与分形树}
+
+p 进整数环 $\mathbb{Z}_{p}$ 定义为有限环的逆极限
+\begin{equation}
+    \mathbb{Z}_{p}=\varprojlim \mathbb{Z}/p^{n}\mathbb{Z},
+\end{equation}
+即一个 p 进整数不是单个数字，而是相容的剩余类序列 $(a_{1},a_{2},\dots)$，$a_{n}\in\mathbb{Z}/p^{n}\mathbb{Z}$。每个整数有唯一的 p 进展开 $z=\sum_{i\ge 0}a_{i}p^{i}$（$a_{i}\in\{0,\dots,p-1\}$），其前 $n$ 位数字确定树上从根到第 $n$ 层的一条路径，故 $\mathbb{Z}_{p}$ 几何上等价于一棵无限 $p$ 叉正则树；而作为该树的边界，它同胚于 Cantor 集，是一个完备、紧、完全不连通且完美的度量空间。距离 $d_{p}(a,b)\le p^{-n}$ 当且仅当 $a\equiv b\pmod{p^{n}}$，即二者在第 $n$ 层之前共享同一路径——局部“靠近”由\emph{共同祖先/公共前缀}决定。Anashin 的洞见正在于：把时间轴上的一维物理序列，转化为空间上一棵无限枝桠的树，\emph{时间动力学变成了空间几何学}。
+
+\subsection*{3. 黑盒因果模型与 1-Lipschitz 因果性}
+
+物理现实被抽象为一个“黑盒”：输入原因序列 $\chi_{0},\chi_{1},\dots$、内部状态 $s_{i}$、输出结果 $\xi_{i}$，满足 $s_{i+1}=S(\chi_{i},s_{i})$、$\xi_{i}=O(\chi_{i},s_{i})$。基于“基本原因与结果总数有限”的有限性假设，Anashin 证明了\emph{终极同构定理}：离散时间的因果函数、$\mathbb{Z}_{p}$ 上的 1-Lipschitz 函数、有限自动机的单词映射三者完全等价。
+
+因果性因此被数学化为 $\mathbb{Z}_{p}$ 上的 1-Lipschitz 函数 $f$，满足
+\begin{equation}
+    |f(x)-f(y)|_{p}\le |x-y|_{p}.
+\end{equation}
+在树的语言中，这意味着若两输入在第 $n$ 层之前共享前缀，则其输出也在第 $n$ 层或更早分叉——初始相近的系统不会突然发散到不同分支，这正是“信息不被凭空创造、微小差异不被瞬间放大”的严格表述。将输入序列解释为 p 进整数 $z=\sum_{i}\chi_{i}p^{i}$ 后，\emph{时间的先后}对应\emph{树的深度}：早期原因（低阶系数）控制全局分支，晚期原因（高阶系数）只扰动极小的 p 进邻域。这构成“死蝴蝶效应”的 p 进版本——改 $a_{0}$ 会切换整棵子树，改很高的 $a_{n}$ 仅微调细部。
+
+三种把离散序列映为连续空间的测度方案中，阿基米德正序映射（高位加权）使历史被淹没（死蝴蝶），伪阿基米德逆序映射造成一对多的伪度量，唯有非阿基米德的 p 进测度既“以公共前缀揭示过去”、又“以完备性预测未来”，是离散因果性唯一自洽的数学表达。
+
+\subsection*{4. p 进遍历理论与决定论下的伪随机}
+
+1-Lipschitz 函数刻画局域因果规则，p 进遍历理论则给出长时统计行为。对 $\mathbb{Z}_{p}$ 上的 1-Lipschitz 映射 $f$，保持 Haar 测度等价于其在每个模 $p^{k}$ 下均为双射；遍历性进一步要求极小且唯一遍历，可由 Mahler 或 van der Put 系数代数地验证（如仿射映射 $f(x)=ax+b$ 遍历当且仅当 $a\equiv1\pmod p$ 且 $p\nmid b$）。在 $p=2$ 时，这类遍历函数即 T-函数，恰对应最长周期的同余伪随机数生成器。由此 p 进因果理论证明：一个底层完全确定的离散系统，只要满足 p 进遍历条件，其长时输出在统计上与真随机序列不可区分——为“伪随机源于确定论复杂性”提供了严格的数学支撑。
+
+\subsection*{5. 量子力学基础的 p 进因果解释}
+
+p 进因果性最具革命性的应用，是为超决定论提供严格的数学实现。Volovich 的数域无关性公设与 't Hooft 的因果性公设在此获得具体载体：离散因果函数在 $\mathbb{Z}_{p}$ 上的 1-Lipschitz 演化天然满足数域无关性，因为 p 进拓扑仅依赖于素数 $p$ 的算术性质。在此框架下，量子态被重新解释为自动机产生的波函数（锐利/模糊之分对应纯态/混合态），而 Heisenberg 不确定性被重新解读为\emph{认识论限制}——观测者无法以无限精度读取无限深的树结构，信息截断导致的熵在数学形式上等价于 von Neumann 熵并满足相同的不确定性关系。测量设置与被测系统并非独立，而共同由更深的因果变量决定（放弃测量独立性即可绕过 Bell 定理）。这给出一条从完全确定的离散自动机出发、经 p 进遍历性与信息截断精确重现量子统计预言的决定论路径。
+
+综上，p 进因果性确立了“因果性本质上是非阿基米德的”这一命题，并通过离散时间因果函数、$\mathbb{Z}_{p}$ 上 1-Lipschitz 函数、有限自动机单词映射、p 进分形树路径演化之间的多重同构，将时间的动力学几何化。它与前文 Koopman--von Neumann 把经典力学算子化、在 Hilbert 空间中以酉演化表述决定论动力学一脉相承：二者都试图为决定论寻找严格的数学语言；差别在于，KvN 仍驻留在阿基米德连续统之内，而 p 进因果性主张在普朗克尺度之下，决定论的语言或许应当是非阿基米德的分形树——随机性，无论是经典噪声还是量子涨落，都可能是离散因果在有限观测精度下的涌现。
 
 \section{引言}
 
