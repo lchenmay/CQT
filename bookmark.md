@@ -4,6 +4,33 @@
 
 ---
 
+## 2026-10-09
+
+### arXiv FRI 9 OCT 2026 强命中（量子基础 / §003 / §004 / 能源 / AI）
+- **2610.10980** A Flash-Based Relativistic Collapse Model for Quantum Fields — 量子基础（客观坍缩 / flash 本体论 / 相对论性 QFT；§002）
+- **2610.12001** Exact value and rigidity of the 2×3 magic rectangle — 量子基础（magic 矩形 / 语境性 / MUB；§002）
+- **2610.12180** Mutually unbiased bases: common states, completion, and extension obstructions — 量子基础（MUB / 量子资源 / 完备性）
+- **2610.12454** On PPT entanglement distillation — 量子基础（纠缠 / PPT 蒸馏 / 可分离性；§004 近邻）
+- **2610.11868** From Majorana to Bloch: two ways to generalize the Bloch sphere representation — 量子基础（态空间几何 / 表征推广）
+- **2610.11094** Attainable Boundaries versus Operational Equivalence: Dual Benchmarks for Hierarchical Assessment of Quantum Resources — 量子基础（量子资源 / 操作等价）
+- **2610.11979** Tensor triangular geometry of band algebras (Peng Xu) — §003（张量三角几何 / 谱；弱）
+- **2610.12079** Fiber product of condensable algebras and critical points of boundary phase transitions (Hanlin Lin) — §003（condensable 代数 / TQFT / 边界相变；弱）
+- **2610.10930** Inter-Categorical Subobject Analysis (Alexander Prähauser) — §003（子对象分析 / 子对象分类器近邻；弱）
+- **2610.11143** Mean dimension and radius of comparison (George A. Elliott) — §004（Elliott 纲领 / C*-代数 半径比较）
+- **2610.11055** Banach non-isomorphism of type III and semifinite noncommutative L_p-spaces (Jinghao Huang) — §004（III 型因子 / 非交换 L_p）
+- **2610.12219** Homotopies of constant Cuntz classes in pure C*-algebras (Chrisil Ouseph) — §004（Cuntz 类 / 纯 C*-代数）
+- **2610.11021** Three-Point Trace Positivity: Schatten Norm Compression and Interpolating Metrics (Trung Dung Vuong) — §004（迹正性 / Schatten 范数 / C*-迹）
+- **2610.10806** Existence and Uniqueness of Viscosity Solutions for Stochastic Hamilton–Jacobi–Bellman Equations (Jinniao Qiu) — 能源 / 几何控制（HJB + 随机最优控制；精确命中）
+- **2610.11455** Nonlinear differential-algebraic systems with dissipative port-Hamiltonian structure (Volker Mehrmann) — 能源 / 几何控制（port-Hamiltonian + 耗散 / Dirac 结构近邻）
+- **2610.10647** Efficiency fluctuations in quantum heat engines with non-quasi-static adiabatic strokes (Bikram Keshari Behera) — 能源 / 量子热力学（量子热机效率涨落）
+- **2610.10744** Continuous Policy and Value Iteration for Stochastic Control Problems with Inhomogeneous Synchronous Coupling (Qi Feng) — 能源 / 随机控制（策略/值迭代）
+- **2610.11831** Controlling transitions between nonequilibrium states through active bath engineering (Dima Boriskovsky) — 能源 / 非平衡（active 热库 / 非平衡态调控）
+- **2610.11118** OpenProblemBench: Benchmarking AI on Open Problems in the Foundational Theoretical Sciences (Zhiyi Li) — AI（自主科学 / 基础理论科学基准）
+- **2610.11289** Open-ended Scientific Discovery with Possibilistic Reasoning (Anita Yang) — AI（开放科学发现 / 可能性推理）
+- **2610.11253** LLM-IDEA: Identifiability-Driven Experimental Agent for Autonomous Discovery of Mechanistic World Models (Surya Shetty) — AI（自主发现 / 机理世界模型）
+
+---
+
 ## 2026-10-08
 
 ### 由超图到 P 进因果性：离散决定论系统的非阿基米德框架
