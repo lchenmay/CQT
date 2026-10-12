@@ -4,6 +4,31 @@
 
 ---
 
+## 2026-10-12
+
+### arXiv MON 12 OCT 2026 强命中（量子基础 / §003 / §004 / 能源 / AI）
+- **2610.13936** A Warped Born Rule Turns an Observer into a Maxwell's Demon — 量子基础（Born 规则 / 测量问题 / 观测者；§002）
+- **2610.13110** Temporal-Access Resource Theory for Continuous Process Tensors — 量子基础（过程张量 / 量子因果资源理论；§002）
+- **2610.13602** Entanglement Catalysis Beyond the Asymptotic Rate (A. Streltsov) — 量子基础（纠缠催化 / 非渐近；§002）
+- **2610.12908** Classification of bipartite observables II: NIP observables and the Todorcevic trichotomy (E. Dueñez) — 量子基础（双体可观测量分类 / 量子逻辑；§002 + §004 近邻）
+- **2610.13579** Correlation-Based Measurement of Entanglement in Rank-2 Mixed States (M. I. Samar) — 量子基础（秩-2 混态纠缠度量；§002）
+- **2610.12770** Wiener's lemma for quasicrystals: hull-uniform decay of covariant kernels on Delone sets (D. Jaure) — §004（Wiener 引理 / 准晶 / 非交换几何）
+- **2610.12992** A note on purely infinite extensions (P. W. Ng) — §004（纯无限 C*-扩张）
+- **2610.13646** Actions of Fell bundles, II: tensor products and Fourier-Stieltjes algebras (E. Bédos) — §004（Fell 丛 / 张量积 / Fourier-Stieltjes）
+- **2610.13792** The generator problem for C*-algebras with comparison (B. Bouwen) — §004（C*-代数生成元问题 / 比较性）
+- **2610.13511** Finite Quantum Engineering Thermodynamics (B. Ahmadi) — 能源 / 量子热力学（有限尺度量子热力学资源理论）
+- **2610.13424** Minimum-Energy Control for Stochastic Linear Systems (V. Sharma) — 能源 / 随机控制（随机线性系统最小能量控制）
+- **2610.13505** Graph-theoretic framework for semi-Markov networks: ... weak ergodicity breaking (J. Voits) — 能源 / 非平衡（半马尔可夫 / 弱遍历性破缺）
+- **2610.13700** Bessel-Hagen currents, reducibility charges, and local gravitational energy (M. Hobson) — 能源 / 局域引力能（Bessel-Hagen 流）
+- **2610.13777** Internal translation gauging and local gravitational energy in Weyl gauge theory (M. Hobson) — 能源 / 局域引力能（Weyl 规范）
+- **2610.12546** Exact solutions of non-Markovian dissipative Ising models (M. Maghrebi) — 能源 / 开放量子（非马尔可夫耗散 Ising 精确解）
+- **2610.13194** JANUS: Enhancing Long-Horizon Autonomous Research with Co-Evolving World Models (Mengdi Liu) — AI（自主长程研究 / 协同演化世界模型）
+- **2610.12813** VEPA: Verified Evolving Formal Policy for Lifelong LLM Agent Guardrails (Duy Nguyen) — AI（形式化 / 可验证 agent 策略）
+- **2610.13811** QTestBench: A Test Framework for Evaluating LLM-Generated Quantum Code — AI（量子+AI 交叉 / 量子代码评测）
+- **2610.12847** When Generative Models Act as Simulators (S. Brodjian) — AI（生成模型作物理模拟器）
+
+---
+
 ## 2026-10-09
 
 ### arXiv FRI 9 OCT 2026 强命中（量子基础 / §003 / §004 / 能源 / AI）
