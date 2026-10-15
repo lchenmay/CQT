@@ -1,18 +1,50 @@
-# 📚 文献收藏
+﻿# 📚 文献收藏
 
 > 统一入口，不限来源、不限类型
+
+---
+
+## 2026-10-14
+
+### arXiv WED 14 OCT 2026 强命中（量子基础 / §003 / §004 / 能源 / AI）
+- **2610.16493** Bell&apos;s go theorem: regaining local causality with a new notion of realism (Lorenzo Catani) — 量子基础（Bell 定理 / 局域因果性 / 实在论新定义；§002）
+- **2610.17225** Quantum Reference Frames in terms of Tetrads (Jeremy Butterfield) — 量子基础（量子参考系 QRF / 四元标架；§002）
+- **2610.16512** Towards the Geometry of Quantum Optical Measurements: Kraus Trajectories in the Instrumental Weyl–Heisenberg Group Manifold (Tzula B. Propp) — 量子基础 + §003 近邻（量子仪器几何 / Weyl–Heisenberg 群流形；§002 + §003）
+- **2610.16267** Classical and Quantum Information Measures Characterizing Convertibility: An Axiomatic Approach (Frits Verhagen) — 量子基础（资源可转换性公理化信息度量；§002）
+- **2610.15656** Separability criteria and lower bounds of entanglement via realignment (Yuhang Xie) — 量子基础（纠缠可分性判据；§002）
+- **2610.15430** Genuine Information Backflow Requires Noncommuting Initial System States (Abdullah Alsharari) — 量子基础 / 随机热力学（非马尔可夫信息回流；§002）
+- **2610.15783** Violation of Bell-type Inequality in the Hanbury Brown-Twiss (HBT) Toy-Model (Sarbani Chatterjee) — 量子基础（Bell 型不等式 / 非定域性；§002）
+- **2610.14081** Prelocality No-Go Theorems and Exactly Solvable Relational History Hamiltonians (Maxim V. Churilov) — 量子基础（关系型历史 / 预局域性 no-go；§002）
+- **2610.16064** Permanent Thermodynamic Mpemba Inversion from Quantum-Jump Feedback (Jincheng Lu) — 能源 / 量子热力学（反馈调控 Mpemba 反转 / 非平衡耗散；§002）
+- **2610.14711** C*-algebras of Essentially Tracially Rank One (Huaxin Lin) — §004（迹秩一 C*-分类）
+- **2610.17411** On the generators of separable unital C*-algebras (George A. Elliott) — §004（Elliott 分类纲领生成元）
+- **2610.15395** Spectral geometry of saturated Fell bundles (Stefan Wagner) — §004（饱和 Fell 丛谱几何 / Gelfand 对偶 / 非交换几何）
+- **2610.16747** Endpoint Schatten class properties of commutators on quantum tori (Xinyu Zhang) — §004（量子环面交换子 / Connes 非交换几何）
+- **2610.15180** Fuglede–Kadison Determinants of Shifted Matrix Semicircles (Vladislav Kargin) — §004（vN 代数 / 自由概率）
+- **2610.17435** Model theory of quasitracial AW*-algebras and the absoluteness of monotone completeness (Jananan Arulseelan) — §004（AW*-代数模型论）
+- **2610.18129** Extensions of Operator Systems, Hyperrigidity and Quantum Double Suspension (Vibhor Bhatt) — §004（算子系统超刚性）
+- **2610.18500** Macroscopic fluctuation theory of stochastic systems undergoing monitoring (João Costa) — 能源 / 随机热力学（监测下宏观涨落理论；高）
+- **2610.16263** Well-Posedness and Strong Convergence of Infinite-Dimensional Port-Hamiltonian Primal-Dual Gradient Dynamics (O.V. Iftime) — 能源 / 几何控制（端口 Hamilton PCH / Dirac 结构；中高）
+- **2610.16222** Optimal Synthesis on the Special Linear Group (Marcus T. C. Lau) — 能源 / 几何控制（SL(n) 李群几何最优控制；中）
+- **2610.18250** Molecular-Dynamics Verification of Effective Gravity under Heat Conduction (Satoshi Uruno) — 能源 / 非平衡（热传导有效引力；中高）
+- **2610.16733** TheoPhysEval: Assessing AI agents at autonomous theoretical physics problem solving (A. Ramesh Chandra) — AI（量子+AI / 物理+AI 自主研究；hep-th 跨类）
+- **2610.17286** Quantum Cryptography and Autoformalization in Lean (Maor Ben Shahar) — AI（量子+AI+形式化交叉）
+- **2610.14790** Counterfactual Regret for Reflective Agents with Lean-Verified Guarantees (Zhongnian Li) — AI（形式化 / Lean 验证 agent）
+- **2610.14420** Flat and Ghost dimensions in tensor triangulated categories with a compact tilting generator (Xiaoyan Yang) — §003 弱近邻（张量三角 / Balmer 谱）
+- **2610.16541** Spectra and Support Theory for Wide Subcategories in n-Abelian Categories (Zheng Xin) — §003 弱近邻（谱 / 支持理论）
+- **2610.17311** Models for dagger (∞,1)-categories III (Keima Akasaka) — §003 弱近邻（dagger 高阶范畴）
 
 ---
 
 ## 2026-10-12
 
 ### arXiv MON 12 OCT 2026 强命中（量子基础 / §003 / §004 / 能源 / AI）
-- **2610.13936** A Warped Born Rule Turns an Observer into a Maxwell's Demon — 量子基础（Born 规则 / 测量问题 / 观测者；§002）
+- **2610.13936** A Warped Born Rule Turns an Observer into a Maxwell&apos;s Demon — 量子基础（Born 规则 / 测量问题 / 观测者；§002）
 - **2610.13110** Temporal-Access Resource Theory for Continuous Process Tensors — 量子基础（过程张量 / 量子因果资源理论；§002）
 - **2610.13602** Entanglement Catalysis Beyond the Asymptotic Rate (A. Streltsov) — 量子基础（纠缠催化 / 非渐近；§002）
 - **2610.12908** Classification of bipartite observables II: NIP observables and the Todorcevic trichotomy (E. Dueñez) — 量子基础（双体可观测量分类 / 量子逻辑；§002 + §004 近邻）
 - **2610.13579** Correlation-Based Measurement of Entanglement in Rank-2 Mixed States (M. I. Samar) — 量子基础（秩-2 混态纠缠度量；§002）
-- **2610.12770** Wiener's lemma for quasicrystals: hull-uniform decay of covariant kernels on Delone sets (D. Jaure) — §004（Wiener 引理 / 准晶 / 非交换几何）
+- **2610.12770** Wiener&apos;s lemma for quasicrystals: hull-uniform decay of covariant kernels on Delone sets (D. Jaure) — §004（Wiener 引理 / 准晶 / 非交换几何）
 - **2610.12992** A note on purely infinite extensions (P. W. Ng) — §004（纯无限 C*-扩张）
 - **2610.13646** Actions of Fell bundles, II: tensor products and Fourier-Stieltjes algebras (E. Bédos) — §004（Fell 丛 / 张量积 / Fourier-Stieltjes）
 - **2610.13792** The generator problem for C*-algebras with comparison (B. Bouwen) — §004（C*-代数生成元问题 / 比较性）
@@ -63,7 +95,7 @@
 - **链接**: https://mp.weixin.qq.com/s/jZHbqOfUapJZkNgKGKmF3g
 - **分类**: 量子基础 / 解释（非阿基米德 p 进因果性、超决定论；§002 近邻 / §003 关联）
 - **作者**: 黄岱永（Daiyong Huang）；蓝本 V. Anashin《Causality: The p-adic Theory》；索引 S. Wolfram Ruliad
-- **摘要**: 以 Wolfram 自然计算的 Ruliad 模型为索引、以 Anashin 的《因果性：p-进理论》为蓝本，系统综述离散决定论系统的 p 进（非阿基米德）因果性框架。核心命题：因果性本质是非阿基米德的，实数连续统描述离散因果系统有根本缺陷，p 进数的分形树状超度量拓扑天然契合离散因果系统的信息流动。将 p 进宇宙（非阿基米德完备域，保留连续度规）与 Ruliad 宇宙（纯离散图论）对比；详述 Z_p 逆极限、p 进展开、超度量强三角不等式、Cantor 集、1-Lipschitz 函数作为因果性的几何保障。应用于自动机理论、密码学伪随机、拉丁方设计，并为量子力学基础中的超决定论（'t Hooft 因果性公设、Volovich 数域无关性）提供严格数学实现——量子概率被视为有限观测精度下确定性复杂系统的认识论涌现。
+- **摘要**: 以 Wolfram 自然计算的 Ruliad 模型为索引、以 Anashin 的《因果性：p-进理论》为蓝本，系统综述离散决定论系统的 p 进（非阿基米德）因果性框架。核心命题：因果性本质是非阿基米德的，实数连续统描述离散因果系统有根本缺陷，p 进数的分形树状超度量拓扑天然契合离散因果系统的信息流动。将 p 进宇宙（非阿基米德完备域，保留连续度规）与 Ruliad 宇宙（纯离散图论）对比；详述 Z_p 逆极限、p 进展开、超度量强三角不等式、Cantor 集、1-Lipschitz 函数作为因果性的几何保障。应用于自动机理论、密码学伪随机、拉丁方设计，并为量子力学基础中的超决定论（&apos;t Hooft 因果性公设、Volovich 数域无关性）提供严格数学实现——量子概率被视为有限观测精度下确定性复杂系统的认识论涌现。
 
 ---
 
@@ -71,7 +103,7 @@
 - **2610.09747** A Minimal Bicomplex Extension of the Complex Scalar Algebra of QM with an Ideal-Valued Sector — 量子基础（QM 代数结构 / Born 规则；§002）
 - **2610.09845** Redundant Records of the Past: Unifying Quantum Darwinism and Decoherent Histories — 量子基础（§002 达尔文主义 + 退相干历史）
 - **2610.10004** Causal confusion in quantum systems: distinguishing direct cause and common cause — 量子基础（量子因果推断）
-- **2610.10254** An Explicit Counterexample to Tsirelson's Problem via a Linear System Game — 量子基础（量子关联 / Bell；§002 + §004 近邻）
+- **2610.10254** An Explicit Counterexample to Tsirelson&apos;s Problem via a Linear System Game — 量子基础（量子关联 / Bell；§002 + §004 近邻）
 - **2610.10143** Inequivalent Quantum Resources from Multipartite State Discrimination — 量子基础（多体非定域性）
 - **2610.09739** How protomodular is your favourite category? — §003（一般范畴论，弱；protomodular / change-of-base functor）
 - **2610.09390** Regular simple nuclear C*-algebras — §004（II₁ factor / tracial / Murray–von Neumann）
@@ -1049,7 +1081,7 @@
 
 ---
 
-### Gisin's Argument and the Limits of Causal Explanations in Relativistic Spacetime
+### Gisin&apos;s Argument and the Limits of Causal Explanations in Relativistic Spacetime
 - **来源**: arXiv 2608.18010
 - **链接**: https://arxiv.org/abs/2608.18010
 - **作者**: Felix J. Rutzinger
@@ -1094,7 +1126,7 @@
 
 ---
 
-### Choquet-Type Relations and a State Space Level Amendment of Arveson's Hyperrigidity Conjecture
+### Choquet-Type Relations and a State Space Level Amendment of Arveson&apos;s Hyperrigidity Conjecture
 - **来源**: arXiv 2608.17868
 - **链接**: https://arxiv.org/abs/2608.17868
 - **作者**: Hridoyananda Saikia
@@ -1392,7 +1424,7 @@
 ### 面向工程师的量子机器学习导论
 - **英文标题**: An Introduction to Quantum Machine Learning for Engineers
 - **来源**: 本地文件 `CQT/Reading/files/`
-- **作者**: Osvaldo Simeone（King's College London）
+- **作者**: Osvaldo Simeone（King&apos;s College London）
 - **日期**: 2022
 - **出版**: Foundations and Trends in Signal Processing, Vol. 16, No. 1-2
 - **arXiv**: 2205.09510
@@ -1671,7 +1703,7 @@
 
 ---
 
-### Quantum Bayes' rule and Petz transpose map from the minimum change principle
+### Quantum Bayes&apos; rule and Petz transpose map from the minimum change principle
 - **链接**: https://arxiv.org/abs/2410.00319
 - **来源**: Google Sheet · Pages
 
@@ -1685,7 +1717,7 @@
 - **作者**: 见色非色
 - **分类**: 科学史（量子力学基础）, math.FA（泛函分析）, math.OA（算子代数）, quant-ph
 - **bib 键**: `JianSeFeiSe2026VonNeumannQM`
-- **摘要**: 冯·诺依曼 1932 年《量子力学的数学基础》深度科学史长文。主线：① 矩阵力学与波动力学之争 → 冯·诺依曼证明二者只是**同一 Hilbert 空间的不同基底**（幺正等价），抽象掉具体实现；② 狄拉克 bra-ket 的 δ 函数与「本征矢完备性」在无限维失效 → 冯·诺依曼以**谱定理** $A=\int\lambda\,dE(\lambda)$ 用谱测度取代本征矢，使位置/动量等无界算子的连续谱严格化；③ **自伴性严格强于厄米性**（定义域必须匹配），动量算子 $P=-i\,d/dx$ 在 $[0,1]$ 上需放松到 $\psi(0)=e^{i\theta}\psi(1)$ 才自伴，不同 $\theta$ 对应不同物理情境 → 自伴延拓的非唯一性；④ Process 1（投影坍缩，$\rho'=\sum_i P_i\rho P_i/\mathrm{Tr}(\rho P_i)$，$\mathrm{Tr}(\rho^2)$ 不守恒）与 Process 2（幺正演化，$\mathrm{Tr}(\rho^2)$ 守恒）的不可逆性裂缝 = 测量问题；⑤ 密度矩阵统一纯态/混合态，$\mathrm{Tr}(\rho^2)=1$ 判纯态，von Neumann 熵 $S(\rho)=-\mathrm{Tr}(\rho\ln\rho)$；⑥ 隐变量不可能性论证与**贝尔 1966 批评**（加法性假设 $v(A+B)=v(A)+v(B)$ 对不对易量无物理依据，排除了上下文依赖性；德文 *prüfen* 被误译为 *prove*）；⑦ 后续影响：Murray–von Neumann 算子代数、量子遍历定理、Birkhoff–von Neumann 量子逻辑（**正交模格，非布尔代数**）、量子热力学第二定律。
+- **摘要**: 冯·诺依曼 1932 年《量子力学的数学基础》深度科学史长文。主线：① 矩阵力学与波动力学之争 → 冯·诺依曼证明二者只是**同一 Hilbert 空间的不同基底**（幺正等价），抽象掉具体实现；② 狄拉克 bra-ket 的 δ 函数与「本征矢完备性」在无限维失效 → 冯·诺依曼以**谱定理** $A=\int\lambda\,dE(\lambda)$ 用谱测度取代本征矢，使位置/动量等无界算子的连续谱严格化；③ **自伴性严格强于厄米性**（定义域必须匹配），动量算子 $P=-i\,d/dx$ 在 $[0,1]$ 上需放松到 $\psi(0)=e^{i\theta}\psi(1)$ 才自伴，不同 $\theta$ 对应不同物理情境 → 自伴延拓的非唯一性；④ Process 1（投影坍缩，$\rho&apos;=\sum_i P_i\rho P_i/\mathrm{Tr}(\rho P_i)$，$\mathrm{Tr}(\rho^2)$ 不守恒）与 Process 2（幺正演化，$\mathrm{Tr}(\rho^2)$ 守恒）的不可逆性裂缝 = 测量问题；⑤ 密度矩阵统一纯态/混合态，$\mathrm{Tr}(\rho^2)=1$ 判纯态，von Neumann 熵 $S(\rho)=-\mathrm{Tr}(\rho\ln\rho)$；⑥ 隐变量不可能性论证与**贝尔 1966 批评**（加法性假设 $v(A+B)=v(A)+v(B)$ 对不对易量无物理依据，排除了上下文依赖性；德文 *prüfen* 被误译为 *prove*）；⑦ 后续影响：Murray–von Neumann 算子代数、量子遍历定理、Birkhoff–von Neumann 量子逻辑（**正交模格，非布尔代数**）、量子热力学第二定律。
 - **CQT 关联**: 强命中 **§002 可观测量的自伴性**（自伴 vs 厄米、自伴延拓）与 **§004 von Neumann 代数/谱论**（谱定理、密度矩阵、熵、算子代数分类）。额外价值：正交模格 vs 布尔代数，可与 MLTT 讲义 §1.3「类型论 ↔ Heyting 代数」对照（量子逻辑既非布尔亦非 Heyting，而是正交模格）——为讲义「集合论→类型论→量子逻辑」的代数谱系提供现成的科普级素材。
 
 ---
@@ -1710,7 +1742,7 @@
 
 ---
 
-### Conditioning on the Future: A Filtration-Theoretic Formalization of Wheeler's Participatory Universe
+### Conditioning on the Future: A Filtration-Theoretic Formalization of Wheeler&apos;s Participatory Universe
 - **来源**: arXiv 2609.19025
 - **链接**: https://arxiv.org/abs/2609.19025
 - **分类**: quant-ph
@@ -1727,7 +1759,7 @@
 
 ---
 
-### Proof of Heisenberg's Error-Disturbance Relation for Individual Measurements
+### Proof of Heisenberg&apos;s Error-Disturbance Relation for Individual Measurements
 - **来源**: arXiv 2609.18211
 - **链接**: https://arxiv.org/abs/2609.18211
 - **作者**: Seiji Kosugi
@@ -1842,7 +1874,7 @@
 - **分类**: quant-ph
 - **摘要**: 证明所有因果可分离量子过程都是带经典因果序控制的量子电路。因果序 / 因果可分离是量子基础（因果性诠释）核心议题——**量子基础（causal order）**。
 
-### Proof of Shor's conjecture on the accessible information of quantum dichotomies
+### Proof of Shor&apos;s conjecture on the accessible information of quantum dichotomies
 - **来源**: arXiv 2609.20600
 - **链接**: https://arxiv.org/abs/2609.20600
 - **分类**: quant-ph
@@ -2120,7 +2152,7 @@
 - **分类**: math.CT, cs.LG, cs.LO（范畴论 / 概率编程）
 - **摘要**: 光滑空间（smooth spaces）的便利范畴用于可微概率编程；光滑空间 = diffeological / smooth sets，是合成微分几何 / 光滑 topos 近邻。属 §003-type-topos 弱命中（层论 / 合成微分几何线）；同时呼应 CQT 几何/概率交叉。
 
-### Solution to Dixmier's Problem about spectra of C*-algebras
+### Solution to Dixmier&apos;s Problem about spectra of C*-algebras
 - **来源**: arXiv 2609.26319
 - **链接**: https://arxiv.org/abs/2609.26319
 - **分类**: math.OA（C*-代数）
@@ -2208,7 +2240,7 @@
 - **分类**: quant-ph（量子基础 / 算符与模态）
 - **摘要**: 量子理论中的无界算子、物理性与模态性。属**量子基础（算符 / 模态）**。
 
-### A Proof of Shor's Orthogonal-Measurement Conjecture and the Structure of Information-Optimal Quantum Measurements
+### A Proof of Shor&apos;s Orthogonal-Measurement Conjecture and the Structure of Information-Optimal Quantum Measurements
 - **来源**: arXiv 2609.27992
 - **链接**: https://arxiv.org/abs/2609.27992
 - **分类**: quant-ph（量子基础 / 测量理论）
@@ -2262,7 +2294,7 @@
 - **分类**: math.DG（光滑群胚 / 合成微分几何）
 - **摘要**: 导出光滑 / Banach 高阶群胚：可表性与下降。光滑群胚 + descent 是合成微分几何 / 光滑 topos 近邻。属 §003-type-topos 中强命中（光滑 topos 线）。
 
-### A separably representable counterexample to Naimark's problem in ZFC
+### A separably representable counterexample to Naimark&apos;s problem in ZFC
 - **来源**: arXiv 2609.26930
 - **链接**: https://arxiv.org/abs/2609.26930
 - **分类**: math.OA（C*-代数）
@@ -2432,7 +2464,7 @@
 
 ## 2026-09-28
 
-### On the applicability of Kolmogorov's theory of probability to the description of quantum phenomena. Part II: Bell inequalities
+### On the applicability of Kolmogorov&apos;s theory of probability to the description of quantum phenomena. Part II: Bell inequalities
 - **来源**: arXiv 2609.31075
 - **链接**: https://arxiv.org/abs/2609.31075
 - **分类**: quant-ph（量子基础 / 概率公设与 Bell 非定域性）
@@ -2526,7 +2558,7 @@
 - **分类**: quant-ph（量子基础 / 多世界诠释）
 - **摘要**: 在时空局域框架下重构多世界诠释（Deutsch-Hayden 描述子 + 局域波函数）。属**量子基础与解释旗舰**（多世界诠释）。
 
-### Nakayama's reduction of quantum topos and Bayesian quantum computing
+### Nakayama&apos;s reduction of quantum topos and Bayesian quantum computing
 - **来源**: arXiv 2609.34200
 - **链接**: https://arxiv.org/abs/2609.34200
 - **分类**: quant-ph（量子基础 / topos）
@@ -2786,7 +2818,7 @@
 - **分类**: quant-ph（因果结构 / 不定因果序）
 - **摘要**: 定序与不定因果序在量子计量中的无界分离。属**量子基础与解释**（因果结构）。
 
-### Experimental realization of Wheeler's delayed-choice experiment with dual selections
+### Experimental realization of Wheeler&apos;s delayed-choice experiment with dual selections
 - **来源**: arXiv 2610.01832
 - **链接**: https://arxiv.org/abs/2610.01832
 - **分类**: quant-ph（延迟选择 / 测量解释）
@@ -2822,7 +2854,7 @@
 - **分类**: hep-th（CY 模空间几何）
 - **摘要**: CY 复结构模空间的 Weil-Petersson 距离。属 **§003-type-topos 中命中**（CY 几何 / 模空间）。
 
-### An Explicit Polynomial Counterexample to Connes' Embedding Conjecture
+### An Explicit Polynomial Counterexample to Connes&apos; Embedding Conjecture
 - **来源**: arXiv 2610.01536
 - **链接**: https://arxiv.org/abs/2610.01536
 - **分类**: math.OA（C*-代数 / Connes 嵌入猜想）
@@ -2882,7 +2914,7 @@
 - **分类**: math.OA（量子 CW-复形 / 非交换几何）
 - **摘要**: 拓扑图视角的量子实射影空间作为量子 CW-复形。属 **§004-Gelfand 强命中**（非交换几何）。
 
-### A groupoid model for Rørdam's finite-infinite C*-algebra
+### A groupoid model for Rørdam&apos;s finite-infinite C*-algebra
 - **来源**: arXiv 2610.01543
 - **链接**: https://arxiv.org/abs/2610.01543
 - **分类**: math.OA（群胚 C*-代数）
@@ -3169,7 +3201,3 @@
 - **摘要**: 具 Dirac 特征的周期十字单元电路色散分析（Dirac 结构 = §能源关键词 PCH/Dirac）。对应"PCH OR Dirac Structure"近邻——**几何控制中优先级（二·核心推荐）**。
 
 ---
-
-
-
-
