@@ -4,6 +4,40 @@
 
 ---
 
+## 2026-10-15
+
+### arXiv THU 15 OCT 2026 强命中（量子基础 / §003 / §004 / 能源 / AI）
+- **2610.20016** Metric-Changing Quasi-Hermitian Quenches: Normalized Loschmidt Amplitude and Complex-Time Zeros (Xu-Yang Hou) — 量子基础（准厄米/PT对称淬火；§002）
+- **2610.19569** A Reconstruction of Michelson Interference from On–Off Detection Statistics (Kim Myung-Whun) — 量子基础（测量/干涉；§002）
+- **2610.19905** On the structure of low-rank PPT entangled states violating Peres conjecture (Gurvir Singh) — 量子基础（纠缠/可分性；§002）
+- **2610.20528** Quantum Work Statistics from Entanglement-Assisted Invariance (Akira Sone) — 量子基础/能源（量子功统计；§002）
+- **2610.19897** Trading energy for coherence in mode discrimination (Shuyang Meng) — 量子基础/能源（能量-相干权衡；§002）
+- **2610.19941** Joint-measurement advantage and finite-time transitions in accelerated detector registers (Zhiming Huang) — 量子基础（加速探测器/Unruh；§002）
+- **2610.20258** Geometric-resource bounds and permutation-averaged success probabilities for the WZP algorithm (Linlin Ye) — 量子基础+几何（§002）
+- **2610.18955** Stabilizer Rényi Entropy Without a Phase Reference (Jinwei Chu) — 量子基础（§002）
+- **2610.19675** Transport Information Beyond Strong Eigenstate Thermalization (Avadhut V. Purohit) — 量子基础（多体热化；§002）
+- **2610.20398** Relative entropy in quantum field theory: the case of squeezed fermions (Markus B. Fröb) — 量子基础（QFT相对熵；§002，math-ph）
+- **2610.20006** Multi-Instantons and Exact-WKB Stokes Jumps in Multi-Well Quantum Mechanics (Alireza Behtash) — 量子基础（精确WKB；§002）
+- **2610.19004** Anomalies, higher symmetries, and homotopy theory I: crossed precosheaves and a nonabelian Čech construction (Anton Kapustin) — §003 近邻（交叉预层/非阿贝尔Čech/同伦/高阶对称；math-ph）
+- **2610.20386** The Kaplansky-Walker Lemma for additive categories (Simion Breaz) — §003 弱近邻（加性范畴；math.CT）
+- **2610.19023** Invariant von Neumann subalgebras of crossed products and tensor products (Tattwamasi Amrutam) — §004（vN代数/交叉积）
+- **2610.19590** On the Isomorphism of Semicircular Algebras (D. Shlyakhtenko) — §004（半圆代数/自由概率）
+- **2610.19791** Spectral truncations of SU(2) and the spectral localizer (Matt Verhoeven) — §004（谱截断/谱局部化子/非交换几何）
+- **2610.20373** Cwikel estimates and Weyl's laws for L log L potentials on quantum tori (Siyu Liu) — §004（量子环面/Connes非交换几何）
+- **2610.19870** Understanding the Mpemba Effect through a Rule of Thumb (Ran Yaacoby) — 能源（Mpemba效应/非平衡弛豫；高，cond-mat.stat-mech）
+- **2610.19904** Single and coupled quantum van der Pol oscillators: Wigner-function dynamics, exact qutrit solutions, and synchronization (Rohitashwa Chattopadhyay) — 能源（量子vdP振荡器/同步；quant-ph）
+- **2610.19976** L1 Minimum Energy Estimation of Positive Systems (Alba Gurpegui Ramón) — 能源/控制（最小能量估计；math.OC）
+- **2610.18892** Two-Species Boltzmann–Kac Kinetics with Matsumoto–Yor Nonlinear Collisions: Conserved Energy and Conic Equilibria (Yoshiaki Itoh) — 能源（守恒能随机动力学；math-ph）
+- **2610.19944** Recursive Gradient Retraction Methods for Stochastic Nonconvex Optimization on Stiefel Manifolds (Zhijie Yuan) — 能源/几何控制（Stiefel流形几何优化；math.OC）
+- **2610.20126** Continuous-Time q-Learning with Nonsmooth Value Functions: a BSDE Approach (Manuel Asero) — 能源/几何控制（连续时间q-Learning/BSDE；math.OC）
+- **2610.18933** The Agentic Scientist: Orchestrating Coding Agents for Automated Scientific (Co-)Discovery (Robert Tjarko Lange) — AI（自主科学发现agent；cs.AI）
+- **2610.19223** Definition Grounding in Theory-Level Auto-formalization (Leyan Pan) — AI（理论级自动形式化；cs.AI）
+- **2610.19159** Into the Unknown: Benchmarking AI agents on open scientific research problems (Seungone Kim) — AI（开放科研基准/物理+AI；cs.AI）
+- **2610.19073** Federated Unlearning of Quantum Data via Classical Shadows (Zihao Ding) — AI（量子数据+AI交叉；quant-ph）
+- **2610.19946** Learning Graph Energies for Finite-Time Generation (Amartya Banerjee) — AI（图能量+有限时间生成/能量+ML；cs.LG）
+
+---
+
 ## 2026-10-14
 
 ### arXiv WED 14 OCT 2026 强命中（量子基础 / §003 / §004 / 能源 / AI）

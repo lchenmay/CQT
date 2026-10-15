@@ -1,7 +1,7 @@
-## 📅 2026-10-15 CQT 研究前沿动态
+## 📅 2026-10-16 CQT 研究前沿动态
 
-> 抓取批次：**WEDNESDAY, 14 OCTOBER 2026**（美东 10-14 20:00 公告 ≈ 北京 10-15 08:00 可见）；北京运行日 **2026-10-15（周四）**。
-> 说明：本运行接续 10-14 占位（当时 TUE 13 OCT 未发布，/new 仍显 MON 12 OCT）；今日 /new 已滚动至 WED 14 OCT，且 TUE 13 OCT 已滚出 /new（待 dated URL 补抓，见 §五）。本报告覆盖 WED 14 OCT 批次。
+> 抓取批次：**THURSDAY, 15 OCTOBER 2026**（美东 10-15 20:00 公告 ≈ 北京 10-16 08:00 可见）；北京运行日 **2026-10-16（周五）**。
+> 说明：上轮运行（10-15）已完整抓取 WED 14 OCT 批次；本次 `/new` 已滚动至 THU 15 OCT，属新批次，全量抓取 12 分类（quant-ph 56 篇 ≤60 无需分页；cs.AI 108 / cs.LG 184 已分页取齐）。
 
 ### 一、arXiv 基础与物理哲学追踪
 
@@ -9,130 +9,125 @@
 
 | 分类 | 新投稿 | 总条目 |
 |---|---|---|
-| quant-ph | 170 | 356 |
-| hep-th | 50 | 199 |
-| math-ph | 24 | 162 |
-| gr-qc | 45 | 141 |
-| math.DG | 60 | 144 |
-| math.OC | 96 | 211 |
-| eess.SY | 68 | 147 |
-| cond-mat.stat-mech | 16 | 97 |
-| math.CT | 10 | 32 |
-| math.OA | 14 | 31 |
-| cs.AI | 360 | 1353 |
-| cs.LG | 502 | 1344 |
-
-> 覆盖说明：quant-ph 抓得 124/170、cs.AI 57/360、cs.LG 61/502（arXiv 限流 429 + 抓取截断，仅首屏标题）；hep-th/gr-qc/math-ph/math.DG/math.OC/eess.SY/cond-mat.stat-mech/math.CT/math.OA 已全量覆盖。巨型分类尾部以聚焦领域（量子基础 / 几何 / 能量）优先扫描。
+| quant-ph | 56 | 149 |
+| hep-th | 25 | 84 |
+| math-ph | 11 | 74 |
+| gr-qc | 28 | 64 |
+| math.DG | 27 | 53 |
+| math.OC | 26 | 67 |
+| eess.SY | 23 | 51 |
+| cond-mat.stat-mech | 5 | 41 |
+| math.CT | 1 | 6 |
+| math.OA | 4 | 9 |
+| cs.AI | 108 | 479 |
+| cs.LG | 184 | 486 |
 
 **量子基础与解释子区块（§002 候选）**
 
-1. **2610.16493** — *Bell's go theorem: regaining local causality with a new notion of realism*（Lorenzo Catani）— Bell 定理 / 局域因果性 / 实在论新定义；§002 **强**。
-2. **2610.17225** — *Quantum Reference Frames in terms of Tetrads*（Jeremy Butterfield）— 量子参考系（QRF）的四元标架（tetrad）表述；§002 **强**。
-3. **2610.16512** — *Towards the Geometry of Quantum Optical Measurements: Kraus Trajectories in the Instrumental Weyl–Heisenberg Group Manifold*（Tzula B. Propp）— 仪器（instrument）的 Weyl–Heisenberg 群流形上 Kraus 轨迹几何；§002 + §003 量子仪器/几何 **近邻**。
-4. **2610.16267** — *Classical and Quantum Information Measures Characterizing Convertibility: An Axiomatic Approach*（Frits Verhagen）— 资源可转换性的公理化信息度量；§002 资源理论。
-5. **2610.15656** — *Separability criteria and lower bounds of entanglement via realignment*（Yuhang Xie）— 纠缠可分性判据与下界；§002。
+1. **2610.20016** — *Metric-Changing Quasi-Hermitian Quenches: Normalized Loschmidt Amplitude and Complex-Time Zeros*（Xu-Yang Hou）— 准厄米/PT 对称淬火、Loschmidt 振幅与复时间零点；§002 **强**（非厄米量子力学基础）。
+2. **2610.19569** — *A Reconstruction of Michelson Interference from On–Off Detection Statistics*（Kim Myung-Whun）— 由开关探测统计重建迈克尔逊干涉；§002 **强**（测量问题/干涉基础）。
+3. **2610.19905** — *On the structure of low-rank PPT entangled states violating Peres conjecture*（Gurvir Singh）— 低秩 PPT 纠缠态与 Peres 猜想反例；§002 **强**（可分性/纠缠判据）。
+4. **2610.20528** — *Quantum Work Statistics from Entanglement-Assisted Invariance*（Akira Sone）— 纠缠辅助不变性下的量子功统计；§002 + 能量（量子热力学）。
+5. **2610.19897** — *Trading energy for coherence in mode discrimination*（Shuyang Meng）— 模式判别中能量与相干的权衡；§002 + 能量（资源理论）。
+6. **2610.19941** — *Joint-measurement advantage and finite-time transitions in accelerated detector registers*（Zhiming Huang）— 加速探测器中的联合测量优势与有限时间相变；§002（相对论 QFT / Unruh 近邻）。
+7. **2610.20258** — *Geometric-resource bounds and permutation-averaged success probabilities for the WZP algorithm*（Linlin Ye）— 几何资源界与 WZP 算法；§002 + 几何。
+8. **2610.18955** — *Stabilizer Rényi Entropy Without a Phase Reference*（Jinwei Chu）— 无相位参考的稳定子 Rényi 熵；§002。
+9. **2610.19675** — *Transport Information Beyond Strong Eigenstate Thermalization*（Avadhut V. Purohit）— 强本征态热化之外的输运信息；§002（多体/热化）。
+10. **2610.20398** — *Relative entropy in quantum field theory: the case of squeezed fermions*（Markus B. Fröb，math-ph）— QFT 中的相对熵；§002。
+11. **2610.20006** — *Multi-Instantons and Exact-WKB Stokes Jumps in Multi-Well Quantum Mechanics*（Alireza Behtash）— 多阱量子力学的精确 WKB / Stokes 跳跃；§002（量子力学数学结构）。
 
-近邻：2610.15430（非马尔可夫信息回流需非对易初态）、2610.15783（HBT 玩具模型的 Bell 型不等式违反）、2610.14081（关系型历史哈密顿量预局域性 no-go）、2610.15601（Mostafazadeh 一维定态散射的非定态量子系统 / PT 对称）、2610.16064（量子跳跃反馈的永久热力学 Mpemba 反转）。
+**§003-type-topos 映射**：本批 math.CT 仅 1 篇——2610.20386 *The Kaplansky-Walker Lemma for additive categories*（Simion Breaz），仍非 topos/层/量子仪器单子（弱近邻：加性范畴）。**亮点近邻**来自 math-ph：**2610.19004** *Anomalies, higher symmetries, and homotopy theory I: crossed precosheaves and a nonabelian Čech construction*（Anton Kapustin）—— 交叉预层 / 非阿贝尔 Čech 构造 / 同伦论，直接指向 §003-type-topos 的层与高阶范畴线索，是本批最贴近 §003 的论文，建议纳入追踪。其余 §003 静默。
 
-**§003-type-topos 映射**：本批 math.CT 10 篇无显式 topos / Grothendieck 层 / 量子仪器单子；弱近邻——2610.14420（张量三角范畴的平坦/幽灵维数，Balmer 谱）、2610.16541（n-Abelian 广子范畴的谱与支持理论）、2610.17311（dagger (∞,1)-范畴 III：单位完备 dagger Segal anima）。跨类 §003 关联：quant-ph **2610.16512**（仪器 Weyl–Heisenberg 群流形 Kraus 轨迹）直接指向量子仪器几何，可并入 §003 量子仪器/谱对偶线索。
+**§004-Gelfand 映射**：math.OA 4 篇**全部强命中**：
+- **2610.19023** *Invariant von Neumann subalgebras of crossed products and tensor products*（Tattwamasi Amrutam）— vN 代数 / 交叉积 / 张量积不变子代数；§004 **强**。
+- **2610.19590** *On the Isomorphism of Semicircular Algebras*（D. Shlyakhtenko）— 半圆代数的同构（自由概率 / vN）；§04 **强**。
+- **2610.19791** *Spectral truncations of SU(2) and the spectral localizer*（Matt Verhoeven）— SU(2) 谱截断与谱局部化子；§004 **强**（非交换几何 / Connes 谱三元组近邻）。
+- **2610.20373** *Cwikel estimates and Weyl's laws for L log L potentials on quantum tori*（Siyu Liu）— 量子环面上的 Cwikel 估计与 Weyl 律；§04 **强**（Connes 量子环面 / 非交换几何）。
 
-**§004-Gelfand 映射**：本批 math.OA 14 篇**全部强命中**（算子代数丰收）：
-
-- **2610.14711** *C\*-algebras of Essentially Tracially Rank One*（Huaxin Lin）— 迹秩一 C\* 分类；§004 **强**。
-- **2610.17411** *On the generators of separable unital C\*-algebras*（George A. Elliott）— Elliott 分类纲领的生成元问题；§004 **强**。
-- **2610.15395** *Spectral geometry of saturated Fell bundles*（Stefan Wagner）— 饱和 Fell 丛谱几何（纤维 C\* 代数 / Gelfand 对偶）；§004 **强**（CQT 非交换几何线索）。
-- **2610.16747** *Endpoint Schatten class properties of commutators on quantum tori*（Xinyu Zhang）— 量子环面交换子 Schatten 类（Connes 非交换几何）；§004 **强**。
-- **2610.15180** *Fuglede–Kadison Determinants of Shifted Matrix Semicircles*（Vladislav Kargin）— vN 代数 / 自由概率；§004。
-- **2610.17435** *Model theory of quasitracial AW\*-algebras and the absoluteness of monotone completeness*（Jananan Arulseelan）— AW\* 代数模型论；§004。
-- **2610.18129** *Extensions of Operator Systems, Hyperrigidity and Quantum Double Suspension*（Vibhor Bhatt）— 算子系统超刚性；§004。
-
-**bookmark 入库**：新增 `## 2026-10-14` 节（按 ID 去重，标注 § 关联），见文末 §四与 `c:/Dev/CQT/bookmark.md`。
+**bookmark 入库**：新增 `## 2026-10-15` 节（按 ID 去重，标注 § 关联），见文末 §四与 `c:/Dev/CQT/bookmark.md`。
 
 ### 二、随机热力学与几何控制核心推荐
 
-> 精确五关键词组合（Brownian Gyrator / Geometric Ratchet / Multiplicative-Noise+PCH / HJB+Stochastic-Optimal-Control / Ito-correction+Symplectic）本批**无完全命中**；强命中落于「量子热力学 + 随机涨落理论 + 端口 Hamilton 几何控制 + Lie 群几何最优控制 + 热传导有效引力」。
+> 精确五关键词组合（gyrator / ratchet / multiplicative-noise-PCH / HJB+stochastic-control / Ito-symplectic）本批**无完全命中**；强命中落于「Mpemba 效应 / 量子功与能量-相干权衡 / 量子 van der Pol 振荡器 / 最小能量估计 / 守恒能 Boltzmann–Kac 动力学」。
 
-1. **【高优先级】2610.16064** — *Permanent Thermodynamic Mpemba Inversion from Quantum-Jump Feedback*（Jincheng Lu 等，quant-ph）
-   - 中文翻译：量子跳跃反馈下的永久热力学 Mpemba 反转。
-   - 作者机构：Jincheng Lu 等（量子热力学 / 开放量子系统方向）。
-   - 检索来源：quant-ph/new（WED 14 OCT）。
-   - 核心突破：在量子跳跃反馈调控下实现「永久」热力学 Mpemba 反转（冷热弛豫次序反常），属量子耗散与净能量交换的理论突破，并把经典 Mpemba 效应推进到带反馈的量子主方程框架。
-   - 数学模型：量子跳跃主方程 + 反馈调控的 Mpemba 反转判据（初态依赖的弛豫速率交叉）。
-   - 关联度：高（量子热力学 / 非平衡态耗散 / 能量收集线索）。
+1. **【高优先级】2610.19870** — *Understanding the Mpemba Effect through a Rule of Thumb*（Ran Yaacoby 等，cond-mat.stat-mech）
+   - 中文翻译：用经验法则理解 Mpemba 效应。
+   - 作者机构：Ran Yaacoby 等（统计力学方向）。
+   - 检索来源：cond-mat.stat-mech/new（THU 15 OCT）。
+   - 核心突破：给出理解 Mpemba 效应（热系统反常快速冷却/升温）的「经验法则」式解释，把非平衡态弛豫与净能量交换的异常次序归约为可判据的简单条件。
+   - 数学模型：非平衡弛豫动力学 + 初态依赖的弛豫速率交叉判据（经验法则）。
+   - 关联度：高（非平衡态耗散 / 净能量交换 / 反常热弛豫）。
 
-2. **【高优先级】2610.18500** — *Macroscopic fluctuation theory of stochastic systems undergoing monitoring*（João Costa 等，cond-mat.stat-mech）
-   - 中文翻译：受监测随机系统的宏观涨落理论。
-   - 作者机构：João Costa 等（统计力学 / 涨落理论方向）。
-   - 检索来源：cond-mat.stat-mech/new（WED 14 OCT）。
-   - 核心突破：将宏观涨落理论（MFT）推广到受监测（monitoring）随机系统，给出监测诱导熵产生下的涨落定理与大型偏差原理。
-   - 数学模型：MFT 场论 + 监测项（信息获取）耦合的熵产生密度。
-   - 关联度：高（随机热力学 + 监测/信息，贴近「随机热力学 + 信息几何」近邻）。
+2. **【高优先级】2610.20528** — *Quantum Work Statistics from Entanglement-Assisted Invariance*（Akira Sone 等，quant-ph）
+   - 中文翻译：纠缠辅助不变性下的量子功统计。
+   - 作者机构：Akira Sone 等（量子热力学方向）。
+   - 检索来源：quant-ph/new（THU 15 OCT）。
+   - 核心突破：借助纠缠辅助的不变性结构推导量子功的统计分布，将量子热力学中的功涨落与纠缠资源联系起来。
+   - 数学模型：量子功涨落定理 + 纠缠辅助不变性表示。
+   - 关联度：高（量子热力学 / 功 / 能量收集线索）。
 
-3. **【中高优先级】2610.16263** — *Well-Posedness and Strong Convergence of Infinite-Dimensional Port-Hamiltonian Primal-Dual Gradient Dynamics*（O.V. Iftime，math.OC）
-   - 中文翻译：无限维端口 Hamilton 原始-对偶梯度动力学的适定性与强收敛。
-   - 作者机构：O.V. Iftime（几何控制 / 端口 Hamilton 系统方向）。
-   - 检索来源：math.OC/new（WED 14 OCT）。
-   - 核心突破：建立无限维端口 Hamilton（PCH）原始-对偶梯度动力学的适定性并证明强收敛；**直接命中「Port-Controlled Hamiltonian / Dirac Structure」关键词族**。
-   - 数学模型：Dirac 结构 / PCH 无穷维系统 + 算子半群收敛分析。
-   - 关联度：中高（几何控制 / PCH / Dirac 结构）。
+3. **【中高优先级】2610.19897** — *Trading energy for coherence in mode discrimination*（Shuyang Meng 等，quant-ph）
+   - 中文翻译：模式判别中能量与相干的权衡。
+   - 作者机构：Shuyang Meng 等（量子资源理论方向）。
+   - 检索来源：quant-ph/new（THU 15 OCT）。
+   - 核心突破：在模式判别任务中量化「能量 ↔ 相干」的资源权衡，给出能量消耗与量子相干增益之间的上界关系。
+   - 数学模型：资源理论框架下的能量/相干单调性与权衡界。
+   - 关联度：中高（能量 + 相干资源 / 量子热力学）。
 
-4. **【中优先级】2610.16222** — *Optimal Synthesis on the Special Linear Group*（Marcus T. C. Lau，math.DG）
-   - 中文翻译：特殊线性群上的最优综合。
-   - 作者机构：Marcus T. C. Lau（微分几何 / 几何最优控制方向）。
-   - 检索来源：math.DG/new（WED 14 OCT）。
-   - 核心突破：给出特殊线性群 SL(n) 上的最优综合（optimal synthesis），属李群上的几何最优控制。
-   - 数学模型：SL(n) 上的最优控制 + 李群 / 对称约化。
-   - 关联度：中（微分几何 / 李群 / 几何控制，贴近「HJB 几何求解」近邻）。
+4. **【中优先级】2610.19904** — *Single and coupled quantum van der Pol oscillators: Wigner-function dynamics, exact qutrit solutions, and synchronization*（Rohitashwa Chattopadhyay 等，quant-ph）
+   - 中文翻译：单/耦合量子 van der Pol 振荡器：Wigner 函数动力学、精确 qutrit 解与同步。
+   - 作者机构：Rohitashwa Chattopadhyay 等（量子光学/非线性量子动力学方向）。
+   - 检索来源：quant-ph/new（THU 15 OCT）。
+   - 核心突破：给出量子 van der Pol 振荡器的 Wigner 函数动力学与精确 qutrit 解，并研究耦合下的同步现象——量子随机振荡器与非平衡输运的天然模型。
+   - 数学模型：量子 vdP 主方程 + Wigner 表示 + 耦合同步分析。
+   - 关联度：中（随机振荡器 / 非平衡动力学 / 能量近邻）。
 
-5. **【中高优先级】2610.18250** — *Molecular-Dynamics Verification of Effective Gravity under Heat Conduction*（Satoshi Uruno 等，cond-mat.stat-mech）
-   - 中文翻译：热传导下有效引力的分子动力学验证。
-   - 作者机构：Satoshi Uruno 等（非平衡态统计力学方向）。
-   - 检索来源：cond-mat.stat-mech/new（WED 14 OCT）。
-   - 核心突破：分子动力学验证热传导下的「有效引力」（温度梯度产生的等效引力势），是非平衡态耗散与净能量输运的物理实现。
-   - 数学模型：热传导梯度 ↔ 有效引力势（热力学-几何对应）。
-   - 关联度：中高（非平衡态耗散 / 净能量输运）。
+5. **【中优先级】2610.19976** — *L1 Minimum Energy Estimation of Positive Systems*（Alba Gurpegui Ramón 等，math.OC）
+   - 中文翻译：正系统的 L1 最小能量估计。
+   - 作者机构：Alba Gurpegui Ramón 等（系统与控制方向）。
+   - 检索来源：math.OC/new（THU 15 OCT）。
+   - 核心突破：对正系统提出 L1 范数下的最小能量估计框架，把「最小能量」控制/观测与正系统结构结合。
+   - 数学模型：正系统 + L1 最小能量准则（凸优化/控制）。
+   - 关联度：中（能量 + 控制 / 几何控制近邻）。
 
-近邻（低优先级 / 工程）：2610.15943（Rayleigh–Bénard 流体 Fredholm Backstepping 镇定，eess.SY）、2610.14164（Wasserstein 空间概率测度的内禀收缩理论与稳定化，math.OC，信息几何近邻）、2610.14524（均值回复风险溢价的消费调整：奇异随机控制，math.OC，HJB 近邻）、2610.16351（局域关联下的有限时间量子平衡，quant-ph）。
+近邻（低优先级 / 工程 / 几何优化）：2610.18892（Two-Species Boltzmann–Kac Kinetics…Conserved Energy，math-ph，守恒能随机动力学）、2610.19944（Stiefel 流形随机非凸优化的递归梯度收缩，math.OC，李群/几何优化）、2610.20126（连续时间 q-Learning 与 BSDE，math.OC，HJB-BSDE 近邻）、2610.19442（Koopman 算子的交通状态预测，eess.SY）。
 
 ### 三、每日研究前沿四方向
 
 **【量子 · quant-ph】亮点**
-- **2610.14202** — *Below-threshold execution of fault-tolerant ripple-carry addition on a trapped-ion quantum computer*（Jacob S. Nelson 等）：在俘获离子平台上低于阈值的容错纹波进位加法实测，量子纠错硬件里程碑。
-- **2610.17583** — *Coherent optical control of a thousand qubits in a three-dimensional trapped-ion crystal*（Yue Li 等）：三维离子晶体中千量子比特相干光控，规模化量子控制。
-- **2610.15975** — *Scalable Exact Non-Pauli Noise Simulation for Fault-Tolerant Quantum Circuits*（Yuewen Hou 等）：容错量子线路的可扩展精确非 Pauli 噪声模拟，直接服务 FT 设计。
+- **2610.19459** *Quantum LDPC Codes from Polynomial Minors* — 由多项式子式构造量子 LDPC 码，容错量子计算码构造新路线。
+- **2610.19927** *Deterministic and Programmable Fusion for Scalable Generation of Photonic Graph States* — 确定性可编程融合实现可扩展光 graph 态生成，量子网络/光子量子计算。
+- **2610.20515** *Petz Recovery through a Single Polar Transformation for Approximate Quantum Error Correction* — 近似 QEC 的 Petz 恢复（单极变换），量子纠错信息论。
+- **2610.20016** *Metric-Changing Quasi-Hermitian Quenches* — 非厄米/准厄米量子力学基础（见 §002）。
 
-**【Topos / 范畴论 · math.CT】亮点（§003 静默，弱近邻）**
-- 2610.14420 张量三角范畴的平坦/幽灵维数（Balmer 谱线索）
-- 2610.16541 n-Abelian 广子范畴的谱与支持理论
-- 2610.17311 dagger (∞,1)-范畴 III（单位完备 dagger Segal anima）
-- 跨类关联：quant-ph **2610.16512**（仪器 Weyl–Heisenberg 群流形 Kraus 轨迹）是 §003 量子仪器/几何谱对偶的实质线索。
+**【Topos / 范畴论 · math.CT】亮点（§003 基本静默）**
+- 2610.20386 *The Kaplansky-Walker Lemma for additive categories*（math.CT 唯一新稿，加性范畴，非 topos）。
+- **跨类 §003 强近邻**：math-ph 2610.19004（Kapustin：交叉预层/非阿贝尔 Čech/同伦论/高阶对称）—— 直接指向 §003-type-topos 的层与高阶范畴线索，建议纳入。
 
-**【Gelfand / 算子代数 · math.OA】亮点（本批丰收，14/14 强）**
-- 2610.14711 迹秩一 C*-代数（Lin）
-- 2610.17411 可分酉 C*-代数生成元（Elliott 纲领）
-- 2610.15395 饱和 Fell 丛谱几何（纤维 C*-代数 / Gelfand 对偶）
-- 2610.16747 量子环面交换子 Schatten 类（Connes 非交换几何）
+**【Gelfand / 算子代数 · math.OA】亮点（4/4 强）**
+- 2610.19023 交叉积/张量积的不变 vN 子代数；2610.19590 半圆代数同构（自由概率）；2610.19791 SU(2) 谱截断与谱局部化子（非交换几何）；2610.20373 量子环面 Cwikel/Weyl 律（Connes 非交换几何）。
 
-**【AI · cs.AI / cs.LG（含 hep-th 跨类）】亮点**
-- **2610.16733** — *TheoPhysEval: Assessing AI agents at autonomous theoretical physics problem solving*（A. Ramesh Chandra 等，hep-th）：评测 AI agent 自主求解理论物理问题，量子+AI / 物理+AI 交叉强信号。
-- **2610.17286** — *Quantum Cryptography and Autoformalization in Lean*（Maor Ben Shahar，quant-ph）：量子密码在 Lean 中的自动形式化，量子+AI+形式化交叉。
-- **2610.14790** — *Counterfactual Regret for Reflective Agents with Lean-Verified Guarantees*（Zhongnian Li 等，cs.AI）：带 Lean 验证保证的反事实后悔 agent，形式化 + agent。
-- 几何×ML 近邻：2610.14041（逆强化学习的奖励更新几何视角）、2610.14307（流匹配模型的约束推理时最优控制 ConicFlow）。
+**【AI · cs.AI / cs.LG】亮点**
+- **2610.18933** *The Agentic Scientist: Orchestrating Coding Agents for Automated Scientific (Co-)Discovery*（Robert Tjarko Lange）— 编排 coding agent 实现自主科学发现，量子/物理+AI 交叉强信号。
+- **2610.19223** *Definition Grounding in Theory-Level Auto-formalization*（Leyan Pan）— 理论级自动形式化中的定义接地，形式化+AI 交叉。
+- **2610.19159** *Into the Unknown: Benchmarking AI agents on open scientific research problems*（Seungone Kim）— 在开放科学研究问题上基准测试 AI agent，物理+AI 交叉。
+- 量子+AI 近邻：**2610.19073** *Federated Unlearning of Quantum Data via Classical Shadows*（quant-ph，量子数据+AI）。
+- 能量+ML 近邻：**2610.19946** *Learning Graph Energies for Finite-Time Generation*（cs.LG，图能量+有限时间生成）。
 
 ### 💡 今日趋势洞察
 
-1. 本批算子代数（math.OA）成色极硬：Elliott 分类纲领（生成元、迹秩一）、Fell 丛谱几何、量子环面交换子齐发，是 §004-Gelfand / 非交换几何方向的密集补给，宜优先纳入 Foundations 收藏。
-2. 量子基础子区块以「实在论 / Bell 局域因果性（Catani）+ 量子参考系四元标架（Butterfield）」领衔，且 2610.16512 将量子仪器嵌入 Weyl–Heisenberg 群流形几何，为 §003 量子仪器单子 / 谱对偶提供了可落地的几何入口。
-3. 能量 / 几何控制方向本批无 gyrator / ratchet 精确命中，但量子热力学（Mpemba 反馈反转、监测下宏观涨落理论）与端口 Hamilton 无穷维几何控制（PCH 原始-对偶梯度）构成高质量替代，建议持续跟踪「反馈调控下的反常热弛豫」这一新兴主线。
+1. 本批 §004-Gelfand 虽仅 4 篇但成色极高：math.OA 的「SU(2) 谱截断/谱局部化子」与「量子环面 Cwikel/Weyl 律」两条直接落在 Connes 非交换几何主线上，是 CQT 非交换几何方向的高价值补给；同时 math-ph 的 Kapustin（交叉预层/非阿贝尔 Čech/同伦）为 §003-type-topos 提供了难得的层论/高阶对称近邻。
+2. 能量/几何控制方向本批仍以「Mpemba 效应（2610.19870）+ 量子功与能量-相干权衡（2610.20528/19897）+ 量子 van der Pol 振荡器（2610.19904）」为主轴，无 gyrator/ratchet 精确命中，但「量子热力学 + 随机振荡器」组合持续升温，建议 CQT 将其作为能量收集理论的新切入点。
+3. AI 方向以「自主科学发现 agent（Agentic Scientist）+ 理论级自动形式化（Definition Grounding）+ 开放科研基准」领衔，且量子+AI（Classical Shadows 联邦遗忘）、能量+ML（图能量生成）交叉频现，CQT 应持续跟踪 AI-for-Science 与量子/能量交叉。
 
 ---
 
-### 四、bookmark.md 入库（## 2026-10-14 节，按 ID 去重）
+### 四、bookmark.md 入库（## 2026-10-15 节，按 ID 去重）
 
 已追加至 `c:/Dev/CQT/bookmark.md`：
 
-- **量子基础 / §002**：2610.16493、2610.17225、2610.16512（§003 近邻）、2610.16267、2610.15656、2610.15430、2610.15783、2610.14081、2610.16064。
-- **§004-Gelfand**：2610.14711、2610.17411、2610.15395、2610.16747、2610.15180、2610.17435、2610.18129。
-- **随机热力学 / 几何控制（§二）**：2610.18500、2610.16263、2610.16222、2610.18250。
-- **AI 交叉**：2610.16733、2610.17286、2610.14790。
-- **§003 弱近邻**：2610.14420、2610.16541、2610.17311。
+- **量子基础 / §002**：2610.20016、2610.19569、2610.19905、2610.20528、2610.19897、2610.19941、2610.20258、2610.18955、2610.19675、2610.20398、2610.20006。
+- **§003 近邻**：2610.19004（Kapustin 交叉预层/同伦）、2610.20386（加性范畴）。
+- **§004-Gelfand**：2610.19023、2610.19590、2610.19791、2610.20373。
+- **随机热力学 / 几何控制（§二）**：2610.19870、2610.20528、2610.19897、2610.19904、2610.19976、2610.18892、2610.19944、2610.20126。
+- **AI 交叉**：2610.18933、2610.19223、2610.19159、2610.19073、2610.19946。
