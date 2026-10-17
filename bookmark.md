@@ -4,6 +4,44 @@
 
 ---
 
+## 2026-10-16
+
+### arXiv FRI 16 OCT 2026 强命中（量子基础 / §003 / §004 / 能源 / AI）
+- **2610.20694** Quantum Partial Information Decompositions, an Operational Order on Ensembles, and Direct Quantifications of Objective Information (Alexander Nico-Katz) — 量子基础（客观信息直接量化；§002）
+- **2610.20725** Quantum prepare-and-measure scenarios: concepts and methods (A. de Oliveira Junior) — 量子基础（prepare-and-measure/情境性；§002）
+- **2610.21044** Singular wave functions and quantum collapse in inverse-power potentials (Hidetsugu Sakaguchi) — 量子基础（量子坍缩；§002）
+- **2610.21071** Multiplicative SDP Upper Bounds on Quantum No-Signalling-Assisted Zero-Error Capacity (Xin Li) — 量子基础（无信号/非定域；§002）
+- **2610.21410** Parallel Repetition for Entangled Games via Conditional Relative Entropy (Rahul Jain) — 量子基础（纠缠博弈/非定域；§002）
+- **2610.21465** Periodic conditional measurements on a photonic chip (Xuan Chen) — 量子基础（测量理论；§002）
+- **2610.21765** Local finite rate semi device independent randomness expansion from quantum contextuality (Dhananjoy Ghosh) — 量子基础（情境性/随机性；§002）
+- **2610.22097** Operational Limits of Gravity-Mediated Entanglement (Atta ur Rahman) — 量子基础+量子引力（引力介导纠缠；§002）
+- **2610.21395** When do quantum views help? Complementary classical-quantum representations in multi-view fusion (Azadeh Alavi) — 量子基础（经典-量子边界；§002）
+- **2610.22145** Gyrators for superconducting circuit design (Ciro Salcedo) — 能源（回转器直接命中 "Brownian Gyrator"；quant-ph）
+- **2610.21790** Optimal energy conversion -- A port-Hamiltonian approach (Guanru Pan) — 能源（端口哈密顿 PCH 直接命中；eess.SY）
+- **2610.20963** Fisher information analysis of a Langevin System with Thermal and Athermal Noise (Eduardo S. Nascimento) — 能源（随机热力学×信息几何近邻；cond-mat.stat-mech）
+- **2610.21928** Synergistic charging of a quantum battery via Dzyaloshinskii-Moriya interaction and non-Markovian noise (Si-Yu Zhang) — 能源（量子电池充电；quant-ph）
+- **2610.22034** Energetic channels in finite many-body quantum charging (Dara Murphy) — 能源（量子充电能量通道；quant-ph）
+- **2610.21861** Diffusion-Induced Stabilization of Nonreciprocal Wealth Dynamics (Pierre Bousseyroux) — 能源近邻（非互易动力学/gyrator 近邻；cond-mat.stat-mech）
+- **2610.21004** Skew fields of non-commutative meromorphic functions affiliated to finite operator algebras (Méric L. Augat) — §004（非交换亚纯函数斜域）
+- **2610.21010** Operator Algebraic Quantum Hypergroups (Benjamin Anderson-Sackaney) — §04（算子代数量子超群）
+- **2610.21037** Single generation of transformation group algebras (George A. Elliott) — §04（变换群代数/Elliott 程序）
+- **2610.21080** Applications of C*-Entropy to Representation Growth for Discrete Groups (Connor MacMahon) — §04（C*-熵/表示增长）
+- **2610.21632** Characterisations for coarse embeddability via quasi-locality and Schur multipliers (Kang Li) — §04（粗可嵌入性/拟局部）
+- **2610.21929** Operator space theory from the maximal viewpoint (Gilles Pisier) — §04（算子空间）
+- **2610.22028** Strongly irreducible operators, K0-groups, and Jones indices in the hyperfinite type II1 factor (Junsheng Fang) — §04（超有限 II1 因子/Jones 指标/vN）
+- **2610.22109** Convexity, the spectrum of free Laplacians and geometric consequences: a free KLS bound (Charles-Philippe Diez) — §04（自由Laplacian/自由概率/谱几何）
+- **2610.21507** A Krause-type recollement for Q-shaped derived categories (Yajun Ma) — §003 弱近邻（导出范畴/recollement；math.CT 交叉）
+- **2610.22161** Gluing weak approximability along recollements (Pat Lank) — §003 弱近邻（recollement 黏合；math.CT 交叉）
+- **2610.21960** The derived category of a generalized complex torus (Patrick Antweiler) — §003 弱近邻（导出范畴；math.DG）
+- **2610.21958** ChronoSheaf: Joint Spatio-Temporal Spectral Filtering on Cellular Sheaves (Abeer Mostafa) — §003 弱近邻（细胞层/sheaf；cs.LG）
+- **2610.21767** From Research Goals to Scientific Closure: Evaluating Agents Through Evidence-Supported Physics Research (Yijia Mao) — AI（物理研究评估 agent；cs.AI）
+- **2610.21082** SciΠvot: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents (Youran Sun) — AI（科学自主研究 agent 基准；cs.AI）
+- **2610.20681** IneqAgent: Agentic Inequality Proving in Lean with Symbolic Computation (Gaolei He) — AI（形式化/Lean 自动不等式证明；cs.AI）
+- **2610.21562** A Quantum Machine Learning Approach to Content-Based Media Recommendation (Bob Coecke 等) — AI（QNLP 量子机器学习；cs.LG）
+- **2610.21672** Diffusion Language Models as Open Quantum Systems (Akinori Tanaka 等) — AI（扩散语言模型=开放量子系统；cs.LG）
+
+---
+
 ## 2026-10-15
 
 ### arXiv THU 15 OCT 2026 强命中（量子基础 / §003 / §004 / 能源 / AI）
