@@ -4,6 +4,38 @@
 
 ---
 
+## 2026-10-19
+
+### arXiv MON 19 OCT 2026 强命中（量子基础 / §003 / §004 / 能源 / AI）
+- **2610.22489** Multi-Time States in Quantum and Operational Probabilistic Theories: An Axiomatic Framework (Goswami, Barvar, Bera) — 量子基础（多时间态/操作概率论公理；§002）
+- **2610.22737** Metric and Dispersive Dynamics of Phase Perturbations in Bohmian Quantum Mechanics (Escórcio, Velten) — 量子基础（玻姆力学相位扰动；§002）
+- **2610.22750** The Classical Boundary of Quantum Computation: History-Resolved Causal Stochastic Machines and the Cost of Classicalization (Cho, Ryu 等) — 量子基础（量子-经典边界/经典化代价；§002）
+- **2610.22823** On the relationship between the POVM framework and the no-signaling hypothesis (Will Cavendish) — 量子基础（POVM/非信号；§002）
+- **2610.23367** Bell scenarios encode classical non-causality (Leitherer, Simonov, Kunjwal, Acín 等) — 量子基础（Bell/非因果；§002）
+- **2610.23264** Anticommuting Displacement Operators, Exact Pauli Algebras, and the Singlet State from the Oscillator Vacuum (S. P. Sorella) — 量子基础近邻（Pauli 代数/单态）
+- **2610.23712** Involutions on (∞,n)-categories of bordisms and reflection TQFTs (Pedro Brunialti) — §003（更高范畴/TQFT，math.CT 交叉自 math.AT）
+- **2610.23192** Controlled PROP: Theory and Applications to Quantum Circuits (Noé Delorme, Simon Perdrix) — §003（对称幺半范畴 PROP 量子电路；quant-ph）
+- **2610.23278** The compact double category Int(Poly_*) models control flow and data transformations — §003（双范畴建模控制流；math.CT 交叉）
+- **2610.22494** Presentability of categories of localizations and analytic rings (Ong, Ribeiro) — §003 弱（局部化范畴可呈现性；math.CT 新）
+- **2610.23321** Anomalies for compact simple Lie groups via G-kernels for loop group nets (Marcel Bischoff, Pradyut Karmakar) — §04（共形网/loop group 网/反常；math.OA 新）
+- **2610.22386** Noise-Induced Restoration of Entropy Concavity Near Gaussian Equilibrium (Fayez Abu-Ajamieh) — 能源（随机热力学+熵凹性+噪声/信息几何；cond-mat.stat-mech）
+- **2610.22501** Entropy Production and Thermalization in Heavy-Quark Langevin Dynamics (A. M. Silva) — 能源（朗之万+熵产生/非平衡；cond-mat.stat-mech 交叉自 hep-ph）
+- **2610.23310** Fundamental Bounds on the Oscillation Efficiency of Markov Networks (Chen Jia) — 能源（随机网络效率界；cond-mat.stat-mech）
+- **2610.23781** Transport and thermalization under noncommuting localized constraints (Nesturov, Takács, Zadnik) — 能源近邻（量子输运/热化；cond-mat.stat-mech）
+- **2610.22391** Thermodynamics of coupled electromagnetic and mass fields (Fei Wang) — 能源近邻（耦合场热力学；cond-mat.stat-mech）
+- **2610.22575** Structure-Aware Spatial Kernels for Gaussian Process Distributed Port-Hamiltonian Systems (Tianyi Yang, Thomas Beckers) — 能源（Port-Hamiltonian 关键词命中；cs.LG）
+- **2610.23442** Regularization of stochastic fluid dynamics and non-perturbative renormalization of the shear viscosity (Harhoff, Riedel, Roth, Schlichting) — 能源近邻（随机流体动力学；cond-mat.stat-mech 交叉自 hep-ph）
+- **2610.22592** Computing Fréchet on Unknown Submanifolds of Riemannian Manifolds (McPherson, Maggioni) — 能源近邻（黎曼子流形几何优化；math.OC）
+- **2610.23386** Convergence rate of SGD under Łojasiewicz type condition and polynomially controlled noise (Paweł Węgrzyn) — 能源近邻（随机梯度+受控噪声；math.OC）
+- **2610.22603** At the Limits of Computability: Steps Towards Autonomous AI Discovery on the Busy Beaver Frontier (Dos Santos 等) — AI（自主 AI 发现+Lean 形式化；cs.AI）
+- **2610.22448** Lean4AgenticRL: Advancing Agentic RL with Verifiable Multi-level Process Rewards (Ruida Wang 等) — AI（Lean4+agentic RL；cs.LG）
+- **2610.23845** Self-Building Labs (Bai 等, Aspuru-Guzik) — AI（自主实验科学；cs.AI）
+- **2610.22846** Benchmarking and Enhancing Agentic Causal Discovery (Pingchuan Ma 等) — AI（agentic 因果发现；cs.LG）
+- **2610.23832** Leveraging verifiable structure in quantum circuits to find more efficient compilations with agentic AI (Khattar, Rubin, Gidney, Babbush 等) — AI+量子（agentic AI 量子电路编译；quant-ph）
+- **2610.23840** Demonstration of Logical Error Suppression in a Surface Code Memory on a Cloud-Accessible IBM Superconducting Processor (Kan 等) — 量子（表面码逻辑错误抑制；quant-ph）
+
+---
+
 ## 2026-10-16
 
 ### arXiv FRI 16 OCT 2026 强命中（量子基础 / §003 / §004 / 能源 / AI）
