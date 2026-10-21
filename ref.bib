@@ -3581,3 +3581,54 @@
   year      = {2025},
   note      = {离散时间因果函数的 p 进（非阿基米德）数学理论；本文 p 进因果性节的蓝本；Springer STEAM-H 丛书 2025 版}
 }
+
+%% ============================================================
+%% 随机游走 / Pólya 常返定理（维度与返回概率，随机热力学/能量收集方向近邻）
+%% ============================================================
+
+@article{Polya1921,
+  author    = {P\'{o}lya, George},
+  title     = {\"{U}ber eine Aufgabe der Wahrscheinlichkeitsrechnung betreffend die Irrfahrt im Stra{\ss}ennetz},
+  journal   = {Mathematische Annalen},
+  volume    = {84},
+  pages     = {149--160},
+  year      = {1921},
+  doi       = {10.1007/BF01458701},
+  note      = {P\'{o}lya 随机游走定理的原始论文：首次严格证明 $\mathbb{Z}^d$ 上简单对称随机游走，当 $d=1,2$ 时常返(recurrent, 以概率 1 无限次回到原点)、当 $d\geq 3$ 时暂留(transient, 以正概率一去不返)；$d=2$ 是临界维。P\'{o}lya 本人未给出三维返回概率数值。命中随机热力学/能量收集方向（随机过程、常返性、首达时间分布）。}
+}
+
+@article{McCreaWhipple1940,
+  author    = {McCrea, W. H. and Whipple, F. J. W.},
+  title     = {Random paths in two and three dimensions},
+  journal   = {Proceedings of the Royal Society of Edinburgh},
+  volume    = {60},
+  pages     = {281--298},
+  year      = {1940},
+  note      = {首次数值计算出三维简单随机游走的返回概率 $p_3 \approx 0.34053$（约 34\% 最终回到原点，约 66\% 一去不返）。与 P\'{o}lya 1921 共同构成随机游走常返性的经典文献群。}
+}
+
+@book{Spitzer1964,
+  author    = {Spitzer, Frank},
+  title     = {Principles of Random Walk},
+  publisher = {D. Van Nostrand Company},
+  year      = {1964},
+  note      = {随机游走领域的经典教科书，系统整理 P\'{o}lya 定理的多种证明方法（含势能函数、Green 函数、调和函数等工具）。}
+}
+
+@book{Feller1968,
+  author    = {Feller, William},
+  title     = {An Introduction to Probability Theory and Its Applications},
+  volume    = {1},
+  edition   = {3},
+  publisher = {John Wiley \& Sons},
+  year      = {1968},
+  note      = {第 XIII 章"常返事件"(recurrent events)给出基于返回概率级数 $\sum_n P(S_{2n}=0)$ 敛散性的经典证明：游走常返当且仅当该级数发散，而 $P(S_{2n}=0)\sim C\,n^{-d/2}$，故 $d\leq 2$ 发散、$d\geq 3$ 收敛。}
+}
+
+@book{Redner2001,
+  author    = {Redner, Sidney},
+  title     = {A Guide to First-Passage Processes},
+  publisher = {Cambridge University Press},
+  year      = {2001},
+  note      = {首达过程(first-passage)的经典导论；讨论常返情形($d=1,2$ 平均返回时间为无穷大，零常返)与暂留情形($d\geq 3$ 返回概率 $<1$)下首达时间分布的尾部特征，与 P\'{o}lya 随机游走的维度阈值直接相关。}
+}
