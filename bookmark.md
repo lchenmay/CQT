@@ -36,6 +36,32 @@
 
 ---
 
+## 2026-10-27
+
+### arXiv MON 26 OCT 2026 强命中（量子基础 / §003 / §004 / 能源 / AI）
+- **2610.32659** An Invitation to Algebraic Methods in Quantum Theory (Bradshaw, Hance) — 量子基础+§04（C*-代数方法重述量子论；算子代数进路）
+- **2610.31729** Mutual Information Across Quantum Reference Frame Perspectives (Valente, Ferradini, Giacomini, Kabel) — 量子基础（量子参考系关系性+互信息；§003 关系/逻辑近邻）
+- **2610.32319** Finite Nonsignalling Resources Suffice to Simulate Entangled Qubits (Tang, Wang, Bai) — 量子基础（Bell/非信号/纠缠模拟）
+- **2610.32014** Additive uncertainty relations via pseudospectral methods (Cerjan, Ismert, Loring) — 量子基础+§04（Loring C*-方法；不确定关系）
+- **2610.32315** Bounding Wigner negativity from environmental collisions — 量子基础近邻（量子-经典过渡/退相干）
+- **2610.32783** Bounding single-copy information causality violations — 量子基础近邻（信息因果性/非定域）
+- **2610.32029** Reconstructing the Jordan structure of C*-algebras from the metric on positive unit spheres (Leung, Ng, Wong) — §04（**直接 Gelfand/C*-代数重建**：正单位球度量反演 Jordan 结构）
+- **2610.32395** A New Characterisation of Selflessness (Klisse, Pagliero) — §04（C*-代数约化自由积 selflessness）
+- **2610.32507** Higher Čech derived functors via Galois theory (Afsa, Van der Linden) — §003（Čech 导出函子/Galois → 层/Topos 风味近邻；math.CT）
+- **2610.32399** The Malt'sev condition for groups is not categorical — §003 近邻（范畴逻辑；math.CT）
+- **2610.32683** Stochastic and quantum autonomous information machine: efficiency fluctuations, precision and optimization (Trigal, Manzano) — 能源（自主信息机/效率-精度权衡/净能量交换；cond-mat.stat-mech，高）
+- **2610.32252** Measurement speed limit and Cramér-Rao bound for time-averaged estimators (Odajima, Dechant) — 能源（测量速度极限/Fisher-Cramér-Rao；cond-mat.stat-mech，高）
+- **2610.32301** Continuous-Time Mean-Variance Portfolio Selection via RL with No-Shorting Constraints (Zhang, Li, Zhang) — 能源（HJB+随机最优控制+RL；math.OC，中高）
+- **2610.32080** Continuous-Time Wasserstein Distributionally Robust Control (Gim, Yang, Kim) — 能源（Wasserstein DRO/Bellman 博弈；math.OC，中）
+- **2610.32089** Timed Recovery Safe Gradient Flows for Constrained Nonlinear Programs (Luo, Wu, Chen, Qi) — 能源（安全梯度流/耗散/几何控制；math.OC，中）
+- **2610.31810** PaperFormalizer: Autoformalization of Mathematics from PDFs with Agents and Lean — AI（PDF→Lean 自动形式化；cs.AI）
+- **2610.32448** POSEIDON: Towards Automated Scientific Discovery — AI（自主科学发现 agent；cs.AI）
+- **2610.32001** QuantumMatterExplorer — AI+量子（agentic AI 量子物质研究；quant-ph/cs.AI）
+- **2610.31931** TWIG: Network weights as ground states of a Boltzmann distribution — AI（权重⇄Boltzmann 基态/量子优化连接；cs.LG）
+- **2610.31721** D2C: physics-informed diffusion — AI（物理-informed 扩散；cs.LG）
+
+---
+
 ## 2026-10-16
 
 ### arXiv FRI 16 OCT 2026 强命中（量子基础 / §003 / §004 / 能源 / AI）
