@@ -36,6 +36,36 @@
 
 ---
 
+## 2026-10-28
+
+### arXiv TUE 27 OCT 2026 强命中（量子基础 / §003 / §04 / 能源 / AI）
+- **2610.33294** Twirled and swirled worlds: a compositional approach (Soltani, Galley, Erba, Selby) — 量子基础+§003（GPT 组合方法/范畴化概率理论）
+- **2610.33429** Exact operator bounds on Leggett-Garg violations (Das, Kundu, Sarkar) — 量子基础（时序 Bell/Leggett-Garg 界限）
+- **2610.33723** Induced Bell-CHSH observables in the Fewster-Verch measurement scheme (Guimaraes, Roditi, Sorella) — 量子基础（Bell-CHSH 测量方案）
+- **2610.34364** Exact Identification of Quantum Correlations in the Minimal Bell Scenario (Sun, Wang, Yu) — 量子基础（最小 Bell 场景）
+- **2610.34832** A General Framework for Leggett–Garg Violation in Neutrino Oscillations (Ettefaghi, Hajipour) — 量子基础（Leggett-Garg/中微子）
+- **2610.35608** Did the Gran Sasso Experiment Rule Out the Diósi-Penrose Theory? (Curceanu, Bortolotti, Diósi, Manti, Piscicchia) — 量子基础（Diósi-Penrose 自发坍缩/量子-经典过渡）
+- **2610.34592** Homological and homotopical epimorphisms in monoidal ∞-categories (Bambozzi) — §003（单子 ∞-范畴，高阶范畴近邻；math.CT）
+- **2610.35290** The norm reveals projections in the positive unit sphere of an arbitrary C*-algebra (Peralta, Saavedra) — §04（**直接延续 2610.32029** 正单位球度量反演 Jordan 结构；C*-代数几何）
+- **2610.34000** Regularity and selfless cp maps (Gould, Robert) — §04（**延续 2610.32395** selflessness）
+- **2610.35644** Relative norm averaging property and selflessness of almost periodic actions (Toyota) — §04（selflessness 延续）
+- **2610.33320** Intermediate subalgebras of cross-product von Neumann algebras (Chifan, Flood) — §04（vN 代数中间子代数）
+- **2610.34269** Operator systems in étale groupoid C*-algebras (Baziotis et al.) — §04（étale 群胚 C*-代数）
+- **2610.34695** Local Reflexivity and Exactness for Reduced C*-Algebras of Wreath Products (Dong, Dong) — §04（C*-代数正合性）
+- **2610.35674** Projections in reduced group C*-algebras with prescribed trace values (Yu) — §04（约化群 C*-代数）
+- **2610.34112** Jensen-Mercer two-sided bounds for entropy production rate (Guo, Huang) — 能源（熵产生率双侧界；cond-mat.stat-mech，高）
+- **2610.35667** Information-thermodynamic principles unveil the response of complex networks (Beretta, De Domenico) — 能源（信息-热力学/网络响应；cond-mat.stat-mech，中高）
+- **2610.34995** Reinforcement learning for constrained stochastic linear-quadratic control in continuous time (Wu, Pan, Li, Wu) — 能源（随机 LQ 控制+RL+约束；math.OC，中高）
+- **2610.35528** Local Algebraic Stability of Wasserstein Gradient Descent-Ascent and Mean Field Langevin (An, Wang) — 能源（Wasserstein 梯度流/平均场朗之万；math.OC，中）
+- **2610.34895** Compositional Approximately Bisimilar Abstractions of Stochastic Interconnected Systems (Saharsh et al.) — 能源（随机互联系统组合抽象/验证；eess.SY，中）
+- **2610.33690** PACE: Research Proving Agent for Adaptive Conjecture Exploration (Miao et al.) — AI（带 Lean 验证器的研究证明智能体；cs.AI）
+- **2610.33644** AlphaIdeaBench: Benchmarking Automated Research Idea Generation (Zhou et al.) — AI（自动科研构思基准；cs.AI）
+- **2610.33465** LegoSR: Self-improving Agent-Guided Scientific Discovery (Mao et al.) — AI（自改进科学发现智能体；cs.AI）
+- **2610.33381** The Cost of an Unknown Horizon for the Last Iterate of Clipped SGD (Peng et al., Lean 4 证明) — AI（ML 理论形式化；cs.LG）
+- **2610.33654** Physics-Informed Graph-Based Safe RL for Community Battery Coordination (Huang et al.) — AI+能源（物理信息安全 RL/电池；cs.AI）
+
+---
+
 ## 2026-10-27
 
 ### arXiv MON 26 OCT 2026 强命中（量子基础 / §003 / §004 / 能源 / AI）
