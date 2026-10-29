@@ -36,6 +36,34 @@
 
 ---
 
+## 2026-10-29
+
+### arXiv WED 28 OCT 2026 强命中（量子基础 / §003 / §04 / 能源 / AI）
+- **2610.37493** Recovering classical gauge geometry from quantum master constraints (Corichi) — 量子基础（量子-经典/几何恢复）+ §04 近邻（从量子代数数据恢复几何）
+- **2610.37293** Experimental evidence for quantum Brownian motion in electron-metal decoherence (Huang, Chen, Batelaan) — 量子基础（量子-经典过渡）
+- **2610.37092** Quantum Fisher Information Deficit as a Geometric Signature of Strong-to-Weak Spontaneous Symmetry Breaking (Yin, Zheng) — 量子基础（对称性破缺）
+- **2610.36356** Probability bounds on trajectory-level exceedances of quantum speed limits under continuous-measurement feedback (Kobayashi) — 量子基础（测量/动力学）
+- **2610.36936** Qubit-environment entanglement in pure dephasing dynamics for mixed initial states (Strzałka et al.) — 量子基础（退相干）
+- **2610.37347** Measurement incompatibility and noiseless quantum codes (Zhang, Chen) — 量子基础（测量/QEC）
+- **2610.37016** Finite Tensor 2-Categories (Décoppet, Stroiński, Zorman) — §003（张量 2-范畴，高阶范畴近邻；math.CT）
+- **2610.36459** Classification of reduced free products of nuclear C*-algebras (Elliott, Li, Niu) — §04（C*-分类；math.OA）
+- **2610.37143** Ergodicity, memory loss, and directional stability on von Neumann algebras (Souissi, Barhoumi) — §04（vN 代数遍历性；math.OA）
+- **2610.37558** Weak tracial approximation and a weak Rokhlin property for C*-dynamical systems (Elliott, Li, Niu, Wang) — §04（C*-动力系统；math.OA）
+- **2610.36318** Ratchet Effects for Swarmalators on Asymmetric Substrates (Albert, Libal, Reichhardt, Reichhardt) — 能源（棘轮/对称破缺净输运，高；cond-mat.stat-mech）
+- **2610.37030** Residual dynamics determine dissipation in strongly coupled linear Langevin systems (Kharbanda, Burnet, Sabass) — 能源（朗之万+耗散，中高；cond-mat.stat-mech）
+- **2610.36653** Pontryagin Maximum Principle for Rough Stochastic Differential Equations (Friz, Horst, Theodorakopoulos, Zhang) — 能源（粗糙 SDE 的 PMP=随机最优控制，中高；math.OC）
+- **2610.36378** Data-Driven Hamiltonian for Neural Optimal Control (Strong, Surya, Cho, Choi, Tomlin) — 能源（哈密顿量神经最优控制，中；eess.SY）
+- **2610.37129** Langevin dynamics towards Generalized Gibbs Ensembles (González-Albaladejo et al.) — 能源（朗之万/GGE，中；cond-mat.stat-mech）
+- **2610.35962** h1: A Taste of the Bitter Lesson in Automated Theorem Proving (Moalla et al.) — AI（Lean 4 自动化定理证明智能体；cs.LG）
+- **2610.36328** How Stable Are LLM-Generated Proofs Under Program Refactoring? (Mandiga, Li) — AI（Lean 证明重构稳定性；cs.AI）
+- **2610.36767** Can LLMs Reliably Grade Olympiad Proofs? (Ospanov et al.) — AI（LLM 数学证明验证；cs.AI）
+- **2610.36776** Dependency Graphs of Mathematical Arguments (Park) — AI（数学论证依赖图/证明审查；cs.AI）
+- **2610.36077** The Trinity: Capability-Driven Recursive Self-Improvement for Multimodal Agents (Tang et al.) — AI（多模态智能体递归自改进；cs.AI）
+- **2610.36984** Quantum Evolution Kernel for Node-Attributed Graphs (Padovani, Di Pierro, Daffara) — AI+量子（图 QML；quant-ph）
+- **2610.37116** Generative quantum extreme learning machines (Płodzień) — AI+量子（生成式 QELM；quant-ph）
+
+---
+
 ## 2026-10-28
 
 ### arXiv TUE 27 OCT 2026 强命中（量子基础 / §003 / §04 / 能源 / AI）

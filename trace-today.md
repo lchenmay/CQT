@@ -1,7 +1,7 @@
-## 📅 2026-10-28 CQT 研究前沿动态
+## 📅 2026-10-29 CQT 研究前沿动态
 
-> 批次：**TUESDAY, 27 OCTOBER 2026**（美东 10-27 20:00 公告 ≈ 北京 10-28 08:00 可见；异于上次成功捕获批 MON 26 OCT（10-27 运行）→ 新批次）
-> 运行日（北京）：2026-10-28（周三）。注：arXiv 周末不推送，周一/周二公告批次依次于北京周二/周三可见。
+> 批次：**WEDNESDAY, 28 OCTOBER 2026**（美东 10-28 20:00 公告 ≈ 北京 10-29 08:00 可见；异于上次成功捕获批 TUESDAY, 27 OCT（10-28 运行）→ 新批次）
+> 运行日（北京）：2026-10-29（周四）。注：arXiv 周末不推送，周三 ET 批周四北京可见。
 
 ---
 
@@ -11,118 +11,112 @@
 
 | 分类 | 新 | 总 | | 分类 | 新 | 总 |
 |---|---|---|---|---|---|---|
-| quant-ph | 98 | 228 | | math.DG | 36 | 93 |
-| hep-th | 27 | 108 | | math.OC | 39 | 130 |
-| gr-qc | 33 | 107 | | eess.SY | 35 | 86 |
-| math-ph | 31 | 134 | | math.CT | 5 | 20 |
-| cond-mat.stat-mech | 13 | 59 | | math.OA | 11 | 29 |
-| | | | | cs.AI | 172 | 711 |
-| | | | | cs.LG | 226 | 697 |
+| quant-ph | 50 | 137 | | math.DG | 19 | 54 |
+| hep-th | 37 | 106 | | math.OC | 28 | 70 |
+| gr-qc | 30 | 79 | | eess.SY | 18 | 49 |
+| math-ph | 13 | 80 | | math.CT | 1 | 7 |
+| cond-mat.stat-mech | 13 | 42 | | math.OA | 3 | 9 |
+| | | | | cs.AI | 95 | 407 |
+| | | | | cs.LG | 149 | 437 |
 
-**量子基础与解释子区块**（quant-ph 98 新中提取）：
-- **2610.33294** *Twirled and swirled worlds: a compositional approach*（Soltani, Galley, Erba, Selby）— 一般概率理论（GPT）的组合方法，量子与后量子理论的范畴化构造，基础 + §003 近邻。
-- **2610.33429** *Exact operator bounds on Leggett-Garg violations*（Das, Kundu, Sarkar）— 时序 Bell/Leggett-Garg 违背的精确算符界限，基础。
-- **2610.33723** *Induced Bell-CHSH observables in the Fewster-Verch measurement scheme*（Guimaraes, Roditi, Sorella）— Fewster-Verch 测量方案中的诱导 Bell-CHSH 可观测量，测量基础。
-- **2610.34364** *Exact Identification of Quantum Correlations in the Minimal Bell Scenario*（Sun, Wang, Yu）— 最小 Bell 场景中量子关联的精确识别，基础/非定域。
-- **2610.34832** *A General Framework for Leggett–Garg Violation in Neutrino Oscillations and Matter Effects*（Ettefaghi, Hajipour）— 中微子振荡中 Leggett-Garg 违背的通用框架，基础/宏观极限。
-- **2610.35608** *Did the Gran Sasso Experiment Rule Out the Diósi-Penrose Theory?*（Curceanu, Bortolotti, Diósi, Manti, Piscicchia）— Diósi-Penrose 自发坍缩模型的实验检验，量子-经典过渡/诠释基础。
+**量子基础与解释子区块**（quant-ph 50 新）：
+- **2610.37493** *Recovering classical gauge geometry from quantum master constraints*（Corichi）— 由量子主约束恢复经典规范几何，量子-经典/几何基础，且为 §004（从量子代数数据恢复几何）近邻。
+- **2610.37293** *Experimental evidence for quantum Brownian motion in electron-metal decoherence*（Huang, Chen, Batelaan）— 电子-金属退相干中量子布朗运动的实验证据，量子-经典过渡基础。
+- **2610.37092** *Quantum Fisher Information Deficit as a Geometric Signature of Strong-to-Weak Spontaneous Symmetry Breaking*（Yin, Zheng）— 强→弱自发对称性破缺的 QFI 几何特征，对称性破缺基础。
+- **2610.36356** *Probability bounds on trajectory-level exceedances of quantum speed limits under continuous-measurement feedback*（Kobayashi）— 连续测量反馈下量子速度极限的轨迹越界概率界，测量/动力学基础。
+- **2610.36936** *Qubit-environment entanglement in pure dephasing dynamics for mixed initial states*（Strzałka et al.）— 混合初态纯退相位动力学中的量子比特-环境纠缠，退相干基础。
+- **2610.37347** *Measurement incompatibility and noiseless quantum codes*（Zhang, Chen）— 测量不兼容性与无噪声量子码，测量/QEC 基础。
 
-**§003-type-topos 映射**：**2610.34592** *Homological and homotopical epimorphisms in monoidal ∞-categories*（Bambozzi）— 单子 ∞-范畴的同调/同伦满射，高阶范畴 §003 近邻（无真 topos/sheaf）；其余 math.CT 新文 2610.33903（proto-exact 范畴的 Reed-Muller 码）、2610.34363（k[x]/(xⁿ) 表示 exact 结构的导出等价）属范畴论但非 topos。本批 math.CT 仅 5 新，无真正 Grothendieck topos。
+**§003-type-topos 映射**：**2610.37016** *Finite Tensor 2-Categories*（Décoppet, Stroiński, Zorman）— 张量 2-范畴（高阶范畴/张量范畴），§003 高阶范畴近邻；math.CT 仅 1 新，无真 topos/sheaf。
 
-**§04-Gelfand 映射**（math.OA 11 新，成色硬，且为昨日主题的延续）：
-- **2610.35290** *The norm reveals projections in the positive unit sphere of an arbitrary C*-algebra*（Peralta, Saavedra）— **直接延续昨日 2610.32029**（由正单位球度量反演 Jordan 结构）：从正单位球上的范数揭示投影，C*-代数几何的同一线索。
-- **2610.34000** *Regularity and selfless cp maps*（Gould, Robert）+ **2610.35644** *Relative norm averaging property and selflessness of almost periodic actions*（Toyota）— **延续昨日 2610.32395**（C*-代数 selflessness）的 selfless cp 映射/作用主题。
-- **2610.33320** *Intermediate subalgebras of cross-product von Neumann algebras*（Chifan, Flood）— 交叉积 von Neumann 代数的中间子代数，§04 强。
-- **2610.34269** *Operator systems in étale groupoid C*-algebras*（Baziotis et al.）— étale 群胚 C*-代数中的算子系统，§04。
-- **2610.34695** *Local Reflexivity and Exactness for Reduced C*-Algebras of Wreath Products*（Dong, Dong）— 圈积约化 C*-代数的局部自反性/正合性，§04。
-- **2610.35674** *Projections in reduced group C*-algebras with prescribed trace values*（Yu）— 约化群 C*-代数中具指定迹值的投影，§04。
+**§04-Gelfand 映射**（math.OA 3 新，分类/遍历/动力学风味）：
+- **2610.36459** *Classification of reduced free products of nuclear C*-algebras*（Elliott, Li, Niu）— 核 C*-代数的约化自由积分类，§04 强（C*-分类）。
+- **2610.37143** *Ergodicity, memory loss, and directional stability on von Neumann algebras*（Souissi, Barhoumi）— von Neumann 代数上的遍历性/记忆丢失/方向稳定性，§04。
+- **2610.37558** *Weak tracial approximation and a weak Rokhlin property for C*-dynamical systems*（Elliott, Li, Niu, Wang）— C*-动力系统的弱迹近似/弱 Rokhlin 性质，§04。
+- 另：quant-ph **2610.37493**（由量子主约束恢复经典规范几何）是「从量子代数数据恢复几何」的 §04 近邻主题。本批 §04 无 selflessness/正单位球主题的延续（昨日 2610.35290/2610.34000/2610.35644 线索今日未续）。
 
-**bookmark 入库**：见 `c:/Dev/CQT/bookmark.md` 新增 `## 2026-10-28` 节（基础/§003/§04/能源/AI 强命中，按 ID 去重）。
+**bookmark 入库**：见 `c:/Dev/CQT/bookmark.md` 新增 `## 2026-10-29` 节（基础/§003/§04/能源/AI 强命中，按 ID 去重）。
 
 ---
 
 ### 二、随机热力学与几何控制核心推荐
 
-> 关键词组合命中情况：HJB + 随机最优控制 → 本批**无标题级精确 HJB**，近邻为 2610.34995（连续时间约束随机 LQ 控制 + RL）、2610.35811（数据驱动随机控制）、2610.35569（PDE 约束最优控制）；Stochastic Thermodynamics + 信息几何 → **2610.34112**（熵产生率界）+ **2610.35667**（信息-热力学/网络响应）；Brownian Gyrator/Ratchet/Net Energy Exchange、Multiplicative Noise + PCH/Dirac、Ito + Symplectic/DG → 本批无标题级精确命中（几何近邻 2610.33721 亚黎曼最优传输）。
+> 关键词组合命中情况：Brownian Gyrator / Geometric Ratchet / Net Energy Exchange → **2610.36318**（标题级 RATCHET，高）；Stochastic Thermodynamics + 信息几何 → 无标题级精确命中，近邻 2610.37030（朗之万+耗散）/2610.37129（朗之万→GGE）；HJB + 随机最优控制 → 无标题级 HJB，近邻 2610.36653（粗糙 SDE 的 Pontryagin 极大值原理=随机最优控制）；乘性噪声+PCH/Dirac、Ito+Symplectic/DG 本批无标题级命中；PCH 关键词仅 2610.36378（Hamiltonian 神经最优控制）。
 
-**① 【高优先】2610.34112 — Jensen-Mercer two-sided bounds for entropy production rate**
-- 中文翻译：熵产生率的 Jensen-Mercer 双侧界
-- 作者/机构：Xiao-Kan Guo, Zhiqiang Huang
-- 检索来源：cond-mat.stat-mech/new（TUE 27 OCT）
-- 核心突破：给出非平衡熵产生率（EP rate）的 Jensen-Mercer 型双侧不等式，将 EP 率用态空间函数的 Jensen-Mercer 凸组合夹逼，比经典积分涨落定理的单侧 Cramér 型界更紧且双向。
-- 数学模型：连续时间马尔可夫链 / 主方程；熵产生率 Σ = Σ_ij j_ij ln(j_ij/j_ji)；Jensen-Mercer 不等式（区间 [a,b] 上凸函数 f 满足 f((x+y)/2) ≤ (f(x)+f(y))/2 − Δ_JM）。
-- 关联度：**高**。直接落 CQT 随机热力学主轴「熵产生 / 涨落定理 / 热力学不确定关系」。
+**① 【高优先】2610.36318 — Ratchet Effects for Swarmalators on Asymmetric Substrates**
+- 中文翻译：非对称基底上群振荡子的棘轮效应
+- 作者/机构：B. Albert, A. Libal, C.J.O. Reichhardt, C. Reichhardt（Los Alamos 统计力学组）
+- 检索来源：cond-mat.stat-mech/new（WED 28 OCT）
+- 核心突破：在**非对称（破缺空间反演对称）基底**上研究「群振荡子」（兼具相位振荡与空间运动的活跃物质），给出定向输运的棘轮（ratchet）效应——对称破缺 + 非平衡驱动 → 净定向流/净能量交换。
+- 数学模型：群振荡子耦合动力学（相位-位置耦合方程）+ 非对称周期势（ratchet 势）+ 主动噪声；统计力学平均流 ⟨v⟩ ≠ 0 的条件由对称性破缺 + 时间/空间反演破缺共同决定。
+- 关联度：**高**。直接命中「Brownian Gyrator / Geometric Ratchet / Net Energy Exchange」关键词，对应 CQT 能量收集「对称破缺 + 非平衡净能量交换」主轴。
 
-**② 【中高优先】2610.35667 — Information-thermodynamic principles unveil the response of complex networks to perturbations**
-- 中文翻译：信息-热力学原理揭示复杂网络对扰动的响应
-- 作者/机构：Andrea Filippo Beretta, Manlio De Domenico（复杂网络/信息论组）
+**② 【中高优先】2610.37030 — Residual dynamics determine dissipation in strongly coupled linear Langevin systems**
+- 中文翻译：残余动力学决定强耦合线性朗之万系统中的耗散
+- 作者/机构：Vansh Kharbanda, Anton F. Burnet, Benedikt Sabass（海德堡/EMBL 生物物理）
 - 检索来源：cond-mat.stat-mech/new
-- 核心突破：把信息-热力学（互信息、熵产生、自由能）框架施于复杂网络，量化节点/连边对扰动的响应，给出网络层面的「信息-热力学度量 → 稳定性/恢复力」映射。
-- 数学模型：网络马尔可夫/随机动力学 + 互信息 I(X;Y) + 熵产生率 Σ；扰动响应由互信息梯度（transfer entropy）刻画。
-- 关联度：**中高**。Stochastic Thermodynamics × Information Geometry 近邻，且将热力学量推广到网络/图结构，对应 CQT「网络上的非平衡统计」。
+- 核心突破：在强耦合线性朗之万系统中，证明系统的**耗散**（摩擦/能耗）由未被观测到的「残余动力学子空间」决定——仅看少数自由度会系统性低估耗散，给出耗散与残余模态的显式关系。
+- 数学模型：耦合线性 Langevin `M ẍ = −Γ ẋ − K x + ξ`（Γ 摩擦矩阵，K 刚度）；投影到观测子空间后，耗散率由 Γ 在正交补上的残余模态贡献给出（耗散=Tr(Γ_residual)）。
+- 关联度：**中高**。朗之万 + 耗散（Stochastic Thermodynamics 近邻），对应 CQT 非平衡统计「强耦合下耗散与残余自由度的分解」。
 
-**③ 【中高优先】2610.34995 — Reinforcement learning for constrained stochastic linear–quadratic control in continuous time**
-- 中文翻译：连续时间约束随机线性二次控制的强化学习求解
-- 作者/机构：Weiping Wu, Qitong Pan, Xun Li（香港理工，LQ/随机控制组）, Peng Wu
+**③ 【中高优先】2610.36653 — Pontryagin Maximum Principle for Rough Stochastic Differential Equations**
+- 中文翻译：粗糙随机微分方程的 Pontryagin 极大值原理
+- 作者/机构：Peter K. Friz（柏林 TU/Weierstrass），Ulrich Horst, Stefanos Theodorakopoulos, Huilin Zhang
 - 检索来源：math.OC/new
-- 核心突破：用强化学习求解带约束的连续时间随机 LQ 控制（state/control 约束），把 HJB/倒向 Riccati 的难解性转给数据驱动的 RL（actor-critic / 安全策略迭代），给出约束满足保证。
-- 数学模型：随机 LQ 最优控制 + HJB 方程 + 倒向 Riccati；约束通过 Lagrange/屏障罚项进入 Bellman；RL 逼近值函数/策略。
-- 关联度：**中高**。HJB + 随机最优控制关键词近邻（连续时间 LQ 即 HJB 标准场景），对应 CQT 几何控制「HJB 求解 / 最优反馈」。
+- 核心突破：把最优控制的 Pontryagin 极大值原理（PMP）推广到**粗糙路径（rough path）驱动的随机微分方程**——在信号具低正则性（非半鞅）时仍给出最优控制的必要条件，是 HJB/PMP 框架对粗糙随机控制的自然延伸。
+- 数学模型：粗糙 SDE `dX = b(X)dt + σ(X)dW + ... ` 经 rough path 提升；伴随（adjoint）过程 + 汉密尔顿量 H 的极值条件 H(x*,u*,p*) = max_u H（PMP）；粗糙路径的 Gubinelli 导数/签名构造。
+- 关联度：**中高**。HJB + 随机最优控制的实质延伸（以 PMP 取代 HJB），对应 CQT 几何控制「随机最优控制/极大值原理」。
 
-**④ 【中优先】2610.35528 — Local Algebraic Stability of Wasserstein Gradient Descent-Ascent and Mean Field Langevin Dynamics without Spectral Gap**
-- 中文翻译：无谱隙下 Wasserstein 梯度下降-上升与平均场 Langevin 动力学的局部代数稳定性
-- 作者/机构：Jing An, Lihan Wang
-- 检索来源：math.OC/new（交叉自 cs.LG/数学优化）
-- 核心突破：在**无谱隙**假设下证明 Wasserstein GD-Ascent 与平均场 Langevin 动力学（MFLD）的局部代数稳定性，为分布空间上的随机/博弈动力学提供严格收敛保证。
-- 数学模型：Wasserstein-2 度量上的梯度流（JKO）+ 平均场 Langevin（Fokker-Planck + 噪声）；局部稳定性用代数（多项式）衰减率刻画，取代指数收敛（谱隙）要求。
-- 关联度：**中**。几何（Wasserstein 梯度流）+ 朗之万（随机动力学）近邻，对应 CQT「几何随机控制 / 扩散过程」。
-
-**⑤ 【中优先】2610.34895 — Compositional Approximately Bisimilar Abstractions of Stochastic Interconnected Systems**
-- 中文翻译：随机互联系统的组合式近似互模拟抽象
-- 作者/机构：S. Saharsh, B.A. Sadek, Abdalla Swikir, Pushpak Jagtap, Adnane Saoud
+**④ 【中优先】2610.36378 — Data-Driven Hamiltonian for Neural Optimal Control**
+- 中文翻译：面向神经最优控制的数据驱动哈密顿量
+- 作者/机构：Christopher A. Strong, Aswin Surya, Namhoon Cho, Jason J. Choi, Claire J. Tomlin（伯克利/斯坦福 控制 + 学习）
 - 检索来源：eess.SY/new
-- 核心突破：对随机互联系统给出**组合式**构造——先对子组件做近似互模拟（approximate bisimulation）抽象，再用组合规则拼回整体，保证局部误差界在组合下可控，降低大规模随机系统的验证/控制复杂度。
-- 数学模型：随机混杂/马尔可夫系统 + 互模拟关系 ∼_ε（ε-近似轨迹等价）+ 组合范畴（并行复合、反馈）；误差用 Wasserstein/轨迹偏差度量。
-- 关联度：**中**。随机控制 / 形式化验证 / 组合抽象近邻，对应 CQT「随机系统几何控制与验证」。
+- 核心突破：用**数据驱动学习一个哈密顿量**（而非直接学策略/值函数），再经哈密顿力学导出的几何结构做最优控制——保留辛/能量结构的物理一致性，比黑箱策略更可解释、更稳。
+- 数学模型：神经哈密顿量 H_θ(x,u)；控制律由 H 的梯度/哈密顿方程导出；数据拟合 H 使轨迹满足哈密顿流 + 最优性（Pontryagin/极小值原理约束）。
+- 关联度：**中**。Hamiltonian + 最优控制 + 几何结构（辛），对应 CQT 几何力学/PCH 控制近邻。
+
+**⑤ 【中优先】2610.37129 — Langevin dynamics towards Generalized Gibbs Ensembles**
+- 中文翻译：趋向广义 Gibbs 系综的朗之万动力学
+- 作者/机构：Rafael González-Albaladejo, Leticia F. Cugliandolo, Gustavo S. Lozano, Daniel A. Stariolo
+- 检索来源：cond-mat.stat-mech/new
+- 核心突破：研究朗之万动力学如何把可积/近可积多体系统弛豫到**广义 Gibbs 系综（GGE）**——无穷多守恒量下的非平衡稳态，刻画弛豫路径与守恒量约束下的热化。
+- 数学模型：过阻尼/欠阻尼 Langevin `γ ẋ = −∇V(x) + ξ`（V 含无穷多守恒约束）；稳态满足 GGE 测度 ∝ exp(−Σ_i β_i I_i(x))，I_i 为守恒量；弛豫由守恒量投影决定。
+- 关联度：**中**。朗之万 + 非平衡统计/广义系综，对应 CQT 随机动力学/非平衡统计近邻。
 
 ---
 
 ### 三、每日研究前沿四方向
 
-**量子（quant-ph，98 新）亮点**：
-- **2610.35099** *Self-Correcting 3D Surface Code with Growing Local Dimension*（Guo）— 具增长局部维度的自校正 3D 表面码，容错量子计算的重要构造。
-- **2610.35513** *Geometric aspects of fault tolerance*（Conrad）— 容错阈值的几何视角，错误修正的几何结构。
-- **2610.34399** *Pauli-ball discrepancy and stability of quantum codes*（Zabokritskiy）— Pauli-ball 离散度刻画量子码的稳定性。
-- **2610.33144** *Fully quantum training of parametric circuits with Quantum Hamiltonian Descent*（Burato, Banchi）— 用量子哈密顿下降完全量子地训练参数化线路（量子 ML 训练新范式）。
-- **2610.33294**（见 §一，GPT 组合方法）— 基础 + §003 近邻。
+**量子（quant-ph，50 新）亮点**：
+- **2610.36963** *Correlation-sensitive magic-state distillation from spin-squeezed neutral atoms* — 自旋压缩中性原子的关联敏感魔法态蒸馏（容错量子计算）。
+- **2610.36965** *From QCCD Trapped-Ion Hardware to Quantum Compilers* — 离子阱 QCCD 硬件到量子编译器（含纠错层编译）。
+- **2610.37552** *Meet-in-the-Middle Compilation of the [CNOT] Class with Fibonacci Anyons* — 斐波那契任意子的 [CNOT] 类 Meet-in-the-Middle 编译（拓扑量子计算）。
+- **2610.37347** *Measurement incompatibility and noiseless quantum codes* — 测量不兼容性与无噪声量子码（QEC 码构造）。
+- **2610.37635** *Classical Verification of Quantum Computation Beyond the Polynomial Hierarchy* — 超越多项式层级的量子计算经典验证。
+- **2610.37293** *Experimental evidence for quantum Brownian motion in electron-metal decoherence*（亦属基础/量子-经典过渡）。
 
-**Topos/范畴论（math.CT，5 新）亮点**（本批 thin，无真 topos）：
-- **2610.34592** *Homological and homotopical epimorphisms in monoidal ∞-categories*（Bambozzi）— 单子 ∞-范畴的同调/同伦满射，§003 高阶范畴近邻。
-- **2610.33903** *Reed-Muller-Type Codes Associated to Proto-Exact Categories*（Edison, Sistko）— proto-exact 范畴上的 Reed-Muller 码，范畴代数近邻。
-- 注：本批无层论 / Grothendieck topos 直接论文。
+**Topos/范畴论（math.CT，1 新）亮点**（本批极薄，无真 topos）：
+- **2610.37016** *Finite Tensor 2-Categories*（Décoppet, Stroiński, Zorman）— 有限张量 2-范畴，高阶范畴/张量范畴论近邻，§003 关联。
 
-**Gelfand 理论/算子代数（math.OA，11 新）亮点**（本批锋利，且承接昨日主题）：
-- **2610.35290** *The norm reveals projections in the positive unit sphere of an arbitrary C*-algebra*（Peralta, Saavedra）— **直接延续昨日 2610.32029**（正单位球度量反演 Jordan 结构），C*-代数正单位球的几何/投影。
-- **2610.34000** + **2610.35644** *selfless cp maps* / *selflessness of almost periodic actions*（Gould-Robert / Toyota）— **延续昨日 2610.32395**（C*-selflessness）的 selfless 主题双连发。
-- **2610.33320** *Intermediate subalgebras of cross-product von Neumann algebras*（Chifan, Flood）— 交叉积 vN 代数的中间子代数（C*-/vN 结构）。
+**Gelfand 理论/算子代数（math.OA，3 新）亮点**：
+- **2610.36459** *Classification of reduced free products of nuclear C*-algebras*（Elliott, Li, Niu）— 核 C*-代数约化自由积分类，§04 主线（C*-分类）。
+- **2610.37143** *Ergodicity, memory loss, and directional stability on von Neumann algebras* — von Neumann 代数上的遍历性/记忆丢失/方向稳定性。
+- **2610.37558** *Weak tracial approximation and a weak Rokhlin property for C*-dynamical systems* — C*-动力系统的弱迹近似/弱 Rokhlin 性质。
 
-**AI（cs.AI 172 新 / cs.LG 226 新）亮点**：
-- **2610.33690** *PACE: Research Proving Agent for Adaptive Conjecture Exploration*（Miao et al.）— 带验证器的「研究证明智能体」，自主猜想探索 + 形式化验证（Lean 邻接）。
-- **2610.33644** *AlphaIdeaBench: Benchmarking Automated Research Idea Generation*（Zhou et al.）— 自动科研构思智能体基准（含同行评审对齐）。
-- **2610.33465** *LegoSR: A Unified Framework for Self-improving Agent-Guided Scientific Discovery*（Mao et al.）— 自改进智能体引导的科学发现框架。
-- **2610.33381** *The Cost of an Unknown Horizon for the Last Iterate of Clipped SGD …*（Peng et al.，cs.LG）— 关键定理附 **Lean 4 证明**（附属文件），ML 理论形式化近邻。
-- **2610.33654** *Physics-Informed Graph-Based Safe RL for Community Battery Coordination*（Huang et al.）— 物理信息安全 RL 用于社区电池协调（物理-informed + 能源近邻）。
-- **2610.33739** *A quantum k-nearest neighbors implementation*（Rector, Sun，cs.LG）— 量子 k-NN 实现（量子 ML）。
-- 物理-informed ML 簇（cs.LG）：2610.33133（PINN 解漂移-扩散方程）、2610.33456（几何感知神经算子 CFD）、2610.33557（物理正则化流匹配气溶胶）、2610.33722（粗观观测重建细尺度 PDE）。
+**AI（cs.AI 95 新 / cs.LG 149 新）亮点**：
+- **形式化/证明智能体簇**（本批最突出）：**2610.35962** *h1: A Taste of the Bitter Lesson in Automated Theorem Proving*（Moalla et al.，Lean 4 智能体循环 + 自动化定理证明）、**2610.36328** *How Stable Are LLM-Generated Proofs Under Program Refactoring?*（Lean 证明重构稳定性压测）、**2610.36767** *Can LLMs Reliably Grade Olympiad Proofs?*（LLM 评奥数证明）、**2610.36776** *Dependency Graphs of Mathematical Arguments*（数学论证依赖图与证明审查）、**2610.36595** *Learning to Formalize*（开放任务→形式化候选生成）。
+- **Agentic AI**：**2610.36077** *The Trinity: Capability-Driven Recursive Self-Improvement for Multimodal Agents*（多模态智能体能力驱动递归自改进）。
+- **物理-informed ML 簇**（cs.LG）：**2610.35967** *Data-driven Discovery of Lie Symmetries and First Integrals with Latent ODEs*（Lie 对称/首次积分发现，几何）、**2610.36470** *Underdamped Anchored Langevin Dynamics*（欠阻尼锚定朗之万采样）、**2610.36139** *Scaling and Renormalization in Neural Networks: RG description of grokking*（重整化群描述 grokking，物理）、**2610.35965** *Generalization in Learning: Eyring Formula and Predator-prey Model*（Eyring 公式/热力学解释泛化）。
+- **量子 + AI**：quant-ph **2610.36984** *Quantum Evolution Kernel for Node-Attributed Graphs*（节点属性图量子演化核，QML）、**2610.37116** *Generative quantum extreme learning machines*（生成式量子极端学习机，QML）、**2610.36167** *Analog Quantum Experiments Meet Automatic Differentiation*（模拟量子实验 + 自动微分）；cs.LG 本批未见明确量子 ML 算法。
 
 ---
 
 ### 💡 今日趋势洞察
 
-1. **§04-Gelfand 连续两天成主线**：昨日「正单位球度量反演 Jordan 结构」（2610.32029）与「C*-selflessness」（2610.32395）今日立刻有同主题跟进论文（2610.35290 正单位球投影、2610.34000/2610.35644 selfless 映射与 action）——C*-代数的「几何/正锥结构 ⇄ 代数结构」重建问题正在一个小高潮，是 CQT Gelfand 方向最值得持续盯防的线索。
-2. **随机热力学以「熵产生率紧界 + 信息-热力学网络响应」双线推进**：2610.34112 把熵产生率用 Jensen-Mercer 双侧夹逼（比 Cramér 型更紧），2610.35667 把信息-热力学推广到复杂网络扰动响应——均直接对应 CQT 能量收集/非平衡统计主轴。
-3. **AI 自主科研进入「证明智能体 + 形式化」阶段**：PACE（2610.33690，带 Lean 验证器的研究证明智能体）与 AlphaIdeaBench（2610.33644，科研构思基准）+ ML 理论 Lean 4 证明（2610.33381）显示 agentic AI 正从「写文本」转向「可验证的猜想/证明协作者」，与量子+AI 交叉（量子 k-NN、量子训练）汇流。
+1. **能源方向本批以「棘轮 + 朗之万耗散」双线落地**：直接命中 RATCHET 关键词的群振荡子非对称基底棘轮（2610.36318）是能量收集「对称破缺→净定向输运」主题的干净范例；朗之万耗散的残余动力学分解（2610.37030）与 GGE 弛豫（2610.37129）把 CQT 非平衡统计推向可操作的耗散/守恒量约束框架。
+2. **随机最优控制的粗糙路径化（2610.36653）是 HJB/PMP 框架对低正则驱动的自然推广**，与「数据驱动哈密顿量做神经最优控制」（2610.36378）一起显示几何/PMP 进路正从抽象方程走向可学习、保辛的控制结构。
+3. **AI 自主科研继续向「形式化证明智能体」集中爆发**：h1（2610.35962）将 Lean 4 智能体循环带入「苦涩的教训」式自动化定理证明，配合 LLM 证明评级/重构稳定性/数学论证依赖图多篇，显示 agentic AI 正成为可机器检验的数学研究协作者；物理-informed ML（Lie 对称/朗之万/RG/Eyring）则持续把统计物理工具反哺机器学习。
 
 ---
 
-*下次检索：北京 2026-10-29（周四）08:00 后查 WEDNESDAY, 28 OCTOBER 2026 批次；若 10-29 仍显 TUE 27 OCT 则 10-30 04:30 复查。*
+*下次检索：北京 2026-10-30（周五）08:00 后查 THURSDAY, 29 OCTOBER 2026 批次；若 10-30 仍显 WED 28 OCT 则 10-31 04:30 复查。*
