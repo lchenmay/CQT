@@ -4,6 +4,71 @@
 
 ---
 
+## 2026-11-03
+
+### arXiv MON 2 NOV 2026 强命中（量子基础 / §003 / §004 / 能源 / AI）— 北京运行日 2026-11-03（周二）
+- **2610.41944** Locality, Probability and the Relevance of History (Horvat) — 量子基础（局部因果性/Bell/「历史相关性」；§002 强）
+- **2610.41444** Almost-Quantum Correlations Violate Information Causality (Bhowmik, Banik) — 量子基础（非定域关联/信息因果性原理被 almost-quantum 违反）
+- **2610.41448** An Unbounded Separation of Almost-Quantum and Commuting-Operator Correlations in Zero-Error Communication (Gazi 等) — 量子基础（Tsirelson 问题/后量子关联/交换算子模型；零误差通信）
+- **2610.41964** No generalised contextuality from the vacuum (Delgado, Ipek) — 量子基础（广义情境性/真空）
+- **2610.40852** Colloquium: Quantum information processing with ensembles of identical particles (Piccolini 等) — 量子基础（全同粒子不可区分性作为资源）
+- **2610.41317** Optimality of the Petz-Fuchs Smoothed State (Laverick) — 量子基础近邻（量子态平滑/逆推 retrodiction）
+- **2610.41712** Device-independent conference key agreement from two-body correlators with balanced Dicke states (Ishihara, Takeoka) — 量子基础近邻（设备无关/Bell 关联 DI-CKA）
+- **2610.41551** Composing Double Categories (Buckley, Garner) — §003 近邻（双范畴组合；math.CT）
+- **2610.41904** Lax-idempotent monads in homotopy theory (Abellán, Blom) — §003 近邻（lax-幂等单子/同伦；math.CT）
+- **2610.40746** Homotopy in enriched functor categories: Frobenius exact structures and weak Serre functors (Odabaşi) — §003 近邻（富集函子范畴/同伦；math.CT）
+- **2610.41068** Initial Subcategories via Free Presentations of the Constant Functor (Brüstle 等) — §003（math.CT 新）
+- **2610.41417** IRA Rigidity and boomerang subalgebras of group von Neumann algebras (Amrutam) — §04 强（群 von Neumann 代数/刚性；math.OA）
+- **2610.41746** A solution to Haagerup's Problem on decomposable maps (Okayasu) — §04 强（完全正/可分解映射/Haagerup 问题；math.OA）
+- **2610.40924** Scaling Limits as Extensions of Continuous Bundles of C*-algebras (Cicchella, Feintzeig) — §04 强（C*-代数丛/标度极限；math-ph）
+- **2610.40978** Connes spectral distance as a quantum distance measure and a geometric measure of entanglement (Lin, Wang) — §04 强（Connes 谱距离/非交换几何；math-ph）
+- **2610.41599** Underdamped Stochastic Optimal Transport with Landauer boundary conditions (stat-mech) — 能源（随机最优输运 + Landauer 边界；非平衡随机热力学）
+- **2610.40704** Mpemba effect as an entropy-production race (stat-mech) — 能源（Mpemba/熵产生竞赛；非平衡统计力学）
+- **2610.41139** Turnpike Properties for Exploratory Stochastic Linear-Quadratic Optimal Control (math.OC) — 能源（随机线性二次最优控制）
+- **2610.40888** Addendum to Optimal Steering of a Linear Stochastic System to a Final Probability Distribution (math.OC/eess.SY) — 能源（线性随机系统转向/随机控制）
+- **2610.41379** Riemannian Optimization on Unknown Manifolds via Stochastic Proximal Refinement (eess.SY) — 能源近邻（黎曼流形 + 随机优化）
+- **2610.40901** TSFLab: A Self-Improving Agent-Agnostic Workbench for Time Series Forecasting Research (cs.LG) — AI（自主科研/智能体驱动模型开发）
+- **2610.40927** Agentic World Modeling for Agent Test-time Scaling without Environment Replica (cs.AI) — AI（agentic 世界模型）
+- **2610.41296** Self-Improvement with Auxiliary Rewards: Learning from Verified Traces (cs.AI) — AI（可验证轨迹自改进）
+- **2610.41308** SERIAL-7: Deriving, Realizing, and Preserving Machine-Verifiable Outputs Across Representations (cs.AI) — AI（机器可验证输出）
+- **2610.41183** Researcher-in-the-Loop Evolutionary Discovery of Entanglement-Assisted Quantum Code Families (cs.AI) — AI+量子（进化发现纠缠辅助量子码族）
+- **2610.41398** Distilling Knowledge from Search: Decoder Model Factory for Quantum LDPC Codes (quant-ph) — AI+量子（量子 LDPC 学习译码）
+
+---
+
+## 2026-10-31
+
+### arXiv FRI 30 OCT 2026 强命中（量子基础 / §003 / §004 / 能源 / AI）— 北京运行日 2026-10-31（周六）【补录：上次 bookmark 写入缺失】
+- **2610.37854** Quantum Foundations Beyond Bell's Theorem: A Topical Review (Del Santo, Gisin) — 量子基础（超越 Bell 的 no-go 综述）
+- **2610.37873** Are quantum measurements universal? (Sassoli de Bianchi) — 量子基础（Born 规则/测量普适性）
+- **2610.37948** Ontology without states: PBR as an argument for dynamics-first realism (Ormrod) — 量子基础（PBR/实在论诠释）
+- **2610.38832** Gravitational Interactions in Nuclear Clocks (Beyer 等) — 量子基础近邻（量子引力/核钟引力相互作用）
+- **2610.38840** Gravitationally Mediated Entanglement in Interferometers with Repeated Splitting (Zampieri, Bose) — 量子基础近邻（引力介导纠缠）
+- **2610.37861** The Geometry of Quantum Teleportation in Phase Space (Berra-Montiel 等) — 量子基础 + §04 近邻（辛几何/相空间隐形传态）
+- **2610.40459** Trajectory sharpening under quantum reference frame transformations (Fadel, Gubitosi) — 量子基础（量子参考系）
+- **2610.40573** What Can Be Computed with Indefinite Causal Structure? (Shmueli) — 量子基础（不定因果结构）
+- **2610.38108** Safety of layered control systems via control barrier morphisms (Ames, Moeller, Tabuada) — §003 近邻（控制障碍态射；应用范畴论→控制）
+- **2610.38695** Equivariant Morita equivalence for finite cyclic group actions on noncommutative tori (Chakraborty, Kundu) — §04 强（非交换环面等变 Morita/非交换几何）
+- **2610.40198** Inner C*-Selfless Groups (Amrutam, Klisse, Pagliero) — §04 强（内 C*-selfless 群；接续 10-28 selflessness 线索）
+- **2610.38142** New structure for Villadsen algebras of the first type (Cano, Toms) — §04（C*-分类）
+- **2610.40470** Spectral isometries of unital C*-algebras (Colbrook, Stepaniants) — §04（谱等距 C*-代数）
+- **2610.38465** Stable Dynamical Mass Transportation via port-Hamiltonian Structure (Wu, Lin, Feng) — 能源（PCH 质量输运；math.OC）
+- **2610.40427** socx: GPU-Accelerated Chance-Constrained Stochastic Optimal Control using JAX (Dokania, Nakka) — 能源（机会约束随机最优控制；eess.SY）
+- **2610.39724** On the Stability Analysis of Infinite-Dimensional Port-Hamiltonian Systems within the Variational Framework (Leitner 等) — 能源（无限维 PCH 稳定性；math.OC）
+- **2610.39973** Nonequilibrium statistical thermodynamics of a small quantum system coupled to quantum reservoirs (Schofield, Kapral) — 能源（量子非平衡统计热力学；cond-mat.stat-mech）
+- **2610.39511** Itô versus Stratonovich for shot noise with state-dependent amplitude: why the answer is Marcus (Bianucci, Mannella) — 能源（Itô/Marcus 修正；cond-mat.stat-mech）
+- **2610.37739** OpenFrontiers (Lean4 开放问题基准 + 自动探针) — AI（自主科研/形式化验证；cs.AI）
+- **2610.37919** SciGame (科学发现游戏智能体) — AI（cs.AI）
+- **2610.37923** VerifiedLab (多 agent 自主科研框架) — AI（cs.AI）
+- **2610.38175** DecompGym (LLM agent 算法分解基准) — AI（cs.AI）
+- **2610.38391** SCOPE (agentic RL 选择性关键步自蒸馏) — AI（cs.AI）
+- **2610.38398** Agent Transfer Protocol (agent 间通信架构) — AI（cs.AI）
+- **2610.38028** Sample Complexity for Generative Learning of Quantum Measurement Data — AI+量子（量子测量数据生成学习；quant-ph）
+- **2610.39350** Provably efficient experimental classification of quantum data with quantum kernels — AI+量子（量子核实验分类；quant-ph）
+- **2610.37819** Responsible Quantum Machine Learning for Medical Imaging (QSVM/QCNN 公平性审计) — AI+量子（cs.LG）
+
+---
+
 ## 2026-10-19
 
 ### arXiv MON 19 OCT 2026 强命中（量子基础 / §003 / §004 / 能源 / AI）
