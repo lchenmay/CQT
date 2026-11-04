@@ -4,6 +4,53 @@
 
 ---
 
+## 2026-11-04
+
+### arXiv TUE 3 NOV 2026 强命中（量子基础 / §003 / §004 / 能源 / AI）— 北京运行日 2026-11-04（周三）
+- **2611.02135** Detection times are not local observables in quantum field theory (Anastopoulos, Savvidou) — 量子基础（QFT 局域可观测量/检测时间非局域；§002 强）
+- **2611.02138** Classical and Quantum Dynamics in State Space: Projective Hilbert Space, Measurement, and Classical Emergence (Kryukov) — 量子基础（投影希尔伯特空间/测量/经典涌现；§002 强）
+- **2611.02219** What is the connection between quantum relationality and symmetry-based relationality? — 量子基础（关系性/对称性关系性；§002）
+- **2611.02283** The Reference System Loophole — 量子基础（Bell 检验参考系漏洞；§002 强）
+- **2611.02070** Classical and Quantum Logics with Multiple Non-Equivalent and Non-Isomorphic Models (Pavicic) — 量子基础（量子逻辑/多模型；§002 强）
+- **2611.00309** Zero mode, Zero influence: Spatial-derivative coupling in particle detectors (Martín-Martínez 等) — 量子基础近邻（Unruh-DeWitt 探测器/相对论 QFT 测量）
+- **2611.02227** Quantum Temporal Marginal Problem — 量子基础近邻（时间边缘分布/时序因果）
+- **2611.03596** Spacetime Emergence in the Memory of a Learning Agent — 量子基础+AI（时空涌现+学习智能体）
+- **2611.01654** Absolute descent and the Bénabou–Roubaud theorem — §003 近邻（下降/Bénabou-Roubaud；math.CT）
+- **2611.01916** On closed symmetric monoidal enriched ∞-categories — §003 近邻（富集 ∞-范畴/闭对称幺半；math.CT）
+- **2611.01184** Cartesian closedness of lax comma categories — §003（math.CT）
+- **2611.00363** Some Constructions in the Category of Topological Partial Actions — §003（math.CT）
+- **2611.02097** On the representability of actions of algebras with several bilinear multiplications — §003（math.CT）
+- **2611.03253** Normalizers in the category of topological groups — §003（math.CT）
+- **2611.03553** Higher-order many-sorted categorial algebras via generalized hep-derivors — §003（math.CT）
+- **2611.00431** Invariant mean on weakly almost periodic functionals over a Hopf-von Neumann algebra — §04 强（Hopf-von Neumann 代数/不变均值；math.OA）
+- **2611.02006** The Carpenter property for subfactors of uniform infinite index — §04 强（subfactor；math.OA）
+- **2611.02336** The relative dimension set of an extremal subfactor of finite index — §04 强（subfactor；math.OA）
+- **2611.03082** The Nuclear Dimension of Extensions and Graph C*-Algebras — §04 强（C*-代数/核维数；math.OA）
+- **2611.03563** Geometric Aspects of C*-Extreme Points II — §04 强（C*-代数几何极；math.OA）
+- **2611.00995** Equivariant Z-stability for amenable actions — §04（C*-代数 Z-稳定；math.OA）
+- **2611.02535** Noncommutative extensions of an ergodic theorem of Breiman — §04（非交换遍历；math.OA）
+- **2611.00703** The e-Property for Quantum Markov Semigroups — §04（量子 Markov 半群；math.OA）
+- **2611.03522** Koopman-von Neumann formalism meets contact Hamiltonian systems (Zadra) — §04 近邻（Koopman-von Neumann/接触哈密顿；math-ph）
+- **2611.01009** Active Jarzynski and Crooks Relations for Driven Jump-Diffusions (stat-mech) — 能源（驱动跳跃扩散的 Jarzynski/Crooks 涨落定理，非平衡随机热力学；高）
+- **2611.00535** Dynamic programming principle for controlled systems driven by fractional Brownian motions and related backward stochastic Riccati equations (math.OC) — 能源（动态规划原理=HJB/分数布朗控制+倒向随机 Riccati；HJB+随机最优控制，高）
+- **2611.01739** Expected Minimax Regret Rates for Adaptive LQG Control on Fixed Parameter Sets (math.OC) — 能源（自适应 LQG 控制=随机线性二次最优控制；高）
+- **2611.01100** Co-design of Output-Feedback Neural Network Control Barrier Functions and Observers for Stochastic Jump-Diffusion Systems (eess.SY) — 能源（随机跳跃扩散+控制屏障函数；高）
+- **2611.03235** Microscopic Origin of the Equation of Motion for Open Thermodynamic Systems (math-ph) — 能源（开放热力学系统运动方程微观起源；中高）
+- **2611.02541** Topological origin of the Gutenberg-Richter law: Dynamic decoupling of fault cascades and energy dissipation (stat-mech) — 能源近邻（能量耗散；中）
+- **2611.00740** Maximum principle for discrete-time stochastic recursive games driven by fractional noises (math.OC) — 能源近邻（随机递归博弈最大值原理=PMP；中高）
+- **2611.00620** Discovering Models for Experimental Quantum Systems with Agentic AI (Kleidermacher 等) — AI+量子（智能体 AI 发现实验量子系统模型；强）
+- **2611.02269** Qubrio: High-Performance Quantum Compilation via Multi-Agent LLM Collaboration — AI+量子（多智能体 LLM 量子编译；强）
+- **2611.02833** Reimagining computational quantum research with AI scientists — AI+量子（AI 科学家重思量子计算研究）
+- **2611.03329** Agentic Pipelines for Mapping Topological Codes to Quantum Hardware — AI+量子（智能体流水线映射拓扑码到硬件）
+- **2611.00463** Exo: An Architecture for Self-Improving Systems at Runtime — AI（运行时自改进系统架构）
+- **2611.00452** Compositional Self-Improvement: Promises and Pitfalls (cs.LG) — AI（组合式自改进）
+- **2611.00269** Automated Theorem Generation in First-Order Logic by Construction from Triangular Standard Contradictions — AI（一阶逻辑自动定理生成）
+- **2611.00773** Designing Informative Actions: Action Construction for Long-Horizon Research Agents — AI（长程科研智能体）
+- **2611.00774** Decision-Centric Research: A Calibrated Decision Model and Benchmark for Scientific Agents — AI（科学智能体决策基准）
+- **2611.00166** Early Stopping in Large Reasoning Models: A Survey and Empirical Audit — AI（大推理模型早停综述）
+
+---
+
 ## 2026-11-03
 
 ### arXiv MON 2 NOV 2026 强命中（量子基础 / §003 / §004 / 能源 / AI）— 北京运行日 2026-11-03（周二）
