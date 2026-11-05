@@ -4,6 +4,42 @@
 
 ---
 
+## 2026-11-05
+
+### arXiv WED 4 NOV 2026 强命中（量子基础 / §003 / §004 / 能源 / AI）— 北京运行日 2026-11-05（周四）
+- **2611.04512** Motional Decoherence of the internal state of an atom by vacuum and thermal fluctuations of a quantum field: Necessity of a fully relativistic treatment (Hsiang, Hu) — 量子基础近邻（相对论 QFT 中真空/热涨落致运动退相干，须全相对论处理；§002）
+- **2611.04263** Information-Geometric Representation of Upper Bounds on Fluctuation Growth in Open Quantum Systems (Bahreyni, Alsing) — 量子基础近邻（开放量子系统涨落增长的信息几何上界；§002 信息几何+量子涨落）
+- **2611.03910** Non-Hermitian effective dynamics from post-selection protocols (Siskou, Meden) — 量子基础（后选择协议导出的非厄米有效动力学/测量；§002）
+- **2611.04009** Tight Quasiprobabilistic Entropic Uncertainty Relations for Discrete Quantum Systems (Thio 等) — 量子基础（准概率熵不确定关系；§002）
+- **2611.05044** Recoverability of Gravitational Entanglement under Decoherence (Wang, Pedernales, Plenio) — 量子基础+量子引力（退相干下引力纠缠可恢复性；§002）
+- **2611.05047** QECert: Formal Foundations for Quantum Error-Correction Theory in Lean (He 等) — 量子基础+AI（量子纠错理论在 Lean 中的形式化基础；§002 形式化）
+- **2611.05303** Quantum Advantage has Few Complexity Implications (Goldin, Lombardi, Morimae) — 量子基础（量子优势复杂性含义有限；§002）
+- **2611.04167** Higher zeroes in pointed infinity-categories — §003 近邻（指向无穷范畴高阶零点；math.CT）
+- **2611.05298** The tensor triangular geometry of valuation domains — §003 近邻（赋值域的张量三角几何；math.CT）
+- **2611.05247** Localisations of rings of weak global dimension at most one — §003（math.CT/math.AC）
+- **2611.04648** Every classifiable simple C*-algebra has a C*-diagonal (Evington, Sibbel) — §04 强（分类简单 C*-代数皆有 C*-对角；math.OA）
+- **2611.04842** Super McDuff and Uniformly Super McDuff II_1 factor (Cao, Yao, Zhou) — §04 强（II_1 因子的 Super McDuff 性质；math.OA）
+- **2611.04926** The ultrapower R^ω is not a group factor (Ma) — §04 强（超幂 R^ω 非群因子；math.OA）
+- **2611.05064** Factoriality of Mixed q-Gaussian Algebras at the Boundary (Yang) — §04 强（边界混合 q-Gaussian 代数的阶乘性；math.OA）
+- **2611.04550** Eigenstates on O*-algebras with an application to ladder operators (Bagarello, Inoue, Triolo) — §04 近邻（O*-代数本征态/阶梯算子；math-ph）
+- **2611.05031** Comparing model representations and fitting methods for port-Hamiltonian system identification (eess.SY) — 能源（端口受控哈密顿系统辨识的模型表示与拟合方法比较；PCH 关键词命中，高）
+- **2611.04994** Synchronization Mpemba Effect (Li, Li, Li) — 能源近邻（同步 Mpemba 效应，非平衡；高）
+- **2611.04143** Infinite-Horizon Stochastic Recursive Differential Games with Jumps: Nonautonomous Coefficients and Nonzero Terminal Values (math.OC) — 能源（无限时域随机递归微分博弈带跳；随机最优控制/博弈，高）
+- **2611.05010** Ergotropy Activation and Coherence in Dissipatively Charged Quantum Batteries (Yang 等) — 能源（耗散充电量子电池的做功能力激活与相干性；量子热力学，中高）
+- **2611.04263** Information-Geometric Representation of Upper Bounds on Fluctuation Growth in Open Quantum Systems (quant-ph) — 能源近邻（信息几何+量子涨落上界；中）
+- **2611.03721** Counterexample-driven autonomous research with application to excess radiated energy in a Z-pinch (cs.AI) — AI（反例驱动的自主科研，应用于 Z-pinch 多余辐射能；自主科研+物理，强）
+- **2611.04035** Recursa: Toward Recursively Self-Improving Foundation Model Systems (cs.AI) — AI（递归自改进基础模型系统；自改进，强）
+- **2611.03739** Reasoning is topologically simple (cs.AI) — AI（推理的拓扑简单性；推理）
+- **2611.03713** Unsatz: Evaluating Scientific Discovery Without a Given Ansatz (cs.AI) — AI（无给定 ansatz 的科学发现评估）
+- **2611.03882** ProofPaths: An AI Agent Framework for Assessing Student Reasoning (cs.AI) — AI（评估学生推理的 AI agent 框架；agent+推理）
+- **2611.04323** Drift No More: Spectral Locking for Long-Horizon Open-Weight Multi-Agent AI (cs.AI) — AI（长程开放权重多智能体光谱锁定；多智能体）
+- **2611.05047** QECert: Formal Foundations for Quantum Error-Correction Theory in Lean (quant-ph) — AI+量子（QEC 理论 Lean 形式化；强）
+- **2611.03845** High-fidelity quantum gate learning via physics-informed neural networks (quant-ph) — AI+量子（物理信息神经网络学习高保真量子门；强）
+- **2611.05354** Interpretable Quantum Photonic Generative Models (quant-ph) — AI+量子（可解释量子光子生成模型）
+- **2611.03891** Hardware-Aware Design and Layout Selection in Quantum Reservoir Computing for Insurance Claims Forecasting (quant-ph) — AI+量子（量子储备池计算硬件感知设计）
+
+---
+
 ## 2026-11-04
 
 ### arXiv TUE 3 NOV 2026 强命中（量子基础 / §003 / §004 / 能源 / AI）— 北京运行日 2026-11-04（周三）
