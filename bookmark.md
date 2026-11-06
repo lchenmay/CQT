@@ -3537,3 +3537,41 @@
 - **摘要**: 具 Dirac 特征的周期十字单元电路色散分析（Dirac 结构 = §能源关键词 PCH/Dirac）。对应"PCH OR Dirac Structure"近邻——**几何控制中优先级（二·核心推荐）**。
 
 ---
+## 2026-11-06
+
+> 批次 THURSDAY, 5 NOVEMBER 2026（ID 2611.*）。按 ID 去重，基础7 + §003二 + §04一 + 能源五 + AI十 = 25 条。
+
+### 量子基础与解释（§002）
+- **2611.05955** — Shared classical fact structure in quantum systems（量子系统共享经典事实结构 / 客观事实基础, §002 强）
+- **2611.06451** — Quantum advantage requires multiple perspectives（量子优势需多视角 / 认识论基础, §002 强）
+- **2611.05499** — Raychaudhuri–Ehlers equation for the quantum state space（量子态空间 Raychaudhuri–Ehlers / 量子几何基础, §002 近邻）
+- **2611.05462** — Quantum information foundations of neutron scattering（中子散射的量子信息基础 / 量子信息基础, §002 近邻）
+- **2611.05541** — Higher-order quantum information inequalities（高阶量子信息不等式 / 量子关联信息论基础, §002）
+- **2611.05826** — Fluctuation growth in open quantum systems（开放系统涨落增长 / 开放量子系统+量子热力学, §002 与能源双近邻）
+- **2611.05460** — Quantum speed limit（量子速限 / 量子动力学基础+能量时间, §002 近邻）
+
+### §003-type-topos（范畴论）
+- **2611.05786** — A topological Mundici representation theorem（拓扑 Mundici 表示定理 / MV-代数·范畴逻辑, §003 近邻）
+- **2611.05924** — How to prove equations using diagrams: categorical and operational semantics for e-graphs（Evan Patterson / e-graph 范畴与操作语义, §003 近邻）
+
+### §04-Gelfand（算子代数）
+- **2611.05863** — Sharp Hausdorff–Young inequalities for some locally compact quantum groups（局部紧量子群 Hausdorff–Young / 量子群·§04 算子代数主线）
+
+### 随机热力学与几何控制（能源五）
+- **2611.06322** — Brownian gyrator model with stochastic resetting（带随机重置的布朗回转器 / Brownian Gyrator 关键词直接命中, 高）
+- **2611.06887** — Risk-Sensitive Stochastic Optimal Control on Positive Cones（正锥风险敏感随机最优控制 / HJB+随机最优控制, 高）
+- **2611.06538** — Constrained Mean Variance Portfolio … Reflected Factor Dynamics: Stochastic Riccati Equations（反射因子下随机 Riccati / HJB, 高）
+- **2611.05533** — Data-Driven Stochastic LQR Control with Probabilistic Guarantees（数据驱动随机 LQR / 随机最优控制, 高）
+- **2611.06251** — Transversal Passivity: Dissipation Relative to Input and Output Manifolds（横截无源性 / PCH-passivity 近邻, 高）
+
+### AI 亮点
+- **2611.05911** — Autonomous agents for electricity-system planning（电力系统规划自主智能体 / 能源+AI 交叉）
+- **2611.06049** — Reglos: A Self-Evolving Personal Memory Agent with Recursive Self-Improvement（递归自改进个人记忆智能体 / 自改进）
+- **2611.05390** — Who May Overrule the Agent? Evidence-Gated Authority in LLM Review Institutions（LLM 评审证据门控权威 / 智能体治理）
+- **2611.05590** — Verified but Vacuous: Three Failure Surfaces of LLM-Driven Verified Code Generation（LLM 可验证代码生成失效面 / 可验证性）
+- **2611.05919** — Routes of Reasoning: Reading and Reshaping Test-Time Compute in MoE Models（MoE 测试时计算路由 / 推理）
+- **2611.05709** — Agents, Think Only When it Helps（智能体只在有帮助时思考 / 推理效率）
+- **2611.05392** — Challenge-Aware Knowledge Recruitment with Meta-Agent Supervision for Medical Multi-Agent Reasoning（医学多智能体挑战感知知识招募 / 智能体）
+- **2611.05512** — Iterated creation, grading, and revision of data science projects by language models（语言模型迭代创建/评级/修订数据科学项目 / 自主科研）
+- **2611.05442** — Matched but Not Better: An Equivalence-Tested Benchmark of Quantum Machine Learning … QML-Health-READY（六临床集 QML 等价检验基准 / 量子+AI, cs.LG）
+- **2611.05659** — Adaptive Domain Decomposition for Finite Basis Physics-Informed Neural Networks（有限基 PINN 自适应区域分解 / 物理-informed ML）
