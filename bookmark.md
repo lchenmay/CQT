@@ -3575,3 +3575,47 @@
 - **2611.05512** — Iterated creation, grading, and revision of data science projects by language models（语言模型迭代创建/评级/修订数据科学项目 / 自主科研）
 - **2611.05442** — Matched but Not Better: An Equivalence-Tested Benchmark of Quantum Machine Learning … QML-Health-READY（六临床集 QML 等价检验基准 / 量子+AI, cs.LG）
 - **2611.05659** — Adaptive Domain Decomposition for Finite Basis Physics-Informed Neural Networks（有限基 PINN 自适应区域分解 / 物理-informed ML）
+
+## 2026-11-07
+
+> 批次 FRIDAY, 6 NOVEMBER 2026（ID 2611.*）。按 ID 去重，基础7 + §003四 + §04四 + 能源五 + AI十 = 30 条。
+
+### 量子基础与解释（§002）
+- **2611.08000** — Quantum Relative Entropy and Information Flux Resolve Wavefunction Collapse in Spacelike-Separated QED Waveguides（量子相对熵与信息流解决类空间隔波函数坍缩 / 测量难题, §002 强）
+- **2611.06997** — All Bell inequalities with a quantum advantage in the minimal scenario are self-testing（最小情景具量子优势的 Bell 不等式皆自测试 / Bell+量子优势, §002 强）
+- **2611.07404** — Weak Values in Postselected Quantum Trajectories（后选择量子轨迹中的弱值 / 弱测量基础, §002 强）
+- **2611.07450** — Bell Test and Quantum State-Space Geometry（Bell 检验与量子态空间几何 / Bell+态空间几何, §002 强）
+- **2611.08313** — Testing Gravitationally-Induced-Entanglement with Massive Particles and Quantum Clocks（量子钟检验引力诱导纠缠 GIE / 量子引力检验, §002 近邻）
+- **2611.07769** — Detecting Nonbilocal Correlations via Parameterized Elegant Joint Measurement（参数化优雅联合测量检测非双局域关联 / 非局域性, §002 近邻）
+- **2611.06975** — Physical regimes of quartic quantum advantage in elastic media simulation（弹性介质模拟四次量子优势物理机制 / 量子优势, §002 近邻）
+
+### §003-type-topos（范畴论）
+- **2611.07505** — Object ideals and idempotent completeness（对象理想与幂等完备性 / 范畴基础）
+- **2611.07584** — Presenting Point-Glued Self-Similar Objects as Final Coalgebras in Metric Spaces via Completion（度量空间最终余代数表征自相似对象 / 余代数, §003 近邻）
+- **2611.08063** — The universal property of the decomposition space of quasisymmetric functions（拟对称函数分解空间泛性质 / 分解空间, §003 近邻）
+- **2611.08124** — Categorified convergence: dropping the 'ultra' from 'virtual ultracategories'（范畴化收敛/虚拟超范畴去超, §003 近邻）
+
+### §04-Gelfand（算子代数）
+- **2611.07978** — A characterization of purely atomic von Neumann algebras（纯原子 von Neumann 代数刻画 / vN 代数主线, §04 强）
+- **2611.07168** — Noncommutative weak almost periodicity and left uniform continuity over locally compact quantum groups（局部紧量子群非交换弱概周期性 / 量子群, §04）
+- **2611.07556** — Values of Rokhlin Dimension for Integer Actions（整数作用 Rokhlin 维数值 / C*-动力系统, §04）
+- **2611.07700** — Algebras, Kernels and Correspondences（代数/核/对应 / 算子代数, §04）
+
+### 随机热力学与几何控制（能源五）
+- **2611.08015** — Funnel MPC for port-Hamiltonian systems（端口受控哈密顿系统漏斗 MPC / PCH 关键词命中, 高）
+- **2611.07276** — State-Feedback Passivity Control for Synchronous Machine Systems（同步电机状态反馈无源控制 / PCH-passivity 近邻, 高）
+- **2611.07362** — Continuous-time q-Learning for Finite-Horizon Portfolio Choice with Optimal Stopping in Jump-Diffusion Markets（跳扩散最优停止投资组合连续时间 q-学习 / 随机最优控制=HJB, 高）
+- **2611.08242** — Finite-Time Thermodynamic Routing in an Anharmonic Collective Quantum Otto Engine（非谐集体量子奥托机有限时间热力学路由 / 量子热力学+控制, 高）
+- **2611.08072** — Thermodynamic geometry of three coupled Ising spins: exact curvature, frustration and bond anisotropy（三耦合 Ising 自旋热力学几何 / 随机热力学+信息几何近邻, 高）
+
+### AI 亮点
+- **2611.06995** — Autonomous AI Agents Systematically Diverge From Human Preferences in Proof Formalization（自主智能体在证明形式化中系统性偏离人类偏好 / 智能体+形式化）
+- **2611.06996** — Trust Responsive Runtime Authorization for Agentic AI（面向智能体的可信响应式运行时授权 / 智能体治理）
+- **2611.07653** — PharmAgents2: Towards Autonomous End-to-End Drug Discovery（自主端到端药物发现智能体 / 自主科研）
+- **2611.07667** — Who Should Know What? Empirical Information Design for Multi-Agent LLM Economies（多智能体 LLM 经济信息设计 / 多智能体）
+- **2611.07652** — Don't Prompt Your Agents. Equip Them: Skillware as a Modular Standard（Skillware 以装备替代提示的智能体模块化能力 / 智能体架构）
+- **2611.07048** — Adapting the Process of Adaptation: Darwinian, Lamarckian, and Agent-Directed Evolution in AI（AI 中达尔文/拉马克/智能体导向演化 / 自改进）
+- **2611.06962** — Formalizing inverse problems in the age of AI（AI 时代逆问题的形式化 / AI+科学形式化）
+- **2611.07073** — When Verification Is Not Agreement: Cross-Agent LLM-to-Dafny Formalization（验证≠一致：跨智能体 LLM→Dafny 形式化 / 形式化验证）
+- **2611.06953** — SteelAgent: LLM-Orchestrated, Physics-Informed Steel Property Prediction（物理-informed 钢性质预测 / 物理-informed ML）
+- **2611.08153** — A Generative Foundation Model for Multimodal Tokamak Tasks（多模态托卡马克生成式基础模型 / 物理+生成式 AI）
