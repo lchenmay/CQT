@@ -3619,3 +3619,32 @@
 - **2611.07073** — When Verification Is Not Agreement: Cross-Agent LLM-to-Dafny Formalization（验证≠一致：跨智能体 LLM→Dafny 形式化 / 形式化验证）
 - **2611.06953** — SteelAgent: LLM-Orchestrated, Physics-Informed Steel Property Prediction（物理-informed 钢性质预测 / 物理-informed ML）
 - **2611.08153** — A Generative Foundation Model for Multimodal Tokamak Tasks（多模态托卡马克生成式基础模型 / 物理+生成式 AI）
+
+## 2026-11-11（抓取批次 TUE 10 NOV 2026）
+- [§002强] 2611.12494 An Alternative to Quantum Theory — 替代性量子理论框架（诠释/基础）
+- [§002] 2611.10252 Can One Hear the Size of a Clock? — 量子时钟频谱可辨识性
+- [§002] 2611.11356 What an Observer Reads off a Holographic Screen — 全息屏观测者信息
+- [§002] 2611.11393 Information–control limits for record-indistinguishable reset of a monitored qubit — 监测量子比特重置信息-控制极限
+- [§002] 2611.10481 A trace costs one quantifier: exact complexity of perfect play in nonlocal games — 非局域博弈完美博弈复杂度
+- [§002] 2611.12609 Effective Time Advance of Quantum Clocks under Postselection — 后选择量子钟时间超前
+- [§002近邻] 2611.11446 One Bit, Many Records: Information Replication in Quantum Many-Body Dynamics — 多体信息复制
+- [§003近邻] 2611.10384 Generalized near-group tensor categories — 广义近群张量范畴
+- [§04强] 2611.10742 Solid factors associated to the linear action of SL2(Z) on Z^n — vN 实心因子
+- [§04强] 2611.11417 Differences Between Quantum Symmetries of Graphs and Graph C*-algebras — 图 C*-代数量子对称
+- [§04强] 2611.12518 The space of Dimension functions on a C*-algebra — C*-代数维数函数空间
+- [§04] 2611.10010 Topological and measurewise amenability for locally compact groupoids — 群胚顺从性
+- [§04] 2611.11982 An invariant higher index pairing under Morita equivalence for proper etale groupoids — 群胚高指标配对
+- [能源高] 2611.12514 Holonomy, Spectral Topology, and Detailed Balance in Classical and Open Quantum Systems — 细致平衡/开放量子系统
+- [能源高] 2611.10493 Geometric Stochastic Dynamics and Fokker-Planck Equation on T S^2 — 几何随机动力学/Fokker-Planck
+- [能源高·PCH] 2611.10695 Port-Hamiltonian Systems Beyond Joules: A Review — PCH 应用综述
+- [能源高·PCH] 2611.12143 Controllability with and without Dissipation - a Port-Hamiltonian Approach — PCH 可控性
+- [能源中] 2611.11343 Ergotropy as distance from equilibrium — 做功能力度量
+- [AI] 2611.10261 Is Recursive Self-Improvement Safe? — 递归自改进安全性
+- [AI] 2611.10411 Tail-risk-aware Agent Safety — 智能体尾部风险安全
+- [AI·形式化] 2611.10233 ProofDiff: Auditable Argument-Level Comparison of AI-Generated Mathematical Proofs — AI 数学证明比对
+- [AI·可验证] 2611.10305 Plug-and-Play Verifier for Decoupling Process Reward in Agentic Reasoning — 过程验证器
+- [AI·自主科研] 2611.10629 DFT-Agent Bench: Scaffold Effects and Execution Provenance in Autonomous DFT — 自主科研
+- [AI·信息几何] 2611.10563 Confronting Uncertainty in Mechanism-AI Coupled Dynamical Systems via Optimal Transport and Information Geometry — 机制-AI 耦合+信息几何
+- [量子] 2611.12098 A Universal Fault-Tolerant Quantum Computing Architecture with Globally Driven Atom Arrays — FTQC 架构
+- [量子] 2611.12833 GARI++: A General-Purpose Decoder for Quantum Error Correction — QEC 解码器
+- [量子] 2611.11157 Adaptive Quantum Metrology of Gravitational Waves — 引力波量子计量
