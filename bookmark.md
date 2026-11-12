@@ -3648,3 +3648,31 @@
 - [量子] 2611.12098 A Universal Fault-Tolerant Quantum Computing Architecture with Globally Driven Atom Arrays — FTQC 架构
 - [量子] 2611.12833 GARI++: A General-Purpose Decoder for Quantum Error Correction — QEC 解码器
 - [量子] 2611.11157 Adaptive Quantum Metrology of Gravitational Waves — 引力波量子计量
+
+## 2026-11-12（抓取批次 WED 11 NOV 2026）
+- [§002强] 2611.12971 Time Running Backwards, and Where It Stops: Superoscillations of Proper Time and the Memory of the Environment — Proper Time 超振荡/时间之箭
+- [§002强] 2611.13981 Maximal Violation of Mermin Inequality for Commuting von Neumann Algebras and Multipartite Vacuum Entanglement in QFT — Mermin 违背+vN+QFT 真空纠缠
+- [§002] 2611.13085 Time Direction Entanglement Entropy of Free Fermion Ground States — 时间方向纠缠熵
+- [§002] 2611.13175 Quantized memory of measurement records near the light cone of quantum circuits — 光锥附近测量记录量子化记忆
+- [§002近邻] 2611.13110 Finite Measured Entropy Production Does Not Imply Finite Microscopic Irreversibility — 熵产生 vs 微观不可逆
+- [§002近邻] 2611.14295 Reading long-range information from a separable quantum record requires entangled measurements — 可分离记录读取需纠缠测量
+- [§002近邻] 2611.14422 The energetic cost of loading classical data in quantum computers — 经典数据载入能量代价
+- [§003近邻] 2611.13284 Closed layers in tensor-triangular geometry — 张量三角几何闭层
+- [§003近邻] 2611.13407 Pre-Model Structures on the Category of C_p-Sets — C_p-集预模型结构
+- [§04强] 2611.13822 R-linear unitary preservers of C*-algebras — C*-代数酉保持子
+- [§04近邻] 2611.13424 Ostrik's Theorem for Operator Algebras in a Unitary Tensor Category — 算子代数 Ostrik 定理
+- [§04近邻] 2611.13924 An Equivariant Coarse Green-Julg Theorem for Proper Actions — 等变粗 Green-Julg 定理
+- [能源高] 2611.13526 A new representation of effective diffusion in fluctuating periodic potentials through stochastic duality — 涨落周期势有效扩散/随机对偶
+- [能源高·PCH] 2611.13421 Boundary-controlled irreversible port-Hamiltonian modeling of tubular reactors — 不可逆 PCH 管式反应器
+- [能源高·乘性噪声] 2611.14259 Concentration-Based Probabilistic Reachability for Linear Systems under Multiplicative Uncertainty and Additive Noise — 乘性不确定+加性噪声可达性
+- [能源中·几何控制] 2611.13101 Quantum Control Geometry as a Metric of Chaos — 量子控制几何/混沌度量
+- [能源中·几何控制] 2611.13838 Towards funnel control on Riemannian manifolds — 黎曼流形漏斗控制
+- [AI·自改进] 2611.12988 Third Eye: Beyond Immediate Gains in Recursive Self-Improvement — 递归自改进超越即时收益
+- [AI·自改进] 2611.13524 The RSI Tax: When Recursive Self-Improvement Is Not Worth the Cost — RSI 成本税
+- [AI·可验证] 2611.13336 Veritas: A Verifier Generation Harness for Agent Tasks — 智能体验证器生成
+- [AI·形式化] 2611.13367 No finite rulebook can certify every safe program: an impossibility theorem for gatekeeping AI agents — 门禁不可能性定理
+- [AI·自主科研] 2611.13329 Agent-Guided Discovery of Exchange-Correlation Functionals with Physics-based Validation — 智能体引导 XC 泛函发现
+- [AI·信息几何] 2611.12998 Linear Probes to Bayesian Manifolds: Geometry of Arithmetic in LLMs — LLM 贝叶斯流形几何
+- [量子·FTQC] 2611.13301 A Compiler for Fault Tolerant Quantum Computing — 容错量子计算编译器
+- [量子·QEC] 2611.13098 Surface codes with coherent errors: optimal decoding and finite-size crossovers — 相干错误表面码最优解码
+- [量子·量子热机] 2611.14458 Quantum Thermal Transistor via Nonlinear Environmental Coupling — 量子热三极管

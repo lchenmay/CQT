@@ -1,0 +1,751 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage{../preamble-paper}
+\addbibresource{../ref.bib}
+\AtEveryBibitem{\clearfield{note}}
+\numberwithin{equation}{section}
+
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\textbf{齐次与仿射坐标下的椭圆曲线方程}}
+\fancyhead[LO]{\textit{Lecture}}
+
+\begin{document}
+
+\title{\textbf{齐次坐标与仿射坐标下的椭圆曲线方程}\\ \large 从射影闭包到 Weierstrass 形式的完整推导}
+\author{Lao Chen}
+\maketitle
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+\begin{abstract}
+本讲回答三个彼此纠缠的问题：为什么仿射平面上的一条三次曲线
+$y^{2}=x^{3}+Ax+B$ 在射影平面里必须写成 $Y^{2}Z=X^{3}+AXZ^{2}+BZ^{3}$；
+为什么它的无穷远点恰好只有一个，且必定是光滑的拐点；
+以及这个「左边二次、右边三次」的方程形式究竟是被什么逼出来的．
+推导沿三条线展开：\emph{(i)} 由仿射方程作齐次化得到射影闭包，并在局部坐标里算出无穷远点的重数与光滑性；
+\emph{(ii)} 反向从最一般的平面三次齐次方程出发，用 $\mathrm{PGL}_{3}$ 把曲线上一点及其切线归一化，逐项解出系数约束，得到长 Weierstrass 形式；
+\emph{(iii)} 在 $\operatorname{char}k\neq 2,3$ 下用配方与 Tschirnhaus 变换化到短形式，并推导判别式 $\Delta=-16(4A^{3}+27B^{2})$ 与 $j$ 不变量．
+最后给出两种坐标下的弦切群律、Weierstrass $\wp$ 函数的解析来源，以及常见误区对照表．
+\end{abstract}
+
+\section{引论：一个方程，两种坐标}
+
+设 $k$ 为域，$\bar k$ 为其代数闭包．除特别声明外，本讲假设 $\operatorname{char}k\neq 2,3$，
+并在 $\bar k$ 上讨论点集；所有系数属于 $k$．
+
+在仿射平面 $\mathbb A^{2}_{k}$ 里，椭圆曲线通常被直接写成
+\begin{equation}\label{eq:affine-short}
+E:\quad y^{2}=x^{3}+Ax+B,\qquad A,B\in k .
+\end{equation}
+在射影平面 $\mathbb P^{2}_{k}$ 里，同一个对象写成齐次三次方程
+\begin{equation}\label{eq:projective-short}
+\overline E:\quad Y^{2}Z=X^{3}+AXZ^{2}+BZ^{3}.
+\end{equation}
+这两个式子的差别不是「记号换了一遍」，而是三个实质性问题的答案：
+
+\begin{enumerate}
+\item \textbf{补点}．仿射平面是 $\mathbb P^{2}$ 的一个开图 $Z\neq 0$，式~\eqref{eq:affine-short} 只是式~\eqref{eq:projective-short} 在这个图上的\emph{去齐次化}．射影闭包补上无穷远直线 $Z=0$ 上的点，群律的单位元正诞生于此．
+\item \textbf{补次数}．$y^{2}$ 齐次化后变成 $Y^{2}Z$，而不是 $Y^{2}$；$B$ 变成 $BZ^{3}$．$Z$ 的幂次由「总次数必须为 $3$」唯一决定，这一步决定了无穷远点的个数．
+\item \textbf{形式的必然性}．为什么是 $y^{2}$ 对 $x^{3}$，而不是一般的十项三次多项式？答案是：光滑平面三次曲线上取一个拐点 $O$，把一个射影变换用到 $O$ 与其切线上，十项系数被几何条件压到只剩五个，剩下的自由度恰好还能把两个系数归一化为 $\pm1$．
+\end{enumerate}
+
+本讲的组织如下：\S\ref{sec:proj} 建立齐次坐标的代数；
+\S\ref{sec:homogenize} 完成从仿射到齐次的推导并分析无穷远点；
+\S\ref{sec:weierstrass-from-cubic} 是核心，从一般三次曲线反推出 Weierstrass 形式；
+\S\ref{sec:short-form} 化简到短形式并推导非奇异条件；
+\S\ref{sec:group-law} 在两种坐标下写群律；
+附录给出 $\wp$ 函数的解析来源与误区对照．
+
+标准参考可见 \cite{Hartshorne1977} 与 \cite{VakilRisingSea}；交换代数背景见 \cite{Eisenbud1995Commutative}．
+
+\section{射影平面与齐次坐标}\label{sec:proj}
+
+\begin{definition}[射影平面]
+$\mathbb P^{2}(k)=\bigl(k^{3}\setminus\{0\}\bigr)/k^{\times}$，
+即非零三元组按
+\[(X,Y,Z)\sim(\lambda X,\lambda Y,\lambda Z),\qquad \lambda\in k^{\times}\]
+分成的等价类，记作 $[X:Y:Z]$．$X,Y,Z$ 称为\emph{齐次坐标}．
+\end{definition}
+
+齐次坐标的关键在于：$[X:Y:Z]$ 不是三个数，而是一条过原点的直线；
+任何只依赖「比值」的量才在 $\mathbb P^{2}$ 上有意义．
+这立刻给出仿射图与无穷远直线．
+
+\begin{definition}[标准仿射图与无穷远直线]
+令 $U_{Z}=\{[X:Y:Z]\mid Z\neq 0\}$，$L_{\infty}=\{[X:Y:Z]\mid Z=0\}$，则
+\[
+\varphi_{Z}:U_{Z}\xrightarrow{\ \sim\ }\mathbb A^{2}(k),\qquad
+[X:Y:Z]\longmapsto \left(\frac{X}{Z},\frac{Y}{Z}\right),
+\]
+其逆为 $(x,y)\mapsto[x:y:1]$；而 $\mathbb P^{2}=U_{Z}\sqcup L_{\infty}$，
+且 $L_{\infty}\cong\mathbb P^{1}(k)$．
+\end{definition}
+
+在 $U_{Z}$ 上令 $x=X/Z$、$y=Y/Z$，则 $Z=1$ 是把等价类代表元固定下来的规范选择．
+$L_{\infty}$ 上的点 $[a:b:0]$ 记录的是仿射直线的「方向」：
+斜率 $b/a$ 的平行直线族在射影闭包里都交于同一个无穷远点 $[a:b:0]$．
+这一句正是后面「竖直线与曲线交于 $O$」的几何根源．
+
+\begin{definition}[齐次多项式与射影曲线]
+若 $F\in k[X,Y,Z]$ 是 $d$ 次齐次多项式，即
+$F(\lambda X,\lambda Y,\lambda Z)=\lambda^{d}F(X,Y,Z)$，
+则 $F$ 的零点条件 $F=0$ 与代表元选取无关，从而
+$V(F)=\{[X:Y:Z]\in\mathbb P^{2}\mid F(X,Y,Z)=0\}$ 良定义．
+\end{definition}
+
+连接两种坐标的两个算子是本讲全部计算的基础．
+
+\begin{definition}[齐次化与去齐次化]
+设 $f\in k[x,y]$，$\deg f=d$，写 $f=\sum_{i+j\leq d}c_{ij}x^{i}y^{j}$．定义
+\begin{align}
+\text{齐次化}\quad & f^{h}(X,Y,Z)=Z^{d}\,f\!\left(\frac{X}{Z},\frac{Y}{Z}\right)
+   =\sum_{i+j\leq d}c_{ij}\,X^{i}Y^{j}Z^{\,d-i-j},\label{eq:homogenize}\\[2mm]
+\text{去齐次化}\quad & F^{\flat}(x,y)=F(x,y,1).\label{eq:dehomogenize}
+\end{align}
+\end{definition}
+
+由此得到三条基本性质，后面反复使用：
+
+\begin{enumerate}
+\item $(f^{h})^{\flat}=f$，即齐次化后回到 $Z=1$ 图，不丢失仿射信息；
+\item $f^{h}$ 的每一项都恰为 $d$ 次，$Z$ 的指数 $=d-$（该项仿射次数）；
+\item 一般有 $(F^{\flat})^{h}\neq F$：若 $F=Z\cdot G$，则 $F^{\flat}=0$ 而 $F\neq0$．
+   换言之 $F=0$ 可能额外含有整条无穷远直线作为分量．
+\end{enumerate}
+
+第 3 条说明：给定仿射曲线，其\emph{射影闭包}应取 $V(f^{h})$，
+即「补上必要的无穷远点」，而不是任取一个去齐次化后等于 $f$ 的齐次方程．
+由 Hilbert 零点定理，$V(f^{h})$ 正是仿射簇 $V(f)\subset U_{Z}$ 在 $\mathbb P^{2}$ 中的 Zariski 闭包．
+
+\begin{framed}
+\noindent\textbf{齐次化的操作口诀：}把 $f(x,y)=0$ 中每个 $x$ 换成 $X/Z$、每个 $y$ 换成 $Y/Z$，
+再整体乘 $Z^{d}$（$d=\deg f$）清分母．$Z$ 的幂次不是凑出来的，而是「把缺失的次数补齐」．
+\end{framed}
+
+\section{从仿射方程到齐次方程}\label{sec:homogenize}
+
+\subsection{逐项补次数}
+
+取 $f(x,y)=y^{2}-x^{3}-Ax-B$，最高次数 $d=3$．代入式~\eqref{eq:homogenize}：
+\begin{equation}\label{eq:homogenize-calc}
+\begin{aligned}
+f^{h}(X,Y,Z)
+ &=Z^{3}\left[\left(\frac{Y}{Z}\right)^{2}
+   -\left(\frac{X}{Z}\right)^{3}
+   -A\frac{X}{Z}-B\right]\\
+ &=Y^{2}Z-X^{3}-AXZ^{2}-BZ^{3}.
+\end{aligned}
+\end{equation}
+逐项核对 $Z$ 的指数：
+
+\begin{center}
+\begin{tabular}{c|c|c|c}
+\hline
+仿射项 & 仿射次数 & 齐次化后 & 所补 $Z$ 的次数\\
+\hline
+$y^{2}$ & $2$ & $Y^{2}Z$ & $3-2=1$\\
+$-x^{3}$ & $3$ & $-X^{3}$ & $3-3=0$\\
+$-Ax$ & $1$ & $-AXZ^{2}$ & $3-1=2$\\
+$-B$ & $0$ & $-BZ^{3}$ & $3-0=3$\\
+\hline
+\end{tabular}
+\end{center}
+
+于是式~\eqref{eq:projective-short} 成立：
+\begin{equation}\label{eq:proj-F}
+F(X,Y,Z)=Y^{2}Z-X^{3}-AXZ^{2}-BZ^{3}=0 .
+\end{equation}
+在 $Z=1$ 上 $F(x,y,1)=y^{2}-x^{3}-Ax-B=f(x,y)$，与式~\eqref{eq:affine-short} 完全一致．
+注意 $F$ \emph{不含} $Z^{2}$ 因子：若误把 $y^{2}=x^{3}+Ax+B$ 直接写成 $Y^{2}=X^{3}+AXZ^{2}+BZ^{3}$，
+左边是 $2$ 次、右边是 $3$ 次，方程不再齐次，$F(\lambda X,\lambda Y,\lambda Z)=0$ 不成立，
+零点集也就不是 $\mathbb P^{2}$ 的子集．这是最常见的错误．
+
+\subsection{无穷远点只有一个}
+
+把 $Z=0$ 代入式~\eqref{eq:proj-F}：
+\[
+F(X,Y,0)=-X^{3}=0\ \Longrightarrow\ X=0 .
+\]
+在 $\mathbb P^{2}$ 中 $(X,Y,Z)\neq(0,0,0)$，故 $Y\neq0$，等价类唯一：
+\begin{equation}\label{eq:O}
+O=[0:1:0].
+\end{equation}
+也就是说 $\overline E\cap L_{\infty}=\{O\}$，且 $F(X,Y,0)=-X^{3}$ 说明 $X=0$ 是\emph{三重}零点：
+无穷远直线与曲线在 $O$ 处的交重数为 $3$．
+
+这个「唯一且三重」不是巧合，而是由 $y^{2}$ 对 $x^{3}$ 的次数差决定的．
+一般地，若仿射方程为 $y^{2}=g(x)$、$\deg g=3$，齐次化后 $Z=0$ 给出 $-X^{3}=0$；
+若 $\deg g=4$（如 $y^{2}=$ 四次多项式），齐次化需要 $Z^{4}$，得 $Y^{2}Z^{2}-X^{4}=0$，
+$Z=0$ 上虽也只有 $X=0$ 这一点，但此时 $F_{X}(O)=F_{Y}(O)=F_{Z}(O)=0$，$O$ 变成奇点，
+普通 $\mathbb P^{2}$ 里的这一模型必须另行光滑化（相应的自然嵌入是加权射影平面，见附录）．
+
+\subsection{局部坐标：$O$ 是拐点}\label{sec:inflection}
+
+要真正看清 $O$ 附近的几何，必须换到 $Y\neq0$ 的仿射图（因为 $O$ 处 $Y=1\neq0$）．
+令
+\[
+u=\frac{X}{Y},\qquad v=\frac{Z}{Y},
+\]
+则 $O$ 对应 $(u,v)=(0,0)$，无穷远直线 $Z=0$ 对应 $v=0$．把式~\eqref{eq:proj-F} 除以 $Y^{3}$：
+\begin{equation}\label{eq:local-F}
+\widetilde F(u,v)=F(u,1,v)=v-u^{3}-A\,u\,v^{2}-B\,v^{3}=0 .
+\end{equation}
+
+由此可读出三点：
+
+\begin{enumerate}
+\item \textbf{切线}．在 $(0,0)$ 处的一次项是 $v$，故切空间为 $v=0$，即切线就是无穷远直线 $Z=0$．
+\item \textbf{交重数}．沿切线 $v=0$ 代入式~\eqref{eq:local-F} 得 $-u^{3}=0$，
+   $u=0$ 为三重零点．按定义，光滑点处切线与曲线的交重数 $\geq3$ 即为\emph{拐点}，
+   故 $O$ 是 $\overline E$ 的拐点．
+\item \textbf{局部参数与光滑性}．由隐函数定理，$\partial\widetilde F/\partial v(0,0)=1\neq0$，
+   故 $v$ 可解为 $u$ 的解析函数．迭代式~\eqref{eq:local-F} 的
+   $v=u^{3}+Auv^{2}+Bv^{3}$：先取 $v\approx u^{3}$，回代得
+   \begin{equation}\label{eq:local-expand}
+   v=u^{3}+A\,u^{7}+O(u^{11}),
+   \end{equation}
+   即 $u$ 是 $O$ 附近的局部参数，$v/u^{3}\to1$．
+\end{enumerate}
+
+式~\eqref{eq:local-expand} 也解释了实图像：当 $x\to\pm\infty$ 时
+$y\sim\pm x^{3/2}$，两个分支在射影闭包里并没有「跑到无穷远的两个不同方向」，
+而是共同收敛到 $v\sim u^{3}>0$ 的同一条解析弧上，汇成单点 $O$．
+
+\subsection{无穷远点的光滑性}
+
+直接算式~\eqref{eq:proj-F} 的偏导：
+\begin{equation}\label{eq:partials}
+F_{X}=-3X^{2}-AZ^{2},\qquad
+F_{Y}=2YZ,\qquad
+F_{Z}=Y^{2}-2AXZ-3BZ^{2}.
+\end{equation}
+在 $O=[0:1:0]$ 处
+\[
+F_{X}(O)=0,\qquad F_{Y}(O)=0,\qquad F_{Z}(O)=1\neq0 ,
+\]
+故梯度非零，$O$ 是光滑点．
+又因为 $F_{Z}(O)=1$ 与 $A,B$ 无关，得到一条重要结论：
+
+\begin{framed}
+\noindent\textbf{结论}．对任意 $A,B\in k$，式~\eqref{eq:proj-F} 的无穷远点 $O$
+总是光滑的（在 $\operatorname{char}k\neq 2,3$ 下）．因此 $\overline E$ 是否奇异，
+只取决于仿射图 $Z\neq0$ 内是否存在奇异点，即只取决于 $A,B$．
+这把「判别式」的全部计算压缩回一个三次多项式的重根问题（见 \S\ref{sec:singular}）．
+\end{framed}
+
+顺带注意欧拉恒等式 $XF_{X}+YF_{Y}+ZF_{Z}=3F$：
+在曲线的任一点上 $F=0$，故梯度 $(F_{X},F_{Y},F_{Z})$ 与 $(X,Y,Z)$ 满足线性关系；
+在 $O$ 处该式化为 $F_{Y}(O)=0$，与上式一致．
+
+\subsection{为什么必须齐次化：Bézout 的第三交点}
+
+在 $\mathbb P^{2}$ 中，次数 $d$ 与 $e$ 的两条无公共分量的曲线必相交于恰好 $de$ 个点（计重数，在 $\bar k$ 上）．
+三次曲线与直线应交 $3$ 点．在仿射平面里取竖直线 $x=c$，代入式~\eqref{eq:affine-short} 得
+$y^{2}=c^{3}+Ac+B$，只有两个解 $(c,\pm y_{0})$，第三个交点不见了．
+
+在齐次坐标下竖直线是 $X-cZ=0$．把 $X=cZ$ 代入式~\eqref{eq:proj-F}：
+\[
+Y^{2}Z-c^{3}Z^{3}-AcZ^{3}-BZ^{3}=Z\bigl(Y^{2}-(c^{3}+Ac+B)Z^{2}\bigr)=0 .
+\]
+两个因子给出全部三个交点：
+
+\begin{center}
+\begin{tabular}{c|c|c}
+\hline
+因子 & 解 & 点\\
+\hline
+$Z=0$ & $X=0,\ Y\neq0$ & $O=[0:1:0]$\\
+$Y^{2}=g(c)Z^{2}$ & $Y=\pm\sqrt{g(c)}\,Z$ & $(c,\pm\sqrt{g(c)})\in U_{Z}$\\
+\hline
+\end{tabular}
+\end{center}
+
+即\emph{每一条}竖直线的第三交点都是同一个 $O$．
+仿射平面丢掉的正是这个点；补上它以后，
+「$P$ 与 $-P$ 的连线过 $O$」才使 $P+(-P)=O$ 成为群律的自洽定义
+（\S\ref{sec:group-law}）．
+
+\section{反向推导：为什么方程必须是 Weierstrass 形式}\label{sec:weierstrass-from-cubic}
+
+上一节是「给定仿射方程，补成射影曲线」．现在反过来问一个更根本的问题：
+$\mathbb P^{2}$ 里最一般的三次曲线有十个系数，为什么经过坐标选取后，
+描述椭圆曲线的方程总能化成式~\eqref{eq:proj-F} 那种只剩五个系数的形状？
+本节把这一步的每一步约束都显式解出来．
+
+\subsection{最一般的平面三次齐次方程}
+
+三次齐次单项式 $X^{i}Y^{j}Z^{l}$（$i+j+l=3$）共有 $\binom{5}{3}=10$ 个，故
+\begin{equation}\label{eq:general-cubic}
+\begin{aligned}
+F={}&c_{1}X^{3}+c_{2}X^{2}Y+c_{3}X^{2}Z+c_{4}XY^{2}+c_{5}XYZ+c_{6}XZ^{2}\\
+   &+\,c_{7}Y^{3}+c_{8}Y^{2}Z+c_{9}YZ^{2}+c_{10}Z^{3}.
+\end{aligned}
+\end{equation}
+$F$ 与 $\lambda F$ 定义同一曲线，故 $F$ 有 $9$ 个射影参数；
+$\mathrm{PGL}_{3}(k)$（$3\times3$ 矩阵模掉标量，$9-1=8$ 维）作用在坐标上，
+于是光滑三次曲线的同构类只剩 $9-8=1$ 个本质参数——这就是后来的 $j$ 不变量．
+下面的推导可以看作把这个 $8$ 维对称性\emph{逐块用掉}的具体过程．
+
+\subsection{选点与归一化：拐点的存在性}
+
+设 $E=V(F)\subset\mathbb P^{2}_{\bar k}$ 为光滑平面三次曲线．取 $O\in E(\bar k)$ 为一个\emph{拐点}：
+即 $E$ 在 $O$ 处的切线与 $E$ 的交重数为 $3$．这样的点确实存在：
+拐点是 $E$ 与其 Hessian 曲线 $V(\det(F_{ij}))$ 的交点，
+后者也是三次，由 Bézout 定理二者在 $\bar k$ 上相交 $3\times3=9$ 个点（计重数，$\operatorname{char}k\neq2,3$）．
+
+用一次射影变换把
+\[
+O\longmapsto[0:1:0],\qquad T_{O}E\longmapsto\{Z=0\}.
+\]
+「把一点送到指定点」用掉 $2$ 个条件，「把过该点的一条直线送到指定直线」再用掉 $1$ 个条件，
+合计 $3$ 个，远小于 $\mathrm{PGL}_{3}$ 的 $8$ 维，故总能做到；
+剩余 $5$ 维稳定子群在后面还用来消项与归一化．
+
+\subsection{三条几何条件解出系数}
+
+以下都在 $O=[0:1:0]$（即 $X=0,\ Z=0,\ Y=1$）处求值．
+
+\textbf{条件一：$O\in E$．}
+\[
+F(0,1,0)=c_{7}\ \Longrightarrow\ \boxed{c_{7}=0}.
+\]
+其余九项都含 $X$ 或 $Z$，在 $O$ 处为零．
+
+\textbf{条件二：切线为 $Z=0$．}
+射影曲线在 $P$ 处的切线方程为
+$F_{X}(P)X+F_{Y}(P)Y+F_{Z}(P)Z=0$（由欧拉恒等式保证它过 $P$）．
+对式~\eqref{eq:general-cubic} 求偏导并在 $O$ 处取值：
+\begin{align}
+F_{X}(O)&=c_{4} &&(\text{仅 }c_{4}XY^{2}\text{ 对 }X\text{ 求导后剩 }c_{4}Y^{2}),\\
+F_{Y}(O)&=3c_{7}Y^{2}=0,\\
+F_{Z}(O)&=c_{8} &&(\text{仅 }c_{8}Y^{2}Z\text{ 对 }Z\text{ 求导后剩 }c_{8}Y^{2}).
+\end{align}
+故切线为 $c_{4}X+c_{8}Z=0$．要求它等于 $Z=0$，得到
+\[
+\boxed{c_{4}=0,\qquad c_{8}\neq0}.
+\]
+注意 $c_{8}\neq0$ 与光滑性自动吻合：$(F_{X},F_{Y},F_{Z})(O)=(0,0,c_{8})\neq(0,0,0)$．
+换言之，只要 $O$ 是光滑点且切线已取为 $Z=0$，$Y^{2}Z$ 这一项就必然出现且系数非零——
+这正是 Weierstrass 方程里 $y^{2}$ 的来源．
+
+\textbf{条件三：$O$ 是拐点．}
+把 $Z=0$ 代入式~\eqref{eq:general-cubic}，用 $c_{7}=c_{4}=0$：
+\begin{equation}\label{eq:F-on-infty}
+F(X,Y,0)=c_{1}X^{3}+c_{2}X^{2}Y=X^{2}\,(c_{1}X+c_{2}Y).
+\end{equation}
+$O$ 对应 $X=0$，其重数至少为 $2$．若 $c_{2}\neq0$，则还存在第二个交点
+$[-c_{2}:c_{1}:0]\neq O$，切线只与曲线二重相交，$O$ 不是拐点．
+故拐点条件等价于
+\[
+\boxed{c_{2}=0,\qquad c_{1}\neq0}.
+\]
+此时 $F(X,Y,0)=c_{1}X^{3}$，与 \S\ref{sec:inflection} 算出的 $-X^{3}=0$ 三重零点完全一致．
+
+三条约束后，十个系数只剩七项：
+\begin{equation}\label{eq:F-seven}
+F=c_{1}X^{3}+c_{3}X^{2}Z+c_{5}XYZ+c_{6}XZ^{2}+c_{8}Y^{2}Z+c_{9}YZ^{2}+c_{10}Z^{3},
+\qquad c_{1}c_{8}\neq0 .
+\end{equation}
+
+\begin{framed}
+\noindent\textbf{至此已经看清「为什么是 $y^{2}$ 对 $x^{3}$」：}
+\begin{itemize}
+\item $c_{7}=0$（点在曲线上）杀掉了 $Y^{3}$；
+\item $c_{4}=0$、$c_{8}\neq0$（切线 $Z=0$）杀掉 $XY^{2}$ 而保住 $Y^{2}Z$，去齐次化后就是 $y^{2}$；
+\item $c_{2}=0$、$c_{1}\neq0$（拐点）杀掉 $X^{2}Y$ 而保住 $X^{3}$，去齐次化后就是 $x^{3}$．
+\end{itemize}
+剩下的 $X^{2}Z,XYZ,XZ^{2},YZ^{2},Z^{3}$ 恰好给出 $a_{1},\dots,a_{6}$ 中的五项．
+\end{framed}
+
+\subsection{归一化：把两个系数调成 $\pm1$}
+
+现在用稳定子群里的一个对角缩放
+\[
+X=X',\qquad Y=Y',\qquad Z=qZ',\qquad q\in k^{\times},
+\]
+它保持 $O=[0:1:0]$ 与直线 $Z=0$ 不变．代入式~\eqref{eq:F-seven}：
+\begin{equation}\label{eq:F-q}
+F=c_{1}X'^{3}+c_{3}q\,X'^{2}Z'+c_{5}q\,X'Y'Z'+c_{6}q^{2}X'Z'^{2}
+  +c_{8}q\,Y'^{2}Z'+c_{9}q^{2}Y'Z'^{2}+c_{10}q^{3}Z'^{3}.
+\end{equation}
+取 $q=-c_{1}/c_{8}$（可行，因 $c_{8}\neq0$），则 $X'^{3}$ 系数为 $c_{1}$、$Y'^{2}Z'$ 系数为 $-c_{1}$．
+再把方程整体除以 $c_{1}$，并移项，得
+\begin{equation}\label{eq:long-weierstrass-hom}
+\boxed{\;Y^{2}Z+a_{1}XYZ+a_{3}YZ^{2}=X^{3}+a_{2}X^{2}Z+a_{4}XZ^{2}+a_{6}Z^{3}\;}
+\end{equation}
+其中
+\[
+a_{1}=-\frac{c_{5}q}{c_{1}},\quad
+a_{2}=\frac{c_{3}q}{c_{1}},\quad
+a_{3}=-\frac{c_{9}q^{2}}{c_{1}},\quad
+a_{4}=\frac{c_{6}q^{2}}{c_{1}},\quad
+a_{6}=\frac{c_{10}q^{3}}{c_{1}} .
+\]
+下标 $i$ 不是项的次数，而是\emph{权重}标记，这是 Weierstrass 约定的来源：
+在变换 $X=u^{2}X',Y=u^{3}Y',Z=Z'$ 下 $a_{i}$ 按 $a_{i}\mapsto a_{i}/u^{i}$ 变化，
+故 $a_{1},\dots,a_{6}$ 并非同一量纲的系数；这一权重结构在附录的加权射影坐标里会再次出现．
+
+在 $Z=1$ 图去齐次化，令 $x=X/Z,\ y=Y/Z$：
+\begin{equation}\label{eq:long-weierstrass}
+y^{2}+a_{1}xy+a_{3}y=x^{3}+a_{2}x^{2}+a_{4}x+a_{6},
+\end{equation}
+即\emph{长 Weierstrass 方程}．
+把 $a_{1}=a_{2}=a_{3}=0,\ a_{4}=A,\ a_{6}=B$ 代入，
+式~\eqref{eq:long-weierstrass-hom} 正是 \S\ref{sec:homogenize} 的式~\eqref{eq:proj-F}
+（注意 $a_{4}=A$ 对应 $AXZ^{2}$ 移到左边是 $-AXZ^{2}$，符号与 $F=Y^{2}Z-X^{3}-AXZ^{2}-BZ^{3}$ 一致）．
+两条推导路线在此闭合．
+
+\subsection{自由度核对}
+
+\begin{center}
+\begin{tabular}{c|c}
+\hline
+步骤 & 剩余系数个数\\
+\hline
+一般三次齐次式 & $10$\\
+模掉整体标量 & $9$\\
+$O\in E$（$c_{7}=0$） & $8$\\
+切线 $Z=0$（$c_{4}=0$） & $7$\\
+$O$ 为拐点（$c_{2}=0$） & $6$\\
+坐标缩放 $Z\mapsto qZ$ 固定 $c_{1}/c_{8}$，再用方程标量归一 & $5$\\
+\hline
+\end{tabular}
+\end{center}
+
+剩下 $5$ 个参数 $a_{1},\dots,a_{6}$（其中 $a_{5}=0$ 是约定，故五个），
+而保持 Weierstrass 形式的坐标变换
+\[
+x=u^{2}x'+r,\qquad y=u^{3}y'+u^{2}sx'+t,\qquad u\in k^{\times},\ r,s,t\in k
+\]
+构成一个 $4$ 参数群；商掉它之后只剩 $1$ 维模空间，由 $j$ 不变量参数化．
+这与开头 $9-8=1$ 的维数估计一致．
+
+\section{短 Weierstrass 形式、判别式与非奇异性}\label{sec:short-form}
+
+\subsection{配方消去 $y$ 的一次项（$\operatorname{char}k\neq2$）}
+
+从式~\eqref{eq:long-weierstrass} 出发，把左边配成完全平方：
+\[
+y^{2}+(a_{1}x+a_{3})y
+=\left(y+\frac{a_{1}x+a_{3}}{2}\right)^{2}-\frac{(a_{1}x+a_{3})^{2}}{4}.
+\]
+作变换 $Y:=y+\dfrac{a_{1}x+a_{3}}{2}$（齐次写法 $Y\mapsto Y-\tfrac{1}{2}(a_{1}X+a_{3}Z)$，
+保持 $O$ 与 $Z=0$），得
+\begin{equation}\label{eq:after-square}
+Y^{2}=x^{3}+A_{2}x^{2}+A_{4}x+A_{6},
+\end{equation}
+其中
+\begin{align}
+A_{2}&=a_{2}+\frac{a_{1}^{2}}{4}, &
+A_{4}&=a_{4}+\frac{a_{1}a_{3}}{2}, &
+A_{6}&=a_{6}+\frac{a_{3}^{2}}{4}.
+\end{align}
+引入标准记号
+\begin{equation}\label{eq:b-invariants}
+b_{2}=a_{1}^{2}+4a_{2},\qquad b_{4}=2a_{4}+a_{1}a_{3},\qquad
+b_{6}=a_{3}^{2}+4a_{6},
+\end{equation}
+则 $A_{2}=b_{2}/4,\ A_{4}=b_{4}/2,\ A_{6}=b_{6}/4$．
+
+\subsection{Tschirnhaus 变换消去 $x^{2}$ 项（$\operatorname{char}k\neq3$）}
+
+令 $c=A_{2}/3=b_{2}/12$，作 $x=X-c$．把式~\eqref{eq:after-square} 右边逐项展开：
+\begin{align*}
+(X-c)^{3}+A_{2}(X-c)^{2}+A_{4}(X-c)+A_{6}
+={}&X^{3}+(-3c+A_{2})X^{2}\\
+&+\left(3c^{2}-2A_{2}c+A_{4}\right)X\\
+&+\left(-c^{3}+A_{2}c^{2}-A_{4}c+A_{6}\right).
+\end{align*}
+代入 $c=A_{2}/3$：
+\begin{itemize}
+\item $X^{2}$ 系数 $-3c+A_{2}=-A_{2}+A_{2}=0$；
+\item $X$ 系数 $3\dfrac{A_{2}^{2}}{9}-\dfrac{2A_{2}^{2}}{3}+A_{4}=A_{4}-\dfrac{A_{2}^{2}}{3}$；
+\item 常数项 $-\dfrac{A_{2}^{3}}{27}+\dfrac{A_{2}^{3}}{9}-\dfrac{A_{2}A_{4}}{3}+A_{6}
+   =\dfrac{2A_{2}^{3}}{27}-\dfrac{A_{2}A_{4}}{3}+A_{6}$．
+\end{itemize}
+于是
+\begin{equation}\label{eq:short-form-derived}
+Y^{2}=X^{3}+pX+q,\qquad
+p=A_{4}-\frac{A_{2}^{2}}{3},\qquad
+q=A_{6}-\frac{A_{2}A_{4}}{3}+\frac{2A_{2}^{3}}{27}.
+\end{equation}
+把式~\eqref{eq:b-invariants} 代入，可改写为
+\begin{align}
+p&=\frac{b_{4}}{2}-\frac{b_{2}^{2}}{48}=-\frac{c_{4}}{48},\\
+q&=\frac{b_{6}}{4}-\frac{b_{2}b_{4}}{24}+\frac{b_{2}^{3}}{864}=-\frac{c_{6}}{864},
+\end{align}
+其中
+\begin{equation}\label{eq:c-invariants}
+c_{4}=b_{2}^{2}-24b_{4},\qquad
+c_{6}=-b_{2}^{3}+36b_{2}b_{4}-216b_{6}.
+\end{equation}
+因此令 $A=-c_{4}/48$、$B=-c_{6}/864$，就回到式~\eqref{eq:affine-short}：
+\[
+y^{2}=x^{3}+Ax+B .
+\]
+注意 $\operatorname{char}k=2$ 时 $1/2$ 不存在、$\operatorname{char}k=3$ 时 $1/3$ 不存在，
+两步变换都失效——这正是一般情形必须保留长形式~\eqref{eq:long-weierstrass} 的原因．
+
+\subsection{非奇异性条件的推导}\label{sec:singular}
+
+设 $f(x,y)=y^{2}-x^{3}-Ax-B$．仿射点 $P=(x,y)$ 是奇异点当且仅当
+\[
+f(P)=0,\qquad f_{x}(P)=-3x^{2}-A=0,\qquad f_{y}(P)=2y=0 .
+\]
+由 $\operatorname{char}k\neq2$ 得 $y=0$；由 $\operatorname{char}k\neq3$ 得 $x^{2}=-A/3$．
+把 $y=0$ 代入 $f=0$ 得 $-x^{3}-Ax-B=0$，即
+\[
+-x\,(x^{2}+A)=B\ \Longrightarrow\ -x\left(-\frac{A}{3}+A\right)=B
+\ \Longrightarrow\ -\frac{2A}{3}x=B .
+\]
+若 $A\neq0$，则 $x=-\dfrac{3B}{2A}$，回代 $x^{2}=-A/3$：
+\[
+\frac{9B^{2}}{4A^{2}}=-\frac{A}{3}\ \Longrightarrow\ 27B^{2}=-4A^{3}
+\ \Longrightarrow\ 4A^{3}+27B^{2}=0 .
+\]
+若 $A=0$，则 $f_{x}=-3x^{2}=0\Rightarrow x=0$，再由 $f=0$ 得 $B=0$，
+同样满足 $4A^{3}+27B^{2}=0$．
+反过来，若 $4A^{3}+27B^{2}=0$，则 $g(x)=x^{3}+Ax+B$ 有重根 $x_{0}$
+（$g(x_{0})=g'(x_{0})=3x_{0}^{2}+A=0$），点 $(x_{0},0)$ 满足上面三个方程，确为奇异点．故
+
+\begin{equation}\label{eq:smooth-condition}
+\boxed{\;E\text{ 光滑}\iff 4A^{3}+27B^{2}\neq0\;}
+\end{equation}
+
+等价的判别式语言：三次多项式 $x^{3}+px+q$ 的判别式为
+$\operatorname{disc}(g)=-4A^{3}-27B^{2}$，而曲线的判别式定义为
+\begin{equation}\label{eq:Delta-short}
+\Delta_{E}=16\operatorname{disc}(g)=-16\bigl(4A^{3}+27B^{2}\bigr).
+\end{equation}
+因子 $16$ 来自一般 Weierstrass 判别式公式
+\begin{equation}\label{eq:Delta-general}
+\Delta=-b_{2}^{2}b_{8}-8b_{4}^{3}-27b_{6}^{2}+9b_{2}b_{4}b_{6},
+\end{equation}
+其中
+\begin{equation}\label{eq:b8}
+b_{8}=a_{1}^{2}a_{6}+4a_{2}a_{6}-a_{1}a_{3}a_{4}+a_{2}a_{3}^{2}-a_{4}^{2}.
+\end{equation}
+对短形式 $a_{1}=a_{2}=a_{3}=0,\ a_{4}=A,\ a_{6}=B$ 有
+$b_{2}=0,\ b_{4}=2A,\ b_{6}=4B,\ b_{8}=-A^{2}$，代入式~\eqref{eq:Delta-general}：
+\[
+\Delta=-8(2A)^{3}-27(4B)^{2}=-64A^{3}-432B^{2}=-16(4A^{3}+27B^{2}),
+\]
+与式~\eqref{eq:Delta-short} 相符．再由 $c_{4}=-48A$、$c_{6}=-864B$ 得
+\begin{equation}\label{eq:j-invariant}
+j=\frac{c_{4}^{3}}{\Delta}
+ =\frac{(-48A)^{3}}{-16(4A^{3}+27B^{2})}
+ =1728\cdot\frac{4A^{3}}{4A^{3}+27B^{2}} .
+\end{equation}
+
+\subsection{奇异情形的几何}
+
+当 $4A^{3}+27B^{2}=0$ 时 $g(x)=x^{3}+Ax+B$ 有重根：
+
+\begin{enumerate}
+\item $A=B=0$：$g=x^{3}$ 为三重根，曲线 $y^{2}=x^{3}$ 在原点是\emph{尖点}（cusp），
+   两条切线重合；
+\item $A\neq0$：$g=(x-\alpha)^{2}(x+2\alpha)$（三根之和为 $0$），
+   曲线在 $(\alpha,0)$ 有\emph{结点}（node），两条不同切线斜率为 $\pm\sqrt{3\alpha}$．
+\end{enumerate}
+
+两种情形下曲线都可用一个参数 $t$ 有理参数化（例如 $y^{2}=x^{3}$ 取 $x=t^{2},y=t^{3}$），
+几何亏格降为 $0$，不再是椭圆曲线．所以 $\Delta\neq0$ 不是技术性假设，而是定义的一部分：
+\emph{椭圆曲线 = 光滑射影曲线，亏格 $1$，带一个指定的 $k$-有理点 $O$}．
+由 \S\ref{sec:homogenize} 的结论 $F_{Z}(O)=1\neq0$，$O$ 恒光滑，
+因此式~\eqref{eq:Delta-short} 已经覆盖了全部可能的奇点——
+判别式只需在仿射图里算，这正是齐次化分析的回报．
+
+\section{两种坐标下的群律}\label{sec:group-law}
+
+\subsection{射影版本：Bézout 三点定则}
+
+在 $\mathbb P^{2}$ 中取任意直线 $L:\ \alpha X+\beta Y+\gamma Z=0$．
+由 Bézout 定理，$L$ 与三次曲线 $\overline E$ 在 $\bar k$ 上恰有三个交点（计重数），记为 $P,Q,R$．
+取 $O=[0:1:0]$ 作单位元，定义
+\[
+P\oplus Q = -R ,
+\]
+其中 $-R$ 是 $R$ 关于 $x$ 轴的对称点（短形式下 $-(x,y)=(x,-y)$）．
+三条公理由几何直接给出：
+
+\begin{itemize}
+\item \textbf{单位元}：$P$ 与 $O$ 的连线是竖直线，第三交点为 $-P$，故 $P\oplus O=-(-P)=P$；
+\item \textbf{逆元}：$P$ 与 $-P$ 连线为竖直线，第三交点为 $O$，故 $P\oplus(-P)=-O=O$（$O$ 是拐点，切线 $Z=0$ 与曲线三重相交，故 $-O=O$）；
+\item \textbf{交换律}：$P,Q$ 在三点组中对称．
+\end{itemize}
+结合律不能由 Bézout 直接读出，标准证明走除子与 Riemann--Roch：
+$P\oplus Q\oplus R=O$ 当且仅当除子 $(P)+(Q)+(R)-3(O)$ 为主除子．
+这里不展开，但要强调：\emph{只有在射影闭包里三点定则才完整}，仿射平面里竖直线只交两点，
+群律无法自洽——这是 \S\ref{sec:homogenize} 结论的直接用途．
+
+\subsection{仿射版本：弦切公式的推导}
+
+设 $P=(x_{1},y_{1})$、$Q=(x_{2},y_{2})$ 在 $E:y^{2}=g(x)=x^{3}+Ax+B$ 上，
+过二者的直线写成 $y=\lambda x+\nu$，其中
+\begin{equation}\label{eq:lambda}
+\lambda=
+\begin{cases}
+\dfrac{y_{2}-y_{1}}{x_{2}-x_{1}}, & P\neq Q,\ x_{1}\neq x_{2},\\[3mm]
+\dfrac{3x_{1}^{2}+A}{2y_{1}}=\dfrac{g'(x_{1})}{2y_{1}}, & P=Q\ (\text{切线}),
+\end{cases}
+\qquad \nu=y_{1}-\lambda x_{1}.
+\end{equation}
+把直线代入曲线：
+\[
+(\lambda x+\nu)^{2}=x^{3}+Ax+B
+\ \Longleftrightarrow\
+x^{3}-\lambda^{2}x^{2}+(A-2\lambda\nu)x+(B-\nu^{2})=0 .
+\]
+这是关于 $x$ 的三次方程，三根正是 $x_{1},x_{2},x_{3}$（$x_{3}$ 为第三交点的横坐标）．
+由 Vieta 公式，二次项系数给出
+\[
+x_{1}+x_{2}+x_{3}=\lambda^{2}\ \Longrightarrow\ x_{3}=\lambda^{2}-x_{1}-x_{2}.
+\]
+第三交点为 $R=(x_{3},\lambda x_{3}+\nu)$，故
+\begin{equation}\label{eq:addition-affine}
+P\oplus Q=(x_{3},\,-(\lambda x_{3}+\nu))
+        =\bigl(\lambda^{2}-x_{1}-x_{2},\ \lambda(x_{1}-x_{3})-y_{1}\bigr).
+\end{equation}
+当 $x_{1}=x_{2}$ 且 $y_{2}=-y_{1}$ 时直线竖直，$\lambda$ 无定义，
+对应「第三交点在无穷远」，即 $P\oplus Q=O$——
+在仿射公式里这是一个\emph{需要特判的例外}，而在齐次坐标里它只是普通的三点定则．
+
+\subsection{齐次版本：把例外吸收成常规}
+
+竖直线在齐次坐标下是 $X-x_{1}Z=0$．代入式~\eqref{eq:proj-F}：
+\[
+Z\bigl(Y^{2}-g(x_{1})Z^{2}\bigr)=0,
+\]
+因子 $Z=0$ 给出 $O$，$Y^{2}=g(x_{1})Z^{2}$ 给出 $P,-P$ 两点．
+于是在齐次坐标中「$P+(-P)=O$」不再是需要特判的退化情形，
+而是 $3$ 个交点自然分配的结果．
+更一般地，任意直线 $L$ 与 $\overline E$ 的三个交点满足除子关系
+$(P)+(Q)+(R)\sim 3(O)$，群律在这种语言下与坐标图的选择无关；
+$\mathbb A^{2}$ 只是在 $Z\neq0$ 图上把 $(P),(Q),(R)$ 里的 $O$ 隐去而已．
+
+\appendix
+
+\section{Weierstrass $\wp$ 函数：仿射方程的解析来源}
+
+「椭圆曲线」之名来自椭圆积分，而方程 $y^{2}=x^{3}+Ax+B$ 的另一条独立来源
+是复环面上的 Weierstrass $\wp$ 函数．这一节说明：\emph{不是先有方程再去找参数化，
+而是 $\wp$ 满足的微分方程本身就是这个三次方程}．
+
+设 $\Lambda\subset\mathbb C$ 为格，
+\[
+\wp(z)=\frac{1}{z^{2}}+\sum_{\omega\in\Lambda\setminus\{0\}}
+\left(\frac{1}{(z-\omega)^{2}}-\frac{1}{\omega^{2}}\right).
+\]
+记 $G_{2m}=\sum_{\omega\neq0}\omega^{-2m}$，$g_{2}=60G_{4}$、$g_{3}=140G_{6}$，则
+在 $z=0$ 附近
+\begin{align}
+\wp(z)&=\frac{1}{z^{2}}+\frac{g_{2}}{20}z^{2}+\frac{g_{3}}{28}z^{4}+O(z^{6}),\\
+\wp'(z)&=-\frac{2}{z^{3}}+\frac{g_{2}}{10}z+\frac{g_{3}}{7}z^{3}+O(z^{5}).
+\end{align}
+逐项算出（记 $a=g_{2}/20,\ b=g_{3}/28$）：
+\begin{align*}
+\wp'^{2}&=\frac{4}{z^{6}}-\frac{2g_{2}}{5}\frac{1}{z^{2}}-\frac{4g_{3}}{7}+O(z^{2}),\\
+4\wp^{3}&=\frac{4}{z^{6}}+\frac{3g_{2}}{5}\frac{1}{z^{2}}+\frac{3g_{3}}{7}+O(z^{2}),\\
+g_{2}\wp&=\frac{g_{2}}{z^{2}}+O(z^{2}).
+\end{align*}
+于是
+\[
+H(z):=\wp'^{2}-4\wp^{3}+g_{2}\wp+g_{3}
+\]
+的 $z^{-6}$ 项相消（$4-4=0$）、$z^{-2}$ 项相消（$-\tfrac{2}{5}-\tfrac{3}{5}+1=0$）、
+常数项相消（$-\tfrac{4}{7}-\tfrac{3}{7}+1=0$），故 $H$ 在 $z=0$ 处既无极点也无常数残差．
+$H$ 是 $\Lambda$-周期函数，在基本平行四边形上无处有极点，
+由 Liouville 定理必为常数；再令 $z\to0$ 知该常数为 $0$，即
+\begin{equation}\label{eq:wp-ode}
+\boxed{\;\wp'(z)^{2}=4\wp(z)^{3}-g_{2}\wp(z)-g_{3}\;}
+\end{equation}
+
+令 $x=\wp(z)$、$y=\wp'(z)/2$，则式~\eqref{eq:wp-ode} 化为
+\[
+y^{2}=x^{3}-\frac{g_{2}}{4}x-\frac{g_{3}}{4},
+\qquad A=-\frac{g_{2}}{4},\quad B=-\frac{g_{3}}{4}.
+\]
+代入式~\eqref{eq:Delta-short} 得
+\[
+\Delta=-16\left(4A^{3}+27B^{2}\right)=g_{2}^{3}-27g_{3}^{2},
+\]
+与经典结果一致；$\Delta\neq0$ 正是格 $\Lambda$ 非退化的条件．
+映射
+\[
+\mathbb C/\Lambda\longrightarrow \overline E(\mathbb C),\qquad
+z\longmapsto\bigl[\wp(z):\tfrac{1}{2}\wp'(z):1\bigr]
+\]
+在 $z\to0$ 时，$\bigl[\wp:\wp'/2:1\bigr]=\bigl[z^{3}\wp:\tfrac12 z^{3}\wp':z^{3}\bigr]\to[0:1:0]=O$，
+即格点被送到无穷远点．于是 \S\ref{sec:inflection} 里那个「凭空补上的 $O$」，
+在解析理论里就是 $\wp$ 的极点，两种坐标在此再次闭合．
+
+\section{常见误区与坐标对照}
+
+\begin{center}
+\begin{tabular}{p{0.23\linewidth}|p{0.33\linewidth}|p{0.33\linewidth}}
+\hline
+ & \textbf{仿射坐标 $\mathbb A^{2}$（$Z\neq0$）} & \textbf{齐次坐标 $\mathbb P^{2}$}\\
+\hline
+点 & $(x,y)$ & $[X:Y:Z]$，$x=X/Z,\ y=Y/Z$\\
+\hline
+方程 & $y^{2}=x^{3}+Ax+B$（非齐次，最高 $3$ 次） & $Y^{2}Z=X^{3}+AXZ^{2}+BZ^{3}$（齐次 $3$ 次）\\
+\hline
+无穷远 & 无 & $O=[0:1:0]$，唯一\\
+\hline
+直线 & $\alpha x+\beta y+\gamma=0$ & $\alpha X+\beta Y+\gamma Z=0$\\
+\hline
+竖直线 & $x=c$，只交 $2$ 点 & $X-cZ=0$，交 $2$ 点 $+O$（共 $3$ 点）\\
+\hline
+奇点检查 & 解 $f=f_{x}=f_{y}=0$ & 还需查 $O$；但 $F_{Z}(O)=1$ 恒光滑\\
+\hline
+合法变换 & $x\mapsto u^{2}x'+r,\ y\mapsto u^{3}y'+u^{2}sx'+t$ & 保持 $O$ 与 $Z=0$ 的 $\mathrm{PGL}_{3}$ 子群\\
+\hline
+适用性 & $\operatorname{char}k\neq2,3$ 的短形式 & 任意特征的齐次长形式~\eqref{eq:long-weierstrass-hom}\\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{1em}
+\noindent\textbf{六个高频错误}
+\begin{enumerate}
+\item 把 $y^{2}$ 直接写成 $Y^{2}$：左右次数不等，方程不再齐次，零点集不是射影曲线．
+\item 以为 $Z=0$ 上有多个无穷远点，或把 $[1:0:0]$ 也当曲线上的点：
+   代入 $F(1,0,0)=-1\neq0$，它不在 $\overline E$ 上．
+\item 以为 $O$ 是奇点：由式~\eqref{eq:partials} $F_{Z}(O)=1\neq0$，$O$ 恒光滑．
+\item 以为仿射平移 $x\mapsto x+r$ 在射影坐标里不合法：
+   它对应 $X\mapsto X+rZ$，是 $\mathrm{PGL}_{3}$ 的元素，且保持 $Z=0$ 不动．
+\item 在 $\operatorname{char}k=2$ 或 $3$ 时仍套用 $y^{2}=x^{3}+Ax+B$：
+   $1/2$、$1/3$ 不存在，必须回到长形式~\eqref{eq:long-weierstrass}．
+\item 混淆 $\operatorname{disc}(g)=-4A^{3}-27B^{2}$ 与 $\Delta_{E}=-16(4A^{3}+27B^{2})=16\operatorname{disc}(g)$：
+   相差因子 $16$，来自一般 Weierstrass 公式~\eqref{eq:Delta-general}．
+\end{enumerate}
+
+\noindent\textbf{附注（加权射影坐标）}．若改用加权射影平面 $\mathbb P(2,3,1)$，
+$X,Y,Z$ 的权重分别为 $2,3,1$，则同一曲线写成加权齐次 $6$ 次方程
+\[
+Y^{2}=X^{3}+AXZ^{4}+BZ^{6},
+\]
+此时 $O=[1:1:0]$．这种坐标在椭圆曲线密码学的快速算术里很常见，
+但它改变了坐标的缩放律（$\lambda\cdot(X,Y,Z)=(\lambda^{2}X,\lambda^{3}Y,\lambda Z)$），
+与本文的标准齐次坐标 $[X:Y:Z]\sim[\lambda X:\lambda Y:\lambda Z]$ 不是一回事，
+混用会导致系数幂次全错．
+
+\section{小结}
+
+整条推导可以压缩成一句话：
+\emph{仿射方程 $y^{2}=x^{3}+Ax+B$ 是射影曲线 $Y^{2}Z=X^{3}+AXZ^{2}+BZ^{3}$ 在 $Z\neq0$ 图上的去齐次化；
+而后者之所以长成这个样子，是因为在光滑三次曲线上取一个拐点 $O$、
+把它的切线取作 $Z=0$ 之后，$F(O)=0$、切线条件与拐点条件依次杀掉 $Y^{3},XY^{2},X^{2}Y$ 三项，
+剩下的七项再经归一化只剩五个系数．}
+
+三种视角各自补上了一块：
+\begin{itemize}
+\item \textbf{齐次化}（\S\ref{sec:homogenize}）补上了无穷远点 $O$，并证明它是光滑拐点；
+\item \textbf{$\mathrm{PGL}_{3}$ 归一化}（\S\ref{sec:weierstrass-from-cubic}）解释了方程形式的必然性；
+\item \textbf{配方与判别式}（\S\ref{sec:short-form}）给出短形式与光滑的充要条件 $4A^{3}+27B^{2}\neq0$；
+\item \textbf{$\wp$ 函数}（附录 A）说明这个三次方程在复解析侧同样是被微分方程逼出来的，且 $O$ 就是 $\wp$ 的极点．
+\end{itemize}
+
+\printbibliography
+
+\end{document}
