@@ -1,6 +1,6 @@
-## 📅 2026-11-12 CQT 研究前沿动态
+## 📅 2026-11-14 CQT 研究前沿动态
 
-> 抓取批次：**WEDNESDAY, 11 NOVEMBER 2026**（美东 11-11 20:00 EST 公告 ≈ 北京 11-12 09:00）。本报告北京运行日 2026-11-12。注：上次成功批为 TUESDAY 10 NOV（11-11 运行）；本期 WED 11 NOV 为新批次。ID 前缀 `2611.*`，编号区间约 12924–14507。
+> 抓取批次：**FRIDAY, 13 NOVEMBER 2026**（美东 11-13 20:00 EST 公告 ≈ 北京 11-14 09:00）。本报告北京运行日 2026-11-14。注：上次成功批为 WED 11 NOV（11-12 运行）；中间 THU 12 NOV 批在本次运行前已滚出 /new 首页（数据缺口），本期实为 FRI 13 NOV 新批。ID 前缀 2611.*，编号约 14570–17333。
 
 ### 一、arXiv 基础与物理哲学追踪
 
@@ -8,91 +8,97 @@
 
 | 核心 | 新/总 | 扩展 | 新/总 |
 |---|---|---|---|
-| quant-ph | 71 / 156 | math.DG | 15 / 35 |
-| hep-th | 28 / 73 | math.OC | 37 / 92 |
-| gr-qc | 22 / 58 | eess.SY | 35 / 79 |
-| math-ph | 7 / 51 | math.CT | 2 / 11 |
-| | | cond-mat.stat-mech | 12 / 47 |
-| | | math.OA | 3 / 9 |
-| | | cs.AI | 105 / 381 |
-| | | cs.LG | 134 / — |
+| quant-ph | 120 / 284 | math.DG | 40 / 88 |
+| hep-th | 60 / 179 | math.OC | 49 / 133 |
+| gr-qc | 44 / 58 | eess.SY | 63 / — |
+| math-ph | 17 / 123 | math.CT | 2 / 13 |
+| | | cond-mat.stat-mech | 23 / 93 |
+| | | math.OA | 7 / 14 |
+| | | cs.AI | 113 / 537 |
+| | | cs.LG | 186 / 611 |
 
-**量子基础与解释（§002）子区块（7 篇）**
-- 2611.12971《Time Running Backwards, and Where It Stops: Superoscillations of Proper Time and the Memory of the Environment》— Proper Time 的超振荡与时间倒流/停驻，§002 强（时间之箭/基础）。
-- 2611.13981《Maximal Violation of Mermin Inequality for Commuting von Neumann Algebras and Multipartite Vacuum Entanglement in QFT》— 交换 vN 代数下的 Mermin 不等式最大违背 + QFT 真空纠缠，§002 强（Bell/非局域性 + 代数基础）。
-- 2611.13085《Time Direction Entanglement Entropy of Free Fermion Ground States》— 自由费米子基态的时间方向纠缠熵，§002（时间方向/熵）。
-- 2611.13175《Quantized memory of measurement records near the light cone of quantum circuits》— 量子线路光锥附近的测量记录量子化记忆，§002（测量/记录基础）。
-- 2611.13110《Finite Measured Entropy Production Does Not Imply Finite Microscopic Irreversibility》— 有限测量熵产生不蕴含有限微观不可逆性，§002 近邻（测量-热力学基础）。
-- 2611.14295《Reading long-range information from a separable quantum record requires entangled measurements》— 从可分离量子记录读取长程信息需纠缠测量，§002 近邻（测量/信息基础）。
-- 2611.14422《The energetic cost of loading classical data in quantum computers》— 经典数据载入量子计算机的能量代价，§002 近邻（资源/热力学基础）。
+**量子基础与解释（§002）子区块（7 篇，全强命中）**
+- 2611.14791《Bounding Freedom of Choice via Causal Network Embeddings》— 用因果网络嵌入界定"自由选择"边界，§002 强（Bell/自由选择/因果）。
+- 2611.15283《Device-independent witnesses of genuine multipartite entanglement and nonlocality for GHZ states and Bell-pair tree》— GHZ 与贝尔对树的设备无关多体纠缠/非定域见证，§002 强（DI/非局域性）。
+- 2611.15871《Revealing Bell Nonlocality Does Not Require the Same Physical Measurement to be Performed Twice》— 揭示贝尔非定域性无需两次相同测量，§002 强（Bell/非局域性）。
+- 2611.16401《Probing the extreme quantum violation of the Leggett-Garg inequality》— 探测 Leggett-Garg 不等式的极端量子违背，§002 强（LG 不等式/宏观实在论）。
+- 2611.17051《Physical Observables and Superselection》— 物理可观测量与超选择规则，§002 强（超选择/代数基础）。
+- 2611.17260《Non-interferometric tests of gravitational decoherence models with mechanical oscillators》— 用机械振子非干涉检验引力退相干模型，§002 强（引力退相干/实验基础）。
+- 2611.17268《Observation of Genuine Multi-Time Quantum Memory》— 观测真正多时间量子记忆，§002 强（多时间量子记忆/基础）。
 
-**§003-type-topos 映射（极薄，2 新，无真 topos/sheaf）**
-- 2611.13284《Closed layers in tensor-triangular geometry》— 张量三角几何中的闭层，§003 近邻（三角/张量范畴，Balmer 谱相邻）。
-- 2611.13407《Pre-Model Structures on the Category of C_p-Sets》— C_p-集范畴上的预模型结构，§003 近邻（模型范畴/同伦论）。均无 Grothendieck topos / 量子仪器单子真命中。
+**§003-type-topos 映射（极薄，3 新，无真 topos/sheaf）**
+- 2611.17244《Higher Categorical Bistellar Moves》— 高阶范畴双星形变换，§003 近邻（高阶范畴论）。
+- 2611.16695《Free Gödel algebras over Gödel hoops》— Gödel 代数/hoop，§003 近邻（序代数/逻辑范畴）。
+- 2611.16962《Higher-Group Statistics on Lattices》— 格点高阶群统计，§003 近邻（高阶群/拓扑）。均无 Grothendieck topos / 量子仪器单子真命中。
 
-**§04-Gelfand 映射（2 新，1 强命中）**
-- 2611.13822《ℝ-linear unitary preservers of C*-algebras》— C*-代数的 ℝ-线性酉保持子，§04 强（C*-代数结构/保持映射）。
-- 2611.13424《Ostrik's Theorem for Operator Algebras in a Unitary Tensor Category》— 酉张量范畴中算子代数的 Ostrik 定理，§04 近邻（算子代数/张量范畴）。
-- 2611.13924《An Equivariant Coarse Green-Julg Theorem for Proper Actions》— 恰当作用的等变粗 Green-Julg 定理，§04 近邻（粗几何/指标理论/C*-K-理论）。
+**§04-Gelfand 映射（回温强，7 新）**
+- 2611.16079《Every classifiable stably finite C*-algebra has an untwisted étale groupoid model》— 可分类稳定有限 C*-代数均有无挠étale群胚模型，§04 强（C*-分类/群胚）。
+- 2611.14888《Strongly quasidiagonal C*-algebras with nuclear dimension one and infinite decomposition rank》— 核维一强拟对角 C*-代数，§04 强。
+- 2611.15407《Cleanness and real rank zero in C*-algebras》— C*-代数的洁净性与实秩零，§04 强。
+- 2611.15383《On the Equivalence of Linear and C* Extremality for Unital CP Maps on Commutative Real C*-algebras》— 实交换 C*-代数上线性与 C* 极值的等价，§04 强。
+- 2611.17285《C*-selflessness for free Burnside groups》— 自由 Burnside 群的 C*-selflessness，§04 强。
+- 2611.16136《Almost unimodular quantum groups》— 近幺模量子群，§04 近邻（量子群/非交换）。
+- 2611.16972《Kac lemma on noncommutative probability spaces》— 非交换概率空间的 Kac 引理，§04 近邻（非交换概率）。
 
-**bookmark 入库**：见 `c:/Dev/CQT/bookmark.md` 新增 `## 2026-11-12` 节（共 26 条，按 ID 去重，标注 §002/§003/§04/能源/AI/量子归属）。
+**bookmark 入库**：见 `c:/Dev/CQT/bookmark.md` 新增 `## 2026-11-14` 节（共 31 条，按 ID 去重，标注 §002/§003/§04/能源/AI/量子归属）。
 
 ### 二、随机热力学与几何控制核心推荐
 
-**[高·1] 2611.13526 — A new representation of effective diffusion in fluctuating periodic potentials through stochastic duality（通过随机对偶表示涨落周期势中的有效扩散）**
-- 检索来源：cond-mat.stat-mech（新 12 篇之一）。
-- 核心突破：用随机对偶（stochastic duality）给出"涨落周期势"中有效扩散系数的新表示，将乘性噪声/势场中的输运问题转化为对偶过程的等价刻画。
-- 数学模型：涨落周期势 V(x,ξ(t)) 中的过阻尼 Langevin/扩散；通过构造对偶马尔可夫过程把有效扩散 D_eff 表达为对偶可观测量期望，绕开传统微扰展开。
-- 关联度：高（乘性噪声 + 周期势 + 有效扩散，正是随机热力学/输运关键词组合的核心对象）。
+**[高·1] 2611.14891 — Optimal Driving between Nonequilibrium Steady States under a Dissipation Budget（在耗散预算约束下非平衡稳态间的最优驱动）**
+- 检索来源：cond-mat.stat-mech（新 23 篇之一）。
+- 核心突破：在给定"耗散预算"下，刻画两个非平衡稳态（NESS）之间的最优有限时间驱动协议，把热力学代价显式嵌入最优控制。
+- 数学模型：以熵产生/耗散率作为预算约束，最小化驱动时间或协议功；接近有限时间热力学 + 涨落定理框架下的几何最优控制。
+- 关联度：高（非平衡态耗散 + 最优驱动，随机热力学核心主题）。
 
-**[高·2] 2611.13421 — Boundary-controlled irreversible port–Hamiltonian modeling and structure-preserving discretization of tubular reactors（管式反应器的边界控制不可逆端口哈密顿建模与保结构离散化）**
-- 检索来源：math.OC（新 37 篇之一）。
-- 核心突破：将"不可逆（耗散）端口哈密顿（PCH）"框架用于管式反应器建模，并以保结构方式离散化，统一处理边界控制与耗散。
-- 数学模型：PCH 范式（Dirac 结构 + 耗散端口 + 能量 H），空间分布以偏微分方程 + 边界端口描述；离散化保持能量平衡/无源性。
+**[高·2] 2611.16070 — Entropy production decomposition and fluctuation theorems under continuous feedback（连续反馈下的熵产生分解与涨落定理）**
+- 检索来源：cond-mat.stat-mech（新 23 篇之一）。
+- 核心突破：在连续反馈控制下给出熵产生的分解（反馈贡献 + 系统贡献）并推广涨落定理，统一处理预设与随机反馈协议。
+- 数学模型：反馈 SDE + 信息流项；熵产生分解为 βQ + I_feedback，涨落定理含信息项修正（Sagawa-Ueda 型）。
+- 关联度：高（随机热力学 + 信息反馈 + 涨落定理，直击非平衡耗散/信息）。
+
+**[高·3] 2611.15088 — Relative-energy stabilization of an irreversible port-Hamiltonian tubular reactor（不可逆端口哈密顿管式反应器的相对能量镇定）**
+- 检索来源：math.OC（新 49 篇之一）。
+- 核心突破：对不可逆（耗散）端口哈密顿（PCH）管式反应器提出"相对能量"镇定控制，把耗散结构纳入能量整形。
+- 数学模型：PCH 范式（Dirac 结构 + 耗散端口 + 能量 H），以相对能量 H - H_d 构造 Lyapunov 函数实现镇定。
 - 关联度：高（PCH 关键词直接命中，中优先级几何控制/耗散系统）。
 
-**[高·3] 2611.14259 — Concentration-Based Probabilistic Reachability for Linear Systems under Multiplicative Uncertainty and Additive Noise（乘性不确定与加性噪声下线性系统的基于浓度的概率可达性）**
-- 检索来源：eess.SY（新 35 篇之一）。
-- 核心突破：在状态/参数乘性不确定 + 加性噪声叠加下，给出线性系统概率可达集的"浓度（concentration）"界，把随机鲁棒验证从加性推向乘性情形。
-- 数学模型：x_{k+1} = (A + Δ_k^M) x_k + w_k，Δ_k^M 为乘性扰动、w_k 加性噪声；以集中不等式（Hoeffding/矩阵浓度）约束可达集半径。
-- 关联度：高（乘性噪声 + 随机控制/验证，贴合"Multiplicative Noise"主题）。
+**[高·4] 2611.16708 — Thermodynamically Consistent Quantum-Classical Hybrid Dynamics: A Metriplectic Approach to Generalized Lindblad and Bloch-Torrey Equations（热力学一致的量子-经典混合动力学：广义 Lindblad 与 Bloch-Torrey 方程的 Metriplectic 方法）**
+- 检索来源：quant-ph（新 120 篇之一，作者 Azeddine Zaidni, Ayoub Arraji, Philip J. Morrison）。
+- 核心突破：用 metriplectic（几何热力学/兼含辛与耗散括号）框架给出量子-经典混合动力学的一致构造，覆盖广义 Lindblad 与 Bloch-Torrey 方程。
+- 数学模型：metriplectic 括号 {·,·}_S + [·,·]_D，能量守恒 + 熵产生项分离；把 Lindblad 主方程与经典 Fokker-Planck/Bloch-Torrey 统一。
+- 关联度：高（几何热力学/耗散系统 + 量子，跨越 §002 与 §二，metriplectic 是 GENERIC/PCH 近邻）。
 
-**[中·4] 2611.13101 — Quantum Control Geometry as a Metric of Chaos（作为混沌度量的量子控制几何）**
-- 检索来源：cond-mat.stat-mech（新 12 篇之一）。
-- 核心突破：把量子控制问题的几何结构（控制李代数/可达流形）用作混沌的度量，连接几何控制与量子混沌。
-- 数学模型：以控制哈密顿量的 Lie 括号生成可达分布，用几何复杂度（如控制距离/曲率）量化混沌程度。
-- 关联度：中（几何控制/李群-李括号，中优先级关键词命中）。
+**[高·5] 2611.16329 — Information Thermodynamics in Closed Quantum Many-Body Dynamics（封闭量子多体动力学中的信息热力学）**
+- 检索来源：cond-mat.stat-mech（新 23 篇之一）。
+- 核心突破：在封闭（无环境）量子多体系统中建立信息热力学关系，把"信息"作为内部自由度间的热力学资源。
+- 数学模型：以纠缠/互信息替代经典信息流，推导封闭系统内部的功-信息权衡与二阶涨落关系。
+- 关联度：高（信息几何/信息热力学 + 量子多体，与 CQT 随机信息几何主线强呼应）。
 
-**[中·5] 2611.13838 — Towards funnel control on Riemannian manifolds（迈向黎曼流形上的漏斗控制）**
-- 检索来源：math.OC（新 37 篇之一）。
-- 核心突破：把漏斗控制（funnel control，瞬态性能包络）推广到黎曼流形上的系统，提供非线性几何控制新工具。
-- 数学模型：状态演化约束在黎曼流形 M 上，参考漏斗由黎曼距离 d_M(x(t), x_ref(t)) < φ(t) 给出；控制器保证瞬态误差包络。
-- 关联度：中（黎曼几何 + 控制，中优先级辛/微分几何解决控制问题）。
-
-> 本批无字面命中 "Brownian Gyrator" / "Geometric Ratchet" / "Net Energy Exchange" / "HJB"；但乘性噪声（14259）、涨落周期势输运（13526）、PCH（13421）、黎曼/几何控制（13838、13101）构成强覆盖。近邻另有：2611.13986（分布鲁棒间接反馈随机 MPC）、2611.14446（active chiral random walk，活性手性随机游走，近"几何棘轮"活性物质方向）、2611.14030（battery arbitrage 决策后悔，能源工程低优先级）。
+> 本批无字面命中 "Brownian Gyrator" / "Geometric Ratchet" / "Net Energy Exchange" / "HJB"；但随机热力学/信息热力学/几何控制强覆盖。近邻另有：2611.17095（Total Energy Shaping of Underactuated Systems via Gravity Compensation，能量整形/几何控制）、2611.17034（Control-Gibbs Distribution: Sampling for Optimal Control，Gibbs/最优控制）、2611.16663（Derivative-Free Bellman Equation for Dynamic Time-to-Collision，Bellman/HJB 近邻）、2611.15823（Adaptive LQ Optimal Control for Discrete-Time Stochastic Systems，随机最优控制）、2611.16915（minimum energy to trigger a spike）、2611.16743（work extraction from negative-temperature bath）、2611.17057（Gaussian ergotropy）。
 
 ### 三、每日研究前沿四方向
 
-**量子（quant-ph 71 新）**
-- 2611.13301《A Compiler for Fault Tolerant Quantum Computing》— 容错量子计算编译器（FTQC 工具链）。
-- 2611.13098《Surface codes with coherent errors: optimal decoding and finite-size crossovers》— 相干错误下表面码最优解码与有限尺寸交叉（QEC）。
-- 2611.13658《An Efficient Quantum Algorithm for Preparing Uniform Superpositions over Arbitrary Integer Intervals》— 任意整数区间均匀叠加态的高效量子算法。
-- 2611.14458《Quantum Thermal Transistor via Nonlinear Environmental Coupling》— 非线性环境耦合的量子热三极管（量子热机/热输运）。
-- 2611.14139《Coherent-Dissipative Crossover of Quantum Synchronization》— 量子同步的相干-耗散交叉。
+**量子（quant-ph 120 新）**
+- 2611.14923《Quantum CSS codes: Decoder-aware multiobjective design and bound-certified selection》— 解码器感知的多目标 CSS 码设计（QEC）。
+- 2611.16610《A Quantum Algorithm for Computing All Eigenvalues and Eigenstates of Sparse Hermitian Matrices》— 稀疏 Hermite 矩阵全特征值/特征态量子算法。
+- 2611.15416《Extractable Work from Collective Dark-State Charging of Quantum Batteries》— 量子电池集体暗态充电的可提取功（量子热机/资源）。
+- 2611.17260《Non-interferometric tests of gravitational decoherence models with mechanical oscillators》— 引力退相干实验检验（基础/实验）。
+- 2611.16401《Probing the extreme quantum violation of the Leggett-Garg inequality》— LG 不等式极端违背（基础）。
 
 **Topos/范畴论（math.CT 2 新）**
-- §003 极薄：2611.13284 张量三角几何中的闭层（§003 近邻）；2611.13407 C_p-集范畴上的预模型结构（§003 近邻）。无层/拓扑斯真命中。
+- §003 极薄：2611.17244 高阶范畴双星形变换（§003 近邻）；2611.16695 自由 Gödel 代数（§003 近邻）；另 quant-ph 2611.16962 高阶群格点统计（§003 近邻）。无层/拓扑斯真命中。
 
-**Gelfand 理论/算子代数（math.OA 3 新）**
-- §04：2611.13822 C*-代数的 ℝ-线性酉保持子（§04 强）；2611.13424 酉张量范畴中算子代数的 Ostrik 定理（§04 近邻）；2611.13924 恰当作用的等变粗 Green-Julg 定理（§04 近邻，粗指标/C*-K-理论）。
+**Gelfand 理论/算子代数（math.OA 7 新，回温强）**
+- §04：2611.16079 可分类稳定有限 C*-代数之étale 群胚模型（§04 强）；2611.14888 核维一强拟对角 C*（§04 强）；2611.15407 C*-洁净性与实秩零（§04 强）；2611.15383 实交换 C*-代数上线性与 C* 极值等价（§04 强）；2611.17285 自由 Burnside 群 C*-selflessness（§04 强）；2611.16136 近幺模量子群（§04 近邻）；2611.16972 非交换概率空间 Kac 引理（§04 近邻）。
 
-**AI（cs.AI 105 新 / cs.LG 134 新，本批取前 ~56 抽样）**
-- 递归自改进的成本/收益：2611.12988《Third Eye: Beyond Immediate Gains in Recursive Self-Improvement》、2611.13524《The RSI Tax: When Recursive Self-Improvement Is Not Worth the Cost》。
-- 可验证/可审计智能体：2611.13336《Veritas: A Verifier Generation Harness for Agent Tasks》、2611.13367《No finite rulebook can certify every safe program: an impossibility theorem for gatekeeping AI agents》。
-- 物理+AI 自主科研：2611.13329《Agent-Guided Discovery of Exchange-Correlation Functionals with Physics-based Validation》、2611.12954《Physics2Weight: Direct NN Architecture and Weight Generation from Physical Laws Using LLMs》。
-- 信息几何交叉：2611.12998《Linear Probes to Bayesian Manifolds: Geometry of Arithmetic in LLMs》、2611.13480《Sharp Sample Complexity of KL-Regularized Reinforcement Learning》、2611.13414《Free Lunch Uncertainty: Sequence-Level Rényi Entropy from Particle Decoding for Adaptive LLM Reasoning》。
+**AI（cs.AI 113 新 / cs.LG 186 新，本批取前 ~57 抽样）**
+- 自改进智能体：2611.14949《RSI-PDEbench: A Benchmark for Self-Improving Agents in PDE Solving》、2611.15885《Reward-Driven Collider Physics Challenges for Self-Improving Agentic AI via Reinforcement Learning》。
+- 可验证/形式化：2611.14794《When Is Proof-Step Verification Worth Its Cost? Operating Requirements of Certify-or-Decline Verification for Open-Weight Mathematical Reasoning》。
+- 智能体认识论/治理：2611.14889《Can an AI Agent Be Epistemically Akratic? Higher-Order Evidence & the Limits of Self-Correction》。
+- 量子+AI：2611.15237《Regret Bounds for Quantum Linear Bandits》（cs.LG）、2611.15241《KQML-Liver: Interpretable Hybrid Quantum Machine Learning with Kolmogorov-Arnold Networks》。
+- 因果/信息：2611.14736《When Should Semantic Priors Enter Partially-Identified Causal Discovery?》。
 
 ### 💡 今日趋势洞察
-1. 本期量子基础子区块以"时间之箭/Proper Time 超振荡"（2611.12971）与"交换 vN 代数下的 Mermin 违背 + QFT 真空纠缠"（2611.13981）为双强命中，把 Bell 非局域性、von Neumann 代数与量子场论真空纠缠直接焊接，是最贴近 CQT §002 主线的两篇。
-2. 随机热力学/几何控制方向呈"乘性噪声 + 几何控制"双主线：涨落周期势有效扩散（13526）与乘性不确定下概率可达性（14259）对应乘性噪声主题，PCH 管式反应器（13421）与黎曼流形漏斗控制（13838）对应 PCH/微分几何控制；但字面级"布朗回转器/净能量交换/HJB"仍缺席。
-3. AI 侧"递归自改进"出现成本反思（RSI Tax、Third Eye），与可验证智能体（Veritas、门禁不可能性定理）并行成为密集区；同时信息几何（贝叶斯流形、KL-正则 RL、Rényi 熵 LLM）持续渗透 LLM 推理，与 CQT 随机信息几何主线形成稳定交汇。
+1. 本期量子基础子区块出现罕见的"全强命中"七连：从 Bell/自由选择（14791）、设备无关多体非定域（15283）、Bell 测量对称性（15871）、Leggett-Garg 违背（16401）、超选择规则（17051）、引力退相干实验（17260）到多时间量子记忆观测（17268），几乎覆盖 CQT §002 全部核心议题，是近期最厚实的一批基础产出。
+2. 随机热力学/几何控制方向以"耗散预算下最优驱动"（14891）与"连续反馈熵产生分解"（16070）为双旗舰，信息与热力学在量子多体（16329）与 metriplectic 量子-经典混合（16708）处汇流，且 PCH 能量镇定（15088）与能量整形（17095）延续几何控制主线；但字面级"布朗回转器/净能量交换/HJB"仍缺席，HJB 仅以 Bellman 方程（16663）近邻出现。
+3. 算子代数（§04）显著回温：5 篇 C*-代数强命中（含群胚模型 16079、核维/洁净性/实秩零 14888/15407、C* 极值等价 15383、自由 Burnside 群 17285），与量子基础中的超选择/代数结构（17051）形成呼应；AI 侧自改进智能体与可验证推理（RSI-PDEbench、Proof-Step Verification）继续密集，量子+AI（量子线性 Bandit、混合量子 ML）稳定渗透。

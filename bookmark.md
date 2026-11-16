@@ -3676,3 +3676,36 @@
 - [量子·FTQC] 2611.13301 A Compiler for Fault Tolerant Quantum Computing — 容错量子计算编译器
 - [量子·QEC] 2611.13098 Surface codes with coherent errors: optimal decoding and finite-size crossovers — 相干错误表面码最优解码
 - [量子·量子热机] 2611.14458 Quantum Thermal Transistor via Nonlinear Environmental Coupling — 量子热三极管
+
+## 2026-11-14（抓取批次 FRI 13 NOV 2026）
+- [§002强] 2611.14791 Bounding Freedom of Choice via Causal Network Embeddings — 自由选择/Bell/因果
+- [§002强] 2611.15283 Device-independent witnesses of genuine multipartite entanglement and nonlocality for GHZ states — DI/非局域性
+- [§002强] 2611.15871 Revealing Bell Nonlocality Does Not Require the Same Physical Measurement Twice — Bell 非定域性
+- [§002强] 2611.16401 Probing the extreme quantum violation of the Leggett-Garg inequality — LG 不等式/宏观实在论
+- [§002强] 2611.17051 Physical Observables and Superselection — 超选择规则/代数基础
+- [§002强] 2611.17260 Non-interferometric tests of gravitational decoherence models with mechanical oscillators — 引力退相干/实验
+- [§002强] 2611.17268 Observation of Genuine Multi-Time Quantum Memory — 多时间量子记忆
+- [§003近邻] 2611.17244 Higher Categorical Bistellar Moves — 高阶范畴
+- [§003近邻] 2611.16695 Free Godel algebras over Godel hoops — Godel 代数/序代数
+- [§003近邻] 2611.16962 Higher-Group Statistics on Lattices — 高阶群/拓扑
+- [§04强] 2611.16079 Every classifiable stably finite C*-algebra has an untwisted etale groupoid model — C*-分类/群胚
+- [§04强] 2611.14888 Strongly quasidiagonal C*-algebras with nuclear dimension one and infinite decomposition rank — C* 核维一
+- [§04强] 2611.15407 Cleanness and real rank zero in C*-algebras — C* 洁净性/实秩零
+- [§04强] 2611.15383 On the Equivalence of Linear and C* Extremality for Unital CP Maps on Commutative Real C*-algebras — 实交换C*极值
+- [§04强] 2611.17285 C*-selflessness for free Burnside groups — 自由Burnside群C*
+- [§04近邻] 2611.16136 Almost unimodular quantum groups — 近幺模量子群
+- [§04近邻] 2611.16972 Kac lemma on noncommutative probability spaces — 非交换概率Kac引理
+- [能源高] 2611.14891 Optimal Driving between Nonequilibrium Steady States under a Dissipation Budget — 耗散预算下NESS最优驱动
+- [能源高] 2611.16070 Entropy production decomposition and fluctuation theorems under continuous feedback — 反馈熵产生分解/涨落定理
+- [能源高·PCH] 2611.15088 Relative-energy stabilization of an irreversible port-Hamiltonian tubular reactor — 不可逆PCH相对能量镇定
+- [能源高] 2611.16708 Thermodynamically Consistent Quantum-Classical Hybrid Dynamics: A Metriplectic Approach — metriplectic量子-经典混合
+- [能源高] 2611.16329 Information Thermodynamics in Closed Quantum Many-Body Dynamics — 封闭量子多体信息热力学
+- [AI·自改进] 2611.14949 RSI-PDEbench: A Benchmark for Self-Improving Agents in PDE Solving — 自改进智能体PDE
+- [AI·自改进] 2611.15885 Reward-Driven Collider Physics Challenges for Self-Improving Agentic AI via Reinforcement Learning — 自改进RL/物理
+- [AI·形式化] 2611.14794 When Is Proof-Step Verification Worth Its Cost? — 证明步骤验证成本
+- [AI·认识论] 2611.14889 Can an AI Agent Be Epistemically Akratic? — 智能体认识论/自纠正
+- [AI·量子] 2611.15237 Regret Bounds for Quantum Linear Bandits — 量子线性Bandit后悔界
+- [AI·量子] 2611.15241 KQML-Liver: Interpretable Hybrid Quantum Machine Learning — 混合量子ML
+- [量子·QEC] 2611.14923 Quantum CSS codes: Decoder-aware multiobjective design — 解码器感知CSS码
+- [量子·算法] 2611.16610 A Quantum Algorithm for Computing All Eigenvalues of Sparse Hermitian Matrices — 稀疏Hermite特征值量子算法
+- [量子·量子热机] 2611.15416 Extractable Work from Collective Dark-State Charging of Quantum Batteries — 量子电池可提取功
