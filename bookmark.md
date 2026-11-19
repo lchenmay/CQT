@@ -3709,3 +3709,119 @@
 - [量子·QEC] 2611.14923 Quantum CSS codes: Decoder-aware multiobjective design — 解码器感知CSS码
 - [量子·算法] 2611.16610 A Quantum Algorithm for Computing All Eigenvalues of Sparse Hermitian Matrices — 稀疏Hermite特征值量子算法
 - [量子·量子热机] 2611.15416 Extractable Work from Collective Dark-State Charging of Quantum Batteries — 量子电池可提取功
+
+## 2026-11-17（抓取批次 MON 16 NOV 2026）
+- [§002强] 2611.17431 Quantum violation of Causal Friendliness in the instrumental scenario — 因果结构/Bell近邻
+- [§002强] 2611.17906 Indefinite causal order with definite Bohmian trajectories for the quantum switch — 不定因果序+Bohm诠释
+- [§002强] 2611.17948 Local Quantum Metrology: Precision Limits for Observers in QFT — QFT观测者/代数基础
+- [§002强] 2611.18001 The cone of states over time — 态锥/时间方向基础
+- [§002强] 2611.18135 Quantum Preparation without Disturbance — 测量-制备扰动权衡
+- [§002近邻] 2611.17749 Multitime Equilibration and Multitime Mpemba Effects — 多时间Mpemba/热化
+- [§002近邻] 2611.18037 Quantum kinetic uncertainty relations — 动力学不确定性关系/量子输运
+- [§002近邻] 2611.18503 Solution of the Qubit Marginal Problem from Fermionic Representability — 态可表示性
+- [§003近邻] 2611.17702 General linear groups in tangent categories — 切/微分范畴论
+- [§003近邻] 2611.18195 Stability theorems for ε-simplicial sets — 单纯/同伦组合
+- [§003近邻·交叉] 2611.18555 Towards invertibility of derived categories of sheaf-theoretic line operators — 层论sheaf命中/TQFT线算子
+- [§04强] 2611.17446 Effectively nuclear C*-algebras — 可计算核性C*
+- [§04强] 2611.18311 Nuclear dimension of uniform Roe algebras — Roe代数核维数/粗几何
+- [§04强] 2611.17636 A counterexample to Arveson's finiteness question for subdiagonal algebras — 非交换Hardy反例
+- [§04强] 2611.18328 Matrix ultraproducts have trivial fundamental group — 超积/vN近邻
+- [§04近邻] 2611.18178 Cartesian products of groups as quantum metric spaces — 量子度量空间/非交换几何
+- [能源高] 2611.18208 Consensus-Based Optimization of Path-Integral Free Energy for Model Predictive Control — 路径积分自由能+MPC
+- [能源中高] 2611.17653 Geometric PDEs of Hydrodynamic Type for Maps into F_man-Lie Groups — 流体动力学型几何PDE/李群
+- [能源中] 2611.18339 Control Invariance on Manifolds through Tangent Bundle Splitting — 切丛分裂控制不变性
+- [能源中] 2611.17470 Optimal heterogeneous diffusivity profiles for mean first-passage minimization — 乘性噪声扩散率设计
+- [能源中] 2611.18390 CS-MPC: Contraction-Certified Sampling-Based MPC — 收缩度量认证MPC
+- [量子·QEC] 2611.18192 Entropic quantum error correction for amplitude damping errors — 熵式QEC
+- [量子·AI] 2611.18504 Agentic AI for Discovering Fault-Tolerant Quantum Circuits — 智能体发现FTQC电路
+- [量子·可训练性] 2611.18378 Structure makes quantum circuits trainable — 结构与可训练性
+- [量子·耗散资源] 2611.18489 Dissipation as a Resource for Entanglement via High-Spin Mediator Purification — 耗散作纠缠资源
+- [AI·智能体] 2611.17338 When Should LLM Agents Forget? Memory Filtering — 智能体记忆过滤
+- [AI·自主RL] 2611.17790 AutoRL: A Multi-Agent System towards Autonomous Reinforcement Learning — 自主强化学习
+- [AI·可验证] 2611.17539 Verifiable pXRD: Hill-climbing pXRD Structure Determination with LLM Agents — 可验证结构判定
+- [AI·形式化] 2611.18220 From Pen-and-Paper to Machine-Checked Proofs: Lean for System Identification — Lean系统辨识
+- [AI·量子] 2611.17886 Quantum Graph Neural Networks: Architectures, Trainability, and Applications — 量子图神经网络
+
+## 2026-11-18（抓取批次 TUE 17 NOV 2026）
+- [§002强] 2611.18839 Universal Quantum Computation in a Wigner's Friend Framework — Wigner之友/观测者
+- [§002强] 2611.19570 Linear-optical nonlocality without postselection — Bell/无后选择非定域性
+- [§002强] 2611.20866 Randomized routing: ruling out classical networks without trusting source independence — 设备无关/源独立性
+- [§002强] 2611.21123 Stabilizer-Restricted Antidistinguishability in Quantum Computation with Magic States — PBR/反可区分性
+- [§002强] 2611.21371 Information Causality Defeats Every Finite NPA Level — 信息因果性/Bell层级
+- [§002强] 2611.21448 Plenitude of ideal correlations explains quantum theory — 量子理论重构
+- [§002强] 2611.21546 The speed limit of gravitational entanglement and the cost of noise — 引力-量子界面
+- [§002近邻] 2611.21239 What kind of quantum advantage is this? — 量子优势概念
+- [§002近邻] 2611.19395 Unruh-induced decoherence and entanglement degradation in Ramsey interferometry — Unruh退相干
+- [§002近邻] 2611.21417 Rethinking Entropic Uncertainty: measuring without a trace — 无迹测量熵不确定性
+- [§003近邻] 2611.19221 A Note on the Cosupport of Balmer-Favi Idempotents — 张量三角/Balmer谱
+- [§003近邻] 2611.19496 Maximality of the Dosen-Petric Boolean Category — 范畴逻辑
+- [§003近邻] 2611.19599 The Dedekind-MacNeille Completion as a Functor — 序完备化函子
+- [§003近邻·Gelfand相邻] 2611.20113 The dual of separated metric compact Hausdorff spaces is an infinitary variety of algebras — Gelfand对偶相邻
+- [§003近邻] 2611.20350 Relative involutions and inverses in monoidal dualities — 幺圆对偶
+- [§04强] 2611.20690 Kadison's open problem and R*-algebras — Kadison开问题/R*代数
+- [§04强] 2611.21549 Axioms for relative entropy — 相对熵公理化（跨§002）
+- [§04强] 2611.19453 A Quantum Metric Approach to Stabilizer Codes — 量子度量+稳定子码
+- [§04强] 2611.19920 Quantum Gromov-Hausdorff Convergence of Spectral Truncations — 非交换几何
+- [§04强] 2611.21139 Entropy of Noncommutative Spaces — 非交换空间熵
+- [§04强] 2611.20074 Property A and the identification of the maximal and reduced uniform Roe algebras — Roe代数/粗几何
+- [§04强] 2611.21255 Quasi-locality and weak containment for Roe algebras — Roe代数
+- [§04强] 2611.19171 Matricial stability and central corrections for generalized Jordan derivations on amenable C*-algebras — Jordan导子
+- [§04强] 2611.21234 Infinite projections and failure of pure infiniteness in simple nuclear C*-algebras — 纯无限性
+- [§04强] 2611.19855 Scaling Fourier Inequalities for Locally Compact Quantum Groups — 量子群
+- [§04强] 2611.19895 Diagonal and Fine Tower Dimensions — 塔维数/vN近邻
+- [能源高·HJB] 2611.21092 Stochastic control representations for extremal solutions of HJB Dirichlet problems — HJB极值解=极小粘性上解
+- [能源高·HJ] 2611.19088 Reliable Conditioned Hamilton-Jacobi Reachability via Subsolution Learning — HJ下解学习可达性
+- [能源高·PCH] 2611.19124 ANCHOR: A Port-Hamiltonian Model for Forecasting Team Dynamics — PCH团队动力学
+- [能源高] 2611.18923 Dual-Mode Extremum Seeking for a Class of Unknown Controlled Diffusions — 李括号平均+受控扩散极值寻优
+- [能源高] 2611.19524 Geodesics and a Hubble Relation in Nonstationary Thermodynamic Geometry — 热力学几何测地线/哈勃关系
+- [能源高近邻] 2611.20248 Logarithmic thermodynamic cost of prediction from rare observations — 预测的热力学代价/信息热力学
+- [能源近邻] 2611.20903 Noise-induced manifolds: reduction of slow-fast SDEs to switching processes — 慢快SDE噪声诱导流形
+- [能源近邻] 2611.20256 Continuous-Time Stochastic Contraction Induced by Common White Noise — 随机收缩
+- [能源近邻] 2611.20757 A Lifted Hessian-Riemannian Gradient Flow for LQR Synthesis under Passivity Constraints — 无源性LQR黎曼梯度流
+- [量子·QEC] 2611.21578 Resolving and Suppressing Temporally Correlated Noise in Quantum Error Correction — Willow时间关联噪声
+- [量子·QEC] 2611.20410 Rate-1/2 Quantum LDPC Codes for Multi-tier Superconducting Hardware — qLDPC码
+- [量子·形式验证] 2611.20342 Formally verified harness for Shor's order finding algorithm — Shor求阶形式验证
+- [AI·自改进] 2611.18856 Self-Improvement Memory Enables Continual Recursive Self-Improvement — 持续递归自改进
+- [AI·智能体] 2611.19122 Agent-Guided Process Verification for Mathematical Self-Correction — 数学自我修正
+
+## 2026-11-19（抓取批次 WED 18 NOV 2026）
+- [§002强] 2611.21740 A Proposal for Quantum Reference Frames in QFT and their Experimental Exploration — QRF提案+实验
+- [§002强] 2611.21768 Quantum Reference Frames, Locality, and Microcausality in Quantum Field Theory — QRF/微观因果性
+- [§002强] 2611.21840 Quantum-Classical Separation in Probability Distribution Transport via Nonlocal Games — 量子-经典分离
+- [§002强] 2611.22156 Quantum Causal Compatibility from Spatiotemporal Correlations — 量子因果相容性
+- [§002强] 2611.22893 Exact classical bounds of bipartite correlation Bell inequalities — Bell经典精确界
+- [§002强] 2611.22794 Time-Travel Paradox in a Bohmian Extension of Deutsch's Approach — Bohm/CTC时间旅行悖论
+- [§002强] 2611.22798 How can every physicist become a Bohmian — Bohm诠释
+- [§002强] 2611.23128 Causality, determinism and predictability — 因果性/决定论/可预测性
+- [§002近邻] 2611.21898 A Geometric Framework for Local-to-Global Symmetry — 局部到全局对称性几何框架
+- [§002近邻] 2611.22553 Predicting Quantum Mpemba Effects from Quantum Speed Limits — QSL预测Mpemba
+- [§002近邻] 2611.22630 Quantum speed limits from symmetries — 对称性QSL
+- [§003近邻] 2611.22843 Quantitative FS-domains over continuous t-norms — 域论/定量语义/t-范数
+- [§04强] 2611.23122 The Bessis Moussa Villani conjecture in finite von Neumann algebras — 有限vN代数BMV猜想
+- [§04强] 2611.22822 The metric theory of tracial matrix algebras does not converge — 迹矩阵代数量度理论
+- [§04强] 2611.21817 C*-algebras constructed using acyclic groups — 无圈群C*代数
+- [§04强] 2611.21776 Actions of quantum groups: standard implementation and relatively invariant weights — 量子群作用
+- [§04强] 2611.21871 Obstructions to Hadamard Deformations of Fourier Matrices — Hadamard形变障碍
+- [§04强] 2611.21667 Michelson and Logarithmic Operator Contractions — 迹扩张/谱几何/随机积
+- [§04交叉强近邻] 2611.22041 Quantum Born Geometries from Modular Quantization — 模量子化量子Born几何
+- [§04交叉近邻] 2611.23086 The Infinitesimal Covariant Stone-von Neumann Theorem — Stone-vN定理
+- [能源高] 2611.22712 Bypassing the Entropy Production Speed Limit of State-to-State Transitions with Adaptive Resetting — 自适应重置绕过熵产生速度极限
+- [能源高·HJ] 2611.22176 Decision Stability and Model Reduction for Hamilton-Jacobi Navigation in Multiscale Flows — HJ导航多尺度约化
+- [能源中高] 2611.21704 Sharp modified logarithmic Sobolev inequality for matrix-valued functions on spheres — 矩阵值log Sobolev锐界
+- [能源中高] 2611.22369 Explicit Dual Model Predictive Path Integral Control — 显式对偶MPPI
+- [能源中高] 2611.21837 Primal-Dual Kullback-Leibler Mirror-Prox for Dynamic Mean Field Games — KL Mirror-Prox动态MFG
+- [能源近邻] 2611.23008 Dynamical theory of the East model. II. A path-probability formalism — East模型路径概率
+- [能源近邻] 2611.23092 Memory kernel and closure for intermittent forcing with power-law waiting times — 记忆核
+- [能源近邻] 2611.23224 From nonlocal correlations to local symmetry breaking: crosscap states — 对称性破缺不对称性动力学
+- [量子·AI交叉] 2611.21765 AI Scientist Discovered Robust Quantum Control — AI科学家量子控制
+- [量子·QEC] 2611.23165 Teleportation of Logical Qubits using Lattice Surgery with Superconducting Circuits — 晶格手术逻辑比特隐形传态
+- [量子·QEC] 2611.22035 Magic state cultivation with lattice-surgery escape on superconducting hardware — 魔态培育
+- [量子·拓扑] 2611.23132 Non-equilibrium topological order from Floquet anyon proliferation in the toric code — Floquet非平衡拓扑序
+- [AI·自编辑] 2611.21885 Language Models Can Rewrite Their Own Weights — LLM重写自身权重
+- [AI·自改进] 2611.22299 Harnesses That Improve Themselves — 自改进Harness统一框架
+- [AI·自改进] 2611.21688 DeltaHarness: Self-Evolving Harnesses for Resource-Adaptive Tool Execution — 自进化Harness
+- [AI·自改进] 2611.21847 Inventa: Decentralized Self-Improving Agents for Autonomous Scientific Discovery — 去中心化自改进科学发现
+- [AI·智能体] 2611.22102 EvoDisco: Strategy Discovery for Evolving Agent Memory — 进化智能体记忆
+- [AI·形式化] 2611.22103 From Sorry to QED: Refining LLM Math Proofs via Angelic Execution — LLM数学证明精炼
+- [AI·治理] 2611.22075 Can You Undo It? Reversibility Classes for AI Agent Actions — 智能体动作可逆性分类
+- [量子+AI] 2611.21701 Hybrid Quantum Selection of Learning Rates in Language-Model Training — 混合量子学习率选择
