@@ -3825,3 +3825,39 @@
 - [AI·形式化] 2611.22103 From Sorry to QED: Refining LLM Math Proofs via Angelic Execution — LLM数学证明精炼
 - [AI·治理] 2611.22075 Can You Undo It? Reversibility Classes for AI Agent Actions — 智能体动作可逆性分类
 - [量子+AI] 2611.21701 Hybrid Quantum Selection of Learning Rates in Language-Model Training — 混合量子学习率选择
+
+## 2026-11-20（抓取批次 THU 19 NOV 2026）
+- [§002强] 2611.23418 Experimental constraints on gauge hidden-variable models in Bell tests — Bell实验/规范隐变量
+- [§002强] 2611.23462 Quantum Monge-Kantorovich optimal transport in spacetime via spatiotemporal Kirkwood-Dirac distributions — 时空量子最优输运
+- [§002强] 2611.24534 On a local hidden-variable model for postselected EPR correlations — LHV/后选择
+- [§002强] 2611.24604 Measurement-order dependence bounds uncertainty, contextuality, steering, and Bell nonlocality — 测量顺序统一界
+- [§002近邻] 2611.23566 Instrument indeterminacy: separating uncertainty in POVM effects — 仪器不定性
+- [§002近邻] 2611.24305 Quantifying extractable imaginarity with qubit triangles — 量子虚数性
+- [§002近邻] 2611.24311 A Convex-Roof Affinity-Square Measure of Quantum Imaginarity — 虚数性凸屋度量
+- [§002近邻] 2611.24473 Bound entanglement as a trigonometric moment problem — 束缚纠缠矩问题
+- [§002近邻] 2611.24603 No-Go Theorems for Ordered Universal Entanglement Purification — 有序提纯no-go
+- [§003近邻强] 2611.24690 An infinity-category approach to A_infinity-algebras and A_infinity-categories (Joyce, 312pp, Fukaya) — 高阶范畴专著
+- [§003近邻] 2611.23899 Categorified Koszul duality and deformation theory of higher categories — 范畴化Koszul对偶(交叉)
+- [§04强] 2611.24787 A Poisson boundary solution to Connes' bicentralizer conjecture and Kadison's problem on MASA — Connes双中心化子+Kadison MASA新证
+- [§04强] 2611.24617 On the Principle of Localization on Quasi-Orbits in Crossed Products — 交叉积拟轨道局部化
+- [§04交叉近邻] 2611.23556 Spectral Disks for Quantum Markov Generators — 量子马尔可夫生成元谱盘
+- [能源高] 2611.24024 Geometric Decomposition of Entropy Production Based on General f-Divergences — f-散度熵产生几何分解(信息几何直击)
+- [能源高] 2611.24898 When Time-Reversible Sensor Records Require Hidden Dissipation — 可逆记录的隐耗散
+- [能源高] 2611.23790 Finite-time stochastic resetting in bounded domains: energetic cost, optimal search — 重置能量代价与最优搜索
+- [能源中高] 2611.24318 Phase transitions in work fluctuations in correlated N-particle resets — 关联重置功涨落相变
+- [能源中高] 2611.24761 A Lions lift framework for gradient and Newtonian evolutions in Wasserstein spaces — Wasserstein空间Lions提升
+- [能源近邻] 2611.24454 Conditional Mean-Field Type LQ Optimal Control for Regime-Switching Diffusions — 均值场型LQ控制
+- [能源近邻] 2611.23603 Passivity Control for Synchronous Machine Systems using Battery, Field Current and Governor — 无源性控制
+- [能源近邻] 2611.24106 Laguerre-MPPI — Laguerre路径积分控制
+- [能源近邻] 2611.24863 Topological Properties of Cones with Small Entropy — 小熵锥拓扑(math.DG)
+- [能源近邻] 2611.23665 Wei-Norman Factorization of Frenet-Serret equations and the Cardan Lock — 李群因子分解
+- [能源近邻] 2611.23960 Blanket theory for dense networks — 稠密网络blanket理论
+- [量子·容错] 2611.24852 The limits of magic-state cultivation — 魔态培育极限
+- [量子·QEC] 2611.23762 Addressable transversal CCZ gates on almost good quantum LDPC codes — qLDPC横向CCZ
+- [量子·验证] 2611.24624 Instanton tunnelling as a verifiable benchmark for digital quantum simulation — 瞬子隧穿可验证基准
+- [量子·形式化] 2611.23469 QCCDCert: Formally Verified Compilation for QCCD Co-Design — 量子-经典协同设计形式验证
+- [AI·RSI治理] 2611.23476 GUARD: Stabilizing Recursive Self-Improvement with Regret Guidance — 后悔引导稳定RSI
+- [AI·权重编辑] 2611.23718 HypoLoop: Revising Weight-Editing Plans from Scientific Feedback — 科学反馈修正权重编辑
+- [AI·数学] 2611.23244 Goemans's Unsplittable-Flow Conjecture: The Anatomy of AI-Assisted Counterexample Discovery — AI辅助反例发现
+- [AI·可验证] 2611.23246 Chebyshev Polynomial Zonotope Abstractions for Certified Reachability — 认证可达性
+- [量子+AI] 2611.24290 Evolving Musical Mindsets in the Agentic Orchestra via Quantum Reinforcement Learning — 量子RL智能体乐团
