@@ -3861,3 +3861,41 @@
 - [AI·数学] 2611.23244 Goemans's Unsplittable-Flow Conjecture: The Anatomy of AI-Assisted Counterexample Discovery — AI辅助反例发现
 - [AI·可验证] 2611.23246 Chebyshev Polynomial Zonotope Abstractions for Certified Reachability — 认证可达性
 - [量子+AI] 2611.24290 Evolving Musical Mindsets in the Agentic Orchestra via Quantum Reinforcement Learning — 量子RL智能体乐团
+
+## 2026-11-21（抓取批次 FRI 20 NOV 2026）
+- [§002强] 2611.25188 Analytic and Numerical Investigation of a Proposed Non-linear Extension of Quantum Mechanics — 非线性QM延拓
+- [§002强] 2611.26198 The role of complementarity and quantum correlation in the uncertainty relations — 互补性/不确定性
+- [§002强] 2611.26340 Quantifying the irrealism required by quantum random access codes — 实在性/QRAC
+- [§002强] 2611.26371 Quantum Zeno Effect with a Superposed Measurement Schedule in Relational Time — 关系性时间Zeno
+- [§002强] 2611.26006 The influence of quantum scarring on the onset of Bohmian chaos — Bohm混沌/量子伤痕
+- [§002近邻] 2611.25341 Curvature-Calibrated Friction and an Exact Gauge Symmetry for Quantum Hamiltonian Descent — QHD规范对称性
+- [§002近邻] 2611.26315 All Non-Contextual Pauli Hamiltonians are Free-Fermion in Disguise — 语境性结构定理
+- [§002近邻] 2611.26300 A Tensor-Algebraic No-Go Theorem for HD Photonic GHZ States Discovered with AlphaProof Nexus — AI发现no-go
+- [§002近邻] 2611.25504 Remote Use of Quantum Machines in the Adversarial Scenario — 对抗远程量子机器
+- [§002近邻] 2611.25496 Convex splitting by binary quantum hypothesis testing — 二元量子假设检验凸分裂
+- [§002近邻] 2611.26139 Local-channel inequivalence within analytic symmetry-broken phases — 对称破缺局域信道不等价
+- [§04强] 2611.25392 Noncommutative Geometry, Spectral Asymptotics, and Semiclassical Analysis, II (Ponge) — 非交换几何谱渐近II
+- [§04强] 2611.25486 Invariance of Property (T) for Etale Groupoids — 群胚性质(T)不变性
+- [§04强] 2611.25616 Subfactor symmetries of real Hadamard matrices — 实Hadamard子因子对称
+- [§04强] 2611.25638 Invariants of subfactors associated to Petrescu's Hadamard matrices of order 7 — Petrescu Hadamard子因子不变量
+- [§04强] 2611.26288 Equivalences of C*-correspondence relations — C*-对应等价
+- [能源高] 2611.26295 Hamiltonian Potential Optimization for Partially Observed Stochastic Optimal Control — 哈密顿势优化部分可观测随机控制
+- [能源高] 2611.26267 Exact finite-time fluctuation-response relations for Markov processes: A martingale framework — 鞅框架精确有限时FDR
+- [能源中高] 2611.26406 Semi-global Convergence and Finite-Sample Error Bounds for Model Predictive Path Integral Control — MPPI收敛理论
+- [能源中高] 2611.25356 Data-Driven Hamiltonian Under Parametric Uncertainty — 参数不确定数据驱动哈密顿
+- [能源中高] 2611.25491 Dynamical Variational Theory of Stochastic Reaction Networks — 随机反应网络动力学变分理论
+- [能源近邻] 2611.25494 Koopman Lifting for Linear Encrypted Control of Nonlinear Systems — Koopman提升加密控制
+- [能源近邻] 2611.26381 Imaginary-Time Density Correlations Encode Quantum Entropy and Free Energy — 虚时关联编码熵/自由能
+- [能源近邻] 2611.26345 First-passage and correlated reset-count statistics under threshold and Poissonian resetting in a 2D wedge — 重置主题第三天
+- [能源近邻] 2611.25737 Supersymmetric Hilbert complexes and Witten deformation on stratified pseudomanifolds — Witten形变
+- [能源近邻] 2611.26394 Nonequilibrium Statistical Mechanics: Physical Concepts & Mathematical Tools — 非平衡统计力学专著
+- [能源近邻] 2611.25161 Small-Gain Analysis of Robust Event-Triggered Extremum Seeking — 极值寻优小增益
+- [量子·QEC] 2611.26329 Stitching Quantum Codes into Quilts: Universal Logic with no Ancillary Qubits — 码拼被无辅助比特普适逻辑
+- [量子·FT] 2611.25740 Parallel transversal entangling gates for fault-tolerant trapped-ion quantum computing — 离子阱并行横向纠缠门
+- [量子+AI] 2611.26241 Adaptive Hamiltonian Identification via Quantum Reinforcement Learning — 量子RL哈密顿辨识
+- [AI·自复制] 2611.25839 Self-Replicating Language Models — LLM自复制
+- [AI·Harness] 2611.25380 Beyond Weight Updates: Evolving Agent Harnesses for Domain Specialization — Harness进化
+- [AI·自进化] 2611.25534 How Feedback-Free Self-Evolution Reshapes Agent Skills — 无反馈自进化
+- [AI·形式化] 2611.26272 Paper2Lean: Agentic Autoformalization of Mathematical Research Papers at Scale — 规模化Lean自动形式化
+- [AI·安全] 2611.25325 Pandora's Toolbox Or Why Agent Safety Cannot Be Verified — 智能体安全不可验证性
+- [量子+AI] 2611.25450 Inverse ECG Reconstruction via a Preconditioned Variational Quantum Linear Solver — 变分量子线性求解器逆ECG
