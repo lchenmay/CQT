@@ -3899,3 +3899,37 @@
 - [AI·形式化] 2611.26272 Paper2Lean: Agentic Autoformalization of Mathematical Research Papers at Scale — 规模化Lean自动形式化
 - [AI·安全] 2611.25325 Pandora's Toolbox Or Why Agent Safety Cannot Be Verified — 智能体安全不可验证性
 - [量子+AI] 2611.25450 Inverse ECG Reconstruction via a Preconditioned Variational Quantum Linear Solver — 变分量子线性求解器逆ECG
+
+## 2026-11-24（抓取批次 MON 23 NOV 2026）
+- [§002强] 2611.26705 Certification of non-stabilizerness in multi-qubit systems via worst-case random access codes — 非稳定子性认证/RAC
+- [§002强·能源] 2611.26737 Entropy production from crossing a quantum separatrix — 量子分离线熵产生
+- [§002强] 2611.27413 Explicit construction of the normal cone at every nonlocal extreme behaviour of Q2222 — Bell多面体法锥
+- [§002强] 2611.27548 Communication advantages of a quantum switch of two pure-loss channels — 量子开关不定因果序
+- [§002近邻] 2611.27034 Generalized Wigner-Yanase Uncertainty Bounds for Multiple Quantum Channels — 多信道不确定性界
+- [§002近邻] 2611.27650 Emergent Causality of Macroscopic Transport and Equilibration in Long-Range Quantum Systems — 涌现因果性
+- [§002近邻] 2611.27300 Symplectic Matroids, Stabilizer Codes, and Quantum Secret-Sharing — 辛拟阵/稳定子码
+- [§002§04近邻] 2611.27769 Quantum conditional relative entropy and quasi-factorization — 量子条件相对熵拟因子化
+- [§003真命中] 2611.27280 Bridging Badiou's Gaps: Topos Theory and the Bodies of Mathematical Expression (Veilahti, 67pp) — Grothendieck topos重构Cohen力迫法
+- [§04强] 2611.27204 Rigidity in the Lichnerowicz inequality for word-length semigroups (Wirth) — 词长半群Lichnerowicz刚性
+- [§04强] 2611.27471 On the AF embedding problem (Schafhauser) — AF嵌入问题
+- [§04强] 2611.27892 Critical Ising and Temperley-Lieb-Jones States: Cone Haag Duality (Evans) — 锥Haag对偶
+- [§04强近邻] 2611.26647 Nonlinear anti-Lie-type centralizers on *-algebras — 反Lie中心化子(交叉)
+- [§04交叉近邻] 2611.27776 Riemannian Curvature Functionals for de Rham Spectral Triples — 谱三轮曲率泛函(math.DG)
+- [能源高] 2611.26802 Nonholonomic Event-Triggered Source Seeking — 非完整事件触发源寻优
+- [能源中高] 2611.27406 Sharp state complexity and geometric obstructions for reversible chains — 可逆链态复杂度几何障碍
+- [能源中高] 2611.26873 Inexact Proximal Method on Hadamard Manifolds — Hadamard流形不精确邻近方法
+- [能源中高] 2611.27846 Pseudo-entropy in Thouless Pumps and Majorana Topological Phases — Thouless泵浦伪熵
+- [能源近邻] 2611.26753 Geometric properties of Wilsonian flows of periodic potentials in two dimensions — Wilson流几何
+- [能源近邻] 2611.26704 Large deviations, effective dynamics, and dynamical phase transitions in random maps — 随机映射大偏差
+- [能源近邻] 2611.27595 Planar Formation Control with Minimal Sensing and No Common Orientation: Almost-Global — 几何编队控制
+- [能源近邻] 2611.27771 Stochastic Extragradient Methods Beyond Lipschitz Continuity — 随机extragradient
+- [量子·形式化] 2611.27359 Trotter Error Bounds in Lean 4: Fourth-Order Suzuki Formula — Lean4形式化Trotter误差
+- [量子·模拟] 2611.27896 Optimised 8th-Order Trotter-Suzuki Schemes for Quantum Simulation — 八阶Trotter优化
+- [量子·综合] 2611.27640 Ancilla-Free Exact Dicke-State Synthesis with Optimal Size and Depth — 无辅助Dicke态合成
+- [量子+AI] 2611.27815 Autonomous quantum machine learning via Riemannian gradient-based optimization — 黎曼梯度自主QML
+- [量子+AI] 2611.27871 World Models for Learning Quantum Many-Body Dynamics — 量子世界模型
+- [AI·RSI] 2611.27116 CoEvoBench: Can LLMs Drive Recursive Co-Evolution of Agentic Systems? — 递归协同进化基准
+- [AI·RSI] 2611.26910 AstronautBench: Measuring Agent Self-Improvement Across Episodes — 跨回合自改进度量
+- [AI·权重空间] 2611.27089 Writing Weights or Training Them? Spatial Reasoning through Weight-Space Programming and LoRA — 权重空间编程
+- [AI·治理] 2611.27260 No Perfect Guardrail & No Perfect Guard: Decidability of Output Policies for LLMs — 输出策略可判定性
+- [AI·几何] 2611.27167 BusemannFormer: Horospherical Self-Attention for Hyperbolic Graph Transformers — 双曲几何注意力
