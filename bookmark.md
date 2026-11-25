@@ -3977,3 +3977,45 @@
 - [AI·RSI] 2611.28420 Diversity over Scale: RSI with Ensembles of Small Open-Weight Models — 小模型集成RSI
 - [AI·权重写入] 2611.28483 Don't Train It, Write It: An AI Agent Writes New Capabilities into Language Model Weights — 智能体写权重(四日线)
 - [AI·安全] 2611.28341 When Tools Fail, Agents Fabricate: Silent Failure and Verification-First Oversight — 工具失败智能体编造
+
+## 2026-11-26（抓取批次 WED 25 NOV 2026）
+- [§002强] 2611.31247 A Causal Schrodinger-Newton Theory that Conserves Energy and Momentum — 因果Schrödinger-Newton理论
+- [§002强] 2611.31304 Beyond Quantum Mechanics: From Nonlinear to Emergent and Solitonic Approaches — 超越QM涌现孤子
+- [§002强] 2611.32237 The role of composition rules in an axiomatic derivation of quantum mechanics — QM公理化合成规则
+- [§002强] 2611.31365 Certifying closed labs in device-independent tests of indefinite causality — DI不定因果封闭实验室
+- [§002近邻] 2611.32498 The infinite-dimensional extended Bloch representation — 无穷维延拓Bloch表示
+- [§002近邻] 2611.32578 Phase information and measurement in the Stochastic-Quantum correspondence — 随机-量子对应相位信息
+- [§002近邻] 2611.32358 Quantum Coherence and Basis-Dependent Correlations — 相干性与基依赖关联
+- [§002近邻] 2611.31941 Hybrid correlation generation with finite shared randomness — 有限共享随机混合关联
+- [§002近邻] 2611.31832 From outcome exclusion to measurement simulation — 结果排除到测量模拟
+- [§002近邻] 2611.31375 Spinal reflected entropy reveals logical magic — 脊反射熵揭示逻辑魔
+- [§003真命中] 2611.31809 The Borel Topos (math.LO交叉) — Borel Topos
+- [§003§04强交叉] 2611.32363 Monadicity of noncommutative measurable spaces over C*-algebras — 非交换可测空间单子性(Gelfand对偶topos化)
+- [§003近邻] 2611.33107 An internal approach to symmetric monoidal (infty,n)-categories — 内部对称幺圆高阶范畴
+- [§003近邻] 2611.33152 Abelian envelopes and quantum groups in Knop's interpolation categories — Knop插值范畴
+- [§04强] 2611.31425 Disjointness, Orthogonality and Commutativity in C*-Algebras — C*不交性正交性
+- [§04强] 2611.32121 Algebraic derivations and the first L2-cohomology of free group factors — 自由群因子L2上同调
+- [§04强] 2611.32364 On local embeddability into C*(F_infinity) — 局部嵌入自由群C*代数
+- [§04强] 2611.32953 The Universal Frame Characterization of C*-algebras — 泛框刻画
+- [§04交叉近邻] 2611.31538 Heisenberg calculus equivalent index theorem — Heisenberg演算指标定理(math.FA)
+- [能源高·HJB] 2611.31830 Viscosity Solutions of HJB Integro-Differential Equations with Non-Lipschitz Running Costs — HJB粘性解字面命中
+- [能源高·Brownian] 2611.32038 Exact Response Theory based on Karhunen-Loeve Expansions for Brownian Oscillators — 布朗振子KL展开精确响应
+- [能源高] 2611.32130 Network topology imposes spectral constraints on collective nonequilibrium responses — 网络拓扑谱约束非平衡响应
+- [能源中高] 2611.32785 Mirror flow for semimartingale optimal transport — 半鞅OT镜像流·信息几何
+- [能源中高] 2611.32061 Optimal Weighted Volume Dissipativity and Sobolev Regularity — 最优体积耗散性
+- [能源近邻·HJ] 2611.32774 Contract2Reach: Contractive DP for High-Dimensional Hamilton-Jacobi Reachability — HJ可达性收缩DP
+- [能源近邻] 2611.31764 Gaussian Process Data-Driven Hamiltonian for Probabilistic Safe Set Construction — GP数据驱动哈密顿
+- [能源近邻] 2611.32934 Entanglement Asymmetry and the Quantum Mpemba Effect in Inhomogeneous Quenches — 纠缠不对称量子Mpemba
+- [能源近邻] 2611.32992 Energy transport from an active medium — 活性介质能量输运
+- [能源近邻] 2611.31303 Exact nonstationary heat-excess statistics in weakly asymmetric KMP model — KMP热超额统计
+- [能源近邻] 2611.32961 Anomalous front propagation with memory-dependent resetting — 记忆重置主题第4次
+- [量子·资源] 2611.31585 How Small Can a Single Shor Run Be? Limits for secp256k1 — Shor资源极限
+- [量子·规划] 2611.31514 Blueprint for DOE Quantum Supercomputing — DOE量子超算蓝图
+- [量子+几何] 2611.31534 All-electronic geometric phase gate on Doppler-cooled trapped ions — 全电子几何相位门
+- [量子+AI] 2611.32000 QuOptLab: Advancing Quantum Optics Experiments with an AI Agent — AI智能体量子光学实验
+- [AI·治理] 2611.31284 Irreducible Governance Structure for Autonomous Agent Systems — 智能体治理公理化
+- [AI·治理] 2611.31610 Monitorable-by-design architectures for a post-Astra world — 可监控性设计架构
+- [AI·RSI] 2611.31621 Self-Improving Long-Horizon Reasoning by Learning Summaries — 摘要学习长程自改进
+- [AI·Harness] 2611.31794 AGL-SKILL: Coding Harnesses as Agentic Optimizers — 编码Harness智能体优化器
+- [AI·形式化] 2611.31571 Safe Autoformalization with Entailment Graphs — 蕴含图安全自动形式化
+- [AI·几何] 2611.31680 Curvature-Equilibrated Policy Optimization for Deep RL — 曲率均衡策略优化
