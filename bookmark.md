@@ -3933,3 +3933,47 @@
 - [AI·权重空间] 2611.27089 Writing Weights or Training Them? Spatial Reasoning through Weight-Space Programming and LoRA — 权重空间编程
 - [AI·治理] 2611.27260 No Perfect Guardrail & No Perfect Guard: Decidability of Output Policies for LLMs — 输出策略可判定性
 - [AI·几何] 2611.27167 BusemannFormer: Horospherical Self-Attention for Hyperbolic Graph Transformers — 双曲几何注意力
+
+## 2026-11-25（抓取批次 TUE 24 NOV 2026）
+- [§002强] 2611.28506 Subquantum Pilot-Wave System Theory: Structural and Amplitude Nonequilibrium under Source Fields — 亚量子导波非平衡
+- [§002强] 2611.28361 Incompressible quantum information — 不可压缩量子信息
+- [§002强] 2611.28674 Quantum nonclassicality as a marginal problem — 非经典性边际问题
+- [§002强] 2611.29626 Network contextuality beyond binary outcomes — 网络语境性
+- [§002近邻] 2611.30969 Wigner negativity costs phase-space area: Lieb-Solovej refinement at Renyi 1/2 — Wigner负性相空间面积
+- [§002近邻] 2611.30038 Super-Multiplicativity of the Noncommutative Minimum — 非交换极小值超可乘性
+- [§002近邻] 2611.28837 Holevo-Bounded Total Information from Pair Distributions — Holevo界总信息
+- [§002近邻] 2611.30260 Privacy-Enhanced Distributed Sensing via Causal-Order Switching — 因果序开关传感
+- [§002近邻] 2611.30656 Quantifying superposition via coherence by stochastic orthogonalization — 叠加态量化
+- [§002近邻] 2611.28478 Causal Consistency and Cost of Quantum Control — 因果一致性与控制代价
+- [§002近邻] 2611.29134 Undecidable quantum storage — 不可判定量子存储
+- [§04强] 2611.29761 The Kaplansky-Aupetit conjecture for C*-algebras — Kaplansky-Aupetit猜想
+- [§04强] 2611.31147 C*(F2xF2) fails the local lifting property — LLP失败
+- [§04强] 2611.28337 Computability of states and non-computability of traces — 态可计算/迹不可计算
+- [§04强] 2611.29535 Finiteness for Commuting Squares and Quantitative Ocneanu Rigidity — Ocneanu定量刚性
+- [§04强] 2611.30520 Two-Dimensional Local Smoothing in Noncommutative Spaces — 非交换空间局部光滑
+- [§04强] 2611.30400 Morita equivalence classification for irrational noncommutative solenoids — 非交换螺线管Morita分类
+- [§04强] 2611.30882 Trace-class perturbations of Voiculescu's free semicircular families — 自由半圆迹类扰动
+- [§04强] 2611.30036 Extension of non-faithful and non-normal traces to affiliated operators — 迹扩张
+- [§04强] 2611.29924 Orthogonal lifting and amenability in ultrapowers — 超幂正交提升
+- [§04强] 2611.28428 Similarity preserving noncommutative maps — 相似保持非交换映射
+- [§04交叉近邻] 2611.29488 Unveiling the Action of Randomized Compiling on Quantum States: A Geometric Perspective — 随机编译几何视角
+- [§04交叉近邻] 2611.30744 Geometric properties of concatenated geometric and holonomic quantum gates — 级联和乐量子门几何
+- [能源高] 2611.30053 Trajectory arclength reveals thermodynamic criticality — 轨迹弧长揭示热力学临界性
+- [能源高] 2611.31007 Fast-erasure energy-cost lower bound and first-order correction under restricted control — 快速擦除能量代价
+- [能源高] 2611.28623 Neural Schrodinger Bridge via Yasue Action with Applications to Generative Modeling — Yasue作用量Schrödinger桥
+- [能源中高] 2611.28874 Time-Reversed Task Events and Thermodynamic Bounds for Stochastic Thermal Machines — 时间反转热机界
+- [能源中高] 2611.29443 Controlled nonstationary G-diffusions: DP, weighted Harris contraction — G-扩散动态规划
+- [能源近邻] 2611.29174 Informational interpretation of the reverse nonequilibrium molecular dynamics — 信息论逆NEQ动力学
+- [能源近邻] 2611.28810 Learning free energy across a differentiable temperature range by deep generative modeling — 生成模型学自由能
+- [能源近邻] 2611.31203 Tropical Geometry-based ReLU Lyapunov Function and Controller Synthesis — 热带几何Lyapunov
+- [能源近邻] 2611.29736 Superpotentials for F-manifolds and bi-flat F-structures on orbit spaces of reflection groups — F-流形超势
+- [能源近邻] 2611.29403 Fixed-Time Heat Kernel Integrals on Flat Tori: finer invariant than heat trace — 热核积分不变量
+- [能源近邻] 2611.28568 Superintegrable Systems and the Tractor Connection — 超可积系统Tractor联络
+- [量子+AI] 2611.31158 Reducing RSA-2048 Factoring Resources Below One Billion Toffolis via LLM-Driven Verifiable Quantum Compilation — LLM驱动可验证量子编译
+- [量子·复杂度] 2611.31236 Two messages suffice for quantum interactive proof systems — 两消息量子交互证明
+- [量子·QEC] 2611.28944 Non-Abelian Twist Defects in Bivariate Bicycle Codes — BBC码非阿贝尔扭缺陷
+- [AI·RSI] 2611.28239 FinEvo: Recursive Self-Improvement for Long-Horizon Financial Modeling — 金融RSI
+- [AI·RSI] 2611.28244 Demystifying the Autoresearch Harness — 自研究Harness解构
+- [AI·RSI] 2611.28420 Diversity over Scale: RSI with Ensembles of Small Open-Weight Models — 小模型集成RSI
+- [AI·权重写入] 2611.28483 Don't Train It, Write It: An AI Agent Writes New Capabilities into Language Model Weights — 智能体写权重(四日线)
+- [AI·安全] 2611.28341 When Tools Fail, Agents Fabricate: Silent Failure and Verification-First Oversight — 工具失败智能体编造

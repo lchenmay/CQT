@@ -1,6 +1,6 @@
-## 📅 2026-11-24 CQT 研究前沿动态
+## 📅 2026-11-25 CQT 研究前沿动态
 
-> 抓取批次：**MONDAY, 23 NOVEMBER 2026**（美东 11-23 20:00 EST 公告 ≈ 北京 11-24 09:00）。本报告北京运行日 2026-11-24。注：上次成功批为 FRI 20 NOV（11-21 运行），周末及周一为三次占位。本批意外为小批量（周末未见提交积压）。ID 前缀 `2611.*`，编号约 26647–27975。
+> 抓取批次：**TUESDAY, 24 NOVEMBER 2026**（美东 11-24 20:00 EST 公告 ≈ 北京 11-25 09:00）。本报告北京运行日 2026-11-25。注：上次成功批为 MON 23 NOV（11-24 运行）。本期为大批次日（quant-ph 110 新、math.DG 53 新、math.OA 12 新、cs.LG 220 新）。ID 前缀 `2611.*`，编号约 28023–31236。
 
 ### 一、arXiv 基础与物理哲学追踪
 
@@ -8,92 +8,98 @@
 
 | 核心 | 新/总 | 扩展 | 新/总 |
 |---|---|---|---|
-| quant-ph | 51 / 394 | math.DG | 16 / 104 |
-| hep-th | 17 / 180 | math.OC | 21 / 139 |
-| gr-qc | 11 / 136 | eess.SY | 18 / 133 |
-| math-ph | 8 / 101 | math.CT | 1 / 5 |
-| | | cond-mat.stat-mech | 13 / 80 |
-| | | math.OA | 3 / 24 |
-| | | cs.AI | 87 / 679 |
-| | | cs.LG | 96 / 691 |
+| quant-ph | 110 / 504 | math.DG | 53 / 157 |
+| hep-th | 35 / 215 | math.OC | 45 / 184 |
+| gr-qc | 45 / 181 | eess.SY | 39 / 172 |
+| math-ph | 30 / 131 | math.CT | **0** / 5 |
+| | | cond-mat.stat-mech | 18 / 98 |
+| | | math.OA | 12 / 36 |
+| | | cs.AI | 172 / 851 |
+| | | cs.LG | 220 / 911 |
 
-**量子基础与解释（§002）子区块（8 篇，4 强命中）**
-- 2611.26705《Certification of non-stabilizerness in multi-qubit systems via worst-case random access codes》— 用最坏情形随机存取码认证多比特非稳定子性，§002 强（资源认证/RAC）。
-- 2611.26737《Entropy production from crossing a quantum separatrix》— 穿越量子分离线的熵产生，§002 强（量子-热力学交叉，跨能源方向）。
-- 2611.27413《Explicit construction of the normal cone at every nonlocal extreme behaviour of Q₂₂₂₂ and device-independent applications》— Q₂₂₂₂ 每个非局域极端行为的法锥显式构造 + 设备无关应用，§002 强（Bell 多面体几何）。
-- 2611.27548《Communication advantages of a quantum switch of two pure-loss channels》— 双纯损耗信道量子开关的通信优势，§002 强（不定因果序）。
-- 2611.27034《Generalized Wigner-Yanase Uncertainty Bounds for Multiple Quantum Channels》— 多量子信道的广义 Wigner-Yanase 不确定性界，§002 近邻。
-- 2611.27650《Emergent Causality of Macroscopic Transport and Equilibration in Long-Range Quantum Systems》— 长程量子系统宏观输运/平衡的涌现因果性，§002 近邻。
-- 2611.27300《Symplectic Matroids, Stabilizer Codes, and Quantum Secret-Sharing》— 辛拟阵、稳定子码与量子秘钥共享，§002 近邻（数学-量子结构）。
-- 2611.27769《Quantum conditional relative entropy and quasi-factorization》— 量子条件相对熵与拟因子化，§002 近邻且 §04 近邻（非交换熵结构）。
+**量子基础与解释（§002）子区块（11 篇，4 强命中）**
+- 2611.28506《Subquantum Pilot-Wave System Theory: Structural and Amplitude Nonequilibrium under Source Fields》— 亚量子导波系统理论：源场下的结构与振幅非平衡，§002 强（Bohm/导波非平衡理论）。
+- 2611.28361《Incompressible quantum information》— 不可压缩量子信息，§002 强（新信息概念）。
+- 2611.28674《Quantum nonclassicality as a marginal problem》— 量子非经典性作为边际问题，§002 强（Bell 型非经典结构）。
+- 2611.29626《Network contextuality beyond binary outcomes》— 超越二元结果的网络语境性，§002 强（语境性网络）。
+- 2611.30969《Wigner negativity costs phase-space area: A conjectured refinement of the Lieb–Solovej inequality at Rényi order one half》— Wigner 负性占用相空间面积：Rényi ½ 阶 Lieb–Solovej 精炼猜想，§002 近邻（相空间基础，跨能源/几何）。
+- 2611.30038《Super-Multiplicativity of the Noncommutative Minimum and Applications to Quantum Privacy and Hypothesis Testing》— §002 近邻（非交换信息论）。
+- 2611.28837《Holevo-Bounded Total Information from Pair Distributions of Alternative Quantum Measurements》— §002 近邻。
+- 2611.30260《Privacy-Enhanced Distributed Sensing Network via Causal-Order Switching and Probe Squeezing》— §002 近邻（不定因果序传感）。
+- 2611.30656《Quantifying superposition via coherence by stochastic orthogonalization》— §002 近邻（叠加态量化）。
+- 2611.28478《Causal Consistency and Cost of Quantum Control》— §002 近邻；2611.29134《Undecidable quantum storage》— §002 近邻（可计算性/基础）。
 
-**§003-type-topos 映射（1 新 — 真 topos 命中）**
-- 2611.27280《Bridging Badiou's Gaps: Topos Theory and the Bodies of Mathematical Expression》（Antti Veilahti，67 页）— 在 Grothendieck 拓扑斯与 Kripke-Joyal 语义框架下重构 Cohen 力迫法，跨 math.CT/math.HO/math.LO，**§003 真命中**（建档以来罕见的直接以 Grothendieck topos 为核心方法论的论文，哲学-数学交叉）。
+**§003-type-topos 映射（空窗，0 新）**
+- math.CT 本期**零新提交**（4 交叉 + 5 替换），无真 topos。交叉 2611.28921（滤子作为网的局部化）、2611.30197（有向 Van Kampen 的同伦解读）可作近邻弱跟进。趣味注记：替换列表中出现 1301.1203《Alain Badiou's Mistake: Two Postulates of Dialectical Materialism》，与昨日 §003 真命中 27280（Badiou-topos 论文）形成直接对话。
 
-**§04-Gelfand 映射（3 新全强 + 2 交叉）**
-- 2611.27204《Rigidity in the Lichnerowicz inequality for word-length semigroups》（Melchior Wirth）— 词长半群 Lichnerowicz 不等式的刚性，§04 强（非交换谱/几何）。
-- 2611.27471《On the AF embedding problem》（Christopher Schafhauser）— AF 嵌入问题，§04 强（经典开问题）。
-- 2611.27892《Critical Ising and Temperley-Lieb-Jones States: Cone Haag Duality and the Trivial Algebra Object》（David E Evans）— 临界 Ising 与 TLJ 态的锥 Haag 对偶，§04 强（OA×代数量子场论）。
-- 交叉 2611.26647《*-代数上的非线性反 Lie 型中心化子》（§04 强近邻）；交叉 2611.27776《Riemannian Curvature Functionals for de Rham Spectral Triples》（math.DG，谱三轮曲率泛函，§04 近邻·DG-OA 交叉）。
+**§04-Gelfand 映射（大批次：12 新全命中，10 强）**
+- 2611.29761《The Kaplansky-Aupetit conjecture for C*-algebras》— Kaplansky-Aupetit 猜想，§04 强（**猜想攻坚**）。
+- 2611.31147《C*(𝔽₂×𝔽₂) fails the local lifting property》— 自由群积 C* 代数 LLP 失败，§04 强。
+- 2611.28337《Computability of states and non-computability of traces》— 态的可计算性与迹的不可计算性，§04 强（**可计算性×OA 新交叉**）。
+- 2611.29535《A Finiteness Result for Commuting Squares and Quantitative Ocneanu Rigidity》— 交换方形有限性 + 定量 Ocneanu 刚性，§04 强。
+- 2611.30520《Two-Dimensional Local Smoothing in Noncommutative Spaces and Its Applications》— 非交换空间二维局部光滑，§04 强（NCG×PDE）。
+- 2611.30400《Morita equivalence classification for irrational noncommutative solenoids》— 无理非交换螺线管 Morita 等价分类，§04 强。
+- 2611.30882《Trace-class perturbations of Voiculescu's free semicircular families》— 自由半圆族的迹类扰动，§04 强（自由概率）。
+- 2611.30036《On the extension of non-faithful and non-normal traces of von Neumann algebras to their affiliated operators》— §04 强；2611.29924《Orthogonal lifting and amenability in ultrapowers》— §04 强；2611.28428《Similarity preserving noncommutative maps》— §04 强。
+- 近邻 2611.30109（平方零保持子与迹态）、2611.28903（左右算子分裂中的套代数）；交叉 quant-ph 2611.29488《随机编译作用于量子态：几何视角》（§04 近邻）、2611.30744《级联几何与和乐量子门的几何性质》（DG×量子）。
 
-**bookmark 入库**：见 `c:/Dev/CQT/bookmark.md` 新增 `## 2026-11-24` 节（共 32 条，按 ID 去重）。
+**bookmark 入库**：见 `c:/Dev/CQT/bookmark.md` 新增 `## 2026-11-25` 节（共 41 条，按 ID 去重）。
 
 ### 二、随机热力学与几何控制核心推荐
 
-**[高·1] 2611.26737 — Entropy production from crossing a quantum separatrix（穿越量子分离线的熵产生）**
-- 检索来源：quant-ph（新 51 篇之一）。
-- 核心突破：刻画量子系统穿越分离线（separatrix，相空间分水岭）时产生的熵产生——经典相空间几何结构（分界线）与量子非平衡耗散的直接接口。
-- 数学模型：量子相空间分离线 + 熵产生泛函，热力学量在几何分界处的标度。
-- 关联度：高（**非平衡耗散 + 相空间几何直击**，同时为 §002 强命中）。
+**[高·1] 2611.30053 — Trajectory arclength reveals thermodynamic criticality（轨迹弧长揭示热力学临界性）**
+- 检索来源：cond-mat.stat-mech（新 18 篇之一）。
+- 核心突破：用随机轨迹弧长这一纯几何量识别热力学临界性——路径几何特征作为临界行为的探测器。
+- 数学模型：轨迹弧长泛函 + 热力学临界性标度，路径空间几何度量。
+- 关联度：高（**路径几何 × 热力学直击**，随机热力学几何化主线）。
 
-**[高·2] 2611.26802 — Nonholonomic Event-Triggered Source Seeking（非完整事件触发源寻优）**
-- 检索来源：math.OC（新 21 篇之一）。
-- 核心突破：把极值寻优（source seeking）推广到**非完整约束**（nonholonomic）系统并配事件触发——几何力学约束结构 × 无模型优化 × 事件触发控制三合一。
-- 数学模型：非完整约束系统（Chaplygin/Brockett 型）+ 极值寻优反馈 + 事件触发机制。
-- 关联度：高（非完整几何力学是几何控制核心域，与李括号平均化主线直接相关）。
+**[高·2] 2611.31007 — Fast-erasure energy-cost lower bound and its first-order correction under restricted control（受限控制下快速擦除能量代价下界及一阶修正）**
+- 检索来源：cond-mat.stat-mech（新 18 篇之一）。
+- 核心突破：受限控制下快速擦除的不可逆能量代价下界并给出一阶修正——Landauer 极限的有限时间/受限控制精化。
+- 数学模型：快速擦除协议 + 能量代价下界 + 受限控制一阶微扰修正。
+- 关联度：高（非平衡耗散 + 信息-能量转换核心主题）。
 
-**[中高·3] 2611.27406 — How many states does an exact relaxation model need? Sharp state complexity and geometric obstructions for reversible chains（精确弛豫模型需要多少态？可逆链的锐态复杂度与几何障碍）**
-- 检索来源：cond-mat.stat-mech（新 13 篇之一）。
-- 核心突破：给出可逆马尔可夫链精确弛豫模型的锐态复杂度下界及**几何障碍**刻画——弛豫动力学与状态空间几何的定量接口。
-- 数学模型：可逆马尔可夫链 + 弛豫时间谱隙 + 几何障碍（状态空间嵌入障碍）。
-- 关联度：中高（弛豫/耗散动力学 × 几何结构）。
+**[高·3] 2611.28623 — Neural Schrödinger Bridge via Yasue Action with Applications to Generative Modeling（经 Yasue 作用量的神经 Schrödinger 桥及其生成建模应用）**
+- 检索来源：math.OC（新 45 篇之一）。
+- 核心突破：以 Yasue 最小作用量原理构建神经 Schrödinger 桥——熵正则随机最优输运的变分-几何新算法。
+- 数学模型：Schrödinger 桥（熵正则随机最优输运）+ Yasue 作用量 + 神经参数化。
+- 关联度：高（随机最优输运/熵几何 + 最小作用量原理，Hamilton-Jacobi 近邻路线）。
 
-**[中高·4] 2611.26873 — Inexact Proximal Method on Hadamard Manifolds（Hadamard 流形上的不精确邻近方法）**
-- 检索来源：math.OC（新 21 篇之一）。
-- 核心突破：Hadamard 流形（负曲率完备流形）上不精确邻近点算法的收敛理论，非欧几何优化的误差容忍分析。
-- 数学模型：CAT(0)/Hadamard 流形 + 不精确邻近算子 + 收敛率分析。
-- 关联度：中高（黎曼/非欧优化，信息几何近邻）。
+**[中高·4] 2611.28874 — Time-Reversed Task Events and Thermodynamic Bounds for Stochastic Thermal Machines（时间反转任务事件与随机热机的热力学界）**
+- 检索来源：cond-mat.stat-mech（新 18 篇之一）。
+- 核心突破：用时间反转任务事件刻画随机热机性能的热力学界。
+- 数学模型：时间反演对称性 + 随机热机效率/功率界。
+- 关联度：中高（随机热力学核心——热机界）。
 
-**[中高·5] 2611.27846 — Pseudo-entropy in Thouless Pumps and Majorana Topological Phases（Thouless 泵浦与马约拉纳拓扑相中的伪熵）**
-- 检索来源：cond-mat.stat-mech（新 13 篇之一）。
-- 核心突破：把伪熵（pseudo-entropy，复化熵）用于 Thouless 泵浦与马约拉纳拓扑相——熵-拓扑结构的量子物质接口。
-- 数学模型：伪熵（复化密度矩阵 Rényi 熵）+ 拓扑泵浦 + 马约拉纳零模。
-- 关联度：中高（熵泛函 × 拓扑物质，量子-热力学交叉）。
+**[中高·5] 2611.29443 — Controlled nonstationary G-diffusions: dynamic programming, weighted Harris contraction and entrance risk（受控非平稳 G-扩散：动态规划、加权 Harris 收缩与进入风险）**
+- 检索来源：math.OC（新 45 篇之一）。
+- 核心突破：非平稳 G-扩散（次线性增长扩散）受控问题的动态规划 + 加权 Harris 收缩理论。
+- 数学模型：G-扩散 SDE + DP/HJB 型方程 + Harris 遍历收缩。
+- 关联度：中高（随机最优控制 + 遍历理论几何权重）。
 
-> 本批无字面命中 "Brownian Gyrator" / "Geometric Ratchet" / "Net Energy Exchange" / "HJB" / "PCH"；但 2611.26737"量子分离线熵产生"为非平衡耗散×几何的强概念命中。近邻另有：2611.26753（二维周期势 Wilson 流的几何性质，RG×几何）、2611.26704（随机映射的大偏差/有效动力学/动力学相变）、2611.27595（最小感知无共同朝向的平面编队控制：几乎全局结果，几何控制）、2611.27771（超越 Lipschitz 的随机 extragradient）、2611.27776（谱三轮曲率泛函，DG×OA）。
+> 本批无字面命中 "Brownian Gyrator" / "Geometric Ratchet" / "Net Energy Exchange" / "HJB" / "PCH"；但轨迹弧长热力学临界性（30053）与快速擦除能量代价（31007）为非平衡耗散×几何的强概念命中。近邻另有：2611.29174（逆非平衡分子动力学的信息论解读）、2611.28810（跨可微温度范围学习自由能的深度生成建模）、2611.31203（热带几何 ReLU Lyapunov 函数与控制器合成，eess.SY）、2611.29736（反射群轨道空间上的 F-流形超势与双平坦 F-结构，math.DG·Frobenius 流形）、2611.29403（平坦环面固定时间热核积分：比热迹更细的不变量）、2611.28568（超可积系统与 Tractor 联络，几何力学）、2611.30786（连续时间值迭代的闭环性质，HJB 近邻）、2611.29080（多边际最优输运最优计划的维数）。
 
 ### 三、每日研究前沿四方向
 
-**量子（quant-ph 51 新）**
-- 2611.27359《Trotter Error Bounds in Lean 4 with a Cancellation-Aware Analysis of the Fourth-Order Suzuki Formula》— 四阶 Suzuki 公式的 Lean 4 形式化 Trotter 误差界（量子+形式化）。
-- 2611.27896《Optimised 8th-Order Trotter-Suzuki Schemes for Quantum Simulation》— 八阶 Trotter-Suzuki 优化方案（量子模拟）。
-- 2611.27640《Ancilla-Free Exact Dicke-State Synthesis with Optimal Size and Depth》— 无辅助比特最优 Dicke 态精确合成（线路综合）。
-- 2611.27815《Autonomous quantum machine learning via Riemannian gradient-based optimization》— 黎曼梯度自主量子机器学习（**量子+AI+几何三交叉**）；2611.27871《World Models for Learning Quantum Many-Body Dynamics》（量子世界模型）。
+**量子（quant-ph 110 新）**
+- 2611.31158《Reducing RSA-2048 Factoring Resources Below One Billion Toffolis via LLM-Driven Verifiable Quantum Compilation》— LLM 驱动可验证量子编译把 RSA-2048 分解资源压到十亿 Toffoli 以下（**量子+AI 强交叉**）。
+- 2611.31236《Two messages suffice for quantum interactive proof systems》— 两消息足以刻画量子交互证明系统（复杂度理论）。
+- 2611.28944《Non-Abelian Twist Defects in Bivariate Bicycle Codes》— 双变量自行车码中的非阿贝尔扭缺陷（QEC）；2611.28847（显式扩展提升 qLDPC 码距）。
 
-**Topos/范畴论（math.CT 1 新 — 真 topos 命中）**
-- 2611.27280 Veilahti《Bridging Badiou's Gaps: Topos Theory and the Bodies of Mathematical Expression》— Grothendieck topos + Kripke-Joyal 语义重构 Cohen 力迫法，§003 真命中（67 页，math.CT/HO/LO 三交叉）。
+**Topos/范畴论（math.CT 0 新 — 空窗）**
+- 本期零新提交；交叉 2611.28921（滤子=网的局部化）、2611.30197（有向 Van Kampen 同伦解读）；替换 1301.1203《Alain Badiou's Mistake》与昨日 Badiou-topos 论文（27280）形成直接对话。无真 topos。
 
-**Gelfand 理论/算子代数（math.OA 3 新，全强）**
-- §04：2611.27204 词长半群 Lichnerowicz 刚性（Wirth）、2611.27471 AF 嵌入问题（Schafhauser）、2611.27892 临界 Ising/TLJ 锥 Haag 对偶（Evans）；交叉 2611.26647（反 Lie 中心化子）。
+**Gelfand 理论/算子代数（math.OA 12 新，大丰收）**
+- §04 强命中共 10 篇：Kaplansky-Aupetit 猜想（29761）、C*(F₂×F₂) LLP 失败（31147）、态可计算性/迹不可计算性（28337）、Ocneanu 定量刚性（29535）、非交换空间局部光滑（30520）、非交换螺线管 Morita 分类（30400）、自由半圆迹类扰动（30882）、迹扩张（30036）、超幂正交提升（29924）、相似保持映射（28428）。
 
-**AI（cs.AI 87 新 / cs.LG 96 新，本批取前 ~56+58 抽样）**
-- RSI 协同进化：2611.27116《CoEvoBench: Can LLMs Drive Recursive Co-Evolution of Agentic Systems?》、2611.26910《AstronautBench》（跨回合智能体自改进度量）、2611.26912（EDA 脚本自进化）。
-- 权重空间延续：2611.27089《Writing Weights or Training Them? Spatial Reasoning through Weight-Space Programming and Low-Rank Adaptation》（延续 21885→23718 权重编辑线）。
-- 治理：2611.26966《Runtime Governance for Tool-Using AI Agents》、2611.27260《No Perfect Guardrail & No Perfect Guard: On the Decidability of Output Policies for LLMs》（LLM 输出策略可判定性）。
-- 验证：2611.26906（预算感知预测-验证定理证明）、2611.26978（仿射像传播紧致 NN 验证）。
-- 几何×AI：2611.27167《BusemannFormer: Horospherical Self-Attention for Hyperbolic Graph Transformers》（双曲几何注意力）。
+**AI（cs.AI 172 新 / cs.LG 220 新，本批取前 ~57+57 抽样）**
+- RSI 全面爆发：2611.28239《FinEvo: Recursive Self-Improvement for Long-Horizon Financial Modeling》、2611.28244《Demystifying the Autoresearch Harness》、2611.28324《MatHarness》（材料自研究）、2611.28420《Diversity over Scale: RSI with Ensembles of Small Open-Weight Models》、2611.28680《Improving the Improver: Semantic PID Control for Medical Agent Self-Improvement》。
+- 权重写入第四日：2611.28483《Don't Train It, Write It: An AI Agent Writes New Capabilities into Language Model Weights》（延续 21885→23718→27089→28483 四日连续线）。
+- 安全：2611.28341《When Tools Fail, Agents Fabricate: Silent Failure and Verification-First Oversight》、2611.28660（多智能体辩论内的内鬼攻击）。
+- 形式化：2611.28819（研究级数学形式化语义等价）、2611.28430《Lean Census》（AI 生成 Lean 代码分布分析）。
+- 校准：2611.28827《Does a Frontier LLM Know What It Can Solve? A 100-Conjecture Calibration Study》。
 
 ### 💡 今日趋势洞察
-1. math.CT 迎来建档罕见的**真 topos 命中**：Veilahti 67 页论文以 Grothendieck topos + Kripke-Joyal 语义重构 Cohen 力迫法（27280），打破连续多日"无真 topos"记录，哲学-逻辑-范畴论三交叉。
-2. 随机热力学方向"熵产生×几何"双线贯通：量子分离线穿越的熵产生（26737，quant-ph/§002 双标）、可逆链弛豫的几何障碍（27406）、Wilson 流几何（26753），加上非完整事件触发源寻优（26802）把几何力学约束引入极值寻优——本批几何-耗散主题密度极高。
-3. 算子代数 3 新全强且横跨谱几何（Lichnerowicz 刚性）、嵌入问题（AF）与代数 QFT（锥 Haag 对偶），math.DG 谱三轮曲率泛函（27776）再证 DG-OA 交叉活跃；AI 侧 RSI 叙事进入"协同进化"与"可判定性"阶段（CoEvoBench 27116、No Perfect Guardrail 27260），权重空间编程（27089）延续三日连续线（21885→23718→27089）。
+1. 算子代数（§04）大丰收：math.OA 12 新全命中（Kaplansky-Aupetit 猜想、LLP 失败、Ocneanu 刚性、非交换螺线管分类等），且"态的可计算性与迹的不可计算性"（28337）开辟可计算性×OA 新接口，与 quant-ph 的不可判定量子存储（29134）遥相呼应。
+2. 随机热力学"路径几何"主题凸显：轨迹弧长揭示热力学临界性（30053）、Wigner 负性占用相空间面积（30969）、快速擦除能量代价受限控制一阶修正（31007），加上 Schrödinger 桥的 Yasue 作用量算法（28623），路径空间几何正在成为耗散理论的新工具箱。
+3. AI 侧 RSI 大爆发：单日 5 篇递归自改进论文（金融/材料/医疗/小模型集成），"AI Agent 写权重"（28483）使权重空间编辑线连续第四天出现；math.CT 空窗但替换列表的《Alain Badiou's Mistake》与昨日 Badiou-topos 论文形成哲学-范畴论对垒，颇具观察价值。
