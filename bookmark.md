@@ -4019,3 +4019,43 @@
 - [AI·Harness] 2611.31794 AGL-SKILL: Coding Harnesses as Agentic Optimizers — 编码Harness智能体优化器
 - [AI·形式化] 2611.31571 Safe Autoformalization with Entailment Graphs — 蕴含图安全自动形式化
 - [AI·几何] 2611.31680 Curvature-Equilibrated Policy Optimization for Deep RL — 曲率均衡策略优化
+
+## 2026-11-27（抓取批次 THU 26 NOV 2026）
+- [§002强·重磅] 2611.34921 Bound Entanglement with Negative Partial Transpose Exists — NPT束缚纠缠存在性
+- [§002强] 2611.33729 When Malus' Law Meets the Wigner-Bell Inequality: Violation by Nonseparable Classical Light — 经典光违反Wigner-Bell
+- [§002强] 2611.34170 Beyond-quantum correlations for single system in pseudo-quantum model — 伪量子模型超越量子关联
+- [§002强] 2611.34554 Why do single photons produce interference fringes? Phase of a mode and phase of a state — 单光子干涉解释
+- [§002强·能源] 2611.34909 The thermodynamic budget of objectivity — 客观性的热力学预算
+- [§002近邻] 2611.33888 Decoherent Histories from Local Spectral Dephasing — 局域谱退相干历史
+- [§002近邻] 2611.34883 Transition Path Sampling for Rare Events in Non-Markovian Open Quantum Systems — 非马尔可夫稀有事件路径采样
+- [§002近邻] 2611.34874 Exact monogamy of steering and remote Wigner negativity — 导引单配性精确结果
+- [§002近邻] 2611.34486 Resource theory of pi-ordered imaginarity — pi-序虚性资源理论
+- [§002近邻] 2611.34872 Bound magic in multi-qubit systems — 束缚magic
+- [§002近邻] 2611.34668 Magic Moments: Certifying Nonstabilizerness from Few Copies — 少副本认证非稳定子性
+- [§003近邻] 2611.33663 Graded Monoidal Categories and Internalization — 分次幺圆范畴内部化
+- [§003近邻] 2611.34596 Higher rewriting for strong linearly distributive coherence — 高阶重写相干性
+- [§003交叉近邻] 2611.33838 Higher-Dimensional Automata in Geometric Logic (cs.LO) — 几何逻辑高维自动机
+- [§04强] 2611.33578 Co-amenability and local reflexivity of C*-algebras — 余顺从性与局部反身性
+- [§04强] 2611.33960 On Shepp's property in free probability — Shepp性质·自由概率
+- [§04强] 2611.33996 Duality of finite-dimensional Hopf C*-algebra actions via inclusions — Hopf C*作用对偶
+- [§04强] 2611.34387 Ultrarank and ideal structure of uniform Roe algebras — 一致Roe代数超秩
+- [能源高·热力学几何] 2611.33443 Extrinsic thermodynamic geometry, symmetry, and the cost of constraint — 外在热力学几何与约束代价(字面命中)
+- [能源高] 2611.33984 Universal Work Extraction from Individual Sequences by Finite-State Information Engines — 有限态信息引擎单序列普适功提取
+- [能源高] 2611.34002 Policy and Value Iteration for Entropy-Regularized Stochastic Control — 熵正则随机控制策略/值迭代
+- [能源中高·几何控制] 2611.34761 Time-optimal travel driven by two vector fields on a Riemannian manifold — 流形双向量场时间最优
+- [能源近邻] 2611.34244 Patterns and correlations in time-reversal symmetry breaking — 时间反演破缺
+- [能源近邻] 2611.34853 Monotonic probes of asymmetry and robustness of the quantum Mpemba effect — 量子Mpemba(连续第2日)
+- [能源近邻] 2611.34354 Integrability and closed spacelike extremals of conformal arclength in the Einstein universe — 共形弧长极值线
+- [能源近邻] 2611.33923 Wasserstein-Fisher-Rao Reconstruction of Discrete space Population Dynamics — WFR度量种群重构
+- [能源近邻] 2611.34337 A Counterexample to Single-Control Null Controllability of Stochastic Heat Equations — 随机热方程可控性反例
+- [能源近邻] 2611.34236 Passivity Shaping over Frequency Bands: A Differentiable Optimization Approach — 频带无源性整形
+- [量子·算法] 2611.33730 Improved Quantum Algorithms for TSP and More — TSP改进量子算法
+- [量子·安全] 2611.33411 A Quantum Nakamoto Coefficient for Fifteen Proof-of-Stake Networks — 量子Nakamoto系数
+- [量子+AI] 2611.33509 Reducing T gates in product formulas with agent loops — 智能体循环减T门
+- [量子·QEC] 2611.34481 High-Throughput GPU Decoding of Quantum Bivariate Bicycle Codes — BBC码GPU解码
+- [AI·缩放] 2611.33160 Context Scaling: A New Frontier of AI Scaling — 上下文缩放
+- [AI·形式化] 2611.33165 AutoformBench: A Lean Formalization Benchmark for Advanced Mathematics — Lean高数形式化基准
+- [AI·形式化] 2611.33676 Interactive Proofs as a Unified Framework for Verifiable Proof Generation by LLM Agents — 交互证明统一框架
+- [AI·权重编辑] 2611.33426 Scalpel and Brush: Pruning and Targeted Weight Editing by a Single LLM Agent — 智能体权重编辑(五日线)
+- [AI·Harness] 2611.33757 TransHarness: From Benchmark Overfitting to Transferable Harness Evolution — 可迁移Harness进化
+- [AI·RSI] 2611.33794 Keep or Roll Back? Out-of-Loop Judges for Self-Improving VLA — 环外判官自改进

@@ -1,6 +1,6 @@
-## 📅 2026-11-26 CQT 研究前沿动态
+## 📅 2026-11-27 CQT 研究前沿动态
 
-> 抓取批次：**WEDNESDAY, 25 NOVEMBER 2026**（美东 11-25 20:00 EST 公告 ≈ 北京 11-26 09:00）。本报告北京运行日 2026-11-26。注：上次成功批为 TUE 24 NOV（11-25 运行）。ID 前缀 `2611.*`，编号约 31245–33152。注：quant-ph 66 新中 64 条完整识别（条目 65–66 在抓取截断处不可见，ID ≈ 2611.33xxx 尾段，对子区块分析无实质影响）。
+> 抓取批次：**THURSDAY, 26 NOVEMBER 2026**（美东 11-26 20:00 EST 公告 ≈ 北京 11-27 09:00）。本报告北京运行日 2026-11-27。注：上次成功批为 WED 25 NOV（11-26 运行）。ID 前缀 `2611.*`，编号约 33160–34921。注：quant-ph 84 新经首页（1–64）+ recent 页定向补齐（65–84）**全部识别**，其中含 2611.34921《Bound Entanglement with NPT Exists》重大理论结果。
 
 ### 一、arXiv 基础与物理哲学追踪
 
@@ -8,100 +8,97 @@
 
 | 核心 | 新/总 | 扩展 | 新/总 |
 |---|---|---|---|
-| quant-ph | 66* / 570 | math.DG | 18 / 175 |
-| hep-th | 45 / 260 | math.OC | 31 / 215 |
-| gr-qc | 20 / 201 | eess.SY | 19 / 191 |
-| math-ph | 11 / 142 | math.CT | 2 / 7 |
-| | | cond-mat.stat-mech | 16 / 114 |
-| | | math.OA | 5 / 41 |
-| | | cs.AI | 102 / 953 |
-| | | cs.LG | 144 / 1055 |
+| quant-ph | 84 / 654 | math.DG | 22 / 197 |
+| hep-th | 39 / 299 | math.OC | 24 / 239 |
+| gr-qc | 15 / 216 | eess.SY | 20 / 211 |
+| math-ph | 18 / 160 | math.CT | 2 / 9 |
+| | | cond-mat.stat-mech | 11 / 125 |
+| | | math.OA | 4 / 45 |
+| | | cs.AI | 77 / 1030 |
+| | | cs.LG | 143 / 1198 |
 
-*64/66 完整识别（末 2 条截断）。
+**量子基础与解释（§002）子区块（11 篇，5 强命中）**
+- 2611.34921《Bound Entanglement with Negative Partial Transpose Exists》— **NPT 束缚纠缠存在性证明**，§002 强（长期悬而未决的基础问题，本批头条）。
+- 2611.33729《When Malus' Law Meets the Wigner-Bell Inequality: Violation by Nonseparable Classical Light》— 经典非可分光违反 Wigner-Bell 不等式，§002 强（Bell 型经典-量子边界）。
+- 2611.34170《Beyond-quantum correlations for single system in pseudo-quantum model》— 伪量子模型中单系统的超越量子关联，§002 强（beyond-quantum）。
+- 2611.34554《Why do single photons produce interference fringes? The phase of a mode and the phase of a state》— 单光子干涉的本体论解释：模相位与态相位，§002 强（基础解释）。
+- 2611.34909《The thermodynamic budget of objectivity》— 客观性的热力学预算，§002 强（量子达尔文主义向，跨能源）。
+- 2611.33888《Decoherent Histories from Local Spectral Dephasing in Quantum Many-Body Systems》— 多体系统局域谱退相干的退相干历史，§002 近邻。
+- 2611.34883《Transition Path Sampling for Rare Events in Non-Markovian Open Quantum Systems》— §002 近邻（路径采样）。
+- 2611.34874《Exact monogamy of steering and remote Wigner negativity for multimode Gaussian nodes》— §002 近邻。
+- 2611.34486《Resource theory of pi-ordered imaginarity and its resource quantifiers》— §002 近邻（资源理论）。
+- 2611.34872《Bound magic in multi-qubit systems》— §002 近邻（magic 资源）；2611.34668《Magic Moments》— §002 近邻（少副本认证非稳定子性）。
 
-**量子基础与解释（§002）子区块（10 篇，4 强命中）**
-- 2611.31247《A Causal Schrödinger-Newton Theory that Conserves Energy and Momentum》— 因果 Schrödinger-Newton 理论（守恒能量动量），§002 强（修正 QM/Schrödinger-Newton）。
-- 2611.31304《Beyond Quantum Mechanics: From Nonlinear to Emergent and Solitonic Approaches》— 超越量子力学：非线性到涌现与孤子方法，§002 强（beyond QM）。
-- 2611.32237《The role of composition rules in an axiomatic derivation of quantum mechanics》— 合成规则在 QM 公理化推导中的作用，§002 强（公理化重构）。
-- 2611.31365《Certifying closed labs in device-independent tests of indefinite causality》— 不定因果设备无关测试中的封闭实验室认证，§002 强（DI/不定因果）。
-- 2611.32498《The infinite-dimensional extended Bloch representation》— 无穷维延拓 Bloch 表示，§002 近邻。
-- 2611.32578《Phase information and measurement in the Stochastic–Quantum correspondence》— 随机-量子对应中的相位信息与测量，§002 近邻（Nelson 式随机力学向）。
-- 2611.32358《Quantum Coherence and Basis-Dependent Correlations in Quantum Systems》— §002 近邻。
-- 2611.31941《Hybrid correlation generation with finite shared randomness》— §002 近邻。
-- 2611.31832《From outcome exclusion to measurement simulation》— §002 近邻；2611.31375《Spinal reflected entropy reveals logical magic》— §002 近邻。
+**§003-type-topos 映射（2 新，无真 topos）**
+- 2611.33663《Graded Monoidal Categories and Internalization》— 分次幺圆范畴与内部化，§003 近邻。
+- 2611.34596《Higher rewriting for strong linearly distributive coherence》— 强线性分配相干性的高阶重写，§003 近邻。
+- 交叉 2611.33838《Higher-Dimensional Automata in Geometric Logic》（cs.LO）— 几何逻辑中的高维自动机，§003 近邻（几何逻辑×并发拓扑）；交叉 2611.33530（集合论技巧的抽象类稳定性）。无真 topos。
 
-**§003-type-topos 映射（2 新 + 2 真 topos 交叉）**
-- 交叉 **2611.31809《The Borel Topos》（math.LO）— 真 topos 命中**，§003 强。
-- 交叉 2611.32363《Monadicity of noncommutative measurable spaces over C*-algebras》（math.OA）— 非交换可测空间在 C* 代数上的单子性，**§003×§04 强交叉**（Gelfand 对偶的 topos 化）。
-- 2611.33107《An internal approach to symmetric monoidal (∞,n)-categories》— 内部方法处理对称幺圆 (∞,n)-范畴，§003 近邻强。
-- 2611.33152《Abelian envelopes and quantum groups in Knop's interpolation categories》— Knop 插值范畴中的阿贝尔包络与量子群，§003 近邻。
+**§04-Gelfand 映射（4 新全强）**
+- 2611.33578《Co-amenability and local reflexivity of C*-algebras》— C* 代数余顺从性与局部反身性，§04 强。
+- 2611.33960《On Shepp's property in free probability》— 自由概率中的 Shepp 性质，§04 强（自由概率）。
+- 2611.33996《Duality of finite-dimensional Hopf C*-algebra actions via inclusions》— 经由包含的有限维 Hopf C* 代数作用对偶，§04 强。
+- 2611.34387《Ultrarank and ideal structure of uniform Roe algebras》— 一致 Roe 代数的超秩与理想结构，§04 强（粗几何×OA）。
 
-**§04-Gelfand 映射（5 新全强 + 1 交叉）**
-- 2611.31425《Disjointness, Orthogonality and Commutativity in C*-Algebras》— §04 强。
-- 2611.32121《Algebraic derivations and the first L²-cohomology of free group factors》— 自由群因子的代数导子与一阶 L² 上同调，§04 强。
-- 2611.32363《Monadicity of noncommutative measurable spaces over C*-algebras》— §04 强（跨 §003）。
-- 2611.32364《On local embeddability into C*(𝔽∞)》— 局部嵌入自由群 C* 代数，§04 强。
-- 2611.32953《The Universal Frame Characterization of C*-algebras》— C* 代数的泛框刻画，§04 强。
-- 交叉 2611.31538（Heisenberg 演算等价指标定理，math.FA，§04 近邻·NCG）。
-
-**bookmark 入库**：见 `c:/Dev/CQT/bookmark.md` 新增 `## 2026-11-26` 节（共 36 条，按 ID 去重）。
+**bookmark 入库**：见 `c:/Dev/CQT/bookmark.md` 新增 `## 2026-11-27` 节（共 38 条，按 ID 去重）。
 
 ### 二、随机热力学与几何控制核心推荐
 
-**[高·1·HJB] 2611.31830 — Viscosity Solutions of Hamilton-Jacobi-Bellman Integro-Differential Equations with Non-Lipschitz Running Costs（非 Lipschitz 运行成本的 HJB 积分-微分方程粘性解）**
-- 检索来源：math.OC（新 31 篇之一）。
-- 核心突破：对带非 Lipschitz 运行成本与积分项（跳跃/Levy 型）的 HJB 方程建立粘性解理论。
-- 数学模型：HJB 积分-微分方程 + 粘性解 + 非 Lipschitz 成本泛函。
-- 关联度：高（**Hamilton-Jacobi-Bellman 字面命中**）。
+**[高·1·热力学几何] 2611.33443 — Extrinsic thermodynamic geometry, symmetry, and the cost of constraint（外在大规模热力学几何、对称性与约束代价）**
+- 检索来源：cond-mat.stat-mech（新 11 篇之一）。
+- 核心突破：提出**外在大规模热力学几何**——约束的存在代价用热力学度量的外在曲率刻画，对称性与约束代价直接挂钩。
+- 数学模型：热力学几何（Weinhold/Ruppeiner 度量）+ 外在曲率（子流形嵌入）+ 约束代价泛函。
+- 关联度：高（**"thermodynamic geometry" 字面命中**，热力学×微分几何核心主题）。
 
-**[高·2·Brownian] 2611.32038 — Exact Response Theory based on Karhunen-Loève Expansions for Brownian Oscillators（基于 Karhunen-Loève 展开的布朗振子精确响应理论）**
-- 检索来源：cond-mat.stat-mech（新 16 篇之一）。
-- 核心突破：用 KL 展开给出布朗振子的精确响应理论——涨落-响应关系的泛函空间精确化。
-- 数学模型：布朗振子 + Karhunen-Loève 模态分解 + 精确线性/非线性响应。
-- 关联度：高（**Brownian 命中** + 响应理论/涨落-响应主线）。
+**[高·2] 2611.33984 — Universal Work Extraction from Individual Sequences by Finite-State Information Engines（有限态信息引擎从单条序列的普适功提取）**
+- 检索来源：cond-mat.stat-mech（新 11 篇之一）。
+- 核心突破：有限态信息引擎对**单条**符号序列的普适功提取理论——信息引擎功提取极限的普适化。
+- 数学模型：有限态信息引擎 + 单序列普适功界（与 Kolmogorov 复杂度/信息含量挂钩）。
+- 关联度：高（**work extraction + information engine 命中**，信息-能量转换核心）。
 
-**[高·3] 2611.32130 — Network topology imposes spectral constraints on collective nonequilibrium responses（网络拓扑对集体非平衡响应施加谱约束）**
-- 检索来源：cond-mat.stat-mech（新 16 篇之一）。
-- 核心突破：网络拓扑结构通过谱性质约束集体非平衡响应——拓扑几何 → 耗散响应的谱定理式刻画。
-- 数学模型：网络拓扑（图拉普拉斯谱）+ 集体非平衡响应 + 谱约束。
-- 关联度：高（非平衡响应 × 图几何谱，随机热力学几何化）。
+**[高·3] 2611.34002 — Policy and Value Iteration for Entropy-Regularized Stochastic Control（熵正则随机控制的策略与值迭代）**
+- 检索来源：math.OC（新 24 篇之一）。
+- 核心突破：熵正则随机控制的策略迭代与值迭代收敛理论——熵正则 HJB 体系的算法化。
+- 数学模型：熵正则随机控制（KL 惩罚 HJB）+ 策略/值迭代收敛性。
+- 关联度：高（**熵正则随机控制**，HJB 近邻核心路线）。
 
-**[中高·4] 2611.32785 — Mirror flow for semimartingale optimal transport（半鞅最优输运的镜像流）**
-- 检索来源：math.OC（新 31 篇之一）。
-- 核心突破：把镜像下降/镜像流推广到半鞅最优输运——KL 几何在随机过程层面的延伸。
-- 数学模型：半鞅最优输运 + 镜像流（Bregman/KL 几何）+ Benamou-Brenier 型变分。
-- 关联度：中高（信息几何 × 随机最优输运）。
+**[中高·4] 2611.34761 — Time-optimal travel driven by two vector fields on a Riemannian manifold（黎曼流形上由两个向量场驱动的时间最优行驶）**
+- 检索来源：math.DG（新 22 篇之一）。
+- 核心突破：黎曼流形上双向量场（双控制）驱动的时间最优问题——次黎曼/控制论几何的纯数学处理。
+- 数学模型：双分布控制 + 黎曼/次黎曼时间最优 + 最优综合。
+- 关联度：中高（**几何控制论字面主题**：流形上的最优控制）。
 
-**[中高·5] 2611.32061 — Optimal Weighted Volume Dissipativity and Sobolev Regularity at Limiting Rate（极限速率下的最优加权体积耗散性与 Sobolev 正则性）**
-- 检索来源：math.OC（新 31 篇之一）。
-- 核心突破：耗散算子的加权体积最优耗散性 + 极限速率下的 Sobolev 正则性——耗散结构的泛函分析精化。
-- 数学模型：体积耗散性 + 加权 Sobolev 空间 + 极限速率正则性。
-- 关联度：中高（**耗散泛函** + 几何正则性）。
+**[中高·5] 2611.34909 — The thermodynamic budget of objectivity（客观性的热力学预算）**
+- 检索来源：quant-ph（新 84 篇之一）。
+- 核心突破：客观性（量子达尔文主义意义上的）需要多少热力学资源——客观性形成的热力学代价预算。
+- 数学模型：量子 Darwinism + 熵收支 + 冗余信息的热力学代价。
+- 关联度：中高（§002/能源双标：耗散 × 客观性形成）。
 
-> 本批 **HJB 字面命中 1 处**（31830）、"Brownian" 命中 1 处（32038）；PCH、Geometric Ratchet、Net Energy Exchange、Ito correction 无字面命中。近邻另有：2611.32774（Contract2Reach：离散化诱导收缩 DP 求解高维 Hamilton-Jacobi 可达性，eess.SY·**HJ 字面**）、2611.31764（高斯过程数据驱动哈密顿的概率安全集构造，eess.SY）、2611.32934（非均匀淬火中的纠缠不对称性与量子 Mpemba 效应）、2611.32992（活性介质的能量输运）、2611.31303（弱非对称 KMP 模型精确非平稳热超额统计）、2611.32961（记忆依赖重置的异常前沿传播，重置主题第 4 次出现：22712→23790→26345→32961）。
+> 本批无字面命中 "Brownian Gyrator" / "Geometric Ratchet" / "Net Energy Exchange" / "HJB" / "PCH"；但 **thermodynamic geometry 字面命中**（33443）、work extraction/information engine 命中（33984）、流形上时间最优控制字面主题（34761）为三处强概念命中。近邻另有：2611.34244（时间反演对称破缺的图案与关联）、2611.34853（量子 Mpemba 效应不对称性单调探针，Mpemba 第 3 次：32934→32934? 实为 32934(11-26)→34853(11-27) 连续两日）、2611.34354（Einstein 宇宙中共形弧长的可积性与封闭类空极值线，math.DG·变分几何）、2611.33923（离散种群动力学的 Wasserstein-Fisher-Rao 重构，OT 几何）、2611.34337（随机热方程单控制零可控性反例）、2611.34236（频带上无源性整形：可微优化，eess.SY·耗散性）。
 
 ### 三、每日研究前沿四方向
 
-**量子（quant-ph 66 新）**
-- 2611.31585《How Small Can a Single Shor Run Be? Limits and Constructions for secp256k1》— secp256k1 单次 Shor 运行资源极限。
-- 2611.31514《Blueprint for DOE Quantum Supercomputing》— 美国能源部量子超算蓝图（国家级规划）。
-- 2611.31534《All-electronic geometric phase gate on Doppler-cooled trapped ions》— 全电子几何相位门（**量子+几何**）。
-- 2611.32000《QuOptLab: Advancing Quantum Optics Experiments with an AI Agent》— AI 智能体推进量子光学实验（量子+AI）；2611.31953（qudit CSS 码的 Schur 饱和与 Clifford 天花板，QEC）。
+**量子（quant-ph 84 新）**
+- 2611.34921《Bound Entanglement with Negative Partial Transpose Exists》— **NPT 束缚纠缠存在性**（本批最重要理论结果）。
+- 2611.33730《Improved Quantum Algorithms for TSP and More》— TSP 等问题的改进量子算法。
+- 2611.33411《How Many Keys Must a Quantum Computer Break to Take Over a Blockchain? A Quantum Nakamoto Coefficient》— 权益证明网络的量子 Nakamoto 系数（量子安全）。
+- 2611.33509《Reducing T gates in product formulas with agent loops》— 智能体循环减少乘积公式 T 门（**量子+AI**）；2611.34481（双变量自行车码 GPU 高吞吐解码，QEC 工程）。
 
-**Topos/范畴论（math.CT 2 新 + 2 真 topos 交叉）**
-- **交叉 2611.31809《The Borel Topos》为真 topos 命中**；交叉 2611.32363（非交换可测空间单子性，§04 交叉）；2611.33107（内部对称幺圆 (∞,n)-范畴）、2611.33152（Knop 插值范畴）。
+**Topos/范畴论（math.CT 2 新，无真 topos）**
+- 2611.33663（分次幺圆范畴内部化）、2611.34596（高阶重写相干性）；交叉 2611.33838（几何逻辑中的高维自动机）。
 
-**Gelfand 理论/算子代数（math.OA 5 新，全强）**
-- §04：2611.31425（C* 不交性/正交性/交换性）、2611.32121（自由群因子 L² 上同调）、2611.32363（单子性，跨 §003）、2611.32364（局部嵌入 C*(F∞)）、2611.32953（泛框刻画）；交叉 2611.31538（Heisenberg 演算指标定理）。
+**Gelfand 理论/算子代数（math.OA 4 新，全强）**
+- §04：2611.33578（余顺从性/局部反身性）、2611.33960（Shepp 性质·自由概率）、2611.33996（Hopf C* 作用对偶）、2611.34387（一致 Roe 代数超秩与理想结构）。
 
-**AI（cs.AI 102 新 / cs.LG 144 新，本批取前 ~58+58 抽样）**
-- 治理公理化：2611.31284《Irreducible Governance Structure for Autonomous Agent Systems: Fair Allocation, Strategy-Proofness, and Multi-Scale Composition》、2611.31610《Monitorable-by-design architectures for a post-Astra world》（可监控性设计架构）。
-- RSI 延续：2611.31621《Self-Improving Long-Horizon Reasoning by Learning Summaries from Local Continuations》、2611.31475《SpatialCraft》、2611.31794《AGL-SKILL: Coding Harnesses as Agentic Optimizers》。
-- 形式化安全：2611.31571《Safe Autoformalization: Sufficiency and Necessity with Entailment Graphs》。
-- AI 物理发现：2611.31653《Constructing physical mechanisms with artificial intelligence》。
-- 几何×RL：2611.31680《Curvature-Equilibrated Policy Optimization for Deep Reinforcement Learning》（cs.LG·曲率均衡策略优化）。
+**AI（cs.AI 77 新 / cs.LG 143 新，本批取前 ~56+57 抽样）**
+- 缩放新维度：2611.33160《Context Scaling: A New Frontier of AI Scaling》。
+- 形式化：2611.33165《AutoformBench: A Lean Formalization Benchmark for Advanced Mathematics》、2611.33676《Interactive Proofs as a Unified Framework for Verifiable Proof Generation by LLM Agents》（交互证明×智能体）。
+- 权重编辑第五日：2611.33426《Scalpel and Brush: Pruning and Targeted Weight Editing of a Small Language Model by a Single LLM Agent》（延续 21885→23718→27089→28483→33426 五日线）。
+- Harness 迁移：2611.33757《TransHarness: From Benchmark Overfitting to Transferable Harness Evolution》。
+- RSI 判官：2611.33794《Keep or Roll Back? Out-of-Loop Judges for Self-Improving VLA》；安全 2611.34215《PROVE: Mitigating Long-Horizon LLM Collusion with RL from Verified Evidence》。
+- 几何×AI：2611.33487《The Geometry Is the Memory: Task-Density Routing for Continual LoRA》。
 
 ### 💡 今日趋势洞察
-1. 关键词双命中回归：HJB 积分-微分方程非 Lipschitz 成本粘性解（31830）+ 布朗振子 KL 展开精确响应理论（32038），叠加 eess.SY 的 HJ 可达性收缩 DP（32774），HJB/HJ 路线重新活跃；"重置"主题第 4 次出现（记忆依赖重置异常前沿 32961）。
-2. §003 迎来双真 topos 交叉日：Borel Topos（31809）与非交换可测空间单子性（32363）同日出现，后者把 Gelfand 对偶 topos 化，直接桥接 §04 与 §003 两大子区块。
-3. 量子基础子区块 4 强覆盖修正 QM（Schrödinger-Newton、beyond QM）、公理化重构与 DI 不定因果；AI 侧治理进入"公理化/可监控性设计"阶段（31284/31610），几何×RL 曲率均衡策略优化（31680）延续几何-学习交叉线。
+1. 量子基础迎来重磅：NPT 束缚纠缠存在性（2611.34921）是长期悬而未决问题的理论进展；加上 Wigner-Bell 经典违反（33729）、客观性热力学预算（34909）与单光子干涉解释（34554），§002 强命中达 5 篇，为近期最高密度。
+2. "热力学几何"字面回归：外在大规模热力学几何与约束代价（33443）+ 有限态信息引擎单序列普适功提取（33984）+ 熵正则随机控制迭代理论（34002），耗散-信息-几何三主线在本批齐备；流形上双向量场时间最优（34761）延续几何控制论字面主题。
+3. AI 侧"AI Agent 编辑权重"线连续第五天（33426 Scalpel and Brush）；AutoformBench（33165）与交互证明统一框架（33676）标志形式化方向进入基准化+证明体系整合阶段；Context Scaling（33160）提出缩放叙事新维度。
